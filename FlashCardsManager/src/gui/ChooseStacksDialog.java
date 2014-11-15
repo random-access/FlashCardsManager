@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ListIterator;
+import java.util.Random;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -60,7 +61,8 @@ public class ChooseStacksDialog extends JDialog {
 		pack();
 		setLocationRelativeTo(owner);
 	}
-
+	
+	// CREATE WIDGETS: create GUI components
 	private void createWidgets() throws SQLException {
 		pnlControls = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 		centerBox = Box.createVerticalBox();
@@ -72,7 +74,8 @@ public class ChooseStacksDialog extends JDialog {
 		btnDiscard = new JButton("Abbrechen");
 
 	}
-
+	
+	// ADD WIDGETS: put the GUI together
 	private void addWidgets() {
 		this.add(centerBox, BorderLayout.CENTER);
 		this.add(pnlControls, BorderLayout.SOUTH);
@@ -82,7 +85,8 @@ public class ChooseStacksDialog extends JDialog {
 		pnlControls.add(btnDiscard);
 		pnlControls.add(btnOk);
 	}
-
+	
+	// SET LISTENERS: add listeners to GUI elements
 	private void setListeners() {
 		btnDiscard.addActionListener(new ActionListener() {
 			@Override
@@ -94,7 +98,7 @@ public class ChooseStacksDialog extends JDialog {
 		btnOk.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				sessionCards = constructSession();
+				sessionCards = constructRandomSession();
 				LearningSession newSession = new LearningSession(
 						ChooseStacksDialog.this.owner,
 						ChooseStacksDialog.this.project,
@@ -110,21 +114,43 @@ public class ChooseStacksDialog extends JDialog {
 			}
 		});
 	}
-
+	
+	
+	// CONSTRUCT SESSION: onstructs session with cards from selected stacks in order from database entries
 	private ArrayList<FlashCard> constructSession() {
 		sessionCards = new ArrayList<FlashCard>();
 		for (int i = 0; i < boxes.length; i++) {
 			if (boxes[i].isSelected()) {
-				activeSelection = true;
+				activeSelection = true; // for error msg when no selection
 				ListIterator<FlashCard> lit = allCards.listIterator();
 				while (lit.hasNext()) {
 					FlashCard f = lit.next();
-					if (f.getStack() == i + 1) {
+					if (f.getStack() == i + 1) { // stacks go from 1 upwards
 						sessionCards.add(f);
 						System.out.println("Copied card " + f.getId()
 								+ " (Stack " + f.getStack() + ")...");
 					}
 				}
+			}
+		}
+		return sessionCards;
+	}
+	
+	// CONSTRUCT RANDOM SESSION: constructs session with cards from selected stacks in random order
+	private ArrayList<FlashCard> constructRandomSession() {
+		sessionCards = new ArrayList<FlashCard>();
+		Random random = new Random();
+		while (!allCards.isEmpty()) { 
+			int randomIndex = random.nextInt(allCards.size()); 
+			FlashCard currentCard = allCards.get(randomIndex);
+			allCards.remove(currentCard); // anyway remove card from project arraylist
+			int stack = currentCard.getStack()-1; //stack numbers are from 1 upwards
+			System.out.println(stack);
+			if (boxes[stack].isSelected()) { // get only cards from selected stacks
+				activeSelection = true; // for error msg when no selection
+				sessionCards.add(currentCard); 
+				System.out.println("Copied card " + currentCard.getId()
+						+ " (Stack " + currentCard.getStack() + ")...");
 			}
 		}
 		return sessionCards;

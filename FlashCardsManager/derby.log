@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Sat Nov 15 18:47:39 CET 2014:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): instance a816c00e-0149-b491-4379-000001bd2778 
+Sat Nov 15 21:26:16 CET 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): instance a816c00e-0149-b522-796b-000001bcd2d8 
 on database directory /home/moni/.Lernkarten/database_1  with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
-Loaded from file:/home/moni/Java/ProjektSpace/FlashCardManager/lib/derby.jar
+Loaded from file:/home/moni/git/FlashCardsManager/FlashCardsManager/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_25-b18
-user.dir=/home/moni/Java/ProjektSpace/FlashCardManager
+user.dir=/home/moni/git/FlashCardsManager/FlashCardsManager
 os.name=Linux
 os.arch=amd64
 os.version=3.17.2-1-ARCH
