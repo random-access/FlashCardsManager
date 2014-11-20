@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Wed Nov 19 13:44:30 CET 2014:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): instance a816c00e-0149-c815-2538-000000a7e128 
-on database directory C:\Users\IT-Helpline16\AppData\Roaming\Lernkarten\database_1  with class loader sun.misc.Launcher$AppClassLoader@18fe7c3 
-Loaded from file:/C:/Users/IT-Helpline16/git/FlashCardsManager/FlashCardsManager/lib/derby.jar
+Thu Nov 20 20:58:38 CET 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): instance a816c00e-0149-cec8-f8e5-000001bc22b0 
+on database directory /home/moni/.Lernkarten/database_1  with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Loaded from file:/home/moni/git/FlashCardsManager/FlashCardsManager/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.7.0_67-b01
-user.dir=C:\Users\IT-Helpline16\git\FlashCardsManager\FlashCardsManager
-os.name=Windows 8.1
-os.arch=x86
-os.version=6.3
+java.runtime.version=1.8.0_25-b17
+user.dir=/home/moni/git/FlashCardsManager/FlashCardsManager
+os.name=Linux
+os.arch=amd64
+os.version=3.13.0-40-generic
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
