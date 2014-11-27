@@ -3,7 +3,10 @@ package app;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import javax.swing.SwingUtilities;
 import javax.xml.stream.XMLStreamException;
@@ -16,13 +19,19 @@ import exc.EntryNotFoundException;
 import gui.MainWindow;
 
 public class StartApp {
+	
 
 	static final String APP_FOLDER = appDirectory();
 	static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
 	static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_1";
+	
+	static InputStream defaultSettings = StartApp.class.getClassLoader().getResourceAsStream("xml/settings.xml");
 	static Settings currentSettings;
 	
 	public static void main(String[] args) {
+		
+		Properties p = System.getProperties();
+		p.setProperty("derby.system.home", APP_FOLDER);
 
 		try {
 			initializeSettings();
@@ -65,7 +74,7 @@ public class StartApp {
 	
 	// check if version number has changed and update version
 	private static boolean updatedVersion() throws NumberFormatException, FileNotFoundException, XMLStreamException {
-		Settings newSettings = XMLExchanger.readConfig("settings.xml");
+		Settings newSettings = XMLExchanger.readConfig(defaultSettings);
 		boolean updated = false;
 		if (currentSettings.getPatchLevel() != newSettings.getPatchLevel()){
 			currentSettings.setPatchLevel(newSettings.getPatchLevel());
@@ -111,8 +120,8 @@ public class StartApp {
 			// first install -> copy default settings.xml into user folder
 			System.out
 					.println("XML Config not in user folder -> copy into user folder");
-			currentSettings = XMLExchanger.readConfig("settings.xml");
-			System.out.println("read config: settings.xml");
+			currentSettings = XMLExchanger.readConfig(defaultSettings);
+			System.out.println("read config: " + defaultSettings);
 			createDirectory(APP_FOLDER);
 			currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
 			System.out.println(DEFAULT_SETTINGS_PATH);
