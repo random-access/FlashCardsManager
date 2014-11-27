@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
+import java.awt.Toolkit;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
@@ -20,8 +21,10 @@ public class PicAndTextPanel extends JPanel {
 
 	private JLabel lblPic, lblTitle;
 	private JTextArea txtArea;
-	private static final int MAX_PIC_WIDTH = 500;
-	private static final int MAX_PIC_HEIGHT = 300;
+	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit() 
+            .getScreenSize().width * 0.75);
+	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit() 
+            .getScreenSize().height * 0.85);
 
 	public PicAndTextPanel(BufferedImage img, String txt, PicType type) {
 		super(new BorderLayout(10, 10));
