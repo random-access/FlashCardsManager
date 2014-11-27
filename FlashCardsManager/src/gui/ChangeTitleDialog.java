@@ -19,6 +19,8 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.text.AbstractDocument;
 
+import utils.SizeFilterExtended;
+import utils.DocumentSizeFilter;
 import utils.InvalidCharsFilter;
 import core.LearningProject;
 import core.ProjectsManager;
@@ -130,7 +132,8 @@ public class ChangeTitleDialog extends JDialog {
 		   txtTitle = new JTextField(pnl.lblText.getText());
 		}
 		txtTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		((AbstractDocument) txtTitle.getDocument()).setDocumentFilter(new InvalidCharsFilter(this));
+		((AbstractDocument) txtTitle.getDocument()).setDocumentFilter(new SizeFilterExtended(new InvalidCharsFilter(this), 50));
+		// ((AbstractDocument) txtTitle.getDocument()).setDocumentFilter(new InvalidCharsFilter(this));
 		btnOk = new JButton("  OK  ");
 		btnDiscard = new JButton(" Abbrechen ");
 	}

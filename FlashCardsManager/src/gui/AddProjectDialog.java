@@ -19,6 +19,8 @@ import javax.swing.text.AbstractDocument;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import utils.SizeFilterExtended;
+import utils.DocumentSizeFilter;
 import utils.InvalidCharsFilter;
 import core.LearningProject;
 import core.ProjectsManager;
@@ -41,13 +43,6 @@ public class AddProjectDialog extends JDialog {
 		this.prm = prm;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setTitle("Projekt hinzuf\u00fcgen..");
-
-//		try {
-//			UIManager
-//					.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
 		
 		try {
 	         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -78,7 +73,7 @@ public class AddProjectDialog extends JDialog {
 		lblNoOfStacks = new JLabel("Anzahl Durchl\u00e4ufe:");
 		txtTitle = new JTextField();
 		txtTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		((AbstractDocument) txtTitle.getDocument()).setDocumentFilter(new InvalidCharsFilter(this));
+		((AbstractDocument) txtTitle.getDocument()).setDocumentFilter(new SizeFilterExtended(new InvalidCharsFilter(this), 50));
 		txtNoOfStacks = new JTextField();
 		txtNoOfStacks.setHorizontalAlignment(SwingConstants.CENTER);
 		btnOk = new JButton("  OK  ");

@@ -79,11 +79,6 @@ public class ChangeFlashcardDialog extends AddFlashcardDialog {
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
-						// } catch (InvalidInputException e1) {
-						// JOptionPane.showMessageDialog(ChangeFlashcardDialog.this,
-						// "Unerlaubte Zeichen: " + e1.getInvalidInputSigns()
-						// + " - bitte entferne diese!", "Fehler",
-						// JOptionPane.ERROR_MESSAGE);
 					}
 					if (efcDialog != null) {
 						efcDialog.updateCardPanels();

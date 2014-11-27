@@ -193,9 +193,6 @@ public class AddFlashcardDialog extends JDialog {
 			}
 		});
 		
-//		InvalidInputListener invalidInputListener = new InvalidInputListener(this);
-//		txtQuestion.addKeyListener(invalidInputListener);
-//		txtAnswer.addKeyListener(invalidInputListener);
 	}
 
 	// Listener for deleting the selected pic
