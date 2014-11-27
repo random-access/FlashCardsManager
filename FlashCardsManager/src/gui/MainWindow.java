@@ -59,7 +59,7 @@ public class MainWindow extends JFrame {
 	}
 
 	/* */
-	private final int majorVersion, minorVersion;
+	private final int majorVersion, minorVersion, patchLevel;
 	private JMenuBar mnuBar;
 	private JMenu mnuSettings;
 	private JMenu mnuSettingsNew, mnuSettingsImport, mnuSettingsExport;
@@ -75,10 +75,11 @@ public class MainWindow extends JFrame {
 	private JButton btnAddProject;
 	private ProjectsManager prm;
 
-	public MainWindow(ProjectsManager prm, int majorVersion, int minorVersion) {
+	public MainWindow(ProjectsManager prm, int majorVersion, int minorVersion, int patchLevel) {
 		this.prm = prm;
 		this.majorVersion = majorVersion;
 		this.minorVersion = minorVersion;
+		this.patchLevel = patchLevel;
 		setTitle("FlashCards Manager");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
@@ -258,8 +259,8 @@ public class MainWindow extends JFrame {
 					450, 250);
 			d.setText("<html><center><b>Lernkarten - ein OpenSource Lernprogramm </b><br><br>Version: "
 					+ majorVersion
-					+ "."
-					+ minorVersion
+					+ "." + minorVersion
+					+ "." + patchLevel
 					+ "<br><br>Feedback bitte an: <a href=\"mailto:software@random-access.org\">software@random-access.org</a><br><br>\u00a9 Monika Schrenk, 2014</center></html>");
 			d.addOkAction(new ActionListener() {
 				@Override

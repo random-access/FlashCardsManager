@@ -71,12 +71,16 @@ public class XMLExchanger {
         eventWriter.add(eElement);
         eventWriter.add(end);
       }
-  
+      
+      public static Settings readConfig(String file) throws NumberFormatException,
+		XMLStreamException, FileNotFoundException {
+    	  InputStream inputStream = new FileInputStream(file);
+    	  return readConfig (inputStream);
+      }
 
-	public static Settings readConfig(String file) throws NumberFormatException,
+	public static Settings readConfig(InputStream inputStream) throws NumberFormatException,
 			XMLStreamException, FileNotFoundException {
 		XMLInputFactory factory = XMLInputFactory.newInstance();
-		InputStream inputStream = new FileInputStream(file);
 		XMLStreamReader reader = factory.createXMLStreamReader(inputStream);
 		String content = null;
 		Settings settings = null;

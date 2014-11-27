@@ -3,7 +3,10 @@ package app;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import javax.swing.SwingUtilities;
 import javax.xml.stream.XMLStreamException;
@@ -16,22 +19,29 @@ import exc.EntryNotFoundException;
 import gui.MainWindow;
 
 public class StartApp {
+	
 
 	static final String APP_FOLDER = appDirectory();
 	static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
 	static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_1";
-
+	
+	static InputStream defaultSettings = StartApp.class.getClassLoader().getResourceAsStream("xml/settings.xml");
+	static Settings currentSettings;
+	
 	public static void main(String[] args) {
+		
+		Properties p = System.getProperties();
+		p.setProperty("derby.system.home", APP_FOLDER);
 
 		try {
-			final Settings settings = initializeSettings();
+			initializeSettings();
 			final ProjectsManager prm = new ProjectsManager(
-					settings.getPathToDatabase());
+					currentSettings.getPathToDatabase());
 			SwingUtilities.invokeLater(new Runnable() {
 				@Override
 				public void run() {
-					new MainWindow(prm, settings.getMajorVersion(), settings
-							.getMinorVersion());
+					new MainWindow(prm, currentSettings.getMajorVersion(), currentSettings
+							.getMinorVersion(), currentSettings.getPatchLevel());
 				}
 			});
 		} catch (NumberFormatException e) {
@@ -61,40 +71,62 @@ public class StartApp {
 		}
 
 	}
+	
+	// check if version number has changed and update version
+	private static boolean updatedVersion() throws NumberFormatException, FileNotFoundException, XMLStreamException {
+		Settings newSettings = XMLExchanger.readConfig(defaultSettings);
+		boolean updated = false;
+		if (currentSettings.getPatchLevel() != newSettings.getPatchLevel()){
+			currentSettings.setPatchLevel(newSettings.getPatchLevel());
+			updated = true;
+		}
+		if (currentSettings.getMinorVersion() != newSettings.getMinorVersion()) {
+			currentSettings.setMinorVersion(newSettings.getMinorVersion());
+			updated = true;
+		}
+		if (currentSettings.getMajorVersion() != newSettings.getMajorVersion()) {
+			currentSettings.setMajorVersion(newSettings.getMajorVersion());
+			updated = true;
+		}
+		return updated;
+	}
 
-	private static Settings initializeSettings() throws NumberFormatException,
+	private static void initializeSettings() throws NumberFormatException,
 			FileNotFoundException, XMLStreamException {
-		Settings settings = null;
 		if (new File(DEFAULT_SETTINGS_PATH).isFile()) {
 			System.out.println("Settings already in user folder");
 			// settings already in user folder -> read from settings
-			settings = XMLExchanger.readConfig(DEFAULT_SETTINGS_PATH);
-			if (settings.getPathToDatabase().equals("null")
-					|| !(new File(settings.getPathToDatabase()).isDirectory())) {
+			currentSettings = XMLExchanger.readConfig(DEFAULT_SETTINGS_PATH);
+			if (currentSettings.getPathToDatabase().equals("null")
+					|| !(new File(currentSettings.getPathToDatabase()).isDirectory())) {
 				System.out
 						.println("Database not where it was expected or not there");
 				// database deleted -> create new DB on default path
-				settings.setPathToDatabase(DEFAULT_DATABASE_PATH);
-				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, settings);
+				currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
+				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
 			}
-			if (settings.getDatabaseVersion() == 0) { /* correct XML -> right now everybody has DBv1 
+			if (currentSettings.getDatabaseVersion() == 0) { /* correct XML -> right now everybody has DBv1 
 				& no individual stuff is in XML */
-				settings.setDatabaseVersion(1);
-				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, settings);
+				currentSettings.setDatabaseVersion(1);
+				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
 				System.out.println("Correcting XML-Settings (database version was null)...");
 			}
+			if (StartApp.updatedVersion()) {
+				System.out.println("was updated");
+				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
+			}
+			
 		} else {
 			// first install -> copy default settings.xml into user folder
 			System.out
 					.println("XML Config not in user folder -> copy into user folder");
-			settings = XMLExchanger.readConfig("settings.xml");
-			System.out.println("read config: settings.xml");
+			currentSettings = XMLExchanger.readConfig(defaultSettings);
+			System.out.println("read config: " + defaultSettings);
 			createDirectory(APP_FOLDER);
-			settings.setPathToDatabase(DEFAULT_DATABASE_PATH);
+			currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
 			System.out.println(DEFAULT_SETTINGS_PATH);
-			XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, settings);
+			XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
 		}
-		return settings;
 
 	}
 
