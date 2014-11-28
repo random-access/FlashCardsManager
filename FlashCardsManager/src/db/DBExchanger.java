@@ -60,6 +60,16 @@ public class DBExchanger<T extends OrderedItem> {
 			// TODO: remove debug output
 		}
 	}
+	
+	public void closeConnection() {
+		try {
+			conn.commit();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	// CREATE PROJECTS TABLE, Columns: ID, PROJ_TITLE, NEXT_CARD_ID,
 	// NO_OF_STACKS, VARCHARS_QUESTION, VARCHARS_ANSWER

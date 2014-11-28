@@ -143,7 +143,10 @@ public class ChooseProjectsDialog extends JDialog {
 					.showSaveDialog(ChooseProjectsDialog.this);
 			ChooseProjectsDialog.this.dispose();
 			String pathToExport = null;
-			if (fileChooser.getSelectedFile() != null) { // prevent NullPointerExc when no path selected
+			if (fileChooser.getSelectedFile() != null) { // prevent
+															// NullPointerExc
+															// when no path
+															// selected
 				pathToExport = fileChooser.getSelectedFile().getAbsolutePath();
 			}
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -177,12 +180,7 @@ public class ChooseProjectsDialog extends JDialog {
 							if (dialogResult == JOptionPane.YES_OPTION) {
 								// user wants to overwrite -> delete existing
 								// directory and start export
-								try {
-									FileUtils.deleteRecursive(f);
-								} catch (FileNotFoundException e) {
-									// TODO Auto-generated catch block
-									e.printStackTrace();
-								}
+								FileUtils.deleteDirectory(pathToExport);
 								System.out
 										.println("File deleted -- do task...");
 								doTask(pathToExport);
