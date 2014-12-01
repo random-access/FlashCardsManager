@@ -65,6 +65,7 @@ public class DBExchanger<T extends OrderedItem> {
 		try {
 			conn.commit();
 			conn.close();
+			System.out.println("Closed connection to " + dbURL);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -80,6 +81,7 @@ public class DBExchanger<T extends OrderedItem> {
 				+ " (ID INT PRIMARY KEY, PROJ_TITLE VARCHAR (50), NO_OF_STACKS INT, "
 				+ "VARCHARS_QUESTION INT, VARCHARS_ANSWER INT)");
 		conn.commit();
+		st.close();
 		System.out.println("Successfully created table: " + projectsTableTitle);
 		// TODO: remove debug output
 	}
@@ -95,6 +97,7 @@ public class DBExchanger<T extends OrderedItem> {
 					+ DEFAULT_ANSWER_LENGTH
 					+ "), QUESTIONPIC BLOB, ANSWERPIC BLOB)");
 			conn.commit();
+			st.close();
 			System.out.println("Successfully created table: " + name);
 		} else {
 			throw new EntryAlreadyThereException();
@@ -112,6 +115,7 @@ public class DBExchanger<T extends OrderedItem> {
 					+ DEFAULT_QUESTION_LENGTH + "," + DEFAULT_ANSWER_LENGTH
 					+ ")");
 			conn.commit();
+			st.close();
 			System.out.println("Insert values: INSERT INTO "
 					+ projectsTableTitle + " VALUES (" + project.getId() + ",'"
 					+ project.getTitle() + "'," + project.getNumberOfStacks()
@@ -160,6 +164,7 @@ public class DBExchanger<T extends OrderedItem> {
 		}
 		prepSt.executeUpdate();
 		conn.commit();
+		prepSt.close();
 		if (inputStreamQuestion != null) {
 			inputStreamQuestion.close();
 		}
@@ -208,6 +213,7 @@ public class DBExchanger<T extends OrderedItem> {
 			prepSt.setBlob(6, answerBlob);
 			prepSt.execute();
 			conn.commit();
+			prepSt.close();
 			System.out.println("successfully exported card "
 					+ currentCard.getId() + "...");
 		}
@@ -226,6 +232,7 @@ public class DBExchanger<T extends OrderedItem> {
 					+ "', NO_OF_STACKS = " + project.getNumberOfStacks()
 					+ " WHERE ID = " + project.getId());
 			conn.commit();
+			st.close();
 			System.out.println("Update values: UPDATE " + projectsTableTitle
 					+ " SET PROJ_TITLE = '" + project.getTitle()
 					+ "', NO_OF_STACKS = " + project.getNumberOfStacks()
@@ -247,6 +254,7 @@ public class DBExchanger<T extends OrderedItem> {
 					+ "', ANSWER = '" + card.getAnswer() + "' WHERE ID = "
 					+ card.getId());
 			conn.commit();
+			st.close();
 			System.out.println("Update values: UPDATE " + proj.getTableName()
 					+ " SET STACK = " + card.getStack() + ", QUESTION = '"
 					+ card.getQuestion() + "', ANSWER = '" + card.getAnswer()
@@ -281,6 +289,7 @@ public class DBExchanger<T extends OrderedItem> {
 			blob = res.getBlob(1);
 		}
 		res.close();
+		st.close();
 		byte[] b = null;
 		if (blob != null) {
 			b = blob.getBytes(1, (int) blob.length());
@@ -291,10 +300,10 @@ public class DBExchanger<T extends OrderedItem> {
 
 	// GET PIC: get picture of flashcard from DB
 	public BufferedImage getPic(PicType type, FlashCard card,
-			LearningProject proj) {
+			LearningProject proj) throws SQLException {
 		ResultSet result = null;
 		FileOutputStream fos = null;
-		Statement st;
+		Statement st = null;
 		BufferedImage img = null;
 		try {
 			st = conn.createStatement();
@@ -324,6 +333,8 @@ public class DBExchanger<T extends OrderedItem> {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		result.close();
+		st.close();
 		return img;
 	}
 
@@ -356,6 +367,7 @@ public class DBExchanger<T extends OrderedItem> {
 		}
 		prepSt.executeUpdate();
 		conn.commit();
+		prepSt.close();
 		System.out.println("Successfully modified " + type.toString()
 				+ "-Pic from card " + card.getId() + "!");
 		// TODO: remove debug output
@@ -382,6 +394,7 @@ public class DBExchanger<T extends OrderedItem> {
 		}
 		prepSt.executeUpdate();
 		conn.commit();
+		prepSt.close();
 		System.out.println("Successfully deleted " + type.toString()
 				+ "-Pic from card " + card.getId() + "!");
 		// TODO: remove debug output
@@ -406,6 +419,7 @@ public class DBExchanger<T extends OrderedItem> {
 			// TODO: remove debug output
 		}
 		res.close();
+		st.close();
 		return data;
 	}
 	
@@ -428,6 +442,7 @@ public class DBExchanger<T extends OrderedItem> {
 					+ f.getId()); // TODO: remove debug output
 		}
 		res.close();
+		st.close();
 		return data;
 	}
 
@@ -439,6 +454,7 @@ public class DBExchanger<T extends OrderedItem> {
 			st.executeUpdate("DELETE FROM " + projectsTableTitle
 					+ " WHERE ID = " + proj.getId());
 			conn.commit();
+			st.close();
 			System.out.println("Delete row: DELETE FROM " + projectsTableTitle
 					+ " WHERE ID = " + proj.getId());
 			// TODO: remove debug output
@@ -455,6 +471,7 @@ public class DBExchanger<T extends OrderedItem> {
 			st.executeUpdate("DELETE FROM " + proj.getTableName()
 					+ " WHERE ID = " + f.getId());
 			conn.commit();
+			st.close();
 			System.out.println("Delete row: DELETE FROM " + proj.getTableName()
 					+ " WHERE ID = " + f.getId());
 			// TODO: remove debug output
@@ -471,6 +488,7 @@ public class DBExchanger<T extends OrderedItem> {
 			Statement st = conn.createStatement();
 			st.execute("DROP TABLE " + project.getTableName());
 			conn.commit();
+			st.close();
 			System.out.println("Deleted table: " + "DROP TABLE "
 					+ project.getTableName());
 		} else {
@@ -487,6 +505,7 @@ public class DBExchanger<T extends OrderedItem> {
 		rs.next();
 		int i = rs.getInt(1);
 		rs.close();
+		st.close();
 		return i;
 	}
 
@@ -499,6 +518,7 @@ public class DBExchanger<T extends OrderedItem> {
 		rs.next();
 		int i = rs.getInt(1);
 		rs.close();
+		st.close();
 		return i;
 	}
 
@@ -558,10 +578,12 @@ public class DBExchanger<T extends OrderedItem> {
 		if (res.next()) {
 			System.out.println("ID " + id + " already exists");
 			res.close();
+			st.close();
 			// TODO: remove debug output
 			return true;
 		} // if we arrive here, the row doesn't exist yet
 		res.close();
+		st.close();
 		System.out.println("ID " + id + " doesn't exist yet!");
 		// TODO: remove debug output
 		return false;
@@ -578,10 +600,12 @@ public class DBExchanger<T extends OrderedItem> {
 		if (res.next()) {
 			System.out.println("ID " + id + " already exists");
 			res.close();
+			st.close();
 			// TODO: remove debug output
 			return true;
 		} // if we arrive here, the row doesn't exist yet
 		res.close();
+		st.close();
 		System.out.println("ID " + id + " doesn't exist yet!");
 		// TODO: remove debug output
 		return false;
@@ -590,7 +614,7 @@ public class DBExchanger<T extends OrderedItem> {
 	// TITLE ALREADY EXISTING: check if project title is already in use
 	public boolean titleAlreadyExisting(String projTitle) throws SQLException {
 		Statement st = conn.createStatement();
-		st.executeQuery("SELECT PROJ_TITLE FROM " + projectsTableTitle
+		st.executeQuery("SELECT ID FROM " + projectsTableTitle
 				+ " WHERE PROJ_TITLE = '" + projTitle + "'");
 		conn.commit();
 		System.out.println("Check for duplicate: " + "SELECT ID FROM "
@@ -599,9 +623,11 @@ public class DBExchanger<T extends OrderedItem> {
 		if (res.next()) {
 			System.out.println("Duplicate!");
 			res.close();
+			st.close();
 			return true;
 		}
 		res.close();
+		st.close();
 		return false;
 	}
 
@@ -616,9 +642,11 @@ public class DBExchanger<T extends OrderedItem> {
 		if (res.next()) {
 			int i = res.getInt(1);
 			res.close();
+			st.close();
 			return i;
 		} else {
 			res.close();
+			st.close();
 			throw new EntryNotFoundException();
 		}
 	}
@@ -659,7 +687,7 @@ public class DBExchanger<T extends OrderedItem> {
 			conn.commit();
 			proj.setMaxCharsAnswer(answerSize);
 		}
-
+		st.close();
 	}
 
 }

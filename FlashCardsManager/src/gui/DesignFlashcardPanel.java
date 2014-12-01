@@ -9,6 +9,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
@@ -49,7 +50,7 @@ public class DesignFlashcardPanel extends JPanel {
       lblPic = null;
    }
 
-   void addPicture(FlashCard card, PicType type) throws IOException {
+   void addPicture(FlashCard card, PicType type) throws IOException, SQLException {
       BufferedImage img = null;
       switch (type) {
       case QUESTION:
