@@ -80,7 +80,7 @@ public class DBExchanger<T extends OrderedItem> {
 	            } else {
 	                 System.out.println("Database shut down normally");
 	            }
-			System.out.println("Closed connection to " + dbURL);
+	            System.gc();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -228,6 +228,10 @@ public class DBExchanger<T extends OrderedItem> {
 			prepSt.setBlob(6, answerBlob);
 			prepSt.execute();
 			conn.commit();
+			if(questionBlob != null)
+			   questionBlob.free();
+			if(answerBlob != null)
+			   answerBlob.free();
 			prepSt.close();
 			System.out.println("successfully exported card "
 					+ currentCard.getId() + "...");
@@ -315,11 +319,11 @@ public class DBExchanger<T extends OrderedItem> {
 
 	// GET PIC: get picture of flashcard from DB
 	public BufferedImage getPic(PicType type, FlashCard card,
-			LearningProject proj) throws SQLException {
+			LearningProject proj) throws SQLException, IOException {
 		ResultSet result = null;
-		FileOutputStream fos = null;
 		Statement st = null;
 		BufferedImage img = null;
+		ByteArrayInputStream in = null;
 		try {
 			st = conn.createStatement();
 			switch (type) {
@@ -339,7 +343,8 @@ public class DBExchanger<T extends OrderedItem> {
 				image = result.getBytes(1);
 			}
 			try {
-				img = ImageIO.read(new ByteArrayInputStream(image));
+			    in = new ByteArrayInputStream(image);
+				img = ImageIO.read(in);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -347,6 +352,9 @@ public class DBExchanger<T extends OrderedItem> {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		if (in != null) {
+		   in.close();
 		}
 		result.close();
 		st.close();
@@ -359,13 +367,15 @@ public class DBExchanger<T extends OrderedItem> {
 			IOException {
 		PreparedStatement prepSt = null;
 		String MODIFY_PIC;
+		FileInputStream inputStreamQuestion = null;
+		FileInputStream inputStreamAnswer = null;
 		switch (type) {
 		case QUESTION:
 			MODIFY_PIC = "UPDATE " + proj.getTableName()
 					+ " SET QUESTIONPIC = ? WHERE ID = " + card.getId();
 			prepSt = conn.prepareStatement(MODIFY_PIC);
 			File questionPicture = new File(pathToPic);
-			FileInputStream inputStreamQuestion = new FileInputStream(
+			inputStreamQuestion = new FileInputStream(
 					questionPicture);
 			prepSt.setBinaryStream(1, inputStreamQuestion,
 					questionPicture.length());
@@ -375,7 +385,7 @@ public class DBExchanger<T extends OrderedItem> {
 					+ " SET ANSWERPIC = ? WHERE ID = " + card.getId();
 			prepSt = conn.prepareStatement(MODIFY_PIC);
 			File answerPicture = new File(pathToPic);
-			FileInputStream inputStreamAnswer = new FileInputStream(
+			inputStreamAnswer = new FileInputStream(
 					answerPicture);
 			prepSt.setBinaryStream(1, inputStreamAnswer, answerPicture.length());
 			break;
@@ -383,6 +393,12 @@ public class DBExchanger<T extends OrderedItem> {
 		prepSt.executeUpdate();
 		conn.commit();
 		prepSt.close();
+		if (inputStreamQuestion != null) {
+		   inputStreamQuestion.close();
+		}
+		if (inputStreamAnswer != null) {
+		   inputStreamAnswer.close();
+		}
 		System.out.println("Successfully modified " + type.toString()
 				+ "-Pic from card " + card.getId() + "!");
 		// TODO: remove debug output

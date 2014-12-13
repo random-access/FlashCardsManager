@@ -327,6 +327,9 @@ public class LearningSession extends JDialog {
       } catch (SQLException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();
+      } catch (IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
       }
    }
 
@@ -363,6 +366,9 @@ public class LearningSession extends JDialog {
          progress.setString(progress.getValue() + " von "
                + progress.getMaximum());
       } catch (SQLException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      } catch (IOException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();
       }
