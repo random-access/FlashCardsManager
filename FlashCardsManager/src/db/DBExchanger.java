@@ -61,10 +61,25 @@ public class DBExchanger<T extends OrderedItem> {
 		}
 	}
 	
-	public void closeConnection() {
+	public void closeConnection(String pathToDatabase) {
 		try {
 			conn.commit();
 			conn.close();
+			
+			 boolean gotSQLExc = false;
+	            try {
+	            	DriverManager.getConnection(
+	    				    "jdbc:derby:" + pathToDatabase + ";shutdown=true");
+	            } catch (SQLException se) {
+	                if ( se.getSQLState().equals("08006") ) {
+	                    gotSQLExc = true;
+	                }
+	            }
+	            if (!gotSQLExc) {
+	                 System.out.println("Database did not shut down normally");
+	            } else {
+	                 System.out.println("Database shut down normally");
+	            }
 			System.out.println("Closed connection to " + dbURL);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
