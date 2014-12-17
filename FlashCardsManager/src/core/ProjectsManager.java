@@ -76,8 +76,8 @@ public class ProjectsManager {
 					task.changeProgress (Math.min(100, 30 + projCount * 70 / importManager.projects.size()));
 				}	
 			});	
-			importManager.dbex.closeConnection(pathToImport);
 		}
+		importManager.dbex.closeConnection(pathToImport);
 		System.out.println("Successfully imported selected projects!");
 	}
 
@@ -103,9 +103,9 @@ public class ProjectsManager {
 				public void run() {
 					task.changeProgress(Math.min(100, 30 + projCount * 70 / projs.size()));
 				}	
-			});
-			exportManager.dbex.closeConnection(pathToExport);
+			});	
 		}
+		exportManager.dbex.closeConnection(pathToExport);
 		System.out.println("sucessfully exported selected projects!");
 	}
 

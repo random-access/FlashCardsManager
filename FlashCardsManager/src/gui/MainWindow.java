@@ -310,7 +310,7 @@ public class MainWindow extends JFrame {
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				if (pathToImport == null) { // no path selected
 					JOptionPane.showMessageDialog(MainWindow.this,
-							"Es wurde kein Pfad ausgewählt", "Fehler!",
+							"Es wurde kein Pfad ausgewaehlt", "Fehler!",
 							JOptionPane.WARNING_MESSAGE);
 					doAction();
 				} else { // some path selected

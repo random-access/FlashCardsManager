@@ -42,6 +42,7 @@ public class ChooseProjectsDialog extends JDialog {
 	private ProjectBox[] boxes;
 	private JButton btnOk, btnDiscard;
 	private ProjectsManager prm;
+	private boolean delete;
 
 	public ChooseProjectsDialog(MainWindow owner, ProjectsManager prm) {
 		super(owner, false);
@@ -175,7 +176,7 @@ public class ChooseProjectsDialog extends JDialog {
 			                     if (dialogResult == JOptionPane.YES_OPTION) {
 			                        // user wants to overwrite -> delete existing
 			                        // directory and start export
-			                        FileUtils.deleteDirectory(pathToExport);
+			                        delete = true;
 			                        doTask(pathToExport);
 			                     } else if (dialogResult == JOptionPane.NO_OPTION) {
 			                        // user doesn't want to overwrite -> show file
@@ -238,6 +239,9 @@ public class ChooseProjectsDialog extends JDialog {
 			});
 			setProgress(0);
 			try {
+			   if (delete) {
+			      FileUtils.deleteDirectory(pathToExport);
+			   }
 				// --> export project to selected location and show progress
 				prm.exportProject(getSelectedProjects(), pathToExport, this);
 			} catch (ClassNotFoundException e1) {

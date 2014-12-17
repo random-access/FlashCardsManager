@@ -163,19 +163,19 @@ public class DBExchanger<T extends OrderedItem> {
 		if (card.hasQuestionPic() == false) {
 			prepSt.setBinaryStream(5, null);
 		} else {
-			File questionPicture = new File(pathToQuestionPic);
+			File qPicFile = new File(pathToQuestionPic);
 			System.out.println(pathToQuestionPic);
-			inputStreamQuestion = new FileInputStream(questionPicture);
+			inputStreamQuestion = new FileInputStream(qPicFile);
 			prepSt.setBinaryStream(5, inputStreamQuestion,
-					questionPicture.length());
+					qPicFile.length());
 		}
 		if (card.hasAnswerPic() == false) {
 			prepSt.setBinaryStream(6, null);
 		} else {
-			File answerPicture = new File(pathToAnswerPic);
+			File aPicFile = new File(pathToAnswerPic);
 			System.out.println(pathToAnswerPic);
-			inputStreamAnswer = new FileInputStream(answerPicture);
-			prepSt.setBinaryStream(6, inputStreamAnswer, answerPicture.length());
+			inputStreamAnswer = new FileInputStream(aPicFile);
+			prepSt.setBinaryStream(6, inputStreamAnswer, aPicFile.length());
 		}
 		prepSt.executeUpdate();
 		conn.commit();
@@ -190,56 +190,77 @@ public class DBExchanger<T extends OrderedItem> {
 				+ card.getId() + " into database!");
 		// TODO: remove debug output
 	}
-
-	// ADD ARRAY
-	public void insertFlashcardArray(ArrayList<FlashCard> allCards,
-			LearningProject destProj, DBExchanger<OrderedItem> srcDbex,
-			LearningProject srcProj) throws SQLException,
-			EntryNotFoundException {
-		String INSERT_CARD = "insert into " + destProj.getTableName()
-				+ " (ID, STACK, QUESTION, ANSWER, QUESTIONPIC, ANSWERPIC) "
-				+ "values (?, ?, ?, ?, ?, ?)";
-		ListIterator<FlashCard> lit = allCards.listIterator();
-		while (lit.hasNext()) {
-			FlashCard currentCard = lit.next();
-			controlVarcharLength(currentCard, destProj);
-			PreparedStatement prepSt = conn.prepareStatement(INSERT_CARD);
-			prepSt.setInt(1, currentCard.getId());
-			prepSt.setInt(2, currentCard.getStack());
-			prepSt.setString(3, currentCard.getQuestion());
-			prepSt.setString(4, currentCard.getAnswer());
-			byte[] questionBytes = srcDbex.getBlobAsBytes(PicType.QUESTION,
-					currentCard, srcProj);
-			Blob questionBlob = null;
-			if (questionBytes != null) {
-				questionBlob = new SerialBlob(questionBytes);
-				System.out.println("card " + currentCard.getId()
-						+ " has question-pic...");
-			}
-			prepSt.setBlob(5, questionBlob);
-			byte[] answerBytes = srcDbex.getBlobAsBytes(PicType.ANSWER,
-					currentCard, srcProj);
-			Blob answerBlob = null;
-			if (answerBytes != null) {
-				answerBlob = new SerialBlob(answerBytes);
-				System.out.println("card " + currentCard.getId()
-						+ " has answer-pic...");
-			}
-			prepSt.setBlob(6, answerBlob);
-			prepSt.execute();
-			conn.commit();
-			if(questionBlob != null)
-			   questionBlob.free();
-			if(answerBlob != null)
-			   answerBlob.free();
-			prepSt.close();
-			System.out.println("successfully exported card "
-					+ currentCard.getId() + "...");
-		}
-
-	}
-
 	
+// ADD ARRAY
+   public void insertFlashcardArray(ArrayList<FlashCard> allCards,
+         LearningProject destProj, DBExchanger<OrderedItem> srcDbex,
+         LearningProject srcProj) throws SQLException,
+         EntryNotFoundException {
+      String INSERT_TEXT = "insert into " + destProj.getTableName()
+            + " (ID, STACK, QUESTION, ANSWER, QUESTIONPIC, ANSWERPIC) "
+            + "values (?, ?, ?, ?, ?, ?)";
+      ListIterator<FlashCard> lit = allCards.listIterator();   
+      while (lit.hasNext()) {
+         
+         FlashCard currentCard = lit.next();
+         controlVarcharLength(currentCard, destProj);
+         PreparedStatement prepSt = conn.prepareStatement(INSERT_TEXT);
+         prepSt.setInt(1, currentCard.getId());
+         prepSt.setInt(2, currentCard.getStack());
+         prepSt.setString(3, currentCard.getQuestion());
+         prepSt.setString(4, currentCard.getAnswer());
+         prepSt.setBlob(5, null, 0);
+         prepSt.setBlob(6, null, 0);
+         prepSt.execute();
+         conn.commit();
+         prepSt.close();      
+         System.out.println("successfully exported card texts"
+               + currentCard.getId() + "...");
+      }
+      
+      ListIterator<FlashCard> litQ = allCards.listIterator();
+      while (lit.hasNext()) {
+         FlashCard currentCard = litQ.next();
+         String TRANSFERQ = "UPDATE "+ destProj.getTableName() + " SET QUESTIONPIC = ? WHERE ID = " + currentCard.getId();
+         PreparedStatement prepSt = conn.prepareStatement(TRANSFERQ);
+         byte[] questionBytes = srcDbex.getBlobAsBytes(PicType.QUESTION,
+               currentCard, srcProj);
+         Blob questionBlob = null;
+         if (questionBytes != null) {
+            questionBlob = new SerialBlob(questionBytes);
+            System.out.println("card " + currentCard.getId()
+                  + " has question-pic...");
+         }
+         prepSt.setBlob(1, questionBlob);
+         prepSt.execute();
+         conn.commit();
+         if(questionBlob != null) {
+            questionBlob.free();
+         }
+      }
+      
+      ListIterator<FlashCard> litA = allCards.listIterator();
+      while (lit.hasNext()) {
+         FlashCard currentCard = litA.next();
+         String TRANSFERA = "UPDATE "+ destProj.getTableName() + " SET ANSWERPIC = ? WHERE ID = " + currentCard.getId();
+         PreparedStatement prepSt = conn.prepareStatement(TRANSFERA);
+         byte[] answerBytes = srcDbex.getBlobAsBytes(PicType.ANSWER,
+               currentCard, srcProj);
+         Blob answerBlob = null;
+         if (answerBytes != null) {
+            answerBlob = new SerialBlob(answerBytes);
+            System.out.println("card " + currentCard.getId()
+                  + " has answer-pic...");
+         }
+         prepSt.setBlob(1, answerBlob);
+         prepSt.execute();
+         conn.commit();
+         if(answerBlob != null) {
+            answerBlob.free();
+         }
+      }
+      
+   }
 
 	// UPDATE ROW: modify existing project
 	public void updateRow(LearningProject project)
@@ -308,12 +329,12 @@ public class DBExchanger<T extends OrderedItem> {
 			blob = res.getBlob(1);
 		}
 		res.close();
-		st.close();
+      st.close();
 		byte[] b = null;
 		if (blob != null) {
 			b = blob.getBytes(1, (int) blob.length());
 			blob.free();
-		}
+		}	
 		return b;
 	}
 
