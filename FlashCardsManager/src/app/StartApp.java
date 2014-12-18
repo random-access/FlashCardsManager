@@ -1,10 +1,13 @@
 package app;
 
+import exc.EntryAlreadyThereException;
+import exc.EntryNotFoundException;
+import gui.MainWindow;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -14,14 +17,11 @@ import javax.xml.stream.XMLStreamException;
 import xml.Settings;
 import xml.XMLExchanger;
 import core.ProjectsManager;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
-import gui.MainWindow;
 
 public class StartApp {
 	
 
-	static final String APP_FOLDER = appDirectory();
+	public static final String APP_FOLDER = appDirectory();
 	static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
 	static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_1";
 	

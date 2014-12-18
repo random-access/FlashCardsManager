@@ -6,7 +6,6 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -32,6 +31,7 @@ import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 import exc.InvalidValueException;
 
+@SuppressWarnings("serial")
 public class ChooseProjectsDialog extends JDialog {
    MainWindow owner;
    ArrayList<LearningProject> allProjects;
@@ -152,7 +152,7 @@ public class ChooseProjectsDialog extends JDialog {
          if (returnVal == JFileChooser.APPROVE_OPTION) {
             if (pathToExport == null) { // no path selected
                JOptionPane.showMessageDialog(ChooseProjectsDialog.this,
-                     "Es wurde kein Pfad ausgewaehlt", "Fehler!",
+                     "Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
                      JOptionPane.WARNING_MESSAGE);
                doAction();
             } else { // some path selected
@@ -169,8 +169,8 @@ public class ChooseProjectsDialog extends JDialog {
                      int dialogResult = JOptionPane.showConfirmDialog(owner,
                            "Die Datei " + f.getName()
                                  + " existiert bereits in " + f.getParent()
-                                 + " - soll sie überschrieben werden?",
-                           "Datei überschreiben?", JOptionPane.YES_NO_OPTION,
+                                 + " - soll sie \u00fcberschrieben werden?",
+                           "Datei \u00fcberschreiben?", JOptionPane.YES_NO_OPTION,
                            JOptionPane.WARNING_MESSAGE);
                      if (dialogResult == JOptionPane.YES_OPTION) {
                         // user wants to overwrite -> delete existing
@@ -201,7 +201,7 @@ public class ChooseProjectsDialog extends JDialog {
                            owner,
                            "Fehler - keine Schreibberechtigung unter "
                                  + f.getParent()
-                                 + ". Bitte waehle ein anderes Verzeichnis! ",
+                                 + ". Bitte w\u00e4hle ein anderes Verzeichnis! ",
                            "Fehlende Berechtigung!",
                            JOptionPane.WARNING_MESSAGE);
                      doAction();

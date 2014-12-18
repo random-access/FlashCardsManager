@@ -28,6 +28,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import core.FlashCard;
 import core.LearningProject;
 
+@SuppressWarnings("serial")
 public class EditFlashcardsDialog extends JDialog {
 
    static BufferedImage imgSettings, imgPlus, imgFlashcardInfo;
@@ -72,12 +73,6 @@ public class EditFlashcardsDialog extends JDialog {
       setTitle(owner.getTitle() + " - Lernkarten bearbeiten");
       setLayout(new BorderLayout());
 
-      // try {
-      // UIManager
-      // .setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
-      // } catch (Exception e) {
-      // e.printStackTrace();
-      // }
       try {
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
       } catch (ClassNotFoundException e) {

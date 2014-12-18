@@ -13,7 +13,6 @@ import exc.InvalidValueException;
 
 public class LearningProject implements OrderedItem {
 
-	private final ProjectsManager projMgr;
 	private final DBExchanger<OrderedItem> dbex;
 
 	private final int id;
@@ -41,7 +40,6 @@ public class LearningProject implements OrderedItem {
 		this.numberOfStacks = numberOfStacks;
 		this.title = title;
 		this.tableName = "PROJEKT_" + id;
-		this.projMgr = projMgr;
 		projMgr.addProject(this);
 		dbex.createTable(this.tableName);
 		allCards = new ArrayList<FlashCard>();
@@ -62,7 +60,6 @@ public class LearningProject implements OrderedItem {
 		this.numberOfStacks = srcProject.getNumberOfStacks();
 		this.title = srcProject.getTitle();
 		this.tableName = "PROJEKT_" + id;
-		this.projMgr = projMgr;
 		projMgr.addProject(this);
 		dbex.createTable(this.tableName);
 		allCards = cardArray;
@@ -76,7 +73,6 @@ public class LearningProject implements OrderedItem {
 		this.numberOfStacks = numberOfStacks;
 		this.title = title;
 		this.tableName = "PROJEKT_" + id;
-		this.projMgr = projMgr;
 		this.maxCharsQuestion = maxCharsQuestion;
 		this.maxCharsAnswer = maxCharsAnswer;
 		dbex = new DBExchanger<OrderedItem>(projMgr.getPathToDatabase());

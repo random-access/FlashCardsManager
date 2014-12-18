@@ -15,6 +15,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import core.FlashCard;
 import db.PicType;
 
+@SuppressWarnings("serial")
 public class PreviewDialog extends LearningSession {
 
    private String question, answer;

@@ -4,7 +4,6 @@ import static java.nio.file.FileVisitResult.CONTINUE;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.FileSystemException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -53,21 +52,6 @@ public class FileUtils {
       }
    }
 
-   // public static boolean deleteRecursive(File path) throws
-   // FileNotFoundException{
-   // if( path.exists() ) {
-   // File[] files = path.listFiles();
-   // for(int i=0; i<files.length; i++) {
-   // if(files[i].isDirectory()) {
-   // deleteRecursive(files[i]);
-   // } else {
-   // files[i].delete();
-   // }
-   // }
-   // }
-   // return( path.delete() );
-   // }
-   //
    public static void main(String[] args) {
       FileUtils.deleteDirectory("C:/Users/test/Desktop/TestDB");
    }

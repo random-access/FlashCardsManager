@@ -26,6 +26,7 @@ import utils.InvalidCharsFilter;
 import core.FlashCard;
 import db.PicType;
 
+@SuppressWarnings("serial")
 public class DesignFlashcardPanel extends JPanel {
    private CountedTextArea txt;
    private JScrollPane scp;

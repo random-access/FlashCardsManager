@@ -5,7 +5,6 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Blob;
 import java.sql.Connection;
@@ -306,7 +305,6 @@ public class DBExchanger<T extends OrderedItem> {
 	}
 
 	// GET PIC AS BLOB:
-	@SuppressWarnings("incomplete-switch")
 	public byte[] getBlobAsBytes(PicType type, FlashCard card,
 			LearningProject proj) throws SQLException {
 		Blob blob = null;

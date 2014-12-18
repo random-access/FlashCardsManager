@@ -1,5 +1,6 @@
 package exc;
 
+@SuppressWarnings("serial")
 public class EntryNotFoundException extends Exception {
 
 	public EntryNotFoundException() {

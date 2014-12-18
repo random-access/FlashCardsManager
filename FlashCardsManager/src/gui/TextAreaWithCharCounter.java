@@ -7,6 +7,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.DefaultStyledDocument;
 
+@SuppressWarnings("serial")
 public class TextAreaWithCharCounter extends JTextArea{
     private JTextArea txt;
     private JLabel lblCurrentCharCount;

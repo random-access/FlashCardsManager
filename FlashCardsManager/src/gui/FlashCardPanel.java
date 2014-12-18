@@ -14,7 +14,6 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -22,6 +21,7 @@ import core.FlashCard;
 import core.LearningProject;
 import exc.EntryNotFoundException;
 
+@SuppressWarnings("serial")
 public class FlashCardPanel extends JPanel {
 
    static BufferedImage imgShowMore, imgEdit, imgDelete, imgRed, imgYellow,
@@ -49,9 +49,8 @@ public class FlashCardPanel extends JPanel {
 
    private Box b;
    JLabel lblStatus, lblText;
-   private JButton btnShowMore, btnEdit, btnDelete;
+   private JButton btnEdit, btnDelete;
    private Status status;
-   // private JCheckBox chk;
    private FlashCard card;
    private LearningProject project;
    private ProjectPanel projectPnl;
@@ -75,7 +74,7 @@ public class FlashCardPanel extends JPanel {
       b = Box.createHorizontalBox();
       b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
       setStatus(this.status);
-      // chk = new JCheckBox();
+
        lblText = new JLabel("Frage " + card.getId() + ": " + getQuestionTitle(card));
       lblText.setFont(lblText.getFont().deriveFont(Font.BOLD, 12));
       btnEdit = new JButton(new ImageIcon(imgEdit));
@@ -98,7 +97,6 @@ public class FlashCardPanel extends JPanel {
       b.add(Box.createRigidArea(new Dimension(15, 0)));
       b.add(btnDelete);
       b.add(Box.createRigidArea(new Dimension(15, 0)));
-      // b.add(chk);
    }
    
    private String getQuestionTitle(FlashCard f) {
@@ -121,7 +119,6 @@ public class FlashCardPanel extends JPanel {
    private void setListeners() {
       
       btnDelete.addActionListener(new ActionListener() {
-
          @Override
          public void actionPerformed(ActionEvent e) {
             // TODO: remove item in database
@@ -154,20 +151,16 @@ public class FlashCardPanel extends JPanel {
                }
             });
             d.setVisible(true);
-
          }
       });
 
       btnEdit.addActionListener(new ActionListener() {
-
          @Override
          public void actionPerformed(ActionEvent e) {
             ChangeFlashcardDialog cfd = new ChangeFlashcardDialog(editDialog, project, projectPnl, card);
             cfd.setVisible(true);
          }
-
       });
-
    }
 
    public void changeStatus(Status s) {
@@ -189,7 +182,7 @@ public class FlashCardPanel extends JPanel {
       case YELLOW:
          lblStatus = new JLabel(new ImageIcon(imgYellow));
          lblStatus
-               .setToolTipText("Weiter so! - Diese Karte wurde mindestens 1mal richtig beantwortet");
+               .setToolTipText("Weiter so! - Diese Karte wurde mindestens einmal richtig beantwortet");
          break;
       case GREEN:
          lblStatus = new JLabel(new ImageIcon(imgGreen));

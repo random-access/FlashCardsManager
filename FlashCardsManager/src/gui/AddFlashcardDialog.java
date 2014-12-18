@@ -13,7 +13,6 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
@@ -21,15 +20,14 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.text.AbstractDocument;
 
-import utils.InvalidCharsFilter;
 import core.FlashCard;
 import core.LearningProject;
 import db.PicType;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 
+@SuppressWarnings("serial")
 public class AddFlashcardDialog extends JDialog {
 	protected static BufferedImage imgDelete;
 	static {
@@ -166,11 +164,6 @@ public class AddFlashcardDialog extends JDialog {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				// JOptionPane.showMessageDialog(AddFlashcardDialog.this,
-				// "Unerlaubte Zeichen: " + e1.getInvalidInputSigns() +
-				// " - bitte entferne diese!" ,
-				// "Fehler",
-				// JOptionPane.ERROR_MESSAGE);
 			}
 		});
 

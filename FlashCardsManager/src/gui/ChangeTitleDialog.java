@@ -19,14 +19,14 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.text.AbstractDocument;
 
-import utils.SizeFilterExtended;
-import utils.DocumentSizeFilter;
 import utils.InvalidCharsFilter;
+import utils.SizeFilterExtended;
 import core.LearningProject;
 import core.ProjectsManager;
 import exc.EntryNotFoundException;
 import exc.NoValueException;
 
+@SuppressWarnings("serial")
 public class ChangeTitleDialog extends JDialog {
 
 	private JPanel pnlCenter, pnlBtns;
@@ -46,13 +46,6 @@ public class ChangeTitleDialog extends JDialog {
 		this.pnl = pnl;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setTitle("Titel \u00e4ndern..");
-
-//		try {
-//			UIManager
-//					.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
 		
 		try {
 	         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -133,7 +126,6 @@ public class ChangeTitleDialog extends JDialog {
 		}
 		txtTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		((AbstractDocument) txtTitle.getDocument()).setDocumentFilter(new SizeFilterExtended(new InvalidCharsFilter(this), 50));
-		// ((AbstractDocument) txtTitle.getDocument()).setDocumentFilter(new InvalidCharsFilter(this));
 		btnOk = new JButton("  OK  ");
 		btnDiscard = new JButton(" Abbrechen ");
 	}

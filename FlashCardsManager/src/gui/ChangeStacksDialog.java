@@ -23,6 +23,7 @@ import exc.EntryNotFoundException;
 import exc.InvalidValueException;
 import exc.NoValueException;
 
+@SuppressWarnings("serial")
 public class ChangeStacksDialog extends JDialog {
 
 	private JPanel pnlCenter, pnlBtns;
@@ -44,13 +45,6 @@ public class ChangeStacksDialog extends JDialog {
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setTitle("Anzahl Durchl\u00e4ufe \u00e4ndern..");
 
-//		try {
-//			UIManager
-//					.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-		
 		try {
 	         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 	      } catch (ClassNotFoundException e) {

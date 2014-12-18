@@ -17,14 +17,15 @@ import javax.swing.SwingConstants;
 
 import db.PicType;
 
+@SuppressWarnings("serial")
 public class PicAndTextPanel extends JPanel {
 
 	private JLabel lblPic, lblTitle;
 	private JTextArea txtArea;
-	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit() 
-            .getScreenSize().width * 0.75);
-	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit() 
-            .getScreenSize().height * 0.85);
+	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit()
+			.getScreenSize().width * 0.75);
+	private static final int MAX_PIC_HEIGHT = (int) (Toolkit
+			.getDefaultToolkit().getScreenSize().height * 0.85);
 
 	public PicAndTextPanel(BufferedImage img, String txt, PicType type) {
 		super(new BorderLayout(10, 10));
@@ -32,36 +33,40 @@ public class PicAndTextPanel extends JPanel {
 				BorderFactory.createLineBorder(Color.BLACK, 1),
 				BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 		this.setBackground(Color.WHITE);
-		switch(type) {
+		if (type == null) {
+			if (txt.equals("")) {
+				lblTitle = new JLabel();
+			} else {
+				lblTitle = new JLabel("Fertig!");
+			}
+		} else {
+			switch (type) {
 			case QUESTION:
 				lblTitle = new JLabel("Frage");
 				break;
 			case ANSWER:
 				lblTitle = new JLabel("Antwort");
 				break;
-			case THE_END:
-				lblTitle = new JLabel("Fertig!");
-				break;
-			case NO_PIC:
-				lblTitle = new JLabel();
-				break;
+			}
 		}
 		lblTitle.setFont(lblTitle.getFont().deriveFont(Font.BOLD, 14));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		if (img != null) { //text & pic or pic only
-				lblPic = new JLabel(new ImageIcon(fitPicInCard(img)));
-				txtArea = new JTextArea(1,40);
-				txtArea.setText(txt);
-				txtArea.setEditable(false);
-				txtArea.setLineWrap(true);
-				txtArea.setWrapStyleWord(true);
-				txtArea.setBackground(Color.WHITE);
-				this.add(lblTitle, BorderLayout.NORTH);
-				this.add(lblPic, BorderLayout.CENTER);
-				System.out.println("Bild-Panel:  " + lblPic.getPreferredSize().width + " x " + lblPic.getPreferredSize().height);
-				this.add(txtArea, BorderLayout.SOUTH);
+		if (img != null) { // text & pic or pic only
+			lblPic = new JLabel(new ImageIcon(fitPicInCard(img)));
+			txtArea = new JTextArea(1, 40);
+			txtArea.setText(txt);
+			txtArea.setEditable(false);
+			txtArea.setLineWrap(true);
+			txtArea.setWrapStyleWord(true);
+			txtArea.setBackground(Color.WHITE);
+			this.add(lblTitle, BorderLayout.NORTH);
+			this.add(lblPic, BorderLayout.CENTER);
+			System.out.println("Bild-Panel:  "
+					+ lblPic.getPreferredSize().width + " x "
+					+ lblPic.getPreferredSize().height);
+			this.add(txtArea, BorderLayout.SOUTH);
 		} else { // text only
-			txtArea = new JTextArea(15,40);
+			txtArea = new JTextArea(15, 40);
 			txtArea.setText(txt);
 			txtArea.setEditable(false);
 			txtArea.setLineWrap(true);
@@ -69,7 +74,7 @@ public class PicAndTextPanel extends JPanel {
 			txtArea.setBackground(Color.WHITE);
 			this.add(lblTitle, BorderLayout.NORTH);
 			this.add(txtArea, BorderLayout.CENTER);
-		}	
+		}
 	}
 
 	private BufferedImage fitPicInCard(BufferedImage img) {

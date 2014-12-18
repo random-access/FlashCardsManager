@@ -11,6 +11,7 @@ import core.LearningProject;
 import db.PicType;
 import exc.EntryNotFoundException;
 
+@SuppressWarnings("serial")
 public class ChangeFlashcardDialog extends AddFlashcardDialog {
 
 	FlashCard card;

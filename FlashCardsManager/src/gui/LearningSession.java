@@ -29,6 +29,7 @@ import core.LearningProject;
 import db.PicType;
 import exc.EntryNotFoundException;
 
+@SuppressWarnings("serial")
 public class LearningSession extends JDialog {
 
    static BufferedImage imgSwitch, imgPrev, imgNext, imgRight, imgWrong,
@@ -339,10 +340,10 @@ public class LearningSession extends JDialog {
       try {
          if (currentCard == null) {
             if (allCards.size() == 0) {
-               pnlQ = new PicAndTextPanel(imgFlashcardInfo, "", PicType.NO_PIC);
+               pnlQ = new PicAndTextPanel(imgFlashcardInfo, "", null);
             } else {
                pnlQ = new PicAndTextPanel(null, "Super! Geschafft!",
-                     PicType.THE_END);
+                     null);
             }
             btnFwd.setEnabled(false);
             btnSwitch.setEnabled(false);

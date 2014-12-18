@@ -154,7 +154,6 @@ public class DBExchangerDemo {
             public FileVisitResult visitFile(Path file,
                   BasicFileAttributes attrs) throws IOException {
                System.out.println("Deleting file: " + file);
-               File f = new File(file.toString());
                Files.delete(file);
                return CONTINUE;
             }
