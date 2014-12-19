@@ -108,7 +108,7 @@ public class ChooseStacksDialog extends JDialog {
 					ChooseStacksDialog.this.dispose();
 				} else {
 					JOptionPane.showMessageDialog(ChooseStacksDialog.this,
-							"Bitte Stapel ausw\u00e4hlen!", "Achtung",
+							"Bitte Stapel mit Karten ausw\u00e4hlen!", "Achtung",
 							JOptionPane.WARNING_MESSAGE);
 				}
 			}
