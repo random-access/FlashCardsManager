@@ -161,6 +161,7 @@ public class MainWindow extends JFrame {
 		/* */
 		mnuBar = new JMenuBar();
 		mnuSettings = new JMenu("");
+		mnuSettings.setToolTipText("Einstellungen..");
 		mnuSettings.setIcon(new ImageIcon(imgSettings));
 		mnuSettings.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
 		mnuSettingsNew = new MyMenu("Neu");
@@ -195,6 +196,7 @@ public class MainWindow extends JFrame {
 		btnAddProject = new JButton(new ImageIcon(imgPlus));
 		btnAddProject
 				.setFont(btnAddProject.getFont().deriveFont(Font.BOLD, 16));
+		btnAddProject.setToolTipText("Neues Lernprojekt hinzuf\u00fcgen");
 	}
 
 	private void addWidgets() {

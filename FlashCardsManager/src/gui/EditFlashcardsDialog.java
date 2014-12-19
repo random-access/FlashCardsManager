@@ -110,6 +110,7 @@ public MainWindow getOwner() {
 
       scpCenter = new JScrollPane(pnlCenter);
       btnAddCard = new JButton(new ImageIcon(imgPlus));
+      btnAddCard.setToolTipText("Neue Lernkarte hinzuf\u00fcgen");
 
       btnClose = new JButton("Schlie\u00dfen");
       pnlSouth = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -118,6 +119,7 @@ public MainWindow getOwner() {
 
       mnuBar = new JMenuBar();
       mnuSettings = new JMenu("");
+      mnuSettings.setToolTipText("Einstellungen..");
       mnuSettings.setIcon(new ImageIcon(imgSettings));
       mnuSettings.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
       mnuSettingsNewCard = new MyMenuItem("Neue Lernkarte hinzuf\u00fcgen");

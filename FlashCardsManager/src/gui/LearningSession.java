@@ -119,13 +119,12 @@ public class LearningSession extends JDialog {
 
       pnlButtons = new JPanel(new FlowLayout(FlowLayout.CENTER));
       pnlControls = new JPanel(new BorderLayout());
-      btnSwitch = new JButton(new ImageIcon(imgSwitch));
-      btnBack = new JButton(new ImageIcon(imgPrev));
-      btnFalse = new JButton(new ImageIcon(imgWrong));
-      btnTrue = new JButton(new ImageIcon(imgRight));
-      btnFwd = new JButton(new ImageIcon(imgNext));
-      btnClose = new JButton(new ImageIcon(imgExit));
-      btnSwitch.setToolTipText("Antwort zeigen");
+      btnSwitch = new MyButton("umdrehen", new ImageIcon(imgSwitch) );
+      btnBack = new MyButton("zur\u00fcck", new ImageIcon(imgPrev));
+      btnFalse = new MyButton("falsch", new ImageIcon(imgWrong));
+      btnTrue = new MyButton("richtig", new ImageIcon(imgRight));
+      btnFwd = new MyButton("vor", new ImageIcon(imgNext));
+      btnClose = new MyButton("schlie\u00dfen", new ImageIcon(imgExit));
 
       centerPanel = new JPanel();
       centerPanel.setLayout(new GridBagLayout());
