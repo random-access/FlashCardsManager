@@ -124,7 +124,7 @@ public class ProjectsManager {
 		return pathToDatabase;
 	}
 
-	public ArrayList<LearningProject> getProjects() {
+	public ArrayList<LearningProject> getAllProjects() {
 		return projects;
 	}
 }

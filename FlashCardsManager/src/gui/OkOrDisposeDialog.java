@@ -5,15 +5,7 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.Logger;
 
@@ -24,7 +16,7 @@ public class OkOrDisposeDialog extends JDialog {
 	private JPanel pnlControls,pnlCenter;
 	private JButton btnOk, btnDiscard;
 
-	public OkOrDisposeDialog(MainWindow owner, int width, int height) {
+	OkOrDisposeDialog(MainWindow owner, int width, int height) {
 		super(owner, true);
 		setLayout(new BorderLayout());
 		
@@ -71,11 +63,11 @@ public class OkOrDisposeDialog extends JDialog {
 		lblText.setHorizontalAlignment(SwingConstants.CENTER);
 	}
 	
-	public void setText(String text) {
+	void setText(String text) {
 		lblText.setText(text);
 	}
 	
-	public void addOkAction(ActionListener l) {
+	void addOkAction(ActionListener l) {
 		btnOk.addActionListener(l);
 	}
 

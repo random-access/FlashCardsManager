@@ -8,13 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
 
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.Logger;
 import core.FlashCard;
@@ -23,8 +17,8 @@ import core.LearningProject;
 @SuppressWarnings("serial")
 public class ChooseStacksDialog extends JDialog {
 
-	MainWindow owner;
-	ArrayList<FlashCard> cards, copiedCards, sessionCards;
+	private MainWindow owner;
+	private ArrayList<FlashCard> cards, sessionCards;
 	private LearningProject project;
 
 	private JPanel pnlControls;
@@ -33,7 +27,7 @@ public class ChooseStacksDialog extends JDialog {
 	private JButton btnOk, btnDiscard;
 	private boolean activeSelection;
 
-	public ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards,
+	ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards,
 			LearningProject project) throws SQLException {
 		super(owner, false);
 		this.owner = owner;

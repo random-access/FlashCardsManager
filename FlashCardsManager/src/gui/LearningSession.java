@@ -1,9 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridBagLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -13,17 +10,7 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.Logger;
 import core.FlashCard;
@@ -34,7 +21,7 @@ import exc.EntryNotFoundException;
 @SuppressWarnings("serial")
 public class LearningSession extends JDialog {
 
-   static BufferedImage imgSwitch, imgPrev, imgNext, imgRight, imgWrong,
+   private static BufferedImage imgSwitch, imgPrev, imgNext, imgRight, imgWrong,
          imgExit, imgFlashcardInfo;
 
    static {
@@ -67,6 +54,7 @@ public class LearningSession extends JDialog {
    private ArrayList<FlashCard> allCards;
    private FlashCard currentCard;
    private ListIterator<FlashCard> lit;
+   
    protected JPanel pnlButtons, pnlControls, centerPanel, pnlTitle,
          pnlProgress;
    protected PicAndTextPanel pnlQ, pnlA;

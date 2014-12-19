@@ -1,10 +1,6 @@
 package gui;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JCheckBox;
-import javax.swing.JLabel;
+import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class StackBox extends Box {
@@ -12,7 +8,7 @@ public class StackBox extends Box {
 	private JCheckBox chk;
 	private JLabel lblStack, lblNoOfCards;
 
-	public StackBox(int stackNo, int noOfCards) {
+	StackBox(int stackNo, int noOfCards) {
 		super(BoxLayout.X_AXIS);
 		chk = new JCheckBox();
 		lblStack = new JLabel("Stapel " + stackNo + ": ");
@@ -24,7 +20,7 @@ public class StackBox extends Box {
 		this.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 30));
 	}
 	
-	public boolean isSelected() {
+	boolean isSelected() {
 		return chk.isSelected();
 	}
 

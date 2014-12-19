@@ -6,24 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.Logger;
 import core.LearningProject;
 import core.ProjectsManager;
-import exc.EntryNotFoundException;
-import exc.InvalidValueException;
-import exc.NoValueException;
+import exc.*;
 
 @SuppressWarnings("serial")
 public class ChangeStacksDialog extends JDialog {
@@ -84,7 +72,7 @@ public class ChangeStacksDialog extends JDialog {
                ChangeStacksDialog.this.dispose();
             } catch (NoValueException exc) {
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
-                     "Es wurde kein Wert für die Stapelanzahl eingegeben.",
+                     "Es wurde kein Wert fï¿½r die Stapelanzahl eingegeben.",
                      "Fehler", JOptionPane.ERROR_MESSAGE);
             } catch (NumberFormatException | InvalidValueException exc) {
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,

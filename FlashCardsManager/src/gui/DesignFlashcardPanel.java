@@ -1,10 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -12,12 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
+import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.DefaultStyledDocument;
@@ -35,7 +26,7 @@ public class DesignFlashcardPanel extends JPanel {
    private static final int MAX_PIC_SIZE = 150;
    private Component owner;
 
-   public DesignFlashcardPanel(Component owner) {
+   DesignFlashcardPanel(Component owner) {
 	  this.owner = owner;
       this.setLayout(new BorderLayout());
       this.setBorder(BorderFactory.createCompoundBorder(

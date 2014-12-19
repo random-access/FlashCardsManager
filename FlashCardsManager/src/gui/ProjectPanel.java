@@ -1,9 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -12,28 +9,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import utils.Logger;
-import core.FlashCard;
-import core.LearningProject;
-import core.ProjectsManager;
+import core.*;
 import exc.EntryNotFoundException;
 
 @SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
 
-	static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow, imgGreen;
+	private static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow, imgGreen;
 
 	static {
 		try {
@@ -56,6 +42,7 @@ public class ProjectPanel extends JPanel {
 
 	int noOfStacks;
 	private Box b;
+	// TODO make this private -> method for ChangeTitleDialog
 	JLabel lblStatus, lblText;
 	private JButton btnPlay, btnEdit, btnDelete;
 	private Status status;
@@ -69,7 +56,7 @@ public class ProjectPanel extends JPanel {
 	private ArrayList<FlashCard> cards;
 
 	// Constructor
-	public ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsManager prm) {
+	ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsManager prm) {
 		this.prm = prm;
 		this.project = project;
 		this.status = Status.RED;
@@ -91,7 +78,7 @@ public class ProjectPanel extends JPanel {
 		return this.project;
 	}
 
-	public void addWidgets() {
+	private void addWidgets() {
 		this.add(b, BorderLayout.CENTER);
 		b.add(lblStatus);
 		b.add(Box.createRigidArea(new Dimension(15, 0)));
@@ -111,7 +98,7 @@ public class ProjectPanel extends JPanel {
 		popupEdit.add(popupEditResetProgress);
 	}
 
-	public void createWidgets() {
+	private void createWidgets() {
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		setStatus(this.status);
@@ -136,23 +123,23 @@ public class ProjectPanel extends JPanel {
 		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg"));
 	}
 
-	public JFileChooser getFileChooser() {
+	JFileChooser getFileChooser() {
 		return fileChooser;
 	}
 
-	public void addCard(FlashCard card) {
+	void addCard(FlashCard card) {
 		cards.add(card);
 	}
 
-	public void removeCard(FlashCard card) {
+	void removeCard(FlashCard card) {
 		cards.remove(card);
 	}
 
-	public Status getStatus() {
+	Status getStatus() {
 		return this.status;
 	}
 
-	public void setStatus(Status s) {
+	private void setStatus(Status s) {
 		switch (s) {
 		case RED:
 			lblStatus = new JLabel(new ImageIcon(imgRed));
@@ -169,7 +156,7 @@ public class ProjectPanel extends JPanel {
 
 	}
 
-	public void changeStatus(Status s) {
+	void changeStatus(Status s) {
 		remove(b);
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -178,7 +165,7 @@ public class ProjectPanel extends JPanel {
 		revalidate();
 	}
 
-	public void setListeners() {
+	private void setListeners() {
 		btnDelete.addActionListener(new ActionListener() {
 
 			@Override

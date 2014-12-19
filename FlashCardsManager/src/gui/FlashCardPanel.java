@@ -1,8 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -10,13 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import utils.Logger;
 import core.FlashCard;
@@ -26,7 +18,7 @@ import exc.EntryNotFoundException;
 @SuppressWarnings("serial")
 public class FlashCardPanel extends JPanel {
 
-   static BufferedImage imgShowMore, imgEdit, imgDelete, imgRed, imgYellow,
+   private static BufferedImage imgEdit, imgDelete, imgRed, imgYellow,
          imgGreen;
 
    static {
@@ -51,13 +43,13 @@ public class FlashCardPanel extends JPanel {
    }
 
    private Box b;
-   JLabel lblStatus, lblText;
+   private JLabel lblStatus, lblText;
    private JButton btnEdit, btnDelete;
    private Status status;
    private FlashCard card;
    private LearningProject project;
    private ProjectPanel projectPnl;
-   EditFlashcardsDialog editDialog;
+   private EditFlashcardsDialog editDialog;
 
    public FlashCardPanel(FlashCard card, LearningProject project,
          Status status, ProjectPanel projectPnl,
@@ -164,7 +156,7 @@ public class FlashCardPanel extends JPanel {
       });
    }
 
-   public void changeStatus(Status s) {
+   void changeStatus(Status s) {
       remove(b);
       b = Box.createHorizontalBox();
       b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));

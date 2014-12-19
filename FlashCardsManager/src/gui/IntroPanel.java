@@ -5,16 +5,13 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 import utils.Logger;
 
 @SuppressWarnings("serial")
 public class IntroPanel extends JFrame {
-	static BufferedImage imgIntro;
+	private static BufferedImage imgIntro;
 
 	static {
 		try {
@@ -28,7 +25,7 @@ public class IntroPanel extends JFrame {
 		}
 	}
 	
-	JLabel lblIntroLabel;
+	private JLabel lblIntroLabel;
 	
 	IntroPanel() {
 		this.setLayout(new BorderLayout());

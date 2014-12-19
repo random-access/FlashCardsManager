@@ -1,33 +1,17 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 
-import utils.InvalidCharsFilter;
-import utils.Logger;
-import utils.SizeFilterExtended;
+import utils.*;
 import core.LearningProject;
 import core.ProjectsManager;
-import exc.EntryAlreadyThereException;
-import exc.InvalidValueException;
-import exc.NoValueException;
+import exc.*;
 
 @SuppressWarnings("serial")
 public class AddProjectDialog extends JDialog {
@@ -131,7 +115,7 @@ public class AddProjectDialog extends JDialog {
                      JOptionPane.ERROR_MESSAGE);
             } catch (NoValueException exc) {
                JOptionPane.showMessageDialog(AddProjectDialog.this,
-                     "Es wurden nicht alle Felder ausgefüllt.",
+                     "Es wurden nicht alle Felder ausgefï¿½llt.",
                      "Fehler", JOptionPane.ERROR_MESSAGE);
             }
          }

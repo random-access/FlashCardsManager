@@ -4,26 +4,19 @@ import java.awt.BorderLayout;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JProgressBar;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.Logger;
 
 @SuppressWarnings("serial")
 public class ProgressDialog extends JDialog implements PropertyChangeListener{
+	
 	private JProgressBar progressBar;
 	private JLabel lblInfo;
 	private Box progressBox;
 	private String text;
 	
-	public ProgressDialog(JFrame owner, String text) {
+	ProgressDialog(JFrame owner, String text) {
 		super (owner, false);
 		this.text = text;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);

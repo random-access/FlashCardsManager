@@ -1,8 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Cursor;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -10,19 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.SwingWorker;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.FileUtils;
 import utils.Logger;
@@ -43,12 +29,13 @@ public class ChooseProjectsDialog extends JDialog {
    private JButton btnOk, btnDiscard;
    private ProjectsManager prm;
    private boolean delete;
+   private static final String[] DATABASE_FILES = {"log", "seg0", "service.properties"};
 
-   public ChooseProjectsDialog(MainWindow owner, ProjectsManager prm) {
+   ChooseProjectsDialog(MainWindow owner, ProjectsManager prm) {
       super(owner, false);
       this.owner = owner;
       this.prm = prm;
-      this.allProjects = prm.getProjects();
+      this.allProjects = prm.getAllProjects();
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
       setTitle("Projektauswahl..");
       setLayout(new BorderLayout());
@@ -118,8 +105,8 @@ public class ChooseProjectsDialog extends JDialog {
       }
       return selectedProjects;
    }
-
-   class ExportProjectListener implements ActionListener {
+   
+   private class ExportProjectListener implements ActionListener {
 
       @Override
       public void actionPerformed(ActionEvent e) {
@@ -173,7 +160,7 @@ public class ChooseProjectsDialog extends JDialog {
                      if (dialogResult == JOptionPane.YES_OPTION) {
                         // user wants to overwrite -> delete existing
                         // directory and start export
-                        if (directoryContainsOnlyDatabase(pathToExport)) {
+                        if (FileUtils.directoryContainsOnlyCertainFiles(pathToExport, DATABASE_FILES)) {
                            delete = true;
                            doTask(pathToExport);
                         } else {
@@ -214,23 +201,8 @@ public class ChooseProjectsDialog extends JDialog {
       }
 
    }
-
-   private boolean directoryContainsOnlyDatabase(String pathToDirectory) {
-      File f = new File(pathToDirectory);
-      if (!f.isDirectory()) {
-         return false;
-      } else {
-         File[] files = f.listFiles();
-         for (File fi : files) {
-            if (!(fi.getName().equals("log") || fi.getName().equals("seg0") || fi
-                  .getName().equals("service.properties"))) {
-               return false;
-            }
-         }
-         return true;
-      }
-   }
-
+   
+   // TODO make an own class
    public class ExportTask extends SwingWorker<Void, Void> {
       String pathToExport;
       ProgressDialog dialog;
