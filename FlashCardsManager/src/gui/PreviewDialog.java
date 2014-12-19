@@ -9,9 +9,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import utils.Logger;
 import core.FlashCard;
 import db.PicType;
 
@@ -34,14 +36,12 @@ public class PreviewDialog extends LearningSession {
       setLayout(new BorderLayout());
       try {
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-      } catch (ClassNotFoundException e) {
-         e.printStackTrace();
-      } catch (InstantiationException e) {
-         e.printStackTrace();
-      } catch (IllegalAccessException e) {
-         e.printStackTrace();
-      } catch (UnsupportedLookAndFeelException e) {
-         e.printStackTrace();
+      } catch (ClassNotFoundException | InstantiationException
+            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
 
       createWidgets();
@@ -83,12 +83,11 @@ public class PreviewDialog extends LearningSession {
                break;
             }
          }        
-      } catch (SQLException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      } catch (IOException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
+      } catch (SQLException | IOException exc) {
+         JOptionPane.showMessageDialog(PreviewDialog.this,
+               "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(exc);
       }
       return pic;
      

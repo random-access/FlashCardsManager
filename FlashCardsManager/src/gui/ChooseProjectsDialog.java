@@ -25,11 +25,11 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import utils.FileUtils;
+import utils.Logger;
 import core.LearningProject;
 import core.ProjectsManager;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
-import exc.InvalidValueException;
 
 @SuppressWarnings("serial")
 public class ChooseProjectsDialog extends JDialog {
@@ -55,14 +55,12 @@ public class ChooseProjectsDialog extends JDialog {
 
       try {
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-      } catch (ClassNotFoundException e) {
-         e.printStackTrace();
-      } catch (InstantiationException e) {
-         e.printStackTrace();
-      } catch (IllegalAccessException e) {
-         e.printStackTrace();
-      } catch (UnsupportedLookAndFeelException e) {
-         e.printStackTrace();
+      } catch (ClassNotFoundException | InstantiationException
+            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
 
       createWidgets();
@@ -262,24 +260,16 @@ public class ChooseProjectsDialog extends JDialog {
             }
             // --> export project to selected location and show progress
             prm.exportProject(getSelectedProjects(), pathToExport, this);
-         } catch (ClassNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (SQLException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (EntryAlreadyThereException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (EntryNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (IOException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (InvalidValueException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
+         } catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
+            JOptionPane.showMessageDialog(null,
+                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+            Logger.log(exc);
+         } catch (IOException | ClassNotFoundException exc) {
+            JOptionPane.showMessageDialog(null,
+                  "Ein interner Fehler ist aufgetreten", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+            Logger.log(exc);
          }
          setProgress(100);
          Thread.sleep(1000);

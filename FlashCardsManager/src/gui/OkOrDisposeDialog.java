@@ -9,10 +9,13 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+
+import utils.Logger;
 
 @SuppressWarnings("serial")
 public class OkOrDisposeDialog extends JDialog {
@@ -27,15 +30,13 @@ public class OkOrDisposeDialog extends JDialog {
 		
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (UnsupportedLookAndFeelException e) {
-			e.printStackTrace();
-		}
+		 } catch (ClassNotFoundException | InstantiationException
+	            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+	         JOptionPane.showMessageDialog(null,
+	               "Ein interner Fehler ist aufgetreten", "Fehler",
+	               JOptionPane.ERROR_MESSAGE);
+	         Logger.log(e);
+	      }
 		
 		createWidgets();
 		addWidgets();

@@ -24,6 +24,7 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 import core.ProjectsManager;
@@ -44,8 +45,10 @@ public class ProjectPanel extends JPanel {
 			imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgGreen_8x8.png"));
 
 		} catch (IOException e) {
-			System.out.println("Picture not found");
-			// TODO: JDialog mit ErrorMsg
+		   JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
 		}
 	}
 
@@ -188,12 +191,11 @@ public class ProjectPanel extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						try {
 							prm.deleteProject(project);
-						} catch (EntryNotFoundException e1) {
-							// TODO Error handling
-							System.out.println("Eintrag in DB nicht vorhanden - in ProjectPanel");
-						} catch (SQLException e1) {
-							System.out.println("SQL Fehler - in ProjectPanel");
-							e1.printStackTrace();
+						} catch (EntryNotFoundException | SQLException exc) {
+						   JOptionPane.showMessageDialog(ProjectPanel.this,
+			                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+			                  JOptionPane.ERROR_MESSAGE);
+			            Logger.log(exc);
 						}
 						parentWindow.projectPnls.remove(ProjectPanel.this);
 						parentWindow.pnlCenter.remove(parentWindow.centerBox);
@@ -300,9 +302,11 @@ public class ProjectPanel extends JPanel {
 					ChooseStacksDialog chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(),
 							ProjectPanel.this.cards, ProjectPanel.this.project);
 					chooseStacks.setVisible(true);
-				} catch (SQLException e) {
-					System.out.println("SQL-Fehler bei Stapelauswahl!");
-					// TODO: error handling
+				} catch (SQLException exc) {
+				   JOptionPane.showMessageDialog(ProjectPanel.this,
+	                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+	                  JOptionPane.ERROR_MESSAGE);
+	            Logger.log(exc);
 				}
 			}
 

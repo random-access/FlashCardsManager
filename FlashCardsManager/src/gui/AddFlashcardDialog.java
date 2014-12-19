@@ -79,7 +79,6 @@ public class AddFlashcardDialog extends JDialog {
 		setListeners();
 
 		setSize(600, 600);
-		// pack();
 		setLocationRelativeTo(owner);
 	}
 

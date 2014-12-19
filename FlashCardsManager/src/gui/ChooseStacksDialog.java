@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 
@@ -44,15 +45,13 @@ public class ChooseStacksDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (UnsupportedLookAndFeelException e) {
-			e.printStackTrace();
-		}
+		} catch (ClassNotFoundException | InstantiationException
+            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
+      }
 
 		createWidgets();
 		addWidgets();

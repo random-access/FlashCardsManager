@@ -15,8 +15,10 @@ import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 import exc.EntryNotFoundException;
@@ -29,7 +31,6 @@ public class FlashCardPanel extends JPanel {
 
    static {
       try {
-         // TODO: design imgShowMore
          imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader()
                .getResourceAsStream("img/ImgEdit_16x16.png"));
          imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader()
@@ -42,8 +43,10 @@ public class FlashCardPanel extends JPanel {
                .getResourceAsStream("img/ImgGreen_8x8.png"));
 
       } catch (IOException e) {
-         System.out.println("Picture not found");
-         // TODO: JDialog mit ErrorMsg
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
    }
 
@@ -121,7 +124,6 @@ public class FlashCardPanel extends JPanel {
       btnDelete.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            // TODO: remove item in database
             final OkOrDisposeDialog d = new OkOrDisposeDialog(editDialog.getOwner(), 300, 150);
             d.setTitle("Wirklich l\u00f6schen?");
             d.setText("<html>Wirklich die Lernkarte l\u00f6schen? <br>"
@@ -140,12 +142,11 @@ public class FlashCardPanel extends JPanel {
                      projectPnl.getOwner().updateProjectStatus(project);
                      editDialog.repaint();
                      editDialog.revalidate();
-                  } catch (EntryNotFoundException e1) {
-                     // TODO Auto-generated catch block
-                     e1.printStackTrace();
-                  } catch (SQLException e1) {
-                     // TODO Auto-generated catch block
-                     e1.printStackTrace();
+                  } catch (EntryNotFoundException | SQLException exc) {
+                     JOptionPane.showMessageDialog(FlashCardPanel.this,
+                           "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                           JOptionPane.ERROR_MESSAGE);
+                     Logger.log(exc);
                   }
                   d.dispose();
                }

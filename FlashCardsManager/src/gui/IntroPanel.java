@@ -8,6 +8,9 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import utils.Logger;
 
 @SuppressWarnings("serial")
 public class IntroPanel extends JFrame {
@@ -18,8 +21,10 @@ public class IntroPanel extends JFrame {
 			imgIntro = ImageIO.read(ProjectPanel.class.getClassLoader()
 					.getResourceAsStream("img/Intro_LearningCards_500x372.png"));
 		} catch (IOException e) {
-			System.out.println("Picture not found");
-			// TODO: JDialog mit ErrorMsg
+		   JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
 		}
 	}
 	
