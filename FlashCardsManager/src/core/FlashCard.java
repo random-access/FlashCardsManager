@@ -61,14 +61,14 @@ public class FlashCard implements OrderedItem {
 	}
 	
 	// Picture - Getter & Setter
-	public BufferedImage getQuestionPic () {
+	public BufferedImage getQuestionPic () throws SQLException, IOException {
 		if (!hasQuestionPic) {
 			return null;
 		}
 		return proj.getDBEX().getPic(PicType.QUESTION, this, proj);
 	}
 	
-	public BufferedImage getAnswerPic () {
+	public BufferedImage getAnswerPic () throws SQLException, IOException {
 		if (!hasAnswerPic) {
 			return null;
 		}

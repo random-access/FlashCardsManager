@@ -1,5 +1,6 @@
 package exc;
 
+@SuppressWarnings("serial")
 public class NoValueException extends Exception {
 
    public NoValueException() {

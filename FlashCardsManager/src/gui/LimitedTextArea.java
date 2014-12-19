@@ -11,6 +11,7 @@ import javax.swing.text.DefaultStyledDocument;
 
 import utils.DocumentSizeFilter;
 
+@SuppressWarnings("serial")
 public class LimitedTextArea extends JPanel {
 	
 	private JTextArea txt;

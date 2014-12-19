@@ -11,6 +11,7 @@ import core.LearningProject;
 import db.PicType;
 import exc.EntryNotFoundException;
 
+@SuppressWarnings("serial")
 public class ChangeFlashcardDialog extends AddFlashcardDialog {
 
 	FlashCard card;
@@ -34,7 +35,10 @@ public class ChangeFlashcardDialog extends AddFlashcardDialog {
 			} catch (IOException e) {
 				// TODO error handling
 				System.out.println("Error while adding question pic");
-			}
+			} catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
 			btnAddPicQuestion.setText("Bild \u00e4ndern...");
 			System.out.println("added delete button question");
 			boxControlsQuestion.add(btnDelPicQ);
@@ -45,7 +49,10 @@ public class ChangeFlashcardDialog extends AddFlashcardDialog {
 			} catch (IOException e) {
 				// TODO error handling
 				System.out.println("Error while adding answer pic");
-			}
+			} catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
 			btnAddPicAnswer.setText("Bild \u00e4ndern...");
 			System.out.println("added delete button answer");
 			boxControlsAnswer.add(btnDelPicA);

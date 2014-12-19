@@ -6,6 +6,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 
+@SuppressWarnings("serial")
 public class StackBox extends Box {
 	
 	private JCheckBox chk;

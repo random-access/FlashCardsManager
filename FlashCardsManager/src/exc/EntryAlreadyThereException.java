@@ -1,5 +1,6 @@
 package exc;
 
+@SuppressWarnings("serial")
 public class EntryAlreadyThereException extends Exception {
 
 	public EntryAlreadyThereException() {

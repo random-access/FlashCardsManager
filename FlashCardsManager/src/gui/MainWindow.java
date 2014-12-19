@@ -40,6 +40,7 @@ import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 import exc.InvalidValueException;
 
+@SuppressWarnings("serial")
 public class MainWindow extends JFrame {
 
 	static BufferedImage imgSettings, imgPlus, imgAddProjectInfo;
@@ -83,13 +84,6 @@ public class MainWindow extends JFrame {
 		setTitle("FlashCards Manager");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
-
-		// try {
-		// UIManager
-		// .setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// }
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -310,7 +304,7 @@ public class MainWindow extends JFrame {
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				if (pathToImport == null) { // no path selected
 					JOptionPane.showMessageDialog(MainWindow.this,
-							"Es wurde kein Pfad ausgewählt", "Fehler!",
+							"Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
 							JOptionPane.WARNING_MESSAGE);
 					doAction();
 				} else { // some path selected

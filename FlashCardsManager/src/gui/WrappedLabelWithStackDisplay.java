@@ -5,6 +5,7 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JTextArea;
 
+@SuppressWarnings("serial")
 public class WrappedLabelWithStackDisplay extends JTextArea {
 
     public WrappedLabelWithStackDisplay (String text, int rows, int cols) {
@@ -13,8 +14,6 @@ public class WrappedLabelWithStackDisplay extends JTextArea {
         setLineWrap(true);
         setWrapStyleWord(true);
         setOpaque(true);
-        // setBackground(Color.BLACK);
-        // setForeground(Color.WHITE);
         setFont(getFont().deriveFont(18.0F));
         setForeground(Color.BLACK);
         setBorder(BorderFactory.createCompoundBorder(

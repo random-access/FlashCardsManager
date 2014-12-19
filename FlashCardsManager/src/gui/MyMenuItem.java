@@ -6,6 +6,7 @@ import javax.swing.Action;
 import javax.swing.Icon;
 import javax.swing.JMenuItem;
 
+@SuppressWarnings("serial")
 public class MyMenuItem extends JMenuItem {
 
    public MyMenuItem() {

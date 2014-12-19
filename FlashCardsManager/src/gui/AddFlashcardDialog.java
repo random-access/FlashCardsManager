@@ -13,23 +13,23 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.text.AbstractDocument;
 
-import utils.InvalidCharsFilter;
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 import db.PicType;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 
+@SuppressWarnings("serial")
 public class AddFlashcardDialog extends JDialog {
 	protected static BufferedImage imgDelete;
 	static {
@@ -67,14 +67,11 @@ public class AddFlashcardDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (UnsupportedLookAndFeelException e) {
-			e.printStackTrace();
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException |UnsupportedLookAndFeelException e) {
+		   JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
 		}
 
 		createWidgets();
@@ -118,18 +115,16 @@ public class AddFlashcardDialog extends JDialog {
 					}
 					System.out.println("Successfully added card!");
 					AddFlashcardDialog.this.dispose();
-				} catch (EntryAlreadyThereException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (EntryNotFoundException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (EntryAlreadyThereException | EntryNotFoundException | SQLException e1) {
+				   JOptionPane.showMessageDialog(null,
+		               "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+		               JOptionPane.ERROR_MESSAGE);
+		         Logger.log(e1);
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				   JOptionPane.showMessageDialog(null,
+                     "Ein interner Fehler ist aufgetreten", "Fehler",
+                     JOptionPane.ERROR_MESSAGE);
+               Logger.log(e1);
 				}
 			}
 
@@ -153,24 +148,17 @@ public class AddFlashcardDialog extends JDialog {
 					AddFlashcardDialog d = new AddFlashcardDialog(efcDialog,
 							project, projPnl);
 					d.setVisible(true);
-				} catch (EntryAlreadyThereException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (EntryNotFoundException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (EntryAlreadyThereException | EntryNotFoundException | SQLException e1) {
+				   JOptionPane.showMessageDialog(null,
+                     "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+                     JOptionPane.ERROR_MESSAGE);
+               Logger.log(e1);
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				   JOptionPane.showMessageDialog(null,
+                     "Ein interner Fehler ist aufgetreten", "Fehler",
+                     JOptionPane.ERROR_MESSAGE);
+               Logger.log(e1);
 				}
-				// JOptionPane.showMessageDialog(AddFlashcardDialog.this,
-				// "Unerlaubte Zeichen: " + e1.getInvalidInputSigns() +
-				// " - bitte entferne diese!" ,
-				// "Fehler",
-				// JOptionPane.ERROR_MESSAGE);
 			}
 		});
 
@@ -275,7 +263,10 @@ public class AddFlashcardDialog extends JDialog {
 					}
 					AddFlashcardDialog.this.revalidate();
 				} catch (IOException exc) {
-					System.out.println("File not found");
+				   JOptionPane.showMessageDialog(null,
+                     "Ein interner Fehler ist aufgetreten", "Fehler",
+                     JOptionPane.ERROR_MESSAGE);
+               Logger.log(exc);
 				}
 			} else {
 				System.out.println("just close");

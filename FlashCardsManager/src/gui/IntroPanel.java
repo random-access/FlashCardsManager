@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+@SuppressWarnings("serial")
 public class IntroPanel extends JFrame {
 	static BufferedImage imgIntro;
 
@@ -31,9 +32,5 @@ public class IntroPanel extends JFrame {
 		this.setSize(500, 402);
 		setLocationRelativeTo(null);
 		this.setVisible(true);
-	}
-	
-	public static void main(String[] args) {
-		IntroPanel p = new IntroPanel();
 	}
 }

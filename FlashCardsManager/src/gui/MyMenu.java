@@ -5,6 +5,7 @@ import java.awt.Insets;
 import javax.swing.Action;
 import javax.swing.JMenu;
 
+@SuppressWarnings("serial")
 public class MyMenu extends JMenu {
 
    public MyMenu() {

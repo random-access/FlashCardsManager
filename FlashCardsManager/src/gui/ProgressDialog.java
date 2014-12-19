@@ -13,6 +13,7 @@ import javax.swing.JProgressBar;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+@SuppressWarnings("serial")
 public class ProgressDialog extends JDialog implements PropertyChangeListener{
 	private JProgressBar progressBar;
 	private JLabel lblInfo;

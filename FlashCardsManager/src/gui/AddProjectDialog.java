@@ -15,19 +15,19 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.text.AbstractDocument;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.text.AbstractDocument;
 
-import utils.SizeFilterExtended;
-import utils.DocumentSizeFilter;
 import utils.InvalidCharsFilter;
+import utils.SizeFilterExtended;
 import core.LearningProject;
 import core.ProjectsManager;
 import exc.EntryAlreadyThereException;
 import exc.InvalidValueException;
 import exc.NoValueException;
 
+@SuppressWarnings("serial")
 public class AddProjectDialog extends JDialog {
 
 	private JPanel pnlCenter, pnlBtns;

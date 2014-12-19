@@ -19,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -28,25 +29,19 @@ import core.LearningProject;
 import core.ProjectsManager;
 import exc.EntryNotFoundException;
 
+@SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
 
-	static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow,
-			imgGreen;
+	static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow, imgGreen;
 
 	static {
 		try {
-			imgPlay = ImageIO.read(ProjectPanel.class.getClassLoader()
-					.getResourceAsStream("img/ImgPlay_16x16.png"));
-			imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader()
-					.getResourceAsStream("img/ImgEdit_16x16.png"));
-			imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader()
-					.getResourceAsStream("img/ImgDelete_16x16.png"));
-			imgRed = ImageIO.read(ProjectPanel.class.getClassLoader()
-					.getResourceAsStream("img/ImgRed_8x8.png"));
-			imgYellow = ImageIO.read(ProjectPanel.class.getClassLoader()
-					.getResourceAsStream("img/ImgYellow_8x8.png"));
-			imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader()
-					.getResourceAsStream("img/ImgGreen_8x8.png"));
+			imgPlay = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlay_16x16.png"));
+			imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgEdit_16x16.png"));
+			imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgDelete_16x16.png"));
+			imgRed = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgRed_8x8.png"));
+			imgYellow = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgYellow_8x8.png"));
+			imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgGreen_8x8.png"));
 
 		} catch (IOException e) {
 			System.out.println("Picture not found");
@@ -63,16 +58,15 @@ public class ProjectPanel extends JPanel {
 	private Status status;
 	private String name;
 	private JPopupMenu popupEdit;
-	private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks,
-			popupEditAddCards, popupEditOrganizeCards, popupEditExportProject, popupEditResetProgress;
+	private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks, popupEditAddCards, popupEditOrganizeCards,
+			popupEditResetProgress;
 	private MainWindow parentWindow;
 	private ProjectsManager prm;
 	private LearningProject project;
 	private ArrayList<FlashCard> cards;
 
 	// Constructor
-	public ProjectPanel(LearningProject project, MainWindow parentWindow,
-			ProjectsManager prm) {
+	public ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsManager prm) {
 		this.prm = prm;
 		this.project = project;
 		this.status = Status.RED;
@@ -129,16 +123,14 @@ public class ProjectPanel extends JPanel {
 
 		popupEdit = new JPopupMenu();
 		popupEditChangeName = new JMenuItem("Titel bearbeiten..");
-		popupEditChangeNoOfStacks = new JMenuItem(
-				"Anzahl Durchl\u00e4ufe \u00e4ndern..");
+		popupEditChangeNoOfStacks = new JMenuItem("Anzahl Durchl\u00e4ufe \u00e4ndern..");
 		popupEditAddCards = new JMenuItem("Lernkarten hinzuf\u00fcgen..");
 		popupEditOrganizeCards = new JMenuItem("Lernkarten bearbeiten..");
 		popupEditResetProgress = new JMenuItem("Projekt zur\u00fccksetzen..");
 
 		fileChooser = new JFileChooser();
 		fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien",
-				"png", "jpg"));
+		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg"));
 	}
 
 	public JFileChooser getFileChooser() {
@@ -161,18 +153,15 @@ public class ProjectPanel extends JPanel {
 		switch (s) {
 		case RED:
 			lblStatus = new JLabel(new ImageIcon(imgRed));
-			lblStatus
-					.setToolTipText("Los geht's - es wurde noch keine Frage korrekt beantwortet");
+			lblStatus.setToolTipText("Los geht's - es wurde noch keine Frage korrekt beantwortet");
 			break;
 		case YELLOW:
 			lblStatus = new JLabel(new ImageIcon(imgYellow));
-			lblStatus
-					.setToolTipText("Weiter so - einige Fragen wurden schon korrekt beantwortet");
+			lblStatus.setToolTipText("Weiter so - einige Fragen wurden schon korrekt beantwortet");
 			break;
 		case GREEN:
 			lblStatus = new JLabel(new ImageIcon(imgGreen));
-			lblStatus
-					.setToolTipText("Bravo! Alle Fragen sind im letzten Stapel!");
+			lblStatus.setToolTipText("Bravo! Alle Fragen sind im letzten Stapel!");
 		}
 
 	}
@@ -191,11 +180,9 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				final OkOrDisposeDialog d = new OkOrDisposeDialog(parentWindow,
-						300, 150);
+				final OkOrDisposeDialog d = new OkOrDisposeDialog(parentWindow, 300, 150);
 				d.setTitle("Wirklich l\u00f6schen?");
-				d.setText("<html>Wirklich das Projekt und alle <br>"
-						+ "zugeh\u00f6rigen Karten l\u00f6schen?</html>");
+				d.setText("<html>Wirklich das Projekt und alle <br>" + "zugeh\u00f6rigen Karten l\u00f6schen?</html>");
 				d.addOkAction(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
@@ -203,8 +190,7 @@ public class ProjectPanel extends JPanel {
 							prm.deleteProject(project);
 						} catch (EntryNotFoundException e1) {
 							// TODO Error handling
-							System.out
-									.println("Eintrag in DB nicht vorhanden - in ProjectPanel");
+							System.out.println("Eintrag in DB nicht vorhanden - in ProjectPanel");
 						} catch (SQLException e1) {
 							System.out.println("SQL Fehler - in ProjectPanel");
 							e1.printStackTrace();
@@ -213,8 +199,7 @@ public class ProjectPanel extends JPanel {
 						parentWindow.pnlCenter.remove(parentWindow.centerBox);
 						parentWindow.centerBox = Box.createVerticalBox();
 						parentWindow.addProjectsToPanel();
-						parentWindow.pnlCenter.add(parentWindow.centerBox,
-								BorderLayout.NORTH);
+						parentWindow.pnlCenter.add(parentWindow.centerBox, BorderLayout.NORTH);
 						parentWindow.repaint();
 						parentWindow.revalidate();
 						d.dispose();
@@ -243,8 +228,7 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this,
-						project, prm);
+				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project, prm);
 				p.setVisible(true);
 			}
 
@@ -254,8 +238,7 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangeStacksDialog p = new ChangeStacksDialog(
-						ProjectPanel.this, project, prm);
+				ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, prm);
 				p.setVisible(true);
 			}
 
@@ -265,8 +248,7 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AddFlashcardDialog d = new AddFlashcardDialog(project,
-						ProjectPanel.this);
+				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
 				d.setVisible(true);
 			}
 
@@ -275,8 +257,7 @@ public class ProjectPanel extends JPanel {
 		popupEditOrganizeCards.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				EditFlashcardsDialog d = new EditFlashcardsDialog(
-						ProjectPanel.this, cards, project);
+				EditFlashcardsDialog d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
 				d.setVisible(true);
 			}
 		});
@@ -284,9 +265,7 @@ public class ProjectPanel extends JPanel {
 		popupEditResetProgress.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO
-				final OkOrDisposeDialog d = new OkOrDisposeDialog(
-						ProjectPanel.this.getOwner(), 300, 150);
+				final OkOrDisposeDialog d = new OkOrDisposeDialog(ProjectPanel.this.getOwner(), 300, 150);
 				d.setText("<html>M\u00f6chtest Du wirklich alle Karten <br> in den ersten Stapel zur\u00fccklegen?</html>");
 				d.setTitle("Lernerfolg zur\u00fccksetzen?");
 				d.addOkAction(new ActionListener() {
@@ -295,17 +274,17 @@ public class ProjectPanel extends JPanel {
 						for (int i = 0; i < cards.size(); i++) {
 							try {
 								cards.get(i).setStack(1);
+								changeStatus(Status.RED);
+							} catch (SQLException exc) {
+								JOptionPane.showMessageDialog(ProjectPanel.this,
+										"Keine Verbindung zur Datenbank. Bitte probiere es noch einmal.", "Datenbankfehler",
+										JOptionPane.ERROR_MESSAGE);
 							} catch (EntryNotFoundException e1) {
-								// TODO error handling
-								System.out
-										.println("EntryNotFoundException in ProjectPanel");
-							} catch (SQLException e1) {
-								// TODO error handling
-								System.out
-										.println("SQLException in ProjectPanel");
-							} 
+								JOptionPane.showMessageDialog(ProjectPanel.this,
+										"Keine Verbindung zur Datenbank. Bitte probiere es noch einmal.", "Datenbankfehler",
+										JOptionPane.ERROR_MESSAGE);
+							}
 						}
-						changeStatus(Status.RED);
 						d.dispose();
 					}
 				});
@@ -318,8 +297,7 @@ public class ProjectPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					ChooseStacksDialog chooseStacks = new ChooseStacksDialog(
-							ProjectPanel.this.getOwner(),
+					ChooseStacksDialog chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(),
 							ProjectPanel.this.cards, ProjectPanel.this.project);
 					chooseStacks.setVisible(true);
 				} catch (SQLException e) {

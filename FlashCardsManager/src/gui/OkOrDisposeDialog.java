@@ -14,6 +14,7 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+@SuppressWarnings("serial")
 public class OkOrDisposeDialog extends JDialog {
 	
 	private JLabel lblText;
