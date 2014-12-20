@@ -1,9 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.ComponentOrientation;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -11,27 +8,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 
 @SuppressWarnings("serial")
 public class EditFlashcardsDialog extends JDialog {
 
-   static BufferedImage imgSettings, imgPlus, imgFlashcardInfo;
+   private static BufferedImage imgSettings, imgPlus, imgFlashcardInfo;
    {
       try {
          imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader()
@@ -50,6 +36,7 @@ public class EditFlashcardsDialog extends JDialog {
    private LearningProject project;
    private ProjectPanel projPnl;
    private JLabel lblFlashcardInfo;
+   // make them private!! -> method for flashcard panel
    JPanel pnlControls, pnlCenter, pnlSouth;
    Box centerBox;
    JScrollPane scpCenter;
@@ -75,14 +62,12 @@ public class EditFlashcardsDialog extends JDialog {
 
       try {
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-      } catch (ClassNotFoundException e) {
-         e.printStackTrace();
-      } catch (InstantiationException e) {
-         e.printStackTrace();
-      } catch (IllegalAccessException e) {
-         e.printStackTrace();
-      } catch (UnsupportedLookAndFeelException e) {
-         e.printStackTrace();
+      } catch (ClassNotFoundException | InstantiationException
+            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
 
       createWidgets();

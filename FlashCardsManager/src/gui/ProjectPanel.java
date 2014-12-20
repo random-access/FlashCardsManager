@@ -1,9 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -12,27 +9,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-import core.FlashCard;
-import core.LearningProject;
-import core.ProjectsManager;
+import utils.Logger;
+import core.*;
 import exc.EntryNotFoundException;
 
 @SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
 
-	static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow, imgGreen;
+	private static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow, imgGreen;
 
 	static {
 		try {
@@ -44,8 +31,10 @@ public class ProjectPanel extends JPanel {
 			imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgGreen_8x8.png"));
 
 		} catch (IOException e) {
-			System.out.println("Picture not found");
-			// TODO: JDialog mit ErrorMsg
+		   JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
 		}
 	}
 
@@ -53,6 +42,7 @@ public class ProjectPanel extends JPanel {
 
 	int noOfStacks;
 	private Box b;
+	// TODO make this private -> method for ChangeTitleDialog
 	JLabel lblStatus, lblText;
 	private JButton btnPlay, btnEdit, btnDelete;
 	private Status status;
@@ -66,7 +56,7 @@ public class ProjectPanel extends JPanel {
 	private ArrayList<FlashCard> cards;
 
 	// Constructor
-	public ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsManager prm) {
+	ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsManager prm) {
 		this.prm = prm;
 		this.project = project;
 		this.status = Status.RED;
@@ -88,7 +78,7 @@ public class ProjectPanel extends JPanel {
 		return this.project;
 	}
 
-	public void addWidgets() {
+	private void addWidgets() {
 		this.add(b, BorderLayout.CENTER);
 		b.add(lblStatus);
 		b.add(Box.createRigidArea(new Dimension(15, 0)));
@@ -108,7 +98,7 @@ public class ProjectPanel extends JPanel {
 		popupEdit.add(popupEditResetProgress);
 	}
 
-	public void createWidgets() {
+	private void createWidgets() {
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		setStatus(this.status);
@@ -133,23 +123,23 @@ public class ProjectPanel extends JPanel {
 		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg"));
 	}
 
-	public JFileChooser getFileChooser() {
+	JFileChooser getFileChooser() {
 		return fileChooser;
 	}
 
-	public void addCard(FlashCard card) {
+	void addCard(FlashCard card) {
 		cards.add(card);
 	}
 
-	public void removeCard(FlashCard card) {
+	void removeCard(FlashCard card) {
 		cards.remove(card);
 	}
 
-	public Status getStatus() {
+	Status getStatus() {
 		return this.status;
 	}
 
-	public void setStatus(Status s) {
+	private void setStatus(Status s) {
 		switch (s) {
 		case RED:
 			lblStatus = new JLabel(new ImageIcon(imgRed));
@@ -166,7 +156,7 @@ public class ProjectPanel extends JPanel {
 
 	}
 
-	public void changeStatus(Status s) {
+	void changeStatus(Status s) {
 		remove(b);
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -175,7 +165,7 @@ public class ProjectPanel extends JPanel {
 		revalidate();
 	}
 
-	public void setListeners() {
+	private void setListeners() {
 		btnDelete.addActionListener(new ActionListener() {
 
 			@Override
@@ -188,12 +178,11 @@ public class ProjectPanel extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						try {
 							prm.deleteProject(project);
-						} catch (EntryNotFoundException e1) {
-							// TODO Error handling
-							System.out.println("Eintrag in DB nicht vorhanden - in ProjectPanel");
-						} catch (SQLException e1) {
-							System.out.println("SQL Fehler - in ProjectPanel");
-							e1.printStackTrace();
+						} catch (EntryNotFoundException | SQLException exc) {
+						   JOptionPane.showMessageDialog(ProjectPanel.this,
+			                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+			                  JOptionPane.ERROR_MESSAGE);
+			            Logger.log(exc);
 						}
 						parentWindow.projectPnls.remove(ProjectPanel.this);
 						parentWindow.pnlCenter.remove(parentWindow.centerBox);
@@ -300,9 +289,11 @@ public class ProjectPanel extends JPanel {
 					ChooseStacksDialog chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(),
 							ProjectPanel.this.cards, ProjectPanel.this.project);
 					chooseStacks.setVisible(true);
-				} catch (SQLException e) {
-					System.out.println("SQL-Fehler bei Stapelauswahl!");
-					// TODO: error handling
+				} catch (SQLException exc) {
+				   JOptionPane.showMessageDialog(ProjectPanel.this,
+	                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+	                  JOptionPane.ERROR_MESSAGE);
+	            Logger.log(exc);
 				}
 			}
 

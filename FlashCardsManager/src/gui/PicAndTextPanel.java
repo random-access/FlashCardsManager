@@ -1,19 +1,10 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 
 import db.PicType;
 
@@ -22,12 +13,13 @@ public class PicAndTextPanel extends JPanel {
 
 	private JLabel lblPic, lblTitle;
 	private JTextArea txtArea;
+	
 	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit()
 			.getScreenSize().width * 0.75);
 	private static final int MAX_PIC_HEIGHT = (int) (Toolkit
 			.getDefaultToolkit().getScreenSize().height * 0.85);
 
-	public PicAndTextPanel(BufferedImage img, String txt, PicType type) {
+	PicAndTextPanel(BufferedImage img, String txt, PicType type) {
 		super(new BorderLayout(10, 10));
 		this.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createLineBorder(Color.BLACK, 1),
@@ -53,6 +45,7 @@ public class PicAndTextPanel extends JPanel {
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		if (img != null) { // text & pic or pic only
 			lblPic = new JLabel(new ImageIcon(fitPicInCard(img)));
+			// TODO customize txtArea
 			txtArea = new JTextArea(1, 40);
 			txtArea.setText(txt);
 			txtArea.setEditable(false);
@@ -99,7 +92,7 @@ public class PicAndTextPanel extends JPanel {
 		return img;
 	}
 
-	public static BufferedImage scale(BufferedImage sbi, int imageType,
+	static BufferedImage scale(BufferedImage sbi, int imageType,
 			int dWidth, int dHeight, double fWidth, double fHeight) {
 		BufferedImage dbi = null;
 		if (sbi != null) {

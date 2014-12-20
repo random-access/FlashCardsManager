@@ -1,9 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridBagLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -13,17 +10,9 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 import db.PicType;
@@ -32,7 +21,7 @@ import exc.EntryNotFoundException;
 @SuppressWarnings("serial")
 public class LearningSession extends JDialog {
 
-   static BufferedImage imgSwitch, imgPrev, imgNext, imgRight, imgWrong,
+   private static BufferedImage imgSwitch, imgPrev, imgNext, imgRight, imgWrong,
          imgExit, imgFlashcardInfo;
 
    static {
@@ -52,8 +41,10 @@ public class LearningSession extends JDialog {
          imgExit = ImageIO.read(ProjectPanel.class.getClassLoader()
                .getResourceAsStream("img/ImgExit_28x28.png"));
       } catch (IOException e) {
-         System.out.println("Picture not found");
-         // TODO: JDialog mit ErrorMsg
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
    }
 
@@ -63,6 +54,7 @@ public class LearningSession extends JDialog {
    private ArrayList<FlashCard> allCards;
    private FlashCard currentCard;
    private ListIterator<FlashCard> lit;
+   
    protected JPanel pnlButtons, pnlControls, centerPanel, pnlTitle,
          pnlProgress;
    protected PicAndTextPanel pnlQ, pnlA;
@@ -86,21 +78,18 @@ public class LearningSession extends JDialog {
       setLayout(new BorderLayout());
       try {
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-      } catch (ClassNotFoundException e) {
-         e.printStackTrace();
-      } catch (InstantiationException e) {
-         e.printStackTrace();
-      } catch (IllegalAccessException e) {
-         e.printStackTrace();
-      } catch (UnsupportedLookAndFeelException e) {
-         e.printStackTrace();
+      } catch (ClassNotFoundException | InstantiationException
+            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
 
       createWidgets();
       createProgressBar();
       addWidgets();
       setListeners();
-      // pack();
       setSize(800, 600);
       setLocationRelativeTo(owner);
       beginning = true;
@@ -242,12 +231,11 @@ public class LearningSession extends JDialog {
                centerPanel.add(pnlQ);
                centerPanel.revalidate();
                centerPanel.repaint();
-            } catch (EntryNotFoundException e1) {
-               // TODO Auto-generated catch block
-               e1.printStackTrace();
-            } catch (SQLException e1) {
-               // TODO Auto-generated catch block
-               e1.printStackTrace();
+            } catch (EntryNotFoundException | SQLException exc) {
+               JOptionPane.showMessageDialog(LearningSession.this,
+                     "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                     JOptionPane.ERROR_MESSAGE);
+               Logger.log(exc);
             }
          }
 
@@ -271,12 +259,11 @@ public class LearningSession extends JDialog {
                centerPanel.add(pnlQ);
                centerPanel.revalidate();
                centerPanel.repaint();
-            } catch (EntryNotFoundException e1) {
-               // TODO error handling
-               System.out.println("FlashCard not found - in LearningSession");
-            } catch (SQLException e1) {
-               // TODO error handling
-               System.out.println("SQL Error - in LearningSession");
+            } catch (EntryNotFoundException | SQLException exc) {
+               JOptionPane.showMessageDialog(LearningSession.this,
+                     "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                     JOptionPane.ERROR_MESSAGE);
+               Logger.log(exc);
             }
          }
 
@@ -324,12 +311,11 @@ public class LearningSession extends JDialog {
          progress.setValue(progress.getValue() - 1);
          progress.setString(progress.getValue() + " von "
                + progress.getMaximum());
-      } catch (SQLException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      } catch (IOException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
+      } catch (IOException | SQLException exc) {
+         JOptionPane.showMessageDialog(LearningSession.this,
+               "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(exc);
       }
    }
 
@@ -365,12 +351,11 @@ public class LearningSession extends JDialog {
          progress.setValue(progress.getValue() + 1);
          progress.setString(progress.getValue() + " von "
                + progress.getMaximum());
-      } catch (SQLException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      } catch (IOException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
+      } catch (IOException | SQLException exc) {
+         JOptionPane.showMessageDialog(LearningSession.this,
+               "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(exc);
       }
    }
 

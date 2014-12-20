@@ -9,18 +9,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.Logger;
 import core.FlashCard;
@@ -79,7 +68,6 @@ public class AddFlashcardDialog extends JDialog {
 		setListeners();
 
 		setSize(600, 600);
-		// pack();
 		setLocationRelativeTo(owner);
 	}
 

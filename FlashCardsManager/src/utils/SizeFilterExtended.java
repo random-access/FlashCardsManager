@@ -2,9 +2,7 @@ package utils;
 
 import java.awt.Toolkit;
 
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
+import javax.swing.text.*;
 
 public class SizeFilterExtended extends DocumentFilter {
 

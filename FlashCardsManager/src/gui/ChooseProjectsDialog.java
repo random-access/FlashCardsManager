@@ -1,8 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Cursor;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -10,26 +8,14 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.SwingWorker;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.FileUtils;
+import utils.Logger;
 import core.LearningProject;
 import core.ProjectsManager;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
-import exc.InvalidValueException;
 
 @SuppressWarnings("serial")
 public class ChooseProjectsDialog extends JDialog {
@@ -43,26 +29,25 @@ public class ChooseProjectsDialog extends JDialog {
    private JButton btnOk, btnDiscard;
    private ProjectsManager prm;
    private boolean delete;
+   private static final String[] DATABASE_FILES = {"log", "seg0", "service.properties"};
 
-   public ChooseProjectsDialog(MainWindow owner, ProjectsManager prm) {
+   ChooseProjectsDialog(MainWindow owner, ProjectsManager prm) {
       super(owner, false);
       this.owner = owner;
       this.prm = prm;
-      this.allProjects = prm.getProjects();
+      this.allProjects = prm.getAllProjects();
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
       setTitle("Projektauswahl..");
       setLayout(new BorderLayout());
 
       try {
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-      } catch (ClassNotFoundException e) {
-         e.printStackTrace();
-      } catch (InstantiationException e) {
-         e.printStackTrace();
-      } catch (IllegalAccessException e) {
-         e.printStackTrace();
-      } catch (UnsupportedLookAndFeelException e) {
-         e.printStackTrace();
+      } catch (ClassNotFoundException | InstantiationException
+            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
 
       createWidgets();
@@ -120,8 +105,8 @@ public class ChooseProjectsDialog extends JDialog {
       }
       return selectedProjects;
    }
-
-   class ExportProjectListener implements ActionListener {
+   
+   private class ExportProjectListener implements ActionListener {
 
       @Override
       public void actionPerformed(ActionEvent e) {
@@ -175,7 +160,7 @@ public class ChooseProjectsDialog extends JDialog {
                      if (dialogResult == JOptionPane.YES_OPTION) {
                         // user wants to overwrite -> delete existing
                         // directory and start export
-                        if (directoryContainsOnlyDatabase(pathToExport)) {
+                        if (FileUtils.directoryContainsOnlyCertainFiles(pathToExport, DATABASE_FILES)) {
                            delete = true;
                            doTask(pathToExport);
                         } else {
@@ -216,23 +201,8 @@ public class ChooseProjectsDialog extends JDialog {
       }
 
    }
-
-   private boolean directoryContainsOnlyDatabase(String pathToDirectory) {
-      File f = new File(pathToDirectory);
-      if (!f.isDirectory()) {
-         return false;
-      } else {
-         File[] files = f.listFiles();
-         for (File fi : files) {
-            if (!(fi.getName().equals("log") || fi.getName().equals("seg0") || fi
-                  .getName().equals("service.properties"))) {
-               return false;
-            }
-         }
-         return true;
-      }
-   }
-
+   
+   // TODO make an own class
    public class ExportTask extends SwingWorker<Void, Void> {
       String pathToExport;
       ProgressDialog dialog;
@@ -262,24 +232,16 @@ public class ChooseProjectsDialog extends JDialog {
             }
             // --> export project to selected location and show progress
             prm.exportProject(getSelectedProjects(), pathToExport, this);
-         } catch (ClassNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (SQLException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (EntryAlreadyThereException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (EntryNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (IOException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         } catch (InvalidValueException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
+         } catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
+            JOptionPane.showMessageDialog(null,
+                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+            Logger.log(exc);
+         } catch (IOException | ClassNotFoundException exc) {
+            JOptionPane.showMessageDialog(null,
+                  "Ein interner Fehler ist aufgetreten", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+            Logger.log(exc);
          }
          setProgress(100);
          Thread.sleep(1000);

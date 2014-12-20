@@ -5,14 +5,9 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
+
+import utils.Logger;
 
 @SuppressWarnings("serial")
 public class OkOrDisposeDialog extends JDialog {
@@ -21,21 +16,19 @@ public class OkOrDisposeDialog extends JDialog {
 	private JPanel pnlControls,pnlCenter;
 	private JButton btnOk, btnDiscard;
 
-	public OkOrDisposeDialog(MainWindow owner, int width, int height) {
+	OkOrDisposeDialog(MainWindow owner, int width, int height) {
 		super(owner, true);
 		setLayout(new BorderLayout());
 		
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (UnsupportedLookAndFeelException e) {
-			e.printStackTrace();
-		}
+		 } catch (ClassNotFoundException | InstantiationException
+	            | IllegalAccessException | UnsupportedLookAndFeelException e) {
+	         JOptionPane.showMessageDialog(null,
+	               "Ein interner Fehler ist aufgetreten", "Fehler",
+	               JOptionPane.ERROR_MESSAGE);
+	         Logger.log(e);
+	      }
 		
 		createWidgets();
 		addWidgets();
@@ -70,11 +63,11 @@ public class OkOrDisposeDialog extends JDialog {
 		lblText.setHorizontalAlignment(SwingConstants.CENTER);
 	}
 	
-	public void setText(String text) {
+	void setText(String text) {
 		lblText.setText(text);
 	}
 	
-	public void addOkAction(ActionListener l) {
+	void addOkAction(ActionListener l) {
 		btnOk.addActionListener(l);
 	}
 

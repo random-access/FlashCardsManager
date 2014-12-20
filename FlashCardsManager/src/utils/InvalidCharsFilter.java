@@ -3,9 +3,7 @@ package utils;
 import java.awt.Component;
 
 import javax.swing.JOptionPane;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
+import javax.swing.text.*;
 
 public class InvalidCharsFilter extends DocumentFilter {
 	private static final char[] INVALID_CHARS = { '\'' };

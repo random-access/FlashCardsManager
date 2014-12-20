@@ -13,7 +13,7 @@ public class TextAreaWithCharCounter extends JTextArea{
     private JLabel lblCurrentCharCount;
     private DefaultStyledDocument doc;
 
-    public TextAreaWithCharCounter() {
+    TextAreaWithCharCounter() {
         txt = new JTextArea();
         txt.setLineWrap(true);
         txt.setWrapStyleWord(true);

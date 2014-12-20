@@ -1,30 +1,15 @@
 package db;
 
 import java.awt.image.BufferedImage;
-
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.sql.Blob;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
 import javax.imageio.ImageIO;
 import javax.sql.rowset.serial.SerialBlob;
 
-import core.FlashCard;
-import core.LearningProject;
-import core.OrderedItem;
-import core.ProjectsManager;
+import core.*;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 

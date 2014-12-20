@@ -1,8 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -10,13 +8,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 import exc.EntryNotFoundException;
@@ -24,12 +18,11 @@ import exc.EntryNotFoundException;
 @SuppressWarnings("serial")
 public class FlashCardPanel extends JPanel {
 
-   static BufferedImage imgShowMore, imgEdit, imgDelete, imgRed, imgYellow,
+   private static BufferedImage imgEdit, imgDelete, imgRed, imgYellow,
          imgGreen;
 
    static {
       try {
-         // TODO: design imgShowMore
          imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader()
                .getResourceAsStream("img/ImgEdit_16x16.png"));
          imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader()
@@ -42,19 +35,21 @@ public class FlashCardPanel extends JPanel {
                .getResourceAsStream("img/ImgGreen_8x8.png"));
 
       } catch (IOException e) {
-         System.out.println("Picture not found");
-         // TODO: JDialog mit ErrorMsg
+         JOptionPane.showMessageDialog(null,
+               "Ein interner Fehler ist aufgetreten", "Fehler",
+               JOptionPane.ERROR_MESSAGE);
+         Logger.log(e);
       }
    }
 
    private Box b;
-   JLabel lblStatus, lblText;
+   private JLabel lblStatus, lblText;
    private JButton btnEdit, btnDelete;
    private Status status;
    private FlashCard card;
    private LearningProject project;
    private ProjectPanel projectPnl;
-   EditFlashcardsDialog editDialog;
+   private EditFlashcardsDialog editDialog;
 
    public FlashCardPanel(FlashCard card, LearningProject project,
          Status status, ProjectPanel projectPnl,
@@ -121,7 +116,6 @@ public class FlashCardPanel extends JPanel {
       btnDelete.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            // TODO: remove item in database
             final OkOrDisposeDialog d = new OkOrDisposeDialog(editDialog.getOwner(), 300, 150);
             d.setTitle("Wirklich l\u00f6schen?");
             d.setText("<html>Wirklich die Lernkarte l\u00f6schen? <br>"
@@ -140,12 +134,11 @@ public class FlashCardPanel extends JPanel {
                      projectPnl.getOwner().updateProjectStatus(project);
                      editDialog.repaint();
                      editDialog.revalidate();
-                  } catch (EntryNotFoundException e1) {
-                     // TODO Auto-generated catch block
-                     e1.printStackTrace();
-                  } catch (SQLException e1) {
-                     // TODO Auto-generated catch block
-                     e1.printStackTrace();
+                  } catch (EntryNotFoundException | SQLException exc) {
+                     JOptionPane.showMessageDialog(FlashCardPanel.this,
+                           "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                           JOptionPane.ERROR_MESSAGE);
+                     Logger.log(exc);
                   }
                   d.dispose();
                }
@@ -163,7 +156,7 @@ public class FlashCardPanel extends JPanel {
       });
    }
 
-   public void changeStatus(Status s) {
+   void changeStatus(Status s) {
       remove(b);
       b = Box.createHorizontalBox();
       b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));

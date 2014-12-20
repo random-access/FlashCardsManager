@@ -8,7 +8,7 @@ import javax.swing.JTextArea;
 @SuppressWarnings("serial")
 public class WrappedLabelWithStackDisplay extends JTextArea {
 
-    public WrappedLabelWithStackDisplay (String text, int rows, int cols) {
+    WrappedLabelWithStackDisplay (String text, int rows, int cols) {
         super(text, rows, cols);
         setEditable(false);
         setLineWrap(true);

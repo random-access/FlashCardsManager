@@ -2,21 +2,17 @@ package app;
 
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
+import gui.IntroPanel;
 import gui.MainWindow;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 import javax.xml.stream.XMLStreamException;
 
+import utils.FileUtils;
 import utils.Logger;
 import xml.Settings;
 import xml.XMLExchanger;
@@ -24,21 +20,22 @@ import core.ProjectsManager;
 
 public class StartApp {
 
-   public static final String APP_FOLDER = appDirectory();
-   static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
-   static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
-   static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_1";
+   private static final String APP_FOLDER = FileUtils.appDirectory("Lernkarten");
+   private static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
+   private static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
+   private static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_1";
 
-   static InputStream defaultSettings = StartApp.class.getClassLoader()
+   private static InputStream defaultSettings = StartApp.class.getClassLoader()
          .getResourceAsStream("xml/settings.xml");
-   static Settings currentSettings;
+   private static Settings currentSettings;
 
    public static void main(String[] args) {
+      final IntroPanel intro = new IntroPanel();
+      
       Properties p = System.getProperties();
       p.setProperty("derby.system.home", APP_FOLDER);
-
       try {
-         createDirectory(APP_FOLDER);
+         FileUtils.createDirectory(APP_FOLDER);
          Logger.setPathToLog(DEFAULT_LOG_PATH, "errors", "log");
          Logger.init(5);
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -51,6 +48,7 @@ public class StartApp {
                new MainWindow(prm, currentSettings.getMajorVersion(),
                      currentSettings.getMinorVersion(), currentSettings
                            .getPatchLevel());
+               intro.dispose();
             }
          });
       } catch (SQLException e) {
@@ -58,7 +56,7 @@ public class StartApp {
             JOptionPane
                   .showMessageDialog(
                         null,
-                        "Eine Instanz dieser Anwendung ist bereits aktiv. Bitte schließen Sie diese und starten Sie das Programm neu oder wechseln Sie zur offenen Anwendung.",
+                        "Eine Instanz dieser Anwendung ist bereits aktiv. Bitte schlieï¿½en Sie diese und starten Sie das Programm neu oder wechseln Sie zur offenen Anwendung.",
                         "Fehler", JOptionPane.ERROR_MESSAGE);
          } else {
             JOptionPane.showMessageDialog(null,
@@ -153,44 +151,5 @@ public class StartApp {
          XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
       }
 
-   }
-
-   private static String appDirectory() {
-      String OS = System.getProperty("os.name").toUpperCase();
-      // Windows:
-      if (OS.contains("WIN")) {
-         System.out.println("On Windows:" + System.getenv("APPDATA")
-               + "/Lernkarten");
-         return System.getenv("APPDATA") + "/Lernkarten";
-      }
-      // Mac:
-      else if (OS.contains("MAC")) {
-         System.out.println("On Mac:" + System.getProperty("user.home")
-               + "/Library" + "/Lernkarten");
-         return System.getProperty("user.home") + "/Library" + "/Lernkarten";
-      }
-      // Linux:
-      else if (OS.contains("NUX")) {
-         System.out.println("On Linux:" + System.getProperty("user.home")
-               + "/.Lernkarten");
-         return System.getProperty("user.home") + "/.Lernkarten";
-      } else {
-         System.out.println("Elsewhere:" + System.getProperty("user.dir")
-               + "/.Lernkarten");
-         return System.getProperty("user.dir") + "/.Lernkarten";
-      }
-   }
-
-   static void createDirectory(String name) {
-      File f = new File(name);
-      if (!f.exists()) {
-         System.out.println("creating directory: " + name + "...");
-         boolean result = false;
-         f.mkdir();
-         result = true;
-         if (result) {
-            System.out.println(name + " successfully created!");
-         }
-      }
    }
 }

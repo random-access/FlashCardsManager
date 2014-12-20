@@ -2,10 +2,12 @@ package gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
+import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 import db.PicType;
@@ -32,12 +34,11 @@ public class ChangeFlashcardDialog extends AddFlashcardDialog {
 		if (card.hasQuestionPic()) {
 			try {
 				txtQuestion.addPicture(card, PicType.QUESTION);
-			} catch (IOException e) {
-				// TODO error handling
-				System.out.println("Error while adding question pic");
-			} catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+			} catch (IOException | SQLException exc) {
+			   JOptionPane.showMessageDialog(ChangeFlashcardDialog.this,
+                  "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+            Logger.log(exc);
          }
 			btnAddPicQuestion.setText("Bild \u00e4ndern...");
 			System.out.println("added delete button question");
@@ -46,12 +47,11 @@ public class ChangeFlashcardDialog extends AddFlashcardDialog {
 		if (card.hasAnswerPic()) {
 			try {
 				txtAnswer.addPicture(card, PicType.ANSWER);
-			} catch (IOException e) {
-				// TODO error handling
-				System.out.println("Error while adding answer pic");
-			} catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+			} catch (IOException | SQLException exc) {
+            JOptionPane.showMessageDialog(ChangeFlashcardDialog.this,
+                  "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+            Logger.log(exc);
          }
 			btnAddPicAnswer.setText("Bild \u00e4ndern...");
 			System.out.println("added delete button answer");
@@ -80,24 +80,21 @@ public class ChangeFlashcardDialog extends AddFlashcardDialog {
 					try {
 						project.updateCard(card, pathToQuestionPic,
 								pathToAnswerPic);
-					} catch (FileNotFoundException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+					} catch (IOException exc) {
+					   JOptionPane.showMessageDialog(ChangeFlashcardDialog.this,
+		                  "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+		                  JOptionPane.ERROR_MESSAGE);
+		            Logger.log(exc);
 					}
 					if (efcDialog != null) {
 						efcDialog.updateCardPanels();
 					}
-				} catch (EntryNotFoundException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (EntryNotFoundException | SQLException exc) {
+				   JOptionPane.showMessageDialog(ChangeFlashcardDialog.this,
+                     "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                     JOptionPane.ERROR_MESSAGE);
+               Logger.log(exc);
 				}
-
 				ChangeFlashcardDialog.this.dispose();
 			}
 
@@ -138,9 +135,11 @@ public class ChangeFlashcardDialog extends AddFlashcardDialog {
 		public void actionPerformed(ActionEvent e) {
 			try {
 				card.deletePicture(type);
-			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+			} catch (SQLException exc) {
+			   JOptionPane.showMessageDialog(ChangeFlashcardDialog.this,
+                  "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+            Logger.log(exc);
 			}
 			switch (type) {
 			case QUESTION:
