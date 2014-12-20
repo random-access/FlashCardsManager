@@ -2,19 +2,14 @@ package app;
 
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
+import gui.IntroPanel;
 import gui.MainWindow;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 import javax.xml.stream.XMLStreamException;
 
 import utils.FileUtils;
@@ -35,9 +30,10 @@ public class StartApp {
    private static Settings currentSettings;
 
    public static void main(String[] args) {
+      final IntroPanel intro = new IntroPanel();
+      
       Properties p = System.getProperties();
       p.setProperty("derby.system.home", APP_FOLDER);
-
       try {
          FileUtils.createDirectory(APP_FOLDER);
          Logger.setPathToLog(DEFAULT_LOG_PATH, "errors", "log");
@@ -52,6 +48,7 @@ public class StartApp {
                new MainWindow(prm, currentSettings.getMajorVersion(),
                      currentSettings.getMinorVersion(), currentSettings
                            .getPatchLevel());
+               intro.dispose();
             }
          });
       } catch (SQLException e) {

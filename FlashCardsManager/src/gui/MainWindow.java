@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -20,12 +21,18 @@ import exc.EntryNotFoundException;
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {
 
-	private static BufferedImage imgSettings, imgPlus, imgAddProjectInfo;
+	private static BufferedImage imgIcon36x36, imgIcon24x24, imgIcon16x16, imgIcon12x12, imgSettings, imgPlus, imgAddProjectInfo;
 
 	static {
 		try {
-			imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSettings_28x28.png"));
-			imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
+		   imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_36x36.png"));
+		   imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_24x24.png"));
+		   imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_16x16.png"));
+		   imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_12x12.png"));
+		   imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader()
+               .getResourceAsStream("img/ImgSettings_28x28.png"));
+		   
+		   imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
 			imgAddProjectInfo = ImageIO.read(MainWindow.class.getClassLoader().getResourceAsStream(
 					"img/AddProjectInfo_450x338.png"));
 		} catch (IOException e) {
@@ -33,7 +40,7 @@ public class MainWindow extends JFrame {
 			Logger.log(e);
 		}
 	}
-
+	private LinkedList<Image> icons;
 	private final int majorVersion, minorVersion, patchLevel;
 	private JMenuBar mnuBar;
 	private JMenu mnuSettings;
@@ -58,6 +65,12 @@ public class MainWindow extends JFrame {
 		this.minorVersion = minorVersion;
 		this.patchLevel = patchLevel;
 		setTitle("FlashCards Manager");
+		icons = new LinkedList<Image>();
+		icons.add(imgIcon12x12);
+		icons.add(imgIcon16x16);
+		icons.add(imgIcon24x24);
+		icons.add(imgIcon36x36);
+		setIconImages(icons);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 
