@@ -92,7 +92,7 @@ public class ChooseStacksDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				sessionCards = constructRandomSession();
-				LearningSession newSession = new LearningSession(
+				LearningSession2 newSession = new LearningSession2(
 						ChooseStacksDialog.this.owner,
 						ChooseStacksDialog.this.project,
 						ChooseStacksDialog.this.sessionCards);

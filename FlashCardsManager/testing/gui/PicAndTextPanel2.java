@@ -54,7 +54,7 @@ public class PicAndTextPanel2 extends JPanel {
 		doc = (HTMLDocument) editorKit.createDefaultDocument();
 		txtPane = new MyTextPane(450, 250);
 		txtPane.setContentType("text/html");
-		// correctly input non-html text
+		// correct input non-html text / preformatted html
 		if (txt == null || txt.contains("<html>")) {
 			txtPane.setDocument(doc);
 			txtPane.setText(txt);

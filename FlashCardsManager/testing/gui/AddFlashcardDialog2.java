@@ -11,6 +11,7 @@ import javax.swing.*;
 import javax.swing.plaf.basic.BasicArrowButton;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledEditorKit;
+import javax.swing.text.html.HTMLEditorKit;
 
 import utils.Logger;
 import core.FlashCard;
@@ -245,6 +246,7 @@ public class AddFlashcardDialog2 extends JDialog {
 	}
 
 	private void setListeners() {
+	   
 		// add scroll arrows to editor line only when necessary
 		scpEditor.addComponentListener(new ComponentAdapter() {
 			public void componentResized(ComponentEvent evt) {
