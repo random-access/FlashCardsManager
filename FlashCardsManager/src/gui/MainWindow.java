@@ -17,6 +17,7 @@ import utils.Logger;
 import core.*;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
+import gui.helpers.*;
 
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {

@@ -1,10 +1,9 @@
-package gui;
+package gui.helpers;
 
 import java.awt.Dimension;
 
 import javax.swing.JTextPane;
 import javax.swing.text.StyledDocument;
-import javax.swing.text.html.HTMLEditorKit;
 
 @SuppressWarnings("serial")
 public class MyTextPane extends JTextPane {
@@ -13,7 +12,6 @@ public class MyTextPane extends JTextPane {
 
    public MyTextPane(int minimalWidth, int minimalHeight) {
       super();
-      HTMLEditorKit kit;
       this.minimalWidth = minimalWidth;
       this.minimalHeight = minimalHeight;
    }

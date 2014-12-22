@@ -1,5 +1,8 @@
 package gui;
 
+import gui.helpers.MyMenuItem;
+import gui.helpers.Status;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -180,7 +183,7 @@ public MainWindow getOwner() {
       btnAddCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog2 d = new AddFlashcardDialog2(
+            AddFlashcardDialog d = new AddFlashcardDialog(
                   EditFlashcardsDialog.this, project, projPnl);
             d.setVisible(true);
          }
@@ -189,7 +192,7 @@ public MainWindow getOwner() {
       mnuSettingsNewCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog2 d = new AddFlashcardDialog2(
+            AddFlashcardDialog d = new AddFlashcardDialog(
                   EditFlashcardsDialog.this, project, projPnl);
             d.setVisible(true);
          }

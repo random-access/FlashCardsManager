@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 
 import javax.swing.*;
 import javax.swing.text.*;

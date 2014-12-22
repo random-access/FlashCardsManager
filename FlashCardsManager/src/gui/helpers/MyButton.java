@@ -1,21 +1,21 @@
-package gui;
+package gui.helpers;
 
 import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class MyButton extends JButton {
 
-	MyButton(String text, Icon icon) {
+	public MyButton(String text, Icon icon) {
 		super(text, icon);
 		setVerticalTextPosition(SwingConstants.BOTTOM);
 		setHorizontalTextPosition(SwingConstants.CENTER);
 	}
 	
-	MyButton(String text) {
+	public MyButton(String text) {
 		super(text);
 	}
 	
-	MyButton(Icon icon) {
+	public MyButton(Icon icon) {
 		super(icon);
 	}
 
@@ -23,8 +23,8 @@ public class MyButton extends JButton {
 		super(action);
 		setText(null);
 		setIcon(icon);
-		// setVerticalTextPosition(SwingConstants.BOTTOM);
-		// setHorizontalTextPosition(SwingConstants.CENTER);
+//		 setVerticalTextPosition(SwingConstants.BOTTOM);
+//		 setHorizontalTextPosition(SwingConstants.CENTER);
 	}
 	
 	public MyButton(Action action, String text) {
