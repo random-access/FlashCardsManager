@@ -17,6 +17,7 @@ import core.FlashCard;
 import core.LearningProject;
 import db.PicType;
 import exc.EntryNotFoundException;
+import gui.helpers.MyButton;
 
 @SuppressWarnings("serial")
 public class LearningSession extends JDialog {
@@ -303,9 +304,9 @@ public class LearningSession extends JDialog {
       }
       try {
          pnlQ = new PicAndTextPanel(currentCard.getQuestionPic(),
-               currentCard.getQuestion(), PicType.QUESTION);
+               currentCard.getQuestion(), PicType.QUESTION, false);
          pnlA = new PicAndTextPanel(currentCard.getAnswerPic(),
-               currentCard.getAnswer(), PicType.ANSWER);
+               currentCard.getAnswer(), PicType.ANSWER, false);
          lblTitle.setText(project.getTitle() + " - Karte "
                + currentCard.getId());
          progress.setValue(progress.getValue() - 1);
@@ -325,10 +326,10 @@ public class LearningSession extends JDialog {
       try {
          if (currentCard == null) {
             if (allCards.size() == 0) {
-               pnlQ = new PicAndTextPanel(imgFlashcardInfo, "", null);
+               pnlQ = new PicAndTextPanel(imgFlashcardInfo, "", null, false);
             } else {
                pnlQ = new PicAndTextPanel(null, "Super! Geschafft!",
-                     null);
+                     null, false);
             }
             btnFwd.setEnabled(false);
             btnSwitch.setEnabled(false);
@@ -339,12 +340,10 @@ public class LearningSession extends JDialog {
             if (currentCard.getQuestion() != null) {
                System.out.println(currentCard.getQuestion());
             }
-
-            pnlQ = new PicAndTextPanel(currentCard.getQuestionPic(),
-                  currentCard.getQuestion(), PicType.QUESTION);
-
+            pnlQ = new PicAndTextPanel(  currentCard.getQuestionPic(),
+                  currentCard.getQuestion(), PicType.QUESTION, false);
             pnlA = new PicAndTextPanel(currentCard.getAnswerPic(),
-                  currentCard.getAnswer(), PicType.ANSWER);
+                  currentCard.getAnswer(), PicType.ANSWER, false);
             lblTitle.setText(project.getTitle() + " - Karte "
                   + currentCard.getId());
          }

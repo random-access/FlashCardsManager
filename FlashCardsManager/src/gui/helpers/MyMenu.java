@@ -1,4 +1,4 @@
-package gui;
+package gui.helpers;
 
 import java.awt.Insets;
 
@@ -8,22 +8,22 @@ import javax.swing.JMenu;
 @SuppressWarnings("serial")
 public class MyMenu extends JMenu {
 
-	MyMenu() {
+	public MyMenu() {
 		super();
 		customize();
 	}
 
-	MyMenu(Action a) {
+	public MyMenu(Action a) {
 		super(a);
 		customize();
 	}
 
-	MyMenu(String s, boolean b) {
+	public MyMenu(String s, boolean b) {
 		super(s, b);
 		customize();
 	}
 
-	MyMenu(String s) {
+	public MyMenu(String s) {
 		super(s);
 		customize();
 	}

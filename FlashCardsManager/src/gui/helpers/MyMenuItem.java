@@ -1,4 +1,4 @@
-package gui;
+package gui.helpers;
 
 import java.awt.Insets;
 
@@ -7,32 +7,32 @@ import javax.swing.*;
 @SuppressWarnings("serial")
 public class MyMenuItem extends JMenuItem {
 
-   MyMenuItem() {
+   public MyMenuItem() {
       super();
       customize();
    }
 
-   MyMenuItem(Action a) {
+   public MyMenuItem(Action a) {
       super(a);
       customize();
    }
 
-   MyMenuItem(Icon icon) {
+   public MyMenuItem(Icon icon) {
       super(icon);
       customize();
    }
 
-   MyMenuItem(String text, Icon icon) {
+   public MyMenuItem(String text, Icon icon) {
       super(text, icon);
       customize();
    }
 
-   MyMenuItem(String text, int mnemonic) {
+   public MyMenuItem(String text, int mnemonic) {
       super(text, mnemonic);
       customize();
    }
 
-   MyMenuItem(String text) {
+   public MyMenuItem(String text) {
       super(text);
       customize();
    }

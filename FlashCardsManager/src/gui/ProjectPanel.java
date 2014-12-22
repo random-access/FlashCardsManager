@@ -15,6 +15,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import utils.Logger;
 import core.*;
 import exc.EntryNotFoundException;
+import gui.helpers.Status;
 
 @SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
@@ -237,6 +238,7 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+//				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
 				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
 				d.setVisible(true);
 			}

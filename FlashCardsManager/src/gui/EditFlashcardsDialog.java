@@ -1,5 +1,8 @@
 package gui;
 
+import gui.helpers.MyMenuItem;
+import gui.helpers.Status;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
