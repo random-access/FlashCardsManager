@@ -237,7 +237,8 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
+//				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
+				AddFlashcardDialog2 d = new AddFlashcardDialog2(project, ProjectPanel.this);
 				d.setVisible(true);
 			}
 

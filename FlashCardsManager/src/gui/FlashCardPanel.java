@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+import utils.HTMLUtils;
 import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
@@ -95,7 +96,10 @@ public class FlashCardPanel extends JPanel {
    }
    
    private String getQuestionTitle(FlashCard f) {
-      String question = f.getQuestion();
+      String rawQuestion = f.getQuestion();
+      HTMLUtils parser = new HTMLUtils();
+      String question = parser.convertHtmlToPlainText(rawQuestion);
+      System.out.println(question);
       String result;
       String[] parts = question.split(" ");
       if (parts[0].length() > 50) {
@@ -150,8 +154,10 @@ public class FlashCardPanel extends JPanel {
       btnEdit.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            ChangeFlashcardDialog cfd = new ChangeFlashcardDialog(editDialog, project, projectPnl, card);
-            cfd.setVisible(true);
+        	 AddFlashcardDialog2 d = new AddFlashcardDialog2(editDialog, project, projectPnl, card);
+        	 d.setVisible(true);
+            // ChangeFlashcardDialog cfd = new ChangeFlashcardDialog(editDialog, project, projectPnl, card);
+           //  cfd.setVisible(true);
          }
       });
    }

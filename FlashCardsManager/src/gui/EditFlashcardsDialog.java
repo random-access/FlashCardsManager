@@ -180,7 +180,7 @@ public MainWindow getOwner() {
       btnAddCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog d = new AddFlashcardDialog(
+            AddFlashcardDialog2 d = new AddFlashcardDialog2(
                   EditFlashcardsDialog.this, project, projPnl);
             d.setVisible(true);
          }
@@ -189,7 +189,7 @@ public MainWindow getOwner() {
       mnuSettingsNewCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog d = new AddFlashcardDialog(
+            AddFlashcardDialog2 d = new AddFlashcardDialog2(
                   EditFlashcardsDialog.this, project, projPnl);
             d.setVisible(true);
          }
