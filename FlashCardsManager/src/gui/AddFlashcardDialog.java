@@ -58,10 +58,9 @@ public class AddFlashcardDialog extends JDialog {
 	private ProjectPanel projPnl;
 	private String pathToQuestionPic, pathToAnswerPic;
 	private EditFlashcardsDialog efcDialog;
-	
+
 	// only for existing flashcards
 	private FlashCard existingCard;
-	private boolean editExistingCard;
 
 	private PicAndTextPanel pnlQ, pnlA;
 	private JPanel pnlTitle, pnlTop, pnlEditor, pnlEdit, pnlBottom, centerPanel;
@@ -70,8 +69,8 @@ public class AddFlashcardDialog extends JDialog {
 	private MyButton btnFlip, btnDiscard, btnSave, btnSaveAndNext;
 	private MyButton btnBold, btnItalic, btnUnderlined, btnLeftAlign, btnRightAlign, btnCenterAlign, btnList, btnNum, btnAddPic,
 			btnEditPic, btnRemovePic;
-	private JComboBox<String> cmbFontFamily;
-	private JSpinner spFontSize;
+	private JComboBox<String> cmbFontFamilies;
+	private JSpinner spFontSizes;
 	private BasicArrowButton west, east;
 
 	private Action boldAction = new StyledEditorKit.BoldAction();
@@ -80,10 +79,9 @@ public class AddFlashcardDialog extends JDialog {
 	private Action leftAction = new StyledEditorKit.AlignmentAction("Left Align", StyleConstants.ALIGN_LEFT);
 	private Action rightAction = new StyledEditorKit.AlignmentAction("Right Align", StyleConstants.ALIGN_RIGHT);
 	private Action centerAction = new StyledEditorKit.AlignmentAction("Center Align", StyleConstants.ALIGN_CENTER);
-	
+
 	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card) {
 		this(project, projPnl);
-		editExistingCard = true;
 		this.efcDialog = efcDialog;
 		this.existingCard = card;
 		centerPanel.remove(pnlQ);
@@ -98,17 +96,17 @@ public class AddFlashcardDialog extends JDialog {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		setPicButtons();
 		pnlBottom.remove(btnSaveAndNext);
 		btnDiscard.setText("abbrechen");
 	}
-	
+
 	// constructor for adding a new flashcard
 	public AddFlashcardDialog(LearningProject project, ProjectPanel projPnl) {
 		super(projPnl.getOwner(), true);
 		this.owner = projPnl.getOwner();
 		this.project = project;
 		this.projPnl = projPnl;
-		editExistingCard = false;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setLayout(new BorderLayout());
 
@@ -126,10 +124,8 @@ public class AddFlashcardDialog extends JDialog {
 		pack();
 		setLocationRelativeTo(owner);
 	}
-	
-	
-	public AddFlashcardDialog(EditFlashcardsDialog efcDialog,
-			LearningProject project, ProjectPanel projPnl) {
+
+	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl) {
 		this(project, projPnl);
 		this.efcDialog = efcDialog;
 	}
@@ -141,6 +137,9 @@ public class AddFlashcardDialog extends JDialog {
 		pnlTitle = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		pnlTitle.setBackground(Color.DARK_GRAY);
 		pnlTitle.setBorder(BorderFactory.createLineBorder(getContentPane().getBackground(), 8));
+		if (existingCard != null) {
+			// TODO set correct title
+		}
 		lblTitle = new JLabel("Neue Lernkarte...");
 		lblTitle.setOpaque(true);
 		lblTitle.setBackground(Color.DARK_GRAY);
@@ -158,15 +157,19 @@ public class AddFlashcardDialog extends JDialog {
 		east.setAction(new IndividualAction("", horizontal, "positiveBlockIncrement"));
 		// Choose the font family; TODO replace sample values
 		String cmbFontSamples[] = { "SampleFont1", "SampleFont2", "SampleFont3", "SampleFont4", "SampleFont5" };
-		cmbFontFamily = new JComboBox<String>(cmbFontSamples);
-		cmbFontFamily.setEnabled(false);
-		cmbFontFamily.setToolTipText("Schriftart (noch nicht implementiert)");
-		
+		cmbFontFamilies = new JComboBox<String>(cmbFontSamples);
+		cmbFontFamilies.setEnabled(false);
+		cmbFontFamilies.setToolTipText("Schriftart (noch nicht implementiert)");
+
 		// Choose font size
-		SpinnerModel sizeModel = new SpinnerNumberModel(12, 6, 48, 2);
-		spFontSize = new JSpinner(sizeModel);
-		spFontSize.setEnabled(false);
-		spFontSize.setToolTipText("Schriftgr\u00f6\u00dfe (noch nicht implementiert)");
+				SpinnerModel sizeModel = new SpinnerNumberModel(12, 6, 48, 2);
+				spFontSizes = new JSpinner(sizeModel);
+				spFontSizes.setEnabled(false);
+				spFontSizes.setToolTipText("Schriftgr\u00f6\u00dfe (noch nicht implementiert)");
+		// for (int i = 6; i <= 48; i=i+2){
+		// new StyledEditorKit.FontSizeAction(String.valueOf(fontSizes[i]),
+		// fontSizes[i]);
+		// }
 
 		btnBold = new MyButton(boldAction, new ImageIcon(imgBold));
 		btnBold.setToolTipText("Fett");
@@ -180,7 +183,7 @@ public class AddFlashcardDialog extends JDialog {
 		btnCenterAlign.setToolTipText("zentriert");
 		btnRightAlign = new MyButton(rightAction, new ImageIcon(imgRightAlign));
 		btnRightAlign.setToolTipText("rechtsb\u00fcndig");
-		
+
 		btnList = new MyButton(new ImageIcon(imgList)); // TODO List action
 		btnList.setEnabled(false);
 		btnList.setToolTipText("Liste (noch nicht implementiert)");
@@ -202,7 +205,7 @@ public class AddFlashcardDialog extends JDialog {
 		btnSaveAndNext = new MyButton("speichern & neu", new ImageIcon(imgSaveAndNext));
 		pnlQ = new PicAndTextPanel(null, null, PicType.QUESTION, true);
 		pnlA = new PicAndTextPanel(null, null, PicType.ANSWER, true);
-		
+
 		// center area: learning card
 		centerPanel = new JPanel();
 		centerPanel.setLayout(new GridBagLayout());
@@ -225,8 +228,8 @@ public class AddFlashcardDialog extends JDialog {
 		pnlEdit.add(east, BorderLayout.EAST);
 		pnlEdit.add(west, BorderLayout.WEST);
 
-		pnlEditor.add(cmbFontFamily);
-		pnlEditor.add(spFontSize);
+		pnlEditor.add(cmbFontFamilies);
+		pnlEditor.add(spFontSizes);
 		pnlEditor.add(btnBold);
 		pnlEditor.add(btnItalic);
 		pnlEditor.add(btnUnderlined);
@@ -249,7 +252,7 @@ public class AddFlashcardDialog extends JDialog {
 	}
 
 	private void setListeners() {
-	   
+
 		// add scroll arrows to editor line only when necessary
 		scpEditor.addComponentListener(new ComponentAdapter() {
 			public void componentResized(ComponentEvent evt) {
@@ -270,7 +273,7 @@ public class AddFlashcardDialog extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				if (centerPanel.isAncestorOf(pnlQ)) {
 					centerPanel.remove(pnlQ);
-					centerPanel.add(pnlA);	
+					centerPanel.add(pnlA);
 					btnFlip.setToolTipText("Frage zeigen");
 					System.out.println("Show answer");
 				} else {
@@ -279,26 +282,26 @@ public class AddFlashcardDialog extends JDialog {
 					btnFlip.setToolTipText("Antwort zeigen");
 					System.out.println("show question");
 				}
-				
+
 				setPicButtons();
 				revalidate();
 				repaint();
 			}
 		});
-		
+
 		btnDiscard.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				AddFlashcardDialog.this.dispose();
 			}
 		});
-		
+
 		btnSave.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (editExistingCard) {
+				if (existingCard != null) {
 					saveExistingCardToDatabase();
 				} else {
 					saveNewCardToDatabase();
@@ -306,17 +309,16 @@ public class AddFlashcardDialog extends JDialog {
 			}
 
 		});
-		
+
 		btnSaveAndNext.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				saveNewCardToDatabase();
-				AddFlashcardDialog d = new AddFlashcardDialog( project, projPnl);
+				AddFlashcardDialog d = new AddFlashcardDialog(project, projPnl);
 				d.setVisible(true);
 			}
 		});
-		
 
 		// Listener for adding a question pic / answer pic
 		btnAddPic.addActionListener(new ActionListener() {
@@ -326,22 +328,23 @@ public class AddFlashcardDialog extends JDialog {
 				addPicFromFile();
 			}
 		});
-		
+
 		btnEditPic.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				addPicFromFile();	
+				addPicFromFile();
 			}
 		});
-		
+
 		btnRemovePic.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (centerPanel.isAncestorOf(pnlQ)) {
 					pathToQuestionPic = null;
-					pnlQ.removePicture();;
+					pnlQ.removePicture();
+					;
 				} else {
 					pathToAnswerPic = null;
 					pnlA.removePicture();
@@ -351,37 +354,32 @@ public class AddFlashcardDialog extends JDialog {
 			}
 		});
 	}
-	
+
 	private void saveExistingCardToDatabase() {
 		try {
 			existingCard.setQuestion(pnlQ.getText());
 			existingCard.setAnswer(pnlA.getText());
 			try {
-				project.updateCard(existingCard, pathToQuestionPic,
-						pathToAnswerPic);
+				project.updateCard(existingCard, pathToQuestionPic, pathToAnswerPic);
 			} catch (IOException exc) {
-			   JOptionPane.showMessageDialog(AddFlashcardDialog.this,
-                  "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
-                  JOptionPane.ERROR_MESSAGE);
-            Logger.log(exc);
+				JOptionPane.showMessageDialog(AddFlashcardDialog.this, "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+						JOptionPane.ERROR_MESSAGE);
+				Logger.log(exc);
 			}
 			if (efcDialog != null) {
 				efcDialog.updateCardPanels();
 			}
 		} catch (EntryNotFoundException | SQLException exc) {
-		   JOptionPane.showMessageDialog(AddFlashcardDialog.this,
-             "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
-             JOptionPane.ERROR_MESSAGE);
-       Logger.log(exc);
+			JOptionPane.showMessageDialog(AddFlashcardDialog.this, "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+					JOptionPane.ERROR_MESSAGE);
+			Logger.log(exc);
 		}
 		AddFlashcardDialog.this.dispose();
 	}
-	
+
 	private void saveNewCardToDatabase() {
 		try {
-			FlashCard newCard = new FlashCard(project, pnlQ
-					.getText(), pnlA.getText(), pathToQuestionPic,
-					pathToAnswerPic);
+			FlashCard newCard = new FlashCard(project, pnlQ.getText(), pnlA.getText(), pathToQuestionPic, pathToAnswerPic);
 			projPnl.addCard(newCard);
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
@@ -390,18 +388,15 @@ public class AddFlashcardDialog extends JDialog {
 			System.out.println("Successfully added card!");
 			AddFlashcardDialog.this.dispose();
 		} catch (EntryAlreadyThereException | EntryNotFoundException | SQLException e1) {
-		   JOptionPane.showMessageDialog(null,
-               "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-               JOptionPane.ERROR_MESSAGE);
-         Logger.log(e1);
+			JOptionPane.showMessageDialog(null, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+					JOptionPane.ERROR_MESSAGE);
+			Logger.log(e1);
 		} catch (IOException e1) {
-		   JOptionPane.showMessageDialog(null,
-             "Ein interner Fehler ist aufgetreten", "Fehler",
-             JOptionPane.ERROR_MESSAGE);
-       Logger.log(e1);
+			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
+			Logger.log(e1);
 		}
 	}
-	
+
 	private void addPicFromFile() {
 		int returnVal = projPnl.getFileChooser().showOpenDialog(AddFlashcardDialog.this);
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -409,7 +404,7 @@ public class AddFlashcardDialog extends JDialog {
 				if (centerPanel.isAncestorOf(pnlQ)) {
 					pathToQuestionPic = projPnl.getFileChooser().getSelectedFile().getAbsolutePath();
 					System.out.println("Pfad zum Frage-Pic:" + pathToQuestionPic);
-					pnlQ.addPicture(pathToQuestionPic);					
+					pnlQ.addPicture(pathToQuestionPic);
 				} else {
 					pathToAnswerPic = projPnl.getFileChooser().getSelectedFile().getAbsolutePath();
 					System.out.println("Pfad zum Antwort-Pic:" + pathToAnswerPic);
@@ -418,8 +413,7 @@ public class AddFlashcardDialog extends JDialog {
 				setPicButtons();
 				AddFlashcardDialog.this.revalidate();
 			} catch (IOException exc) {
-				JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler",
-						JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
 				Logger.log(exc);
 			}
 		} else {
@@ -429,23 +423,23 @@ public class AddFlashcardDialog extends JDialog {
 
 	private void setPicButtons() {
 		if (centerPanel.isAncestorOf(pnlQ)) {
-			if (pathToQuestionPic == null) {
-				if (!pnlEditor.isAncestorOf(btnAddPic)) {
-					setAddPicMode();
-				}
-			} else { // has question pic
+			if (pathToQuestionPic != null || (existingCard != null && existingCard.hasQuestionPic())) {
 				if (pnlEditor.isAncestorOf(btnAddPic)) {
 					setRemovePicMode();
+				}
+			} else { // has question pic
+				if (!pnlEditor.isAncestorOf(btnAddPic)) {
+					setAddPicMode();
 				}
 			}
 		} else { // answer pic displayed
-			if (pathToAnswerPic == null) {
-				if (!pnlEditor.isAncestorOf(btnAddPic)) {
-					setAddPicMode();
-				}
-			} else { // has answer pic
+			if (pathToAnswerPic != null || (existingCard != null && existingCard.hasAnswerPic())) {
 				if (pnlEditor.isAncestorOf(btnAddPic)) {
 					setRemovePicMode();
+				}
+			} else { // has answer pic
+				if (!pnlEditor.isAncestorOf(btnAddPic)) {
+					setAddPicMode();
 				}
 			}
 		}
