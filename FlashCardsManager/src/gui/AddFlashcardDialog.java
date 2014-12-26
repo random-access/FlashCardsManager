@@ -389,8 +389,7 @@ public class AddFlashcardDialog extends JDialog {
 		try {
 			existingCard.setQuestion(pnlQ.getText());
 			existingCard.setAnswer(pnlA.getText());
-			existingCard.setQuestionWidth(pnlQ.getCustomWidth());
-         existingCard.setAnswerWidth(pnlA.getCustomWidth());
+			existingCard.setWidth(pnlQ.getCustomWidth(), pnlA.getCustomWidth());
 			try {
 				project.updateCard(existingCard, pathToQuestionPic, pathToAnswerPic);
 			} catch (IOException exc) {
@@ -412,8 +411,7 @@ public class AddFlashcardDialog extends JDialog {
 	private void saveNewCardToDatabase() {
 		try {
 			FlashCard newCard = new FlashCard(project, pnlQ.getText(), pnlA.getText(), pathToQuestionPic, pathToAnswerPic);
-			newCard.setQuestionWidth(pnlQ.getCustomWidth());
-			newCard.setAnswerWidth(pnlA.getCustomWidth());
+			newCard.setWidth(pnlQ.getCustomWidth(), pnlA.getCustomWidth());
 			projPnl.addCard(newCard);
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {

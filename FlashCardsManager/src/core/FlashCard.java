@@ -172,21 +172,15 @@ public class FlashCard implements OrderedItem {
 		return proj;
 	}
 	
-	public int getQuestionWidth() {
-	   // TODO
-	   return 0;
+	public int getQuestionWidth() throws SQLException {
+	   return proj.getDBEX().getQuestionWidth(this);
 	}
 	
-	public void setQuestionWidth(int width){
-	   
+	public void setWidth(int questionWidth, int answerWidth) throws SQLException{
+	   proj.getDBEX().setWidth(this, questionWidth, answerWidth);
 	}
 	
-	public int getAnswerWidth() {
-      // TODO
-      return 0;
-   }
-   
-   public void setAnswerWidth(int width){
-      
+	public int getAnswerWidth() throws SQLException {
+	    return proj.getDBEX().getAnswerWidth(this);
    }
 }

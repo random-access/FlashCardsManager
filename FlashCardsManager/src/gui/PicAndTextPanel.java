@@ -27,16 +27,16 @@ public class PicAndTextPanel extends JPanel {
 	private String txt;
 	private PicType type;
 	private boolean editable;
-	
+
 	private int customWidth;
-	
+
 	private static final int STEPSIZE = 50;
 	private static final int DEFAULT_CARD_WIDTH = 450;
 	private static final int DEFAULT_CARD_HEIGHT_TEXT_ONLY = 250;
-	private static final int DEFAULT_CARD_HEIGHT_PIC_AND_TEXT = 250;
+	private static final int DEFAULT_CARD_HEIGHT_PIC_AND_TEXT = 50;
 	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.75);
 	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.85);
-	
+
 	PicAndTextPanel(BufferedImage img, String txt, PicType type, boolean editable, int customWidth) {
 		super(new BorderLayout(10, 10));
 		this.img = img;
@@ -62,9 +62,17 @@ public class PicAndTextPanel extends JPanel {
 		HTMLEditorKit editorKit = new HTMLEditorKit();
 		doc = (HTMLDocument) editorKit.createDefaultDocument();
 		if (customWidth == 0) {
-		   txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
+			if (img == null) {
+				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
+			} else {
+				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
+			}
 		} else {
-		   txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
+			if (img == null) {
+				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
+			} else {
+				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
+			}
 		}
 		txtPane.setContentType("text/html");
 		// correct input non-html text / preformatted html
@@ -74,13 +82,13 @@ public class PicAndTextPanel extends JPanel {
 		} else {
 			try {
 				doc.insertString(0, txt, null);
-				txtPane.setDocument(doc);				
+				txtPane.setDocument(doc);
 			} catch (BadLocationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
+
 		txtPane.setEditable(editable);
 		txtPane.setBackground(Color.WHITE);
 	}
@@ -162,20 +170,20 @@ public class PicAndTextPanel extends JPanel {
 	public String getText() {
 		return txtPane.getText();
 	}
-	
-	public void makeLarger () {
-	   txtPane.setMinimalWidth(txtPane.getWidth() + STEPSIZE); 
-	   txtPane.revalidate();
-	   txtPane.repaint();
-	}
-	
-	public void makeSmaller () {
-	   txtPane.setMinimalWidth(txtPane.getWidth() - STEPSIZE); 
-      txtPane.revalidate();
-      txtPane.repaint();
-   }
 
-   public int getCustomWidth() {
-      return txtPane.getMinimalWidth();
-   }
+	public void makeLarger() {
+		txtPane.setMinimalWidth(txtPane.getWidth() + STEPSIZE);
+		txtPane.revalidate();
+		txtPane.repaint();
+	}
+
+	public void makeSmaller() {
+		txtPane.setMinimalWidth(txtPane.getWidth() - STEPSIZE);
+		txtPane.revalidate();
+		txtPane.repaint();
+	}
+
+	public int getCustomWidth() {
+		return txtPane.getMinimalWidth();
+	}
 }
