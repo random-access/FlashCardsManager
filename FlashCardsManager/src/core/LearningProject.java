@@ -41,7 +41,7 @@ public class LearningProject implements OrderedItem {
 		this.title = title;
 		this.tableName = "PROJEKT_" + id;
 		projMgr.addProject(this);
-		dbex.createTable(this.tableName);
+		dbex.createFlashcardsTable(this.tableName);
 		allCards = new ArrayList<FlashCard>();
 	}
 	
@@ -61,7 +61,7 @@ public class LearningProject implements OrderedItem {
 		this.title = srcProject.getTitle();
 		this.tableName = "PROJEKT_" + id;
 		projMgr.addProject(this);
-		dbex.createTable(this.tableName);
+		dbex.createFlashcardsTable(this.tableName);
 		allCards = cardArray;
 	}
 

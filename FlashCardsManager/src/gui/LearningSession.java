@@ -304,9 +304,9 @@ public class LearningSession extends JDialog {
       }
       try {
          pnlQ = new PicAndTextPanel(currentCard.getQuestionPic(),
-               currentCard.getQuestion(), PicType.QUESTION, false);
+               currentCard.getQuestion(), PicType.QUESTION, false, currentCard.getQuestionWidth());
          pnlA = new PicAndTextPanel(currentCard.getAnswerPic(),
-               currentCard.getAnswer(), PicType.ANSWER, false);
+               currentCard.getAnswer(), PicType.ANSWER, false, currentCard.getAnswerWidth());
          lblTitle.setText(project.getTitle() + " - Karte "
                + currentCard.getId());
          progress.setValue(progress.getValue() - 1);
@@ -326,10 +326,10 @@ public class LearningSession extends JDialog {
       try {
          if (currentCard == null) {
             if (allCards.size() == 0) {
-               pnlQ = new PicAndTextPanel(imgFlashcardInfo, "", null, false);
+               pnlQ = new PicAndTextPanel(imgFlashcardInfo, "", null, false, 0);
             } else {
                pnlQ = new PicAndTextPanel(null, "Super! Geschafft!",
-                     null, false);
+                     null, false, 0);
             }
             btnFwd.setEnabled(false);
             btnSwitch.setEnabled(false);
@@ -341,9 +341,9 @@ public class LearningSession extends JDialog {
                System.out.println(currentCard.getQuestion());
             }
             pnlQ = new PicAndTextPanel(  currentCard.getQuestionPic(),
-                  currentCard.getQuestion(), PicType.QUESTION, false);
+                  currentCard.getQuestion(), PicType.QUESTION, false,currentCard.getQuestionWidth());
             pnlA = new PicAndTextPanel(currentCard.getAnswerPic(),
-                  currentCard.getAnswer(), PicType.ANSWER, false);
+                  currentCard.getAnswer(), PicType.ANSWER, false, currentCard.getAnswerWidth());
             lblTitle.setText(project.getTitle() + " - Karte "
                   + currentCard.getId());
          }

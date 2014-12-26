@@ -25,17 +25,26 @@ public class MyTextPane extends JTextPane {
    public void setMinimalWidth(int minimalWidth) {
       this.minimalWidth = minimalWidth;
    }
+   
+   public int getMinimalWidth() {
+      return minimalWidth;
+   }
 
    public void setMinimalHeight(int minimalHeight) {
       this.minimalHeight = minimalHeight;
    }
    
+   private int getMinimalHeight() {
+      return minimalHeight;
+   }
    
    @Override
    public Dimension getPreferredSize() {
       // makes textpane have a minimum size but with normal resize behaviour when getting larger
       int prefWidth, prefHeight;
       prefWidth = this.minimalWidth;
+      System.out.println("MinimalWidth: " + this.minimalWidth);
+      System.out.println("PrefWidth: " + super.getPreferredSize().width);
       if (super.getPreferredSize().height < minimalHeight) {
          prefHeight = minimalHeight;
       } else {

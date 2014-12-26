@@ -29,8 +29,11 @@ public class ProjectsManager {
 			// read all data from project database
 			projects = dbex.readAllData(this);
 		} else {
-			dbex.createTable();
+			dbex.createProjectsTable();
 			projects = new ArrayList<LearningProject>();
+		}
+		if (!dbex.tableAlreadyExisting("CARDPARAMS")) {
+		   dbex.createCardsizeTable();
 		}
 	}
 

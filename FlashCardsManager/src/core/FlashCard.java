@@ -171,5 +171,22 @@ public class FlashCard implements OrderedItem {
 	public LearningProject getLearningProject() {
 		return proj;
 	}
-
+	
+	public int getQuestionWidth() {
+	   // TODO
+	   return 0;
+	}
+	
+	public void setQuestionWidth(int width){
+	   
+	}
+	
+	public int getAnswerWidth() {
+      // TODO
+      return 0;
+   }
+   
+   public void setAnswerWidth(int width){
+      
+   }
 }

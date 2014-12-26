@@ -21,6 +21,7 @@ public class DBExchanger<T extends OrderedItem> {
    private final String dbURL; // database location
    private final String projectsTableTitle = "PROJECTS"; // Title of project
    // table
+   private final String cardSizeTable = "CARDPARAMS"; // flashcard parameters: size,...
    private Connection conn; // connection
 
    private static final int DEFAULT_QUESTION_LENGTH = 20;
@@ -75,7 +76,7 @@ public class DBExchanger<T extends OrderedItem> {
 
    // CREATE PROJECTS TABLE, Columns: ID, PROJ_TITLE, NEXT_CARD_ID,
    // NO_OF_STACKS, VARCHARS_QUESTION, VARCHARS_ANSWER
-   public void createTable() throws SQLException, EntryAlreadyThereException {
+   public void createProjectsTable() throws SQLException, EntryAlreadyThereException {
       Statement st = conn.createStatement();
       st.execute("CREATE TABLE "
             + projectsTableTitle
@@ -88,7 +89,7 @@ public class DBExchanger<T extends OrderedItem> {
    }
 
    // CREATE QUESTION TABLE, Columns: ID, STACK, QUESTION, ANSWER
-   public void createTable(String name) throws SQLException,
+   public void createFlashcardsTable(String name) throws SQLException,
          EntryAlreadyThereException {
       if (!tableAlreadyExisting(name)) {
          Statement st = conn.createStatement();
@@ -102,6 +103,27 @@ public class DBExchanger<T extends OrderedItem> {
       } else {
          throw new EntryAlreadyThereException();
       }
+   }
+   
+   // CREATE CARDSIZE TABLE, Columns: PROJ_ID, CARD_ID, QUESTION_WIDTH, ANSWER_WIDTH
+   public void createCardsizeTable() throws SQLException {
+      if (!tableAlreadyExisting(cardSizeTable)) {
+         Statement st = conn.createStatement();
+         st.execute("CREATE TABLE " + cardSizeTable
+               + " (PROJ_ID INT CONSTRAINT PROJ_ID_FK REFERENCES " + projectsTableTitle + "(ID), "
+               + "CARD_ID INT, QUESTION_WIDTH INT NOT NULL, ANSWER_WIDTH INT NOT NULL, PRIMARY KEY (PROJ_ID, CARD_ID))");
+         conn.commit();
+         st.close();
+         System.out.println("**** Successfully created cardSizeTable!");
+      }
+   }
+   
+   // INSERT CARD SIZE
+   public void insertCardSize(FlashCard card) {
+     //  Statement st = conn.createStatement();
+      // TODO st.executeUpdate();
+    //   conn.commit();
+    //   st.close();
    }
 
    // ADD ROW: insert project into table
