@@ -350,11 +350,21 @@ public class LearningSession extends JDialog {
          progress.setValue(progress.getValue() + 1);
          progress.setString(progress.getValue() + " von "
                + progress.getMaximum());
-      } catch (IOException | SQLException exc) {
+      } catch (IOException exc) {
          JOptionPane.showMessageDialog(LearningSession.this,
                "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
                JOptionPane.ERROR_MESSAGE);
          Logger.log(exc);
+         
+      } catch(SQLException exc) {
+    	  JOptionPane.showMessageDialog(LearningSession.this,
+                  "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+                  JOptionPane.ERROR_MESSAGE);
+    	  for(; exc != null; exc = exc.getNextException()) {
+    		  Logger.log("Message: " + exc.getMessage());
+    		  Logger.log("SQL State: " + exc.getSQLState());
+    		  Logger.log("Error code: " + exc.getErrorCode());
+    	  }
       }
    }
 

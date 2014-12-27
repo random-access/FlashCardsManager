@@ -114,12 +114,34 @@ public class DBExchanger<T extends OrderedItem> {
 		}
 	}
 
+	public void transferCardsizeTable(DBExchanger<OrderedItem> target, LearningProject currentProj) throws SQLException,
+			EntryNotFoundException, IOException {
+		target.createCardsizeTable();
+		ArrayList<FlashCard> cards = target.readAllData(currentProj.getTableName(), currentProj);
+		String TRANSFER_CARD_SIZE = "INSERT INTO " + cardSizeTable + " VALUES (?, ?, ?, ?)";
+		ListIterator<FlashCard> lit = cards.listIterator();
+		while (lit.hasNext()) {
+			FlashCard currentCard = lit.next();
+			PreparedStatement targetSt = target.conn.prepareStatement(TRANSFER_CARD_SIZE);
+			targetSt.setInt(1, currentCard.getLearningProject().getId());
+			targetSt.setInt(2, currentCard.getId());
+			targetSt.setInt(3, getQuestionWidth(currentCard));
+			targetSt.setInt(4, getAnswerWidth(currentCard));
+			targetSt.execute();
+			target.conn.commit();
+			targetSt.close();
+		}
+		System.out.println("*** successfully transferred cardsize table");
+
+	}
+
 	// SET CUSTOM WIDTH
 	public void setWidth(FlashCard card, int questionWidth, int answerWidth) throws SQLException {
+		createCardsizeTable();
 		Statement st = conn.createStatement();
 		if (getQuestionWidth(card) != 0 || getAnswerWidth(card) != 0) {
 			st.executeUpdate("UPDATE " + cardSizeTable + " SET QUESTION_WIDTH = " + questionWidth + ", ANSWER_WIDTH = "
-					+ answerWidth +" WHERE PROJ_ID = " + card.getLearningProject().getId() + " AND CARD_ID = " + card.getId());
+					+ answerWidth + " WHERE PROJ_ID = " + card.getLearningProject().getId() + " AND CARD_ID = " + card.getId());
 		} else {
 			st.executeUpdate("INSERT INTO " + cardSizeTable + " VALUES (" + card.getLearningProject().getId() + ","
 					+ card.getId() + "," + questionWidth + "," + answerWidth + ")");
@@ -132,32 +154,45 @@ public class DBExchanger<T extends OrderedItem> {
 
 	// GET CUSTOM QUESTION WIDTH
 	public int getQuestionWidth(FlashCard card) throws SQLException {
-		Statement st = conn.createStatement();
-		st.execute("SELECT QUESTION_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId() 
-				+ " AND CARD_ID = " + card.getId());
-		System.out.println("SELECT QUESTION_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId() 
-				+ " AND CARD_ID = " + card.getId());
-		ResultSet res = st.getResultSet();
-		if (res.next()) {
-			return res.getInt(1);
+		if (tableAlreadyExisting(cardSizeTable)) {
+			Statement st = conn.createStatement();
+			st.execute("SELECT QUESTION_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId()
+					+ " AND CARD_ID = " + card.getId());
+			System.out.println("SELECT QUESTION_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = "
+					+ card.getLearningProject().getId() + " AND CARD_ID = " + card.getId());
+			conn.commit();
+			ResultSet res = st.getResultSet();
+			int result = 0;
+			if (res.next()) {
+				result = res.getInt(1);
+			}
+			res.close();
+			st.close();
+			return result;
 		}
 		return 0;
 	}
-	
-	
+
 	// GET CUSTOM ANSWER WIDTH
-		public int getAnswerWidth(FlashCard card) throws SQLException {
+	public int getAnswerWidth(FlashCard card) throws SQLException {
+		if (tableAlreadyExisting(cardSizeTable)) {
 			Statement st = conn.createStatement();
-			st.execute("SELECT ANSWER_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId() 
+			st.execute("SELECT ANSWER_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId()
 					+ " AND CARD_ID = " + card.getId());
-			System.out.println("SELECT ANSWER_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId() 
-					+ " AND CARD_ID = " + card.getId());
+			System.out.println("SELECT ANSWER_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = "
+					+ card.getLearningProject().getId() + " AND CARD_ID = " + card.getId());
+			conn.commit();
 			ResultSet res = st.getResultSet();
+			int result = 0;
 			if (res.next()) {
-				return res.getInt(1);
+				result = res.getInt(1);
 			}
-			return 0;
+			res.close();
+			st.close();
+			return result;
 		}
+		return 0;
+	}
 
 	// ADD ROW: insert project into table
 	public void addRow(LearningProject project) throws EntryAlreadyThereException, SQLException {
@@ -228,7 +263,6 @@ public class DBExchanger<T extends OrderedItem> {
 				+ "values (?, ?, ?, ?, ?, ?)";
 		ListIterator<FlashCard> lit = allCards.listIterator();
 		while (lit.hasNext()) {
-
 			FlashCard currentCard = lit.next();
 			controlVarcharLength(currentCard, destProj);
 			PreparedStatement prepSt = conn.prepareStatement(INSERT_TEXT);
@@ -473,10 +507,7 @@ public class DBExchanger<T extends OrderedItem> {
 			FlashCard f = new FlashCard(proj, res.getInt(1), res.getInt(2), res.getString(3), res.getString(4), hasQuestionPic,
 					hasAnswerPic);
 			data.add(f);
-			System.out.println("Synchronized from Database -> FlashCard: " + f.getId()); // TODO:
-																							// remove
-																							// debug
-																							// output
+			System.out.println("Synchronized from Database -> FlashCard: " + f.getId());
 		}
 		res.close();
 		st.close();
@@ -517,6 +548,9 @@ public class DBExchanger<T extends OrderedItem> {
 		if (idAlreadyExisting(project.getId())) {
 			Statement st = conn.createStatement();
 			st.execute("DROP TABLE " + project.getTableName());
+			conn.commit();
+			// delete custom sizes for cards in project that is deleted
+			st.execute("DELETE FROM " + cardSizeTable + " WHERE PROJ_ID = " + project.getId());
 			conn.commit();
 			st.close();
 			System.out.println("Deleted table: " + "DROP TABLE " + project.getTableName());

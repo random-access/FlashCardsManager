@@ -73,6 +73,7 @@ public class ProjectsManager {
 					importManager.projects.get(i), cards);
 			dbex.insertFlashcardArray(cards, currentProject,
 					importManager.dbex, importManager.projects.get(i));
+			//  TODO: fix importManager.dbex.transferCardsizeTable(dbex, currentProject);
 			SwingUtilities.invokeLater(new Runnable() {
 				@Override
 				public void run() {
@@ -101,6 +102,7 @@ public class ProjectsManager {
 					projs.get(i).getTitle(), projs.get(i).getNumberOfStacks());
 			exportManager.dbex.insertFlashcardArray(cards, currentProject,
 					dbex, projs.get(i));
+			// TODO: fix dbex.transferCardsizeTable(exportManager.dbex, currentProject);
 			SwingUtilities.invokeLater(new Runnable() {
 				@Override
 				public void run() {
