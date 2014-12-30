@@ -9,8 +9,7 @@ import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 
 import utils.*;
-import core.LearningProject;
-import core.ProjectsManager;
+import core.*;
 import exc.EntryNotFoundException;
 import exc.NoValueException;
 
@@ -23,14 +22,14 @@ public class ChangeTitleDialog extends JDialog {
    private JButton btnOk, btnDiscard;
    private MainWindow owner;
    private ProjectPanel pnl;
-   private ProjectsManager prm;
+   private ProjectsController prm;
    private LearningProject proj;
 
-   ChangeTitleDialog(ProjectPanel pnl, LearningProject proj, ProjectsManager prm) {
+   ChangeTitleDialog(ProjectPanel pnl, LearningProject proj, ProjectsController ctl) {
       super(pnl.getOwner(), true);
       this.owner = pnl.getOwner();
       this.proj = proj;
-      this.prm = prm;
+      this.prm = ctl;
       this.pnl = pnl;
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
       setTitle("Titel \u00e4ndern..");
@@ -65,7 +64,7 @@ public class ChangeTitleDialog extends JDialog {
                }
                // verarbeite Eingabe in DB
                proj.setTitle(txtTitle.getText());
-               prm.updateProject(proj);
+               proj.update();
                int i = owner.projectPnls.indexOf(pnl);
                owner.projectPnls.remove(pnl);
                owner.projectPnls.add(i, new ProjectPanel(proj, owner, prm));
@@ -80,7 +79,7 @@ public class ChangeTitleDialog extends JDialog {
                JOptionPane.showMessageDialog(ChangeTitleDialog.this,
                      "Es wurde kein Titel eingegeben.",
                      "Fehler", JOptionPane.ERROR_MESSAGE);
-            } catch (EntryNotFoundException | SQLException exc) {
+            } catch (SQLException exc) {
                JOptionPane.showMessageDialog(ChangeTitleDialog.this,
                      "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);

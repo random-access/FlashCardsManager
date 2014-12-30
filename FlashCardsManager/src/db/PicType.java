@@ -1,5 +1,15 @@
 package db;
 
 public enum PicType {
-	QUESTION, ANSWER;
+	QUESTION('q'), ANSWER('a');
+	
+	char shortForm;
+	
+	PicType(char shortForm) {
+		this.shortForm = shortForm;
+	}
+	
+	public char getShortForm(){
+		return this.shortForm;
+	}
 }

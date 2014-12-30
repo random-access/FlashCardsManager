@@ -16,17 +16,18 @@ import utils.FileUtils;
 import utils.Logger;
 import xml.Settings;
 import xml.XMLExchanger;
-import core.ProjectsManager;
+import core.ProjectsController;
 
 public class StartApp {
 
 	private static final String APP_FOLDER = FileUtils.appDirectory("Lernkarten");
 	private static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
 	private static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
-	private static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_1";
+	private static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_2";
 
 	private static InputStream defaultSettings = StartApp.class.getClassLoader().getResourceAsStream("xml/settings.xml");
 	private static Settings currentSettings;
+	private static Settings newSettings;
 
 	public static void main(String[] args) {
 		final IntroPanel intro = new IntroPanel();
@@ -39,8 +40,8 @@ public class StartApp {
 			Logger.init(5);
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 			initializeSettings();
-			final ProjectsManager prm = new ProjectsManager(currentSettings.getPathToDatabase());
-			new MainWindow(prm, currentSettings.getMajorVersion(), currentSettings.getMinorVersion(),
+			final ProjectsController ctl = new ProjectsController(currentSettings.getPathToDatabase());
+			new MainWindow(ctl, currentSettings.getMajorVersion(), currentSettings.getMinorVersion(),
 					currentSettings.getPatchLevel());
 
 		} catch (SQLException e) {
@@ -55,13 +56,11 @@ public class StartApp {
 						JOptionPane.ERROR_MESSAGE);
 				Logger.log(e);
 			}
+			e.printStackTrace();
 		} catch (XMLStreamException | IOException e) {
 			JOptionPane.showMessageDialog(null, "Es gibt ein Problem beim Einlesen der Einstellungen.", "Fehler",
 					JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
-		} catch (EntryAlreadyThereException | EntryNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-					JOptionPane.ERROR_MESSAGE);
+			// e.printStackTrace();
 			Logger.log(e);
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
 			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
@@ -78,8 +77,7 @@ public class StartApp {
 	}
 
 	// check if version number has changed and update version
-	private static boolean updatedVersion() throws NumberFormatException, FileNotFoundException, XMLStreamException {
-		Settings newSettings = XMLExchanger.readConfig(defaultSettings);
+	private static boolean updatedVersion() throws NumberFormatException, XMLStreamException, IOException {
 		boolean updated = false;
 		if (currentSettings.getPatchLevel() != newSettings.getPatchLevel()) {
 			currentSettings.setPatchLevel(newSettings.getPatchLevel());
@@ -96,11 +94,27 @@ public class StartApp {
 		return updated;
 	}
 
-	private static void initializeSettings() throws FileNotFoundException, XMLStreamException {
+	private static void initializeSettings() throws XMLStreamException, NumberFormatException, IOException {
+		newSettings = XMLExchanger.readConfig(defaultSettings);
 		if (new File(DEFAULT_SETTINGS_PATH).isFile()) {
 			System.out.println("Settings already in user folder");
 			// settings already in user folder -> read from settings
 			currentSettings = XMLExchanger.readConfig(DEFAULT_SETTINGS_PATH);
+			
+			// database v1 still in settings
+			if (currentSettings.getDatabaseVersion() == 1 && 
+					newSettings.getDatabaseVersion() == 2) { 
+				// database v2 doesn't exist yet
+				if (!(new File(DEFAULT_DATABASE_PATH).exists())) {
+					JOptionPane.showMessageDialog(null, "Die Datenbankversion ist nicht mehr aktuell! Bitte aktualisiere die Datenbank", "Datenbankversion..", JOptionPane.INFORMATION_MESSAGE);
+					System.exit(0);
+				} else {
+					currentSettings.setDatabaseVersion(2);
+					currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
+					XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
+					System.out.println("Updated database version.");
+				}
+			}
 			if (currentSettings.getPathToDatabase().equals("null")
 					|| !(new File(currentSettings.getPathToDatabase()).isDirectory())) {
 				System.out.println("Database not where it was expected or not there");
@@ -108,18 +122,7 @@ public class StartApp {
 				currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
 				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
 			}
-			if (currentSettings.getDatabaseVersion() == 0) { /*
-															 * correct XML ->
-															 * right now
-															 * everybody has
-															 * DBv1 & no
-															 * individual stuff
-															 * is in XML
-															 */
-				currentSettings.setDatabaseVersion(1);
-				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
-				System.out.println("Correcting XML-Settings (database version was null)...");
-			}
+
 			if (StartApp.updatedVersion()) {
 				System.out.println("was updated");
 				XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
@@ -128,7 +131,7 @@ public class StartApp {
 		} else {
 			// first install -> copy default settings.xml into user folder
 			System.out.println("XML Config not in user folder -> copy into user folder");
-			currentSettings = XMLExchanger.readConfig(defaultSettings);
+			currentSettings = newSettings;
 			System.out.println("read config: " + defaultSettings);
 
 			currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);

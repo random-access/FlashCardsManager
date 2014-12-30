@@ -13,10 +13,8 @@ import javax.swing.*;
 
 import utils.HTMLToText;
 import utils.Logger;
-import core.FlashCard;
-import core.LearningProject;
+import core.*;
 import exc.EntryNotFoundException;
-import gui.helpers.Status;
 
 @SuppressWarnings("serial")
 public class FlashCardPanel extends JPanel {

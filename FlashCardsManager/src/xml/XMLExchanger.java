@@ -59,13 +59,13 @@ public class XMLExchanger {
       }
       
       public static Settings readConfig(String file) throws NumberFormatException,
-		XMLStreamException, FileNotFoundException {
+		XMLStreamException, IOException {
     	  InputStream inputStream = new FileInputStream(file);
     	  return readConfig (inputStream);
       }
 
 	public static Settings readConfig(InputStream inputStream) throws NumberFormatException,
-			XMLStreamException, FileNotFoundException {
+			XMLStreamException, IOException {
 		XMLInputFactory factory = XMLInputFactory.newInstance();
 		XMLStreamReader reader = factory.createXMLStreamReader(inputStream);
 		String content = null;

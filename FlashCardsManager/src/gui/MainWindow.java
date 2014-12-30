@@ -1,5 +1,9 @@
 package gui;
 
+import exc.EntryAlreadyThereException;
+import exc.EntryNotFoundException;
+import gui.helpers.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,9 +19,6 @@ import javax.swing.*;
 
 import utils.Logger;
 import core.*;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
-import gui.helpers.*;
 
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {
@@ -57,10 +58,10 @@ public class MainWindow extends JFrame {
 	private JLabel lblAddProjectInfo;
 	private JScrollPane scpCenter;
 	private JButton btnAddProject;
-	private ProjectsManager prm;
+	private ProjectsController ctl;
 
-	public MainWindow(ProjectsManager prm, int majorVersion, int minorVersion, int patchLevel) {
-		this.prm = prm;
+	public MainWindow(ProjectsController ctl, int majorVersion, int minorVersion, int patchLevel) {
+		this.ctl = ctl;
 		this.majorVersion = majorVersion;
 		this.minorVersion = minorVersion;
 		this.patchLevel = patchLevel;
@@ -82,7 +83,12 @@ public class MainWindow extends JFrame {
 		}
 
 		createWidgets();
-		computeProjectPanels();
+		try {
+			computeProjectPanels();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		addWidgets();
 		setListeners();
 
@@ -91,41 +97,18 @@ public class MainWindow extends JFrame {
 		setVisible(true);
 	}
 
-	void computeProjectPanels() {
+	void computeProjectPanels() throws SQLException {
+		ctl.loadProjects();
 		projectPnls = new ArrayList<ProjectPanel>();
-		for (int i = 0; i < prm.getAllProjects().size(); i++) {
-			ProjectPanel pnl = new ProjectPanel(prm.getAllProjects().get(i), this, prm);
-			pnl.changeStatus(calculateStatus(prm.getAllProjects().get(i)));
+		for (int i = 0; i < ctl.getProjects().size(); i++) {
+			ProjectPanel pnl = new ProjectPanel(ctl.getProjects().get(i), this, ctl);
+			pnl.changeStatus(ctl.getProjects().get(i).getStatus());
 			projectPnls.add(pnl);
 		}
 	}
 
-	private Status calculateStatus(LearningProject proj) {
-		ArrayList<FlashCard> flashcards = proj.getAllCards();
-		Status s = Status.RED;
-		System.out.println("status red..");
-		for (int i = 0; i < flashcards.size(); i++) {
-			if (flashcards.get(i).getStack() > 1) { // at least one card in
-				// stack >
-				// 1
-				s = Status.GREEN;
-				System.out.println("status green");
-				for (int j = 0; j < flashcards.size(); j++) {
-					if (flashcards.get(j).getStack() < proj.getNumberOfStacks()) {
-						// at least 1 card in stack < maxStack
-						s = Status.YELLOW;
-						System.out.println("status yellow");
-						break;
-					}
-				}
-				break;
-			}
-		}
-		return s;
-	}
-
-	void updateProjectStatus(LearningProject proj) {
-		Status s = calculateStatus(proj);
+	void updateProjectStatus(LearningProject proj) throws SQLException {
+		Status s = proj.getStatus();
 		ProjectPanel p; // search for right project in project panels & update
 		// status
 		for (int i = 0; i < projectPnls.size(); i++) {
@@ -224,8 +207,8 @@ public class MainWindow extends JFrame {
 		btnAddProject.addActionListener(new AddProjectListener());
 		mnuSettingsNewProject.addActionListener(new AddProjectListener());
 		mnuSettingsAbout.addActionListener(new AboutProjectListener());
-		mnuSettingsExportProject.addActionListener(new ExportProjectListener());
-		mnuSettingsImportProject.addActionListener(new ImportProjectListener());
+		// mnuSettingsExportProject.addActionListener(new ExportProjectListener());
+		// mnuSettingsImportProject.addActionListener(new ImportProjectListener());
 	}
 
 	private class AboutProjectListener implements ActionListener {
@@ -255,121 +238,121 @@ public class MainWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, prm);
+			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
 			d.setVisible(true);
 		}
 	}
 
-	private class ImportProjectListener implements ActionListener {
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			doAction();
-		}
-
-		private void doTask(String pathToImport) {
-			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "... importieren ...");
-			dialog.setVisible(true);
-			ImportTask task = new ImportTask(pathToImport, dialog);
-			task.addPropertyChangeListener(dialog);
-			task.execute();
-		}
-
-		private void doAction() {
-			JFileChooser fileChooser = new JFileChooser();
-			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-			int returnVal = fileChooser.showOpenDialog(MainWindow.this);
-			String pathToImport = null;
-			if (fileChooser.getSelectedFile() != null) { // prevent
-															// NullPointerExc
-															// when no path
-															// selected
-				pathToImport = fileChooser.getSelectedFile().getAbsolutePath();
-			}
-			if (returnVal == JFileChooser.APPROVE_OPTION) {
-				if (pathToImport == null) { // no path selected
-					JOptionPane.showMessageDialog(MainWindow.this, "Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
-							JOptionPane.WARNING_MESSAGE);
-					doAction();
-				} else { // some path selected
-					File f = new File(pathToImport);
-					if (!f.canWrite()) { // can't read -> error message
-						JOptionPane.showMessageDialog(MainWindow.this, "Fehlende Ordnerberechtigungen unter " + f + ". ",
-								"Fehlende Berechtigung!", JOptionPane.WARNING_MESSAGE);
-						doAction();
-					} else { // it's possible to overwrite -> ask user
-						doTask(pathToImport);
-					}
-				}
-
-			}
-		}
-	}
+//	private class ImportProjectListener implements ActionListener {
+//
+//		@Override
+//		public void actionPerformed(ActionEvent e) {
+//			doAction();
+//		}
+//
+//		private void doTask(String pathToImport) {
+//			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "... importieren ...");
+//			dialog.setVisible(true);
+//			ImportTask task = new ImportTask(pathToImport, dialog);
+//			task.addPropertyChangeListener(dialog);
+//			task.execute();
+//		}
+//
+//		private void doAction() {
+//			JFileChooser fileChooser = new JFileChooser();
+//			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+//			int returnVal = fileChooser.showOpenDialog(MainWindow.this);
+//			String pathToImport = null;
+//			if (fileChooser.getSelectedFile() != null) { // prevent
+//															// NullPointerExc
+//															// when no path
+//															// selected
+//				pathToImport = fileChooser.getSelectedFile().getAbsolutePath();
+//			}
+//			if (returnVal == JFileChooser.APPROVE_OPTION) {
+//				if (pathToImport == null) { // no path selected
+//					JOptionPane.showMessageDialog(MainWindow.this, "Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
+//							JOptionPane.WARNING_MESSAGE);
+//					doAction();
+//				} else { // some path selected
+//					File f = new File(pathToImport);
+//					if (!f.canWrite()) { // can't read -> error message
+//						JOptionPane.showMessageDialog(MainWindow.this, "Fehlende Ordnerberechtigungen unter " + f + ". ",
+//								"Fehlende Berechtigung!", JOptionPane.WARNING_MESSAGE);
+//						doAction();
+//					} else { // it's possible to overwrite -> ask user
+//						doTask(pathToImport);
+//					}
+//				}
+//
+//			}
+//		}
+//	}
 
 	private class AddProjectListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			AddProjectDialog p = new AddProjectDialog(MainWindow.this, prm);
+			AddProjectDialog p = new AddProjectDialog(MainWindow.this, ctl);
 			p.setVisible(true);
 		}
 	}
 	
-	// TODO make an own class
-	public class ImportTask extends SwingWorker<Void, Void> {
-		String pathToImport;
-		ProgressDialog dialog;
-
-		ImportTask(String pathToImport, ProgressDialog dialog) {
-			this.pathToImport = pathToImport;
-			this.dialog = dialog;
-		}
-
-		public void changeProgress(int progress) {
-			super.setProgress(progress);
-		}
-
-		@Override
-		protected Void doInBackground() throws Exception {
-			SwingUtilities.invokeLater(new Runnable() {
-				@Override
-				public void run() {
-					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-				}
-			});
-
-			setProgress(0);
-			try {
-				prm.importProject(pathToImport, this);
-
-			} catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
-				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-						JOptionPane.ERROR_MESSAGE);
-				Logger.log(exc);
-			} catch (IOException | ClassNotFoundException exc) {
-				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Fehler ist aufgetreten", "Fehler",
-						JOptionPane.ERROR_MESSAGE);
-				Logger.log(exc);
-			}
-			setProgress(100);
-			Thread.sleep(1000);
-
-			SwingUtilities.invokeLater(new Runnable() {
-				@Override
-				public void run() {
-					dialog.dispose();
-					centerBox.removeAll();
-					computeProjectPanels();
-					addProjectsToPanel();
-					centerBox.revalidate();
-					centerBox.repaint();
-					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-					JOptionPane.showMessageDialog(MainWindow.this, "Import erfolgreich abgeschlossen", "Fertig",
-							JOptionPane.INFORMATION_MESSAGE);
-				}
-			});
-			return null;
-		}
-
-	}
+//	// TODO make an own class
+//	public class ImportTask extends SwingWorker<Void, Void> {
+//		String pathToImport;
+//		ProgressDialog dialog;
+//
+//		ImportTask(String pathToImport, ProgressDialog dialog) {
+//			this.pathToImport = pathToImport;
+//			this.dialog = dialog;
+//		}
+//
+//		public void changeProgress(int progress) {
+//			super.setProgress(progress);
+//		}
+//
+//		@Override
+//		protected Void doInBackground() throws Exception {
+//			SwingUtilities.invokeLater(new Runnable() {
+//				@Override
+//				public void run() {
+//					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+//				}
+//			});
+//
+//			setProgress(0);
+//			try {
+//				ctl.importProject(pathToImport, this);
+//
+//			} catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
+//				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+//						JOptionPane.ERROR_MESSAGE);
+//				Logger.log(exc);
+//			} catch (IOException | ClassNotFoundException exc) {
+//				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Fehler ist aufgetreten", "Fehler",
+//						JOptionPane.ERROR_MESSAGE);
+//				Logger.log(exc);
+//			}
+//			setProgress(100);
+//			Thread.sleep(1000);
+//
+//			SwingUtilities.invokeLater(new Runnable() {
+//				@Override
+//				public void run() {
+//					dialog.dispose();
+//					centerBox.removeAll();
+//					computeProjectPanels();
+//					addProjectsToPanel();
+//					centerBox.revalidate();
+//					centerBox.repaint();
+//					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+//					JOptionPane.showMessageDialog(MainWindow.this, "Import erfolgreich abgeschlossen", "Fertig",
+//							JOptionPane.INFORMATION_MESSAGE);
+//				}
+//			});
+//			return null;
+//		}
+//
+//	}
 
 }

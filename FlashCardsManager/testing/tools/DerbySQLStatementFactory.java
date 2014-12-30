@@ -14,26 +14,30 @@ public class DerbySQLStatementFactory {
     * Builds the create table command, this will look like:
     * CREATE TABLE TableName (Column1 DataType1, Column2 DataType2, [...])
     * @param tableName the table name
-    * @param columns the columns
+    * @param columns the columns as triple (columnName, data type, columnAttributes
     * @return SQL create table statement as String
     */
-   public static String buildCreateTableCommand(String tableName, ArrayList<Pair<String, MyDerbyDataTypes>> columns) {
+   public static String buildCreateTableCommand(String tableName, ArrayList<Triple<String, MyDerbyDataTypes, ColumnAttribute>> columns) {
       StringBuilder sbCreateTableCommand = new StringBuilder();
       sbCreateTableCommand.append("CREATE TABLE ");
       sbCreateTableCommand.append(tableName);
       sbCreateTableCommand.append(" (");
-      for (Pair<String, MyDerbyDataTypes> p : columns) {
-         sbCreateTableCommand.append(p.getValue1()).append(" ").append(p.getValue2()).append(", ");
+      for (Triple<String, MyDerbyDataTypes, ColumnAttribute> t : columns) {
+    	  if (t.getValue3() == null) {
+    		  sbCreateTableCommand.append(t.getValue1()).append(" ").append(t.getValue2()).append(", ");
+    	  } else {
+    		  sbCreateTableCommand.append(t.getValue1()).append(" ").append(t.getValue2()).append(t.getValue2()).append(", ");
+    	  }
       }
       sbCreateTableCommand.replace(sbCreateTableCommand.length() - 2, sbCreateTableCommand.length(), ")");
       return sbCreateTableCommand.toString();
    }
 
    /**
-    * Builds the insert command, this will look like: 
+    * Builds an insert command, this will look like: 
     * INSERT INTO TableName (Column1, Column2, [...]) VALUES (Value1, Value2, [...])
     * @param tableName the table name
-    * @param insertData the insert data
+    * @param insertData the insert data as triple (columnName, value, dataType)
     * @return SQL insert statement as String
     * @throws UnsupportedDataException the unsupported data exception
     */
@@ -73,12 +77,12 @@ public class DerbySQLStatementFactory {
    }
    
    /**
-    * Builds the update command, this will look like:
+    * Builds an update command, this will look like:
     * UPDATE TableName SET Column1 = Value1, Column2 = Value2, [...] WHERE PrimaryKey =  Value
     *
     * @param tableName the table name
-    * @param fields the fields
-    * @param identifier the identifier
+    * @param fields values to update as triple (columnName, value, dataType)
+    * @param identifier primary key as triple (columnName, value, dataType)
     * @return SQL update statement as String
     * @throws UnsupportedDataException the unsupported data exception
     */

@@ -10,7 +10,7 @@ import javax.swing.*;
 
 import utils.Logger;
 import core.LearningProject;
-import core.ProjectsManager;
+import core.ProjectsController;
 import exc.*;
 
 @SuppressWarnings("serial")
@@ -23,13 +23,13 @@ public class ChangeStacksDialog extends JDialog {
    private MainWindow owner;
    private ProjectPanel pnl;
    private LearningProject project;
-   private ProjectsManager prm;
+   private ProjectsController ctl;
 
    ChangeStacksDialog(ProjectPanel pnl, LearningProject project,
-         ProjectsManager prm) {
+         ProjectsController ctl) {
       super(pnl.getOwner(), true);
       this.owner = pnl.getOwner();
-      this.prm = prm;
+      this.ctl = ctl;
       this.project = project;
       this.pnl = pnl;
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -66,8 +66,9 @@ public class ChangeStacksDialog extends JDialog {
                // verarbeite Eingabe in DB
                int nr = Integer.parseInt(txtNoOfStacks.getText());
                pnl.noOfStacks = nr;
+               project.loadFlashcards();
                project.setNumberOfStacks(nr);
-               prm.updateProject(project);
+               project.update();
                owner.updateProjectStatus(project);
                ChangeStacksDialog.this.dispose();
             } catch (NoValueException exc) {
@@ -78,7 +79,7 @@ public class ChangeStacksDialog extends JDialog {
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
                      "Ung\u00fcltige Zeichenfolge.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);
-            } catch (EntryNotFoundException | SQLException exc) {
+            } catch (SQLException exc) {
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
                      "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);

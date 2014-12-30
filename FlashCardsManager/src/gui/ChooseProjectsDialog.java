@@ -12,8 +12,7 @@ import javax.swing.*;
 
 import utils.FileUtils;
 import utils.Logger;
-import core.LearningProject;
-import core.ProjectsManager;
+import core.*;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 
@@ -27,15 +26,15 @@ public class ChooseProjectsDialog extends JDialog {
    private Box centerBox;
    private ProjectBox[] boxes;
    private JButton btnOk, btnDiscard;
-   private ProjectsManager prm;
+   private ProjectsController ctl;
    private boolean delete;
    private static final String[] DATABASE_FILES = {"log", "seg0", "service.properties"};
 
-   ChooseProjectsDialog(MainWindow owner, ProjectsManager prm) {
+   ChooseProjectsDialog(MainWindow owner, ProjectsController ctl) {
       super(owner, false);
       this.owner = owner;
-      this.prm = prm;
-      this.allProjects = prm.getAllProjects();
+      this.ctl = ctl;
+      this.allProjects = ctl.getProjects();
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
       setTitle("Projektauswahl..");
       setLayout(new BorderLayout());
@@ -226,23 +225,23 @@ public class ChooseProjectsDialog extends JDialog {
             }
          });
          setProgress(0);
-         try {
+//         try {
             if (delete) {
                FileUtils.deleteDirectory(pathToExport);
             }
             // --> export project to selected location and show progress
-            prm.exportProject(getSelectedProjects(), pathToExport, this);
-         } catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
-            JOptionPane.showMessageDialog(null,
-                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-                  JOptionPane.ERROR_MESSAGE);
-            Logger.log(exc);
-         } catch (IOException | ClassNotFoundException exc) {
-            JOptionPane.showMessageDialog(null,
-                  "Ein interner Fehler ist aufgetreten", "Fehler",
-                  JOptionPane.ERROR_MESSAGE);
-            Logger.log(exc);
-         }
+            // ctl.exportProject(getSelectedProjects(), pathToExport, this);
+//         } catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
+//            JOptionPane.showMessageDialog(null,
+//                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+//                  JOptionPane.ERROR_MESSAGE);
+//            Logger.log(exc);
+//         } catch (IOException | ClassNotFoundException exc) {
+//            JOptionPane.showMessageDialog(null,
+//                  "Ein interner Fehler ist aufgetreten", "Fehler",
+//                  JOptionPane.ERROR_MESSAGE);
+//            Logger.log(exc);
+//         }
          setProgress(100);
          Thread.sleep(1000);
 

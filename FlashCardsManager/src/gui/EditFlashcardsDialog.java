@@ -1,7 +1,6 @@
 package gui;
 
 import gui.helpers.MyMenuItem;
-import gui.helpers.Status;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,8 +13,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import utils.Logger;
-import core.FlashCard;
-import core.LearningProject;
+import core.*;
 
 @SuppressWarnings("serial")
 public class EditFlashcardsDialog extends JDialog {

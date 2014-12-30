@@ -389,7 +389,8 @@ public class AddFlashcardDialog extends JDialog {
 		try {
 			existingCard.setQuestion(pnlQ.getText());
 			existingCard.setAnswer(pnlA.getText());
-			existingCard.setWidth(pnlQ.getCustomWidth(), pnlA.getCustomWidth());
+			existingCard.setQuestionWidth(pnlQ.getCustomWidth());
+			existingCard.setAnswerWidth(pnlA.getCustomWidth());
 			try {
 				project.updateCard(existingCard, pathToQuestionPic, pathToAnswerPic);
 			} catch (IOException exc) {

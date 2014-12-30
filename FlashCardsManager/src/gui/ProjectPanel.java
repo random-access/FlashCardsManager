@@ -15,7 +15,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import utils.Logger;
 import core.*;
 import exc.EntryNotFoundException;
-import gui.helpers.Status;
 
 @SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
@@ -32,10 +31,8 @@ public class ProjectPanel extends JPanel {
 			imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgGreen_8x8.png"));
 
 		} catch (IOException e) {
-		   JOptionPane.showMessageDialog(null,
-               "Ein interner Fehler ist aufgetreten", "Fehler",
-               JOptionPane.ERROR_MESSAGE);
-         Logger.log(e);
+			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
+			Logger.log(e);
 		}
 	}
 
@@ -52,19 +49,18 @@ public class ProjectPanel extends JPanel {
 	private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks, popupEditAddCards, popupEditOrganizeCards,
 			popupEditResetProgress;
 	private MainWindow parentWindow;
-	private ProjectsManager prm;
+	private ProjectsController ctl;
 	private LearningProject project;
 	private ArrayList<FlashCard> cards;
 
 	// Constructor
-	ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsManager prm) {
-		this.prm = prm;
+	ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsController ctl) {
+		this.ctl = ctl;
 		this.project = project;
 		this.status = Status.RED;
 		this.name = project.getTitle();
 		this.parentWindow = parentWindow;
 		this.noOfStacks = project.getNumberOfStacks();
-		cards = project.getAllCards();
 		this.setLayout(new BorderLayout());
 		createWidgets();
 		addWidgets();
@@ -178,12 +174,11 @@ public class ProjectPanel extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						try {
-							prm.deleteProject(project);
-						} catch (EntryNotFoundException | SQLException exc) {
-						   JOptionPane.showMessageDialog(ProjectPanel.this,
-			                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-			                  JOptionPane.ERROR_MESSAGE);
-			            Logger.log(exc);
+							project.delete();
+						} catch (SQLException exc) {
+							JOptionPane.showMessageDialog(ProjectPanel.this, "Ein interner Datenbankfehler ist aufgetreten",
+									"Fehler", JOptionPane.ERROR_MESSAGE);
+							Logger.log(exc);
 						}
 						parentWindow.projectPnls.remove(ProjectPanel.this);
 						parentWindow.pnlCenter.remove(parentWindow.centerBox);
@@ -218,7 +213,7 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project, prm);
+				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project, ctl);
 				p.setVisible(true);
 			}
 
@@ -228,7 +223,7 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, prm);
+				ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, ctl);
 				p.setVisible(true);
 			}
 
@@ -238,7 +233,6 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-//				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
 				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
 				d.setVisible(true);
 			}
@@ -262,19 +256,20 @@ public class ProjectPanel extends JPanel {
 				d.addOkAction(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						for (int i = 0; i < cards.size(); i++) {
-							try {
-								cards.get(i).setStack(1);
-								changeStatus(Status.RED);
-							} catch (SQLException exc) {
-								JOptionPane.showMessageDialog(ProjectPanel.this,
-										"Keine Verbindung zur Datenbank. Bitte probiere es noch einmal.", "Datenbankfehler",
-										JOptionPane.ERROR_MESSAGE);
-							} catch (EntryNotFoundException e1) {
-								JOptionPane.showMessageDialog(ProjectPanel.this,
-										"Keine Verbindung zur Datenbank. Bitte probiere es noch einmal.", "Datenbankfehler",
-										JOptionPane.ERROR_MESSAGE);
+						try {
+							if (project.getAllCards() == null) {
+								project.loadFlashcards();
+								cards = project.getAllCards();
 							}
+							for (int i = 0; i < cards.size(); i++) {
+								cards.get(i).setStack(1);
+								cards.get(i).update();
+								changeStatus(Status.RED);
+							}
+						} catch (SQLException exc) {
+							JOptionPane.showMessageDialog(ProjectPanel.this,
+									"Keine Verbindung zur Datenbank. Bitte probiere es noch einmal.", "Datenbankfehler",
+									JOptionPane.ERROR_MESSAGE);
 						}
 						d.dispose();
 					}
@@ -288,14 +283,18 @@ public class ProjectPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				try {
+					if (project.getAllCards() == null) {
+						project.loadFlashcards();
+						cards = project.getAllCards();
+					}
+					System.out.println("Karten 2 play: " + cards.size());
 					ChooseStacksDialog chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(),
 							ProjectPanel.this.cards, ProjectPanel.this.project);
 					chooseStacks.setVisible(true);
 				} catch (SQLException exc) {
-				   JOptionPane.showMessageDialog(ProjectPanel.this,
-	                  "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-	                  JOptionPane.ERROR_MESSAGE);
-	            Logger.log(exc);
+					JOptionPane.showMessageDialog(ProjectPanel.this, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
+							JOptionPane.ERROR_MESSAGE);
+					Logger.log(exc);
 				}
 			}
 

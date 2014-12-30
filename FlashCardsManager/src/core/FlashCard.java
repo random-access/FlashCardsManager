@@ -1,91 +1,74 @@
 package core;
 
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import db.PicType;
+import db.DBExchanger;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 
 public class FlashCard implements OrderedItem {
 
+	private final DBExchanger<OrderedItem> dbex;
 	private final int id;
-	private String question;
-	private String answer;
-	private boolean hasQuestionPic;
-	private boolean hasAnswerPic;
 	private LearningProject proj;
 	private int stack;
+	private String question;
+	private String answer;
+	private int questionWidth;
+	private int answerWidth;
+
+	private String pathToQuestionPic;
+	private String pathToAnswerPic;
 
 	// CONSTRUCTORS
-
 	// constructs a new flashcard
-	public FlashCard(LearningProject proj, String question, String answer,
-			String pathToQuestionPic, String pathToAnswerPic)
-			throws EntryAlreadyThereException, EntryNotFoundException,
-			SQLException, IOException{
-		this.id = proj.getNextCardId();
-		this.question = question;
-		this.answer = answer;
-		if (pathToQuestionPic != null) {
-			hasQuestionPic = true;
-		}
-		if (pathToAnswerPic != null) {
-			hasAnswerPic = true;
-		}
+	public FlashCard(LearningProject proj, String question, String answer, String pathToQuestionPic, String pathToAnswerPic,
+			int questionWidth, int answerWidth) throws SQLException {
+		dbex = proj.getDBEX();
+		this.id = dbex.nextFlashcardId();
 		this.proj = proj;
 		this.stack = 1;
-		proj.addCard(this, pathToQuestionPic, pathToAnswerPic);
+		this.question = question;
+		this.answer = answer;
+		this.questionWidth = questionWidth;
+		this.answerWidth = answerWidth;
+
+		this.pathToQuestionPic = pathToQuestionPic;
+		this.pathToAnswerPic = pathToAnswerPic;
 	}
 
 	// restores a flashcard from database
-	public FlashCard(LearningProject proj, int id, int stack, String question,
-			String answer, boolean hasQuestionPic, boolean hasAnswerPic) {
+	public FlashCard(int id, LearningProject proj, int stack, String question, String answer, String pathToQuestionPic,
+			String pathToAnswerPic, int questionWidth, int answerWidth) {
+		dbex = proj.getDBEX();
 		this.id = id;
+		this.proj = proj;
 		this.stack = stack;
 		this.question = question;
 		this.answer = answer;
-		this.hasQuestionPic = hasQuestionPic;
-		this.hasAnswerPic = hasAnswerPic;
-		this.proj = proj;
+		this.questionWidth = questionWidth;
+		this.answerWidth = answerWidth;
+
+		this.pathToQuestionPic = pathToQuestionPic;
+		this.pathToAnswerPic = pathToAnswerPic;
 	}
 
-	// TODO Auto-generated constructor stub
-	public FlashCard(LearningProject proj, int id, int stack, String question,
-			String answer) {
-		this.id = id;
-		this.stack = stack;
-		this.question = question;
-		this.answer = answer;
+	public void store() throws SQLException {
+		proj.addCard(this);
+		dbex.addFlashcard(this);
+		
+		// TODO save pics
 	}
-	
-	// Picture - Getter & Setter
-	public BufferedImage getQuestionPic () throws SQLException, IOException {
-		if (!hasQuestionPic) {
-			return null;
-		}
-		return proj.getDBEX().getPic(PicType.QUESTION, this, proj);
+
+	public void update() throws SQLException {
+		dbex.updateFlashcard(this);
+		// TODO save pics
 	}
-	
-	public BufferedImage getAnswerPic () throws SQLException, IOException {
-		if (!hasAnswerPic) {
-			return null;
-		}
-		return proj.getDBEX().getPic(PicType.ANSWER, this, proj);
-	}
-	
-	public void deletePicture (PicType type) throws SQLException {
-	   switch(type) {
-	   case QUESTION:
-	      hasQuestionPic = false;
-	      proj.getDBEX().deletePic(type, this, proj);
-	      break;
-	   case ANSWER:
-	      hasAnswerPic = false;
-	      proj.getDBEX().deletePic(type, this, proj);
-	      break;
-	   }
+
+	public void delete() throws SQLException {
+		proj.removeCard(this);
+		dbex.deleteFlashcard(this);
 	}
 
 	// ID - Getter
@@ -94,93 +77,90 @@ public class FlashCard implements OrderedItem {
 		return this.id;
 	}
 
-	// STACK - Getter & Setter
-	public int getStack() {
-		return this.stack;
-	}
-
-	public void setStack(int stack) throws EntryNotFoundException, SQLException{
-		this.stack = stack;
-		proj.updateCard(this);
-	}
-
 	public void nextLevel() throws EntryNotFoundException, SQLException {
 		int maxStack = proj.getNumberOfStacks();
 		if (stack < maxStack) {
 			stack++;
-			System.out.println("Next Level: Karte " + this.id
-					+ " ist jetzt in Stapel " + stack);
+			System.out.println("Next Level: Karte " + this.id + " ist jetzt in Stapel " + stack);
 		}
-		proj.updateCard(this);
 	}
 
 	public void levelDown() throws EntryNotFoundException, SQLException {
 		if (stack > 1) {
 			stack--;
-			System.out.println("Level down: Karte " + this.id
-					+ " ist jetzt in Stapel " + stack);
+			System.out.println("Level down: Karte " + this.id + " ist jetzt in Stapel " + stack);
 		}
-		proj.updateCard(this);
 	}
 
-	// QUESTION - Getter & Setter
 	public String getQuestion() {
-		return this.question;
+		return question;
 	}
 
 	public void setQuestion(String question) {
 		this.question = question;
 	}
 
-	public int getQuestionLength() {
-		return this.question.length();
-	}
-
-	// ANSWER - Getter & Setter
 	public String getAnswer() {
-		return this.answer;
+		return answer;
 	}
 
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
 
-	public int getAnswerLength() {
-		return this.answer.length();
+	public String getPathToQuestionPic() {
+		return pathToQuestionPic;
 	}
 
-	// QUESTIONPIC - Getter & setter
-	public boolean hasQuestionPic() {
-		return this.hasQuestionPic;
-	}
-	
-	public void setQuestionPic(boolean hasQuestionPic) {
-	   this.hasQuestionPic = hasQuestionPic;
+	public void setPathToQuestionPic(String pathToQuestionPic) {
+		this.pathToQuestionPic = pathToQuestionPic;
 	}
 
-	// ANSWERPIC - Getter & setter
-	public boolean hasAnswerPic() {
-		return this.hasAnswerPic;
+	public String getPathToAnswerPic() {
+		return pathToAnswerPic;
 	}
-	
-	public void setAnswerPic(boolean hasAnswerPic) {
-      this.hasAnswerPic = hasAnswerPic;
-   }
 
-	// PROJECT - Getter
-	public LearningProject getLearningProject() {
+	public void setPathToAnswerPic(String pathToAnswerPic) {
+		this.pathToAnswerPic = pathToAnswerPic;
+	}
+
+	public LearningProject getProj() {
 		return proj;
 	}
-	
-	public int getQuestionWidth() throws SQLException {
-	   return proj.getDBEX().getQuestionWidth(this);
+
+	public void setProj(LearningProject proj) {
+		this.proj = proj;
+	}
+
+	public int getStack() {
+		return stack;
+	}
+
+	public void setStack(int stack) {
+		this.stack = stack;
+	}
+
+	public int getQuestionWidth() {
+		return questionWidth;
+	}
+
+	public void setQuestionWidth(int questionWidth) {
+		this.questionWidth = questionWidth;
+	}
+
+	public int getAnswerWidth() {
+		return answerWidth;
+	}
+
+	public void setAnswerWidth(int answerWidth) {
+		this.answerWidth = answerWidth;
 	}
 	
-	public void setWidth(int questionWidth, int answerWidth) throws SQLException{
-	   proj.getDBEX().setWidth(this, questionWidth, answerWidth);
+	public String toString() {
+		return "ID: " + this.getId() + ", PROJECT: " + this.getProj().getTitle() + ", STACK " 
+				+ this.getStack() + " QUESTION: " + this.getQuestion() + ", ANSWER: " + this.getAnswer()
+				+ ", PATH TO QUESTION PIC: " + this.getPathToQuestionPic() + ", PATH TO ANSWER PIC: " + this.getPathToAnswerPic()
+				+ ", CUSTOM_WIDTH_Q: " + this.getQuestionWidth() + ", CUSTOM_WIDTH_A: " + this.getAnswerWidth();
 	}
-	
-	public int getAnswerWidth() throws SQLException {
-	    return proj.getDBEX().getAnswerWidth(this);
-   }
+
 }

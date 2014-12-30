@@ -1,740 +1,316 @@
 package db;
 
-import java.awt.image.BufferedImage;
-import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.ListIterator;
-
-import javax.imageio.ImageIO;
-import javax.sql.rowset.serial.SerialBlob;
 
 import core.*;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
 
 public class DBExchanger<T extends OrderedItem> {
-   // TODO Stream handling (try with resources...)
+	// TODO Stream handling (try with resources...)
 
-   private final String driver = "org.apache.derby.jdbc.EmbeddedDriver"; // db-driver
-   private final String protocol = "jdbc:derby:"; // database protocol
-   private final String dbURL; // database location
-   private final String projectsTableTitle = "PROJECTS"; // Title of project
-   // table
-   private final String cardSizeTable = "CARDPARAMS"; // flashcard parameters:
-   // size,...
-   private Connection conn; // connection
+	private final String driver = "org.apache.derby.jdbc.EmbeddedDriver"; // db-driver
+	private final String protocol = "jdbc:derby:"; // database protocol
+	private final String dbLocation; // path to database
 
-   private static final int DEFAULT_QUESTION_LENGTH = 20;
-   private static final int DEFAULT_ANSWER_LENGTH = 30;
+	private final String projectsTable = "PROJECTS";
+	private final String flashcardsTable = "FLASHCARDS";
+	private final String labelsTable = "LABELS";
+	private final String labelsFlashcardsTable = "LABELS_FLASHCARDS";
+	private final String mediaTable = "MEDIA";
 
-   public DBExchanger(String dbLocation) throws ClassNotFoundException {
-      Class.forName(driver); // check if driver is reachable
-      this.dbURL = protocol + dbLocation + ";create=true";
-      System.out.println("Created DBExchanger"); // TODO: remove debug output
-   }
+	private Connection conn; // connection
+	private ProjectsController ctl;
 
-   // DB-URL - Getter
-   public String getDbURL() {
-      return dbURL;
-   }
+	public DBExchanger(String dbLocation, ProjectsController ctl) throws ClassNotFoundException {
+		this.dbLocation = dbLocation;
+		this.ctl = ctl;
+		Class.forName(driver); // check if driver is reachable
+		System.out.println("Created DBExchanger"); // TODO: remove debug output
+	}
 
-   // CREATE CONNECTION - Establish connection with database
-   public void createConnection() throws SQLException {
-      conn = DriverManager.getConnection(dbURL);
-      conn.setAutoCommit(false);
-      if (conn != null) {
-         System.out.println("Successfully created Connection to: " + dbURL);
-         // TODO: remove debug output
-      }
-   }
+	// CREATE CONNECTION - Establish connection with database
+	public void createConnection() throws SQLException {
+		conn = DriverManager.getConnection(protocol + dbLocation + ";create=true");
+		conn.setAutoCommit(false);
+		if (conn != null) {
+			System.out.println("Successfully created Connection to: " + dbLocation);
+			// TODO: remove debug output
+		}
+	}
 
-   public void closeConnection(String pathToDatabase) {
-      try {
-         conn.commit();
-         conn.close();
+	// disconnect from database
+	public void closeConnection(String pathToDatabase) {
+		try {
+			conn.commit();
+			conn.close();
 
-         boolean gotSQLExc = false;
-         try {
-            DriverManager.getConnection("jdbc:derby:" + pathToDatabase + ";shutdown=true");
-         } catch (SQLException se) {
-            if (se.getSQLState().equals("08006")) {
-               gotSQLExc = true;
-            }
-         }
-         if (!gotSQLExc) {
-            System.out.println("Database did not shut down normally");
-         } else {
-            System.out.println("Database shut down normally");
-         }
-         System.gc();
-      } catch (SQLException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
-   }
+			boolean gotSQLExc = false;
+			try {
+				DriverManager.getConnection("jdbc:derby:" + pathToDatabase + ";shutdown=true");
+			} catch (SQLException se) {
+				if (se.getSQLState().equals("08006")) {
+					gotSQLExc = true;
+				}
+			}
+			if (!gotSQLExc) {
+				System.out.println("Database did not shut down normally");
+			} else {
+				System.out.println("Database shut down normally");
+			}
+			System.gc();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
-   // CREATE PROJECTS TABLE, Columns: ID, PROJ_TITLE, NEXT_CARD_ID,
-   // NO_OF_STACKS, VARCHARS_QUESTION, VARCHARS_ANSWER
-   public void createProjectsTable() throws SQLException, EntryAlreadyThereException {
-      Statement st = conn.createStatement();
-      st.execute("CREATE TABLE " + projectsTableTitle + " (ID INT PRIMARY KEY, PROJ_TITLE VARCHAR (50), NO_OF_STACKS INT, "
-            + "VARCHARS_QUESTION INT, VARCHARS_ANSWER INT)");
-      conn.commit();
-      st.close();
-      System.out.println("Successfully created table: " + projectsTableTitle);
-      // TODO: remove debug output
-   }
+	// CREATE TABLES if the don't exist yet
+	public void createTablesIfNotExisting() throws SQLException {
+		System.out.print("Tabellen werden erstellt ...\n");
+		Statement st = conn.createStatement();
+		if (!DerbyTools.tableAlreadyExisting(projectsTable, conn)) {
+			st.execute("CREATE TABLE " + projectsTable + " (PROJ_ID_PK INT PRIMARY KEY, " + "PROJ_TITLE VARCHAR (100) NOT NULL, "
+					+ "NO_OF_STACKS INT NOT NULL)");
+			conn.commit();
+			System.out.println("--- Projekttabelle erstellt ...\n");
+		}
+		if (!DerbyTools.tableAlreadyExisting(flashcardsTable, conn)) {
+			st.execute("CREATE TABLE " + flashcardsTable + " (CARD_ID_PK INT PRIMARY KEY, "
+					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_FL REFERENCES PROJECTS(PROJ_ID_PK), " + "STACK INT NOT NULL,"
+					+ "QUESTION VARCHAR (32672), " + "ANSWER VARCHAR(32672), " + "CUSTOM_WIDTH_Q INT, " + "CUSTOM_WIDTH_A INT)");
+			conn.commit();
+			System.out.println("--- Lernkartentabelle erstellt ...\n");
+		}
+		if (!DerbyTools.tableAlreadyExisting(labelsTable, conn)) {
+			st.execute("CREATE TABLE " + labelsTable + " (LABEL_ID_PK INT PRIMARY KEY, "
+					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_LA REFERENCES PROJECTS(PROJ_ID_PK), "
+					+ "LABEL_NAME VARCHAR (100) NOT NULL)");
+			conn.commit();
+			System.out.println("--- Label-Tabelle erstellt ... \n");
+		}
+		if (!DerbyTools.tableAlreadyExisting(labelsFlashcardsTable, conn)) {
+			st.execute("CREATE TABLE " + labelsFlashcardsTable + " (LABELS_FLASHCARDS_ID_PK INT PRIMARY KEY, "
+					+ "LABEL_ID_FK INT CONSTRAINT LABEL_ID_FK_LF REFERENCES LABELS(LABEL_ID_PK" + "), "
+					+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_LF REFERENCES FLASHCARDS(CARD_ID_PK), "
+					+ "UNIQUE(LABEL_ID_FK, CARD_ID_FK))");
+			conn.commit();
+			System.out.println("--- Zuordnungstabelle Label-Lernkarten erstellt ... \n");
+		}
+		if (!DerbyTools.tableAlreadyExisting(mediaTable, conn)) {
+			st.execute("CREATE TABLE " + mediaTable + " (MEDIA_ID_PK INT PRIMARY KEY, "
+					+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_ME REFERENCES FLASHCARDS(CARD_ID_PK), "
+					+ "PATH_TO_MEDIA VARCHAR(100) NOT NULL, " + "PICTYPE CHAR NOT NULL)");
+			conn.commit();
+			System.out.println("--- Medientabelle erstellt ... \n");
+		}
+		st.close();
+		System.out.println("...fertig!");
+	}
 
-   // CREATE QUESTION TABLE, Columns: ID, STACK, QUESTION, ANSWER
-   public void createFlashcardsTable(String name) throws SQLException, EntryAlreadyThereException {
-      if (!tableAlreadyExisting(name)) {
-         Statement st = conn.createStatement();
-         st.execute("CREATE TABLE " + name + " (ID INT PRIMARY KEY, STACK INT, QUESTION VARCHAR(" + DEFAULT_QUESTION_LENGTH
-               + "), ANSWER VARCHAR (" + DEFAULT_ANSWER_LENGTH + "), QUESTIONPIC BLOB, ANSWERPIC BLOB)");
-         conn.commit();
-         st.close();
-         System.out.println("Successfully created table: " + name);
-      } else {
-         throw new EntryAlreadyThereException();
-      }
-   }
+	// ADD PROJECT: insert project into table
+	public void addProject(LearningProject project) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("INSERT INTO " + projectsTable + " VALUES (" + project.getId() + ",'" + project.getTitle() + "', "
+				+ project.getNumberOfStacks() + ")");
+		conn.commit();
+		st.close();
+		System.out.println("successfully added project " + project.getTitle());
+	}
 
-   // CREATE CARDSIZE TABLE, Columns: PROJ_ID, CARD_ID, QUESTION_WIDTH,
-   // ANSWER_WIDTH
-   public void createCardsizeTable() throws SQLException {
-      if (!tableAlreadyExisting(cardSizeTable)) {
-         Statement st = conn.createStatement();
-         st.execute("CREATE TABLE " + cardSizeTable + " (PROJ_ID INT CONSTRAINT PROJ_ID_FK REFERENCES " + projectsTableTitle
-               + "(ID), "
-               + "CARD_ID INT, QUESTION_WIDTH INT NOT NULL, ANSWER_WIDTH INT NOT NULL, PRIMARY KEY (PROJ_ID, CARD_ID))");
-         conn.commit();
-         st.close();
-         System.out.println("**** Successfully created cardSizeTable!");
-      }
-   }
+	// UPDATE PROJECT: update project
+	public void updateProject(LearningProject project) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("UPDATE " + projectsTable + " SET PROJ_TITLE = '" + project.getTitle() + "', NO_OF_STACKS = "
+				+ project.getNumberOfStacks() + " WHERE PROJ_ID_PK = " + project.getId());
+		conn.commit();
+		st.close();
+	}
 
-   // TRANSFER CARDSIZE TABLE, for importing and exporting projects
-   public void transferCardsizeTable(DBExchanger<OrderedItem> target, LearningProject currentProj) throws SQLException,
-         EntryNotFoundException, IOException {
-      target.createCardsizeTable();
-      ArrayList<FlashCard> cards = target.readAllData(currentProj.getTableName(), currentProj);
-      String TRANSFER_CARD_SIZE = "INSERT INTO " + cardSizeTable + " VALUES (?, ?, ?, ?)";
-      ListIterator<FlashCard> lit = cards.listIterator();
-      while (lit.hasNext()) {
-         FlashCard currentCard = lit.next();
-         PreparedStatement targetSt = target.conn.prepareStatement(TRANSFER_CARD_SIZE);
-         targetSt.setInt(1, currentCard.getLearningProject().getId());
-         targetSt.setInt(2, currentCard.getId());
-         targetSt.setInt(3, getQuestionWidth(currentCard));
-         targetSt.setInt(4, getAnswerWidth(currentCard));
-         targetSt.execute();
-         target.conn.commit();
-         targetSt.close();
-      }
-      System.out.println("*** successfully transferred cardsize table");
+	public void deleteProject(LearningProject project) throws SQLException {
+		Statement st = conn.createStatement();
+		// TODO delete pics in file system
 
-   }
+		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK IN " + "(SELECT LABEL_ID_PK FROM " + labelsTable
+				+ " WHERE PROJ_ID_FK = " + project.getId() + ")");
+		st.execute("DELETE FROM " + labelsTable + " WHERE PROJ_ID_FK = " + project.getId());
+		st.execute("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK IN " + "(SELECT CARD_ID_PK FROM " + flashcardsTable
+				+ " WHERE PROJ_ID_FK = " + project.getId() + ")");
+		st.execute("DELETE FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + project.getId());
+		st.execute("DELETE FROM " + projectsTable + " WHERE Proj_ID_PK = " + project.getId());
+		conn.commit();
+	}
 
-   // SET CUSTOM WIDTH
-   public void setWidth(FlashCard card, int questionWidth, int answerWidth) throws SQLException {
-      createCardsizeTable();
-      Statement st = conn.createStatement();
-      if (getQuestionWidth(card) != 0 || getAnswerWidth(card) != 0) {
-         st.executeUpdate("UPDATE " + cardSizeTable + " SET QUESTION_WIDTH = " + questionWidth + ", ANSWER_WIDTH = "
-               + answerWidth + " WHERE PROJ_ID = " + card.getLearningProject().getId() + " AND CARD_ID = " + card.getId());
-      } else {
-         st.executeUpdate("INSERT INTO " + cardSizeTable + " VALUES (" + card.getLearningProject().getId() + "," + card.getId()
-               + "," + questionWidth + "," + answerWidth + ")");
-         System.out.println("INSERT INTO " + cardSizeTable + " VALUES (" + card.getLearningProject().getId() + "," + card.getId()
-               + "," + questionWidth + "," + answerWidth + ")");
-         conn.commit();
-         st.close();
-      }
-   }
+	public ArrayList<LearningProject> getAllProjects() throws SQLException {
+		ArrayList<LearningProject> projects = new ArrayList<LearningProject>();
+		Statement st = conn.createStatement();
+		st.execute("SELECT * FROM " + projectsTable);
+		ResultSet res = st.getResultSet();
+		while (res.next()) {
+			LearningProject p = new LearningProject(ctl, res.getInt(1), res.getString(2), res.getInt(3));
+			projects.add(p);
+		}
+		return projects;
+	}
 
-   // GET CUSTOM QUESTION WIDTH
-   public int getQuestionWidth(FlashCard card) throws SQLException {
-      if (tableAlreadyExisting(cardSizeTable)) {
-         Statement st = conn.createStatement();
-         st.execute("SELECT QUESTION_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId()
-               + " AND CARD_ID = " + card.getId());
-         System.out.println("SELECT QUESTION_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = "
-               + card.getLearningProject().getId() + " AND CARD_ID = " + card.getId());
-         conn.commit();
-         ResultSet res = st.getResultSet();
-         int result = 0;
-         if (res.next()) {
-            result = res.getInt(1);
-         }
-         res.close();
-         st.close();
-         return result;
-      }
-      return 0;
-   }
+	public int getMaxStack(LearningProject p) throws SQLException {
+		int maxStack = 0;
+		Statement st = conn.createStatement();
+		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + "ORDER BY STACK DESC");
+		ResultSet res = st.getResultSet();
+		if (res.next()) {
+			maxStack = res.getInt(1);
+		}
+		return maxStack;
+	}
 
-   // GET CUSTOM ANSWER WIDTH
-   public int getAnswerWidth(FlashCard card) throws SQLException {
-      if (tableAlreadyExisting(cardSizeTable)) {
-         Statement st = conn.createStatement();
-         st.execute("SELECT ANSWER_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId()
-               + " AND CARD_ID = " + card.getId());
-         System.out.println("SELECT ANSWER_WIDTH FROM " + cardSizeTable + " WHERE PROJ_ID = " + card.getLearningProject().getId()
-               + " AND CARD_ID = " + card.getId());
-         conn.commit();
-         ResultSet res = st.getResultSet();
-         int result = 0;
-         if (res.next()) {
-            result = res.getInt(1);
-         }
-         res.close();
-         st.close();
-         return result;
-      }
-      return 0;
-   }
+	// ADD ROW: insert flashcard into table
+	public void addFlashcard(FlashCard card) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("INSERT INTO " + flashcardsTable + " VALUES (" + card.getId() + ", " + card.getProj().getId() + ", "
+				+ card.getStack() + ", '" + card.getQuestion() + "', '" + card.getAnswer() + "', " + card.getQuestionWidth()
+				+ "," + card.getAnswerWidth() + ")");
+		conn.commit();
+		setPathToPic(card, PicType.QUESTION);
+		setPathToPic(card, PicType.ANSWER);
+		st.close();
+		System.out.println("successfully added flashcard " + card.getId());
+	}
 
-   // ADD ROW: insert project into table
-   public void addRow(LearningProject project) throws EntryAlreadyThereException, SQLException {
-      if (!idAlreadyExisting(project.getId())) {
-         Statement st = conn.createStatement();
-         st.executeUpdate("INSERT INTO " + projectsTableTitle + " VALUES (" + project.getId() + ",'" + project.getTitle() + "',"
-               + project.getNumberOfStacks() + "," + DEFAULT_QUESTION_LENGTH + "," + DEFAULT_ANSWER_LENGTH + ")");
-         conn.commit();
-         st.close();
-         System.out.println("Insert values: INSERT INTO " + projectsTableTitle + " VALUES (" + project.getId() + ",'"
-               + project.getTitle() + "'," + project.getNumberOfStacks() + "," + DEFAULT_QUESTION_LENGTH + ","
-               + DEFAULT_ANSWER_LENGTH + ")");
-         // TODO: remove debug output
-      } else {
-         throw new EntryAlreadyThereException();
-      }
-   }
+	public void updateFlashcard(FlashCard card) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("UPDATE " + flashcardsTable + " SET PROJ_ID_FK = " + card.getProj().getId() + ", STACK = " + card.getStack()
+				+ ", QUESTION = '" + card.getQuestion() + "', ANSWER = '" + card.getAnswer() + "', CUSTOM_WIDTH_Q = "
+				+ card.getQuestionWidth() + ", CUSTOM_WIDTH_A = " + card.getAnswerWidth() + " WHERE CARD_ID_PK = " + card.getId());
+		conn.commit();
+		st.close();
+	}
 
-   // ADD ROW: insert flashcard into table
-   public void addRow(FlashCard card, LearningProject proj, String pathToQuestionPic, String pathToAnswerPic)
-         throws SQLException, EntryNotFoundException, IOException {
-      controlVarcharLength(card, proj);
+	public void deleteFlashcard(FlashCard card) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE CARD_ID_FK = " + card.getId());
+		conn.commit();
+		st.execute("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK = " + card.getId());
+		conn.commit();
+		st.execute("DELETE FROM " + flashcardsTable + " WHERE CARD_ID_PK = " + card.getId());
+		conn.commit();
+	}
 
-      String INSERT_CARD = "insert into " + proj.getTableName() + " (ID, STACK, QUESTION, ANSWER, QUESTIONPIC, ANSWERPIC) "
-            + "values (?, ?, ?, ?, ?, ?)";
-      PreparedStatement prepSt = conn.prepareStatement(INSERT_CARD);
-      prepSt.setInt(1, card.getId());
-      prepSt.setInt(2, card.getStack());
-      prepSt.setString(3, card.getQuestion());
-      prepSt.setString(4, card.getAnswer());
-      // insert pictures as blobs in database if there are paths in flashcard,
-      // else null
-      FileInputStream inputStreamQuestion = null;
-      FileInputStream inputStreamAnswer = null;
-      if (card.hasQuestionPic() == false) {
-         prepSt.setBinaryStream(5, null);
-      } else {
-         File qPicFile = new File(pathToQuestionPic);
-         System.out.println(pathToQuestionPic);
-         inputStreamQuestion = new FileInputStream(qPicFile);
-         prepSt.setBinaryStream(5, inputStreamQuestion, qPicFile.length());
-      }
-      if (card.hasAnswerPic() == false) {
-         prepSt.setBinaryStream(6, null);
-      } else {
-         File aPicFile = new File(pathToAnswerPic);
-         System.out.println(pathToAnswerPic);
-         inputStreamAnswer = new FileInputStream(aPicFile);
-         prepSt.setBinaryStream(6, inputStreamAnswer, aPicFile.length());
-      }
-      prepSt.executeUpdate();
-      conn.commit();
-      prepSt.close();
-      if (inputStreamQuestion != null) {
-         inputStreamQuestion.close();
-      }
-      if (inputStreamAnswer != null) {
-         inputStreamAnswer.close();
-      }
-      System.out.println("Successfully inserted values from card " + card.getId() + " into database!");
-      // TODO: remove debug output
-   }
+	public ArrayList<FlashCard> getAllCards(LearningProject p) throws SQLException {
+		ArrayList<FlashCard> cards = new ArrayList<FlashCard>();
+		Statement st = conn.createStatement();
+		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId());
+		ResultSet res = st.getResultSet();
+		while (res.next()) {
+			FlashCard f = new FlashCard(res.getInt(1), p, res.getInt(3), res.getString(4), res.getString(5), null, null,
+					res.getInt(6), res.getInt(7));
+			f.setPathToQuestionPic(getPathToPic(f, PicType.QUESTION));
+			f.setPathToAnswerPic(getPathToPic(f, PicType.ANSWER));
+			cards.add(f);
+		}
+		return cards;
+	}
 
-   // ADD ARRAY
-   public void insertFlashcardArray(ArrayList<FlashCard> allCards, LearningProject destProj, DBExchanger<OrderedItem> srcDbex,
-         LearningProject srcProj) throws SQLException, EntryNotFoundException {
-      String INSERT_TEXT = "insert into " + destProj.getTableName() + " (ID, STACK, QUESTION, ANSWER, QUESTIONPIC, ANSWERPIC) "
-            + "values (?, ?, ?, ?, ?, ?)";
-      ListIterator<FlashCard> lit = allCards.listIterator();
-      while (lit.hasNext()) {
-         FlashCard currentCard = lit.next();
-         controlVarcharLength(currentCard, destProj);
-         PreparedStatement prepSt = conn.prepareStatement(INSERT_TEXT);
-         prepSt.setInt(1, currentCard.getId());
-         prepSt.setInt(2, currentCard.getStack());
-         prepSt.setString(3, currentCard.getQuestion());
-         prepSt.setString(4, currentCard.getAnswer());
-         prepSt.setBlob(5, null, 0);
-         prepSt.setBlob(6, null, 0);
-         prepSt.execute();
-         conn.commit();
-         prepSt.close();
-         System.out.println("successfully exported card texts" + currentCard.getId() + "...");
-      }
+	// GET PATH TO PIC: get picture of flashcard from DB
+	public String getPathToPic(FlashCard f, PicType type) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("SELECT PATH_TO_MEDIA FROM " + mediaTable + " WHERE CARD_ID_FK = " + f.getId() + " AND PICTYPE = '"
+				+ type.getShortForm() + "'");
+		ResultSet res = st.getResultSet();
+		if (res.next()) {
+			return res.getString(1);
+		}
+		return null;
+	}
 
-      ListIterator<FlashCard> litQ = allCards.listIterator();
-      while (lit.hasNext()) {
-         FlashCard currentCard = litQ.next();
-         String TRANSFERQ = "UPDATE " + destProj.getTableName() + " SET QUESTIONPIC = ? WHERE ID = " + currentCard.getId();
-         PreparedStatement prepSt = conn.prepareStatement(TRANSFERQ);
-         byte[] questionBytes = srcDbex.getBlobAsBytes(PicType.QUESTION, currentCard, srcProj);
-         Blob questionBlob = null;
-         if (questionBytes != null) {
-            questionBlob = new SerialBlob(questionBytes);
-            System.out.println("card " + currentCard.getId() + " has question-pic...");
-         }
-         prepSt.setBlob(1, questionBlob);
-         prepSt.execute();
-         conn.commit();
-         if (questionBlob != null) {
-            questionBlob.free();
-         }
-      }
+	// SET PATH TO PIC
+	public void setPathToPic(FlashCard f, PicType type) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("INSERT INTO " + mediaTable + " VALUES (" + nextMediaId() + ", " + f.getId() + ", '"
+				+ f.getPathToQuestionPic() + "', '" + type.getShortForm() + "'");
+		conn.commit();
+		st.close();
+	}
 
-      ListIterator<FlashCard> litA = allCards.listIterator();
-      while (lit.hasNext()) {
-         FlashCard currentCard = litA.next();
-         String TRANSFERA = "UPDATE " + destProj.getTableName() + " SET ANSWERPIC = ? WHERE ID = " + currentCard.getId();
-         PreparedStatement prepSt = conn.prepareStatement(TRANSFERA);
-         byte[] answerBytes = srcDbex.getBlobAsBytes(PicType.ANSWER, currentCard, srcProj);
-         Blob answerBlob = null;
-         if (answerBytes != null) {
-            answerBlob = new SerialBlob(answerBytes);
-            System.out.println("card " + currentCard.getId() + " has answer-pic...");
-         }
-         prepSt.setBlob(1, answerBlob);
-         prepSt.execute();
-         conn.commit();
-         if (answerBlob != null) {
-            answerBlob.free();
-         }
-      }
+	// DELETE PATH TO PIC
+	public void deletePathToPic(FlashCard f, PicType type) throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK = " + f.getId() + " AND PICTYPE = '" + type.getShortForm()
+				+ "'");
+		conn.commit();
+		st.close();
+	}
 
-   }
+	// COUNT ROWS: returns the number of rows in a table
+	public int countRows(String table) throws SQLException {
+		Statement st = conn.createStatement();
+		st.executeQuery("SELECT COUNT (*) FROM " + table);
+		conn.commit();
+		ResultSet rs = st.getResultSet();
+		rs.next();
+		int i = rs.getInt(1);
+		rs.close();
+		st.close();
+		return i;
+	}
 
-   // UPDATE ROW: modify existing project
-   public void updateRow(LearningProject project) throws EntryNotFoundException, SQLException {
-      if (idAlreadyExisting(project.getId())) {
-         Statement st = conn.createStatement();
-         st.executeUpdate("UPDATE " + projectsTableTitle + " SET PROJ_TITLE = '" + project.getTitle() + "', NO_OF_STACKS = "
-               + project.getNumberOfStacks() + " WHERE ID = " + project.getId());
-         conn.commit();
-         st.close();
-         System.out.println("Update values: UPDATE " + projectsTableTitle + " SET PROJ_TITLE = '" + project.getTitle()
-               + "', NO_OF_STACKS = " + project.getNumberOfStacks() + " WHERE ID = " + project.getId());
-         // TODO: remove debug output
-      } else {
-         throw new EntryNotFoundException();
-      }
-   }
+	public int countRows(LearningProject proj, int stack) throws SQLException {
+		Statement st = conn.createStatement();
+		int i = 0;
+		st.executeQuery("SELECT COUNT (*) FROM " + flashcardsTable + " where STACK = " + stack + " AND PROJ_ID_FK = "
+				+ proj.getId());
+		conn.commit();
+		ResultSet rs = st.getResultSet();
+		if (rs.next()) {
+			i = rs.getInt(1);
+		}
+		rs.close();
+		st.close();
+		return i;
+	}
 
-   // UPDATE ROW: modify existing flashcard
-   public void updateRow(FlashCard card, LearningProject proj) throws EntryNotFoundException, SQLException {
-      if (idAlreadyExisting(card.getId(), proj.getTableName())) {
-         controlVarcharLength(card, proj);
-         Statement st = conn.createStatement();
-         st.executeUpdate("UPDATE " + proj.getTableName() + " SET STACK = " + card.getStack() + ", QUESTION = '"
-               + card.getQuestion() + "', ANSWER = '" + card.getAnswer() + "' WHERE ID = " + card.getId());
-         conn.commit();
-         st.close();
-         System.out.println("Update values: UPDATE " + proj.getTableName() + " SET STACK = " + card.getStack() + ", QUESTION = '"
-               + card.getQuestion() + "', ANSWER = '" + card.getAnswer() + "' WHERE ID = " + card.getId());
-         // TODO: remove debug output
-      } else {
-         throw new EntryNotFoundException();
-      }
-   }
+	private int nextMediaId() throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("SELECT MEDIA_ID_PK FROM " + mediaTable + " ORDER BY CARD_ID_PK ASC");
+		ResultSet res = st.getResultSet();
+		int i = 1;
+		while (res.next()) {
+			int id = res.getInt(1);
+			if (id != i) {
+				return i;
+			}
+			i++;
+		}
+		return i;
+	}
 
-   // GET PIC AS BLOB:
-   public byte[] getBlobAsBytes(PicType type, FlashCard card, LearningProject proj) throws SQLException {
-      Blob blob = null;
-      ResultSet res = null;
-      Statement st = conn.createStatement();
-      switch (type) {
-      case QUESTION:
-         st.execute("SELECT QUESTIONPIC FROM " + proj.getTableName() + " WHERE ID = " + card.getId());
-         break;
-      case ANSWER:
-         st.executeQuery("SELECT ANSWERPIC FROM " + proj.getTableName() + " WHERE ID = " + card.getId());
-         break;
-      }
-      conn.commit();
-      res = st.getResultSet();
+	public int nextFlashcardId() throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("SELECT CARD_ID_PK FROM " + flashcardsTable + " ORDER BY CARD_ID_PK ASC");
+		ResultSet res = st.getResultSet();
+		int i = 1;
+		while (res.next()) {
+			int id = res.getInt(1);
+			if (id != i) {
+				return i;
+			}
+			i++;
+		}
+		return i;
+	}
 
-      if (res.next()) {
-         blob = res.getBlob(1);
-      }
-      res.close();
-      st.close();
-      byte[] b = null;
-      if (blob != null) {
-         b = blob.getBytes(1, (int) blob.length());
-         blob.free();
-      }
-      return b;
-   }
-
-   // GET PIC: get picture of flashcard from DB
-   public BufferedImage getPic(PicType type, FlashCard card, LearningProject proj) throws SQLException, IOException {
-      ResultSet result = null;
-      Statement st = null;
-      BufferedImage img = null;
-      ByteArrayInputStream in = null;
-      st = conn.createStatement();
-      switch (type) {
-      case QUESTION:
-         st.executeQuery("SELECT QUESTIONPIC FROM " + proj.getTableName() + " WHERE ID = " + card.getId());
-         break;
-      case ANSWER:
-         st.executeQuery("SELECT ANSWERPIC FROM " + proj.getTableName() + " WHERE ID = " + card.getId());
-         break;
-      }
-      conn.commit();
-      result = st.getResultSet();
-      byte[] image = null;
-      if (result.next()) {
-         image = result.getBytes(1);
-      }
-      in = new ByteArrayInputStream(image);
-      img = ImageIO.read(in);
-      if (in != null) {
-         in.close();
-      }
-      result.close();
-      st.close();
-      return img;
-   }
-
-   // UPDATE PIC: modify pics in flashcard
-   public void updatePic(PicType type, FlashCard card, LearningProject proj, String pathToPic) throws SQLException,
-         FileNotFoundException, IOException {
-      PreparedStatement prepSt = null;
-      String MODIFY_PIC;
-      FileInputStream inputStreamQuestion = null;
-      FileInputStream inputStreamAnswer = null;
-      switch (type) {
-      case QUESTION:
-         MODIFY_PIC = "UPDATE " + proj.getTableName() + " SET QUESTIONPIC = ? WHERE ID = " + card.getId();
-         prepSt = conn.prepareStatement(MODIFY_PIC);
-         File questionPicture = new File(pathToPic);
-         inputStreamQuestion = new FileInputStream(questionPicture);
-         prepSt.setBinaryStream(1, inputStreamQuestion, questionPicture.length());
-         break;
-      case ANSWER:
-         MODIFY_PIC = "UPDATE " + proj.getTableName() + " SET ANSWERPIC = ? WHERE ID = " + card.getId();
-         prepSt = conn.prepareStatement(MODIFY_PIC);
-         File answerPicture = new File(pathToPic);
-         inputStreamAnswer = new FileInputStream(answerPicture);
-         prepSt.setBinaryStream(1, inputStreamAnswer, answerPicture.length());
-         break;
-      }
-      prepSt.executeUpdate();
-      conn.commit();
-      prepSt.close();
-      if (inputStreamQuestion != null) {
-         inputStreamQuestion.close();
-      }
-      if (inputStreamAnswer != null) {
-         inputStreamAnswer.close();
-      }
-      System.out.println("Successfully modified " + type.toString() + "-Pic from card " + card.getId() + "!");
-      // TODO: remove debug output
-   }
-
-   // DELETE PIC
-   public void deletePic(PicType type, FlashCard card, LearningProject proj) throws SQLException {
-      PreparedStatement prepSt = null;
-      String DELETE_PIC;
-      switch (type) {
-      case QUESTION:
-         DELETE_PIC = "UPDATE " + proj.getTableName() + " SET QUESTIONPIC = ? WHERE ID = " + card.getId();
-         prepSt = conn.prepareStatement(DELETE_PIC);
-         prepSt.setBinaryStream(1, null);
-         break;
-      case ANSWER:
-         DELETE_PIC = "UPDATE " + proj.getTableName() + " SET ANSWERPIC = ? WHERE ID = " + card.getId();
-         prepSt = conn.prepareStatement(DELETE_PIC);
-         prepSt.setBinaryStream(1, null);
-         break;
-      }
-      prepSt.executeUpdate();
-      conn.commit();
-      prepSt.close();
-      System.out.println("Successfully deleted " + type.toString() + "-Pic from card " + card.getId() + "!");
-      // TODO: remove debug output
-   }
-
-   // READ ALL DATA into Learning Project Array
-   public ArrayList<LearningProject> readAllData(ProjectsManager projMgr) throws SQLException, ClassNotFoundException,
-         EntryNotFoundException, IOException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT * FROM " + projectsTableTitle);
-      conn.commit();
-      ResultSet res = st.getResultSet();
-      ArrayList<LearningProject> data = new ArrayList<LearningProject>();
-      while (res.next()) {
-         LearningProject proj = new LearningProject(projMgr, res.getInt(1), res.getString(2), res.getInt(3), res.getInt(4),
-               res.getInt(5));
-         data.add(proj);
-         System.out.println("Synchronized from Database -> Project: " + proj.getId());
-         // TODO: remove debug output
-      }
-      res.close();
-      st.close();
-      return data;
-   }
-
-   // READ ALL DATA into Flashcard Array
-   public ArrayList<FlashCard> readAllData(String table, LearningProject proj) throws SQLException, EntryNotFoundException,
-         IOException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT * FROM " + table);
-      conn.commit();
-      ResultSet res = st.getResultSet();
-      ArrayList<FlashCard> data = new ArrayList<FlashCard>();
-      while (res.next()) {
-         boolean hasQuestionPic = (res.getBlob(5) != null);
-         boolean hasAnswerPic = (res.getBlob(6) != null);
-         FlashCard f = new FlashCard(proj, res.getInt(1), res.getInt(2), res.getString(3), res.getString(4), hasQuestionPic,
-               hasAnswerPic);
-         data.add(f);
-         System.out.println("Synchronized from Database -> FlashCard: " + f.getId());
-      }
-      res.close();
-      st.close();
-      return data;
-   }
-
-   // DELETE ROW:
-   public void deleteRow(LearningProject proj) throws EntryNotFoundException, SQLException {
-      if (idAlreadyExisting(proj.getId())) {
-         Statement st = conn.createStatement();
-         st.executeUpdate("DELETE FROM " + projectsTableTitle + " WHERE ID = " + proj.getId());
-         conn.commit();
-         st.close();
-         System.out.println("Delete row: DELETE FROM " + projectsTableTitle + " WHERE ID = " + proj.getId());
-         // TODO: remove debug output
-
-      } else {
-         throw new EntryNotFoundException();
-      }
-   }
-
-   public void deleteRow(FlashCard f, LearningProject proj) throws EntryNotFoundException, SQLException {
-      if (idAlreadyExisting(f.getId(), proj.getTableName())) {
-         Statement st = conn.createStatement();
-         st.executeUpdate("DELETE FROM " + proj.getTableName() + " WHERE ID = " + f.getId());
-         conn.commit();
-         st.close();
-         System.out.println("Delete row: DELETE FROM " + proj.getTableName() + " WHERE ID = " + f.getId());
-         // TODO: remove debug output
-
-      } else {
-         throw new EntryNotFoundException();
-      }
-   }
-
-   // DELETE TABLE
-   public void deleteTable(LearningProject project) throws SQLException, EntryNotFoundException {
-      if (idAlreadyExisting(project.getId())) {
-         Statement st = conn.createStatement();
-         st.execute("DROP TABLE " + project.getTableName());
-         conn.commit();
-         // delete custom sizes for cards in project that is deleted
-         st.execute("DELETE FROM " + cardSizeTable + " WHERE PROJ_ID = " + project.getId());
-         conn.commit();
-         st.close();
-         System.out.println("Deleted table: " + "DROP TABLE " + project.getTableName());
-      } else {
-         throw new EntryNotFoundException();
-      }
-   }
-
-   // COUNT ROWS: returns the number of rows in a table
-   public int countRows(String table) throws SQLException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT COUNT (*) FROM " + table);
-      conn.commit();
-      ResultSet rs = st.getResultSet();
-      rs.next();
-      int i = rs.getInt(1);
-      rs.close();
-      st.close();
-      return i;
-   }
-
-   public int countRows(String table, int stack) throws SQLException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT COUNT (*) FROM " + table + " where STACK = " + stack);
-      conn.commit();
-      ResultSet rs = st.getResultSet();
-      rs.next();
-      int i = rs.getInt(1);
-      rs.close();
-      st.close();
-      return i;
-   }
-
-   // TABLE ALREADY EXISTING:
-   // check if flashcard table is already in database
-   public boolean tableAlreadyExisting(String name) throws SQLException {
-      DatabaseMetaData dbmd = conn.getMetaData();
-      conn.commit();
-      ResultSet rs = dbmd.getTables(null, "APP", name, null);
-      // fetch tables with title <name>
-      System.out.print("Check if table exists already: ");
-      // TODO: remove debug output
-      if (rs.next()) { // that means at least 1 result row
-         System.out.println("Table " + rs.getString(3) + " already exists!");
-         rs.close();
-         // TODO: remove debug output
-         return true;
-      } // if we arrive here, the table doesn't exist yet
-      rs.close();
-      System.out.println("Table " + name + " doesn't exist yet!");
-      // TODO: remove debug output
-      return false;
-   }
-
-   // check if project table is already in database
-   public boolean tableAlreadyExisting() throws SQLException {
-      DatabaseMetaData dbmd = conn.getMetaData();
-      conn.commit();
-      ResultSet rs = dbmd.getTables(null, "APP", projectsTableTitle, null);
-      // fetch tables with title <name>
-      System.out.print("Check if table exists already: ");
-      // TODO: remove debug output
-      if (rs.next()) { // that means at least 1 result row
-         System.out.println("Table " + rs.getString(3) + " already exists!");
-         rs.close();
-         // TODO: remove debug output
-         return true;
-      } // if we arrive here, the table doesn't exist yet
-      rs.close();
-      System.out.println("Table " + projectsTableTitle + " doesn't exist yet!");
-      // TODO: remove debug output
-      return false;
-   }
-
-   // ID ALREADY EXISTING: check if there's a row in the table with same ID
-   // project
-   public boolean idAlreadyExisting(int id) throws SQLException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT ID FROM " + this.projectsTableTitle + " WHERE ID = " + id);
-      conn.commit();
-      System.out.println("Search for ID: SELECT ID FROM " + projectsTableTitle + " WHERE ID = " + id); // TODO:
-      // remove
-      // debug output
-      ResultSet res = st.getResultSet();
-      if (res.next()) {
-         System.out.println("ID " + id + " already exists");
-         res.close();
-         st.close();
-         // TODO: remove debug output
-         return true;
-      } // if we arrive here, the row doesn't exist yet
-      res.close();
-      st.close();
-      System.out.println("ID " + id + " doesn't exist yet!");
-      // TODO: remove debug output
-      return false;
-   }
-
-   // flashcard
-   public boolean idAlreadyExisting(int id, String table) throws SQLException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT ID FROM " + table + " WHERE ID = " + id);
-      conn.commit();
-      System.out.println("Search for ID: SELECT ID FROM " + table + " WHERE ID = " + id); // TODO:
-      // remove
-      // debug
-      // output
-      ResultSet res = st.getResultSet();
-      if (res.next()) {
-         System.out.println("ID " + id + " already exists");
-         res.close();
-         st.close();
-         // TODO: remove debug output
-         return true;
-      } // if we arrive here, the row doesn't exist yet
-      res.close();
-      st.close();
-      System.out.println("ID " + id + " doesn't exist yet!");
-      // TODO: remove debug output
-      return false;
-   }
-
-   // TITLE ALREADY EXISTING: check if project title is already in use
-   public boolean titleAlreadyExisting(String projTitle) throws SQLException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT ID FROM " + projectsTableTitle + " WHERE PROJ_TITLE = '" + projTitle + "'");
-      conn.commit();
-      System.out.println("Check for duplicate: " + "SELECT ID FROM " + projectsTableTitle + " WHERE PROJ_TITLE = " + projTitle);
-      ResultSet res = st.getResultSet();
-      if (res.next()) {
-         System.out.println("Duplicate!");
-         res.close();
-         st.close();
-         return true;
-      }
-      res.close();
-      st.close();
-      return false;
-   }
-
-   // methods to find out if VARCHAR size has to be increased
-   private int getVarcharsLength(LearningProject proj, String column) throws SQLException, EntryNotFoundException {
-      Statement st = conn.createStatement();
-      st.executeQuery("SELECT " + column + " FROM " + projectsTableTitle + " where ID = " + proj.getId());
-      conn.commit();
-      ResultSet res = st.getResultSet();
-      if (res.next()) {
-         int i = res.getInt(1);
-         res.close();
-         st.close();
-         return i;
-      } else {
-         res.close();
-         st.close();
-         throw new EntryNotFoundException();
-      }
-   }
-
-   // ALTER VARCHAR LENGTH: increases the size of varchar columns to be able to
-   // store longer values
-   public void controlVarcharLength(FlashCard card, LearningProject proj) throws SQLException, EntryNotFoundException {
-      Statement st = conn.createStatement();
-      int questionSize = getVarcharsLength(proj, "VARCHARS_QUESTION");
-      int answerSize = getVarcharsLength(proj, "VARCHARS_ANSWER");
-      if (card.getQuestionLength() > questionSize) {
-         questionSize = card.getQuestionLength();
-         st.executeUpdate("ALTER TABLE " + proj.getTableName() + " ALTER QUESTION" + " SET DATA TYPE VARCHAR (" + questionSize
-               + ")");
-         conn.commit();
-         System.out.println("Changed Varchar length: ALTER QUESTION" + " SET DATA TYPE VARCHAR (" + questionSize + ")");
-         st.executeUpdate("UPDATE " + projectsTableTitle + " SET VARCHARS_QUESTION = " + questionSize + " where ID = "
-               + proj.getId());
-         conn.commit();
-         proj.setMaxCharsQuestion(questionSize);
-      }
-      if (card.getAnswerLength() > answerSize) {
-         answerSize = card.getAnswerLength();
-         st.executeUpdate("ALTER TABLE " + proj.getTableName() + " ALTER ANSWER" + " SET DATA TYPE VARCHAR (" + answerSize + ")");
-         conn.commit();
-         System.out.println("Changed Varchar length: ALTER TABLE " + proj.getTableName() + " ALTER ANSWER"
-               + " SET DATA TYPE VARCHAR (" + answerSize + ")");
-         st.executeUpdate("UPDATE " + projectsTableTitle + " SET VARCHARS_ANSWER = " + answerSize + " where ID = " + proj.getId());
-         conn.commit();
-         proj.setMaxCharsAnswer(answerSize);
-      }
-      st.close();
-   }
+	public int nextProjectId() throws SQLException {
+		Statement st = conn.createStatement();
+		st.execute("SELECT PROJ_ID_PK FROM " + projectsTable + " ORDER BY PROJ_ID_PK ASC");
+		ResultSet res = st.getResultSet();
+		int i = 1;
+		while (res.next()) {
+			int id = res.getInt(1);
+			if (id != i) {
+				return i;
+			}
+			i++;
+		}
+		return i;
+	}
 
 }
