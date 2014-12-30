@@ -23,7 +23,7 @@ public class PicAndTextPanel extends JPanel {
 	private JPanel pnlTitle;
 	private MyTextPane txtPane;
 	private HTMLDocument doc;
-	private BufferedImage img;
+	private String picUrl;
 	private String txt;
 	private PicType type;
 	private boolean editable;
@@ -37,9 +37,9 @@ public class PicAndTextPanel extends JPanel {
 	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.75);
 	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.85);
 
-	PicAndTextPanel(BufferedImage img, String txt, PicType type, boolean editable, int customWidth) {
+	PicAndTextPanel(String picUrl, String txt, PicType type, boolean editable, int customWidth) throws IOException {
 		super(new BorderLayout(10, 10));
-		this.img = img;
+		this.picUrl = picUrl;
 		this.txt = txt;
 		this.type = type;
 		this.editable = editable;
@@ -62,13 +62,13 @@ public class PicAndTextPanel extends JPanel {
 		HTMLEditorKit editorKit = new HTMLEditorKit();
 		doc = (HTMLDocument) editorKit.createDefaultDocument();
 		if (customWidth == 0) {
-			if (img == null) {
+			if (picUrl == null) {
 				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
 			} else {
 				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
 			}
 		} else {
-			if (img == null) {
+			if (picUrl == null) {
 				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
 			} else {
 				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
@@ -93,12 +93,12 @@ public class PicAndTextPanel extends JPanel {
 		txtPane.setBackground(Color.WHITE);
 	}
 
-	private void addWidgets() {
+	private void addWidgets() throws IOException {
 		this.add(pnlTitle, BorderLayout.NORTH);
 		this.add(txtPane, BorderLayout.CENTER);
 		pnlTitle.add(lblTitle, BorderLayout.NORTH);
-		if (img != null) {
-			addPicture(img);
+		if (picUrl != null) {
+			addPicture(picUrl);
 		}
 	}
 
@@ -145,7 +145,6 @@ public class PicAndTextPanel extends JPanel {
 		if (pnlTitle.isAncestorOf(lblPic)) {
 			removePicture();
 		}
-		this.img = img;
 		lblPic = new JLabel(new ImageIcon(fitPicInCard(img)));
 		pnlTitle.add(lblPic, BorderLayout.CENTER);
 		txtPane.setMinimalHeight(DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
@@ -153,8 +152,8 @@ public class PicAndTextPanel extends JPanel {
 	}
 
 	public void removePicture() {
-		if (img != null) {
-			img = null;
+		if (picUrl != null) {
+			picUrl = null;
 			pnlTitle.remove(lblPic);
 			txtPane.setMinimalHeight(DEFAULT_CARD_HEIGHT_TEXT_ONLY);
 			this.revalidate();

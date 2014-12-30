@@ -82,18 +82,15 @@ public class AddFlashcardDialog extends JDialog {
 	private Action rightAction = new StyledEditorKit.AlignmentAction("Right Align", StyleConstants.ALIGN_RIGHT);
 	private Action centerAction = new StyledEditorKit.AlignmentAction("Center Align", StyleConstants.ALIGN_CENTER);
 
-	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card) {
+	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card) throws IOException {
 		this(project, projPnl);
 		this.efcDialog = efcDialog;
 		this.existingCard = card;
 		centerPanel.remove(pnlQ);
 		try {
-			pnlQ = new PicAndTextPanel(card.getQuestionPic(), card.getQuestion(), PicType.QUESTION, true, card.getQuestionWidth());
-			pnlA = new PicAndTextPanel(card.getAnswerPic(), card.getAnswer(), PicType.ANSWER, true, card.getAnswerWidth());
+			pnlQ = new PicAndTextPanel(card.getPathToQuestionPic(), card.getQuestion(), PicType.QUESTION, true, card.getQuestionWidth());
+			pnlA = new PicAndTextPanel(card.getPathToAnswerPic(), card.getAnswer(), PicType.ANSWER, true, card.getAnswerWidth());
 			centerPanel.add(pnlQ);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -104,7 +101,7 @@ public class AddFlashcardDialog extends JDialog {
 	}
 
 	// constructor for adding a new flashcard
-	public AddFlashcardDialog(LearningProject project, ProjectPanel projPnl) {
+	public AddFlashcardDialog(LearningProject project, ProjectPanel projPnl) throws IOException {
 		super(projPnl.getOwner(), true);
 		this.owner = projPnl.getOwner();
 		this.project = project;
@@ -127,12 +124,12 @@ public class AddFlashcardDialog extends JDialog {
 		setLocationRelativeTo(owner);
 	}
 
-	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl) {
+	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl) throws IOException {
 		this(project, projPnl);
 		this.efcDialog = efcDialog;
 	}
 
-	private void createWidgets() {
+	private void createWidgets() throws IOException {
 		// top area: title frame & editor
 		pnlTop = new JPanel(new BorderLayout());
 
@@ -345,8 +342,15 @@ public class AddFlashcardDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				saveNewCardToDatabase();
-				AddFlashcardDialog d = new AddFlashcardDialog(project, projPnl);
-				d.setVisible(true);
+				
+				try {
+					AddFlashcardDialog d = new AddFlashcardDialog(project, projPnl);
+					d.setVisible(true);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 			}
 		});
 
@@ -389,6 +393,7 @@ public class AddFlashcardDialog extends JDialog {
 		try {
 			existingCard.setQuestion(pnlQ.getText());
 			existingCard.setAnswer(pnlA.getText());
+			//TODO
 			existingCard.setQuestionWidth(pnlQ.getCustomWidth());
 			existingCard.setAnswerWidth(pnlA.getCustomWidth());
 			try {
@@ -412,7 +417,8 @@ public class AddFlashcardDialog extends JDialog {
 	private void saveNewCardToDatabase() {
 		try {
 			FlashCard newCard = new FlashCard(project, pnlQ.getText(), pnlA.getText(), pathToQuestionPic, pathToAnswerPic);
-			newCard.setWidth(pnlQ.getCustomWidth(), pnlA.getCustomWidth());
+			newCard.setQuestionWidth(pnlQ.getCustomWidth()); 
+			newCard.setAnswerWidth(pnlA.getCustomWidth());
 			projPnl.addCard(newCard);
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
@@ -456,7 +462,7 @@ public class AddFlashcardDialog extends JDialog {
 
 	private void setPicButtons() {
 		if (centerPanel.isAncestorOf(pnlQ)) {
-			if (pathToQuestionPic != null || (existingCard != null && existingCard.hasQuestionPic())) {
+			if (pathToQuestionPic != null || (existingCard != null && existingCard.getPathToQuestionPic() != null)) {
 				if (pnlEditor.isAncestorOf(btnAddPic)) {
 					setRemovePicMode();
 				}
@@ -466,7 +472,7 @@ public class AddFlashcardDialog extends JDialog {
 				}
 			}
 		} else { // answer pic displayed
-			if (pathToAnswerPic != null || (existingCard != null && existingCard.hasAnswerPic())) {
+			if (pathToAnswerPic != null || (existingCard != null && existingCard.getPathToAnswerPic() != null)) {
 				if (pnlEditor.isAncestorOf(btnAddPic)) {
 					setRemovePicMode();
 				}

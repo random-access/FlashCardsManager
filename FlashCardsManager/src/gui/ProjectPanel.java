@@ -233,17 +233,32 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AddFlashcardDialog d = new AddFlashcardDialog(project, ProjectPanel.this);
-				d.setVisible(true);
+				
+				try {
+					AddFlashcardDialog d;
+					d = new AddFlashcardDialog(project, ProjectPanel.this);
+					d.setVisible(true);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
-
 		});
 
 		popupEditOrganizeCards.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				EditFlashcardsDialog d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
-				d.setVisible(true);
+				try {
+					if (project.getAllCards() == null) {
+						project.loadFlashcards();
+						cards = project.getAllCards();
+					}
+					EditFlashcardsDialog d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
+					d.setVisible(true);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 

@@ -124,7 +124,7 @@ public class FlashCardPanel extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						try {
-							project.removeCard(FlashCardPanel.this.card);
+							card.delete();
 							projectPnl.removeCard(card);
 							editDialog.cardPnls.remove(FlashCardPanel.this);
 							editDialog.pnlCenter.remove(editDialog.centerBox);
@@ -134,7 +134,7 @@ public class FlashCardPanel extends JPanel {
 							projectPnl.getOwner().updateProjectStatus(project);
 							editDialog.repaint();
 							editDialog.revalidate();
-						} catch (EntryNotFoundException | SQLException exc) {
+						} catch (SQLException exc) {
 							JOptionPane.showMessageDialog(FlashCardPanel.this, "Ein interner Datenbankfehler ist aufgetreten.",
 									"Fehler", JOptionPane.ERROR_MESSAGE);
 							Logger.log(exc);
@@ -149,11 +149,15 @@ public class FlashCardPanel extends JPanel {
 		btnEdit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AddFlashcardDialog d = new AddFlashcardDialog(editDialog, project, projectPnl, card);
-				d.setVisible(true);
-				// ChangeFlashcardDialog cfd = new
-				// ChangeFlashcardDialog(editDialog, project, projectPnl, card);
-				// cfd.setVisible(true);
+				
+				try {
+					AddFlashcardDialog d = new AddFlashcardDialog(editDialog, project, projectPnl, card);
+					d.setVisible(true);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 			}
 		});
 	}
