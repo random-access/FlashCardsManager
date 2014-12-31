@@ -3,13 +3,14 @@ package core;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import db.DBExchanger;
+import db.*;
 import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 
 public class FlashCard implements OrderedItem {
-
+	
 	private final DBExchanger<OrderedItem> dbex;
+	private final MediaExchanger mex;
 	private final int id;
 	private LearningProject proj;
 	private int stack;
@@ -26,6 +27,7 @@ public class FlashCard implements OrderedItem {
 	public FlashCard(LearningProject proj, String question, String answer, String pathToQuestionPic, String pathToAnswerPic,
 			int questionWidth, int answerWidth) throws SQLException {
 		dbex = proj.getDBEX();
+		mex = proj.getMex();
 		this.id = dbex.nextFlashcardId();
 		this.proj = proj;
 		this.stack = 1;
@@ -42,6 +44,7 @@ public class FlashCard implements OrderedItem {
 	public FlashCard(int id, LearningProject proj, int stack, String question, String answer, String pathToQuestionPic,
 			String pathToAnswerPic, int questionWidth, int answerWidth) {
 		dbex = proj.getDBEX();
+		mex = proj.getMex();
 		this.id = id;
 		this.proj = proj;
 		this.stack = stack;
@@ -54,19 +57,21 @@ public class FlashCard implements OrderedItem {
 		this.pathToAnswerPic = pathToAnswerPic;
 	}
 
-	public void store() throws SQLException {
+	public void store() throws SQLException, IOException {
 		proj.addCard(this);
+		mex.storePic(this, PicType.QUESTION);
+		mex.storePic(this, PicType.ANSWER);
 		dbex.addFlashcard(this);
-		
-		// TODO save pics
 	}
 
-	public void update() throws SQLException {
+	public void update() throws SQLException, IOException {
+		mex.storePic(this, PicType.QUESTION);
+		mex.storePic(this, PicType.ANSWER);
 		dbex.updateFlashcard(this);
-		// TODO save pics
 	}
 
-	public void delete() throws SQLException {
+	public void delete() throws SQLException, IOException {
+		mex.deleteAllPics(this);
 		proj.removeCard(this);
 		dbex.deleteFlashcard(this);
 	}

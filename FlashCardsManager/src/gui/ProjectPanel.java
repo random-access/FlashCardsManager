@@ -235,10 +235,17 @@ public class ProjectPanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				
 				try {
+					if (project.getAllCards() == null) {
+						project.loadFlashcards();
+						cards = project.getAllCards();
+					}
 					AddFlashcardDialog d;
 					d = new AddFlashcardDialog(project, ProjectPanel.this);
 					d.setVisible(true);
 				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -285,6 +292,9 @@ public class ProjectPanel extends JPanel {
 							JOptionPane.showMessageDialog(ProjectPanel.this,
 									"Keine Verbindung zur Datenbank. Bitte probiere es noch einmal.", "Datenbankfehler",
 									JOptionPane.ERROR_MESSAGE);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
 						}
 						d.dispose();
 					}

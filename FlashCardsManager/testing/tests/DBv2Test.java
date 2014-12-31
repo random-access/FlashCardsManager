@@ -8,7 +8,7 @@ import core.*;
 
 public class DBv2Test {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException {
-		ProjectsController ctl = new ProjectsController("/home/moni/Desktop/TestDB");
+		ProjectsController ctl = new ProjectsController("/home/moni/Desktop/TestDB", null, false);
 		ctl.loadProjects();
 		LearningProject p1 = new LearningProject (ctl,"Projekt 1", 3);
 		p1.store();

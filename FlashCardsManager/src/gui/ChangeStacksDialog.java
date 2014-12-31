@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.swing.*;
@@ -84,7 +85,10 @@ public class ChangeStacksDialog extends JDialog {
                      "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);
                Logger.log(exc);
-            }
+            } catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
          }
       });
 

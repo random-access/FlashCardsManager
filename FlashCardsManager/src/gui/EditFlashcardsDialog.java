@@ -181,18 +181,29 @@ public MainWindow getOwner() {
       btnAddCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog d = new AddFlashcardDialog(
-                  EditFlashcardsDialog.this, project, projPnl);
-            d.setVisible(true);
+             
+			try {
+				AddFlashcardDialog d = new AddFlashcardDialog(
+				      EditFlashcardsDialog.this, project, projPnl);
+				d.setVisible(true);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
          }
       });
 
       mnuSettingsNewCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog d = new AddFlashcardDialog(
-                  EditFlashcardsDialog.this, project, projPnl);
-            d.setVisible(true);
+        	 try {
+ 				AddFlashcardDialog d = new AddFlashcardDialog(
+ 				      EditFlashcardsDialog.this, project, projPnl);
+ 				d.setVisible(true);
+ 			} catch (IOException e1) {
+ 				// TODO Auto-generated catch block
+ 				e1.printStackTrace();
+ 			};
          }
       });
       

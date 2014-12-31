@@ -58,7 +58,7 @@ public class AddFlashcardDialog extends JDialog {
 	private MainWindow owner;
 	private LearningProject project;
 	private ProjectPanel projPnl;
-	private String pathToQuestionPic, pathToAnswerPic;
+	//private String pathToQuestionPic, pathToAnswerPic;
 	private EditFlashcardsDialog efcDialog;
 
 	// only for existing flashcards
@@ -376,11 +376,9 @@ public class AddFlashcardDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (centerPanel.isAncestorOf(pnlQ)) {
-					pathToQuestionPic = null;
 					pnlQ.removePicture();
 					;
 				} else {
-					pathToAnswerPic = null;
 					pnlA.removePicture();
 				}
 				setPicButtons();
@@ -393,21 +391,21 @@ public class AddFlashcardDialog extends JDialog {
 		try {
 			existingCard.setQuestion(pnlQ.getText());
 			existingCard.setAnswer(pnlA.getText());
-			//TODO
+			existingCard.setPathToQuestionPic(pnlQ.getPathToPic());
+			existingCard.setPathToAnswerPic(pnlA.getPathToPic());
 			existingCard.setQuestionWidth(pnlQ.getCustomWidth());
 			existingCard.setAnswerWidth(pnlA.getCustomWidth());
-			try {
-				project.updateCard(existingCard, pathToQuestionPic, pathToAnswerPic);
-			} catch (IOException exc) {
-				JOptionPane.showMessageDialog(AddFlashcardDialog.this, "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
-						JOptionPane.ERROR_MESSAGE);
-				Logger.log(exc);
-			}
+			System.out.println("NEW CARD - Path to question pic: " + pnlQ.getPathToPic() + ", Path to answer pic: " + pnlQ.getPathToPic());
+			existingCard.update();
 			if (efcDialog != null) {
 				efcDialog.updateCardPanels();
 			}
-		} catch (EntryNotFoundException | SQLException exc) {
+		} catch (SQLException exc) {
 			JOptionPane.showMessageDialog(AddFlashcardDialog.this, "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
+					JOptionPane.ERROR_MESSAGE);
+			Logger.log(exc);
+		} catch (IOException exc) {
+			JOptionPane.showMessageDialog(AddFlashcardDialog.this, "Ein interner Fehler ist aufgetreten.", "Fehler",
 					JOptionPane.ERROR_MESSAGE);
 			Logger.log(exc);
 		}
@@ -416,17 +414,17 @@ public class AddFlashcardDialog extends JDialog {
 
 	private void saveNewCardToDatabase() {
 		try {
-			FlashCard newCard = new FlashCard(project, pnlQ.getText(), pnlA.getText(), pathToQuestionPic, pathToAnswerPic);
-			newCard.setQuestionWidth(pnlQ.getCustomWidth()); 
-			newCard.setAnswerWidth(pnlA.getCustomWidth());
-			projPnl.addCard(newCard);
+			FlashCard newCard = new FlashCard(project , pnlQ.getText(), pnlA.getText(), pnlQ.getPathToPic(), pnlA.getPathToPic(),pnlQ.getCustomWidth(), pnlA.getCustomWidth());
+			System.out.println("NEW CARD - Path to question pic: " + pnlQ.getPathToPic() + ", Path to answer pic: " + pnlA.getPathToPic());
+			newCard.store();
+			// projPnl.addCard(newCard);
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
 				efcDialog.updateCardPanels();
 			}
 			System.out.println("Successfully added card!");
 			AddFlashcardDialog.this.dispose();
-		} catch (EntryAlreadyThereException | EntryNotFoundException | SQLException e1) {
+		} catch (SQLException e1) {
 			JOptionPane.showMessageDialog(null, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
 					JOptionPane.ERROR_MESSAGE);
 			Logger.log(e1);
@@ -441,13 +439,9 @@ public class AddFlashcardDialog extends JDialog {
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			try {
 				if (centerPanel.isAncestorOf(pnlQ)) {
-					pathToQuestionPic = projPnl.getFileChooser().getSelectedFile().getAbsolutePath();
-					System.out.println("Pfad zum Frage-Pic:" + pathToQuestionPic);
-					pnlQ.addPicture(pathToQuestionPic);
+					pnlQ.addPicture(projPnl.getFileChooser().getSelectedFile().getAbsolutePath());
 				} else {
-					pathToAnswerPic = projPnl.getFileChooser().getSelectedFile().getAbsolutePath();
-					System.out.println("Pfad zum Antwort-Pic:" + pathToAnswerPic);
-					pnlA.addPicture(pathToAnswerPic);
+					pnlA.addPicture(projPnl.getFileChooser().getSelectedFile().getAbsolutePath());
 				}
 				setPicButtons();
 				AddFlashcardDialog.this.revalidate();
@@ -462,7 +456,7 @@ public class AddFlashcardDialog extends JDialog {
 
 	private void setPicButtons() {
 		if (centerPanel.isAncestorOf(pnlQ)) {
-			if (pathToQuestionPic != null || (existingCard != null && existingCard.getPathToQuestionPic() != null)) {
+			if (pnlQ.getPathToPic() != null || (existingCard != null && existingCard.getPathToQuestionPic() != null)) {
 				if (pnlEditor.isAncestorOf(btnAddPic)) {
 					setRemovePicMode();
 				}
@@ -472,7 +466,7 @@ public class AddFlashcardDialog extends JDialog {
 				}
 			}
 		} else { // answer pic displayed
-			if (pathToAnswerPic != null || (existingCard != null && existingCard.getPathToAnswerPic() != null)) {
+			if (pnlA.getPathToPic() != null || (existingCard != null && existingCard.getPathToAnswerPic() != null)) {
 				if (pnlEditor.isAncestorOf(btnAddPic)) {
 					setRemovePicMode();
 				}

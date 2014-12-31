@@ -23,7 +23,7 @@ public class PicAndTextPanel extends JPanel {
 	private JPanel pnlTitle;
 	private MyTextPane txtPane;
 	private HTMLDocument doc;
-	private String picUrl;
+	private String pathToPic;
 	private String txt;
 	private PicType type;
 	private boolean editable;
@@ -37,9 +37,9 @@ public class PicAndTextPanel extends JPanel {
 	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.75);
 	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.85);
 
-	PicAndTextPanel(String picUrl, String txt, PicType type, boolean editable, int customWidth) throws IOException {
+	PicAndTextPanel(String pathToPic, String txt, PicType type, boolean editable, int customWidth) throws IOException {
 		super(new BorderLayout(10, 10));
-		this.picUrl = picUrl;
+		this.pathToPic = pathToPic;
 		this.txt = txt;
 		this.type = type;
 		this.editable = editable;
@@ -62,13 +62,13 @@ public class PicAndTextPanel extends JPanel {
 		HTMLEditorKit editorKit = new HTMLEditorKit();
 		doc = (HTMLDocument) editorKit.createDefaultDocument();
 		if (customWidth == 0) {
-			if (picUrl == null) {
+			if (pathToPic == null) {
 				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
 			} else {
 				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
 			}
 		} else {
-			if (picUrl == null) {
+			if (pathToPic == null) {
 				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
 			} else {
 				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
@@ -97,8 +97,8 @@ public class PicAndTextPanel extends JPanel {
 		this.add(pnlTitle, BorderLayout.NORTH);
 		this.add(txtPane, BorderLayout.CENTER);
 		pnlTitle.add(lblTitle, BorderLayout.NORTH);
-		if (picUrl != null) {
-			addPicture(picUrl);
+		if (pathToPic != null) {
+			addPicture(pathToPic);
 		}
 	}
 
@@ -141,29 +141,26 @@ public class PicAndTextPanel extends JPanel {
 		return img;
 	}
 
-	public void addPicture(BufferedImage img) {
-		if (pnlTitle.isAncestorOf(lblPic)) {
-			removePicture();
-		}
-		lblPic = new JLabel(new ImageIcon(fitPicInCard(img)));
-		pnlTitle.add(lblPic, BorderLayout.CENTER);
-		txtPane.setMinimalHeight(DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
-		this.revalidate();
-	}
-
 	public void removePicture() {
-		if (picUrl != null) {
-			picUrl = null;
+		if (pathToPic != null) {
+			pathToPic = null;
 			pnlTitle.remove(lblPic);
 			txtPane.setMinimalHeight(DEFAULT_CARD_HEIGHT_TEXT_ONLY);
 			this.revalidate();
 		}
 	}
 
-	public void addPicture(String picUrl) throws IOException {
-		BufferedImage img;
-		img = ImageIO.read(new File(picUrl));
-		addPicture(img);
+	public void addPicture(String pathToPic) throws IOException {
+		if (pnlTitle.isAncestorOf(lblPic)) {
+			removePicture();
+		}
+		this.pathToPic = pathToPic;
+		BufferedImage img = ImageIO.read(new File(pathToPic));
+		lblPic = new JLabel(new ImageIcon(fitPicInCard(img)));
+		pnlTitle.add(lblPic, BorderLayout.CENTER);
+		txtPane.setMinimalHeight(DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
+		this.revalidate();
+		
 	}
 
 	public String getText() {
@@ -184,5 +181,9 @@ public class PicAndTextPanel extends JPanel {
 
 	public int getCustomWidth() {
 		return txtPane.getMinimalWidth();
+	}
+	
+	public String getPathToPic() {
+		return pathToPic;
 	}
 }

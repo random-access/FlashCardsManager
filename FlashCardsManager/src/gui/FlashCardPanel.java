@@ -138,6 +138,10 @@ public class FlashCardPanel extends JPanel {
 							JOptionPane.showMessageDialog(FlashCardPanel.this, "Ein interner Datenbankfehler ist aufgetreten.",
 									"Fehler", JOptionPane.ERROR_MESSAGE);
 							Logger.log(exc);
+						} catch (IOException exc) {
+							JOptionPane.showMessageDialog(FlashCardPanel.this, "Ein interner Fehler ist aufgetreten.",
+									"Fehler", JOptionPane.ERROR_MESSAGE);
+							Logger.log(exc);;
 						}
 						d.dispose();
 					}

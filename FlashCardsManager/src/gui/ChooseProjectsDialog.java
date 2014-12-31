@@ -226,9 +226,9 @@ public class ChooseProjectsDialog extends JDialog {
          });
          setProgress(0);
 //         try {
-            if (delete) {
-               FileUtils.deleteDirectory(pathToExport);
-            }
+//            if (delete) {
+//               FileUtils.deleteDirectory(pathToExport);
+//            }
             // --> export project to selected location and show progress
             // ctl.exportProject(getSelectedProjects(), pathToExport, this);
 //         } catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {

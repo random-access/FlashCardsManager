@@ -1,18 +1,17 @@
 package core;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import db.*;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
+import db.DBExchanger;
+import db.MediaExchanger;
 import exc.InvalidValueException;
 
 public class LearningProject implements OrderedItem {
 
 	private final DBExchanger<OrderedItem> dbex;
+	private final MediaExchanger mex;
 	private final ProjectsController ctl;
 
 	private final int id;
@@ -25,6 +24,7 @@ public class LearningProject implements OrderedItem {
 	public LearningProject(ProjectsController ctl, String title, int numberOfStacks) throws SQLException {
 		this.ctl = ctl;
 		dbex = ctl.getDbex();
+		mex = ctl.getMex();
 		id = dbex.nextProjectId();
 		this.title = title;
 		this.numberOfStacks = numberOfStacks;
@@ -35,6 +35,7 @@ public class LearningProject implements OrderedItem {
 	public LearningProject(ProjectsController ctl, int id, String title, int numberOfStacks) {
 		this.ctl = ctl;
 		dbex = ctl.getDbex();
+		mex = ctl.getMex();
 		this.id = id;
 		this.title = title;
 		this.numberOfStacks = numberOfStacks;
@@ -59,11 +60,6 @@ public class LearningProject implements OrderedItem {
 		dbex.deleteProject(this);
 	}
 
-	//
-	public boolean validNoOfStacks(int noOfStacks) {
-		return (noOfStacks > 0);
-	}
-
 	// Adds a flashcard to the project
 	public void addCard(FlashCard card) {
 		System.out.println(allCards);
@@ -74,12 +70,22 @@ public class LearningProject implements OrderedItem {
 	public void removeCard(FlashCard card) {
 		allCards.remove(card);
 	}
+	
+	public ArrayList<FlashCard> getAllCards() {
+		return allCards;
+	}
 
 	// Get database exchanger
 	public DBExchanger<OrderedItem> getDBEX() {
 		return this.dbex;
 	}
-
+	
+	// Get media exchanger
+	public MediaExchanger getMex() {
+		return mex;
+	}
+	
+	// TITLE - Getter & setter
 	public String getTitle() {
 		return title;
 	}
@@ -99,7 +105,7 @@ public class LearningProject implements OrderedItem {
 		return numberOfStacks;
 	}
 
-	public void setNumberOfStacks(int newNumberOfStacks) throws InvalidValueException, SQLException{
+	public void setNumberOfStacks(int newNumberOfStacks) throws InvalidValueException, SQLException, IOException{
 		if (!validNoOfStacks(newNumberOfStacks)) {
 			throw new InvalidValueException();
 		}
@@ -113,27 +119,23 @@ public class LearningProject implements OrderedItem {
 					f.update();
 				}
 			}
-			System.out.println("Fitted cards into remaining stacks");
 		}
 		this.numberOfStacks = newNumberOfStacks;
-		// TODO update database
+		this.update();
 	}
 
-	// NEXT CARD ID - Getter
+	public boolean validNoOfStacks(int noOfStacks) {
+		return (noOfStacks > 0);
+	}
 
+	// COUNT CARDS in whole project / stacks
 	public int getNumberOfCards() throws SQLException {
-		return 0;
-		// TODO
+		return dbex.countRows(this);
 	}
 
 	public int getNumberOfCards(int stack) throws SQLException {
 		return dbex.countRows(this, stack);
 	}
-
-	public ArrayList<FlashCard> getAllCards() {
-		return allCards;
-	}
-
 
 	public Status getStatus() throws SQLException {
 		int maxStack = dbex.getMaxStack(this);

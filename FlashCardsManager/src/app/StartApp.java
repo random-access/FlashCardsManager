@@ -1,7 +1,5 @@
 package app;
 
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
 import gui.IntroPanel;
 import gui.MainWindow;
 
@@ -19,11 +17,14 @@ import xml.XMLExchanger;
 import core.ProjectsController;
 
 public class StartApp {
+	
+	private static final boolean debug = false;
 
-	private static final String APP_FOLDER = FileUtils.appDirectory("Lernkarten");
+	private static final String APP_FOLDER = FileUtils.appDirectory("Lernkarten", debug);
 	private static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
 	private static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
 	private static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_2";
+	private static final String PATH_TO_MEDIA = APP_FOLDER + "/medias";
 
 	private static InputStream defaultSettings = StartApp.class.getClassLoader().getResourceAsStream("xml/settings.xml");
 	private static Settings currentSettings;
@@ -35,12 +36,12 @@ public class StartApp {
 		Properties p = System.getProperties();
 		p.setProperty("derby.system.home", APP_FOLDER);
 		try {
-			FileUtils.createDirectory(APP_FOLDER);
+			FileUtils.createDirectory(APP_FOLDER, debug);
 			Logger.setPathToLog(DEFAULT_LOG_PATH, "errors", "log");
 			Logger.init(5);
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 			initializeSettings();
-			final ProjectsController ctl = new ProjectsController(currentSettings.getPathToDatabase());
+			final ProjectsController ctl = new ProjectsController(currentSettings.getPathToDatabase(), PATH_TO_MEDIA, debug);
 			new MainWindow(ctl, currentSettings.getMajorVersion(), currentSettings.getMinorVersion(),
 					currentSettings.getPatchLevel());
 
@@ -97,7 +98,7 @@ public class StartApp {
 	private static void initializeSettings() throws XMLStreamException, NumberFormatException, IOException {
 		newSettings = XMLExchanger.readConfig(defaultSettings);
 		if (new File(DEFAULT_SETTINGS_PATH).isFile()) {
-			System.out.println("Settings already in user folder");
+			if (debug) System.out.println("Settings already in user folder");
 			// settings already in user folder -> read from settings
 			currentSettings = XMLExchanger.readConfig(DEFAULT_SETTINGS_PATH);
 			
@@ -112,7 +113,7 @@ public class StartApp {
 					currentSettings.setDatabaseVersion(2);
 					currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
 					XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
-					System.out.println("Updated database version.");
+					if (debug) System.out.println("Updated database version.");
 				}
 			}
 			if (currentSettings.getPathToDatabase().equals("null")
@@ -130,12 +131,9 @@ public class StartApp {
 
 		} else {
 			// first install -> copy default settings.xml into user folder
-			System.out.println("XML Config not in user folder -> copy into user folder");
+			if (debug) System.out.println("XML Config not in user folder -> copy into user folder");
 			currentSettings = newSettings;
-			System.out.println("read config: " + defaultSettings);
-
 			currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
-			System.out.println(DEFAULT_SETTINGS_PATH);
 			XMLExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
 		}
 
