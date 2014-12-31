@@ -22,12 +22,12 @@ import gui.helpers.MyButton;
 @SuppressWarnings("serial")
 public class LearningSession extends JDialog {
 
-	private static BufferedImage imgSwitch, imgPrev, imgNext, imgRight, imgWrong, imgExit, imgFlashcardInfo;
+	private static BufferedImage imgSwitch, imgPrev, imgNext, imgRight, imgWrong, imgExit; // imgFlashcardInfo;
 
 	static {
 		try {
-			imgFlashcardInfo = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"img/AddFlashcardInfo_450x338.png"));
+			// imgFlashcardInfo = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+			//		"img/AddFlashcardInfo_450x338.png"));
 			imgSwitch = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSwitch_28x28.png"));
 			imgPrev = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPrev_28x28.png"));
 			imgNext = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgNext_28x28.png"));
@@ -144,12 +144,10 @@ public class LearningSession extends JDialog {
 					centerPanel.remove(pnlQ);
 					centerPanel.add(pnlA);
 					btnSwitch.setToolTipText("Frage zeigen");
-					System.out.println("Show answer");
 				} else {
 					centerPanel.remove(pnlA);
 					centerPanel.add(pnlQ);
 					btnSwitch.setToolTipText("Antwort zeigen");
-					System.out.println("show question");
 				}
 				centerPanel.revalidate();
 				centerPanel.repaint();
@@ -259,7 +257,6 @@ public class LearningSession extends JDialog {
 				lit.next();
 				movedFwd = true;
 			}
-			System.out.println("next index: " + lit.nextIndex());
 			return lit.next();
 		}
 		return null;
@@ -271,7 +268,6 @@ public class LearningSession extends JDialog {
 				lit.previous();
 				movedFwd = false;
 			}
-			System.out.println("previous index: " + lit.previousIndex());
 			return lit.previous();
 		}
 		return null;
@@ -280,9 +276,6 @@ public class LearningSession extends JDialog {
 	private void createPreviousFlashcardFields() {
 		currentCard = getPreviousCard();
 		enableNavigationAsNeeded();
-		if (currentCard.getQuestion() != null) {
-			System.out.println(currentCard.getQuestion());
-		}
 		try {
 			pnlQ = new PicAndTextPanel(currentCard.getPathToQuestionPic(), currentCard.getQuestion(), PicType.QUESTION, false,
 					currentCard.getQuestionWidth());
@@ -314,9 +307,6 @@ public class LearningSession extends JDialog {
 				btnFalse.setEnabled(false);
 				lblTitle.setText(project.getTitle());
 			} else { // valid card
-				if (currentCard.getQuestion() != null) {
-					System.out.println(currentCard.getQuestion());
-				}
 				pnlQ = new PicAndTextPanel(currentCard.getPathToQuestionPic(), currentCard.getQuestion(), PicType.QUESTION,
 						false, currentCard.getQuestionWidth());
 				pnlA = new PicAndTextPanel(currentCard.getPathToAnswerPic(), currentCard.getAnswer(), PicType.ANSWER, false,

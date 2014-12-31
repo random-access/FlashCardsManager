@@ -9,8 +9,8 @@ import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 
 import utils.*;
-import core.*;
-import exc.EntryNotFoundException;
+import core.LearningProject;
+import core.ProjectsController;
 import exc.NoValueException;
 
 @SuppressWarnings("serial")

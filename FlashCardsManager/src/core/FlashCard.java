@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import db.*;
-import exc.EntryAlreadyThereException;
 import exc.EntryNotFoundException;
 
 public class FlashCard implements OrderedItem {

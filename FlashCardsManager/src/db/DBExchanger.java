@@ -196,9 +196,9 @@ public class DBExchanger<T extends OrderedItem> {
 	public int getMaxStack(LearningProject p) throws SQLException {
 		int maxStack = 0;
 		Statement st = conn.createStatement();
-		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + "ORDER BY STACK DESC");
+		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK DESC");
 		conn.commit();
-		if (debug) System.out.println("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + "ORDER BY STACK DESC");
+		if (debug) System.out.println("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK DESC");
 		ResultSet res = st.getResultSet();
 		if (res.next()) {
 			maxStack = res.getInt(1);

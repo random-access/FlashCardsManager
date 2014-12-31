@@ -18,7 +18,6 @@ public class SizeFilterExtended extends DocumentFilter {
 	public void insertString(FilterBypass fb, int offset, String text,
 			AttributeSet attr) throws BadLocationException {
 		if (fb.getDocument().getLength() + text.length() <= maxChars) {
-			System.out.println("Länge: " + fb.getDocument().getLength() + text.length());
 			additionalFilter.insertString(fb, offset, text, attr);
 		} else {
 			Toolkit.getDefaultToolkit().beep(); // TODO: fix it - doesn't work
@@ -29,7 +28,6 @@ public class SizeFilterExtended extends DocumentFilter {
 	public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attr)
 	        throws BadLocationException {
 		if(fb.getDocument().getLength() + text.length() - length <= maxChars) {
-			System.out.println("Länge: " + fb.getDocument().getLength() + text.length());
 			additionalFilter.replace(fb, offset, length, text, attr);
 		} else {
 			Toolkit.getDefaultToolkit().beep(); // TODO: fix it - doesn't work

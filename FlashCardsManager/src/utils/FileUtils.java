@@ -12,11 +12,12 @@ public class FileUtils {
 	public static void createDirectory(String name, boolean debug) {
 		File f = new File(name);
 		if (!f.exists()) {
-			System.out.println("creating directory: " + name + "...");
+			if (debug)
+				System.out.println("creating directory: " + name + "...");
 			boolean result = false;
 			f.mkdir();
 			result = true;
-			if (result) {
+			if (debug && result) {
 				System.out.println(name + " successfully created!");
 			}
 		}
@@ -29,13 +30,15 @@ public class FileUtils {
 			Files.walkFileTree(dir, new SimpleFileVisitor<Path>() {
 				@Override
 				public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-					System.out.println("Deleting file: " + file);
+					if (debug) System.out.println("Deleting file: " + file);
 					File f = new File(file.toString());
 					boolean success = f.canWrite();
-					if (success) {
-						System.out.println("File " + file + " is writable!");
-					} else {
-						System.out.println("!!! File " + file + " is not writable!");
+					if (debug) {
+						if (success) {
+							System.out.println("File " + file + " is writable!");
+						} else {
+							System.out.println("!!! File " + file + " is not writable!");
+						}
 					}
 					Files.delete(file);
 					return CONTINUE;
@@ -44,7 +47,7 @@ public class FileUtils {
 				@Override
 				public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
 
-					System.out.println("Deleting dir: " + dir);
+					if (debug) System.out.println("Deleting dir: " + dir);
 					if (exc == null) {
 						Files.delete(dir);
 						return CONTINUE;
@@ -63,20 +66,24 @@ public class FileUtils {
 		String OS = System.getProperty("os.name").toUpperCase();
 		// Windows:
 		if (OS.contains("WIN")) {
-			if (debug) System.out.println("On Windows - app directory: " + System.getenv("APPDATA") + "/" + name);
+			if (debug)
+				System.out.println("On Windows - app directory: " + System.getenv("APPDATA") + "/" + name);
 			return System.getenv("APPDATA") + "/" + name;
 		}
 		// Mac:
 		else if (OS.contains("MAC")) {
-			if (debug) System.out.println("On Mac - app directory:" + System.getProperty("user.home") + "/Library" + "/" + name);
+			if (debug)
+				System.out.println("On Mac - app directory:" + System.getProperty("user.home") + "/Library" + "/" + name);
 			return System.getProperty("user.home") + "/Library" + "/" + name;
 		}
 		// Linux:
 		else if (OS.contains("NUX")) {
-			if (debug) System.out.println("On Linux - app directory: " + System.getProperty("user.home") + "/." + name);
+			if (debug)
+				System.out.println("On Linux - app directory: " + System.getProperty("user.home") + "/." + name);
 			return System.getProperty("user.home") + "/." + name;
 		} else {
-			if (debug) System.out.println("Elsewhere - app directory: " + System.getProperty("user.dir") + "/." + name);
+			if (debug)
+				System.out.println("Elsewhere - app directory: " + System.getProperty("user.dir") + "/." + name);
 			return System.getProperty("user.dir") + "/." + name;
 		}
 	}

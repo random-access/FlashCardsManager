@@ -4,6 +4,8 @@ package tools;
 /**
  * The Class UnsupportedDataException.
  */
+
+@SuppressWarnings("serial")
 public class UnsupportedDataException extends Exception {
 
    /**

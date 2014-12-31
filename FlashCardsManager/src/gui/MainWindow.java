@@ -1,14 +1,12 @@
 package gui;
 
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
-import gui.helpers.*;
+import gui.helpers.MyMenu;
+import gui.helpers.MyMenuItem;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -115,7 +113,6 @@ public class MainWindow extends JFrame {
 			if (projectPnls.get(i).getProject() == proj) {
 				p = projectPnls.get(i);
 				p.changeStatus(s);
-				System.out.println("finally: status " + s.toString());
 				p.repaint();
 				p.revalidate();
 				break;
@@ -193,7 +190,6 @@ public class MainWindow extends JFrame {
 
 	void addProjectsToPanel() {
 		if (projectPnls.size() == 0) {
-			System.out.println("projectpnls.size() == 0");
 			centerBox.add(lblAddProjectInfo);
 		} else {
 			for (int i = 0; i < projectPnls.size(); i++) {
@@ -234,14 +230,14 @@ public class MainWindow extends JFrame {
 
 	}
 
-	private class ExportProjectListener implements ActionListener {
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
-			d.setVisible(true);
-		}
-	}
+//	private class ExportProjectListener implements ActionListener {
+//
+//		@Override
+//		public void actionPerformed(ActionEvent e) {
+//			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
+//			d.setVisible(true);
+//		}
+//	}
 
 //	private class ImportProjectListener implements ActionListener {
 //

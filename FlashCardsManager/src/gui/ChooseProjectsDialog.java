@@ -4,17 +4,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.*;
 
 import utils.FileUtils;
 import utils.Logger;
-import core.*;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
+import core.LearningProject;
+import core.ProjectsController;
 
 @SuppressWarnings("serial")
 public class ChooseProjectsDialog extends JDialog {
@@ -26,14 +23,12 @@ public class ChooseProjectsDialog extends JDialog {
    private Box centerBox;
    private ProjectBox[] boxes;
    private JButton btnOk, btnDiscard;
-   private ProjectsController ctl;
-   private boolean delete;
+  // private boolean delete = false;
    private static final String[] DATABASE_FILES = {"log", "seg0", "service.properties"};
 
    ChooseProjectsDialog(MainWindow owner, ProjectsController ctl) {
       super(owner, false);
       this.owner = owner;
-      this.ctl = ctl;
       this.allProjects = ctl.getProjects();
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
       setTitle("Projektauswahl..");
@@ -95,7 +90,7 @@ public class ChooseProjectsDialog extends JDialog {
       btnOk.addActionListener(new ExportProjectListener());
    }
 
-   private ArrayList<LearningProject> getSelectedProjects() {
+   ArrayList<LearningProject> getSelectedProjects() {
       ArrayList<LearningProject> selectedProjects = new ArrayList<LearningProject>();
       for (int i = 0; i < boxes.length; i++) {
          if (boxes[i].isSelected()) {
@@ -160,7 +155,7 @@ public class ChooseProjectsDialog extends JDialog {
                         // user wants to overwrite -> delete existing
                         // directory and start export
                         if (FileUtils.directoryContainsOnlyCertainFiles(pathToExport, DATABASE_FILES)) {
-                           delete = true;
+                          // delete = true;
                            doTask(pathToExport);
                         } else {
                            JOptionPane
@@ -191,7 +186,6 @@ public class ChooseProjectsDialog extends JDialog {
                      doAction();
                   } else { // writing is possible -> start export
                      doTask(pathToExport);
-                     System.out.println("New location -- do task...");
                   }
                }
             }

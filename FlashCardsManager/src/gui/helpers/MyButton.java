@@ -22,9 +22,7 @@ public class MyButton extends JButton {
 	public MyButton(Action action, Icon icon) {
 		super(action);
 		setText(null);
-		setIcon(icon);
-//		 setVerticalTextPosition(SwingConstants.BOTTOM);
-//		 setHorizontalTextPosition(SwingConstants.CENTER);
+		setIcon(icon);;
 	}
 	
 	public MyButton(Action action, String text) {

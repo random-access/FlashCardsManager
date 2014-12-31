@@ -19,8 +19,6 @@ import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
 import db.PicType;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
 
 @SuppressWarnings("serial")
 public class AddFlashcardDialog extends JDialog {
@@ -95,6 +93,7 @@ public class AddFlashcardDialog extends JDialog {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		lblTitle.setText("Neue Lernkarte...");
 		setPicButtons();
 		pnlBottom.remove(btnSaveAndNext);
 		btnDiscard.setText("abbrechen");
@@ -136,9 +135,6 @@ public class AddFlashcardDialog extends JDialog {
 		pnlTitle = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		pnlTitle.setBackground(Color.DARK_GRAY);
 		pnlTitle.setBorder(BorderFactory.createLineBorder(getContentPane().getBackground(), 8));
-		if (existingCard != null) {
-			// TODO set correct title
-		}
 		lblTitle = new JLabel("Neue Lernkarte...");
 		lblTitle.setOpaque(true);
 		lblTitle.setBackground(Color.DARK_GRAY);
@@ -302,12 +298,10 @@ public class AddFlashcardDialog extends JDialog {
 					centerPanel.remove(pnlQ);
 					centerPanel.add(pnlA);
 					btnFlip.setToolTipText("Frage zeigen");
-					System.out.println("Show answer");
 				} else {
 					centerPanel.remove(pnlA);
 					centerPanel.add(pnlQ);
 					btnFlip.setToolTipText("Antwort zeigen");
-					System.out.println("show question");
 				}
 
 				setPicButtons();
@@ -395,7 +389,6 @@ public class AddFlashcardDialog extends JDialog {
 			existingCard.setPathToAnswerPic(pnlA.getPathToPic());
 			existingCard.setQuestionWidth(pnlQ.getCustomWidth());
 			existingCard.setAnswerWidth(pnlA.getCustomWidth());
-			System.out.println("NEW CARD - Path to question pic: " + pnlQ.getPathToPic() + ", Path to answer pic: " + pnlQ.getPathToPic());
 			existingCard.update();
 			if (efcDialog != null) {
 				efcDialog.updateCardPanels();
@@ -415,14 +408,11 @@ public class AddFlashcardDialog extends JDialog {
 	private void saveNewCardToDatabase() {
 		try {
 			FlashCard newCard = new FlashCard(project , pnlQ.getText(), pnlA.getText(), pnlQ.getPathToPic(), pnlA.getPathToPic(),pnlQ.getCustomWidth(), pnlA.getCustomWidth());
-			System.out.println("NEW CARD - Path to question pic: " + pnlQ.getPathToPic() + ", Path to answer pic: " + pnlA.getPathToPic());
 			newCard.store();
-			// projPnl.addCard(newCard);
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
 				efcDialog.updateCardPanels();
 			}
-			System.out.println("Successfully added card!");
 			AddFlashcardDialog.this.dispose();
 		} catch (SQLException e1) {
 			JOptionPane.showMessageDialog(null, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
@@ -449,9 +439,7 @@ public class AddFlashcardDialog extends JDialog {
 				JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
 				Logger.log(exc);
 			}
-		} else {
-			System.out.println("just close");
-		}
+		} 
 	}
 
 	private void setPicButtons() {

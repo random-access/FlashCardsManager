@@ -43,10 +43,6 @@ public class MyTextPane extends JTextPane {
 		}
 	}
 
-	private int getMinimalHeight() {
-		return minimalHeight;
-	}
-
 	@Override
 	public Dimension getPreferredSize() {
 		// makes textpane have a minimum size but with normal resize behaviour
@@ -60,23 +56,5 @@ public class MyTextPane extends JTextPane {
 		}
 		return new Dimension(prefWidth, prefHeight);
 	}
-
-	// @Override
-	// public Dimension getPreferredSize() {
-	// // makes textpane have a minimum size but with normal resize behaviour
-	// when getting larger
-	//
-	// if (this.getWidth() > minimalWidth && this.getHeight() > minimalHeight) {
-	// return super.getPreferredSize();
-	// } else {
-	// if (super.getPreferredSize().height > minimalHeight) {
-	// return new Dimension(minimalWidth, super.getPreferredSize().height);
-	// } else if (super.getPreferredSize().width > minimalWidth) {
-	// return new Dimension(super.getPreferredSize().width, minimalHeight);
-	// } else {
-	// return new Dimension(minimalWidth, minimalHeight);
-	// }
-	// }
-	// }
 
 }

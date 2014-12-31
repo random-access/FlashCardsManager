@@ -123,19 +123,14 @@ public class PicAndTextPanel extends JPanel {
 
 	private BufferedImage fitPicInCard(BufferedImage img) {
 		double height = img.getHeight();
-		System.out.println("original height: " + height);
 		double width = img.getWidth();
-		System.out.println("original width: " + width);
 		double scaleFactor = 1;
 		if (height > MAX_PIC_HEIGHT || width > MAX_PIC_WIDTH) {
 			scaleFactor = 1 / (Math.max(height / MAX_PIC_HEIGHT, width / MAX_PIC_WIDTH));
 		}
-		System.out.println("scale factor: " + scaleFactor);
 		if (scaleFactor != 1) {
 			BufferedImage bmg = PicUtils.scale(img, BufferedImage.TYPE_INT_ARGB, (int) (width * scaleFactor),
 					(int) (height * scaleFactor), scaleFactor, scaleFactor);
-			System.out.println("new height: " + bmg.getHeight());
-			System.out.println("new width: " + bmg.getWidth());
 			return bmg;
 		}
 		return img;

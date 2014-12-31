@@ -7,7 +7,7 @@ import javax.swing.text.*;
 
 public class InvalidCharsFilter extends DocumentFilter {
 	private static final char[] INVALID_CHARS = { '\'' };
-	boolean DEBUG = true;
+	boolean DEBUG = false;
 	Component owner;
 	
 	public InvalidCharsFilter(Component owner) {

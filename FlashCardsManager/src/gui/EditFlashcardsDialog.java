@@ -28,7 +28,7 @@ public class EditFlashcardsDialog extends JDialog {
          imgFlashcardInfo = ImageIO.read(ProjectPanel.class.getClassLoader()
                .getResourceAsStream("img/AddFlashcardInfo_450x338.png"));
       } catch (IOException e) {
-         System.out.println("Picture not found");
+    	  e.printStackTrace();
          // TODO: JDialog mit ErrorMsg
       }
    }

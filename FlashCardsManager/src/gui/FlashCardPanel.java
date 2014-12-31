@@ -14,7 +14,6 @@ import javax.swing.*;
 import utils.HTMLToText;
 import utils.Logger;
 import core.*;
-import exc.EntryNotFoundException;
 
 @SuppressWarnings("serial")
 public class FlashCardPanel extends JPanel {
@@ -95,7 +94,6 @@ public class FlashCardPanel extends JPanel {
 		}
 		in.close();
 		String question = parser.getText();
-		System.out.println(parser.getText());
 
 		String result;
 		String[] parts = question.split(" ");

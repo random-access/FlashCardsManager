@@ -14,7 +14,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import utils.Logger;
 import core.*;
-import exc.EntryNotFoundException;
 
 @SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
@@ -312,7 +311,6 @@ public class ProjectPanel extends JPanel {
 						project.loadFlashcards();
 						cards = project.getAllCards();
 					}
-					System.out.println("Karten 2 play: " + cards.size());
 					ChooseStacksDialog chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(),
 							ProjectPanel.this.cards, ProjectPanel.this.project);
 					chooseStacks.setVisible(true);

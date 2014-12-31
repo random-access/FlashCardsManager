@@ -99,7 +99,6 @@ public class AddProjectDialog extends JDialog {
                owner.projectPnls.add(new ProjectPanel(newProject, owner, ctl));
                owner.pnlCenter.remove(owner.centerBox);
                owner.centerBox = Box.createVerticalBox();
-               System.out.println(owner.projectPnls.size());
                owner.addProjectsToPanel();
                owner.pnlCenter.add(owner.centerBox, BorderLayout.NORTH);
                owner.pnlCenter.repaint();
