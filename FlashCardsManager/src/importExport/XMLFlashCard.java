@@ -54,10 +54,8 @@ public class XMLFlashCard {
 	
 	@Override
 	public String toString() {
-		return "XMLFlashCard [id = " + id + ", projId = " + this.projId + ", stack = " 
-				+ stack + ", question = " + question + ", answer = " + answer
-				+ ", customWidthQuestion = " + customWidthQuestion + ", customWidthAnswer = "
-				+ customWidthAnswer + "]";
+		return "XMLFlashCard [id=" + id + ", projId=" + projId + ", stack=" + stack + ", question=" + question + ", answer="
+				+ answer + ", customWidthQuestion=" + customWidthQuestion + ", customWidthAnswer=" + customWidthAnswer + "]";
 	}
 	
 }
