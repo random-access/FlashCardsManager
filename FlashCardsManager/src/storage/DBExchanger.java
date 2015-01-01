@@ -1,5 +1,8 @@
 package storage;
 
+import importExport.XMLMedia;
+
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -277,6 +280,24 @@ public class DBExchanger<T extends OrderedItem> {
 		res.close();
 		return cards;
 	}
+	
+	// GET PIC as XMLMedia
+	public XMLMedia getPic(FlashCard card, PicType type) throws SQLException {
+	   XMLMedia media = new XMLMedia();
+	   Statement st = conn.createStatement();
+	   st.executeQuery("SELECT * FROM " + mediaTable + " WHERE CARD_ID_FK = " + card.getId() 
+	         + " AND PICTYPE = '"+ type.getShortForm() + "'");
+	   ResultSet res = st.getResultSet();
+	   if (res.next()) {
+	      media.setMediaId(res.getInt(1));
+	      media.setCardId(res.getInt(2));
+	      media.setPathToMedia(new File(res.getString(3)).getName());
+	      media.setPicType(type.getShortForm());
+	      return media;
+	   }
+	   return null;
+	}
+	
 
 	// GET PATH TO PIC: get picture of flashcard from DB
 	public String getPathToPic(FlashCard f, PicType type) throws SQLException {

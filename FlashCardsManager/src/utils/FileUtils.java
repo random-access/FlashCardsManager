@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class FileUtils {
 
@@ -87,8 +89,31 @@ public class FileUtils {
 			return System.getProperty("user.dir") + "/." + name;
 		}
 	}
+	
+	public static boolean directoryContainsCertainFines (String pathToDirectory, ArrayList<String> requiredFiles) {
+	   File dir = new File(pathToDirectory);
+      if (!dir.isDirectory()) {
+         return false;
+      } else {
+         boolean result = true;
+         
+         File[] dirFiles = dir.listFiles();
+         Iterator<String> it = requiredFiles.iterator();
+         while (it.hasNext()) {
+            boolean b = false;
+            String requiredFile = it.next();
+            for (File f : dirFiles) {
+               if (f.getName().equals(requiredFile)) {
+                  b = true;
+               }
+            }
+            result &= b;
+         }
+         return result;
+      }
+	}
 
-	public static boolean directoryContainsOnlyCertainFiles(String pathToDirectory, String[] allowedNames) {
+	public static boolean directoryContainsOnlyCertainFiles(String pathToDirectory, ArrayList<String> allowedFiles) {
 		File dir = new File(pathToDirectory);
 		if (!dir.isDirectory()) {
 			return false;
@@ -97,7 +122,7 @@ public class FileUtils {
 			File[] dirFiles = dir.listFiles();
 			for (File file : dirFiles) {
 				boolean b = false;
-				for (String name : allowedNames) {
+				for (String name : allowedFiles) {
 					if (file.getName().equals(name)) {
 						b = true;
 					}

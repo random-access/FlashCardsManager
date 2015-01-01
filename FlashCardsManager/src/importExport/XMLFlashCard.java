@@ -1,5 +1,10 @@
 package importExport;
 
+import java.sql.SQLException;
+
+import core.FlashCard;
+import core.LearningProject;
+
 public class XMLFlashCard {
 	private int id;
 	private int projId;
@@ -8,6 +13,10 @@ public class XMLFlashCard {
 	private String answer;
 	private int customWidthQuestion;
 	private int customWidthAnswer;
+	
+	public FlashCard toFlashCard(LearningProject proj, String pathToQuestionPic, String pathToAnswerPic) throws SQLException {
+	   return new FlashCard(proj, question, answer, pathToQuestionPic, pathToAnswerPic, customWidthQuestion, customWidthAnswer);
+	}
 	
 	public int getId() {
 		return id;

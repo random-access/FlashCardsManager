@@ -1,5 +1,7 @@
 package core;
 
+import importExport.XMLLearningProject;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -58,6 +60,14 @@ public class LearningProject implements OrderedItem {
 	public void delete() throws SQLException {
 		ctl.removeProject(this);
 		dbex.deleteProject(this);
+	}
+	
+	public XMLLearningProject toXMLLearningProject() {
+	   XMLLearningProject proj = new XMLLearningProject();
+	   proj.setProjId(id);
+	   proj.setProjTitle(title);
+	   proj.setNoOfStacks(numberOfStacks);
+	   return proj;
 	}
 
 	// Adds a flashcard to the project

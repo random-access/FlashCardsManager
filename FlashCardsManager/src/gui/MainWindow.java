@@ -1,5 +1,6 @@
 package gui;
 
+import gui.helpers.ImportTask;
 import gui.helpers.MyMenu;
 import gui.helpers.MyMenuItem;
 
@@ -7,6 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -212,8 +214,8 @@ public class MainWindow extends JFrame {
 		btnAddProject.addActionListener(new AddProjectListener());
 		mnuSettingsNewProject.addActionListener(new AddProjectListener());
 		mnuSettingsAbout.addActionListener(new AboutProjectListener());
-		// mnuSettingsExportProject.addActionListener(new ExportProjectListener());
-		// mnuSettingsImportProject.addActionListener(new ImportProjectListener());
+		mnuSettingsExportProject.addActionListener(new ExportProjectListener());
+		mnuSettingsImportProject.addActionListener(new ImportProjectListener());
 	}
 
 	private class AboutProjectListener implements ActionListener {
@@ -239,60 +241,60 @@ public class MainWindow extends JFrame {
 
 	}
 
-//	private class ExportProjectListener implements ActionListener {
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
-//			d.setVisible(true);
-//		}
-//	}
+	private class ExportProjectListener implements ActionListener {
 
-//	private class ImportProjectListener implements ActionListener {
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			doAction();
-//		}
-//
-//		private void doTask(String pathToImport) {
-//			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "... importieren ...");
-//			dialog.setVisible(true);
-//			ImportTask task = new ImportTask(pathToImport, dialog);
-//			task.addPropertyChangeListener(dialog);
-//			task.execute();
-//		}
-//
-//		private void doAction() {
-//			JFileChooser fileChooser = new JFileChooser();
-//			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-//			int returnVal = fileChooser.showOpenDialog(MainWindow.this);
-//			String pathToImport = null;
-//			if (fileChooser.getSelectedFile() != null) { // prevent
-//															// NullPointerExc
-//															// when no path
-//															// selected
-//				pathToImport = fileChooser.getSelectedFile().getAbsolutePath();
-//			}
-//			if (returnVal == JFileChooser.APPROVE_OPTION) {
-//				if (pathToImport == null) { // no path selected
-//					JOptionPane.showMessageDialog(MainWindow.this, "Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
-//							JOptionPane.WARNING_MESSAGE);
-//					doAction();
-//				} else { // some path selected
-//					File f = new File(pathToImport);
-//					if (!f.canWrite()) { // can't read -> error message
-//						JOptionPane.showMessageDialog(MainWindow.this, "Fehlende Ordnerberechtigungen unter " + f + ". ",
-//								"Fehlende Berechtigung!", JOptionPane.WARNING_MESSAGE);
-//						doAction();
-//					} else { // it's possible to overwrite -> ask user
-//						doTask(pathToImport);
-//					}
-//				}
-//
-//			}
-//		}
-//	}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
+			d.setVisible(true);
+		}
+	}
+
+	private class ImportProjectListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			doAction();
+		}
+
+		private void doTask(String pathToImport) {
+			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "... importieren ...");
+			dialog.setVisible(true);
+			ImportTask task = new ImportTask(pathToImport, dialog, MainWindow.this, ctl);
+			task.addPropertyChangeListener(dialog);
+			task.execute();
+		}
+
+		private void doAction() {
+			JFileChooser fileChooser = new JFileChooser();
+			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+			int returnVal = fileChooser.showOpenDialog(MainWindow.this);
+			String pathToImport = null;
+			if (fileChooser.getSelectedFile() != null) { // prevent
+															// NullPointerExc
+															// when no path
+															// selected
+				pathToImport = fileChooser.getSelectedFile().getAbsolutePath();
+			}
+			if (returnVal == JFileChooser.APPROVE_OPTION) {
+				if (pathToImport == null) { // no path selected
+					JOptionPane.showMessageDialog(MainWindow.this, "Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
+							JOptionPane.WARNING_MESSAGE);
+					doAction();
+				} else { // some path selected
+					File f = new File(pathToImport);
+					if (!f.canWrite()) { // can't read -> error message
+						JOptionPane.showMessageDialog(MainWindow.this, "Fehlende Ordnerberechtigungen unter " + f + ". ",
+								"Fehlende Berechtigung!", JOptionPane.WARNING_MESSAGE);
+						doAction();
+					} else { // it's possible to overwrite -> ask user
+						doTask(pathToImport);
+					}
+				}
+
+			}
+		}
+	}
 
 	private class AddProjectListener implements ActionListener {
 		@Override

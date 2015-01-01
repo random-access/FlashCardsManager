@@ -1,11 +1,13 @@
 package gui;
 
 import gui.helpers.ExportTask;
+import importExport.XMLFiles;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -27,7 +29,6 @@ public class ChooseProjectsDialog extends JDialog {
 	private ProjectBox[] boxes;
 	private JButton btnOk, btnDiscard;
 	// private boolean delete = false;
-	private static final String[] DATABASE_FILES = { "log", "seg0", "service.properties" };
 
 	ChooseProjectsDialog(MainWindow owner, ProjectsController ctl) {
 		super(owner, false);
@@ -90,10 +91,11 @@ public class ChooseProjectsDialog extends JDialog {
 		btnOk.addActionListener(new ExportProjectListener());
 	}
 
-	ArrayList<LearningProject> getSelectedProjects() {
+	ArrayList<LearningProject> getSelectedProjects() throws SQLException {
 		ArrayList<LearningProject> selectedProjects = new ArrayList<LearningProject>();
 		for (int i = 0; i < boxes.length; i++) {
 			if (boxes[i].isSelected()) {
+			   allProjects.get(i).loadFlashcards();
 				selectedProjects.add(allProjects.get(i));
 			}
 		}
@@ -104,10 +106,15 @@ public class ChooseProjectsDialog extends JDialog {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			doAction();
+			try {
+            doAction();
+         } catch (SQLException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+         }
 		}
 
-		private void doTask(String pathToExport) {
+		private void doTask(String pathToExport) throws SQLException {
 			ProgressDialog dialog = new ProgressDialog(owner, "... exportieren ...");
 			dialog.setVisible(true);
 			ExportTask task = new ExportTask(pathToExport, getSelectedProjects(), dialog, owner, ctl);
@@ -115,7 +122,7 @@ public class ChooseProjectsDialog extends JDialog {
 			task.execute();
 		}
 
-		private void doAction() {
+		private void doAction() throws SQLException {
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 			int returnVal = fileChooser.showSaveDialog(ChooseProjectsDialog.this);
@@ -146,8 +153,8 @@ public class ChooseProjectsDialog extends JDialog {
 							if (dialogResult == JOptionPane.YES_OPTION) {
 								// user wants to overwrite -> delete existing
 								// directory and start export
-								if (FileUtils.directoryContainsOnlyCertainFiles(pathToExport, DATABASE_FILES)) {
-									// delete = true;
+								if (FileUtils.directoryContainsOnlyCertainFiles(pathToExport, XMLFiles.getAllNames())) {
+									FileUtils.deleteDirectory(pathToExport, true);
 									doTask(pathToExport);
 								} else {
 									JOptionPane.showMessageDialog(owner, f.getName()

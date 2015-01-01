@@ -1,11 +1,23 @@
 package importExport;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javax.xml.stream.*;
-import javax.xml.stream.events.*;
+import javax.xml.stream.XMLEventFactory;
+import javax.xml.stream.XMLEventReader;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.events.Characters;
+import javax.xml.stream.events.EndElement;
+import javax.xml.stream.events.StartDocument;
+import javax.xml.stream.events.StartElement;
+import javax.xml.stream.events.XMLEvent;
 
 public class XMLExchanger {
 	// flashcard property strings
@@ -32,8 +44,7 @@ public class XMLExchanger {
 	private static final String ELEM_PATH_TO_MEDIA = "path_to_media";
 	private static final String ELEM_PICTYPE = "pictype";
 
-	// ************************** flashcard import/export
-	// ***********************************
+	// ******************** flashcard import/export ***************************
 	public ArrayList<XMLFlashCard> readFlashcards(String inputFile) throws NumberFormatException, XMLStreamException, IOException {
 		ArrayList<XMLFlashCard> cards = new ArrayList<XMLFlashCard>();
 		XMLFlashCard card = null;
@@ -41,7 +52,8 @@ public class XMLExchanger {
 		factory.setProperty(XMLInputFactory.IS_COALESCING, true); // for reading
 																	// everything
 																	// from xml
-		XMLEventReader reader = factory.createXMLEventReader(new FileInputStream(inputFile));
+		FileInputStream inputStream = new FileInputStream(inputFile);
+		XMLEventReader reader = factory.createXMLEventReader(inputStream);
 		while (reader.hasNext()) {
 			XMLEvent event = reader.nextEvent();
 			if (event.isStartElement()) {
@@ -87,16 +99,20 @@ public class XMLExchanger {
 				}
 			}
 		}
+		if (inputStream != null) {
+		   inputStream.close();
+		}
 		return cards;
 	}
 
 	public void writeFlashcards(String outputFile, ArrayList<XMLFlashCard> cards) throws FileNotFoundException,
 			XMLStreamException {
 		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
-		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(new FileOutputStream(outputFile), "UTF-8");
+		FileOutputStream outputStream = new FileOutputStream (outputFile);
+		 XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
 		// For Debugging - below code to print XML to Console
-		// XMLEventWriter xmlEventWriter =
-		// xmlOutputFactory.createXMLEventWriter(System.out);
+//		 XMLEventWriter xmlEventWriter =
+//		 xmlOutputFactory.createXMLEventWriter(System.out);
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		XMLEvent end = eventFactory.createDTD("\n");
 		startDocAndCreateRootElement(ELEM_FLASHCARDS, xmlEventWriter, eventFactory, end);
@@ -116,10 +132,17 @@ public class XMLExchanger {
 			createEndElem(ELEM_FLASHCARD, xmlEventWriter, eventFactory, end);
 		}
 		createRootEndAndCloseStream(ELEM_FLASHCARDS, xmlEventWriter, eventFactory, end);
+		if (outputStream != null) {
+		   try {
+            outputStream.close();
+         } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
+		}
 	}
 
-	// ************************** project import/export
-	// ***********************************
+	// ****************** project import/export ***********************
 	public ArrayList<XMLLearningProject> readProjects(String inputFile) throws NumberFormatException, XMLStreamException,
 			IOException {
 		ArrayList<XMLLearningProject> projects = new ArrayList<XMLLearningProject>();
@@ -128,7 +151,8 @@ public class XMLExchanger {
 		factory.setProperty(XMLInputFactory.IS_COALESCING, true); // for reading
 																	// everything
 																	// from xml
-		XMLEventReader reader = factory.createXMLEventReader(new FileInputStream(inputFile));
+		FileInputStream inputStream = new FileInputStream(inputFile);
+		XMLEventReader reader = factory.createXMLEventReader(inputStream);
 		while (reader.hasNext()) {
 			XMLEvent event = reader.nextEvent();
 			if (event.isStartElement()) {
@@ -158,16 +182,20 @@ public class XMLExchanger {
 				}
 			}
 		}
+		if (inputStream != null) {
+		   inputStream.close();
+		}
 		return projects;
 	}
 
 	public void writeProjects(String outputFile, ArrayList<XMLLearningProject> projects) throws FileNotFoundException,
 			XMLStreamException {
 		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
-		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(new FileOutputStream(outputFile), "UTF-8");
+		FileOutputStream outputStream = new FileOutputStream (outputFile);
+		 XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
 		// For Debugging - below code to print XML to Console
-		// XMLEventWriter xmlEventWriter =
-		// xmlOutputFactory.createXMLEventWriter(System.out);
+//		 XMLEventWriter xmlEventWriter =
+//		 xmlOutputFactory.createXMLEventWriter(System.out);
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		XMLEvent end = eventFactory.createDTD("\n");
 		startDocAndCreateRootElement(ELEM_PROJECTS, xmlEventWriter, eventFactory, end);
@@ -182,15 +210,16 @@ public class XMLExchanger {
 			createEndElem(ELEM_PROJECT, xmlEventWriter, eventFactory, end);
 		}
 		createRootEndAndCloseStream(ELEM_PROJECTS, xmlEventWriter, eventFactory, end);
+		if (outputStream != null) {
+		   try {
+            outputStream.close();
+         } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
+		}
 	}
 
-	private void createStartElem(String elemName, XMLEventWriter xmlEventWriter, XMLEventFactory eventFactory, XMLEvent end)
-			throws XMLStreamException {
-		StartElement configStartCardElement = eventFactory.createStartElement("", "", elemName);
-		xmlEventWriter.add(eventFactory.createDTD("\t"));
-		xmlEventWriter.add(configStartCardElement);
-		xmlEventWriter.add(end);
-	}
 
 	// ********************* media import/export ***********************
 	public ArrayList<XMLMedia> readMedia(String inputFile) throws NumberFormatException, XMLStreamException, IOException {
@@ -200,7 +229,8 @@ public class XMLExchanger {
 		factory.setProperty(XMLInputFactory.IS_COALESCING, true); // for reading
 																	// everything
 																	// from xml
-		XMLEventReader reader = factory.createXMLEventReader(new FileInputStream(inputFile));
+		FileInputStream inputStream = new FileInputStream(inputFile);
+		XMLEventReader reader = factory.createXMLEventReader(inputStream);
 		while (reader.hasNext()) {
 			XMLEvent event = reader.nextEvent();
 			if (event.isStartElement()) {
@@ -231,16 +261,20 @@ public class XMLExchanger {
 				}
 			}
 		}
+		if (inputStream != null) {
+		   inputStream.close();
+		}
 		return medias;
 	}
 
 	public void writeMedia(String outputFile, ArrayList<XMLMedia> medias) throws FileNotFoundException,
 			XMLStreamException {
 		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
-		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(new FileOutputStream(outputFile), "UTF-8");
+		FileOutputStream outputStream = new FileOutputStream(outputFile);
+		 XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
 		// For Debugging - below code to print XML to Console
-		// XMLEventWriter xmlEventWriter =
-		// xmlOutputFactory.createXMLEventWriter(System.out);
+//		 XMLEventWriter xmlEventWriter =
+//		 xmlOutputFactory.createXMLEventWriter(System.out);
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		XMLEvent end = eventFactory.createDTD("\n");
 		startDocAndCreateRootElement(ELEM_MEDIAS, xmlEventWriter, eventFactory, end);
@@ -256,9 +290,26 @@ public class XMLExchanger {
 			createEndElem(ELEM_MEDIA, xmlEventWriter, eventFactory, end);
 		}
 		createRootEndAndCloseStream(ELEM_MEDIAS, xmlEventWriter, eventFactory, end);
+		if (outputStream != null) {
+		   try {
+            outputStream.close();
+         } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
+		}
 	}
 
 	// ********************* helper methods *************************
+	
+
+   private void createStartElem(String elemName, XMLEventWriter xmlEventWriter, XMLEventFactory eventFactory, XMLEvent end)
+         throws XMLStreamException {
+      StartElement configStartCardElement = eventFactory.createStartElement("", "", elemName);
+      xmlEventWriter.add(eventFactory.createDTD("\t"));
+      xmlEventWriter.add(configStartCardElement);
+      xmlEventWriter.add(end);
+   }
 
 	private void createEndElem(String elemName, XMLEventWriter xmlEventWriter, XMLEventFactory eventFactory, XMLEvent end)
 			throws XMLStreamException {

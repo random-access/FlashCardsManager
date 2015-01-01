@@ -1,5 +1,8 @@
 package core;
 
+import importExport.XMLFlashCard;
+import importExport.XMLMedia;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -95,6 +98,26 @@ public class FlashCard implements OrderedItem {
 			System.out.println("Level down: Karte " + this.id + " ist jetzt in Stapel " + stack);
 		}
 	}
+	
+	public XMLFlashCard toXMLFlashcard() {
+	   XMLFlashCard card = new XMLFlashCard();
+	   card.setId(this.id);
+	   card.setProjId(this.proj.getId());
+	   card.setStack(this.stack);
+	   card.setQuestion(this.question);
+	   card.setAnswer(this.answer);
+	   card.setCustomWidthQuestion(this.questionWidth);
+	   card.setCustomWidthAnswer(this.answerWidth);
+	   return card;
+	}
+	
+	public XMLMedia getXMLQuestionMedia() throws SQLException {
+	   return dbex.getPic(this, PicType.QUESTION);
+	}
+	
+	public XMLMedia getXMLAnswerMedia() throws SQLException {
+      return dbex.getPic(this, PicType.ANSWER);
+   }
 
 	public String getQuestion() {
 		return question;

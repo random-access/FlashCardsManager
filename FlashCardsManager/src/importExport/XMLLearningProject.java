@@ -1,5 +1,10 @@
 package importExport;
 
+import java.sql.SQLException;
+
+import core.LearningProject;
+import core.ProjectsController;
+
 public class XMLLearningProject {
 	
 	private int projId;
@@ -24,6 +29,10 @@ public class XMLLearningProject {
 	}
 	public void setNoOfStacks(int noOfStacks) {
 		this.noOfStacks = noOfStacks;
+	}
+	
+	public LearningProject toLearningProject(ProjectsController ctl) throws SQLException {
+	   return new LearningProject(ctl, projTitle, noOfStacks);
 	}
 	
 	@Override

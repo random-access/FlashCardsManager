@@ -2,9 +2,15 @@ package core;
 
 import gui.helpers.ExportTask;
 import gui.helpers.ImportTask;
+import importExport.ProjectExporter;
+import importExport.ProjectImporter;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import javax.xml.stream.XMLStreamException;
 
 import storage.DBExchanger;
 import storage.MediaExchanger;
@@ -14,10 +20,12 @@ public class ProjectsController {
 	private final DBExchanger<OrderedItem> dbex;
 	private final MediaExchanger mex;
 	private ArrayList<LearningProject> projects;
+	private String pathToMediaFolder;
 
 	public ProjectsController(String pathToDatabase, String pathToMediaFolder, boolean debug) throws ClassNotFoundException, SQLException {
 		dbex = new DBExchanger<OrderedItem>(pathToDatabase, this, debug);
 		mex = new MediaExchanger(pathToMediaFolder, debug);
+		this.pathToMediaFolder = pathToMediaFolder;
 		dbex.createConnection();
 		dbex.createTablesIfNotExisting();
 	}
@@ -46,13 +54,14 @@ public class ProjectsController {
 		return projects;
 	}
 
-	public void importProjects(String pathToFiles, ImportTask task) {
-		// TODO
+	public void importProjects(String pathToImport, ImportTask task) throws NumberFormatException, XMLStreamException, IOException, SQLException {
+		ProjectImporter importer = new ProjectImporter(pathToImport, pathToMediaFolder, this);
+		importer.doImport();
 	}
 
-	public void exportProject(ArrayList<LearningProject> projects2, String pathToExport, ExportTask exportTask) {
-		// TODO Auto-generated method stub
-		
+	public void exportProject(ArrayList<LearningProject> projects, String pathToExport, ExportTask exportTask) throws SQLException, XMLStreamException, IOException {
+		ProjectExporter exporter = new ProjectExporter(projects, pathToMediaFolder, pathToExport);
+		exporter.doExport();
 	}
 	
 }

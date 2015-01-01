@@ -114,6 +114,7 @@ public class ChooseStacksDialog extends JDialog {
 	// LearningSession
 	private ArrayList<FlashCard> copyCards(ArrayList<FlashCard> srcCards) {
 		ArrayList<FlashCard> targetCards = new ArrayList<FlashCard>();
+		System.out.println("Src cards = null? " + srcCards == null);
 		targetCards.addAll(srcCards);
 		return targetCards;
 	}
