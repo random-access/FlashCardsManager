@@ -1,4 +1,4 @@
-package export;
+package importExport;
 
 public class XMLFlashCard {
 	private int id;

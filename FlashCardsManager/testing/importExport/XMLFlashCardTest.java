@@ -1,13 +1,13 @@
-package storage;
+package importExport;
+
+import importExport.XMLFlashCard;
+import importExport.XMLFlashcardExchanger;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import javax.xml.stream.XMLStreamException;
-
-import export.XMLFlashCard;
-import export.XMLFlashcardExchanger;
 
 public class XMLFlashCardTest {
 	public static void main(String[] args) throws XMLStreamException, NumberFormatException, IOException {
