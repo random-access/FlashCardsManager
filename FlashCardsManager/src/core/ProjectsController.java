@@ -1,5 +1,8 @@
 package core;
 
+import gui.helpers.ExportTask;
+import gui.helpers.ImportTask;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -43,6 +46,13 @@ public class ProjectsController {
 		return projects;
 	}
 
-	
+	public void importProjects(String pathToFiles, ImportTask task) {
+		// TODO
+	}
+
+	public void exportProject(ArrayList<LearningProject> projects2, String pathToExport, ExportTask exportTask) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

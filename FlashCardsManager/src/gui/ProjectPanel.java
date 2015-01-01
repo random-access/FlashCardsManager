@@ -179,13 +179,7 @@ public class ProjectPanel extends JPanel {
 									"Fehler", JOptionPane.ERROR_MESSAGE);
 							Logger.log(exc);
 						}
-						parentWindow.projectPnls.remove(ProjectPanel.this);
-						parentWindow.pnlCenter.remove(parentWindow.centerBox);
-						parentWindow.centerBox = Box.createVerticalBox();
-						parentWindow.addProjectsToPanel();
-						parentWindow.pnlCenter.add(parentWindow.centerBox, BorderLayout.NORTH);
-						parentWindow.repaint();
-						parentWindow.revalidate();
+						parentWindow.updateProjectList();
 						d.dispose();
 					}
 				});
@@ -212,7 +206,7 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project, ctl);
+				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project);
 				p.setVisible(true);
 			}
 

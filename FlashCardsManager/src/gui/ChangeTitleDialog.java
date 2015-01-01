@@ -10,7 +10,6 @@ import javax.swing.text.AbstractDocument;
 
 import utils.*;
 import core.LearningProject;
-import core.ProjectsController;
 import exc.NoValueException;
 
 @SuppressWarnings("serial")
@@ -22,14 +21,12 @@ public class ChangeTitleDialog extends JDialog {
    private JButton btnOk, btnDiscard;
    private MainWindow owner;
    private ProjectPanel pnl;
-   private ProjectsController prm;
    private LearningProject proj;
 
-   ChangeTitleDialog(ProjectPanel pnl, LearningProject proj, ProjectsController ctl) {
+   ChangeTitleDialog(ProjectPanel pnl, LearningProject proj) {
       super(pnl.getOwner(), true);
       this.owner = pnl.getOwner();
       this.proj = proj;
-      this.prm = ctl;
       this.pnl = pnl;
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
       setTitle("Titel \u00e4ndern..");
@@ -65,15 +62,7 @@ public class ChangeTitleDialog extends JDialog {
                // verarbeite Eingabe in DB
                proj.setTitle(txtTitle.getText());
                proj.update();
-               int i = owner.projectPnls.indexOf(pnl);
-               owner.projectPnls.remove(pnl);
-               owner.projectPnls.add(i, new ProjectPanel(proj, owner, prm));
-               owner.pnlCenter.remove(owner.centerBox);
-               owner.centerBox = Box.createVerticalBox();
-               owner.addProjectsToPanel();
-               owner.pnlCenter.add(owner.centerBox, BorderLayout.NORTH);
-               owner.updateProjectStatus(proj);
-               owner.revalidate();
+               owner.updateProjectList();
                ChangeTitleDialog.this.dispose();
             } catch (NoValueException exc) {
                JOptionPane.showMessageDialog(ChangeTitleDialog.this,

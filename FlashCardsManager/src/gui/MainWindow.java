@@ -45,14 +45,10 @@ public class MainWindow extends JFrame {
 	private JMenu mnuSettings;
 	private JMenu mnuSettingsNew, mnuSettingsImport, mnuSettingsExport;
 	private JMenuItem mnuSettingsView, mnuSettingsPrint, mnuSettingsStatistic, mnuSettingsHelp, mnuSettingsAbout,
-			mnuSettingsNewProject, mnuSettingsImportProject, mnuSettingsExportProject;
-	
-	// TODO make private -> method for project panel
-	JPanel pnlControls, pnlCenter;
-	// TODO make private -> method for AddProjectTitle, ChangeTitleDialog, ProjectPanel
-	Box centerBox;
-	ArrayList<ProjectPanel> projectPnls;
-	
+			mnuSettingsNewProject, mnuSettingsImportProject, mnuSettingsExportProject;	
+	private JPanel pnlControls, pnlCenter;
+	private Box centerBox;
+	private ArrayList<ProjectPanel> projectPnls;
 	private JLabel lblAddProjectInfo;
 	private JScrollPane scpCenter;
 	private JButton btnAddProject;
@@ -117,6 +113,19 @@ public class MainWindow extends JFrame {
 				p.revalidate();
 				break;
 			}
+		}
+	}
+	
+	public void updateProjectList () {	
+		try {
+			computeProjectPanels();
+			centerBox.removeAll();
+			addProjectsToPanel();
+			centerBox.revalidate();
+			centerBox.repaint();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -292,63 +301,5 @@ public class MainWindow extends JFrame {
 			p.setVisible(true);
 		}
 	}
-	
-//	// TODO make an own class
-//	public class ImportTask extends SwingWorker<Void, Void> {
-//		String pathToImport;
-//		ProgressDialog dialog;
-//
-//		ImportTask(String pathToImport, ProgressDialog dialog) {
-//			this.pathToImport = pathToImport;
-//			this.dialog = dialog;
-//		}
-//
-//		public void changeProgress(int progress) {
-//			super.setProgress(progress);
-//		}
-//
-//		@Override
-//		protected Void doInBackground() throws Exception {
-//			SwingUtilities.invokeLater(new Runnable() {
-//				@Override
-//				public void run() {
-//					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-//				}
-//			});
-//
-//			setProgress(0);
-//			try {
-//				ctl.importProject(pathToImport, this);
-//
-//			} catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
-//				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-//						JOptionPane.ERROR_MESSAGE);
-//				Logger.log(exc);
-//			} catch (IOException | ClassNotFoundException exc) {
-//				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Fehler ist aufgetreten", "Fehler",
-//						JOptionPane.ERROR_MESSAGE);
-//				Logger.log(exc);
-//			}
-//			setProgress(100);
-//			Thread.sleep(1000);
-//
-//			SwingUtilities.invokeLater(new Runnable() {
-//				@Override
-//				public void run() {
-//					dialog.dispose();
-//					centerBox.removeAll();
-//					computeProjectPanels();
-//					addProjectsToPanel();
-//					centerBox.revalidate();
-//					centerBox.repaint();
-//					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-//					JOptionPane.showMessageDialog(MainWindow.this, "Import erfolgreich abgeschlossen", "Fertig",
-//							JOptionPane.INFORMATION_MESSAGE);
-//				}
-//			});
-//			return null;
-//		}
-//
-//	}
 
 }

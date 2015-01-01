@@ -96,13 +96,7 @@ public class AddProjectDialog extends JDialog {
                LearningProject newProject = new LearningProject(ctl, title,
                      noOfStacks);
                newProject.store();
-               owner.projectPnls.add(new ProjectPanel(newProject, owner, ctl));
-               owner.pnlCenter.remove(owner.centerBox);
-               owner.centerBox = Box.createVerticalBox();
-               owner.addProjectsToPanel();
-               owner.pnlCenter.add(owner.centerBox, BorderLayout.NORTH);
-               owner.pnlCenter.repaint();
-               owner.revalidate();
+               owner.updateProjectList();
                AddProjectDialog.this.dispose();
             } catch (SQLException exc) {
                JOptionPane.showMessageDialog(AddProjectDialog.this,
