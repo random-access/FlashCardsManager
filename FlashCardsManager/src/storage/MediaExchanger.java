@@ -1,4 +1,4 @@
-package db;
+package storage;
 
 import java.io.IOException;
 import java.nio.file.Files;

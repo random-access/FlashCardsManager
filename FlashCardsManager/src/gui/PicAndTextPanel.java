@@ -13,8 +13,8 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 
+import storage.PicType;
 import utils.PicUtils;
-import db.PicType;
 
 @SuppressWarnings("serial")
 public class PicAndTextPanel extends JPanel {

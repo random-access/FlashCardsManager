@@ -5,7 +5,7 @@ import java.io.*;
 import javax.xml.stream.*;
 import javax.xml.stream.events.*;
 
-public class XMLExchanger {
+public class XMLSettingsExchanger {
    
    public static void writeConfig(String configFile, Settings settings) throws XMLStreamException, FileNotFoundException {
         XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();

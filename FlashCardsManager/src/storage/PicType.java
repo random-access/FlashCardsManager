@@ -1,4 +1,4 @@
-package db;
+package storage;
 
 public enum PicType {
 	QUESTION('q'), ANSWER('a');

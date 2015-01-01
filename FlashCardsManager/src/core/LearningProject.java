@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import db.DBExchanger;
-import db.MediaExchanger;
+import storage.DBExchanger;
+import storage.MediaExchanger;
 import exc.InvalidValueException;
 
 public class LearningProject implements OrderedItem {

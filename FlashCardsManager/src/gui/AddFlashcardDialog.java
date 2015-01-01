@@ -14,11 +14,11 @@ import javax.swing.plaf.basic.BasicArrowButton;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledEditorKit;
 
+import storage.PicType;
 import utils.IndividualAction;
 import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
-import db.PicType;
 
 @SuppressWarnings("serial")
 public class AddFlashcardDialog extends JDialog {

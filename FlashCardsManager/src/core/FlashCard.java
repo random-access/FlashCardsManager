@@ -3,14 +3,14 @@ package core;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import db.*;
+import storage.*;
 import exc.EntryNotFoundException;
 
 public class FlashCard implements OrderedItem {
 	
 	private final DBExchanger<OrderedItem> dbex;
 	private final MediaExchanger mex;
-	private final int id;
+	private int id;
 	private LearningProject proj;
 	private int stack;
 	private String question;

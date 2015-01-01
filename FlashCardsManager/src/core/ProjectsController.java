@@ -3,8 +3,8 @@ package core;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import db.DBExchanger;
-import db.MediaExchanger;
+import storage.DBExchanger;
+import storage.MediaExchanger;
 
 public class ProjectsController {
 	

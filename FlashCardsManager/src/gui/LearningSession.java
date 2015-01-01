@@ -12,10 +12,10 @@ import java.util.ListIterator;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+import storage.PicType;
 import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
-import db.PicType;
 import exc.EntryNotFoundException;
 import gui.helpers.MyButton;
 
