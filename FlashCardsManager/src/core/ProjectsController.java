@@ -16,13 +16,13 @@ import storage.MediaExchanger;
 
 public class ProjectsController {
 	
-	private final DBExchanger<OrderedItem> dbex;
+	private final DBExchanger dbex;
 	private final MediaExchanger mex;
 	private ArrayList<LearningProject> projects;
 	private String pathToMediaFolder;
 
 	public ProjectsController(String pathToDatabase, String pathToMediaFolder) throws ClassNotFoundException, SQLException {
-		dbex = new DBExchanger<OrderedItem>(pathToDatabase, this);
+		dbex = new DBExchanger(pathToDatabase, this);
 		mex = new MediaExchanger(pathToMediaFolder);
 		this.pathToMediaFolder = pathToMediaFolder;
 		dbex.createConnection();
@@ -33,7 +33,7 @@ public class ProjectsController {
 		projects = dbex.getAllProjects();
 	}
 
-	public DBExchanger<OrderedItem> getDbex() {
+	public DBExchanger getDbex() {
 		return dbex;
 	}
 	

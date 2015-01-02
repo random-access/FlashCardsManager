@@ -8,9 +8,9 @@ import java.sql.SQLException;
 
 import storage.*;
 
-public class FlashCard implements OrderedItem {
+public class FlashCard {
 
-	private final DBExchanger<OrderedItem> dbex;
+	private final DBExchanger dbex;
 	private final MediaExchanger mex;
 	private int id;
 	private LearningProject proj;
@@ -78,7 +78,6 @@ public class FlashCard implements OrderedItem {
 	}
 
 	// ID - Getter
-	@Override
 	public int getId() {
 		return this.id;
 	}

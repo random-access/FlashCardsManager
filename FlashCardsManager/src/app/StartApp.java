@@ -25,7 +25,7 @@ public class StartApp {
 	private static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
 	private static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
 	private static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_2";
-	private static final String PATH_TO_MEDIA = APP_FOLDER + "/medias";
+	private static final String PATH_TO_MEDIA = APP_FOLDER + "/media";
 
 	private static InputStream defaultSettings = StartApp.class.getClassLoader().getResourceAsStream("xml/settings.xml");
 	private static Settings currentSettings;

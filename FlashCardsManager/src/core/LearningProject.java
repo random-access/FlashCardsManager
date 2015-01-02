@@ -10,9 +10,9 @@ import storage.DBExchanger;
 import storage.MediaExchanger;
 import exc.InvalidValueException;
 
-public class LearningProject implements OrderedItem {
+public class LearningProject {
 
-	private final DBExchanger<OrderedItem> dbex;
+	private final DBExchanger dbex;
 	private final MediaExchanger mex;
 	private final ProjectsController ctl;
 
@@ -86,7 +86,7 @@ public class LearningProject implements OrderedItem {
 	}
 
 	// Get database exchanger
-	public DBExchanger<OrderedItem> getDBEX() {
+	public DBExchanger getDBEX() {
 		return this.dbex;
 	}
 	
@@ -105,7 +105,6 @@ public class LearningProject implements OrderedItem {
 	}
 
 	// ID - Getter
-	@Override
 	public int getId() {
 		return id;
 	}

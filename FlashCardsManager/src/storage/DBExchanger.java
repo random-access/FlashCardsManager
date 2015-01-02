@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import app.StartApp;
 import core.*;
 
-public class DBExchanger<T extends OrderedItem> {
+public class DBExchanger {
 	// TODO Stream handling (try with resources...)
 
 	private final String driver = "org.apache.derby.jdbc.EmbeddedDriver"; // db-driver
