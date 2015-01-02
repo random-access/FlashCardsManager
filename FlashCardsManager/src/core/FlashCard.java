@@ -7,10 +7,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import storage.*;
-import exc.EntryNotFoundException;
 
 public class FlashCard implements OrderedItem {
-	
+
 	private final DBExchanger<OrderedItem> dbex;
 	private final MediaExchanger mex;
 	private int id;
@@ -84,7 +83,7 @@ public class FlashCard implements OrderedItem {
 		return this.id;
 	}
 
-	public void nextLevel() throws EntryNotFoundException, SQLException {
+	public void nextLevel() throws SQLException {
 		int maxStack = proj.getNumberOfStacks();
 		if (stack < maxStack) {
 			stack++;
@@ -92,32 +91,40 @@ public class FlashCard implements OrderedItem {
 		}
 	}
 
-	public void levelDown() throws EntryNotFoundException, SQLException {
+	public void levelDown() throws SQLException {
 		if (stack > 1) {
 			stack--;
 			System.out.println("Level down: Karte " + this.id + " ist jetzt in Stapel " + stack);
 		}
 	}
-	
+
 	public XMLFlashCard toXMLFlashcard() {
-	   XMLFlashCard card = new XMLFlashCard();
-	   card.setId(this.id);
-	   card.setProjId(this.proj.getId());
-	   card.setStack(this.stack);
-	   card.setQuestion(this.question);
-	   card.setAnswer(this.answer);
-	   card.setCustomWidthQuestion(this.questionWidth);
-	   card.setCustomWidthAnswer(this.answerWidth);
-	   return card;
+		XMLFlashCard card = new XMLFlashCard();
+		card.setId(this.id);
+		card.setProjId(this.proj.getId());
+		card.setStack(this.stack);
+		if (question.equals("")) {
+			card.setQuestion(" ");
+		} else {
+			card.setQuestion(this.question);
+		}
+		if (answer.equals("")) {
+			card.setAnswer(" ");
+		} else {
+			card.setAnswer(this.answer);
+		}
+		card.setCustomWidthQuestion(this.questionWidth);
+		card.setCustomWidthAnswer(this.answerWidth);
+		return card;
 	}
-	
+
 	public XMLMedia getXMLQuestionMedia() throws SQLException {
-	   return dbex.getPic(this, PicType.QUESTION);
+		return dbex.getPic(this, PicType.QUESTION);
 	}
-	
+
 	public XMLMedia getXMLAnswerMedia() throws SQLException {
-      return dbex.getPic(this, PicType.ANSWER);
-   }
+		return dbex.getPic(this, PicType.ANSWER);
+	}
 
 	public String getQuestion() {
 		return question;
@@ -182,12 +189,12 @@ public class FlashCard implements OrderedItem {
 	public void setAnswerWidth(int answerWidth) {
 		this.answerWidth = answerWidth;
 	}
-	
+
 	public String toString() {
-		return "ID: " + this.getId() + ", PROJECT: " + this.getProj().getTitle() + ", STACK " 
-				+ this.getStack() + " QUESTION: " + this.getQuestion() + ", ANSWER: " + this.getAnswer()
-				+ ", PATH TO QUESTION PIC: " + this.getPathToQuestionPic() + ", PATH TO ANSWER PIC: " + this.getPathToAnswerPic()
-				+ ", CUSTOM_WIDTH_Q: " + this.getQuestionWidth() + ", CUSTOM_WIDTH_A: " + this.getAnswerWidth();
+		return "ID: " + this.getId() + ", PROJECT: " + this.getProj().getTitle() + ", STACK " + this.getStack() + " QUESTION: "
+				+ this.getQuestion() + ", ANSWER: " + this.getAnswer() + ", PATH TO QUESTION PIC: " + this.getPathToQuestionPic()
+				+ ", PATH TO ANSWER PIC: " + this.getPathToAnswerPic() + ", CUSTOM_WIDTH_Q: " + this.getQuestionWidth()
+				+ ", CUSTOM_WIDTH_A: " + this.getAnswerWidth();
 	}
 
 }

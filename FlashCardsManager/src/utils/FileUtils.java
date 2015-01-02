@@ -9,17 +9,19 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import app.StartApp;
+
 public class FileUtils {
 
-	public static void createDirectory(String name, boolean debug) {
+	public static void createDirectory(String name) {
 		File f = new File(name);
 		if (!f.exists()) {
-			if (debug)
+			if (StartApp.DEBUG)
 				System.out.println("creating directory: " + name + "...");
 			boolean result = false;
 			f.mkdir();
 			result = true;
-			if (debug && result) {
+			if (StartApp.DEBUG && result) {
 				System.out.println(name + " successfully created!");
 			}
 		}
@@ -64,27 +66,27 @@ public class FileUtils {
 		}
 	}
 
-	public static String appDirectory(String name, boolean debug) {
+	public static String appDirectory(String name) {
 		String OS = System.getProperty("os.name").toUpperCase();
 		// Windows:
 		if (OS.contains("WIN")) {
-			if (debug)
+			if (StartApp.DEBUG)
 				System.out.println("On Windows - app directory: " + System.getenv("APPDATA") + "/" + name);
 			return System.getenv("APPDATA") + "/" + name;
 		}
 		// Mac:
 		else if (OS.contains("MAC")) {
-			if (debug)
+			if (StartApp.DEBUG)
 				System.out.println("On Mac - app directory:" + System.getProperty("user.home") + "/Library" + "/" + name);
 			return System.getProperty("user.home") + "/Library" + "/" + name;
 		}
 		// Linux:
 		else if (OS.contains("NUX")) {
-			if (debug)
+			if (StartApp.DEBUG)
 				System.out.println("On Linux - app directory: " + System.getProperty("user.home") + "/." + name);
 			return System.getProperty("user.home") + "/." + name;
 		} else {
-			if (debug)
+			if (StartApp.DEBUG)
 				System.out.println("Elsewhere - app directory: " + System.getProperty("user.dir") + "/." + name);
 			return System.getProperty("user.dir") + "/." + name;
 		}

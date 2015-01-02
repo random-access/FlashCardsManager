@@ -12,7 +12,8 @@ import javax.swing.*;
 import utils.Logger;
 import core.LearningProject;
 import core.ProjectsController;
-import exc.*;
+import exc.InvalidValueException;
+import exc.NoValueException;
 
 @SuppressWarnings("serial")
 public class ChangeStacksDialog extends JDialog {

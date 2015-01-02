@@ -11,7 +11,7 @@ import javax.swing.text.AbstractDocument;
 import utils.*;
 import core.LearningProject;
 import core.ProjectsController;
-import exc.*;
+import exc.NoValueException;
 
 @SuppressWarnings("serial")
 public class AddProjectDialog extends JDialog {

@@ -1,5 +1,6 @@
 package gui;
 
+import exc.CustomErrorHandling;
 import gui.helpers.ImportTask;
 import gui.helpers.MyMenu;
 import gui.helpers.MyMenuItem;
@@ -27,13 +28,17 @@ public class MainWindow extends JFrame {
 
 	static {
 		try {
-		   imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_36x36.png"));
-		   imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_24x24.png"));
-		   imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_16x16.png"));
-		   imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_12x12.png"));
-		   imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSettings_28x28.png"));
-		   
-		   imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
+			imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_36x36.png"));
+			imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_24x24.png"));
+			imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_16x16.png"));
+			imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_12x12.png"));
+			imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSettings_28x28.png"));
+
+			imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
 			imgAddProjectInfo = ImageIO.read(MainWindow.class.getClassLoader().getResourceAsStream(
 					"img/AddProjectInfo_450x338.png"));
 		} catch (IOException e) {
@@ -41,13 +46,15 @@ public class MainWindow extends JFrame {
 			Logger.log(e);
 		}
 	}
+
+
 	private LinkedList<Image> icons;
 	private final int majorVersion, minorVersion, patchLevel;
 	private JMenuBar mnuBar;
 	private JMenu mnuSettings;
 	private JMenu mnuSettingsNew, mnuSettingsImport, mnuSettingsExport;
 	private JMenuItem mnuSettingsView, mnuSettingsPrint, mnuSettingsStatistic, mnuSettingsHelp, mnuSettingsAbout,
-			mnuSettingsNewProject, mnuSettingsImportProject, mnuSettingsExportProject;	
+			mnuSettingsNewProject, mnuSettingsImportProject, mnuSettingsExportProject;
 	private JPanel pnlControls, pnlCenter;
 	private Box centerBox;
 	private ArrayList<ProjectPanel> projectPnls;
@@ -74,23 +81,22 @@ public class MainWindow extends JFrame {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+			CustomErrorHandling.showInternalError(this, e);
 		}
 
 		createWidgets();
 		try {
 			computeProjectPanels();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		addWidgets();
-		setListeners();
 
-		setSize(500, 450);
-		setLocationRelativeTo(null);
-		setVisible(true);
+			addWidgets();
+			setListeners();
+
+			setSize(500, 450);
+			setLocationRelativeTo(null);
+			setVisible(true);
+		} catch (SQLException e) {
+			CustomErrorHandling.showDatabaseError(this, e);
+		}
 	}
 
 	void computeProjectPanels() throws SQLException {
@@ -117,8 +123,8 @@ public class MainWindow extends JFrame {
 			}
 		}
 	}
-	
-	public void updateProjectList () {	
+
+	public void updateProjectList() {
 		try {
 			computeProjectPanels();
 			centerBox.removeAll();

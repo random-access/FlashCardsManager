@@ -5,7 +5,6 @@ import gui.helpers.ImportTask;
 import importExport.ProjectExporter;
 import importExport.ProjectImporter;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -22,9 +21,9 @@ public class ProjectsController {
 	private ArrayList<LearningProject> projects;
 	private String pathToMediaFolder;
 
-	public ProjectsController(String pathToDatabase, String pathToMediaFolder, boolean debug) throws ClassNotFoundException, SQLException {
-		dbex = new DBExchanger<OrderedItem>(pathToDatabase, this, debug);
-		mex = new MediaExchanger(pathToMediaFolder, debug);
+	public ProjectsController(String pathToDatabase, String pathToMediaFolder) throws ClassNotFoundException, SQLException {
+		dbex = new DBExchanger<OrderedItem>(pathToDatabase, this);
+		mex = new MediaExchanger(pathToMediaFolder);
 		this.pathToMediaFolder = pathToMediaFolder;
 		dbex.createConnection();
 		dbex.createTablesIfNotExisting();

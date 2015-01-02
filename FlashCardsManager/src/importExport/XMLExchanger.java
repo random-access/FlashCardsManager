@@ -251,7 +251,10 @@ public class XMLExchanger {
 					event = reader.nextEvent();
 					media.setPathToMedia(event.asCharacters().getData());
 					break;
-
+				case ELEM_PICTYPE: 
+					event = reader.nextEvent();
+					media.setPicType(event.asCharacters().getData().trim().charAt(0));
+					break;
 				}
 			}
 			if (event.isEndElement()) {

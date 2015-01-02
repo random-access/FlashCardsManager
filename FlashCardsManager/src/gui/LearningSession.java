@@ -1,5 +1,7 @@
 package gui;
 
+import gui.helpers.MyButton;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,8 +18,6 @@ import storage.PicType;
 import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
-import exc.EntryNotFoundException;
-import gui.helpers.MyButton;
 
 @SuppressWarnings("serial")
 public class LearningSession extends JDialog {
@@ -213,7 +213,7 @@ public class LearningSession extends JDialog {
 					centerPanel.add(pnlQ);
 					centerPanel.revalidate();
 					centerPanel.repaint();
-				} catch (EntryNotFoundException | SQLException exc) {
+				} catch (SQLException exc) {
 					JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.",
 							"Fehler", JOptionPane.ERROR_MESSAGE);
 					Logger.log(exc);
@@ -240,7 +240,7 @@ public class LearningSession extends JDialog {
 					centerPanel.add(pnlQ);
 					centerPanel.revalidate();
 					centerPanel.repaint();
-				} catch (EntryNotFoundException | SQLException exc) {
+				} catch (SQLException exc) {
 					JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.",
 							"Fehler", JOptionPane.ERROR_MESSAGE);
 					Logger.log(exc);

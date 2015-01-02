@@ -8,7 +8,7 @@ import javax.xml.stream.XMLStreamException;
 
 public class XMLFlashCardTest {
 	public static void main(String[] args) throws XMLStreamException, NumberFormatException, IOException {
-		String fileName = "C:\\Users\\IT-Helpline16\\Desktop\\TestCards.xml";
+		String fileName = "/home/moni/Desktop/Testoo/flashcards.xml";
 //		ArrayList<XMLFlashCard> cards = new ArrayList<XMLFlashCard>();
 //		for (int i = 0; i < 10; i++) {
 //			XMLFlashCard card = new XMLFlashCard();
@@ -16,8 +16,8 @@ public class XMLFlashCardTest {
 //			card.setProjId(1);
 //			card.setStack(1);
 //			card.setQuestion("Frage " + (i+1));
-//			card.setAnswer("<!DOCTYPE html >\n<html lang=\"de\">\n\n<head>\n"
-//			+ "</head>\n<body>\n\n</body>\n</html>)");
+//			card.setAnswer("1.)  funktionsorientierte Organisation: wird in der obersten Ebene in Funktionsbereiche gegliedert (Produktion, Vertrieb, Beschaffung, Finanzierung, anschließend Einteilung nach Produkten"
+//+ "2.) produkt-  branchenbezogene Organisation: wird in der obersten Ebene in Produkte oder Branchen eingeteilt (PKW, LKW,... bzw. Dienstleistungen für Banken, für Versicherungen,...), anschließend Einteilung nach Funktionen");
 //			card.setCustomWidthQuestion(120);
 //			card.setCustomWidthAnswer(150);
 //			cards.add(card);

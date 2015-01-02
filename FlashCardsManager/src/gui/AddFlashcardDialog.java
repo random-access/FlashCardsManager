@@ -1,5 +1,6 @@
 package gui;
 
+import exc.CustomErrorHandling;
 import gui.helpers.MyButton;
 
 import java.awt.*;
@@ -414,13 +415,12 @@ public class AddFlashcardDialog extends JDialog {
 				efcDialog.updateCardPanels();
 			}
 			AddFlashcardDialog.this.dispose();
-		} catch (SQLException e1) {
-			JOptionPane.showMessageDialog(null, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-					JOptionPane.ERROR_MESSAGE);
-			Logger.log(e1);
-		} catch (IOException e1) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e1);
+		} catch (SQLException se) {
+			CustomErrorHandling.showDatabaseError(this, se);
+		} catch (IOException se) {
+			CustomErrorHandling.showInternalError(this, se);
+			Logger.log(se);
+			
 		}
 	}
 
