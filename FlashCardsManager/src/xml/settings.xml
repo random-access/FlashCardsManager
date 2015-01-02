@@ -2,9 +2,9 @@
 	<settings>
 		<majorVersion>0</majorVersion>
 		<minorVersion>1</minorVersion>
-		<patchLevel>6</patchLevel>
+		<patchLevel>7</patchLevel>
 		<pathToDatabase>null</pathToDatabase>
-		<databaseVersion>1</databaseVersion>
+		<databaseVersion>2</databaseVersion>
 		<showIntro>true</showIntro>
 	</settings>
 

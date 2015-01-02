@@ -1,127 +1,101 @@
 package core;
 
-import java.io.FileNotFoundException;
+import importExport.XMLLearningProject;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import db.DBExchanger;
-import db.PicType;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
+import storage.DBExchanger;
+import storage.MediaExchanger;
 import exc.InvalidValueException;
 
-public class LearningProject implements OrderedItem {
+public class LearningProject {
 
-	private final DBExchanger<OrderedItem> dbex;
+	private final DBExchanger dbex;
+	private final MediaExchanger mex;
+	private final ProjectsController ctl;
 
 	private final int id;
 	private String title;
 	private int numberOfStacks;
-	private String tableName;
 	private ArrayList<FlashCard> allCards;
-	private int maxCharsQuestion;
-	private int maxCharsAnswer;
 
 	// CONSTRUCTORS
 	// new project
-	public LearningProject(ProjectsManager projMgr, String title,
-			int numberOfStacks) throws EntryAlreadyThereException,
-			ClassNotFoundException, SQLException, InvalidValueException {
-		if (!validNoOfStacks(numberOfStacks)) {
-			throw new InvalidValueException();
-		}
-		dbex = new DBExchanger<OrderedItem>(projMgr.getPathToDatabase());
-		dbex.createConnection();
-		if (dbex.titleAlreadyExisting(title)) {
-			throw new EntryAlreadyThereException();
-		}
-		this.id = projMgr.getNextProjectId();
-		this.numberOfStacks = numberOfStacks;
+	public LearningProject(ProjectsController ctl, String title, int numberOfStacks) throws SQLException {
+		this.ctl = ctl;
+		dbex = ctl.getDbex();
+		mex = ctl.getMex();
+		id = dbex.nextProjectId();
 		this.title = title;
-		this.tableName = "PROJEKT_" + id;
-		projMgr.addProject(this);
-		dbex.createTable(this.tableName);
+		this.numberOfStacks = numberOfStacks;
 		allCards = new ArrayList<FlashCard>();
 	}
-	
-	// import project from external DB
-	public LearningProject(ProjectsManager projMgr, LearningProject srcProject, ArrayList<FlashCard> cardArray) throws EntryAlreadyThereException,
-			ClassNotFoundException, SQLException, InvalidValueException {
-		if (!validNoOfStacks(srcProject.getNumberOfStacks())) {
-			throw new InvalidValueException();
-		}
-		dbex = new DBExchanger<OrderedItem>(projMgr.getPathToDatabase());
-		dbex.createConnection();
-		if (dbex.titleAlreadyExisting(title)) {
-			throw new EntryAlreadyThereException();
-		}
-		this.id = projMgr.getNextProjectId();
-		this.numberOfStacks = srcProject.getNumberOfStacks();
-		this.title = srcProject.getTitle();
-		this.tableName = "PROJEKT_" + id;
-		projMgr.addProject(this);
-		dbex.createTable(this.tableName);
-		allCards = cardArray;
-	}
 
-	// import project from local DB
-	public LearningProject(ProjectsManager projMgr, int id, String title,
-			int numberOfStacks, int maxCharsQuestion, int maxCharsAnswer)
-			throws ClassNotFoundException, SQLException, EntryNotFoundException, IOException {
+	// restore from database
+	public LearningProject(ProjectsController ctl, int id, String title, int numberOfStacks) {
+		this.ctl = ctl;
+		dbex = ctl.getDbex();
+		mex = ctl.getMex();
 		this.id = id;
-		this.numberOfStacks = numberOfStacks;
 		this.title = title;
-		this.tableName = "PROJEKT_" + id;
-		this.maxCharsQuestion = maxCharsQuestion;
-		this.maxCharsAnswer = maxCharsAnswer;
-		dbex = new DBExchanger<OrderedItem>(projMgr.getPathToDatabase());
-		dbex.createConnection();
-		allCards = dbex.readAllData(this.tableName, this);
+		this.numberOfStacks = numberOfStacks;
 	}
 
-	//
-	public boolean validNoOfStacks(int noOfStacks) {
-		return (noOfStacks > 0);
+	public void loadFlashcards() throws SQLException {
+		allCards = dbex.getAllCards(this);
+	}
+
+	public void store() throws SQLException {
+		dbex.addProject(this);
+		ctl.addProject(this);
+		// TODO save pics
+	}
+	
+	public void update() throws SQLException {
+		dbex.updateProject(this);
+	}
+
+	public void delete() throws SQLException {
+		ctl.removeProject(this);
+		dbex.deleteProject(this);
+	}
+	
+	public XMLLearningProject toXMLLearningProject() {
+	   XMLLearningProject proj = new XMLLearningProject();
+	   proj.setProjId(id);
+	   proj.setProjTitle(title);
+	   proj.setNoOfStacks(numberOfStacks);
+	   return proj;
 	}
 
 	// Adds a flashcard to the project
-	public void addCard(FlashCard card, String pathToQuestionPic, String pathToAnswerPic) throws SQLException,
-			EntryNotFoundException, IOException{
-		dbex.addRow(card, this, pathToQuestionPic, pathToAnswerPic);
+	public void addCard(FlashCard card) {
+		System.out.println(allCards);
+		allCards.add(card);
 	}
 
 	// Removes a flashcard from the project
-	public void removeCard(FlashCard card) throws EntryNotFoundException,
-			SQLException {
-		dbex.deleteRow(card, this);
+	public void removeCard(FlashCard card) {
+		allCards.remove(card);
+	}
+	
+	public ArrayList<FlashCard> getAllCards() {
+		return allCards;
 	}
 
-	// Updates a flashcard from the project
-	public void updateCard(FlashCard card) throws EntryNotFoundException, SQLException {
-	   dbex.updateRow(card, this);
-	}
-	
-	public void updateCard(FlashCard card, String pathToQuestionPic, String pathToAnswerPic) throws EntryNotFoundException,
-			SQLException, FileNotFoundException, IOException{
-		dbex.updateRow(card, this);
-		if (pathToQuestionPic != null) {
-		   card.setQuestionPic(true);
-		   dbex.updatePic(PicType.QUESTION, card, this, pathToQuestionPic);
-		}
-		if (pathToAnswerPic != null) {
-		   card.setAnswerPic(true);
-         dbex.updatePic(PicType.ANSWER, card, this, pathToAnswerPic);
-		}
-	}
-	
-	
-	
 	// Get database exchanger
-	public DBExchanger<?> getDBEX () {
+	public DBExchanger getDBEX() {
 		return this.dbex;
 	}
 	
+	// Get media exchanger
+	public MediaExchanger getMex() {
+		return mex;
+	}
+	
+	// TITLE - Getter & setter
 	public String getTitle() {
 		return title;
 	}
@@ -130,14 +104,8 @@ public class LearningProject implements OrderedItem {
 		this.title = title;
 	}
 
-	// TABLE NAME - Getter
-	public String getTableName() {
-		return this.tableName;
-	}
-
 	// ID - Getter
-	@Override
-   public int getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -146,61 +114,52 @@ public class LearningProject implements OrderedItem {
 		return numberOfStacks;
 	}
 
-	public void setNumberOfStacks(int newNumberOfStacks)
-			throws InvalidValueException, EntryNotFoundException, SQLException {
+	public void setNumberOfStacks(int newNumberOfStacks) throws InvalidValueException, SQLException, IOException{
 		if (!validNoOfStacks(newNumberOfStacks)) {
 			throw new InvalidValueException();
 		}
-		// if there are less stacks than before - shift all cards with too high no of stack
-		// into highest stack
+		// if there are less stacks than before - shift all cards with too high
+		// no of stack into highest stack
 		if (this.numberOfStacks > newNumberOfStacks) {
 			for (int i = 0; i < allCards.size(); i++) {
-				if (allCards.get(i).getStack() > newNumberOfStacks) {
-					allCards.get(i).setStack(newNumberOfStacks);
+				FlashCard f = allCards.get(i);
+				if (f.getStack() > newNumberOfStacks) {
+					f.setStack(newNumberOfStacks);
+					f.update();
 				}
 			}
-			System.out.println("Fitted cards into remaining stacks");
 		}
-		this.numberOfStacks = newNumberOfStacks;	
+		this.numberOfStacks = newNumberOfStacks;
+		this.update();
 	}
 
-	// NEXT CARD ID - Getter
-	public int getNextCardId() throws SQLException {
-		int id = 1;
-		while (true) {
-			if (!dbex.idAlreadyExisting(id, tableName)) {
-				return id;
-			}
-			id++;
-		}
+	public boolean validNoOfStacks(int noOfStacks) {
+		return (noOfStacks > 0);
 	}
 
+	// COUNT CARDS in whole project / stacks
 	public int getNumberOfCards() throws SQLException {
-		return dbex.countRows(tableName);
+		return dbex.countRows(this);
 	}
 
 	public int getNumberOfCards(int stack) throws SQLException {
-		return dbex.countRows(tableName, stack);
+		return dbex.countRows(this, stack);
 	}
 
-	public ArrayList<FlashCard> getAllCards() {
-		return allCards;
+	public Status getStatus() throws SQLException {
+		int maxStack = dbex.getMaxStack(this);
+		Status s;
+		if (maxStack== 1 || maxStack == 0) {
+			s = Status.RED;
+		} else if (maxStack == numberOfStacks){
+			s = Status.GREEN;
+		} else {
+			s = Status.YELLOW;
+		}
+		return s;
 	}
 
-	// MAX CHARS - getter & setter
-	public int getMaxCharsQuestion() {
-		return maxCharsQuestion;
-	}
-
-	public void setMaxCharsQuestion(int newValue) {
-		maxCharsQuestion = newValue;
-	}
-
-	public int getMaxCharsAnswer() {
-		return maxCharsAnswer;
-	}
-
-	public void setMaxCharsAnswer(int newValue) {
-		maxCharsAnswer = newValue;
+	public String toString() {
+		return "ID: " + this.getId() + ", TITLE: " + this.getTitle() + ", NO_OF_STACKS: " + this.getNumberOfStacks();
 	}
 }

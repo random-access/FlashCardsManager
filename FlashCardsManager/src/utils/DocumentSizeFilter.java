@@ -6,7 +6,7 @@ import javax.swing.text.*;
 
 public class DocumentSizeFilter extends DocumentFilter {
 	private int maxChars;
-	boolean DEBUG = true;
+	boolean DEBUG = false;
 	
 	public DocumentSizeFilter (int maxChars) {
 		this.maxChars = maxChars;

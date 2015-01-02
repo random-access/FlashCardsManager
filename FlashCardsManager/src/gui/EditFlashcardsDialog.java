@@ -1,7 +1,6 @@
 package gui;
 
 import gui.helpers.MyMenuItem;
-import gui.helpers.Status;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,8 +13,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import utils.Logger;
-import core.FlashCard;
-import core.LearningProject;
+import core.*;
 
 @SuppressWarnings("serial")
 public class EditFlashcardsDialog extends JDialog {
@@ -30,7 +28,7 @@ public class EditFlashcardsDialog extends JDialog {
          imgFlashcardInfo = ImageIO.read(ProjectPanel.class.getClassLoader()
                .getResourceAsStream("img/AddFlashcardInfo_450x338.png"));
       } catch (IOException e) {
-         System.out.println("Picture not found");
+    	  e.printStackTrace();
          // TODO: JDialog mit ErrorMsg
       }
    }
@@ -183,18 +181,29 @@ public MainWindow getOwner() {
       btnAddCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog d = new AddFlashcardDialog(
-                  EditFlashcardsDialog.this, project, projPnl);
-            d.setVisible(true);
+             
+			try {
+				AddFlashcardDialog d = new AddFlashcardDialog(
+				      EditFlashcardsDialog.this, project, projPnl);
+				d.setVisible(true);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
          }
       });
 
       mnuSettingsNewCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            AddFlashcardDialog d = new AddFlashcardDialog(
-                  EditFlashcardsDialog.this, project, projPnl);
-            d.setVisible(true);
+        	 try {
+ 				AddFlashcardDialog d = new AddFlashcardDialog(
+ 				      EditFlashcardsDialog.this, project, projPnl);
+ 				d.setVisible(true);
+ 			} catch (IOException e1) {
+ 				// TODO Auto-generated catch block
+ 				e1.printStackTrace();
+ 			};
          }
       });
       

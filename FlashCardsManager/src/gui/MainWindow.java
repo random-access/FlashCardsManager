@@ -1,5 +1,10 @@
 package gui;
 
+import exc.CustomErrorHandling;
+import gui.helpers.ImportTask;
+import gui.helpers.MyMenu;
+import gui.helpers.MyMenuItem;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,9 +20,6 @@ import javax.swing.*;
 
 import utils.Logger;
 import core.*;
-import exc.EntryAlreadyThereException;
-import exc.EntryNotFoundException;
-import gui.helpers.*;
 
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {
@@ -26,13 +28,17 @@ public class MainWindow extends JFrame {
 
 	static {
 		try {
-		   imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_36x36.png"));
-		   imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_24x24.png"));
-		   imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_16x16.png"));
-		   imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/Label_LearningCards_blue_12x12.png"));
-		   imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSettings_28x28.png"));
-		   
-		   imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
+			imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_36x36.png"));
+			imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_24x24.png"));
+			imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_16x16.png"));
+			imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+					"img/Label_LearningCards_blue_12x12.png"));
+			imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSettings_28x28.png"));
+
+			imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
 			imgAddProjectInfo = ImageIO.read(MainWindow.class.getClassLoader().getResourceAsStream(
 					"img/AddProjectInfo_450x338.png"));
 		} catch (IOException e) {
@@ -40,6 +46,8 @@ public class MainWindow extends JFrame {
 			Logger.log(e);
 		}
 	}
+
+
 	private LinkedList<Image> icons;
 	private final int majorVersion, minorVersion, patchLevel;
 	private JMenuBar mnuBar;
@@ -47,20 +55,16 @@ public class MainWindow extends JFrame {
 	private JMenu mnuSettingsNew, mnuSettingsImport, mnuSettingsExport;
 	private JMenuItem mnuSettingsView, mnuSettingsPrint, mnuSettingsStatistic, mnuSettingsHelp, mnuSettingsAbout,
 			mnuSettingsNewProject, mnuSettingsImportProject, mnuSettingsExportProject;
-	
-	// TODO make private -> method for project panel
-	JPanel pnlControls, pnlCenter;
-	// TODO make private -> method for AddProjectTitle, ChangeTitleDialog, ProjectPanel
-	Box centerBox;
-	ArrayList<ProjectPanel> projectPnls;
-	
+	private JPanel pnlControls, pnlCenter;
+	private Box centerBox;
+	private ArrayList<ProjectPanel> projectPnls;
 	private JLabel lblAddProjectInfo;
 	private JScrollPane scpCenter;
 	private JButton btnAddProject;
-	private ProjectsManager prm;
+	private ProjectsController ctl;
 
-	public MainWindow(ProjectsManager prm, int majorVersion, int minorVersion, int patchLevel) {
-		this.prm = prm;
+	public MainWindow(ProjectsController ctl, int majorVersion, int minorVersion, int patchLevel) {
+		this.ctl = ctl;
 		this.majorVersion = majorVersion;
 		this.minorVersion = minorVersion;
 		this.patchLevel = patchLevel;
@@ -77,66 +81,59 @@ public class MainWindow extends JFrame {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+			CustomErrorHandling.showInternalError(this, e);
 		}
 
 		createWidgets();
-		computeProjectPanels();
-		addWidgets();
-		setListeners();
+		try {
+			computeProjectPanels();
 
-		setSize(500, 450);
-		setLocationRelativeTo(null);
-		setVisible(true);
+			addWidgets();
+			setListeners();
+
+			setSize(500, 450);
+			setLocationRelativeTo(null);
+			setVisible(true);
+		} catch (SQLException e) {
+			CustomErrorHandling.showDatabaseError(this, e);
+		}
 	}
 
-	void computeProjectPanels() {
+	void computeProjectPanels() throws SQLException {
+		ctl.loadProjects();
 		projectPnls = new ArrayList<ProjectPanel>();
-		for (int i = 0; i < prm.getAllProjects().size(); i++) {
-			ProjectPanel pnl = new ProjectPanel(prm.getAllProjects().get(i), this, prm);
-			pnl.changeStatus(calculateStatus(prm.getAllProjects().get(i)));
+		for (int i = 0; i < ctl.getProjects().size(); i++) {
+			ProjectPanel pnl = new ProjectPanel(ctl.getProjects().get(i), this, ctl);
+			pnl.changeStatus(ctl.getProjects().get(i).getStatus());
 			projectPnls.add(pnl);
 		}
 	}
 
-	private Status calculateStatus(LearningProject proj) {
-		ArrayList<FlashCard> flashcards = proj.getAllCards();
-		Status s = Status.RED;
-		System.out.println("status red..");
-		for (int i = 0; i < flashcards.size(); i++) {
-			if (flashcards.get(i).getStack() > 1) { // at least one card in
-				// stack >
-				// 1
-				s = Status.GREEN;
-				System.out.println("status green");
-				for (int j = 0; j < flashcards.size(); j++) {
-					if (flashcards.get(j).getStack() < proj.getNumberOfStacks()) {
-						// at least 1 card in stack < maxStack
-						s = Status.YELLOW;
-						System.out.println("status yellow");
-						break;
-					}
-				}
-				break;
-			}
-		}
-		return s;
-	}
-
-	void updateProjectStatus(LearningProject proj) {
-		Status s = calculateStatus(proj);
+	void updateProjectStatus(LearningProject proj) throws SQLException {
+		Status s = proj.getStatus();
 		ProjectPanel p; // search for right project in project panels & update
 		// status
 		for (int i = 0; i < projectPnls.size(); i++) {
 			if (projectPnls.get(i).getProject() == proj) {
 				p = projectPnls.get(i);
 				p.changeStatus(s);
-				System.out.println("finally: status " + s.toString());
 				p.repaint();
 				p.revalidate();
 				break;
 			}
+		}
+	}
+
+	public void updateProjectList() {
+		try {
+			computeProjectPanels();
+			centerBox.removeAll();
+			addProjectsToPanel();
+			centerBox.revalidate();
+			centerBox.repaint();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -210,7 +207,6 @@ public class MainWindow extends JFrame {
 
 	void addProjectsToPanel() {
 		if (projectPnls.size() == 0) {
-			System.out.println("projectpnls.size() == 0");
 			centerBox.add(lblAddProjectInfo);
 		} else {
 			for (int i = 0; i < projectPnls.size(); i++) {
@@ -255,7 +251,7 @@ public class MainWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, prm);
+			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
 			d.setVisible(true);
 		}
 	}
@@ -270,7 +266,7 @@ public class MainWindow extends JFrame {
 		private void doTask(String pathToImport) {
 			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "... importieren ...");
 			dialog.setVisible(true);
-			ImportTask task = new ImportTask(pathToImport, dialog);
+			ImportTask task = new ImportTask(pathToImport, dialog, MainWindow.this, ctl);
 			task.addPropertyChangeListener(dialog);
 			task.execute();
 		}
@@ -309,67 +305,9 @@ public class MainWindow extends JFrame {
 	private class AddProjectListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			AddProjectDialog p = new AddProjectDialog(MainWindow.this, prm);
+			AddProjectDialog p = new AddProjectDialog(MainWindow.this, ctl);
 			p.setVisible(true);
 		}
-	}
-	
-	// TODO make an own class
-	public class ImportTask extends SwingWorker<Void, Void> {
-		String pathToImport;
-		ProgressDialog dialog;
-
-		ImportTask(String pathToImport, ProgressDialog dialog) {
-			this.pathToImport = pathToImport;
-			this.dialog = dialog;
-		}
-
-		public void changeProgress(int progress) {
-			super.setProgress(progress);
-		}
-
-		@Override
-		protected Void doInBackground() throws Exception {
-			SwingUtilities.invokeLater(new Runnable() {
-				@Override
-				public void run() {
-					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-				}
-			});
-
-			setProgress(0);
-			try {
-				prm.importProject(pathToImport, this);
-
-			} catch (SQLException | EntryAlreadyThereException | EntryNotFoundException exc) {
-				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-						JOptionPane.ERROR_MESSAGE);
-				Logger.log(exc);
-			} catch (IOException | ClassNotFoundException exc) {
-				JOptionPane.showMessageDialog(MainWindow.this, "Ein interner Fehler ist aufgetreten", "Fehler",
-						JOptionPane.ERROR_MESSAGE);
-				Logger.log(exc);
-			}
-			setProgress(100);
-			Thread.sleep(1000);
-
-			SwingUtilities.invokeLater(new Runnable() {
-				@Override
-				public void run() {
-					dialog.dispose();
-					centerBox.removeAll();
-					computeProjectPanels();
-					addProjectsToPanel();
-					centerBox.revalidate();
-					centerBox.repaint();
-					MainWindow.this.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-					JOptionPane.showMessageDialog(MainWindow.this, "Import erfolgreich abgeschlossen", "Fertig",
-							JOptionPane.INFORMATION_MESSAGE);
-				}
-			});
-			return null;
-		}
-
 	}
 
 }

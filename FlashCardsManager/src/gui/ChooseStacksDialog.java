@@ -114,6 +114,7 @@ public class ChooseStacksDialog extends JDialog {
 	// LearningSession
 	private ArrayList<FlashCard> copyCards(ArrayList<FlashCard> srcCards) {
 		ArrayList<FlashCard> targetCards = new ArrayList<FlashCard>();
+		System.out.println("Src cards = null? " + srcCards == null);
 		targetCards.addAll(srcCards);
 		return targetCards;
 	}
@@ -130,7 +131,6 @@ public class ChooseStacksDialog extends JDialog {
 	// FlashCard f = lit.next();
 	// if (f.getStack() == i + 1) { // stacks go from 1 upwards
 	// sessionCards.add(f);
-	// System.out.println("Copied card " + f.getId()
 	// + " (Stack " + f.getStack() + ")...");
 	// }
 	// }
@@ -150,14 +150,11 @@ public class ChooseStacksDialog extends JDialog {
 			cards.remove(currentCard); // anyway remove card from project
 										// arraylist
 			int stack = currentCard.getStack() - 1; // stack numbers are from 1
-													// upwards
-			System.out.println(stack);
+													// upwards;
 			if (boxes[stack].isSelected()) { // get only cards from selected
 												// stacks
 				activeSelection = true; // for error msg when no selection
 				sessionCards.add(currentCard);
-				System.out.println("Copied card " + currentCard.getId()
-						+ " (Stack " + currentCard.getStack() + ")...");
 			}
 		}
 		return sessionCards;

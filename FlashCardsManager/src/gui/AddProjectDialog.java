@@ -10,8 +10,8 @@ import javax.swing.text.AbstractDocument;
 
 import utils.*;
 import core.LearningProject;
-import core.ProjectsManager;
-import exc.*;
+import core.ProjectsController;
+import exc.NoValueException;
 
 @SuppressWarnings("serial")
 public class AddProjectDialog extends JDialog {
@@ -21,12 +21,12 @@ public class AddProjectDialog extends JDialog {
    private JTextField txtTitle, txtNoOfStacks;
    private JButton btnOk, btnDiscard;
    private MainWindow owner;
-   private ProjectsManager prm;
+   private ProjectsController ctl;
 
-   AddProjectDialog(MainWindow owner, ProjectsManager prm) {
+   AddProjectDialog(MainWindow owner, ProjectsController ctl) {
       super(owner, true);
       this.owner = owner;
-      this.prm = prm;
+      this.ctl = ctl;
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
       setTitle("Projekt hinzuf\u00fcgen..");
 
@@ -93,23 +93,17 @@ public class AddProjectDialog extends JDialog {
                int noOfStacks = Integer.parseInt(txtNoOfStacks.getText());
                String title = txtTitle.getText();
                // verarbeite Eingabe in DB
-               LearningProject newProject = new LearningProject(prm, title,
+               LearningProject newProject = new LearningProject(ctl, title,
                      noOfStacks);
-               owner.projectPnls.add(new ProjectPanel(newProject, owner, prm));
-               owner.pnlCenter.remove(owner.centerBox);
-               owner.centerBox = Box.createVerticalBox();
-               System.out.println(owner.projectPnls.size());
-               owner.addProjectsToPanel();
-               owner.pnlCenter.add(owner.centerBox, BorderLayout.NORTH);
-               owner.pnlCenter.repaint();
-               owner.revalidate();
+               newProject.store();
+               owner.updateProjectList();
                AddProjectDialog.this.dispose();
-            } catch (ClassNotFoundException | EntryAlreadyThereException | SQLException exc) {
+            } catch (SQLException exc) {
                JOptionPane.showMessageDialog(AddProjectDialog.this,
                      "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);
                Logger.log(exc);
-            } catch (NumberFormatException | InvalidValueException exc) {
+            } catch (NumberFormatException exc) {
                JOptionPane.showMessageDialog(AddProjectDialog.this,
                      "Ung\u00fcltige Zeichenfolge.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);

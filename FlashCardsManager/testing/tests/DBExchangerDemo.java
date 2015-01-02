@@ -59,13 +59,11 @@ public class DBExchangerDemo {
 
    public void createTableAndFillWithSampleData() throws SQLException {
       Statement st = conn.createStatement();
-      st.execute("CREATE TABLE TESTTABLE (ID INT PRIMARY KEY, TEXT VARCHAR (50), PIC BLOB)");
+      st.execute("CREATE TABLE TESTTABLE (ID INT PRIMARY KEY NOT NULL, TEXT VARCHAR (50))");
       conn.commit();
-      st.execute("INSERT INTO TESTTABLE VALUES (1, 'Eintrag 1', null)");
+      st.execute("CREATE TABLE TESTTABLE2 (ID INT PRIMARY KEY NOT NULL, TEXT VARCHAR (50))");
       conn.commit();
-      st.execute("INSERT INTO TESTTABLE VALUES (2, 'Eintrag 2', null)");
-      conn.commit();
-      st.execute("INSERT INTO TESTTABLE VALUES (3, 'Eintrag 3', null)");
+      st.execute("CREATE TABLE TESTTABLE3 (ID1 INT CONSTRAINT ID1_FK REFERENCES TESTTABLE(ID), ID INT CONSTRAINT ID_FK REFERENCES TESTTABLE2(ID), TEXT VARCHAR (50), PRIMARY KEY (ID1, ID))");
       conn.commit();
       st.close();
       System.out
@@ -171,28 +169,29 @@ public class DBExchangerDemo {
             "C:\\Users\\IT-Helpline16\\Desktop\\TestDB");
       dbex1.connect();
       dbex1.createTableAndFillWithSampleData();
-      dbex1.insertPic(1, "C:\\Users\\IT-Helpline16\\Desktop\\SamplePic.jpg");
-      dbex1.getBlobAsBytes(1);
-      
-      
-      DBExchangerDemo dbex2 = new DBExchangerDemo(
-            "C:\\Users\\IT-Helpline16\\Desktop\\TestDB2");
-      dbex2.connect();
-      dbex2.createTableAndFillWithSampleData();
-      dbex2.transferBlob(dbex1, 1, 2);
-      
+     //  dbex1.insertPic(1, "C:\\Users\\IT-Helpline16\\Desktop\\SamplePic.jpg");
+    //   dbex1.getBlobAsBytes(1);
       dbex1.disconnect();
-      dbex2.disconnect();
       
-      deleteDirectory("C:\\Users\\IT-Helpline16\\Desktop\\TestDB");
-      System.out.println("Successfully deleted TestDB!");
       
-      Thread.sleep(3000);
-      
-      deleteDirectory("C:\\Users\\IT-Helpline16\\Desktop\\TestDB2");
-      System.out.println("Successfully deleted TestDB2!");
-      
-      System.out.println("Finished!");
+//      DBExchangerDemo dbex2 = new DBExchangerDemo(
+//            "C:\\Users\\IT-Helpline16\\Desktop\\TestDB2");
+//      dbex2.connect();
+//      dbex2.createTableAndFillWithSampleData();
+//      dbex2.transferBlob(dbex1, 1, 2);
+//      
+//      dbex1.disconnect();
+//      dbex2.disconnect();
+//      
+//      deleteDirectory("C:\\Users\\IT-Helpline16\\Desktop\\TestDB");
+//      System.out.println("Successfully deleted TestDB!");
+//      
+//      Thread.sleep(3000);
+//      
+//      deleteDirectory("C:\\Users\\IT-Helpline16\\Desktop\\TestDB2");
+//      System.out.println("Successfully deleted TestDB2!");
+//      
+//      System.out.println("Finished!");
 
      
    }

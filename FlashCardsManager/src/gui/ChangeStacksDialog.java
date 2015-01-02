@@ -4,14 +4,16 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.swing.*;
 
 import utils.Logger;
 import core.LearningProject;
-import core.ProjectsManager;
-import exc.*;
+import core.ProjectsController;
+import exc.InvalidValueException;
+import exc.NoValueException;
 
 @SuppressWarnings("serial")
 public class ChangeStacksDialog extends JDialog {
@@ -23,13 +25,12 @@ public class ChangeStacksDialog extends JDialog {
    private MainWindow owner;
    private ProjectPanel pnl;
    private LearningProject project;
-   private ProjectsManager prm;
+
 
    ChangeStacksDialog(ProjectPanel pnl, LearningProject project,
-         ProjectsManager prm) {
+         ProjectsController ctl) {
       super(pnl.getOwner(), true);
       this.owner = pnl.getOwner();
-      this.prm = prm;
       this.project = project;
       this.pnl = pnl;
       setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -66,8 +67,9 @@ public class ChangeStacksDialog extends JDialog {
                // verarbeite Eingabe in DB
                int nr = Integer.parseInt(txtNoOfStacks.getText());
                pnl.noOfStacks = nr;
+               project.loadFlashcards();
                project.setNumberOfStacks(nr);
-               prm.updateProject(project);
+               project.update();
                owner.updateProjectStatus(project);
                ChangeStacksDialog.this.dispose();
             } catch (NoValueException exc) {
@@ -78,12 +80,15 @@ public class ChangeStacksDialog extends JDialog {
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
                      "Ung\u00fcltige Zeichenfolge.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);
-            } catch (EntryNotFoundException | SQLException exc) {
+            } catch (SQLException exc) {
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
                      "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);
                Logger.log(exc);
-            }
+            } catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
          }
       });
 
