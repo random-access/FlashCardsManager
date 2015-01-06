@@ -1,6 +1,7 @@
-package gui;
+package gui.helpers;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
@@ -14,11 +15,11 @@ public class ProgressDialog extends JDialog implements PropertyChangeListener{
 	private JProgressBar progressBar;
 	private JLabel lblInfo;
 	private Box progressBox;
-	private String text;
+	private String info;
 	
-	ProgressDialog(JFrame owner, String text) {
+	public ProgressDialog(JFrame owner, String text) {
 		super (owner, false);
-		this.text = text;
+		this.info = text;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setTitle("Bitte warten..");
 		setLayout(new BorderLayout());
@@ -50,7 +51,8 @@ public class ProgressDialog extends JDialog implements PropertyChangeListener{
 		progressBar.setIndeterminate(true);
 		progressBox.add(progressBar);
 		progressBox.add(Box.createVerticalStrut(10));
-		lblInfo = new JLabel(text);
+		lblInfo = new JLabel(info);
+		lblInfo.setPreferredSize(new Dimension(200, lblInfo.getPreferredSize().height));
 		lblInfo.setAlignmentX(CENTER_ALIGNMENT);
 		progressBox.add(lblInfo);
 	}
@@ -62,6 +64,11 @@ public class ProgressDialog extends JDialog implements PropertyChangeListener{
             progressBar.setIndeterminate(false);
             progressBar.setValue(progress);
         }
+	}
+	
+	public void changeInfo(String text) {
+		lblInfo.setText(text);
+		this.revalidate();
 	}
 	
 }

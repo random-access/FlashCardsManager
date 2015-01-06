@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
@@ -51,7 +52,7 @@ public class EditFlashcardsDialog extends JDialog {
          mnuSettingsViewList;
 
    public EditFlashcardsDialog(ProjectPanel projPnl,
-         ArrayList<FlashCard> cards, LearningProject project) {
+         ArrayList<FlashCard> cards, LearningProject project) throws SQLException {
       super(projPnl.getOwner(), true);
       this.owner = projPnl.getOwner();
       this.project = project;
@@ -115,7 +116,7 @@ public MainWindow getOwner() {
       mnuSettingsViewList.setEnabled(false);
    }
 
-   private void addWidgets() {
+   private void addWidgets() throws SQLException {
       this.add(pnlControls, BorderLayout.NORTH);
       this.add(scpCenter, BorderLayout.CENTER);
       this.add(pnlSouth, BorderLayout.SOUTH);
@@ -137,7 +138,7 @@ public MainWindow getOwner() {
       pnlCenter.add(centerBox, BorderLayout.NORTH);
    }
 
-   public void createCardPanels() {
+   public void createCardPanels() throws SQLException {
       for (int i = 0; i < cards.size(); i++) {
          FlashCardPanel newCardPanel;
          if (cards.get(i).getStack() == 1) {
@@ -165,7 +166,7 @@ public MainWindow getOwner() {
       }
    }
 
-   public void updateCardPanels() {
+   public void updateCardPanels() throws SQLException {
       pnlCenter.remove(centerBox);
       centerBox = Box.createVerticalBox();
       cardPnls = new ArrayList<FlashCardPanel>();

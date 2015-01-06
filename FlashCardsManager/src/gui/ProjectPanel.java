@@ -1,5 +1,8 @@
 package gui;
 
+import gui.helpers.LoadCardsTask;
+import gui.helpers.ProgressDialog;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,299 +21,360 @@ import core.*;
 @SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
 
-   private static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow, imgGreen;
+	private static BufferedImage imgPlay, imgEdit, imgDelete, imgRed, imgYellow, imgGreen;
 
-   static {
-      try {
-         imgPlay = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlay_16x16.png"));
-         imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgEdit_16x16.png"));
-         imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgDelete_16x16.png"));
-         imgRed = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgRed_8x8.png"));
-         imgYellow = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgYellow_8x8.png"));
-         imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgGreen_8x8.png"));
+	static {
+		try {
+			imgPlay = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlay_16x16.png"));
+			imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgEdit_16x16.png"));
+			imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgDelete_16x16.png"));
+			imgRed = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgRed_8x8.png"));
+			imgYellow = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgYellow_8x8.png"));
+			imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgGreen_8x8.png"));
 
-      } catch (IOException e) {
-         JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-         Logger.log(e);
-      }
-   }
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
+			Logger.log(e);
+		}
+	}
 
-   static JFileChooser fileChooser;
+	static JFileChooser fileChooser;
 
-   int noOfStacks;
-   private Box b;
-   // TODO make this private -> method for ChangeTitleDialog
-   JLabel lblStatus, lblText;
-   private JButton btnPlay, btnEdit, btnDelete;
-   private Status status;
-   private String name;
-   private JPopupMenu popupEdit;
-   private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks, popupEditAddCards, popupEditOrganizeCards,
-         popupEditResetProgress;
-   private MainWindow parentWindow;
-   private ProjectsController ctl;
-   private LearningProject project;
-   private ArrayList<FlashCard> cards;
+	int noOfStacks;
+	private Box b;
+	// TODO make this private -> method for ChangeTitleDialog
+	JLabel lblStatus, lblText;
+	private JButton btnPlay, btnEdit, btnDelete;
+	private Status status;
+	private String name;
+	private JPopupMenu popupEdit;
+	private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks, popupEditAddCards, popupEditOrganizeCards,
+			popupEditResetProgress;
+	private MainWindow parentWindow;
+	private ProjectsController ctl;
+	private LearningProject project;
+	private ArrayList<FlashCard> cards;
+	
+	public enum DialogType {
+		EDIT, ADD, RESET, PLAY, CHANGE_STACKS;
+	}
 
-   // Constructor
-   ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsController ctl) {
-      this.ctl = ctl;
-      this.project = project;
-      this.status = Status.RED;
-      this.name = project.getTitle();
-      this.parentWindow = parentWindow;
-      this.noOfStacks = project.getNumberOfStacks();
-      this.setLayout(new BorderLayout());
-      createWidgets();
-      addWidgets();
-      setListeners();
-   }
 
-   MainWindow getOwner() {
-      return this.parentWindow;
-   }
+	// Constructor
+	ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsController ctl) {
+		this.ctl = ctl;
+		this.project = project;
+		this.status = Status.RED;
+		this.name = project.getTitle();
+		this.parentWindow = parentWindow;
+		this.noOfStacks = project.getNumberOfStacks();
+		this.setLayout(new BorderLayout());
+		createWidgets();
+		addWidgets();
+		setListeners();
+	}
 
-   LearningProject getProject() {
-      return this.project;
-   }
+	MainWindow getOwner() {
+		return this.parentWindow;
+	}
 
-   private void addWidgets() {
-      this.add(b, BorderLayout.CENTER);
-      b.add(lblStatus);
-      b.add(Box.createRigidArea(new Dimension(15, 0)));
-      b.add(lblText);
-      b.add(Box.createHorizontalGlue());
-      b.add(Box.createRigidArea(new Dimension(30, 0)));
-      b.add(btnPlay);
-      b.add(Box.createRigidArea(new Dimension(15, 0)));
-      b.add(btnEdit);
-      b.add(Box.createRigidArea(new Dimension(15, 0)));
-      b.add(btnDelete);
+	LearningProject getProject() {
+		return this.project;
+	}
 
-      popupEdit.add(popupEditChangeName);
-      popupEdit.add(popupEditChangeNoOfStacks);
-      popupEdit.add(popupEditAddCards);
-      popupEdit.add(popupEditOrganizeCards);
-      popupEdit.add(popupEditResetProgress);
-   }
+	private void addWidgets() {
+		this.add(b, BorderLayout.CENTER);
+		b.add(lblStatus);
+		b.add(Box.createRigidArea(new Dimension(15, 0)));
+		b.add(lblText);
+		b.add(Box.createHorizontalGlue());
+		b.add(Box.createRigidArea(new Dimension(30, 0)));
+		b.add(btnPlay);
+		b.add(Box.createRigidArea(new Dimension(15, 0)));
+		b.add(btnEdit);
+		b.add(Box.createRigidArea(new Dimension(15, 0)));
+		b.add(btnDelete);
 
-   private void createWidgets() {
-      b = Box.createHorizontalBox();
-      b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-      setStatus(this.status);
-      lblText = new JLabel(name);
-      lblText.setFont(lblText.getFont().deriveFont(Font.BOLD, 12));
-      btnPlay = new JButton(new ImageIcon(imgPlay));
-      btnPlay.setToolTipText("Lernen");
-      btnEdit = new JButton(new ImageIcon(imgEdit));
-      btnEdit.setToolTipText("Projekt bearbeiten");
-      btnDelete = new JButton(new ImageIcon(imgDelete));
-      btnDelete.setToolTipText("Projekt l\u00f6schen");
+		popupEdit.add(popupEditChangeName);
+		popupEdit.add(popupEditChangeNoOfStacks);
+		popupEdit.add(popupEditAddCards);
+		popupEdit.add(popupEditOrganizeCards);
+		popupEdit.add(popupEditResetProgress);
+	}
 
-      popupEdit = new JPopupMenu();
-      popupEditChangeName = new JMenuItem("Titel bearbeiten..");
-      popupEditChangeNoOfStacks = new JMenuItem("Anzahl Durchl\u00e4ufe \u00e4ndern..");
-      popupEditAddCards = new JMenuItem("Lernkarten hinzuf\u00fcgen..");
-      popupEditOrganizeCards = new JMenuItem("Lernkarten bearbeiten..");
-      popupEditResetProgress = new JMenuItem("Projekt zur\u00fccksetzen..");
+	private void createWidgets() {
+		b = Box.createHorizontalBox();
+		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		setStatus(this.status);
+		lblText = new JLabel(name);
+		lblText.setFont(lblText.getFont().deriveFont(Font.BOLD, 12));
+		btnPlay = new JButton(new ImageIcon(imgPlay));
+		btnPlay.setToolTipText("Lernen");
+		btnEdit = new JButton(new ImageIcon(imgEdit));
+		btnEdit.setToolTipText("Projekt bearbeiten");
+		btnDelete = new JButton(new ImageIcon(imgDelete));
+		btnDelete.setToolTipText("Projekt l\u00f6schen");
 
-      fileChooser = new JFileChooser();
-      fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-      fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg"));
-   }
+		popupEdit = new JPopupMenu();
+		popupEditChangeName = new JMenuItem("Titel bearbeiten..");
+		popupEditChangeNoOfStacks = new JMenuItem("Anzahl Durchl\u00e4ufe \u00e4ndern..");
+		popupEditAddCards = new JMenuItem("Lernkarten hinzuf\u00fcgen..");
+		popupEditOrganizeCards = new JMenuItem("Lernkarten bearbeiten..");
+		popupEditResetProgress = new JMenuItem("Projekt zur\u00fccksetzen..");
 
-   JFileChooser getFileChooser() {
-      return fileChooser;
-   }
+		fileChooser = new JFileChooser();
+		fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg"));
+	}
 
-   void addCard(FlashCard card) {
-      cards.add(card);
-   }
+	JFileChooser getFileChooser() {
+		return fileChooser;
+	}
 
-   void removeCard(FlashCard card) {
-      cards.remove(card);
-   }
+	void addCard(FlashCard card) {
+		cards.add(card);
+	}
 
-   Status getStatus() {
-      return this.status;
-   }
+	void removeCard(FlashCard card) {
+		cards.remove(card);
+	}
 
-   private void setStatus(Status s) {
-      switch (s) {
-      case RED:
-         lblStatus = new JLabel(new ImageIcon(imgRed));
-         lblStatus.setToolTipText("Los geht's - es wurde noch keine Frage korrekt beantwortet");
-         break;
-      case YELLOW:
-         lblStatus = new JLabel(new ImageIcon(imgYellow));
-         lblStatus.setToolTipText("Weiter so - einige Fragen wurden schon korrekt beantwortet");
-         break;
-      case GREEN:
-         lblStatus = new JLabel(new ImageIcon(imgGreen));
-         lblStatus.setToolTipText("Bravo! Alle Fragen sind im letzten Stapel!");
-      }
+	Status getStatus() {
+		return this.status;
+	}
 
-   }
+	private void setStatus(Status s) {
+		switch (s) {
+		case RED:
+			lblStatus = new JLabel(new ImageIcon(imgRed));
+			lblStatus.setToolTipText("Los geht's - es wurde noch keine Frage korrekt beantwortet");
+			break;
+		case YELLOW:
+			lblStatus = new JLabel(new ImageIcon(imgYellow));
+			lblStatus.setToolTipText("Weiter so - einige Fragen wurden schon korrekt beantwortet");
+			break;
+		case GREEN:
+			lblStatus = new JLabel(new ImageIcon(imgGreen));
+			lblStatus.setToolTipText("Bravo! Alle Fragen sind im letzten Stapel!");
+		}
 
-   void changeStatus(Status s) {
-      remove(b);
-      b = Box.createHorizontalBox();
-      b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-      setStatus(s);
-      addWidgets();
-      revalidate();
-   }
+	}
 
-   private void setListeners() {
-      btnDelete.addActionListener(new ActionListener() {
+	void changeStatus(Status s) {
+		remove(b);
+		b = Box.createHorizontalBox();
+		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		setStatus(s);
+		addWidgets();
+		revalidate();
+	}
 
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            final OkOrDisposeDialog d = new OkOrDisposeDialog(parentWindow, 300, 150);
-            d.setTitle("Wirklich l\u00f6schen?");
-            d.setText("<html>Wirklich das Projekt und alle <br>" + "zugeh\u00f6rigen Karten l\u00f6schen?</html>");
-            d.addOkAction(new ActionListener() {
-               @Override
-               public void actionPerformed(ActionEvent e) {
-                  try {
-                     project.delete();
-                  } catch (SQLException exc) {
-                     JOptionPane.showMessageDialog(ProjectPanel.this, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-                           JOptionPane.ERROR_MESSAGE);
-                     Logger.log(exc);
-                  }
-                  parentWindow.updateProjectList();
-                  d.dispose();
-               }
-            });
-            d.setVisible(true);
-         }
-      });
+	private void setListeners() {
+		btnDelete.addActionListener(new ActionListener() {
 
-      btnEdit.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				final OkOrDisposeDialog d = new OkOrDisposeDialog(parentWindow, 300, 150);
+				d.setTitle("Wirklich l\u00f6schen?");
+				d.setText("<html>Wirklich das Projekt und alle <br>" + "zugeh\u00f6rigen Karten l\u00f6schen?</html>");
+				d.addOkAction(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						try {
+							project.delete();
+						} catch (SQLException exc) {
+							JOptionPane.showMessageDialog(ProjectPanel.this, "Ein interner Datenbankfehler ist aufgetreten",
+									"Fehler", JOptionPane.ERROR_MESSAGE);
+							Logger.log(exc);
+						}
+						parentWindow.updateProjectList();
+						d.dispose();
+					}
+				});
+				d.setVisible(true);
+			}
+		});
 
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            Component source = (Component) e.getSource();
-            Dimension size = source.getSize();
+		btnEdit.addActionListener(new ActionListener() {
 
-            int xPos = size.width - btnEdit.getPreferredSize().width;
-            int yPos = size.width; // - btnEdit.getPreferredSize().height;
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Component source = (Component) e.getSource();
+				Dimension size = source.getSize();
 
-            popupEdit.show(source, xPos, yPos);
-         }
+				int xPos = size.width - btnEdit.getPreferredSize().width;
+				int yPos = size.width; // - btnEdit.getPreferredSize().height;
 
-      });
+				popupEdit.show(source, xPos, yPos);
+			}
 
-      popupEditChangeName.addActionListener(new ActionListener() {
+		});
 
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project);
-            p.setVisible(true);
-         }
+		popupEditChangeName.addActionListener(new ActionListener() {
 
-      });
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project);
+				p.setVisible(true);
+			}
 
-      popupEditChangeNoOfStacks.addActionListener(new ActionListener() {
+		});
 
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, ctl);
-            p.setVisible(true);
-         }
+		popupEditChangeNoOfStacks.addActionListener(new ActionListener() {
 
-      });
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ProgressDialog dialog = new ProgressDialog(parentWindow, "Lade Karten...");
+				dialog.setVisible(true);
+				LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.CHANGE_STACKS);
+				task.addPropertyChangeListener(dialog);
+				task.execute();
+				
+			}
 
-      popupEditAddCards.addActionListener(new ActionListener() {
+		});
 
-         @Override
-         public void actionPerformed(ActionEvent e) {
+		popupEditAddCards.addActionListener(new ActionListener() {
 
-            try {
-               if (project.getAllCards() == null) {
-                  project.loadFlashcards();
-                  cards = project.getAllCards();
-               }
-               AddFlashcardDialog d;
-               d = new AddFlashcardDialog(project, ProjectPanel.this);
-               d.setVisible(true);
-            } catch (IOException e1) {
-               // TODO Auto-generated catch block
-               e1.printStackTrace();
-            } catch (SQLException e1) {
-               // TODO Auto-generated catch block
-               e1.printStackTrace();
-            }
-         }
-      });
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ProgressDialog dialog = new ProgressDialog(parentWindow, "Lade Karten...");
+				dialog.setVisible(true);
+				LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.ADD);
+				task.addPropertyChangeListener(dialog);
+				task.execute();
+			}
+		});
 
-      popupEditOrganizeCards.addActionListener(new ActionListener() {
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            try {
-               project.loadFlashcards();
-               cards = project.getAllCards();
-               EditFlashcardsDialog d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
-               d.setVisible(true);
-            } catch (SQLException e1) {
-               // TODO Auto-generated catch block
-               e1.printStackTrace();
-            }
-         }
-      });
+		popupEditOrganizeCards.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ProgressDialog dialog = new ProgressDialog(parentWindow, "Lade Karten...");
+				dialog.setVisible(true);
+				LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.EDIT);
+				task.addPropertyChangeListener(dialog);
+				task.execute();
+			}
+		});
 
-      popupEditResetProgress.addActionListener(new ActionListener() {
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            final OkOrDisposeDialog d = new OkOrDisposeDialog(ProjectPanel.this.getOwner(), 300, 150);
-            d.setText("<html>M\u00f6chtest Du wirklich alle Karten <br> in den ersten Stapel zur\u00fccklegen?</html>");
-            d.setTitle("Lernerfolg zur\u00fccksetzen?");
-            d.addOkAction(new ActionListener() {
-               @Override
-               public void actionPerformed(ActionEvent e) {
-                  try {
-                     project.loadFlashcards();
-                     cards = project.getAllCards();
-                     for (int i = 0; i < cards.size(); i++) {
-                        cards.get(i).setStack(1);
-                        cards.get(i).update();
-                        changeStatus(Status.RED);
-                     }
-                  } catch (SQLException exc) {
-                     JOptionPane.showMessageDialog(ProjectPanel.this,
-                           "Keine Verbindung zur Datenbank. Bitte probiere es noch einmal.", "Datenbankfehler",
-                           JOptionPane.ERROR_MESSAGE);
-                  } catch (IOException e1) {
-                     // TODO Auto-generated catch block
-                     e1.printStackTrace();
-                  }
-                  d.dispose();
-               }
-            });
-            d.setVisible(true);
-         }
-      });
+		popupEditResetProgress.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				final OkOrDisposeDialog d = new OkOrDisposeDialog(ProjectPanel.this.getOwner(), 300, 150);
+				d.setText("<html>M\u00f6chtest Du wirklich alle Karten <br> in den ersten Stapel zur\u00fccklegen?</html>");
+				d.setTitle("Lernerfolg zur\u00fccksetzen?");
+				d.addOkAction(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ProgressDialog dialog = new ProgressDialog(parentWindow, "Lade Karten...");
+						dialog.setVisible(true);
+						LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.RESET);
+						task.addPropertyChangeListener(dialog);
+						task.execute();
+						d.dispose();
+					}
+				});
+				d.setVisible(true);
+			}
+		});
 
-      btnPlay.addActionListener(new ActionListener() {
+		btnPlay.addActionListener(new ActionListener() {
 
-         @Override
-         public void actionPerformed(ActionEvent arg0) {
-            try {
-               project.loadFlashcards();
-               cards = project.getAllCards();
-               ChooseStacksDialog chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(), ProjectPanel.this.cards,
-                     ProjectPanel.this.project);
-               chooseStacks.setVisible(true);
-            } catch (SQLException exc) {
-               JOptionPane.showMessageDialog(ProjectPanel.this, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
-                     JOptionPane.ERROR_MESSAGE);
-               Logger.log(exc);
-            }
-         }
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+					ProgressDialog dialog = new ProgressDialog(parentWindow, "Lade Karten...");
+					dialog.setVisible(true);
+					LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.PLAY);
+					task.addPropertyChangeListener(dialog);
+					task.execute();
+			}
 
-      });
+		});
 
-   }
+	}
+	
+	private void showAddFlashcardsDialog(){
+		cards = project.getAllCards();
+		AddFlashcardDialog d;
+		try {
+			d = new AddFlashcardDialog(project, ProjectPanel.this);
+			d.setVisible(true);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	private void showEditFlashcardsDialog(){
+		cards = project.getAllCards();
+		EditFlashcardsDialog d;
+		try {
+			d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
+			d.setVisible(true);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	private void resetProgress(){
+		cards = project.getAllCards();
+		for (int i = 0; i < cards.size(); i++) {
+			cards.get(i).setStack(1);
+			try {
+				cards.get(i).update();
+				changeStatus(Status.RED);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+	}
+	
+	private void prepareLearningSession(){
+		cards = project.getAllCards();
+		ChooseStacksDialog chooseStacks;
+		try {
+			chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(),
+					ProjectPanel.this.cards, ProjectPanel.this.project);
+			chooseStacks.setVisible(true);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void showChangeStacksDialog() {
+		ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, ctl);
+		p.setVisible(true);
+	}
+
+	public void resume(DialogType type) {
+		switch (type) {
+		case ADD:
+			showAddFlashcardsDialog();
+			break;
+		case EDIT:
+			showEditFlashcardsDialog();
+			break;
+		case RESET:
+			resetProgress();
+			break;
+		case PLAY:
+			prepareLearningSession();
+			break;
+		case CHANGE_STACKS:
+			showChangeStacksDialog();
+			break;
+		}
+		
+	}
 
 }

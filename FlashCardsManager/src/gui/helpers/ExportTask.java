@@ -1,7 +1,6 @@
 package gui.helpers;
 
 import gui.MainWindow;
-import gui.ProgressDialog;
 
 import java.awt.Cursor;
 import java.io.IOException;
@@ -17,7 +16,7 @@ import utils.Logger;
 import core.LearningProject;
 import core.ProjectsController;
 
-public class ExportTask extends SwingWorker<Void, Void> {
+public class ExportTask extends SwingWorker<Void, Void> implements IProgressPresenter{
     String pathToExport;
     ProgressDialog dialog;
     MainWindow mw;
@@ -35,6 +34,12 @@ public class ExportTask extends SwingWorker<Void, Void> {
     public void changeProgress(int progress) {
        setProgress(progress);
     }
+    
+	@Override
+	public void changeInfo(String text) {
+		dialog.changeInfo(text);
+		
+	}
 
     @Override
     protected Void doInBackground() {

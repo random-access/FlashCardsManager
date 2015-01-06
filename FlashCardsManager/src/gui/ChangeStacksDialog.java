@@ -67,7 +67,6 @@ public class ChangeStacksDialog extends JDialog {
                // verarbeite Eingabe in DB
                int nr = Integer.parseInt(txtNoOfStacks.getText());
                pnl.noOfStacks = nr;
-               project.loadFlashcards();
                project.setNumberOfStacks(nr);
                project.update();
                owner.updateProjectStatus(project);

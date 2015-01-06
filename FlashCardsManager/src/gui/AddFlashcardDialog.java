@@ -94,7 +94,12 @@ public class AddFlashcardDialog extends JDialog {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		lblTitle.setText("Neue Lernkarte...");
+		try {
+			lblTitle.setText("Karte " + card.getNumberInProj() + " bearbeiten...");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		setPicButtons();
 		pnlBottom.remove(btnSaveAndNext);
 		btnDiscard.setText("abbrechen");

@@ -1,5 +1,6 @@
 package core;
 
+import gui.helpers.IProgressPresenter;
 import importExport.XMLLearningProject;
 
 import java.io.IOException;
@@ -43,8 +44,8 @@ public class LearningProject {
 		this.numberOfStacks = numberOfStacks;
 	}
 
-	public void loadFlashcards() throws SQLException {
-		allCards = dbex.getAllCards(this);
+	public void loadFlashcards(IProgressPresenter t) throws SQLException {
+		allCards = dbex.getAllCards(this, t);
 	}
 
 	public void store() throws SQLException {

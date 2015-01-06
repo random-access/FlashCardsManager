@@ -1,5 +1,6 @@
 package storage;
 
+import gui.helpers.IProgressPresenter;
 import importExport.XMLMedia;
 
 import java.io.File;
@@ -264,19 +265,22 @@ public class DBExchanger {
 		conn.commit();
 	}
 
-	public ArrayList<FlashCard> getAllCards(LearningProject p) throws SQLException {
+	public ArrayList<FlashCard> getAllCards(LearningProject proj, IProgressPresenter p) throws SQLException {
+		int noOfCards = this.countRows(proj);
+		p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
 		ArrayList<FlashCard> cards = new ArrayList<FlashCard>();
 		Statement st = conn.createStatement();
-		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId());
+		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
 		conn.commit();
-		if (StartApp.DEBUG) System.out.println("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId());
+		if (StartApp.DEBUG) System.out.println("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
 		ResultSet res = st.getResultSet();
 		while (res.next()) {
-			FlashCard f = new FlashCard(res.getInt(1), p, res.getInt(3), res.getString(4), res.getString(5), null, null,
+			FlashCard f = new FlashCard(res.getInt(1), proj, res.getInt(3), res.getString(4), res.getString(5), null, null,
 					res.getInt(6), res.getInt(7));
 			f.setPathToQuestionPic(getPathToPic(f, PicType.QUESTION));
 			f.setPathToAnswerPic(getPathToPic(f, PicType.ANSWER));
 			cards.add(f);
+			p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
 		}
 		res.close();
 		return cards;
@@ -381,6 +385,22 @@ public class DBExchanger {
 		rs.close();
 		st.close();
 		return count;
+	}
+	
+	public int getCardNumberInProject(FlashCard f) throws SQLException {
+		int number = 0;
+		Statement st = conn.createStatement();
+		st.execute("SELECT CARD_ID_PK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " 
+				+ f.getProj().getId() + " ORDER BY CARD_ID_PK ASC");
+		ResultSet res = st.getResultSet();
+		while (res.next()) {
+			number++;
+			int id = res.getInt(1);
+			if (id == f.getId()) {
+				return number;
+			}
+		}
+		return number;
 	}
 
 	private int nextMediaId() throws SQLException {
