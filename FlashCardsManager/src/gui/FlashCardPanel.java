@@ -44,7 +44,7 @@ public class FlashCardPanel extends JPanel {
 	private EditFlashcardsDialog editDialog;
 
 	public FlashCardPanel(FlashCard card, LearningProject project, Status status, ProjectPanel projectPnl,
-			EditFlashcardsDialog editDialog) {
+			EditFlashcardsDialog editDialog) throws SQLException {
 		this.status = status;
 		this.card = card;
 		this.projectPnl = projectPnl;
@@ -56,12 +56,12 @@ public class FlashCardPanel extends JPanel {
 		setListeners();
 	}
 
-	private void createWidgets() {
+	private void createWidgets() throws SQLException {
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		setStatus(this.status);
 
-		lblText = new JLabel("Frage " + card.getId() + ": " + getQuestionTitle(card));
+		lblText = new JLabel("Frage " + card.getNumberInProj() + ": " + getQuestionTitle(card));
 		lblText.setFont(lblText.getFont().deriveFont(Font.BOLD, 12));
 		btnEdit = new JButton(new ImageIcon(imgEdit));
 		btnEdit.setToolTipText("FlashCard bearbeiten");

@@ -2,11 +2,10 @@ package exc;
 
 import java.awt.Component;
 
-import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
-import app.StartApp;
 import utils.Logger;
+import app.StartApp;
 
 public class CustomErrorHandling {
 	

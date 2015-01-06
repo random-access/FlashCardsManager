@@ -81,6 +81,10 @@ public class FlashCard {
 	public int getId() {
 		return this.id;
 	}
+	
+	public int getNumberInProj() throws SQLException {
+		return dbex.getCardNumberInProject(this);
+	}
 
 	public void nextLevel() throws SQLException {
 		int maxStack = proj.getNumberOfStacks();

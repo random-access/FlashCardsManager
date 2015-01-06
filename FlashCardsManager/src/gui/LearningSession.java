@@ -26,8 +26,9 @@ public class LearningSession extends JDialog {
 
 	static {
 		try {
-			// imgFlashcardInfo = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-			//		"img/AddFlashcardInfo_450x338.png"));
+			// imgFlashcardInfo =
+			// ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
+			// "img/AddFlashcardInfo_450x338.png"));
 			imgSwitch = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSwitch_28x28.png"));
 			imgPrev = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPrev_28x28.png"));
 			imgNext = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgNext_28x28.png"));
@@ -192,6 +193,7 @@ public class LearningSession extends JDialog {
 				centerPanel.add(pnlQ);
 				centerPanel.revalidate();
 				centerPanel.repaint();
+
 			}
 		});
 
@@ -281,10 +283,10 @@ public class LearningSession extends JDialog {
 					currentCard.getQuestionWidth());
 			pnlA = new PicAndTextPanel(currentCard.getPathToAnswerPic(), currentCard.getAnswer(), PicType.ANSWER, false,
 					currentCard.getAnswerWidth());
-			lblTitle.setText(project.getTitle() + " - Karte " + currentCard.getId());
+			lblTitle.setText(project.getTitle() + " - Karte " + currentCard.getNumberInProj());
 			progress.setValue(progress.getValue() - 1);
 			progress.setString(progress.getValue() + " von " + progress.getMaximum());
-		} catch (IOException exc) {
+		} catch (IOException | SQLException exc) {
 			JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Fehler ist aufgetreten.", "Fehler",
 					JOptionPane.ERROR_MESSAGE);
 			Logger.log(exc);
@@ -311,15 +313,14 @@ public class LearningSession extends JDialog {
 						false, currentCard.getQuestionWidth());
 				pnlA = new PicAndTextPanel(currentCard.getPathToAnswerPic(), currentCard.getAnswer(), PicType.ANSWER, false,
 						currentCard.getAnswerWidth());
-				lblTitle.setText(project.getTitle() + " - Karte " + currentCard.getId());
+				lblTitle.setText(project.getTitle() + " - Karte " + currentCard.getNumberInProj());
 			}
 			progress.setValue(progress.getValue() + 1);
 			progress.setString(progress.getValue() + " von " + progress.getMaximum());
-		} catch (IOException exc) {
+		} catch (IOException | SQLException exc) {
 			JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
 					JOptionPane.ERROR_MESSAGE);
 			Logger.log(exc);
-
 		}
 	}
 

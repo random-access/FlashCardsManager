@@ -1,7 +1,6 @@
 package gui.helpers;
 
 import gui.MainWindow;
-import gui.ProgressDialog;
 
 import java.awt.Cursor;
 import java.io.IOException;
@@ -15,7 +14,7 @@ import javax.xml.stream.XMLStreamException;
 import utils.Logger;
 import core.ProjectsController;
 
-public class ImportTask extends SwingWorker<Void, Void> {
+public class ImportTask extends SwingWorker<Void, Void> implements IProgressPresenter {
 	String pathToImport;
 	ProgressDialog dialog;
 	MainWindow mw;
@@ -30,6 +29,11 @@ public class ImportTask extends SwingWorker<Void, Void> {
 
 	public void changeProgress(int progress) {
 		super.setProgress(progress);
+	}
+	
+	@Override
+	public void changeInfo(String text) {
+		dialog.changeInfo(text);		
 	}
 
 	@Override

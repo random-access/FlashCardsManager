@@ -1,9 +1,7 @@
 package gui;
 
 import exc.CustomErrorHandling;
-import gui.helpers.ImportTask;
-import gui.helpers.MyMenu;
-import gui.helpers.MyMenuItem;
+import gui.helpers.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -264,7 +262,7 @@ public class MainWindow extends JFrame {
 		}
 
 		private void doTask(String pathToImport) {
-			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "... importieren ...");
+			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "Vorbereiten...");
 			dialog.setVisible(true);
 			ImportTask task = new ImportTask(pathToImport, dialog, MainWindow.this, ctl);
 			task.addPropertyChangeListener(dialog);

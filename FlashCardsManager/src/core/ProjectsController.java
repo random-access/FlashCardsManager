@@ -1,7 +1,6 @@
 package core;
 
-import gui.helpers.ExportTask;
-import gui.helpers.ImportTask;
+import gui.helpers.*;
 import importExport.ProjectExporter;
 import importExport.ProjectImporter;
 
@@ -53,13 +52,13 @@ public class ProjectsController {
 		return projects;
 	}
 
-	public void importProjects(String pathToImport, ImportTask task) throws NumberFormatException, XMLStreamException, IOException, SQLException {
-		ProjectImporter importer = new ProjectImporter(pathToImport, pathToMediaFolder, this);
+	public void importProjects(String pathToImport, IProgressPresenter p) throws NumberFormatException, XMLStreamException, IOException, SQLException {
+		ProjectImporter importer = new ProjectImporter(pathToImport, pathToMediaFolder, this, p);
 		importer.doImport();
 	}
 
-	public void exportProject(ArrayList<LearningProject> projects, String pathToExport, ExportTask exportTask) throws SQLException, XMLStreamException, IOException {
-		ProjectExporter exporter = new ProjectExporter(projects, pathToMediaFolder, pathToExport);
+	public void exportProject(ArrayList<LearningProject> projects, String pathToExport, IProgressPresenter p) throws SQLException, XMLStreamException, IOException {
+		ProjectExporter exporter = new ProjectExporter(projects, pathToMediaFolder, pathToExport, p);
 		exporter.doExport();
 	}
 	

@@ -1,6 +1,6 @@
 package gui;
 
-import gui.helpers.ExportTask;
+import gui.helpers.*;
 import importExport.XMLFiles;
 
 import java.awt.*;
@@ -95,7 +95,6 @@ public class ChooseProjectsDialog extends JDialog {
 		ArrayList<LearningProject> selectedProjects = new ArrayList<LearningProject>();
 		for (int i = 0; i < boxes.length; i++) {
 			if (boxes[i].isSelected()) {
-			   allProjects.get(i).loadFlashcards();
 				selectedProjects.add(allProjects.get(i));
 			}
 		}
@@ -115,7 +114,7 @@ public class ChooseProjectsDialog extends JDialog {
 		}
 
 		private void doTask(String pathToExport) throws SQLException {
-			ProgressDialog dialog = new ProgressDialog(owner, "... exportieren ...");
+			ProgressDialog dialog = new ProgressDialog(owner, "Vorbereiten...");
 			dialog.setVisible(true);
 			ExportTask task = new ExportTask(pathToExport, getSelectedProjects(), dialog, owner, ctl);
 			task.addPropertyChangeListener(dialog);

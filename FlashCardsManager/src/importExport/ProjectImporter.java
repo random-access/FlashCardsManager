@@ -1,13 +1,13 @@
 package importExport;
 
+import gui.helpers.IProgressPresenter;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import javax.xml.stream.XMLStreamException;
-
-import org.apache.derby.tools.sysinfo;
 
 import storage.PicType;
 import core.*;
@@ -17,33 +17,35 @@ public class ProjectImporter {
 	String pathToImport;
 	String pathToImportMediaFolder;
 	String pathToMediaFolder;
+	IProgressPresenter p;
 
 	ArrayList<LearningProject> importProjects;
 	ArrayList<XMLLearningProject> xmlProjects;
 	ArrayList<XMLFlashCard> xmlFlashCards;
 	ArrayList<XMLMedia> xmlMedia;
 
-	public ProjectImporter(String pathToImport, String pathToMediaFolder, ProjectsController ctl) {
+	public ProjectImporter(String pathToImport, String pathToMediaFolder, ProjectsController ctl, IProgressPresenter p) {
 		this.ctl = ctl;
 		this.pathToImport = pathToImport;
 		this.pathToMediaFolder = pathToMediaFolder;
+		this.p = p;
 		pathToImportMediaFolder = pathToImport + "/" + XMLFiles.MEDIA_FOLDER.getName();
 	}
 
 	public void doImport() throws NumberFormatException, XMLStreamException, IOException, SQLException {
-		System.out.println("in importer");
 		readXMLLists();
 		convertXMLObjects();
-		System.out.println("success");
 	}
 
 	private void convertXMLObjects() throws SQLException, IOException {
+		p.changeProgress(0);
 		importProjects = new ArrayList<LearningProject>();
 		Iterator<XMLLearningProject> it = xmlProjects.iterator();
-		while (it.hasNext()) {
+		while (it.hasNext()) {	
 			XMLLearningProject xmlP = it.next();
-			LearningProject p = xmlP.toLearningProject(ctl);
-			p.store();
+			p.changeInfo("Importiere " + xmlP.getProjTitle() + "...");
+			LearningProject proj = xmlP.toLearningProject(ctl);
+			proj.store();
 			for (XMLFlashCard xmlC : xmlFlashCards) {
 				System.out.println("for " + xmlC.getId());
 				if (xmlC.getProjId() == xmlP.getProjId()) {
@@ -59,20 +61,25 @@ public class ProjectImporter {
 							}
 						}
 					}
-					FlashCard c = xmlC.toFlashCard(p, qPath, aPath);
+					FlashCard c = xmlC.toFlashCard(proj, qPath, aPath);
 					c.store();
 					System.out.println("Stored " + xmlC.getId());
 				}
 			}
+			p.changeProgress(Math.min(p.getProgress() + 100/xmlProjects.size(), 100));
 		}
 	}
 
 	private void readXMLLists() throws NumberFormatException, XMLStreamException, IOException {
+		p.changeProgress(0);
+		p.changeInfo("Lese Daten...");
 		XMLExchanger ex = new XMLExchanger();
 		xmlProjects = ex.readProjects(pathToImport + "/" + XMLFiles.LEARNING_PROJECTS.getName());
+		p.changeProgress(33);
 		xmlMedia = ex.readMedia(pathToImport + "/" + XMLFiles.MEDIA.getName());
+		p.changeProgress(66);
 		xmlFlashCards = ex.readFlashcards(pathToImport + "/" + XMLFiles.FLASHCARDS.getName());
-		System.out.println("read xml");
+		p.changeProgress(99);
 	}
 
 }
