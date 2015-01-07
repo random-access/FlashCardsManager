@@ -96,6 +96,10 @@ public class MainWindow extends JFrame {
 			CustomErrorHandling.showDatabaseError(this, e);
 		}
 	}
+	
+	public ProjectsController getProjectsController() {
+	   return this.ctl;
+	}
 
 	void computeProjectPanels() throws SQLException {
 		ctl.loadProjects();

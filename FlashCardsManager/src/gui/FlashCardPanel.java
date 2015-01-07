@@ -37,6 +37,7 @@ public class FlashCardPanel extends JPanel {
 	private Box b;
 	private JLabel lblStatus, lblText;
 	private JButton btnEdit, btnDelete;
+	private JCheckBox chkSelected;
 	private Status status;
 	private FlashCard card;
 	private LearningProject project;
@@ -60,7 +61,7 @@ public class FlashCardPanel extends JPanel {
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		setStatus(this.status);
-
+		chkSelected = new JCheckBox();
 		lblText = new JLabel("Frage " + card.getNumberInProj() + ": " + getQuestionTitle(card));
 		lblText.setFont(lblText.getFont().deriveFont(Font.BOLD, 12));
 		btnEdit = new JButton(new ImageIcon(imgEdit));
@@ -71,6 +72,8 @@ public class FlashCardPanel extends JPanel {
 
 	private void addWidgets() {
 		this.add(b, BorderLayout.CENTER);
+		b.add(chkSelected);
+		b.add(Box.createRigidArea(new Dimension(15, 0)));
 		b.add(lblStatus);
 		b.add(Box.createRigidArea(new Dimension(15, 0)));
 		b.add(lblText);
@@ -162,6 +165,14 @@ public class FlashCardPanel extends JPanel {
 				
 			}
 		});
+	}
+	
+	public boolean isSelected() {
+	   return chkSelected.isSelected();
+	}
+	
+	public FlashCard getCard() {
+	   return this.card;
 	}
 
 	void changeStatus(Status s) {

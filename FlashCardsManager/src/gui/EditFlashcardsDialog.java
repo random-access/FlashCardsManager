@@ -44,7 +44,7 @@ public class EditFlashcardsDialog extends JDialog {
    JScrollPane scpCenter;
    ArrayList<FlashCardPanel> cardPnls;
    ArrayList<FlashCard> cards;
-   private JButton btnAddCard, btnClose;
+   private JButton btnTransfer, btnAddCard, btnClose;
 
    private JMenuBar mnuBar;
    private JMenu mnuSettings;
@@ -96,6 +96,8 @@ public MainWindow getOwner() {
       centerBox = Box.createVerticalBox();
 
       scpCenter = new JScrollPane(pnlCenter);
+      btnTransfer = new JButton("Verschieben...");
+      btnTransfer.setToolTipText("Ausgew\u00e4hlte Lernkarten in anderes Projekt verschieben");
       btnAddCard = new JButton(new ImageIcon(imgPlus));
       btnAddCard.setToolTipText("Neue Lernkarte hinzuf\u00fcgen");
 
@@ -122,7 +124,8 @@ public MainWindow getOwner() {
       this.add(pnlSouth, BorderLayout.SOUTH);
       
       pnlSouth.add(btnClose);
-
+      pnlControls.add(btnTransfer);
+      pnlControls.add(Box.createHorizontalStrut(4));
       pnlControls.add(btnAddCard);
       pnlControls.add(Box.createHorizontalStrut(4));
       pnlControls.add(mnuBar);
@@ -177,8 +180,27 @@ public MainWindow getOwner() {
       revalidate();
       repaint();
    }
+   
+   private ArrayList<FlashCard> getSelectedCards() {
+      ArrayList<FlashCard> cards = new ArrayList<FlashCard>();
+      for (FlashCardPanel pnl : cardPnls) {
+         if (pnl.isSelected()) {
+            cards.add(pnl.getCard());
+         }
+      }
+      return cards;
+   }
 
    private void setListeners() {
+      btnTransfer.addActionListener(new ActionListener() {
+         
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            ChooseTargetProjectDialog d = new ChooseTargetProjectDialog(owner.getProjectsController(), owner, getSelectedCards());
+            d.setVisible(true);
+         }
+      });
+      
       btnAddCard.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {

@@ -23,5 +23,11 @@ public class PicUtils {
 		Path targetPath = Paths.get(target);
 		Files.copy(srcPath, targetPath, StandardCopyOption.REPLACE_EXISTING);
 	}
+	
+	public static void movePicFile(String src, String target) throws IOException {
+	   Path srcPath = Paths.get(src);
+      Path targetPath = Paths.get(target);
+      Files.move(srcPath, targetPath, StandardCopyOption.REPLACE_EXISTING);
+	}
 
 }

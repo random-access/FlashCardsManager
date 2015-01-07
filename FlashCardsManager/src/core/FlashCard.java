@@ -64,6 +64,20 @@ public class FlashCard {
 		mex.storePic(this, PicType.ANSWER);
 		dbex.addFlashcard(this);
 	}
+	
+	public void transferTo(LearningProject newProj, boolean keepSuccess) throws SQLException, IOException {
+	   proj.removeCard(this);
+	   setProj(newProj);
+	   if (keepSuccess) {
+	      setStack(Math.min(getStack(), newProj.getNumberOfStacks()));
+	   } else {
+	      setStack(1);
+	   }
+	   newProj.addCard(this);
+	   mex.transferPic(this, PicType.QUESTION);
+	   mex.transferPic(this, PicType.ANSWER);
+	   dbex.updateFlashcard(this);
+	}
 
 	public void update() throws SQLException, IOException {
 		mex.storePic(this, PicType.QUESTION);
