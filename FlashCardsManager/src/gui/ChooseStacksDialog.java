@@ -23,9 +23,9 @@ public class ChooseStacksDialog extends JDialog {
 
 	private JPanel pnlControls;
 	private Box centerBox;
+	private JScrollPane scpCenter;
 	private StackBox[] boxes;
 	private JButton btnOk, btnDiscard;
-	private boolean activeSelection;
 
 	ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards,
 			LearningProject project) throws SQLException {
@@ -50,8 +50,7 @@ public class ChooseStacksDialog extends JDialog {
 		createWidgets();
 		addWidgets();
 		setListeners();
-
-		pack();
+		setSize(getPreferredSize().width+10,300);
 		setLocationRelativeTo(owner);
 	}
 
@@ -59,18 +58,25 @@ public class ChooseStacksDialog extends JDialog {
 	private void createWidgets() throws SQLException {
 		pnlControls = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 		centerBox = Box.createVerticalBox();
+		centerBox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		scpCenter = new JScrollPane(centerBox);
+		scpCenter.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		boxes = new StackBox[project.getNumberOfStacks()];
 		for (int i = 1; i <= project.getNumberOfStacks(); i++) {
-			boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i));
+			boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i), ChooseStacksDialog.this);
+			if (project.getNumberOfCards(i) == 0) {
+				boxes[i-1].setEnabled(false);
+			}
 		}
 		btnOk = new JButton("Ok");
+		btnOk.setEnabled(false);
 		btnDiscard = new JButton("Abbrechen");
 
 	}
 
 	// ADD WIDGETS: put the GUI together
 	private void addWidgets() {
-		this.add(centerBox, BorderLayout.CENTER);
+		this.add(scpCenter, BorderLayout.CENTER);
 		this.add(pnlControls, BorderLayout.SOUTH);
 		for (int i = 1; i <= project.getNumberOfStacks(); i++) {
 			centerBox.add(boxes[i - 1]);
@@ -96,14 +102,12 @@ public class ChooseStacksDialog extends JDialog {
 						ChooseStacksDialog.this.owner,
 						ChooseStacksDialog.this.project,
 						ChooseStacksDialog.this.sessionCards);
-				if (activeSelection) {
 					newSession.setVisible(true);
 					ChooseStacksDialog.this.dispose();
-				} else {
-					JOptionPane.showMessageDialog(ChooseStacksDialog.this,
-							"Bitte Stapel mit Karten ausw\u00e4hlen!", "Achtung",
-							JOptionPane.WARNING_MESSAGE);
-				}
+
+//					JOptionPane.showMessageDialog(ChooseStacksDialog.this,
+//							"Bitte Stapel mit Karten ausw\u00e4hlen!", "Achtung",
+//							JOptionPane.WARNING_MESSAGE);
 			}
 		});
 	}
@@ -153,11 +157,20 @@ public class ChooseStacksDialog extends JDialog {
 													// upwards;
 			if (boxes[stack].isSelected()) { // get only cards from selected
 												// stacks
-				activeSelection = true; // for error msg when no selection
 				sessionCards.add(currentCard);
 			}
 		}
 		return sessionCards;
+	}
+
+	public void controlOkButton() {
+		boolean someSelection = false;
+		for (StackBox box : boxes) {
+			if (box.isSelected()) {
+				someSelection = true;
+			}
+		}
+		btnOk.setEnabled(someSelection);
 	}
 
 }

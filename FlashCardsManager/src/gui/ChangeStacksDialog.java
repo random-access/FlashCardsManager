@@ -1,7 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -14,6 +13,8 @@ import core.LearningProject;
 import core.ProjectsController;
 import exc.InvalidValueException;
 import exc.NoValueException;
+import gui.helpers.CustomColor;
+import gui.helpers.TransparencyTextField;
 
 @SuppressWarnings("serial")
 public class ChangeStacksDialog extends JDialog {
@@ -72,21 +73,25 @@ public class ChangeStacksDialog extends JDialog {
                owner.updateProjectStatus(project);
                ChangeStacksDialog.this.dispose();
             } catch (NoValueException exc) {
+            	txtNoOfStacks.setBackground(CustomColor.BACKGROUND_ERROR_RED);
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
-                     "Es wurde kein Wert f�r die Stapelanzahl eingegeben.",
+                     "Es wurde kein Wert f\u00fcr die Stapelanzahl eingegeben.",
                      "Fehler", JOptionPane.ERROR_MESSAGE);
-            } catch (NumberFormatException | InvalidValueException exc) {
+            } catch (NumberFormatException exc) {
+            	txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
-                     "Ung\u00fcltige Zeichenfolge.", "Fehler",
+                     "Ung\u00fcltige Zeichen in Stapelanzahl.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);
-            } catch (SQLException exc) {
+            } catch (SQLException | IOException exc) {
+            	ChangeStacksDialog.this.dispose();
                JOptionPane.showMessageDialog(ChangeStacksDialog.this,
                      "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
                      JOptionPane.ERROR_MESSAGE);
                Logger.log(exc);
-            } catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+			} catch (InvalidValueException exc) {
+				txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
+				JOptionPane.showMessageDialog(ChangeStacksDialog.this, "Okay - das sind nun wirklich zu viele Stapel...", "Fehler", JOptionPane.ERROR_MESSAGE);
+				
 			}
          }
       });
@@ -106,7 +111,7 @@ public class ChangeStacksDialog extends JDialog {
       pnlBtns = new JPanel(new FlowLayout(FlowLayout.CENTER));
       pnlBtns.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
       lblNoOfStacks = new JLabel("Anzahl Durchl\u00e4ufe:  ");
-      txtNoOfStacks = new JTextField(String.valueOf(pnl.noOfStacks), 5);
+      txtNoOfStacks = new TransparencyTextField(String.valueOf(pnl.noOfStacks), 5);
       txtNoOfStacks.setHorizontalAlignment(SwingConstants.CENTER);
       btnOk = new JButton("  OK  ");
       btnDiscard = new JButton(" Abbrechen ");

@@ -135,7 +135,7 @@ public class LearningProject {
 	}
 
 	public boolean validNoOfStacks(int noOfStacks) {
-		return (noOfStacks > 0);
+		return (noOfStacks > 0 && noOfStacks < 100);
 	}
 
 	// COUNT CARDS in whole project / stacks

@@ -11,6 +11,8 @@ import javax.swing.text.AbstractDocument;
 import utils.*;
 import core.LearningProject;
 import exc.NoValueException;
+import gui.helpers.CustomColor;
+import gui.helpers.TransparencyTextField;
 
 @SuppressWarnings("serial")
 public class ChangeTitleDialog extends JDialog {
@@ -65,6 +67,7 @@ public class ChangeTitleDialog extends JDialog {
                owner.updateProjectList();
                ChangeTitleDialog.this.dispose();
             } catch (NoValueException exc) {
+            	txtTitle.setBackground(CustomColor.BACKGROUND_ERROR_RED);
                JOptionPane.showMessageDialog(ChangeTitleDialog.this,
                      "Es wurde kein Titel eingegeben.",
                      "Fehler", JOptionPane.ERROR_MESSAGE);
@@ -94,9 +97,9 @@ public class ChangeTitleDialog extends JDialog {
       pnlBtns.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
       lblTitle = new JLabel("Titel:  ");
       if (setWidthInCols()) {
-         txtTitle = new JTextField(pnl.lblText.getText(), 10);
+         txtTitle = new TransparencyTextField(pnl.lblText.getText(), 10);
       } else {
-         txtTitle = new JTextField(pnl.lblText.getText());
+         txtTitle = new TransparencyTextField(pnl.lblText.getText());
       }
       txtTitle.setHorizontalAlignment(SwingConstants.CENTER);
       ((AbstractDocument) txtTitle.getDocument())
