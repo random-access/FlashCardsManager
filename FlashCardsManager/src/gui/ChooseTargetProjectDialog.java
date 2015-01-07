@@ -2,64 +2,112 @@ package gui;
 
 import gui.helpers.MyComboBoxModel;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.FlowLayout;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.Box;
-import javax.swing.ComboBoxModel;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
-import core.FlashCard;
-import core.ProjectsController;
+import core.*;
 
+@SuppressWarnings("serial")
 public class ChooseTargetProjectDialog extends JDialog {
-   private Component owner;
-   private ArrayList<FlashCard> cards;
+	private ArrayList<FlashCard> cardsToTransfer;
+	private LearningProject srcProj;
+	private ProjectsController ctl;
+	private EditFlashcardsDialog editDialog;
 
-   private JPanel pnlBottom;
-   private Box centerBox;
-   private JButton btnDiscard, btnOk;
-   private JLabel lblChooseProjects;
-   private JComboBox<String> cmbChooseProject;
-   private JCheckBox chkKeepProgress;
+	private JPanel pnlBottom, pnlCenter, pnlGrid;
+	private JButton btnDiscard, btnOk;
+	private JLabel lblSourceProject, lblSourceProjectName, lblTargetProject;
+	private JComboBox<LearningProject> cmbChooseProject;
+	private JCheckBox chkKeepProgress;
+	
 
-   public ChooseTargetProjectDialog(ProjectsController ctl, MainWindow owner, ArrayList<FlashCard> cards) {
-      super(owner, true);
-      this.owner = owner;
-      this.cards = cards;
-      
-      setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	public ChooseTargetProjectDialog(ProjectsController ctl, MainWindow owner, EditFlashcardsDialog editDialog, LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
+		super(owner, true);
+		setTitle("Lernkarten verschieben...");
+		this.cardsToTransfer = cardsToTransfer;
+		this.srcProj = srcProj;
+		this.ctl = ctl;
+		this.editDialog = editDialog;
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-      pnlBottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
-      btnDiscard = new JButton("abbrechen");
-      btnOk = new JButton("ok");
-      
-      centerBox = Box.createVerticalBox();
-      ComboBoxModel<String> model = new MyComboBoxModel(ctl.getProjects());
-      cmbChooseProject = new JComboBox<String>(model);
-      lblChooseProjects = new JLabel("Projekt ausw\u00e4hlen");
-      chkKeepProgress = new JCheckBox("Lernfortschritt beibehalten");
-      
-      add(pnlBottom, BorderLayout.SOUTH);
-      pnlBottom.add(btnDiscard);
-      pnlBottom.add(btnOk);
-      
-      add(centerBox, BorderLayout.CENTER);
-      centerBox.add(lblChooseProjects);
-      centerBox.add(cmbChooseProject);
-      centerBox.add(chkKeepProgress);
-      
-      pack();
-      setLocationRelativeTo(owner);
-   }
-   
+		createWidgets();
+		addWidgets();
+		setListeners();
 
+		pack();
+		setLocationRelativeTo(owner);
+	}
+
+	private void addWidgets() {
+		add(pnlBottom, BorderLayout.SOUTH);
+		pnlBottom.add(btnDiscard);
+		pnlBottom.add(btnOk);
+		add(pnlCenter, BorderLayout.CENTER);
+		pnlCenter.add(pnlGrid);
+		pnlGrid.add(lblSourceProject);
+		pnlGrid.add(lblTargetProject);
+		pnlGrid.add(lblSourceProjectName);
+		pnlGrid.add(cmbChooseProject);
+		pnlGrid.add(chkKeepProgress);
+	}
+
+	private void createWidgets() {
+		pnlBottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
+		btnDiscard = new JButton("abbrechen");
+		btnOk = new JButton("ok");
+		pnlCenter = new JPanel(new FlowLayout(FlowLayout.CENTER));
+		pnlGrid = new JPanel(new GridLayout(0, 2, 40, 10));
+		pnlCenter.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		MyComboBoxModel model = new MyComboBoxModel(ctl.getProjects());
+		cmbChooseProject = new JComboBox<LearningProject>(model);
+		cmbChooseProject.setSelectedItem("<Projekt ausw\u00e4hlen>");
+		lblTargetProject = new JLabel("Zielprojekt:");
+		lblTargetProject.setAlignmentX(LEFT_ALIGNMENT);
+		lblSourceProject = new JLabel("Derzeitiges Projekt:");
+		lblSourceProjectName = new JLabel(srcProj.getTitle());
+		lblSourceProject.setFont(getFont().deriveFont(Font.BOLD));
+		lblTargetProject.setFont(getFont().deriveFont(Font.BOLD));
+
+		chkKeepProgress = new JCheckBox("Lernfortschritt mitnehmen");
+
+	}
+
+	private void setListeners() {
+		btnOk.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				LearningProject targetProject = (LearningProject) cmbChooseProject.getModel().getSelectedItem();
+				try {
+					for (FlashCard f : cardsToTransfer) {
+						f.transferTo(targetProject, chkKeepProgress.isSelected());
+					}
+					editDialog.updateCardPanels();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} finally {
+					ChooseTargetProjectDialog.this.dispose();
+				}
+			}
+		});
+
+		btnDiscard.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ChooseTargetProjectDialog.this.dispose();
+			}
+		});
+	}
 
 }

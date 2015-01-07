@@ -7,7 +7,7 @@ import javax.swing.DefaultComboBoxModel;
 import core.LearningProject;
 
 @SuppressWarnings("serial")
-public class MyComboBoxModel extends DefaultComboBoxModel<String> {
+public class MyComboBoxModel extends DefaultComboBoxModel<LearningProject> {
    
    private ArrayList<LearningProject> data;
    
@@ -21,8 +21,8 @@ public class MyComboBoxModel extends DefaultComboBoxModel<String> {
    }
 
    @Override
-   public String getElementAt(int index) {
-      return data.get(index).getTitle();
+   public LearningProject getElementAt(int index) {
+      return data.get(index);
    }
 
 }

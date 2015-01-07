@@ -73,7 +73,6 @@ public class FlashCard {
 	   } else {
 	      setStack(1);
 	   }
-	   newProj.addCard(this);
 	   mex.transferPic(this, PicType.QUESTION);
 	   mex.transferPic(this, PicType.ANSWER);
 	   dbex.updateFlashcard(this);
