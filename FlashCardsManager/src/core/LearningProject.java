@@ -149,10 +149,11 @@ public class LearningProject {
 
 	public Status getStatus() throws SQLException {
 		int maxStack = dbex.getMaxStack(this);
+		int minStack = dbex.getMinStack(this);
 		Status s;
 		if (maxStack== 1 || maxStack == 0) {
 			s = Status.RED;
-		} else if (maxStack == numberOfStacks){
+		} else if (maxStack == numberOfStacks && maxStack == minStack){
 			s = Status.GREEN;
 		} else {
 			s = Status.YELLOW;
@@ -161,6 +162,7 @@ public class LearningProject {
 	}
 
 	public String toString() {
-		return "ID: " + this.getId() + ", TITLE: " + this.getTitle() + ", NO_OF_STACKS: " + this.getNumberOfStacks();
+		return this.getTitle();
+		// return "ID: " + this.getId() + ", TITLE: " + this.getTitle() + ", NO_OF_STACKS: " + this.getNumberOfStacks();
 	}
 }

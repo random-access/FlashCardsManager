@@ -34,7 +34,8 @@ public class FileUtils {
 			Files.walkFileTree(dir, new SimpleFileVisitor<Path>() {
 				@Override
 				public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-					if (debug) System.out.println("Deleting file: " + file);
+					if (debug)
+						System.out.println("Deleting file: " + file);
 					File f = new File(file.toString());
 					boolean success = f.canWrite();
 					if (debug) {
@@ -51,7 +52,8 @@ public class FileUtils {
 				@Override
 				public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
 
-					if (debug) System.out.println("Deleting dir: " + dir);
+					if (debug)
+						System.out.println("Deleting dir: " + dir);
 					if (exc == null) {
 						Files.delete(dir);
 						return CONTINUE;
@@ -91,28 +93,28 @@ public class FileUtils {
 			return System.getProperty("user.dir") + "/." + name;
 		}
 	}
-	
-	public static boolean directoryContainsCertainFines (String pathToDirectory, ArrayList<String> requiredFiles) {
-	   File dir = new File(pathToDirectory);
-      if (!dir.isDirectory()) {
-         return false;
-      } else {
-         boolean result = true;
-         
-         File[] dirFiles = dir.listFiles();
-         Iterator<String> it = requiredFiles.iterator();
-         while (it.hasNext()) {
-            boolean b = false;
-            String requiredFile = it.next();
-            for (File f : dirFiles) {
-               if (f.getName().equals(requiredFile)) {
-                  b = true;
-               }
-            }
-            result &= b;
-         }
-         return result;
-      }
+
+	public static boolean directoryContainsCertainFines(String pathToDirectory, ArrayList<String> requiredFiles) {
+		File dir = new File(pathToDirectory);
+		if (!dir.isDirectory()) {
+			return false;
+		} else {
+			boolean result = true;
+
+			File[] dirFiles = dir.listFiles();
+			Iterator<String> it = requiredFiles.iterator();
+			while (it.hasNext()) {
+				boolean b = false;
+				String requiredFile = it.next();
+				for (File f : dirFiles) {
+					if (f.getName().equals(requiredFile)) {
+						b = true;
+					}
+				}
+				result &= b;
+			}
+			return result;
+		}
 	}
 
 	public static boolean directoryContainsOnlyCertainFiles(String pathToDirectory, ArrayList<String> allowedFiles) {
@@ -133,5 +135,52 @@ public class FileUtils {
 			}
 			return result;
 		}
+	}
+
+	public static void deleteIfExistsWithAnyExtension(String fileName) throws IOException {
+		String directoryName = Paths.get(fileName).getParent().toString();
+		String relFileName = Paths.get(fileName).getFileName().toString();
+		for (String s : fileList(directoryName)) {
+			if (s.contains(relFileName)) {
+				Files.delete(Paths.get(directoryName + "/" + s));
+				if (StartApp.DEBUG)
+					System.out.println("Deleted " + directoryName + "/" + s);
+			}
+		}
+	}
+
+	public static ArrayList<String> fileList(String directoryName) {
+		ArrayList<String> fileNames = new ArrayList<String>();
+		try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(directoryName))) {
+			for (Path path : directoryStream) {
+				fileNames.add(path.getFileName().toString());
+			}
+		} catch (IOException ex) {
+		}
+		return fileNames;
+	}
+
+	public static void copyPicFile(String src, String target) throws IOException {
+		Path srcPath = Paths.get(src);
+		Path targetPath = Paths.get(target);
+		Files.copy(srcPath, targetPath, StandardCopyOption.REPLACE_EXISTING);
+	}
+
+	public static void movePicFile(String src, String target) throws IOException {
+		Path srcPath = Paths.get(src);
+		Path targetPath = Paths.get(target);
+		Files.move(srcPath, targetPath, StandardCopyOption.REPLACE_EXISTING);
+	}
+
+	public static String getFileExtension(String pathName) {
+		if (pathName != null) {
+			return pathName.substring(pathName.lastIndexOf('.')+1, pathName.length());
+		}
+		return null;
+	}
+
+	public static void main(String[] args) throws IOException {
+		// deleteIfExistsWithAnyExtension("/home/moni/Desktop/media/pic-1-2-q");
+		// fileList("/home/moni/Desktop/media");
 	}
 }

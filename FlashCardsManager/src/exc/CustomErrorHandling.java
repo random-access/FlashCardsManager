@@ -49,6 +49,10 @@ public class CustomErrorHandling {
 		JOptionPane.showMessageDialog(null, "Die Datenbankversion ist nicht mehr aktuell! Bitte aktualisiere die Datenbank", "Datenbankversion..", JOptionPane.INFORMATION_MESSAGE);	
 	}
 	
+	public static void showNoCardsSelectedInfo() {
+		JOptionPane.showMessageDialog(null, "Bitte w\u00e4hle eine oder mehrere Karten aus!", "Nichts ausgew\u00e4hlt", JOptionPane.INFORMATION_MESSAGE);	
+	}
+	
 	private static void debugOutput(Throwable t) {
 		if (StartApp.DEBUG) t.printStackTrace();
 	}

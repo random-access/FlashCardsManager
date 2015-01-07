@@ -211,6 +211,20 @@ public class DBExchanger {
 		res.close();
 		return maxStack;
 	}
+	
+	public int getMinStack(LearningProject p) throws SQLException {
+		int minStack = 0;
+		Statement st = conn.createStatement();
+		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK ASC");
+		conn.commit();
+		if (StartApp.DEBUG) System.out.println("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK ASC");
+		ResultSet res = st.getResultSet();
+		if (res.next()) {
+			minStack = res.getInt(1);
+		}
+		res.close();
+		return minStack;
+	}
 
 	// ADD ROW: insert flashcard into table
 	public void addFlashcard(FlashCard card) throws SQLException {
@@ -266,9 +280,12 @@ public class DBExchanger {
 	}
 
 	public ArrayList<FlashCard> getAllCards(LearningProject proj, IProgressPresenter p) throws SQLException {
-		int noOfCards = this.countRows(proj);
-		p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
 		ArrayList<FlashCard> cards = new ArrayList<FlashCard>();
+		int noOfCards = this.countRows(proj);
+		if (noOfCards == 0) {
+			return cards;
+		}
+		p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
 		Statement st = conn.createStatement();
 		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
 		conn.commit();
@@ -450,5 +467,6 @@ public class DBExchanger {
 		}
 		return count;
 	}
+
 
 }

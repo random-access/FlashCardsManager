@@ -203,6 +203,8 @@ public class LearningSession extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					currentCard.levelDown();
+					currentCard.update();
+					owner.updateProjectStatus(project);
 					LearningSession.this.owner.updateProjectStatus(project);
 					boolean isQuestion = centerPanel.isAncestorOf(pnlQ);
 					if (isQuestion) {
@@ -219,6 +221,9 @@ public class LearningSession extends JDialog {
 					JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.",
 							"Fehler", JOptionPane.ERROR_MESSAGE);
 					Logger.log(exc);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 			}
 
@@ -230,6 +235,8 @@ public class LearningSession extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					currentCard.nextLevel();
+					currentCard.update();
+					owner.updateProjectStatus(project);
 					LearningSession.this.owner.updateProjectStatus(project);
 					boolean isQuestion = centerPanel.isAncestorOf(pnlQ);
 					if (isQuestion) {
@@ -246,6 +253,9 @@ public class LearningSession extends JDialog {
 					JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.",
 							"Fehler", JOptionPane.ERROR_MESSAGE);
 					Logger.log(exc);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 			}
 

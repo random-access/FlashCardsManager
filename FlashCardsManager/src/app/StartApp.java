@@ -38,6 +38,7 @@ public class StartApp {
 		p.setProperty("derby.system.home", APP_FOLDER);
 		try {
 			FileUtils.createDirectory(APP_FOLDER);
+			FileUtils.createDirectory(PATH_TO_MEDIA);
 			Logger.setPathToLog(DEFAULT_LOG_PATH, "errors", "log");
 			Logger.init(5);
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
