@@ -105,6 +105,7 @@ public class EditFlashcardsDialog extends JDialog {
 		mnuSettingsNewCard = new MyMenuItem("Neue Lernkarte hinzuf\u00fcgen..");
 		mnuSettingsTransferCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten verschieben..");
 		mnuSettingsDeleteCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten l\u00f6schen");
+		mnuSettingsDeleteCards.setEnabled(false);
 	}
 
 	private void addWidgets() throws SQLException {
