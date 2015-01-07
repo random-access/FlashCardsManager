@@ -105,7 +105,7 @@ public class EditFlashcardsDialog extends JDialog {
 		mnuSettingsNewCard = new MyMenuItem("Neue Lernkarte hinzuf\u00fcgen..");
 		mnuSettingsTransferCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten verschieben..");
 		mnuSettingsDeleteCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten l\u00f6schen");
-		mnuSettingsDeleteCards.setEnabled(false);
+		
 	}
 
 	private void addWidgets() throws SQLException {
@@ -231,7 +231,17 @@ public class EditFlashcardsDialog extends JDialog {
 				if (transferCards.size() == 0) {
 					CustomErrorHandling.showNoCardsSelectedInfo();
 				} else {
-					// TODO
+					for (FlashCard c : transferCards) {
+						try {
+							c.delete();
+						} catch (SQLException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
 				}
 			}
 		});

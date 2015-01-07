@@ -161,6 +161,7 @@ public class FileUtils {
 	}
 
 	public static void copyPicFile(String src, String target) throws IOException {
+		System.out.println("in copy method: src=" + src + ", target=" + target);
 		Path srcPath = Paths.get(src);
 		Path targetPath = Paths.get(target);
 		Files.copy(srcPath, targetPath, StandardCopyOption.REPLACE_EXISTING);

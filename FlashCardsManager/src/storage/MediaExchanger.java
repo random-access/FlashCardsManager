@@ -20,13 +20,14 @@ public class MediaExchanger {
 
 	public void storePic(FlashCard card, PicType type) throws IOException {
 		String targetPathWithoutExtension = computeTargetPathWithoutEnding(card, type);
-		String extension = FileUtils.getFileExtension(card.getPathToQuestionPic());
+		String extension = null;
 		String targetPath = null;
-		if (extension != null) {
-			targetPath = targetPathWithoutExtension + "." + extension;
-		}
 		switch (type) {
 		case QUESTION:
+			extension = FileUtils.getFileExtension(card.getPathToQuestionPic());
+			if (extension != null) {
+				targetPath = targetPathWithoutExtension + "." + extension;
+			}
 			if (card.getPathToQuestionPic() == null || !card.getPathToQuestionPic().equals(targetPath)) {
 				if (StartApp.DEBUG)
 					System.out.println("delete if exists with any extension: " + targetPathWithoutExtension);
@@ -40,6 +41,10 @@ public class MediaExchanger {
 			}
 			break;
 		case ANSWER:
+			extension = FileUtils.getFileExtension(card.getPathToAnswerPic());
+			if (extension != null) {
+				targetPath = targetPathWithoutExtension + "." + extension;
+			}
 			if (card.getPathToAnswerPic() == null || !card.getPathToAnswerPic().equals(targetPath)) {
 				if (StartApp.DEBUG)
 					System.out.println("delete if exists with any extension: " + targetPathWithoutExtension);
@@ -57,13 +62,14 @@ public class MediaExchanger {
 
 	public void transferPic(FlashCard card, PicType type) throws IOException {
 		String targetPathWithoutExtension = computeTargetPathWithoutEnding(card, type);
-		String extension = FileUtils.getFileExtension(card.getPathToQuestionPic());
+		String extension;
 		String targetPath = null;
-		if (extension != null) {
-			targetPath = targetPathWithoutExtension + "." + extension;
-		}
 		switch (type) {
 		case QUESTION:
+			extension = FileUtils.getFileExtension(card.getPathToQuestionPic());
+			if (extension != null) {
+				targetPath = targetPathWithoutExtension + "." + extension;
+			}
 			if (card.getPathToQuestionPic() == null ||!card.getPathToQuestionPic().equals(targetPath)) {
 				FileUtils.deleteIfExistsWithAnyExtension(targetPathWithoutExtension);
 				if (StartApp.DEBUG)
@@ -77,6 +83,11 @@ public class MediaExchanger {
 			}
 			break;
 		case ANSWER:
+			extension = FileUtils.getFileExtension(card.getPathToAnswerPic());
+			targetPath = null;
+			if (extension != null) {
+				targetPath = targetPathWithoutExtension + "." + extension;
+			}
 			if (card.getPathToAnswerPic() == null || !card.getPathToAnswerPic().equals(targetPath)) {
 				FileUtils.deleteIfExistsWithAnyExtension(targetPathWithoutExtension);
 				if (StartApp.DEBUG)
@@ -103,6 +114,8 @@ public class MediaExchanger {
 	}
 
 	private String computeTargetPathWithoutEnding(FlashCard card, PicType type) {
+		System.out.println("path to media folder=" + pathToMediaFolder + ", card.getProj().getId()=" + card.getProj().getId()
+				+ ", card.getId()=" + card.getId() + ", type.getShortForm=" + type.getShortForm());
 		return pathToMediaFolder + "/pic-" + card.getProj().getId() + "-" + card.getId() + "-" + type.getShortForm();
 	}
 

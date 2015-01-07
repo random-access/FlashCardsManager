@@ -19,12 +19,14 @@ public class ChooseTargetProjectDialog extends JDialog {
 	private LearningProject srcProj;
 	private ProjectsController ctl;
 	private EditFlashcardsDialog editDialog;
+	private MainWindow owner;
 
 	private JPanel pnlBottom, pnlCenter, pnlGrid;
 	private JButton btnDiscard, btnOk;
 	private JLabel lblSourceProject, lblSourceProjectName, lblTargetProject;
 	private JComboBox<LearningProject> cmbChooseProject;
 	private JCheckBox chkKeepProgress;
+
 	
 
 	public ChooseTargetProjectDialog(ProjectsController ctl, MainWindow owner, EditFlashcardsDialog editDialog, LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
@@ -34,6 +36,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 		this.srcProj = srcProj;
 		this.ctl = ctl;
 		this.editDialog = editDialog;
+		this.owner = owner;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
 		createWidgets();
@@ -64,7 +67,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 		pnlCenter = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		pnlGrid = new JPanel(new GridLayout(0, 2, 40, 10));
 		pnlCenter.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		MyComboBoxModel model = new MyComboBoxModel(ctl.getProjects());
+		MyComboBoxModel model = new MyComboBoxModel(getPossibleTargetProjects());
 		cmbChooseProject = new JComboBox<LearningProject>(model);
 		cmbChooseProject.setSelectedItem("<Projekt ausw\u00e4hlen>");
 		lblTargetProject = new JLabel("Zielprojekt:");
@@ -78,6 +81,16 @@ public class ChooseTargetProjectDialog extends JDialog {
 
 	}
 
+	private ArrayList<LearningProject> getPossibleTargetProjects() {
+		ArrayList<LearningProject> projects = new ArrayList<LearningProject>(); 
+		for (LearningProject p : ctl.getProjects()) {
+			if (!p.equals(srcProj)) {
+				projects.add(p);
+			}
+		}
+		return projects;
+	}
+
 	private void setListeners() {
 		btnOk.addActionListener(new ActionListener() {
 
@@ -89,6 +102,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 						f.transferTo(targetProject, chkKeepProgress.isSelected());
 					}
 					editDialog.updateCardPanels();
+					owner.updateProjectList();
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
