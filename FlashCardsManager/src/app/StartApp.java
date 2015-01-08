@@ -104,7 +104,7 @@ public class StartApp {
 					if (DEBUG) System.out.println("Updated database version.");
 				}
 			}
-			if (currentSettings.getPathToDatabase().equals("null")
+			if (!currentSettings.getPathToDatabase().endsWith("2")
 					|| !(new File(currentSettings.getPathToDatabase()).isDirectory())) {
 				if (DEBUG) System.out.println("Database not where it was expected or not there");
 				// database deleted -> create new DB on default path
