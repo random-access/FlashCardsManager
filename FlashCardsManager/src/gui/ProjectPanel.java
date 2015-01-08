@@ -297,7 +297,7 @@ public class ProjectPanel extends JPanel {
 		cards = project.getAllCards();
 		AddFlashcardDialog d;
 		try {
-			d = new AddFlashcardDialog(project, ProjectPanel.this);
+			d = new AddFlashcardDialog(null, project, ProjectPanel.this);
 			d.setVisible(true);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -82,7 +82,7 @@ public class AddFlashcardDialog extends JDialog {
 	private Action centerAction = new StyledEditorKit.AlignmentAction("Center Align", StyleConstants.ALIGN_CENTER);
 
 	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card) throws IOException {
-		this(project, projPnl);
+		this(null, project, projPnl);
 		this.efcDialog = efcDialog;
 		this.existingCard = card;
 		centerPanel.remove(pnlQ);
@@ -106,7 +106,7 @@ public class AddFlashcardDialog extends JDialog {
 	}
 
 	// constructor for adding a new flashcard
-	public AddFlashcardDialog(LearningProject project, ProjectPanel projPnl) throws IOException {
+	public AddFlashcardDialog(Point lastLocation, LearningProject project, ProjectPanel projPnl) throws IOException {
 		super(projPnl.getOwner(), true);
 		this.owner = projPnl.getOwner();
 		this.project = project;
@@ -126,11 +126,15 @@ public class AddFlashcardDialog extends JDialog {
 		setListeners();
 
 		pack();
-		setLocationRelativeTo(owner);
+		if (lastLocation == null) {
+			setLocationRelativeTo(owner); 
+		} else {
+			setLocation(lastLocation);
+		}
 	}
 
-	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl) throws IOException {
-		this(project, projPnl);
+	public AddFlashcardDialog(Point lastLocation, EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl) throws IOException {
+		this(lastLocation, project, projPnl);
 		this.efcDialog = efcDialog;
 	}
 
@@ -341,10 +345,10 @@ public class AddFlashcardDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				saveNewCardToDatabase();
-				
+				Point currentLocation = AddFlashcardDialog.this.getLocationOnScreen();			
+				saveNewCardToDatabase();				
 				try {
-					AddFlashcardDialog d = new AddFlashcardDialog(project, projPnl);
+					AddFlashcardDialog d = new AddFlashcardDialog(currentLocation, efcDialog, project, projPnl);
 					d.setVisible(true);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
