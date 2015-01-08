@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class TransparencyTextField extends JTextField {
 
 	public TransparencyTextField(String text, int cols) {
@@ -25,8 +26,8 @@ public class TransparencyTextField extends JTextField {
 	@Override
 	protected void paintComponent(Graphics g) {
 		g.setColor(getBackground());
-		Rectangle tBounds = g.getClip().getBounds();
-		g.fillRect((int) tBounds.getX(), (int) tBounds.getY(), (int) tBounds.getWidth(), (int) tBounds.getHeight());
+		Rectangle rect = g.getClip().getBounds();
+		g.fillRect((int) rect.getX(), (int) rect.getY(), (int) rect.getWidth(), (int) rect.getHeight());
 		super.paintComponent(g);
 	}
 

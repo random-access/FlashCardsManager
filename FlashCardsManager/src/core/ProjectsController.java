@@ -54,7 +54,7 @@ public class ProjectsController {
 		return projects;
 	}
 
-	public void importProjects(String pathToImport, IProgressPresenter p) throws NumberFormatException, XMLStreamException, IOException, SQLException, InvalidValueException, InvalidLengthException {
+	public void importProjects(String pathToImport, IProgressPresenter p) throws XMLStreamException, IOException, SQLException, InvalidValueException, InvalidLengthException {
 		ProjectImporter importer = new ProjectImporter(pathToImport, pathToMediaFolder, this, p);
 		importer.doImport();
 	}

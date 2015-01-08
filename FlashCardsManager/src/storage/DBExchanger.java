@@ -1,8 +1,5 @@
 package storage;
 
-import exc.InvalidLengthException;
-import exc.InvalidValueException;
-import gui.helpers.IProgressPresenter;
 import importExport.XMLMedia;
 
 import java.io.File;
@@ -11,9 +8,11 @@ import java.util.ArrayList;
 
 import app.StartApp;
 import core.*;
+import exc.CustomErrorHandling;
+import exc.InvalidLengthException;
+import gui.helpers.IProgressPresenter;
 
 public class DBExchanger {
-	// TODO Stream handling (try with resources...)
 
 	private final String driver = "org.apache.derby.jdbc.EmbeddedDriver"; // db-driver
 	private final String protocol = "jdbc:derby:"; // database protocol
@@ -43,7 +42,6 @@ public class DBExchanger {
 		if (StartApp.DEBUG) {
 			if (conn != null) {
 				System.out.println("Successfully created connection to: " + dbLocation);
-				// TODO: remove debug output
 			} else {
 				System.out.println("Could't create connection to: " + dbLocation);
 			}
@@ -72,13 +70,12 @@ public class DBExchanger {
 				}
 			}
 			System.gc();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(null, sqle);
 		}
 	}
 
-	// CREATE TABLES if the don't exist yet
+	// CREATE TABLES if they don't exist yet
 	public void createTablesIfNotExisting() throws SQLException {
 		Statement st = conn.createStatement();
 		if (!DerbyTools.tableAlreadyExisting(projectsTable, conn)) {
@@ -164,7 +161,6 @@ public class DBExchanger {
 
 	public void deleteProject(LearningProject project) throws SQLException {
 		Statement st = conn.createStatement();
-		// TODO delete pics in file system
 
 		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK IN " + "(SELECT LABEL_ID_PK FROM " + labelsTable
 				+ " WHERE PROJ_ID_FK = " + project.getId() + ")");

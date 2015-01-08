@@ -1,7 +1,6 @@
 package gui;
 
-import exc.InvalidLengthException;
-import exc.InvalidValueException;
+import exc.*;
 import gui.helpers.CustomColor;
 import gui.helpers.TransparencyTextField;
 
@@ -36,9 +35,8 @@ public class AddProjectDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
 		}
 
 		createWidgets();
@@ -85,44 +83,37 @@ public class AddProjectDialog extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				// pruefe ob vollstaendige Eingabe
 				try {
-					if (hasSomewhereNoInput()) {
+					if (missingInput()) {
 						if (txtTitle.getText().equals("")) {
 							txtTitle.setBackground(CustomColor.BACKGROUND_ERROR_RED);
 						}
 						if (txtNoOfStacks.getText().equals("")) {
 							txtNoOfStacks.setBackground(CustomColor.BACKGROUND_ERROR_RED);
 						}
-						JOptionPane.showMessageDialog(AddProjectDialog.this, "Es wurden nicht alle Felder ausgef\u00fcllt.",
-								"Fehler", JOptionPane.ERROR_MESSAGE); 
+						CustomInfoHandling.showNoInputInfo(AddProjectDialog.this); 
 					} else {
 						int noOfStacks = Integer.parseInt(txtNoOfStacks.getText());
 						String title = txtTitle.getText();
-						// verarbeite Eingabe in DB
 						LearningProject newProject = new LearningProject(ctl, title, noOfStacks);
 						newProject.store();
 						owner.updateProjectList();
 						AddProjectDialog.this.dispose();
 					}
-				} catch (SQLException exc) {
-					JOptionPane.showMessageDialog(AddProjectDialog.this, "Ein interner Datenbankfehler ist aufgetreten.",
-							"Fehler", JOptionPane.ERROR_MESSAGE);
-					Logger.log(exc);
-				} catch (NumberFormatException exc) {
-					JOptionPane.showMessageDialog(AddProjectDialog.this, "Ung\u00fcltige Zeichenfolge.", "Fehler",
-							JOptionPane.ERROR_MESSAGE);
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(AddProjectDialog.this, sqle);
+				} catch (NumberFormatException nfe) {
+					CustomInfoHandling.showInvalidCharSequenceInfo(AddProjectDialog.this);
 					txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
-				} catch (InvalidLengthException e1) {
-					JOptionPane.showMessageDialog(AddProjectDialog.this, "Zu langer Titel (max. 150 Zeichen).", "Fehler",
-							JOptionPane.ERROR_MESSAGE);
+				} catch (InvalidLengthException ile) {
+					CustomInfoHandling.showInvalidLengthInfo(AddProjectDialog.this, 150); // TODO global max
 					txtTitle.setForeground(CustomColor.FOREGROUND_ERROR_RED);
-				} catch (InvalidValueException e1) {
-					JOptionPane.showMessageDialog(AddProjectDialog.this, "Ung\u00fcltige Stapelanzahl", "Fehler",
-							JOptionPane.ERROR_MESSAGE);
+				} catch (InvalidValueException ive) {
+					CustomInfoHandling.showInvalidValueInfo(AddProjectDialog.this, 99, 0); // TODO global max
 					txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
 				}
 			}
 
-			private boolean hasSomewhereNoInput() {
+			private boolean missingInput() {
 				return txtTitle.getText().equals("") || txtNoOfStacks.getText().equals("");
 			}
 		});

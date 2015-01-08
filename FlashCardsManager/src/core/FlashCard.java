@@ -68,11 +68,7 @@ public class FlashCard {
 	public void transferTo(LearningProject newProj, boolean keepSuccess) throws SQLException, IOException {
 	   proj.removeCard(this);
 	   setProj(newProj);
-	   if (keepSuccess) {
-	      setStack(Math.min(getStack(), newProj.getNumberOfStacks()));
-	   } else {
-	      setStack(1);
-	   }
+	   setStack (keepSuccess ? Math.min(getStack(), newProj.getNumberOfStacks()) : 1);
 	   mex.transferPic(this, PicType.QUESTION);
 	   mex.transferPic(this, PicType.ANSWER);
 	   dbex.updateFlashcard(this);
@@ -103,14 +99,12 @@ public class FlashCard {
 		int maxStack = proj.getNumberOfStacks();
 		if (stack < maxStack) {
 			stack++;
-			System.out.println("Next Level: Karte " + this.id + " ist jetzt in Stapel " + stack);
 		}
 	}
 
 	public void levelDown() throws SQLException {
 		if (stack > 1) {
 			stack--;
-			System.out.println("Level down: Karte " + this.id + " ist jetzt in Stapel " + stack);
 		}
 	}
 
@@ -119,16 +113,8 @@ public class FlashCard {
 		card.setId(this.id);
 		card.setProjId(this.proj.getId());
 		card.setStack(this.stack);
-		if (question.equals("")) {
-			card.setQuestion(" ");
-		} else {
-			card.setQuestion(this.question);
-		}
-		if (answer.equals("")) {
-			card.setAnswer(" ");
-		} else {
-			card.setAnswer(this.answer);
-		}
+		card.setQuestion(question.equals("") ? " " : this.question);
+		card.setAnswer(answer.equals("") ? " " : this.answer);
 		card.setCustomWidthQuestion(this.questionWidth);
 		card.setCustomWidthAnswer(this.answerWidth);
 		return card;

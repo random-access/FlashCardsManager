@@ -5,12 +5,14 @@ import java.io.*;
 import javax.xml.stream.*;
 import javax.xml.stream.events.*;
 
+import app.StartApp;
+
 public class XMLSettingsExchanger {
    
    public static void writeConfig(String configFile, Settings settings) throws XMLStreamException, FileNotFoundException {
         XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
         File config = new File (configFile);
-        System.out.println("Pfad zur Config: " + configFile);
+        if (StartApp.DEBUG) System.out.println("Pfad zur Config: " + configFile);
         XMLEventWriter eventWriter = outputFactory
             .createXMLEventWriter(new FileOutputStream(config));
         XMLEventFactory eventFactory = XMLEventFactory.newInstance();
@@ -45,14 +47,14 @@ public class XMLSettingsExchanger {
         XMLEventFactory eventFactory = XMLEventFactory.newInstance();
         XMLEvent end = eventFactory.createDTD("\n");
         XMLEvent tab = eventFactory.createDTD("\t");
-        // create start node
+        // create start element
         StartElement sElement = eventFactory.createStartElement("", "", name);
         eventWriter.add(tab);
         eventWriter.add(sElement);
         // create content
         Characters characters = eventFactory.createCharacters(value);
         eventWriter.add(characters);
-        // create end node
+        // create end element
         EndElement eElement = eventFactory.createEndElement("", "", name);
         eventWriter.add(eElement);
         eventWriter.add(end);
@@ -108,10 +110,4 @@ public class XMLSettingsExchanger {
 		}
 		return settings;
 	}
-
-//	public static void main(String[] args) throws Exception {
-//		Settings s = XMLExchanger.readConfig("settings.xml");
-//		System.out.println(s.toString());
-//		XMLExchanger.writeConfig("C:/Users/IT-Helpline16/writerTest.xml", s);
-//	}
 }

@@ -1,6 +1,7 @@
 package app;
 
 import exc.CustomErrorHandling;
+import exc.CustomInfoHandling;
 import gui.IntroPanel;
 import gui.MainWindow;
 
@@ -49,7 +50,7 @@ public class StartApp {
 
 		} catch (SQLException exc) {
 			if (exc.getSQLState().equals("XJ040")) {
-				CustomErrorHandling.showSecondInstanceError(null,exc);
+				CustomInfoHandling.showSecondInstanceInfo(null,exc);
 			} else {
 				CustomErrorHandling.showDatabaseError(null, exc);
 			}
@@ -94,7 +95,7 @@ public class StartApp {
 					newSettings.getDatabaseVersion() == 2) { 
 				// database v2 doesn't exist yet
 				if (!(new File(DEFAULT_DATABASE_PATH).exists())) {
-					CustomErrorHandling.showOldDatabaseInfo();
+					CustomInfoHandling.showOldDatabaseInfo();
 					System.exit(0);
 				} else {
 					currentSettings.setDatabaseVersion(2);

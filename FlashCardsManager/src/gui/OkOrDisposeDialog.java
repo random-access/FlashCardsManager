@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import utils.Logger;
+import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
 public class OkOrDisposeDialog extends JDialog {
@@ -23,11 +23,8 @@ public class OkOrDisposeDialog extends JDialog {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		 } catch (ClassNotFoundException | InstantiationException
-	            | IllegalAccessException | UnsupportedLookAndFeelException e) {
-	         JOptionPane.showMessageDialog(null,
-	               "Ein interner Fehler ist aufgetreten", "Fehler",
-	               JOptionPane.ERROR_MESSAGE);
-	         Logger.log(e);
+	            | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+	         CustomErrorHandling.showInternalError(null, exc);
 	      }
 		
 		createWidgets();

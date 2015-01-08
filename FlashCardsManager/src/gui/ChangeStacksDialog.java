@@ -1,9 +1,5 @@
 package gui;
 
-import exc.InvalidValueException;
-import gui.helpers.CustomColor;
-import gui.helpers.TransparencyTextField;
-
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -13,9 +9,11 @@ import java.sql.SQLException;
 
 import javax.swing.*;
 
-import utils.Logger;
 import core.LearningProject;
 import core.ProjectsController;
+import exc.*;
+import gui.helpers.CustomColor;
+import gui.helpers.TransparencyTextField;
 
 @SuppressWarnings("serial")
 public class ChangeStacksDialog extends JDialog {
@@ -38,9 +36,8 @@ public class ChangeStacksDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
 		}
 
 		createWidgets();
@@ -60,8 +57,7 @@ public class ChangeStacksDialog extends JDialog {
 				try {
 					if (txtNoOfStacks.getText().equals("")) {
 						txtNoOfStacks.setBackground(CustomColor.BACKGROUND_ERROR_RED);
-						JOptionPane.showMessageDialog(ChangeStacksDialog.this,
-								"Es wurde kein Wert f\u00fcr die Stapelanzahl eingegeben.", "Fehler", JOptionPane.ERROR_MESSAGE);
+						CustomInfoHandling.showNoInputInfo(ChangeStacksDialog.this);
 					}
 					// verarbeite Eingabe in DB
 					int nr = Integer.parseInt(txtNoOfStacks.getText());
@@ -70,20 +66,16 @@ public class ChangeStacksDialog extends JDialog {
 					project.update();
 					owner.updateProjectStatus(project);
 					ChangeStacksDialog.this.dispose();
-				} catch (NumberFormatException exc) {
+				} catch (NumberFormatException nfe) {
 					txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
-					JOptionPane.showMessageDialog(ChangeStacksDialog.this, "Ung\u00fcltige Zeichen in Stapelanzahl.", "Fehler",
-							JOptionPane.ERROR_MESSAGE);
-				} catch (SQLException | IOException exc) {
-					ChangeStacksDialog.this.dispose();
-					JOptionPane.showMessageDialog(ChangeStacksDialog.this, "Ein interner Datenbankfehler ist aufgetreten.",
-							"Fehler", JOptionPane.ERROR_MESSAGE);
-					Logger.log(exc);
-				} catch (InvalidValueException exc) {
+					CustomInfoHandling.showInvalidCharSequenceInfo(ChangeStacksDialog.this);
+				} catch (InvalidValueException ive) {
 					txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
-					JOptionPane.showMessageDialog(ChangeStacksDialog.this, "Ung\u00fcltige Stapelanzahl",
-							"Fehler", JOptionPane.ERROR_MESSAGE);
-
+					CustomInfoHandling.showInvalidValueInfo(ChangeStacksDialog.this, 99, 0); // TODO global value
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(ChangeStacksDialog.this, sqle);
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(ChangeStacksDialog.this, ioe);
 				}
 			}
 		});

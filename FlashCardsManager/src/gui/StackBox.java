@@ -11,11 +11,9 @@ public class StackBox extends Box {
 
 	private JCheckBox chk;
 	private JLabel lblStack, lblNoOfCards;
-	private int stackNo;
 
 	StackBox(int stackNo, int noOfCards, ChooseStacksDialog d) {
 		super(BoxLayout.X_AXIS);
-		this.stackNo = stackNo;
 		chk = new JCheckBox();
 		lblStack = new JLabel("Stapel " + stackNo + ": ");
 		lblNoOfCards = new JLabel(noOfCards + " Karten");
@@ -24,8 +22,8 @@ public class StackBox extends Box {
 		this.add(Box.createHorizontalGlue());
 		this.add(lblNoOfCards);
 		this.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 30));
-		chk.addItemListener(new ItemListener() {
-			
+		
+		chk.addItemListener(new ItemListener() {	
 			@Override
 			public void itemStateChanged(ItemEvent e) {
 				d.controlOkButton();

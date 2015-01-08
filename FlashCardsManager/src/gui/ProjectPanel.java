@@ -1,7 +1,7 @@
 package gui;
 
-import gui.helpers.LoadCardsTask;
-import gui.helpers.ProgressDialog;
+import exc.CustomErrorHandling;
+import gui.helpers.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -38,15 +38,15 @@ public class ProjectPanel extends JPanel {
 		}
 	}
 
-	static JFileChooser fileChooser;
+	static JFileChooser fileChooser; 
+	// this is static to hand it over to flashcard editing for open it at last chosen path
 
 	int noOfStacks;
 	private Box b;
-	// TODO make this private -> method for ChangeTitleDialog
-	JLabel lblStatus, lblText;
+	private JLabel lblStatus, lblText;
 	private JButton btnPlay, btnEdit, btnDelete;
 	private Status status;
-	private String name;
+	private String projectTitle;
 	private JPopupMenu popupEdit;
 	private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks, popupEditAddCards, popupEditOrganizeCards,
 			popupEditResetProgress;
@@ -54,18 +54,17 @@ public class ProjectPanel extends JPanel {
 	private ProjectsController ctl;
 	private LearningProject project;
 	private ArrayList<FlashCard> cards;
-	
+
 	public enum DialogType {
 		EDIT, ADD, RESET, PLAY, CHANGE_STACKS;
 	}
 
-
 	// Constructor
-	ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsController ctl) {
+	public ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsController ctl) {
 		this.ctl = ctl;
 		this.project = project;
 		this.status = Status.RED;
-		this.name = project.getTitle();
+		this.projectTitle = project.getTitle();
 		this.parentWindow = parentWindow;
 		this.noOfStacks = project.getNumberOfStacks();
 		this.setLayout(new BorderLayout());
@@ -74,11 +73,15 @@ public class ProjectPanel extends JPanel {
 		setListeners();
 	}
 
-	MainWindow getOwner() {
+	public MainWindow getOwner() {
 		return this.parentWindow;
 	}
+	
+	public String getProjectTitle() {
+		return projectTitle;
+	}
 
-	LearningProject getProject() {
+	public LearningProject getProject() {
 		return this.project;
 	}
 
@@ -106,7 +109,7 @@ public class ProjectPanel extends JPanel {
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		setStatus(this.status);
-		lblText = new JLabel(name);
+		lblText = new JLabel(projectTitle);
 		lblText.setFont(lblText.getFont().deriveFont(Font.BOLD, 12));
 		btnPlay = new JButton(new ImageIcon(imgPlay));
 		btnPlay.setToolTipText("Lernen");
@@ -124,19 +127,12 @@ public class ProjectPanel extends JPanel {
 
 		fileChooser = new JFileChooser();
 		fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg"));
+		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg", "jpeg")); 
+		// TODO test if other extensions work as well; add them; global list of known extensions
 	}
 
 	JFileChooser getFileChooser() {
 		return fileChooser;
-	}
-
-	void addCard(FlashCard card) {
-		cards.add(card);
-	}
-
-	void removeCard(FlashCard card) {
-		cards.remove(card);
 	}
 
 	Status getStatus() {
@@ -157,7 +153,6 @@ public class ProjectPanel extends JPanel {
 			lblStatus = new JLabel(new ImageIcon(imgGreen));
 			lblStatus.setToolTipText("Bravo! Alle Fragen sind im letzten Stapel!");
 		}
-
 	}
 
 	void changeStatus(Status s) {
@@ -181,33 +176,47 @@ public class ProjectPanel extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						try {
+							IProgressPresenter pres = new IProgressPresenter() { // TODO remove cheat...
+								@Override
+								public void changeProgress(int progress) {
+
+								}
+								@Override
+								public void changeInfo(String text) {
+
+								}
+								@Override
+								public int getProgress() {
+									return 0;
+								}
+							};
+							project.loadFlashcards(pres);
 							project.delete();
-						} catch (SQLException exc) {
-							JOptionPane.showMessageDialog(ProjectPanel.this, "Ein interner Datenbankfehler ist aufgetreten",
-									"Fehler", JOptionPane.ERROR_MESSAGE);
-							Logger.log(exc);
+							parentWindow.updateProjectList();
+						} catch (SQLException sqle) {
+							CustomErrorHandling.showDatabaseError(parentWindow, sqle);
+						} catch (IOException ioe) {
+							CustomErrorHandling.showInternalError(parentWindow, ioe);
+						} finally {
+							d.dispose();
 						}
-						parentWindow.updateProjectList();
-						d.dispose();
 					}
 				});
 				d.setVisible(true);
 			}
 		});
-
+		
+		// open edit menu with several options
 		btnEdit.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Component source = (Component) e.getSource();
 				Dimension size = source.getSize();
-
 				int xPos = size.width - btnEdit.getPreferredSize().width;
-				int yPos = size.width; // - btnEdit.getPreferredSize().height;
-
+				int yPos = size.width; 
 				popupEdit.show(source, xPos, yPos);
 			}
-
 		});
 
 		popupEditChangeName.addActionListener(new ActionListener() {
@@ -217,7 +226,6 @@ public class ProjectPanel extends JPanel {
 				ChangeTitleDialog p = new ChangeTitleDialog(ProjectPanel.this, project);
 				p.setVisible(true);
 			}
-
 		});
 
 		popupEditChangeNoOfStacks.addActionListener(new ActionListener() {
@@ -229,9 +237,7 @@ public class ProjectPanel extends JPanel {
 				LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.CHANGE_STACKS);
 				task.addPropertyChangeListener(dialog);
 				task.execute();
-				
 			}
-
 		});
 
 		popupEditAddCards.addActionListener(new ActionListener() {
@@ -282,80 +288,75 @@ public class ProjectPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-					ProgressDialog dialog = new ProgressDialog(parentWindow, "Lade Karten...");
-					dialog.setVisible(true);
-					LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.PLAY);
-					task.addPropertyChangeListener(dialog);
-					task.execute();
+				ProgressDialog dialog = new ProgressDialog(parentWindow, "Lade Karten...");
+				dialog.setVisible(true);
+				LoadCardsTask task = new LoadCardsTask(dialog, parentWindow, ProjectPanel.this, project, DialogType.PLAY);
+				task.addPropertyChangeListener(dialog);
+				task.execute();
 			}
 
 		});
 
 	}
-	
-	private void showAddFlashcardsDialog(){
+
+	private void showAddFlashcardsDialog() {
 		cards = project.getAllCards();
 		AddFlashcardDialog d;
 		try {
 			d = new AddFlashcardDialog(null, project, ProjectPanel.this);
 			d.setVisible(true);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(parentWindow, ioe);
 		}
-		
+
 	}
 
-	private void showEditFlashcardsDialog(){
+	private void showEditFlashcardsDialog() {
 		cards = project.getAllCards();
 		EditFlashcardsDialog d;
 		try {
 			d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
 			d.setVisible(true);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(parentWindow, sqle);
 		}
-		
+
 	}
 
-	private void resetProgress(){
+	private void resetProgress() {
 		cards = project.getAllCards();
 		for (int i = 0; i < cards.size(); i++) {
 			cards.get(i).setStack(1);
 			try {
 				cards.get(i).update();
 				changeStatus(Status.RED);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (SQLException sqle) {
+				CustomErrorHandling.showDatabaseError(parentWindow, sqle);
+			} catch (IOException ioe) {
+				CustomErrorHandling.showInternalError(parentWindow, ioe);
 			}
-			
+
 		}
 	}
-	
-	private void prepareLearningSession(){
+
+	private void prepareLearningSession() {
 		cards = project.getAllCards();
 		ChooseStacksDialog chooseStacks;
 		try {
-			chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(),
-					ProjectPanel.this.cards, ProjectPanel.this.project);
+			chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(), ProjectPanel.this.cards,
+					ProjectPanel.this.project);
 			chooseStacks.setVisible(true);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(parentWindow, sqle);
 		}
-		
 	}
-	
+
 	private void showChangeStacksDialog() {
 		ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, ctl);
 		p.setVisible(true);
 	}
-
+	
+	// TODO work on better solution (own event handling? wait/notify?)
 	public void resume(DialogType type) {
 		switch (type) {
 		case ADD:
@@ -374,7 +375,7 @@ public class ProjectPanel extends JPanel {
 			showChangeStacksDialog();
 			break;
 		}
-		
+
 	}
 
 }

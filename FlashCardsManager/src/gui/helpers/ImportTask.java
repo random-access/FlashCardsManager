@@ -1,19 +1,16 @@
 package gui.helpers;
 
-import exc.InvalidLengthException;
-import exc.InvalidValueException;
+import exc.*;
 import gui.MainWindow;
 
 import java.awt.Cursor;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 import javax.xml.stream.XMLStreamException;
 
-import utils.Logger;
 import core.ProjectsController;
 
 public class ImportTask extends SwingWorker<Void, Void> implements IProgressPresenter {
@@ -46,46 +43,33 @@ public class ImportTask extends SwingWorker<Void, Void> implements IProgressPres
 				mw.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
 			}
 		});
-
 		setProgress(0);
 		try {
 			ctl.importProjects(pathToImport, this);
 
-		} catch (SQLException exc) {
-			JOptionPane
-					.showMessageDialog(mw, "Ein interner Datenbankfehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(exc);
-		} catch (IOException exc) {
-			JOptionPane.showMessageDialog(mw, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(exc);
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (XMLStreamException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidValueException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidLengthException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(mw, sqle);
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(mw, ioe);
+		} catch (XMLStreamException xse) {
+			CustomErrorHandling.showImportError(mw, xse);
+		} catch (InvalidValueException |InvalidLengthException exc) {
+			CustomErrorHandling.showCorruptDataError(mw, exc);
 		}
 		setProgress(100);
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
 				dialog.dispose();
-				mw.updateProjectList();
+				try {
+					mw.updateProjectList();
+					CustomInfoHandling.showImportSuccessInfo(mw);
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(mw, sqle);
+				}
 				mw.getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-				JOptionPane.showMessageDialog(mw, "Import erfolgreich abgeschlossen", "Fertig", JOptionPane.INFORMATION_MESSAGE);
+				
 			}
 		});
 		return null;

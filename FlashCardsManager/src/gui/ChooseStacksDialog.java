@@ -10,9 +10,9 @@ import java.util.Random;
 
 import javax.swing.*;
 
-import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
+import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
 public class ChooseStacksDialog extends JDialog {
@@ -27,8 +27,7 @@ public class ChooseStacksDialog extends JDialog {
 	private StackBox[] boxes;
 	private JButton btnOk, btnDiscard;
 
-	ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards,
-			LearningProject project) throws SQLException {
+	ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards, LearningProject project) throws SQLException {
 		super(owner, false);
 		this.owner = owner;
 		this.project = project;
@@ -39,18 +38,14 @@ public class ChooseStacksDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException
-            | IllegalAccessException | UnsupportedLookAndFeelException e) {
-         JOptionPane.showMessageDialog(null,
-               "Ein interner Fehler ist aufgetreten", "Fehler",
-               JOptionPane.ERROR_MESSAGE);
-         Logger.log(e);
-      }
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
+		}
 
 		createWidgets();
 		addWidgets();
 		setListeners();
-		setSize(getPreferredSize().width+10,300);
+		setSize(getPreferredSize().width + 10, 300);
 		setLocationRelativeTo(owner);
 	}
 
@@ -65,7 +60,7 @@ public class ChooseStacksDialog extends JDialog {
 		for (int i = 1; i <= project.getNumberOfStacks(); i++) {
 			boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i), ChooseStacksDialog.this);
 			if (project.getNumberOfCards(i) == 0) {
-				boxes[i-1].setEnabled(false);
+				boxes[i - 1].setEnabled(false);
 			}
 		}
 		btnOk = new JButton("Ok");
@@ -98,27 +93,18 @@ public class ChooseStacksDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				sessionCards = constructRandomSession();
-				LearningSession newSession = new LearningSession(
-						ChooseStacksDialog.this.owner,
-						ChooseStacksDialog.this.project,
+				LearningSession newSession = new LearningSession(ChooseStacksDialog.this.owner, ChooseStacksDialog.this.project,
 						ChooseStacksDialog.this.sessionCards);
-					newSession.setVisible(true);
-					ChooseStacksDialog.this.dispose();
-
-//					JOptionPane.showMessageDialog(ChooseStacksDialog.this,
-//							"Bitte Stapel mit Karten ausw\u00e4hlen!", "Achtung",
-//							JOptionPane.WARNING_MESSAGE);
+				newSession.setVisible(true);
+				ChooseStacksDialog.this.dispose();
 			}
 		});
 	}
 
-	// COPY CARDS: copy flashcard array from Project Panel, because the cards
-	// will be deleted
-	// while constructing an empty session, and are needed e.g. in
-	// LearningSession
+	// COPY CARDS: copy flashcard array from Project Panel, because the cards will be deleted
+	// while constructing a learning session
 	private ArrayList<FlashCard> copyCards(ArrayList<FlashCard> srcCards) {
 		ArrayList<FlashCard> targetCards = new ArrayList<FlashCard>();
-		System.out.println("Src cards = null? " + srcCards == null);
 		targetCards.addAll(srcCards);
 		return targetCards;
 	}
@@ -151,12 +137,9 @@ public class ChooseStacksDialog extends JDialog {
 		while (!cards.isEmpty()) {
 			int randomIndex = random.nextInt(cards.size());
 			FlashCard currentCard = cards.get(randomIndex);
-			cards.remove(currentCard); // anyway remove card from project
-										// arraylist
-			int stack = currentCard.getStack() - 1; // stack numbers are from 1
-													// upwards;
-			if (boxes[stack].isSelected()) { // get only cards from selected
-												// stacks
+			cards.remove(currentCard); // anyway remove card from project arraylist
+			int stack = currentCard.getStack() - 1; // stack numbers are from 1 upwards;
+			if (boxes[stack].isSelected()) { // get only cards from selected  stacks
 				sessionCards.add(currentCard);
 			}
 		}
@@ -164,13 +147,13 @@ public class ChooseStacksDialog extends JDialog {
 	}
 
 	public void controlOkButton() {
-		boolean someSelection = false;
+		boolean anythingSelected = false;
 		for (StackBox box : boxes) {
 			if (box.isSelected()) {
-				someSelection = true;
+				anythingSelected = true;
 			}
 		}
-		btnOk.setEnabled(someSelection);
+		btnOk.setEnabled(anythingSelected);
 	}
 
 }

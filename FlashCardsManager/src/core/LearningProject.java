@@ -56,15 +56,15 @@ public class LearningProject {
 	public void store() throws SQLException, InvalidLengthException {
 		dbex.addProject(this);
 		ctl.addProject(this);
-		// TODO save pics
 	}
 
 	public void update() throws SQLException {
 		dbex.updateProject(this);
 	}
 
-	public void delete() throws SQLException {
+	public void delete() throws SQLException, IOException {
 		ctl.removeProject(this);
+		mex.deleteAllPics(this);
 		dbex.deleteProject(this);
 	}
 
@@ -167,7 +167,7 @@ public class LearningProject {
 	}
 
 	public String toString() {
-		return this.getTitle();
+		return this.getTitle(); // --> for combobox; TODO use other method
 		// return "ID: " + this.getId() + ", TITLE: " + this.getTitle() +
 		// ", NO_OF_STACKS: " + this.getNumberOfStacks();
 	}

@@ -5,9 +5,10 @@ import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.text.*;
 
+import app.StartApp;
+
 public class InvalidCharsFilter extends DocumentFilter {
 	private static final char[] INVALID_CHARS = { '\'' };
-	boolean DEBUG = false;
 	Component owner;
 	
 	public InvalidCharsFilter(Component owner) {
@@ -27,7 +28,7 @@ public class InvalidCharsFilter extends DocumentFilter {
 					JOptionPane.showMessageDialog(owner,
 							"Unerlaubtes Zeichen: " + INVALID_CHARS[j],
 							"Fehler", JOptionPane.ERROR_MESSAGE);
-					if (DEBUG) {
+					if (StartApp.DEBUG) {
 						System.out.println("deleted ' !");
 					}
 				}
