@@ -1,8 +1,5 @@
 package gui;
 
-import exc.CustomErrorHandling;
-import gui.helpers.*;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,8 +13,10 @@ import java.util.LinkedList;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-import utils.Logger;
 import core.*;
+import exc.CustomErrorHandling;
+import exc.CustomInfoHandling;
+import gui.helpers.*;
 
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {
@@ -39,12 +38,10 @@ public class MainWindow extends JFrame {
 			imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
 			imgAddProjectInfo = ImageIO.read(MainWindow.class.getClassLoader().getResourceAsStream(
 					"img/AddProjectInfo_450x338.png"));
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(null, ioe);
 		}
 	}
-
 
 	private LinkedList<Image> icons;
 	private final int majorVersion, minorVersion, patchLevel;
@@ -78,8 +75,8 @@ public class MainWindow extends JFrame {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			CustomErrorHandling.showInternalError(this, e);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
 		}
 
 		createWidgets();
@@ -92,13 +89,13 @@ public class MainWindow extends JFrame {
 			setSize(500, 450);
 			setLocationRelativeTo(null);
 			setVisible(true);
-		} catch (SQLException e) {
-			CustomErrorHandling.showDatabaseError(this, e);
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(this, sqle);
 		}
 	}
-	
+
 	public ProjectsController getProjectsController() {
-	   return this.ctl;
+		return this.ctl;
 	}
 
 	void computeProjectPanels() throws SQLException {
@@ -114,7 +111,7 @@ public class MainWindow extends JFrame {
 	void updateProjectStatus(LearningProject proj) throws SQLException {
 		Status s = proj.getStatus();
 		ProjectPanel p; // search for right project in project panels & update
-		// status
+						// status
 		for (int i = 0; i < projectPnls.size(); i++) {
 			if (projectPnls.get(i).getProject() == proj) {
 				p = projectPnls.get(i);
@@ -126,17 +123,12 @@ public class MainWindow extends JFrame {
 		}
 	}
 
-	public void updateProjectList() {
-		try {
-			computeProjectPanels();
-			centerBox.removeAll();
-			addProjectsToPanel();
-			centerBox.revalidate();
-			centerBox.repaint();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void updateProjectList() throws SQLException {
+		computeProjectPanels();
+		centerBox.removeAll();
+		addProjectsToPanel();
+		centerBox.revalidate();
+		centerBox.repaint();
 	}
 
 	private void createWidgets() {
@@ -163,7 +155,6 @@ public class MainWindow extends JFrame {
 		mnuSettingsNewProject = new MyMenuItem("Projekt");
 		mnuSettingsImportProject = new MyMenuItem("Projekte importieren..");
 		mnuSettingsExportProject = new MyMenuItem("Projekte exportieren..");
-		// mnuSettingsExportTable.setEnabled(false);
 		/* */
 		pnlControls = new JPanel();
 		pnlControls.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -278,22 +269,18 @@ public class MainWindow extends JFrame {
 			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 			int returnVal = fileChooser.showOpenDialog(MainWindow.this);
 			String pathToImport = null;
-			if (fileChooser.getSelectedFile() != null) { // prevent
-															// NullPointerExc
-															// when no path
-															// selected
+			if (fileChooser.getSelectedFile() != null) {
+				// prevent NullPointerExc when no path selected
 				pathToImport = fileChooser.getSelectedFile().getAbsolutePath();
 			}
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				if (pathToImport == null) { // no path selected
-					JOptionPane.showMessageDialog(MainWindow.this, "Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
-							JOptionPane.WARNING_MESSAGE);
+					CustomInfoHandling.showNoPathSelectedInfo(MainWindow.this);
 					doAction();
 				} else { // some path selected
 					File f = new File(pathToImport);
 					if (!f.canWrite()) { // can't read -> error message
-						JOptionPane.showMessageDialog(MainWindow.this, "Fehlende Ordnerberechtigungen unter " + f + ". ",
-								"Fehlende Berechtigung!", JOptionPane.WARNING_MESSAGE);
+						CustomInfoHandling.showMissingPermissionsInfo(MainWindow.this, f.toString());
 						doAction();
 					} else { // it's possible to overwrite -> ask user
 						doTask(pathToImport);

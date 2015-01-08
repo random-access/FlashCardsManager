@@ -10,9 +10,9 @@ import java.util.Random;
 
 import javax.swing.*;
 
-import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
+import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
 public class ChooseStacksDialog extends JDialog {
@@ -23,12 +23,11 @@ public class ChooseStacksDialog extends JDialog {
 
 	private JPanel pnlControls;
 	private Box centerBox;
+	private JScrollPane scpCenter;
 	private StackBox[] boxes;
 	private JButton btnOk, btnDiscard;
-	private boolean activeSelection;
 
-	ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards,
-			LearningProject project) throws SQLException {
+	ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards, LearningProject project) throws SQLException {
 		super(owner, false);
 		this.owner = owner;
 		this.project = project;
@@ -39,19 +38,14 @@ public class ChooseStacksDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException
-            | IllegalAccessException | UnsupportedLookAndFeelException e) {
-         JOptionPane.showMessageDialog(null,
-               "Ein interner Fehler ist aufgetreten", "Fehler",
-               JOptionPane.ERROR_MESSAGE);
-         Logger.log(e);
-      }
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
+		}
 
 		createWidgets();
 		addWidgets();
 		setListeners();
-
-		pack();
+		setSize(getPreferredSize().width + 10, 300);
 		setLocationRelativeTo(owner);
 	}
 
@@ -59,18 +53,25 @@ public class ChooseStacksDialog extends JDialog {
 	private void createWidgets() throws SQLException {
 		pnlControls = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 		centerBox = Box.createVerticalBox();
+		centerBox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		scpCenter = new JScrollPane(centerBox);
+		scpCenter.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		boxes = new StackBox[project.getNumberOfStacks()];
 		for (int i = 1; i <= project.getNumberOfStacks(); i++) {
-			boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i));
+			boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i), ChooseStacksDialog.this);
+			if (project.getNumberOfCards(i) == 0) {
+				boxes[i - 1].setEnabled(false);
+			}
 		}
 		btnOk = new JButton("Ok");
+		btnOk.setEnabled(false);
 		btnDiscard = new JButton("Abbrechen");
 
 	}
 
 	// ADD WIDGETS: put the GUI together
 	private void addWidgets() {
-		this.add(centerBox, BorderLayout.CENTER);
+		this.add(scpCenter, BorderLayout.CENTER);
 		this.add(pnlControls, BorderLayout.SOUTH);
 		for (int i = 1; i <= project.getNumberOfStacks(); i++) {
 			centerBox.add(boxes[i - 1]);
@@ -92,29 +93,18 @@ public class ChooseStacksDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				sessionCards = constructRandomSession();
-				LearningSession newSession = new LearningSession(
-						ChooseStacksDialog.this.owner,
-						ChooseStacksDialog.this.project,
+				LearningSession newSession = new LearningSession(ChooseStacksDialog.this.owner, ChooseStacksDialog.this.project,
 						ChooseStacksDialog.this.sessionCards);
-				if (activeSelection) {
-					newSession.setVisible(true);
-					ChooseStacksDialog.this.dispose();
-				} else {
-					JOptionPane.showMessageDialog(ChooseStacksDialog.this,
-							"Bitte Stapel mit Karten ausw\u00e4hlen!", "Achtung",
-							JOptionPane.WARNING_MESSAGE);
-				}
+				newSession.setVisible(true);
+				ChooseStacksDialog.this.dispose();
 			}
 		});
 	}
 
-	// COPY CARDS: copy flashcard array from Project Panel, because the cards
-	// will be deleted
-	// while constructing an empty session, and are needed e.g. in
-	// LearningSession
+	// COPY CARDS: copy flashcard array from Project Panel, because the cards will be deleted
+	// while constructing a learning session
 	private ArrayList<FlashCard> copyCards(ArrayList<FlashCard> srcCards) {
 		ArrayList<FlashCard> targetCards = new ArrayList<FlashCard>();
-		System.out.println("Src cards = null? " + srcCards == null);
 		targetCards.addAll(srcCards);
 		return targetCards;
 	}
@@ -147,17 +137,23 @@ public class ChooseStacksDialog extends JDialog {
 		while (!cards.isEmpty()) {
 			int randomIndex = random.nextInt(cards.size());
 			FlashCard currentCard = cards.get(randomIndex);
-			cards.remove(currentCard); // anyway remove card from project
-										// arraylist
-			int stack = currentCard.getStack() - 1; // stack numbers are from 1
-													// upwards;
-			if (boxes[stack].isSelected()) { // get only cards from selected
-												// stacks
-				activeSelection = true; // for error msg when no selection
+			cards.remove(currentCard); // anyway remove card from project arraylist
+			int stack = currentCard.getStack() - 1; // stack numbers are from 1 upwards;
+			if (boxes[stack].isSelected()) { // get only cards from selected  stacks
 				sessionCards.add(currentCard);
 			}
 		}
 		return sessionCards;
+	}
+
+	public void controlOkButton() {
+		boolean anythingSelected = false;
+		for (StackBox box : boxes) {
+			if (box.isSelected()) {
+				anythingSelected = true;
+			}
+		}
+		btnOk.setEnabled(anythingSelected);
 	}
 
 }

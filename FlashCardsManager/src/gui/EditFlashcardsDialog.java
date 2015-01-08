@@ -1,8 +1,5 @@
 package gui;
 
-import exc.CustomErrorHandling;
-import gui.helpers.MyMenuItem;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,8 +11,10 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-import utils.Logger;
 import core.*;
+import exc.CustomErrorHandling;
+import exc.CustomInfoHandling;
+import gui.helpers.MyMenuItem;
 
 @SuppressWarnings("serial")
 public class EditFlashcardsDialog extends JDialog {
@@ -27,9 +26,8 @@ public class EditFlashcardsDialog extends JDialog {
 			imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
 			imgFlashcardInfo = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
 					"img/AddFlashcardInfo_450x338.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-			// TODO: JDialog mit ErrorMsg
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(null, ioe);
 		}
 	}
 
@@ -37,12 +35,11 @@ public class EditFlashcardsDialog extends JDialog {
 	private LearningProject project;
 	private ProjectPanel projPnl;
 	private JLabel lblFlashcardInfo;
-	// make them private!! -> method for flashcard panel
-	JPanel pnlControls, pnlCenter, pnlSouth;
-	Box centerBox;
-	JScrollPane scpCenter;
-	ArrayList<FlashCardPanel> cardPnls;
-	ArrayList<FlashCard> cards;
+	private JPanel pnlControls, pnlCenter, pnlSouth;
+	private Box centerBox;
+	private JScrollPane scpCenter;
+	private ArrayList<FlashCardPanel> cardPnls;
+	private ArrayList<FlashCard> cards;
 	private JButton btnAddCard, btnClose;
 
 	private JMenuBar mnuBar;
@@ -56,14 +53,13 @@ public class EditFlashcardsDialog extends JDialog {
 		this.projPnl = projPnl;
 		this.cards = cards;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setTitle(owner.getTitle() + " - Lernkarten bearbeiten");
+		setTitle(project.getTitle() + " - Lernkarten bearbeiten");
 		setLayout(new BorderLayout());
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
 		}
 
 		createWidgets();
@@ -105,7 +101,7 @@ public class EditFlashcardsDialog extends JDialog {
 		mnuSettingsNewCard = new MyMenuItem("Neue Lernkarte hinzuf\u00fcgen..");
 		mnuSettingsTransferCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten verschieben..");
 		mnuSettingsDeleteCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten l\u00f6schen");
-		
+
 	}
 
 	private void addWidgets() throws SQLException {
@@ -114,7 +110,7 @@ public class EditFlashcardsDialog extends JDialog {
 		this.add(pnlSouth, BorderLayout.SOUTH);
 
 		pnlSouth.add(btnClose);
-;
+		;
 		pnlControls.add(btnAddCard);
 		pnlControls.add(Box.createHorizontalStrut(4));
 		pnlControls.add(mnuBar);
@@ -162,7 +158,6 @@ public class EditFlashcardsDialog extends JDialog {
 		createCardPanels();
 		addCardsToEditPanel();
 		pnlCenter.add(centerBox, BorderLayout.NORTH);
-
 		revalidate();
 		repaint();
 	}
@@ -179,17 +174,15 @@ public class EditFlashcardsDialog extends JDialog {
 
 	private void setListeners() {
 
-
 		btnAddCard.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
 				try {
-					AddFlashcardDialog d = new AddFlashcardDialog(EditFlashcardsDialog.this, project, projPnl);
+					AddFlashcardDialog d = new AddFlashcardDialog(null, EditFlashcardsDialog.this, project, projPnl);
 					d.setVisible(true);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
 				}
 			}
 		});
@@ -198,50 +191,56 @@ public class EditFlashcardsDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					AddFlashcardDialog d = new AddFlashcardDialog(EditFlashcardsDialog.this, project, projPnl);
+					AddFlashcardDialog d = new AddFlashcardDialog(null, EditFlashcardsDialog.this, project, projPnl);
 					d.setVisible(true);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
 				}
-				;
 			}
 		});
-		
-		mnuSettingsTransferCards.addActionListener(new ActionListener() {
 
+		mnuSettingsTransferCards.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ArrayList<FlashCard> transferCards = getSelectedCards();
 				if (transferCards.size() == 0) {
-					CustomErrorHandling.showNoCardsSelectedInfo();
+					CustomInfoHandling.showNoCardsSelectedInfo();
 				} else {
-					ChooseTargetProjectDialog d = new ChooseTargetProjectDialog(owner.getProjectsController(), owner, EditFlashcardsDialog.this, project,
-							getSelectedCards());
+					ChooseTargetProjectDialog d = new ChooseTargetProjectDialog(owner.getProjectsController(), owner,
+							EditFlashcardsDialog.this, project, getSelectedCards());
 					d.setVisible(true);
 				}
 			}
 		});
-		
+
 		mnuSettingsDeleteCards.addActionListener(new ActionListener() {
-			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ArrayList<FlashCard> transferCards = getSelectedCards();
 				if (transferCards.size() == 0) {
-					CustomErrorHandling.showNoCardsSelectedInfo();
+					CustomInfoHandling.showNoCardsSelectedInfo();
 				} else {
-					for (FlashCard c : transferCards) {
-						try {
-							c.delete();
-						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						} catch (IOException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
+					OkOrDisposeDialog d = new OkOrDisposeDialog(EditFlashcardsDialog.this.getOwner(), 300, 150);
+					d.setText("<html>M\u00f6chtest Du wirklich " + transferCards.size() + " Karten l\u00f6schen?</html>");
+					d.setTitle("Wirklich l\u00f6schen?");
+					d.addOkAction(new ActionListener() {
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							d.dispose();
+							try {
+								for (FlashCard c : transferCards) {
+									c.delete();
+								}
+								EditFlashcardsDialog.this.updateCardPanels();
+								CustomInfoHandling.showSuccessfullyDeletedInfo();
+							} catch (SQLException sqle) {
+								CustomErrorHandling.showDatabaseError(EditFlashcardsDialog.this, sqle);
+							} catch (IOException ioe) {
+								CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
+							}
 						}
-					}
+					});
+					d.setVisible(true);
 				}
 			}
 		});
@@ -252,7 +251,5 @@ public class EditFlashcardsDialog extends JDialog {
 				EditFlashcardsDialog.this.dispose();
 			}
 		});
-
 	}
-
 }

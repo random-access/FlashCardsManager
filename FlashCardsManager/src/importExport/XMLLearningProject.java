@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import core.LearningProject;
 import core.ProjectsController;
+import exc.InvalidValueException;
 
 public class XMLLearningProject {
 	
@@ -31,7 +32,7 @@ public class XMLLearningProject {
 		this.noOfStacks = noOfStacks;
 	}
 	
-	public LearningProject toLearningProject(ProjectsController ctl) throws SQLException {
+	public LearningProject toLearningProject(ProjectsController ctl) throws SQLException, InvalidValueException {
 	   return new LearningProject(ctl, projTitle, noOfStacks);
 	}
 	

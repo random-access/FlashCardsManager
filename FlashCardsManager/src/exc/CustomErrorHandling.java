@@ -1,5 +1,7 @@
 package exc;
 
+import gui.MainWindow;
+
 import java.awt.Component;
 
 import javax.swing.JOptionPane;
@@ -15,8 +17,7 @@ public class CustomErrorHandling {
 	public static void showDatabaseError(Component owner, Exception e) {
 		JOptionPane.showMessageDialog(owner, "Ein interner Datenbankfehler ist aufgetreten", "Fehler",
 				JOptionPane.ERROR_MESSAGE);
-		output(e);
-		
+		output(e);	
 	}
 	
 	public static void showInternalError(Component owner, Exception e) {
@@ -31,30 +32,34 @@ public class CustomErrorHandling {
 		output(e);
 	}
 	
+	public static void showExportError(Component owner, Exception e) {
+		JOptionPane.showMessageDialog(owner, "Beim Exportieren sind Fehler aufgetreten.", "Fehler",
+				JOptionPane.ERROR_MESSAGE);
+		output(e);
+	}
+	
+
+	public static void showImportError(Component owner, Exception e) {
+		JOptionPane.showMessageDialog(owner, "Beim Importieren sind Fehler aufgetreten.", "Fehler",
+				JOptionPane.ERROR_MESSAGE);
+		output(e);
+	}
+	
+	public static void showCorruptDataError(Component owner, Exception e) {
+		JOptionPane.showMessageDialog(owner, "Fehlerhafte Import-Datei!", "Fehler",
+				JOptionPane.ERROR_MESSAGE);
+		output(e);
+	}
+
+	public static void showParseError(Component owner, Exception e) {
+		JOptionPane.showMessageDialog(owner, "Es sind Probleme beim Einlesen aufgetreten.", "Fehler",
+				JOptionPane.ERROR_MESSAGE);
+		output(e);
+	}
+	
 	public static void showOtherError(Component owner, Throwable t) {
 		JOptionPane.showMessageDialog(owner, "Ein unerwarteter Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
 		output(t);
-	}
-
-	public static void showSecondInstanceError(Component owner, Exception e) {
-		JOptionPane
-		.showMessageDialog(
-				owner,
-				"Eine Instanz dieser Anwendung ist bereits aktiv. Bitte schlie\u00dfen Sie diese und starten Sie das Programm neu oder wechseln Sie zur offenen Anwendung.",
-				"Fehler", JOptionPane.ERROR_MESSAGE);
-		debugOutput(e);
-	}
-	
-	public static void showOldDatabaseInfo() {
-		JOptionPane.showMessageDialog(null, "Die Datenbankversion ist nicht mehr aktuell! Bitte aktualisiere die Datenbank", "Datenbankversion..", JOptionPane.INFORMATION_MESSAGE);	
-	}
-	
-	public static void showNoCardsSelectedInfo() {
-		JOptionPane.showMessageDialog(null, "Bitte w\u00e4hle eine oder mehrere Karten aus!", "Nichts ausgew\u00e4hlt", JOptionPane.INFORMATION_MESSAGE);	
-	}
-	
-	private static void debugOutput(Throwable t) {
-		if (StartApp.DEBUG) t.printStackTrace();
 	}
 	
 	private static void output(Throwable t) {
@@ -66,4 +71,5 @@ public class CustomErrorHandling {
 		if (StartApp.DEBUG) e.printStackTrace();
 		else Logger.log(e);
 	}
+
 }

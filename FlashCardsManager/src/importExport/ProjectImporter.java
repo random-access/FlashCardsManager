@@ -1,5 +1,7 @@
 package importExport;
 
+import exc.InvalidLengthException;
+import exc.InvalidValueException;
 import gui.helpers.IProgressPresenter;
 
 import java.io.IOException;
@@ -32,12 +34,12 @@ public class ProjectImporter {
 		pathToImportMediaFolder = pathToImport + "/" + XMLFiles.MEDIA_FOLDER.getName();
 	}
 
-	public void doImport() throws NumberFormatException, XMLStreamException, IOException, SQLException {
+	public void doImport() throws NumberFormatException, XMLStreamException, IOException, SQLException, InvalidValueException, InvalidLengthException {
 		readXMLLists();
 		convertXMLObjects();
 	}
 
-	private void convertXMLObjects() throws SQLException, IOException {
+	private void convertXMLObjects() throws SQLException, IOException, InvalidLengthException, InvalidValueException {
 		p.changeProgress(0);
 		importProjects = new ArrayList<LearningProject>();
 		Iterator<XMLLearningProject> it = xmlProjects.iterator();

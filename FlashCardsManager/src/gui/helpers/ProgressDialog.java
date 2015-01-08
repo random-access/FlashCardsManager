@@ -7,18 +7,18 @@ import java.beans.PropertyChangeListener;
 
 import javax.swing.*;
 
-import utils.Logger;
+import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
-public class ProgressDialog extends JDialog implements PropertyChangeListener{
-	
+public class ProgressDialog extends JDialog implements PropertyChangeListener {
+
 	private JProgressBar progressBar;
 	private JLabel lblInfo;
 	private Box progressBox;
 	private String info;
-	
+
 	public ProgressDialog(JFrame owner, String text) {
-		super (owner, false);
+		super(owner, false);
 		this.info = text;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setTitle("Bitte warten..");
@@ -26,26 +26,22 @@ public class ProgressDialog extends JDialog implements PropertyChangeListener{
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException
-            | IllegalAccessException | UnsupportedLookAndFeelException e) {
-         JOptionPane.showMessageDialog(null,
-               "Ein interner Fehler ist aufgetreten", "Fehler",
-               JOptionPane.ERROR_MESSAGE);
-         Logger.log(e);
-      }
-		
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
+		}
+
 		createAndAddWidgets();
-		
+
 		pack();
 		setLocationRelativeTo(owner);
 	}
-	
+
 	private void createAndAddWidgets() {
 		progressBox = Box.createVerticalBox();
-		progressBox.setBorder(BorderFactory.createEmptyBorder(40,60,40,60));
-		
+		progressBox.setBorder(BorderFactory.createEmptyBorder(40, 60, 40, 60));
+
 		this.add(progressBox, BorderLayout.CENTER);
-		progressBar = new JProgressBar(0,100);
+		progressBar = new JProgressBar(0, 100);
 		progressBar.setValue(0);
 		progressBar.setStringPainted(true);
 		progressBar.setIndeterminate(true);
@@ -58,17 +54,17 @@ public class ProgressDialog extends JDialog implements PropertyChangeListener{
 	}
 
 	@Override
-	public void propertyChange(PropertyChangeEvent evt) {
-		if ("progress" == evt.getPropertyName()) {
-            int progress = (Integer) evt.getNewValue();
-            progressBar.setIndeterminate(false);
-            progressBar.setValue(progress);
-        }
+	public void propertyChange(PropertyChangeEvent event) {
+		if ("progress" == event.getPropertyName()) {
+			int progress = (Integer) event.getNewValue();
+			progressBar.setIndeterminate(false);
+			progressBar.setValue(progress);
+		}
 	}
-	
+
 	public void changeInfo(String text) {
 		lblInfo.setText(text);
 		this.revalidate();
 	}
-	
+
 }

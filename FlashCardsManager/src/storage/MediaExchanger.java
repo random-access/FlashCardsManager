@@ -1,13 +1,11 @@
 package storage;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
-import app.StartApp;
 import utils.FileUtils;
-import utils.PicUtils;
+import app.StartApp;
 import core.FlashCard;
+import core.LearningProject;
 
 public class MediaExchanger {
 
@@ -103,6 +101,12 @@ public class MediaExchanger {
 		}
 
 	}
+	
+	public void deleteAllPics(LearningProject proj) throws IOException {
+		for (FlashCard c : proj.getAllCards()) {
+			deleteAllPics(c);
+		}
+	}
 
 	public void deleteAllPics(FlashCard card) throws IOException {
 		String targetQPath = computeTargetPathWithoutEnding(card, PicType.QUESTION);
@@ -114,7 +118,7 @@ public class MediaExchanger {
 	}
 
 	private String computeTargetPathWithoutEnding(FlashCard card, PicType type) {
-		System.out.println("path to media folder=" + pathToMediaFolder + ", card.getProj().getId()=" + card.getProj().getId()
+		if (StartApp.DEBUG) System.out.println("path to media folder=" + pathToMediaFolder + ", card.getProj().getId()=" + card.getProj().getId()
 				+ ", card.getId()=" + card.getId() + ", type.getShortForm=" + type.getShortForm());
 		return pathToMediaFolder + "/pic-" + card.getProj().getId() + "-" + card.getId() + "-" + type.getShortForm();
 	}

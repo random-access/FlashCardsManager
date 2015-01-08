@@ -62,17 +62,11 @@ public class PicAndTextPanel extends JPanel {
 		HTMLEditorKit editorKit = new HTMLEditorKit();
 		doc = (HTMLDocument) editorKit.createDefaultDocument();
 		if (customWidth == 0) {
-			if (pathToPic == null) {
-				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
-			} else {
-				txtPane = new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
-			}
+			txtPane = (pathToPic == null) ? new MyTextPane(DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_TEXT_ONLY) : new MyTextPane(
+					DEFAULT_CARD_WIDTH, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
 		} else {
-			if (pathToPic == null) {
-				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_TEXT_ONLY);
-			} else {
-				txtPane = new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
-			}
+			txtPane = (pathToPic == null) ? new MyTextPane(customWidth, DEFAULT_CARD_HEIGHT_TEXT_ONLY) : new MyTextPane(
+					customWidth, DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
 		}
 		txtPane.setContentType("text/html");
 		// correct input non-html text / preformatted html
@@ -104,11 +98,7 @@ public class PicAndTextPanel extends JPanel {
 
 	private void setTitle() {
 		if (type == null) {
-			if (txt.equals("")) {
-				lblTitle = new JLabel();
-			} else {
-				lblTitle = new JLabel("Fertig!");
-			}
+			lblTitle = txt.equals("") ? new JLabel() : new JLabel("Fertig!");
 		} else {
 			switch (type) {
 			case QUESTION:
@@ -155,7 +145,7 @@ public class PicAndTextPanel extends JPanel {
 		pnlTitle.add(lblPic, BorderLayout.CENTER);
 		txtPane.setMinimalHeight(DEFAULT_CARD_HEIGHT_PIC_AND_TEXT);
 		this.revalidate();
-		
+
 	}
 
 	public String getText() {
@@ -177,7 +167,7 @@ public class PicAndTextPanel extends JPanel {
 	public int getCustomWidth() {
 		return txtPane.getMinimalWidth();
 	}
-	
+
 	public String getPathToPic() {
 		return pathToPic;
 	}

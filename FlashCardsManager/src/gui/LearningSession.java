@@ -1,5 +1,6 @@
 package gui;
 
+import exc.CustomErrorHandling;
 import gui.helpers.MyButton;
 
 import java.awt.*;
@@ -26,9 +27,6 @@ public class LearningSession extends JDialog {
 
 	static {
 		try {
-			// imgFlashcardInfo =
-			// ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-			// "img/AddFlashcardInfo_450x338.png"));
 			imgSwitch = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSwitch_28x28.png"));
 			imgPrev = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPrev_28x28.png"));
 			imgNext = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgNext_28x28.png"));
@@ -67,11 +65,11 @@ public class LearningSession extends JDialog {
 		lit = allCards.listIterator();
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setLayout(new BorderLayout());
+		
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
 		}
 
 		createWidgets();
@@ -141,15 +139,9 @@ public class LearningSession extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				boolean isQuestion = centerPanel.isAncestorOf(pnlQ);
-				if (isQuestion) {
-					centerPanel.remove(pnlQ);
-					centerPanel.add(pnlA);
-					btnSwitch.setToolTipText("Frage zeigen");
-				} else {
-					centerPanel.remove(pnlA);
-					centerPanel.add(pnlQ);
-					btnSwitch.setToolTipText("Antwort zeigen");
-				}
+				centerPanel.remove(isQuestion ? pnlQ : pnlA);
+				centerPanel.add (isQuestion ? pnlA : pnlQ);
+				btnSwitch.setToolTipText(isQuestion? "Frage zeigen" : "Antwort zeigen");
 				centerPanel.revalidate();
 				centerPanel.repaint();
 			}
@@ -165,13 +157,8 @@ public class LearningSession extends JDialog {
 		btnFwd.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				boolean isQuestion = centerPanel.isAncestorOf(pnlQ);
-				if (isQuestion) {
-					centerPanel.remove(pnlQ);
-				} else {
-					centerPanel.remove(pnlA);
-					btnSwitch.setToolTipText("Antwort zeigen");
-				}
+				centerPanel.remove(centerPanel.isAncestorOf(pnlQ) ? pnlQ : pnlA);
+				btnSwitch.setToolTipText("Antwort zeigen");
 				createNextFlashcardFields();
 				centerPanel.add(pnlQ);
 				centerPanel.revalidate();
@@ -182,13 +169,8 @@ public class LearningSession extends JDialog {
 		btnBack.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				boolean isQuestion = centerPanel.isAncestorOf(pnlQ);
-				if (isQuestion) {
-					centerPanel.remove(pnlQ);
-				} else {
-					centerPanel.remove(pnlA);
-					btnSwitch.setToolTipText("Antwort zeigen");
-				}
+				centerPanel.remove(centerPanel.isAncestorOf(pnlQ) ? pnlQ : pnlA);
+				btnSwitch.setToolTipText("Antwort zeigen");
 				createPreviousFlashcardFields();
 				centerPanel.add(pnlQ);
 				centerPanel.revalidate();
@@ -206,27 +188,18 @@ public class LearningSession extends JDialog {
 					currentCard.update();
 					owner.updateProjectStatus(project);
 					LearningSession.this.owner.updateProjectStatus(project);
-					boolean isQuestion = centerPanel.isAncestorOf(pnlQ);
-					if (isQuestion) {
-						centerPanel.remove(pnlQ);
-					} else {
-						centerPanel.remove(pnlA);
-						btnSwitch.setToolTipText("Antwort zeigen");
-					}
+					centerPanel.remove(centerPanel.isAncestorOf(pnlQ) ? pnlQ : pnlA);
+					btnSwitch.setToolTipText("Antwort zeigen");
 					createNextFlashcardFields();
 					centerPanel.add(pnlQ);
 					centerPanel.revalidate();
 					centerPanel.repaint();
-				} catch (SQLException exc) {
-					JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.",
-							"Fehler", JOptionPane.ERROR_MESSAGE);
-					Logger.log(exc);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(LearningSession.this, sqle);
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(LearningSession.this, ioe);
 				}
 			}
-
 		});
 
 		btnTrue.addActionListener(new ActionListener() {
@@ -238,29 +211,19 @@ public class LearningSession extends JDialog {
 					currentCard.update();
 					owner.updateProjectStatus(project);
 					LearningSession.this.owner.updateProjectStatus(project);
-					boolean isQuestion = centerPanel.isAncestorOf(pnlQ);
-					if (isQuestion) {
-						centerPanel.remove(pnlQ);
-					} else {
-						centerPanel.remove(pnlA);
-						btnSwitch.setToolTipText("Antwort zeigen");
-					}
+					centerPanel.remove(centerPanel.isAncestorOf(pnlQ) ? pnlQ : pnlA);
+					btnSwitch.setToolTipText("Antwort zeigen");
 					createNextFlashcardFields();
 					centerPanel.add(pnlQ);
 					centerPanel.revalidate();
 					centerPanel.repaint();
-				} catch (SQLException exc) {
-					JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.",
-							"Fehler", JOptionPane.ERROR_MESSAGE);
-					Logger.log(exc);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(LearningSession.this, sqle);
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(LearningSession.this, ioe);
 				}
 			}
-
 		});
-
 	}
 
 	private FlashCard getNextCard() {
@@ -296,10 +259,10 @@ public class LearningSession extends JDialog {
 			lblTitle.setText(project.getTitle() + " - Karte " + currentCard.getNumberInProj());
 			progress.setValue(progress.getValue() - 1);
 			progress.setString(progress.getValue() + " von " + progress.getMaximum());
-		} catch (IOException | SQLException exc) {
-			JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Fehler ist aufgetreten.", "Fehler",
-					JOptionPane.ERROR_MESSAGE);
-			Logger.log(exc);
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(LearningSession.this, sqle);
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(LearningSession.this, ioe);
 		}
 	}
 
@@ -308,11 +271,9 @@ public class LearningSession extends JDialog {
 		enableNavigationAsNeeded();
 		try {
 			if (currentCard == null) {
-				if (allCards.size() == 0) {
-					pnlQ = new PicAndTextPanel("img/AddFlashcardInfo_450x338.png", "", null, false, 0);
-				} else {
-					pnlQ = new PicAndTextPanel(null, "Super! Geschafft!", null, false, 0);
-				}
+				pnlQ = allCards.size() == 0 ? 
+						new PicAndTextPanel("img/AddFlashcardInfo_450x338.png", "", null, false, 0) :
+							new PicAndTextPanel(null, "Super! Geschafft!", null, false, 0);
 				btnFwd.setEnabled(false);
 				btnSwitch.setEnabled(false);
 				btnTrue.setEnabled(false);
@@ -327,10 +288,10 @@ public class LearningSession extends JDialog {
 			}
 			progress.setValue(progress.getValue() + 1);
 			progress.setString(progress.getValue() + " von " + progress.getMaximum());
-		} catch (IOException | SQLException exc) {
-			JOptionPane.showMessageDialog(LearningSession.this, "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
-					JOptionPane.ERROR_MESSAGE);
-			Logger.log(exc);
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(LearningSession.this, sqle);
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(LearningSession.this, ioe);
 		}
 	}
 

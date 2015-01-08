@@ -1,5 +1,6 @@
 package gui.helpers;
 
+import exc.CustomErrorHandling;
 import gui.ProjectPanel;
 
 import java.awt.Component;
@@ -18,7 +19,8 @@ public class LoadCardsTask extends SwingWorker<Void, Void> implements IProgressP
 	LearningProject proj;
 	ProjectPanel.DialogType type;
 
-	public LoadCardsTask(ProgressDialog dialog, Component owner, ProjectPanel source, LearningProject proj, ProjectPanel.DialogType type) {
+	public LoadCardsTask(ProgressDialog dialog, Component owner, ProjectPanel source, LearningProject proj,
+			ProjectPanel.DialogType type) {
 		this.dialog = dialog;
 		this.owner = owner;
 		this.source = source;
@@ -26,18 +28,17 @@ public class LoadCardsTask extends SwingWorker<Void, Void> implements IProgressP
 		this.type = type;
 	}
 
-	public void changeProgress(int progress) { 
+	public void changeProgress(int progress) {
 		super.setProgress(progress);
-	}
-	
-	@Override
-	public void changeInfo(String text) {
-		dialog.changeInfo(text);
-		
 	}
 
 	@Override
-	protected Void doInBackground(){
+	public void changeInfo(String text) {
+		dialog.changeInfo(text);
+	}
+
+	@Override
+	protected Void doInBackground() {
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
@@ -52,17 +53,16 @@ public class LoadCardsTask extends SwingWorker<Void, Void> implements IProgressP
 				@Override
 				public void run() {
 					dialog.dispose();
-					owner.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 				}
 			});
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(owner, sqle);
+		} finally {
+			owner.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		}
 		return null;
 	}
-	
+
 	@Override
 	public void done() {
 		source.resume(type);

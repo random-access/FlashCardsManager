@@ -4,9 +4,10 @@ import java.awt.Toolkit;
 
 import javax.swing.text.*;
 
+import app.StartApp;
+
 public class DocumentSizeFilter extends DocumentFilter {
 	private int maxChars;
-	boolean DEBUG = false;
 	
 	public DocumentSizeFilter (int maxChars) {
 		this.maxChars = maxChars;
@@ -14,9 +15,7 @@ public class DocumentSizeFilter extends DocumentFilter {
 	
 	@Override
 	public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
-		if (DEBUG) {
-			System.out.println("in DocumentSizeFilter's insertString method");
-		}
+		if (StartApp.DEBUG) System.out.println("in DocumentSizeFilter's insertString method");
 		if (fb.getDocument().getLength() + string.length() <= maxChars) {
 			super.insertString(fb, offset, string, attr);
 		} else {
@@ -26,9 +25,7 @@ public class DocumentSizeFilter extends DocumentFilter {
 	
 	@Override
 	public void replace (FilterBypass fb, int offset, int length, String text, AttributeSet attr) throws BadLocationException {
-		if (DEBUG) {
-			System.out.println("in DocumentSizeFilter's replace method");
-		}
+		if (StartApp.DEBUG) System.out.println("in DocumentSizeFilter's replace method");
 		if(fb.getDocument().getLength() + text.length() - length <= maxChars) {
 			super.replace(fb, offset, length, text, attr);
 		} else {

@@ -27,45 +27,40 @@ public class FileUtils {
 		}
 	}
 
-	public static void deleteDirectory(String pathToDirectory, boolean debug) {
+	public static void deleteDirectory(String pathToDirectory) throws IOException {
 		Path dir = Paths.get(pathToDirectory);
-
-		try {
-			Files.walkFileTree(dir, new SimpleFileVisitor<Path>() {
-				@Override
-				public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-					if (debug)
-						System.out.println("Deleting file: " + file);
-					File f = new File(file.toString());
-					boolean success = f.canWrite();
-					if (debug) {
-						if (success) {
-							System.out.println("File " + file + " is writable!");
-						} else {
-							System.out.println("!!! File " + file + " is not writable!");
-						}
-					}
-					Files.delete(file);
-					return CONTINUE;
-				}
-
-				@Override
-				public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-
-					if (debug)
-						System.out.println("Deleting dir: " + dir);
-					if (exc == null) {
-						Files.delete(dir);
-						return CONTINUE;
+		Files.walkFileTree(dir, new SimpleFileVisitor<Path>() {
+			@Override
+			public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+				if (StartApp.DEBUG)
+					System.out.println("Deleting file: " + file);
+				File f = new File(file.toString());
+				boolean success = f.canWrite();
+				if (StartApp.DEBUG) {
+					if (success) {
+						System.out.println("File " + file + " is writable!");
 					} else {
-						throw exc;
+						System.out.println("!!! File " + file + " is not writable!");
 					}
 				}
-			});
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				Files.delete(file);
+				return CONTINUE;
+			}
+
+			@Override
+			public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+
+				if (StartApp.DEBUG)
+					System.out.println("Deleting dir: " + dir);
+				if (exc == null) {
+					Files.delete(dir);
+					return CONTINUE;
+				} else {
+					throw exc;
+				}
+			}
+
+		});
 	}
 
 	public static String appDirectory(String name) {
@@ -175,7 +170,7 @@ public class FileUtils {
 
 	public static String getFileExtension(String pathName) {
 		if (pathName != null) {
-			return pathName.substring(pathName.lastIndexOf('.')+1, pathName.length());
+			return pathName.substring(pathName.lastIndexOf('.') + 1, pathName.length());
 		}
 		return null;
 	}

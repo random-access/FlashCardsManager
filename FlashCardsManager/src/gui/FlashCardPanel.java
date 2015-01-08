@@ -12,8 +12,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import utils.HTMLToText;
-import utils.Logger;
 import core.*;
+import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
 public class FlashCardPanel extends JPanel {
@@ -28,9 +28,8 @@ public class FlashCardPanel extends JPanel {
 			imgYellow = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgYellow_8x8.png"));
 			imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgGreen_8x8.png"));
 
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(null, ioe);
 		}
 	}
 
@@ -89,14 +88,15 @@ public class FlashCardPanel extends JPanel {
 	private String getQuestionTitle(FlashCard f) {
 		StringReader in = new StringReader(f.getQuestion());
 		HTMLToText parser = new HTMLToText();
+		String question = null;
 		try {
 			parser.parse(in);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			in.close();
+			question = parser.getText();
+		} catch (IOException ioe) {
+			CustomErrorHandling.showParseError(editDialog, ioe);
+			question = f.getQuestion();
 		}
-		in.close();
-		String question = parser.getText();
 
 		String result;
 		String[] parts = question.split(" ");
@@ -126,25 +126,15 @@ public class FlashCardPanel extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						try {
 							card.delete();
-							projectPnl.removeCard(card);
-							editDialog.cardPnls.remove(FlashCardPanel.this);
-							editDialog.pnlCenter.remove(editDialog.centerBox);
-							editDialog.centerBox = Box.createVerticalBox();
-							editDialog.addCardsToEditPanel();
-							editDialog.pnlCenter.add(editDialog.centerBox, BorderLayout.NORTH);
-							projectPnl.getOwner().updateProjectStatus(project);
-							editDialog.repaint();
-							editDialog.revalidate();
-						} catch (SQLException exc) {
-							JOptionPane.showMessageDialog(FlashCardPanel.this, "Ein interner Datenbankfehler ist aufgetreten.",
-									"Fehler", JOptionPane.ERROR_MESSAGE);
-							Logger.log(exc);
-						} catch (IOException exc) {
-							JOptionPane.showMessageDialog(FlashCardPanel.this, "Ein interner Fehler ist aufgetreten.",
-									"Fehler", JOptionPane.ERROR_MESSAGE);
-							Logger.log(exc);;
+							editDialog.getOwner().updateProjectStatus(project);
+							editDialog.updateCardPanels();
+						} catch (SQLException sqle) {
+							CustomErrorHandling.showDatabaseError(editDialog, sqle);
+						} catch (IOException ioe) {
+							CustomErrorHandling.showInternalError(editDialog, ioe);
+						} finally {
+							d.dispose();
 						}
-						d.dispose();
 					}
 				});
 				d.setVisible(true);
@@ -154,25 +144,24 @@ public class FlashCardPanel extends JPanel {
 		btnEdit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
 				try {
 					AddFlashcardDialog d = new AddFlashcardDialog(editDialog, project, projectPnl, card);
 					d.setVisible(true);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(editDialog, ioe);
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(editDialog, sqle);
 				}
-				
 			}
 		});
 	}
-	
+
 	public boolean isSelected() {
-	   return chkSelected.isSelected();
+		return chkSelected.isSelected();
 	}
-	
+
 	public FlashCard getCard() {
-	   return this.card;
+		return this.card;
 	}
 
 	void changeStatus(Status s) {

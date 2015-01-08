@@ -1,21 +1,25 @@
 package gui;
 
-import gui.helpers.*;
 import importExport.XMLFiles;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.*;
 
 import utils.FileUtils;
-import utils.Logger;
 import core.LearningProject;
 import core.ProjectsController;
+import exc.CustomErrorHandling;
+import exc.CustomInfoHandling;
+import gui.helpers.ExportTask;
+import gui.helpers.ProgressDialog;
 
 @SuppressWarnings("serial")
 public class ChooseProjectsDialog extends JDialog {
@@ -28,6 +32,7 @@ public class ChooseProjectsDialog extends JDialog {
 	private Box centerBox;
 	private ProjectBox[] boxes;
 	private JButton btnOk, btnDiscard;
+
 	// private boolean delete = false;
 
 	ChooseProjectsDialog(MainWindow owner, ProjectsController ctl) {
@@ -41,9 +46,8 @@ public class ChooseProjectsDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
 		}
 
 		createWidgets();
@@ -106,11 +110,12 @@ public class ChooseProjectsDialog extends JDialog {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			try {
-            doAction();
-         } catch (SQLException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-         }
+				doAction();
+			} catch (SQLException sqle) {
+				CustomErrorHandling.showDatabaseError(ChooseProjectsDialog.this, sqle);
+			} catch (IOException ioe) {
+				CustomErrorHandling.showInternalError(ChooseProjectsDialog.this, ioe);
+			}
 		}
 
 		private void doTask(String pathToExport) throws SQLException {
@@ -121,68 +126,55 @@ public class ChooseProjectsDialog extends JDialog {
 			task.execute();
 		}
 
-		private void doAction() throws SQLException {
+		private void doAction() throws SQLException, IOException {
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 			int returnVal = fileChooser.showSaveDialog(ChooseProjectsDialog.this);
 			ChooseProjectsDialog.this.dispose();
 			String pathToExport = null;
-			if (fileChooser.getSelectedFile() != null) { // prevent
-				// NullPointerExc
-				// when no path
-				// selected
+			if (fileChooser.getSelectedFile() != null) {
+				// prevent NullPointerExc when no path selected
 				pathToExport = fileChooser.getSelectedFile().getAbsolutePath();
 			}
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				if (pathToExport == null) { // no path selected
-					JOptionPane.showMessageDialog(ChooseProjectsDialog.this, "Es wurde kein Pfad ausgew\u00e4hlt", "Fehler!",
-							JOptionPane.WARNING_MESSAGE);
+					CustomInfoHandling.showNoPathSelectedInfo(owner);
 					doAction();
 				} else { // some path selected
 					File f = new File(pathToExport);
 					if (f.exists()) { // file already there
 						if (!f.canWrite()) { // can't overwrite -> error message
-							JOptionPane.showMessageDialog(owner, "Fehlende Ordnerberechtigungen unter " + f.getParent() + ".",
-									"Fehler!", JOptionPane.WARNING_MESSAGE);
+							CustomInfoHandling.showMissingPermissionsInfo(owner, f.getParent());
 							doAction();
 						} else { // it's possible to overwrite -> ask user
-							int dialogResult = JOptionPane.showConfirmDialog(owner, "Die Datei " + f.getName()
-									+ " existiert bereits in " + f.getParent() + " - soll sie \u00fcberschrieben werden?",
-									"Datei \u00fcberschreiben?", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+							int dialogResult = CustomInfoHandling.showOverwriteFileQuestion(owner, f.getName(), f.getParent());
 							if (dialogResult == JOptionPane.YES_OPTION) {
 								// user wants to overwrite -> delete existing
 								// directory and start export
 								if (FileUtils.directoryContainsOnlyCertainFiles(pathToExport, XMLFiles.getAllNames())) {
-									FileUtils.deleteDirectory(pathToExport, true);
+									FileUtils.deleteDirectory(pathToExport);
 									doTask(pathToExport);
 								} else {
-									JOptionPane.showMessageDialog(owner, f.getName()
-											+ " ist kein Ordner, oder in diesem Ordner liegen noch andere Dateien!", "Fehler!",
-											JOptionPane.WARNING_MESSAGE);
+									CustomInfoHandling.showUnexpectedFolderStructureInfo(owner, pathToExport);
 									doAction();
 								}
 							} else if (dialogResult == JOptionPane.NO_OPTION) {
 								// user doesn't want to overwrite -> show file
-								// chooser
+								// chooser again
 								doAction();
 							}
-
 						}
 					} else { // no file with that name yet
-						if (!f.getParentFile().canWrite()) { // can't write ->
-							// error message
-							JOptionPane.showMessageDialog(owner, "Fehler - keine Schreibberechtigung unter " + f.getParent()
-									+ ". Bitte w\u00e4hle ein anderes Verzeichnis! ", "Fehlende Berechtigung!",
-									JOptionPane.WARNING_MESSAGE);
+						if (!f.getParentFile().canWrite()) { // missing
+																// permissions
+							CustomInfoHandling.showMissingPermissionsInfo(owner, f.getParent());
 							doAction();
 						} else { // writing is possible -> start export
 							doTask(pathToExport);
 						}
 					}
 				}
-
 			}
 		}
-
 	}
 }

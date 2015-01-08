@@ -1,8 +1,8 @@
 <?xml version="1.0"?> 
 	<settings>
 		<majorVersion>0</majorVersion>
-		<minorVersion>1</minorVersion>
-		<patchLevel>9</patchLevel>
+		<minorVersion>2</minorVersion>
+		<patchLevel>0</patchLevel>
 		<pathToDatabase>null</pathToDatabase>
 		<databaseVersion>2</databaseVersion>
 		<showIntro>true</showIntro>

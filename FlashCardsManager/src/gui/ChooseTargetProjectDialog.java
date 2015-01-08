@@ -1,5 +1,6 @@
 package gui;
 
+import exc.CustomErrorHandling;
 import gui.helpers.MyComboBoxModel;
 
 import java.awt.*;
@@ -38,6 +39,12 @@ public class ChooseTargetProjectDialog extends JDialog {
 		this.editDialog = editDialog;
 		this.owner = owner;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
+		}
 
 		createWidgets();
 		addWidgets();
@@ -103,12 +110,10 @@ public class ChooseTargetProjectDialog extends JDialog {
 					}
 					editDialog.updateCardPanels();
 					owner.updateProjectList();
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(owner, sqle);
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(owner, ioe);
 				} finally {
 					ChooseTargetProjectDialog.this.dispose();
 				}

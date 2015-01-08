@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import storage.DBExchanger;
 import storage.MediaExchanger;
+import exc.InvalidLengthException;
 import exc.InvalidValueException;
 
 public class LearningProject {
@@ -24,13 +25,17 @@ public class LearningProject {
 
 	// CONSTRUCTORS
 	// new project
-	public LearningProject(ProjectsController ctl, String title, int numberOfStacks) throws SQLException {
+	public LearningProject(ProjectsController ctl, String title, int numberOfStacks) throws SQLException, InvalidValueException {
 		this.ctl = ctl;
 		dbex = ctl.getDbex();
 		mex = ctl.getMex();
 		id = dbex.nextProjectId();
 		this.title = title;
-		this.numberOfStacks = numberOfStacks;
+		if (!validNoOfStacks(numberOfStacks)) {
+			throw new InvalidValueException();
+		} else {
+			this.numberOfStacks = numberOfStacks;
+		}
 		allCards = new ArrayList<FlashCard>();
 	}
 
@@ -48,27 +53,27 @@ public class LearningProject {
 		allCards = dbex.getAllCards(this, t);
 	}
 
-	public void store() throws SQLException {
+	public void store() throws SQLException, InvalidLengthException {
 		dbex.addProject(this);
 		ctl.addProject(this);
-		// TODO save pics
 	}
-	
+
 	public void update() throws SQLException {
 		dbex.updateProject(this);
 	}
 
-	public void delete() throws SQLException {
+	public void delete() throws SQLException, IOException {
 		ctl.removeProject(this);
+		mex.deleteAllPics(this);
 		dbex.deleteProject(this);
 	}
-	
+
 	public XMLLearningProject toXMLLearningProject() {
-	   XMLLearningProject proj = new XMLLearningProject();
-	   proj.setProjId(id);
-	   proj.setProjTitle(title);
-	   proj.setNoOfStacks(numberOfStacks);
-	   return proj;
+		XMLLearningProject proj = new XMLLearningProject();
+		proj.setProjId(id);
+		proj.setProjTitle(title);
+		proj.setNoOfStacks(numberOfStacks);
+		return proj;
 	}
 
 	// Adds a flashcard to the project
@@ -81,7 +86,7 @@ public class LearningProject {
 	public void removeCard(FlashCard card) {
 		allCards.remove(card);
 	}
-	
+
 	public ArrayList<FlashCard> getAllCards() {
 		return allCards;
 	}
@@ -90,12 +95,12 @@ public class LearningProject {
 	public DBExchanger getDBEX() {
 		return this.dbex;
 	}
-	
+
 	// Get media exchanger
 	public MediaExchanger getMex() {
 		return mex;
 	}
-	
+
 	// TITLE - Getter & setter
 	public String getTitle() {
 		return title;
@@ -115,7 +120,7 @@ public class LearningProject {
 		return numberOfStacks;
 	}
 
-	public void setNumberOfStacks(int newNumberOfStacks) throws InvalidValueException, SQLException, IOException{
+	public void setNumberOfStacks(int newNumberOfStacks) throws InvalidValueException, SQLException, IOException {
 		if (!validNoOfStacks(newNumberOfStacks)) {
 			throw new InvalidValueException();
 		}
@@ -135,7 +140,7 @@ public class LearningProject {
 	}
 
 	public boolean validNoOfStacks(int noOfStacks) {
-		return (noOfStacks > 0);
+		return (noOfStacks > 0 && noOfStacks < 100);
 	}
 
 	// COUNT CARDS in whole project / stacks
@@ -151,9 +156,9 @@ public class LearningProject {
 		int maxStack = dbex.getMaxStack(this);
 		int minStack = dbex.getMinStack(this);
 		Status s;
-		if (maxStack== 1 || maxStack == 0) {
+		if (maxStack == 1 || maxStack == 0) {
 			s = Status.RED;
-		} else if (maxStack == numberOfStacks && maxStack == minStack){
+		} else if (maxStack == numberOfStacks && maxStack == minStack) {
 			s = Status.GREEN;
 		} else {
 			s = Status.YELLOW;
@@ -162,7 +167,8 @@ public class LearningProject {
 	}
 
 	public String toString() {
-		return this.getTitle();
-		// return "ID: " + this.getId() + ", TITLE: " + this.getTitle() + ", NO_OF_STACKS: " + this.getNumberOfStacks();
+		return this.getTitle(); // --> for combobox; TODO use other method
+		// return "ID: " + this.getId() + ", TITLE: " + this.getTitle() +
+		// ", NO_OF_STACKS: " + this.getNumberOfStacks();
 	}
 }

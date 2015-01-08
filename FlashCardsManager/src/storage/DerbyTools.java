@@ -7,8 +7,7 @@ import app.StartApp;
 public class DerbyTools {
 
 	// prevent instantiation
-	private DerbyTools() {
-	}
+	private DerbyTools() {}
 
 	// TABLE ALREADY EXISTING:
 	// check if flashcard table is already in database

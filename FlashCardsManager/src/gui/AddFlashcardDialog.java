@@ -1,8 +1,5 @@
 package gui;
 
-import exc.CustomErrorHandling;
-import gui.helpers.MyButton;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -17,9 +14,10 @@ import javax.swing.text.StyledEditorKit;
 
 import storage.PicType;
 import utils.IndividualAction;
-import utils.Logger;
 import core.FlashCard;
 import core.LearningProject;
+import exc.CustomErrorHandling;
+import gui.helpers.MyButton;
 
 @SuppressWarnings("serial")
 public class AddFlashcardDialog extends JDialog {
@@ -47,17 +45,17 @@ public class AddFlashcardDialog extends JDialog {
 			imgEditPic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgEditPic_28x28.png"));
 			imgRemovePic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgRemovePic_28x28.png"));
 			imgLargerCard = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgLargerCard_28x28.png"));
-			imgSmallerCard = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSmallerCard_28x28.png"));
+			imgSmallerCard = ImageIO
+					.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSmallerCard_28x28.png"));
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+			CustomErrorHandling.showInternalError(null, e);
 		}
 	}
 
 	private MainWindow owner;
 	private LearningProject project;
 	private ProjectPanel projPnl;
-	//private String pathToQuestionPic, pathToAnswerPic;
+	// private String pathToQuestionPic, pathToAnswerPic;
 	private EditFlashcardsDialog efcDialog;
 
 	// only for existing flashcards
@@ -81,32 +79,24 @@ public class AddFlashcardDialog extends JDialog {
 	private Action rightAction = new StyledEditorKit.AlignmentAction("Right Align", StyleConstants.ALIGN_RIGHT);
 	private Action centerAction = new StyledEditorKit.AlignmentAction("Center Align", StyleConstants.ALIGN_CENTER);
 
-	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card) throws IOException {
-		this(project, projPnl);
+	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card)
+			throws IOException, SQLException {
+		this(null, project, projPnl);
 		this.efcDialog = efcDialog;
 		this.existingCard = card;
 		centerPanel.remove(pnlQ);
-		try {
-			pnlQ = new PicAndTextPanel(card.getPathToQuestionPic(), card.getQuestion(), PicType.QUESTION, true, card.getQuestionWidth());
-			pnlA = new PicAndTextPanel(card.getPathToAnswerPic(), card.getAnswer(), PicType.ANSWER, true, card.getAnswerWidth());
-			centerPanel.add(pnlQ);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			lblTitle.setText("Karte " + card.getNumberInProj() + " bearbeiten...");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		pnlQ = new PicAndTextPanel(card.getPathToQuestionPic(), card.getQuestion(), PicType.QUESTION, true,
+				card.getQuestionWidth());
+		pnlA = new PicAndTextPanel(card.getPathToAnswerPic(), card.getAnswer(), PicType.ANSWER, true, card.getAnswerWidth());
+		centerPanel.add(pnlQ);
+		lblTitle.setText("Karte " + card.getNumberInProj() + " bearbeiten...");
 		setPicButtons();
 		pnlBottom.remove(btnSaveAndNext);
 		btnDiscard.setText("abbrechen");
 	}
 
 	// constructor for adding a new flashcard
-	public AddFlashcardDialog(LearningProject project, ProjectPanel projPnl) throws IOException {
+	public AddFlashcardDialog(Point lastLocation, LearningProject project, ProjectPanel projPnl) throws IOException {
 		super(projPnl.getOwner(), true);
 		this.owner = projPnl.getOwner();
 		this.project = project;
@@ -116,9 +106,8 @@ public class AddFlashcardDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-			Logger.log(e);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+			CustomErrorHandling.showInternalError(null, exc);
 		}
 
 		createWidgets();
@@ -126,11 +115,16 @@ public class AddFlashcardDialog extends JDialog {
 		setListeners();
 
 		pack();
-		setLocationRelativeTo(owner);
+		if (lastLocation == null) {
+			setLocationRelativeTo(owner);
+		} else {
+			setLocation(lastLocation);
+		}
 	}
 
-	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl) throws IOException {
-		this(project, projPnl);
+	public AddFlashcardDialog(Point lastLocation, EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl)
+			throws IOException {
+		this(lastLocation, project, projPnl);
 		this.efcDialog = efcDialog;
 	}
 
@@ -163,10 +157,10 @@ public class AddFlashcardDialog extends JDialog {
 		cmbFontFamilies.setToolTipText("Schriftart (noch nicht implementiert)");
 
 		// Choose font size
-				SpinnerModel sizeModel = new SpinnerNumberModel(12, 6, 48, 2);
-				spFontSizes = new JSpinner(sizeModel);
-				spFontSizes.setEnabled(false);
-				spFontSizes.setToolTipText("Schriftgr\u00f6\u00dfe (noch nicht implementiert)");
+		SpinnerModel sizeModel = new SpinnerNumberModel(12, 6, 48, 2);
+		spFontSizes = new JSpinner(sizeModel);
+		spFontSizes.setEnabled(false);
+		spFontSizes.setToolTipText("Schriftgr\u00f6\u00dfe (noch nicht implementiert)");
 		// for (int i = 6; i <= 48; i=i+2){
 		// new StyledEditorKit.FontSizeAction(String.valueOf(fontSizes[i]),
 		// fontSizes[i]);
@@ -242,7 +236,7 @@ public class AddFlashcardDialog extends JDialog {
 		pnlEditor.add(btnList);
 		pnlEditor.add(btnNum);
 		pnlEditor.add(btnAddPic);
-		
+
 		pnlBottom.add(btnLargerCard);
 		pnlBottom.add(btnSmallerCard);
 		pnlBottom.add(btnFlip);
@@ -263,39 +257,34 @@ public class AddFlashcardDialog extends JDialog {
 			public void componentResized(ComponentEvent evt) {
 				int scpWidth = scpEditor.getWidth();
 				int prefEditorWidth = pnlEditor.getPreferredSize().width;
-				if (scpWidth < prefEditorWidth) {
-					west.setVisible(true);
-					east.setVisible(true);
+				west.setVisible(scpWidth < prefEditorWidth);
+				east.setVisible(scpWidth < prefEditorWidth);
+			}
+		});
+
+		btnLargerCard.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (centerPanel.isAncestorOf(pnlQ)) {
+					pnlQ.makeLarger();
 				} else {
-					west.setVisible(false);
-					east.setVisible(false);
+					pnlA.makeLarger();
 				}
 			}
 		});
-		
-		btnLargerCard.addActionListener(new ActionListener() {
-         
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            if (centerPanel.isAncestorOf(pnlQ)) {
-               pnlQ.makeLarger();
-            } else {
-               pnlA.makeLarger();
-            }
-         }
-      });
-		
+
 		btnSmallerCard.addActionListener(new ActionListener() {
-         
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            if (centerPanel.isAncestorOf(pnlQ)) {
-               pnlQ.makeSmaller();
-            } else {
-               pnlA.makeSmaller();
-            }
-         }
-      });
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (centerPanel.isAncestorOf(pnlQ)) {
+					pnlQ.makeSmaller();
+				} else {
+					pnlA.makeSmaller();
+				}
+			}
+		});
 
 		btnFlip.addActionListener(new ActionListener() {
 			@Override
@@ -341,16 +330,15 @@ public class AddFlashcardDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				Point currentLocation = AddFlashcardDialog.this.getLocationOnScreen();
 				saveNewCardToDatabase();
-				
 				try {
-					AddFlashcardDialog d = new AddFlashcardDialog(project, projPnl);
+					AddFlashcardDialog d = new AddFlashcardDialog(currentLocation, efcDialog, project, projPnl);
 					d.setVisible(true);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (IOException ioe) {
+					CustomErrorHandling.showInternalError(AddFlashcardDialog.this, ioe);
 				}
-				
+
 			}
 		});
 
@@ -377,7 +365,6 @@ public class AddFlashcardDialog extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				if (centerPanel.isAncestorOf(pnlQ)) {
 					pnlQ.removePicture();
-					;
 				} else {
 					pnlA.removePicture();
 				}
@@ -399,33 +386,28 @@ public class AddFlashcardDialog extends JDialog {
 			if (efcDialog != null) {
 				efcDialog.updateCardPanels();
 			}
-		} catch (SQLException exc) {
-			JOptionPane.showMessageDialog(AddFlashcardDialog.this, "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",
-					JOptionPane.ERROR_MESSAGE);
-			Logger.log(exc);
-		} catch (IOException exc) {
-			JOptionPane.showMessageDialog(AddFlashcardDialog.this, "Ein interner Fehler ist aufgetreten.", "Fehler",
-					JOptionPane.ERROR_MESSAGE);
-			Logger.log(exc);
-		}
-		AddFlashcardDialog.this.dispose();
+			AddFlashcardDialog.this.dispose();
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(AddFlashcardDialog.this, sqle);
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(AddFlashcardDialog.this, ioe);
+		}	
 	}
 
 	private void saveNewCardToDatabase() {
 		try {
-			FlashCard newCard = new FlashCard(project , pnlQ.getText(), pnlA.getText(), pnlQ.getPathToPic(), pnlA.getPathToPic(),pnlQ.getCustomWidth(), pnlA.getCustomWidth());
+			FlashCard newCard = new FlashCard(project, pnlQ.getText(), pnlA.getText(), pnlQ.getPathToPic(), pnlA.getPathToPic(),
+					pnlQ.getCustomWidth(), pnlA.getCustomWidth());
 			newCard.store();
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
 				efcDialog.updateCardPanels();
 			}
 			AddFlashcardDialog.this.dispose();
-		} catch (SQLException se) {
-			CustomErrorHandling.showDatabaseError(this, se);
-		} catch (IOException se) {
-			CustomErrorHandling.showInternalError(this, se);
-			Logger.log(se);
-			
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(AddFlashcardDialog.this, sqle);
+		} catch (IOException ioe) {
+			CustomErrorHandling.showInternalError(AddFlashcardDialog.this, ioe);
 		}
 	}
 
@@ -440,11 +422,10 @@ public class AddFlashcardDialog extends JDialog {
 				}
 				setPicButtons();
 				AddFlashcardDialog.this.revalidate();
-			} catch (IOException exc) {
-				JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
-				Logger.log(exc);
+			} catch (IOException ioe) {
+				CustomErrorHandling.showDatabaseError(AddFlashcardDialog.this, ioe);
 			}
-		} 
+		}
 	}
 
 	private void setPicButtons() {
