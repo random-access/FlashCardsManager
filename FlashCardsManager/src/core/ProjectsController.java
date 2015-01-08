@@ -1,5 +1,7 @@
 package core;
 
+import exc.InvalidLengthException;
+import exc.InvalidValueException;
 import gui.helpers.*;
 import importExport.ProjectExporter;
 import importExport.ProjectImporter;
@@ -52,7 +54,7 @@ public class ProjectsController {
 		return projects;
 	}
 
-	public void importProjects(String pathToImport, IProgressPresenter p) throws NumberFormatException, XMLStreamException, IOException, SQLException {
+	public void importProjects(String pathToImport, IProgressPresenter p) throws NumberFormatException, XMLStreamException, IOException, SQLException, InvalidValueException, InvalidLengthException {
 		ProjectImporter importer = new ProjectImporter(pathToImport, pathToMediaFolder, this, p);
 		importer.doImport();
 	}

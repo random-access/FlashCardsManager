@@ -1,5 +1,8 @@
 package gui;
 
+import gui.helpers.CustomColor;
+import gui.helpers.TransparencyTextField;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,9 +13,6 @@ import javax.swing.text.AbstractDocument;
 
 import utils.*;
 import core.LearningProject;
-import exc.NoValueException;
-import gui.helpers.CustomColor;
-import gui.helpers.TransparencyTextField;
 
 @SuppressWarnings("serial")
 public class ChangeTitleDialog extends JDialog {
@@ -59,18 +59,17 @@ public class ChangeTitleDialog extends JDialog {
             // pruefe ob vollstaendige Eingabe
             try {
                if (txtTitle.getText().equals("")) {
-                  throw new NoValueException();
-               }
+            	   txtTitle.setBackground(CustomColor.BACKGROUND_ERROR_RED);
+                   JOptionPane.showMessageDialog(ChangeTitleDialog.this,
+                         "Es wurde kein Titel eingegeben.",
+                         "Fehler", JOptionPane.ERROR_MESSAGE);
+               } else {
                // verarbeite Eingabe in DB
                proj.setTitle(txtTitle.getText());
                proj.update();
                owner.updateProjectList();
                ChangeTitleDialog.this.dispose();
-            } catch (NoValueException exc) {
-            	txtTitle.setBackground(CustomColor.BACKGROUND_ERROR_RED);
-               JOptionPane.showMessageDialog(ChangeTitleDialog.this,
-                     "Es wurde kein Titel eingegeben.",
-                     "Fehler", JOptionPane.ERROR_MESSAGE);
+               }
             } catch (SQLException exc) {
                JOptionPane.showMessageDialog(ChangeTitleDialog.this,
                      "Ein interner Datenbankfehler ist aufgetreten.", "Fehler",

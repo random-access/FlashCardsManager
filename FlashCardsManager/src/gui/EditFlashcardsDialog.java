@@ -56,7 +56,7 @@ public class EditFlashcardsDialog extends JDialog {
 		this.projPnl = projPnl;
 		this.cards = cards;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setTitle(owner.getTitle() + " - Lernkarten bearbeiten");
+		setTitle(project.getTitle() + " - Lernkarten bearbeiten");
 		setLayout(new BorderLayout());
 
 		try {

@@ -1,5 +1,7 @@
 package storage;
 
+import exc.InvalidLengthException;
+import exc.InvalidValueException;
 import gui.helpers.IProgressPresenter;
 import importExport.XMLMedia;
 
@@ -134,7 +136,10 @@ public class DBExchanger {
 	}
 
 	// ADD PROJECT: insert project into table
-	public void addProject(LearningProject project) throws SQLException {
+	public void addProject(LearningProject project) throws SQLException, InvalidLengthException {
+		if (project.getTitle().length() > maxShortString/5) {
+			throw new InvalidLengthException();
+		}
 		Statement st = conn.createStatement();
 		st.execute("INSERT INTO " + projectsTable + " VALUES (" + project.getId() + ",'" + project.getTitle() + "', "
 				+ project.getNumberOfStacks() + ")");

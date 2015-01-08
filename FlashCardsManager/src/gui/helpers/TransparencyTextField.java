@@ -17,6 +17,11 @@ public class TransparencyTextField extends JTextField {
 		setOpaque(false);
 	}
 
+	public TransparencyTextField() {
+		super();
+		setOpaque(false);
+	}
+
 	@Override
 	protected void paintComponent(Graphics g) {
 		g.setColor(getBackground());
