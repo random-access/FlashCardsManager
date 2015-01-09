@@ -42,11 +42,11 @@ public class ProjectsController {
 		return mex;
 	}
 	
-	public void addProject(LearningProject p) {
+	void addProject(LearningProject p) {
 		projects.add(p);
 	}
 	
-	public void removeProject(LearningProject p) {
+	void removeProject(LearningProject p) {
 		projects.remove(p);
 	}
 	

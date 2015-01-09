@@ -77,13 +77,13 @@ public class LearningProject {
 	}
 
 	// Adds a flashcard to the project
-	public void addCard(FlashCard card) {
+	void addCard(FlashCard card) {
 		System.out.println(allCards);
 		allCards.add(card);
 	}
 
 	// Removes a flashcard from the project
-	public void removeCard(FlashCard card) {
+	void removeCard(FlashCard card) {
 		allCards.remove(card);
 	}
 
@@ -124,7 +124,7 @@ public class LearningProject {
 		if (!validNoOfStacks(newNumberOfStacks)) {
 			throw new InvalidValueException();
 		}
-		// if there are less stacks than before - shift all cards with too high
+		// if there are less stacks than before, shift all cards with too high
 		// no of stack into highest stack
 		if (this.numberOfStacks > newNumberOfStacks) {
 			for (int i = 0; i < allCards.size(); i++) {

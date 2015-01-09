@@ -1,22 +1,21 @@
-package jtabletest;
-
-import importExport.XMLFlashCard;
+package editFlashcardsRefactoring;
 
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
+
+import jtabletest.TableData;
 
 @SuppressWarnings("serial")
 public class MyTableModel extends AbstractTableModel {
 	
-	private ArrayList<XMLFlashCard> data;
-	private ArrayList<Boolean> checkBoxes;
+	private ArrayList<TableData> data;
 	private String[] columnNames;
 
-	public MyTableModel(ArrayList<XMLFlashCard> data, ArrayList<Boolean> checkBoxes, String[] columnNames) {
+	public MyTableModel(ArrayList<TableData> data, String[] columnNames) {
 		this.data = data;
 		this.columnNames = columnNames;
-		this.checkBoxes = checkBoxes;
 	}
 
 	@Override
@@ -38,13 +37,13 @@ public class MyTableModel extends AbstractTableModel {
 	public Object getValueAt(int rowIndex, int columnIndex) {
 		switch (columnIndex) {
 		case 0:
-			return checkBoxes.get(rowIndex);
+			return data.get(rowIndex).isSelected();
 		case 1:
-			return data.get(rowIndex).getId();
+			return data.get(rowIndex).getCard().getId();
 		case 2:
-			return data.get(rowIndex).getQuestion();
+			return data.get(rowIndex).getCard().getQuestion();
 		case 3:
-			return data.get(rowIndex).getStack();
+			return data.get(rowIndex).getCard().getStack();
 		default:
 			return 0;
 		}
@@ -62,14 +61,23 @@ public class MyTableModel extends AbstractTableModel {
 	}
 
 	@Override
-	public void setValueAt(Object aValue, int row, int column) {
-		if (aValue instanceof Boolean && column == 0) {
-			checkBoxes.set(row, (Boolean) aValue);
+	public void setValueAt(Object value, int row, int column) {
+		if (value instanceof Boolean && column == 0) {
+			data.get(row).setSelected((boolean) value);
 			fireTableCellUpdated(row, column);
 		}
-		if (aValue instanceof Integer && column == 3) {
-			data.get(row).setStack((int) aValue);
+		if (value instanceof Integer && column == 3) {
+			data.get(row).getCard().setStack((int) value);
 			fireTableCellUpdated(row, column);
 		}
 	}
+
+	public void removeRow(int row) {
+		data.remove(row);
+		fireTableRowsDeleted(row, row);
+	}
+
+    public void updateRow(int row) {
+        fireTableRowsUpdated(row, row); 
+    }
 }

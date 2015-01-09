@@ -1,25 +1,22 @@
-package tests;
+package editFlashcardsRefactoring;
 
 import importExport.XMLFlashCard;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
+import javax.swing.table.*;
 
-import jtabletest.MyTableModel;
+import jtabletest.TableData;
 
 @SuppressWarnings("serial")
 public class JTableTestFrame extends JFrame {
-	private ArrayList<XMLFlashCard> data;
-	private ArrayList<Boolean> checkBoxes;
+	private ArrayList<TableData> data;
 	private String[] columnNames = { "Auswahl", "ID", "Frage", "Stapel" };
+	private TableRowSorter<TableModel> rowSorter;
 	
 	private JButton btnDelete, btnPrintContent;
 	private JTable table;
@@ -27,7 +24,7 @@ public class JTableTestFrame extends JFrame {
 	private JPanel pnlControls;
 
 	public JTableTestFrame() {
-		setTitle("JComponent Testklasse");
+		setTitle("JTable Testklasse");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		try {
@@ -55,41 +52,68 @@ public class JTableTestFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				for (int i = 0; i < checkBoxes.size(); i++) {
-					if (checkBoxes.get(i)) {
-						// table.getModel().get
-						data.remove(i);
-						checkBoxes.remove(i);
-						
-					}
-				}
-				revalidate();
+			    for (int i = data.size()-1; i >= 0; --i) {
+                    if (data.get(i).isSelected()) {
+                        ((MyTableModel) table.getModel()).removeRow(i);
+                    }
+                }
 			}
+		});
+		
+		btnPrintContent.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// int row = table.getModel().get
+				int guiRow = table.getSelectedRow();
+				System.out.print ("selected gui row: " + guiRow + ", ");
+				int modelRow = rowSorter.convertRowIndexToModel(guiRow);
+				System.out.println("model row: " + modelRow);
+			}
+		});
+		
+		table.addMouseListener(new MouseAdapter() {
+		    
+		    @Override
+		    public void mouseClicked(MouseEvent e) {
+		        if (e.getClickCount() == 2) {
+		            JTable target = (JTable)e.getSource();
+		            int rowAtPoint    = target.rowAtPoint( e.getPoint() );
+		            System.out.print("clicked on gui row " + rowAtPoint + ", ");
+		            int convertedRowAtPoint = rowSorter.convertRowIndexToModel( rowAtPoint );
+		            System.out.println("model row " + convertedRowAtPoint);
+		        }
+		    }
+        });
+		
+		table.getTableHeader().addMouseListener(new MouseAdapter() {
+		    public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2 && table.columnAtPoint(e.getPoint()) == 0) {
+                    boolean b = data.get(0).isSelected();
+                    for (int i = 0; i < data.size(); i++) {
+                        data.get(i).setSelected(!b);
+                        ((MyTableModel) table.getModel()).updateRow(i);
+                    }
+                }
+		    }
 		});
 	}
 
 	private void constructTable() {
 		data = createTestingFlashcardList();
-		checkBoxes = createCheckboxes(data.size());
-		TableModel model = new MyTableModel(data, checkBoxes, columnNames);
+		MyTableModel model = new MyTableModel(data, columnNames);
 		table = new JTable(model);
 		setCustomWidthAndHeight();
 		setCustomAlignment();
+		// table.setCellSelectionEnabled(false);
+		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		enableRowSorting(model);
 		addComboBoxToTable();
 	}
-	
-	private ArrayList<Boolean> createCheckboxes(int size) {
-		ArrayList<Boolean> boxes = new ArrayList<Boolean>();
-		for (int i = 0; i < size; i++) {
-			boxes.add(new Boolean(false));
-		}
-		return boxes;
-	}
 
-	private ArrayList<XMLFlashCard> createTestingFlashcardList() {
-		ArrayList<XMLFlashCard> list = new ArrayList<XMLFlashCard>();
-		for (int i = 0; i < 30; i++) {
+	private ArrayList<TableData> createTestingFlashcardList() {
+		ArrayList<TableData> list = new ArrayList<TableData>();
+		for (int i = 0; i < 8; i++) {
 			XMLFlashCard f = new XMLFlashCard();
 			if (i % 2 == 0) {
 				f.setId(i + 1);
@@ -99,13 +123,14 @@ public class JTableTestFrame extends JFrame {
 			if (i % 2 == 0) {
 				f.setQuestion("Frage " + (i + 1));
 			} else {
-				f.setQuestion("Das ist Frage No. " + (i + 1)
-						+ ", diese Frage ist etwas laenger. Damit kann ich testen wie die Tabelle sich verhaelt.");
+				f.setQuestion("Das ist Frage No. " + (i + 1));
+					//	+ ", diese Frage ist etwas laenger. Damit kann ich testen wie die Tabelle sich verhaelt.");
 			}
 			f.setStack(i % 3);
-			list.add(f);
+			list.add(new TableData(f));
 		}
 		return list;
+
 	}
 
 	private void setCustomWidthAndHeight() {
@@ -117,7 +142,7 @@ public class JTableTestFrame extends JFrame {
 	}
 
 	private void enableRowSorting(TableModel model) {
-		final TableRowSorter<TableModel> rowSorter = new TableRowSorter<TableModel>(model);
+		rowSorter = new TableRowSorter<TableModel>(model);
 		table.setRowSorter(rowSorter);
 	}
 
