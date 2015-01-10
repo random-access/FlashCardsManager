@@ -1,15 +1,17 @@
-package editFlashcardsRefactoring;
+package gui.editFlashcardsRefactoring;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 
-import jtabletest.TableData;
+import core.FlashCard;
 
 @SuppressWarnings("serial")
 public class MyTableModel extends AbstractTableModel {
-	
+
 	private ArrayList<TableData> data;
 	private String[] columnNames;
 
@@ -35,25 +37,27 @@ public class MyTableModel extends AbstractTableModel {
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
-		switch (columnIndex) {
-		case 0:
-			return data.get(rowIndex).isSelected();
-		case 1:
-			return data.get(rowIndex).getCard().getId();
-		case 2:
-			return data.get(rowIndex).getCard().getQuestion();
-		case 3:
-			return data.get(rowIndex).getCard().getStack();
-		default:
-			return 0;
+		if (data.size() > 0) {
+			switch (columnIndex) {
+			case 0:
+				return data.get(rowIndex).isSelected();
+			case 1:
+				return data.get(rowIndex).getCard().getId();
+			case 2:
+				return data.get(rowIndex).getCard().getQuestionInPlainText();
+			case 3:
+				return data.get(rowIndex).getCard().getStack();
+			default:
+				return 0;
+			}
 		}
+		return 0;
 	}
 
 	@Override
-    public Class<?> getColumnClass(int column) {
-        return getValueAt(0, column).getClass();
-    }
-
+	public Class<?> getColumnClass(int column) {
+		return data.size() > 0 ? getValueAt(0, column).getClass() : Object.class;
+	}
 
 	@Override
 	public boolean isCellEditable(int row, int column) {
@@ -72,12 +76,26 @@ public class MyTableModel extends AbstractTableModel {
 		}
 	}
 
-	public void removeRow(int row) {
+	public void removeCard(int row) throws SQLException, IOException {
+		data.get(row).getCard().delete();
 		data.remove(row);
 		fireTableRowsDeleted(row, row);
 	}
 
-    public void updateRow(int row) {
-        fireTableRowsUpdated(row, row); 
-    }
+	public void updateRow(int row) {
+		fireTableRowsUpdated(row, row);
+	}
+	
+	public void updateSelection() {
+		
+	}
+	
+	public boolean someCardSelected() {
+		for (TableData d : data) {
+			if (d.isSelected()) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

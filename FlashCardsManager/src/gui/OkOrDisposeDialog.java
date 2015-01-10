@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +17,7 @@ public class OkOrDisposeDialog extends JDialog {
 	private JPanel pnlControls,pnlCenter;
 	private JButton btnOk, btnDiscard;
 
-	OkOrDisposeDialog(MainWindow owner, int width, int height) {
+	public OkOrDisposeDialog(JFrame owner, int width, int height) {
 		super(owner, true);
 		setLayout(new BorderLayout());
 		
@@ -60,11 +61,11 @@ public class OkOrDisposeDialog extends JDialog {
 		lblText.setHorizontalAlignment(SwingConstants.CENTER);
 	}
 	
-	void setText(String text) {
+	public void setText(String text) {
 		lblText.setText(text);
 	}
 	
-	void addOkAction(ActionListener l) {
+	public void addOkAction(ActionListener l) {
 		btnOk.addActionListener(l);
 	}
 

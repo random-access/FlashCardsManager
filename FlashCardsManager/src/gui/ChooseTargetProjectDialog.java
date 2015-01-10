@@ -1,6 +1,7 @@
 package gui;
 
 import exc.CustomErrorHandling;
+import gui.editFlashcardsRefactoring.EditFlashcardsDialog;
 import gui.helpers.MyComboBoxModel;
 
 import java.awt.*;
@@ -108,7 +109,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 					for (FlashCard f : cardsToTransfer) {
 						f.transferTo(targetProject, chkKeepProgress.isSelected());
 					}
-					editDialog.updateCardPanels();
+					editDialog.updateCards();
 					owner.updateProjectList();
 				} catch (SQLException sqle) {
 					CustomErrorHandling.showDatabaseError(owner, sqle);

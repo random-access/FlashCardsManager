@@ -17,6 +17,7 @@ import utils.IndividualAction;
 import core.FlashCard;
 import core.LearningProject;
 import exc.CustomErrorHandling;
+import gui.editFlashcardsRefactoring.EditFlashcardsDialog;
 import gui.helpers.MyButton;
 
 @SuppressWarnings("serial")
@@ -384,7 +385,7 @@ public class AddFlashcardDialog extends JDialog {
 			existingCard.setAnswerWidth(pnlA.getCustomWidth());
 			existingCard.update();
 			if (efcDialog != null) {
-				efcDialog.updateCardPanels();
+				efcDialog.updateCards();
 			}
 			AddFlashcardDialog.this.dispose();
 		} catch (SQLException sqle) {
@@ -401,7 +402,7 @@ public class AddFlashcardDialog extends JDialog {
 			newCard.store();
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
-				efcDialog.updateCardPanels();
+				efcDialog.updateCards();
 			}
 			AddFlashcardDialog.this.dispose();
 		} catch (SQLException sqle) {

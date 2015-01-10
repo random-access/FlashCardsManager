@@ -1,21 +1,21 @@
-package jtabletest;
+package gui.editFlashcardsRefactoring;
 
-import importExport.XMLFlashCard;
+import core.FlashCard;
 
 public class TableData {
 
-	private XMLFlashCard card;
+	private FlashCard card;
 	private boolean selected;
 
-	public TableData(XMLFlashCard card) {
+	public TableData(FlashCard card) {
 		this.card = card;
 	}
 
-	public XMLFlashCard getCard() {
+	public FlashCard getCard() {
 		return card;
 	}
 
-	public void setCard(XMLFlashCard card) {
+	public void setCard(FlashCard card) {
 		this.card = card;
 	}
 

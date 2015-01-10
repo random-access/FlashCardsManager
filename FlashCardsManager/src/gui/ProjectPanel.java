@@ -1,6 +1,7 @@
 package gui;
 
 import exc.CustomErrorHandling;
+import gui.editFlashcardsRefactoring.EditFlashcardsDialog;
 import gui.helpers.*;
 
 import java.awt.*;
@@ -71,6 +72,7 @@ public class ProjectPanel extends JPanel {
 		createWidgets();
 		addWidgets();
 		setListeners();
+		System.out.println(this.projectTitle + ": " + this.status);
 	}
 
 	public MainWindow getOwner() {
@@ -135,9 +137,9 @@ public class ProjectPanel extends JPanel {
 		return fileChooser;
 	}
 
-	Status getStatus() {
-		return this.status;
-	}
+//	public Status getStatus() {
+//		return this.status;
+//	}
 
 	private void setStatus(Status s) {
 		switch (s) {
@@ -320,6 +322,7 @@ public class ProjectPanel extends JPanel {
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(parentWindow, sqle);
 		}
+		
 
 	}
 
