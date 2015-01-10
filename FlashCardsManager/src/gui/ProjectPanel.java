@@ -157,7 +157,7 @@ public class ProjectPanel extends JPanel {
 		}
 	}
 
-	void changeStatus(Status s) {
+	public void changeStatus(Status s) {
 		remove(b);
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));

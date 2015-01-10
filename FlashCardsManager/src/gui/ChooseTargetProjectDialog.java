@@ -109,7 +109,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 					for (FlashCard f : cardsToTransfer) {
 						f.transferTo(targetProject, chkKeepProgress.isSelected());
 					}
-					editDialog.updateCards();
+					editDialog.updateCardsView();
 					owner.updateProjectList();
 				} catch (SQLException sqle) {
 					CustomErrorHandling.showDatabaseError(owner, sqle);

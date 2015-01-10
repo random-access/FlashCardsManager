@@ -385,7 +385,7 @@ public class AddFlashcardDialog extends JDialog {
 			existingCard.setAnswerWidth(pnlA.getCustomWidth());
 			existingCard.update();
 			if (efcDialog != null) {
-				efcDialog.updateCards();
+				efcDialog.updateCardsView();
 			}
 			AddFlashcardDialog.this.dispose();
 		} catch (SQLException sqle) {
@@ -402,7 +402,7 @@ public class AddFlashcardDialog extends JDialog {
 			newCard.store();
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
-				efcDialog.updateCards();
+				efcDialog.updateCardsView();
 			}
 			AddFlashcardDialog.this.dispose();
 		} catch (SQLException sqle) {

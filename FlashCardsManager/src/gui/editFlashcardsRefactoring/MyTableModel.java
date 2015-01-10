@@ -8,6 +8,7 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 
 import core.FlashCard;
+import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
 public class MyTableModel extends AbstractTableModel {
@@ -42,7 +43,12 @@ public class MyTableModel extends AbstractTableModel {
 			case 0:
 				return data.get(rowIndex).isSelected();
 			case 1:
-				return data.get(rowIndex).getCard().getId();
+				try {
+                    return data.get(rowIndex).getCard().getNumberInProj();
+                } catch (SQLException sqle) {
+                    CustomErrorHandling.showDatabaseError(null, sqle);
+                    return -1;
+                }
 			case 2:
 				return data.get(rowIndex).getCard().getQuestionInPlainText();
 			case 3:
@@ -71,7 +77,15 @@ public class MyTableModel extends AbstractTableModel {
 			fireTableCellUpdated(row, column);
 		}
 		if (value instanceof Integer && column == 3) {
-			data.get(row).getCard().setStack((int) value);
+		    FlashCard c = data.get(row).getCard();
+			c.setStack((int) value);
+			try {
+                c.update();
+            } catch (SQLException sqle) {
+                CustomErrorHandling.showDatabaseError(null, sqle);
+            } catch (IOException ioe) {
+                CustomErrorHandling.showInternalError(null, ioe);
+            }
 			fireTableCellUpdated(row, column);
 		}
 	}
@@ -84,10 +98,6 @@ public class MyTableModel extends AbstractTableModel {
 
 	public void updateRow(int row) {
 		fireTableRowsUpdated(row, row);
-	}
-	
-	public void updateSelection() {
-		
 	}
 	
 	public boolean someCardSelected() {
