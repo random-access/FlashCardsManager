@@ -1,25 +1,37 @@
 package gui;
 
-import exc.CustomErrorHandling;
-import gui.helpers.MyComboBoxModel;
-
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
-import core.*;
+import core.FlashCard;
+import core.LearningProject;
+import core.ProjectsController;
+import events.ProjectDataChangedListener;
+import exc.CustomErrorHandling;
+import gui.helpers.MyComboBoxModel;
 
 @SuppressWarnings("serial")
-public class ChooseTargetProjectDialog extends JDialog {
+public class FlashcardTransferDialog extends JDialog {
 	private ArrayList<FlashCard> cardsToTransfer;
 	private LearningProject srcProj;
 	private ProjectsController ctl;
-	private EditFlashcardsDialog editDialog;
 	private MainWindow owner;
 
 	private JPanel pnlBottom, pnlCenter, pnlGrid;
@@ -27,16 +39,13 @@ public class ChooseTargetProjectDialog extends JDialog {
 	private JLabel lblSourceProject, lblSourceProjectName, lblTargetProject;
 	private JComboBox<LearningProject> cmbChooseProject;
 	private JCheckBox chkKeepProgress;
-
 	
-
-	public ChooseTargetProjectDialog(ProjectsController ctl, MainWindow owner, EditFlashcardsDialog editDialog, LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
+	public FlashcardTransferDialog(ProjectsController ctl, MainWindow owner, FlashcardOverviewDialog editDialog, LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
 		super(owner, true);
 		setTitle("Lernkarten verschieben...");
 		this.cardsToTransfer = cardsToTransfer;
 		this.srcProj = srcProj;
 		this.ctl = ctl;
-		this.editDialog = editDialog;
 		this.owner = owner;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
@@ -108,14 +117,15 @@ public class ChooseTargetProjectDialog extends JDialog {
 					for (FlashCard f : cardsToTransfer) {
 						f.transferTo(targetProject, chkKeepProgress.isSelected());
 					}
-					editDialog.updateCardPanels();
+					ctl.fireProjectDataChangedEvent();
+					// editDialog.updateCardsView(srcProj.getAllCards());
 					owner.updateProjectList();
 				} catch (SQLException sqle) {
 					CustomErrorHandling.showDatabaseError(owner, sqle);
 				} catch (IOException ioe) {
 					CustomErrorHandling.showInternalError(owner, ioe);
 				} finally {
-					ChooseTargetProjectDialog.this.dispose();
+					FlashcardTransferDialog.this.dispose();
 				}
 			}
 		});
@@ -124,7 +134,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChooseTargetProjectDialog.this.dispose();
+				FlashcardTransferDialog.this.dispose();
 			}
 		});
 	}

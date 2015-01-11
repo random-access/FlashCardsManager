@@ -17,9 +17,9 @@ public class StackBox extends Box {
 	private JCheckBox chk;
 	private JLabel lblStack, lblNoOfCards;
 
-	StackBox(int stackNo, int noOfCards, ChooseStacksDialog d) {
+	StackBox(int stackNo, int noOfCards, final PrepareLearningSessionDialog d) {
 		super(BoxLayout.X_AXIS);
-		final ChooseStacksDialog[] dArr = { d };
+		final PrepareLearningSessionDialog[] dArr = { d };
 		chk = new JCheckBox();
 		lblStack = new JLabel("Stapel " + stackNo + ": ");
 		lblNoOfCards = new JLabel(noOfCards + " Karten");
@@ -46,8 +46,7 @@ public class StackBox extends Box {
 		if (enabled == false) {
 			lblStack.setFont(lblStack.getFont().deriveFont(Font.ITALIC));
 			lblStack.setForeground(Color.GRAY);
-			lblNoOfCards
-					.setFont(lblNoOfCards.getFont().deriveFont(Font.ITALIC));
+			lblNoOfCards.setFont(lblNoOfCards.getFont().deriveFont(Font.ITALIC));
 			lblNoOfCards.setForeground(Color.GRAY);
 		}
 	}

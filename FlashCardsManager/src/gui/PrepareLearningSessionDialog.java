@@ -15,7 +15,7 @@ import core.LearningProject;
 import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
-public class ChooseStacksDialog extends JDialog {
+public class PrepareLearningSessionDialog extends JDialog {
 
 	private MainWindow owner;
 	private ArrayList<FlashCard> cards, sessionCards;
@@ -27,7 +27,7 @@ public class ChooseStacksDialog extends JDialog {
 	private StackBox[] boxes;
 	private JButton btnOk, btnDiscard;
 
-	ChooseStacksDialog(MainWindow owner, ArrayList<FlashCard> allCards, LearningProject project) throws SQLException {
+	PrepareLearningSessionDialog(MainWindow owner, ArrayList<FlashCard> allCards, LearningProject project) throws SQLException {
 		super(owner, false);
 		this.owner = owner;
 		this.project = project;
@@ -58,7 +58,7 @@ public class ChooseStacksDialog extends JDialog {
 		scpCenter.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		boxes = new StackBox[project.getNumberOfStacks()];
 		for (int i = 1; i <= project.getNumberOfStacks(); i++) {
-			boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i), ChooseStacksDialog.this);
+			boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i), PrepareLearningSessionDialog.this);
 			if (project.getNumberOfCards(i) == 0) {
 				boxes[i - 1].setEnabled(false);
 			}
@@ -85,7 +85,7 @@ public class ChooseStacksDialog extends JDialog {
 		btnDiscard.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChooseStacksDialog.this.dispose();
+				PrepareLearningSessionDialog.this.dispose();
 			}
 		});
 
@@ -93,10 +93,10 @@ public class ChooseStacksDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				sessionCards = constructRandomSession();
-				LearningSession newSession = new LearningSession(ChooseStacksDialog.this.owner, ChooseStacksDialog.this.project,
-						ChooseStacksDialog.this.sessionCards);
+				LearningSession newSession = new LearningSession(PrepareLearningSessionDialog.this.owner, PrepareLearningSessionDialog.this.project,
+						PrepareLearningSessionDialog.this.sessionCards);
 				newSession.setVisible(true);
-				ChooseStacksDialog.this.dispose();
+				PrepareLearningSessionDialog.this.dispose();
 			}
 		});
 	}

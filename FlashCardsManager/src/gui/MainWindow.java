@@ -244,7 +244,7 @@ public class MainWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
+			PrepareExportDialog d = new PrepareExportDialog(MainWindow.this, ctl);
 			d.setVisible(true);
 		}
 	}

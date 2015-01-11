@@ -4,9 +4,12 @@ import importExport.XMLFlashCard;
 import importExport.XMLMedia;
 
 import java.io.IOException;
+import java.io.StringReader;
 import java.sql.SQLException;
 
+import exc.CustomErrorHandling;
 import storage.*;
+import utils.HTMLToText;
 
 public class FlashCard {
 
@@ -197,6 +200,21 @@ public class FlashCard {
 				+ this.getQuestion() + ", ANSWER: " + this.getAnswer() + ", PATH TO QUESTION PIC: " + this.getPathToQuestionPic()
 				+ ", PATH TO ANSWER PIC: " + this.getPathToAnswerPic() + ", CUSTOM_WIDTH_Q: " + this.getQuestionWidth()
 				+ ", CUSTOM_WIDTH_A: " + this.getAnswerWidth();
+	}
+
+	public Object getQuestionInPlainText() {
+			StringReader in = new StringReader(this.getQuestion());
+			HTMLToText parser = new HTMLToText();
+			String question = null;
+			try {
+				parser.parse(in);
+				in.close();
+				question = parser.getText();
+			} catch (IOException ioe) {
+				CustomErrorHandling.showParseError(null, ioe);
+				question = this.getQuestion();
+			}
+		return question;
 	}
 
 }
