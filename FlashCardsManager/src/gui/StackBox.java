@@ -2,9 +2,14 @@ package gui;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
 public class StackBox extends Box {
@@ -12,7 +17,7 @@ public class StackBox extends Box {
 	private JCheckBox chk;
 	private JLabel lblStack, lblNoOfCards;
 
-	StackBox(int stackNo, int noOfCards, PrepareLearningSessionDialog d) {
+	StackBox(int stackNo, int noOfCards, final PrepareLearningSessionDialog d) {
 		super(BoxLayout.X_AXIS);
 		chk = new JCheckBox();
 		lblStack = new JLabel("Stapel " + stackNo + ": ");
@@ -22,8 +27,8 @@ public class StackBox extends Box {
 		this.add(Box.createHorizontalGlue());
 		this.add(lblNoOfCards);
 		this.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 30));
-		
-		chk.addItemListener(new ItemListener() {	
+
+		chk.addItemListener(new ItemListener() {
 			@Override
 			public void itemStateChanged(ItemEvent e) {
 				d.controlOkButton();
