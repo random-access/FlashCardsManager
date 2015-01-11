@@ -15,4 +15,9 @@
 		<proj_title>Datenbanken KE2</proj_title>
 		<no_of_stacks>4</no_of_stacks>
 	</project>
+	<project>
+		<proj_id>5</proj_id>
+		<proj_title>TestImportANKI</proj_title>
+		<no_of_stacks>3</no_of_stacks>
+	</project>
 </projects>
