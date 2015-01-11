@@ -2,9 +2,14 @@ package gui;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
 public class StackBox extends Box {
@@ -14,6 +19,7 @@ public class StackBox extends Box {
 
 	StackBox(int stackNo, int noOfCards, ChooseStacksDialog d) {
 		super(BoxLayout.X_AXIS);
+		final ChooseStacksDialog[] dArr = { d };
 		chk = new JCheckBox();
 		lblStack = new JLabel("Stapel " + stackNo + ": ");
 		lblNoOfCards = new JLabel(noOfCards + " Karten");
@@ -22,11 +28,11 @@ public class StackBox extends Box {
 		this.add(Box.createHorizontalGlue());
 		this.add(lblNoOfCards);
 		this.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 30));
-		
-		chk.addItemListener(new ItemListener() {	
+
+		chk.addItemListener(new ItemListener() {
 			@Override
 			public void itemStateChanged(ItemEvent e) {
-				d.controlOkButton();
+				dArr[0].controlOkButton();
 			}
 		});
 	}
@@ -40,7 +46,8 @@ public class StackBox extends Box {
 		if (enabled == false) {
 			lblStack.setFont(lblStack.getFont().deriveFont(Font.ITALIC));
 			lblStack.setForeground(Color.GRAY);
-			lblNoOfCards.setFont(lblNoOfCards.getFont().deriveFont(Font.ITALIC));
+			lblNoOfCards
+					.setFont(lblNoOfCards.getFont().deriveFont(Font.ITALIC));
 			lblNoOfCards.setForeground(Color.GRAY);
 		}
 	}
