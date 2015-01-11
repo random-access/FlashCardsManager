@@ -1,29 +1,62 @@
 package gui;
 
-import exc.CustomErrorHandling;
-import exc.CustomInfoHandling;
-import gui.helpers.*;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.awt.FlowLayout;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.EventObject;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.table.*;
-import javax.swing.tree.*;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.DefaultCellEditor;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTable;
+import javax.swing.JTree;
+import javax.swing.ListSelectionModel;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreeSelectionModel;
 
-import core.*;
+import core.FlashCard;
+import core.Label;
+import core.LearningProject;
+import events.ProjectDataChangedListener;
+import exc.CustomErrorHandling;
+import exc.CustomInfoHandling;
+import gui.helpers.FlashcardTableModel;
+import gui.helpers.LabelTreeCellRenderer;
+import gui.helpers.MyMenuItem;
 
 @SuppressWarnings("serial")
-public class FlashcardOverviewDialog extends JDialog {
+public class FlashcardOverviewDialog extends JDialog implements ProjectDataChangedListener{
 
     private static BufferedImage imgSettings, imgPlus, imgFlashcardInfo, imgEdit, imgDelete;
     {
@@ -39,7 +72,6 @@ public class FlashcardOverviewDialog extends JDialog {
         }
     }
 
-    private ArrayList<FlashcardTableData> cardData;
     private ArrayList<Label> labelData;
     private String[] columnNames = { "Auswahl", "ID", "Frage", "Stapel" };
     private TableRowSorter<TableModel> rowSorter;
@@ -62,20 +94,12 @@ public class FlashcardOverviewDialog extends JDialog {
     private MainWindow owner;
     private LearningProject project;
     private ProjectPanel projPnl;
-    private ArrayList<FlashCard> cards;
-
-    boolean emptyProject = false;
-    boolean selectable = false;
-    // private ListSelectionModel listSelectionModel;
-   //  protected boolean anyRowByClickSelected;
-    
 
     public FlashcardOverviewDialog(ProjectPanel projPnl, ArrayList<FlashCard> cards, LearningProject project) throws SQLException {
         // super(projPnl.getOwner(), true);
         this.owner = projPnl.getOwner();
         this.project = project;
         this.projPnl = projPnl;
-        this.cards = cards;
         setTitle(project.getTitle() + " - Lernkarten bearbeiten (TESTING)");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
@@ -84,18 +108,18 @@ public class FlashcardOverviewDialog extends JDialog {
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
-
+        constructTable(cards);
         createWidgets();
         addWidgets();
         setListeners();
-
+        owner.getProjectsController().addEventListener(this);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
     private void createWidgets() {
-        constructTable();
+       
         pnlControls = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         pnlControls.setBorder(BorderFactory.createLineBorder(getContentPane().getBackground(), 10));
         pnlControls.setOpaque(true);
@@ -119,8 +143,7 @@ public class FlashcardOverviewDialog extends JDialog {
         btnEdit.setToolTipText("Lernkarte bearbeiten");
         btnEdit.setEnabled(false);
         btnDelete = new JButton(new ImageIcon(imgDelete));
-        btnDelete.setToolTipText("Ausgewaehlte Lernkarten loeschen"); // TODO
-                                                                      // Umlaute
+        btnDelete.setToolTipText("Ausgew\u00e4hlte Lernkarten l\u00f6schen"); 
         btnDelete.setEnabled(false);
         // btnPrintContent = new JButton("Ausgabe");
         btnClose = new JButton("Schlie\u00dfen");
@@ -162,21 +185,6 @@ public class FlashcardOverviewDialog extends JDialog {
     }
 
     private void setListeners() {
-
-        // btnEdit.addActionListener(new ActionListener() {
-        // @Override
-        // public void actionPerformed(ActionEvent e) {
-        // try {
-        // AddFlashcardDialog d = new AddFlashcardDialog(JTableTestFrame.this,
-        // project, projectPnl, getSelectedCard());
-        // d.setVisible(true);
-        // } catch (IOException ioe) {
-        // CustomErrorHandling.showInternalError(JTableTestFrame.this, ioe);
-        // } catch (SQLException sqle) {
-        // CustomErrorHandling.showDatabaseError(JTableTestFrame.this, sqle);
-        // }
-        // }
-        // });
 
         // close window when clicking on close button in bottom panel
         btnClose.addActionListener(new ActionListener() {
@@ -240,7 +248,6 @@ public class FlashcardOverviewDialog extends JDialog {
             }
         });
 
-        // TODO delete selected cards by selecting delete option in menu
         mnuSettingsDeleteCards.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -277,8 +284,6 @@ public class FlashcardOverviewDialog extends JDialog {
         // }
         // });
 
-        // TODO: open flashcard by double clicking on table row
-
         tblCards.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -286,7 +291,7 @@ public class FlashcardOverviewDialog extends JDialog {
                     int rowAtPoint = tblCards.rowAtPoint(e.getPoint());
                     int convertedRowAtPoint = rowSorter.convertRowIndexToModel(rowAtPoint);
                     try {
-                        FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl, cardData.get(convertedRowAtPoint).getCard());
+                        FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl, ((FlashcardTableModel)tblCards.getModel()).getCard(convertedRowAtPoint));
                         d.setVisible(true);
                     } catch (IOException ioe) {
                         CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
@@ -302,23 +307,16 @@ public class FlashcardOverviewDialog extends JDialog {
         // select all checkboxes by double-clicking on table header
         tblCards.getTableHeader().addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                if (e.getClickCount() == 2 && cardData.size() > 0 && tblCards.columnAtPoint(e.getPoint()) == 0) {
-                    boolean b = cardData.get(0).isSelected();
-                    for (int i = 0; i < cardData.size(); i++) {
-                        cardData.get(i).setSelected(!b);
-                        ((FlashcardTableModel) tblCards.getModel()).updateRow(i);
+            	FlashcardTableModel model = ((FlashcardTableModel)tblCards.getModel());
+                if (e.getClickCount() == 2 && model.getRowCount() > 0 && tblCards.columnAtPoint(e.getPoint()) == 0) {
+                    boolean b = (boolean)model.getValueAt(0, 0);
+                    for (int i = 0; i < model.getRowCount(); i++) {
+                    	model.setValueAt(!b, i, 0);
                     }
                     manageButtonActivation();
                 }
             }
         });
-
-//        listSelectionModel.addListSelectionListener(new ListSelectionListener() {
-//            public void valueChanged(ListSelectionEvent e) {
-//                ListSelectionModel lsm = (ListSelectionModel) e.getSource();
-//                anyRowByClickSelected = !lsm.isSelectionEmpty();
-//            }
-//        });
 
         tblCards.addFocusListener(new FocusAdapter() {
             @Override
@@ -344,17 +342,17 @@ public class FlashcardOverviewDialog extends JDialog {
     }
 
     public void updateCardsView() { 
-        cardData.clear();
-        for (int i = 0; i < cards.size(); i++) {
-            cardData.add(new FlashcardTableData(cards.get(i)));
-        }
-        ((AbstractTableModel)tblCards.getModel()).fireTableDataChanged();
+    	try {
+			((FlashcardTableModel)tblCards.getModel()).recreateTable(project, this);
+		} catch (SQLException sqle) {
+			CustomErrorHandling.showDatabaseError(this, sqle);
+		}
         trProjects.repaint();
         selectCardSectionContent();
     }
     
     private void selectCardSectionContent() {
-        if (cardData.size() == 0) {
+        if (((FlashcardTableModel)tblCards.getModel()).getRowCount() == 0) {
             scpCards.setViewportView(lblEmptyProject);
         } else {
             scpCards.setViewportView(tblCards);
@@ -379,9 +377,8 @@ public class FlashcardOverviewDialog extends JDialog {
         }
     }
 
-    private void constructTable() {
-        cardData = createFlashcardList();
-        FlashcardTableModel model = new FlashcardTableModel(cardData, columnNames);
+    private void constructTable(ArrayList<FlashCard> cards) {
+        FlashcardTableModel model = new FlashcardTableModel(cards, columnNames);
         tblCards = new JTable(model);
         setCustomWidthAndHeight();
         setCustomAlignment();
@@ -399,13 +396,6 @@ public class FlashcardOverviewDialog extends JDialog {
         return list;
     }
 
-    private ArrayList<FlashcardTableData> createFlashcardList() {
-        ArrayList<FlashcardTableData> list = new ArrayList<FlashcardTableData>();
-        for (int i = 0; i < cards.size(); i++) {
-            list.add(new FlashcardTableData(cards.get(i)));
-        }
-        return list;
-    }
 
     private void setCustomWidthAndHeight() {
         tblCards.getColumnModel().getColumn(0).setMaxWidth(tblCards.getColumnModel().getColumn(0).getPreferredWidth());
@@ -445,21 +435,23 @@ public class FlashcardOverviewDialog extends JDialog {
     }
 
     private ArrayList<FlashCard> getSelectedCards() {
+    	FlashcardTableModel model = ((FlashcardTableModel)tblCards.getModel());
         ArrayList<FlashCard> selectedCards = new ArrayList<FlashCard>();
-        for (int i = cardData.size() - 1; i >= 0; --i) {
-            if (cardData.get(i).isSelected()) {
-                selectedCards.add(cardData.get(i).getCard());
+        for (int i = model.getRowCount() - 1; i >= 0; --i) {
+            if ((boolean)model.getValueAt(i, 0)) {
+                selectedCards.add(model.getCard(i));
             }
         }
         return selectedCards;
     }
 
     private int getSelectedCardsCount() {
+    	FlashcardTableModel model = ((FlashcardTableModel)tblCards.getModel());
         int count = 0;
-        for (FlashcardTableData d : cardData) {
-            if (d.isSelected()) {
-                count++;
-            }
+        for (int i = 0; i < model.getRowCount(); i++) {
+        	if ((boolean)model.getValueAt(i, 0)) {
+        		count++;
+        	}
         }
         return count;
     }
@@ -478,10 +470,11 @@ public class FlashcardOverviewDialog extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 d.dispose();
+                FlashcardTableModel model = ((FlashcardTableModel)tblCards.getModel());
                 try {
-                    for (int i = cardData.size() - 1; i >= 0; --i) {
-                        if (cardData.get(i).isSelected()) {
-                            ((FlashcardTableModel) tblCards.getModel()).removeCard(i);
+                	for (int i = model.getRowCount() - 1; i >= 0; --i) {
+                        if ((boolean)model.getValueAt(i, 0)) {
+                            model.removeCard(i);
                         }
                     }
                     CustomInfoHandling.showSuccessfullyDeletedInfo();
@@ -494,5 +487,10 @@ public class FlashcardOverviewDialog extends JDialog {
         });
         d.setVisible(true);
     }
+
+	@Override
+	public void projectDataChanged(EventObject e) {
+		updateCardsView();
+	}
 
 }

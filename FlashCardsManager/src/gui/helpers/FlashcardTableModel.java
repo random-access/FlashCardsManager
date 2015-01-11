@@ -1,13 +1,18 @@
 package gui.helpers;
 
+import java.awt.Component;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.swing.JFrame;
 import javax.swing.table.AbstractTableModel;
 
 import core.FlashCard;
+import core.LearningProject;
 import exc.CustomErrorHandling;
+import gui.ProjectPanel;
+import gui.ProjectPanel.DialogType;
 
 @SuppressWarnings("serial")
 public class FlashcardTableModel extends AbstractTableModel {
@@ -15,8 +20,8 @@ public class FlashcardTableModel extends AbstractTableModel {
 	private ArrayList<FlashcardTableData> data;
 	private String[] columnNames;
 
-	public FlashcardTableModel(ArrayList<FlashcardTableData> data, String[] columnNames) {
-		this.data = data;
+	public FlashcardTableModel(ArrayList<FlashCard> cards, String[] columnNames) {
+		this.data = createFlashcardList(cards);
 		this.columnNames = columnNames;
 	}
 
@@ -57,6 +62,10 @@ public class FlashcardTableModel extends AbstractTableModel {
 			}
 		}
 		return 0;
+	}
+	
+	public FlashCard getCard(int row) {
+		return data.get(row).getCard();
 	}
 
 	@Override
@@ -107,4 +116,19 @@ public class FlashcardTableModel extends AbstractTableModel {
 		}
 		return false;
 	}
+	
+	public void recreateTable(LearningProject p, Component owner) throws SQLException {
+        data.clear();
+        p.loadFlashcards(null);
+        data = createFlashcardList(p.getAllCards());
+        fireTableDataChanged();
+    }
+	
+    private ArrayList<FlashcardTableData> createFlashcardList(ArrayList<FlashCard> cards) {
+        ArrayList<FlashcardTableData> list = new ArrayList<FlashcardTableData>();
+        for (int i = 0; i < cards.size(); i++) {
+            list.add(new FlashcardTableData(cards.get(i)));
+        }
+        return list;
+    }
 }

@@ -176,21 +176,7 @@ public class ProjectPanel extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						try {
-							IProgressPresenter pres = new IProgressPresenter() { // TODO remove cheat...
-								@Override
-								public void changeProgress(int progress) {
-
-								}
-								@Override
-								public void changeInfo(String text) {
-
-								}
-								@Override
-								public int getProgress() {
-									return 0;
-								}
-							};
-							project.loadFlashcards(pres);
+							project.loadFlashcards(null);
 							project.delete();
 							parentWindow.updateProjectList();
 						} catch (SQLException sqle) {

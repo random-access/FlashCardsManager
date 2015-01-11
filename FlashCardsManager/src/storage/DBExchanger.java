@@ -231,11 +231,11 @@ public class DBExchanger {
 	public void addFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
 		st.execute("INSERT INTO " + flashcardsTable + " VALUES (" + card.getId() + ", " + card.getProj().getId() + ", "
-				+ card.getStack() + ", '" + card.getQuestion() + "', '" + card.getAnswer() + "', " + card.getQuestionWidth()
+				+ card.getStack() + ", '" + card.getQuestion().replaceAll("\'", "&apos;")  + "', '" + card.getAnswer().replaceAll("\'", "&apos;") + "', " + card.getQuestionWidth()
 				+ "," + card.getAnswerWidth() + ")");
 		conn.commit();
 		if (StartApp.DEBUG) System.out.println("INSERT INTO " + flashcardsTable + " VALUES (" + card.getId() + ", " + card.getProj().getId() + ", "
-				+ card.getStack() + ", '" + card.getQuestion() + "', '" + card.getAnswer() + "', " + card.getQuestionWidth()
+				+ card.getStack() + ", '" + card.getQuestion().replaceAll("\'", "&apos;") + "', '" + card.getAnswer().replaceAll("\'", "&apos;") + "', " + card.getQuestionWidth()
 				+ "," + card.getAnswerWidth() + ")");
 		st.close();
 		updatePathToPics(card);
@@ -244,11 +244,11 @@ public class DBExchanger {
 	public void updateFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
 		st.execute("UPDATE " + flashcardsTable + " SET PROJ_ID_FK = " + card.getProj().getId() + ", STACK = " + card.getStack()
-				+ ", QUESTION = '" + card.getQuestion() + "', ANSWER = '" + card.getAnswer() + "', CUSTOM_WIDTH_Q = "
+				+ ", QUESTION = '" + card.getQuestion().replaceAll("\'", "&apos;")  + "', ANSWER = '" + card.getAnswer().replaceAll("\'", "&apos;")  + "', CUSTOM_WIDTH_Q = "
 				+ card.getQuestionWidth() + ", CUSTOM_WIDTH_A = " + card.getAnswerWidth() + " WHERE CARD_ID_PK = " + card.getId());
 		conn.commit();
 		if (StartApp.DEBUG) System.out.println("UPDATE " + flashcardsTable + " SET PROJ_ID_FK = " + card.getProj().getId() + ", STACK = " + card.getStack()
-				+ ", QUESTION = '" + card.getQuestion() + "', ANSWER = '" + card.getAnswer() + "', CUSTOM_WIDTH_Q = "
+				+ ", QUESTION = '" + card.getQuestion().replaceAll("\'", "&apos;")  + "', ANSWER = '" + card.getAnswer().replaceAll("\'", "&apos;") + "', CUSTOM_WIDTH_Q = "
 				+ card.getQuestionWidth() + ", CUSTOM_WIDTH_A = " + card.getAnswerWidth() + " WHERE CARD_ID_PK = " + card.getId());
 		st.close();
 		updatePathToPics(card);
@@ -286,19 +286,19 @@ public class DBExchanger {
 		if (noOfCards == 0) {
 			return cards;
 		}
-		p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
+		if (p != null) p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
 		Statement st = conn.createStatement();
 		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
 		conn.commit();
 		if (StartApp.DEBUG) System.out.println("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
 		ResultSet res = st.getResultSet();
 		while (res.next()) {
-			FlashCard f = new FlashCard(res.getInt(1), proj, res.getInt(3), res.getString(4), res.getString(5), null, null,
+			FlashCard f = new FlashCard(res.getInt(1), proj, res.getInt(3), res.getString(4).replaceAll("&apos;", "\'"), res.getString(5).replaceAll("&apos;", "\'"), null, null,
 					res.getInt(6), res.getInt(7));
 			f.setPathToQuestionPic(getPathToPic(f, PicType.QUESTION));
 			f.setPathToAnswerPic(getPathToPic(f, PicType.ANSWER));
 			cards.add(f);
-			p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
+			if (p != null) p.changeProgress(Math.min(p.getProgress() + 100/noOfCards, 100));
 		}
 		res.close();
 		return cards;
