@@ -1,7 +1,6 @@
 package gui;
 
 import exc.CustomErrorHandling;
-import gui.editFlashcardsRefactoring.EditFlashcardsDialog;
 import gui.helpers.*;
 
 import java.awt.*;
@@ -72,7 +71,6 @@ public class ProjectPanel extends JPanel {
 		createWidgets();
 		addWidgets();
 		setListeners();
-		System.out.println(this.projectTitle + ": " + this.status);
 	}
 
 	public MainWindow getOwner() {
@@ -303,9 +301,9 @@ public class ProjectPanel extends JPanel {
 
 	private void showAddFlashcardsDialog() {
 		cards = project.getAllCards();
-		AddFlashcardDialog d;
+		FlashcardEditorDialog d;
 		try {
-			d = new AddFlashcardDialog(null, project, ProjectPanel.this);
+			d = new FlashcardEditorDialog(null, project, ProjectPanel.this);
 			d.setVisible(true);
 		} catch (IOException ioe) {
 			CustomErrorHandling.showInternalError(parentWindow, ioe);
@@ -315,9 +313,9 @@ public class ProjectPanel extends JPanel {
 
 	private void showEditFlashcardsDialog() {
 		cards = project.getAllCards();
-		EditFlashcardsDialog d;
+		FlashcardOverviewDialog d;
 		try {
-			d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
+			d = new FlashcardOverviewDialog(ProjectPanel.this, cards, project);
 			d.setVisible(true);
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(parentWindow, sqle);
@@ -344,9 +342,9 @@ public class ProjectPanel extends JPanel {
 
 	private void prepareLearningSession() {
 		cards = project.getAllCards();
-		ChooseStacksDialog chooseStacks;
+		PrepareLearningSessionDialog chooseStacks;
 		try {
-			chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(), ProjectPanel.this.cards,
+			chooseStacks = new PrepareLearningSessionDialog(ProjectPanel.this.getOwner(), ProjectPanel.this.cards,
 					ProjectPanel.this.project);
 			chooseStacks.setVisible(true);
 		} catch (SQLException sqle) {

@@ -1,7 +1,6 @@
 package gui;
 
 import exc.CustomErrorHandling;
-import gui.editFlashcardsRefactoring.EditFlashcardsDialog;
 import gui.helpers.MyComboBoxModel;
 
 import java.awt.*;
@@ -16,11 +15,11 @@ import javax.swing.*;
 import core.*;
 
 @SuppressWarnings("serial")
-public class ChooseTargetProjectDialog extends JDialog {
+public class FlashcardTransferDialog extends JDialog {
 	private ArrayList<FlashCard> cardsToTransfer;
 	private LearningProject srcProj;
 	private ProjectsController ctl;
-	private EditFlashcardsDialog editDialog;
+	private FlashcardOverviewDialog editDialog;
 	private MainWindow owner;
 
 	private JPanel pnlBottom, pnlCenter, pnlGrid;
@@ -31,7 +30,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 
 	
 
-	public ChooseTargetProjectDialog(ProjectsController ctl, MainWindow owner, EditFlashcardsDialog editDialog, LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
+	public FlashcardTransferDialog(ProjectsController ctl, MainWindow owner, FlashcardOverviewDialog editDialog, LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
 		super(owner, true);
 		setTitle("Lernkarten verschieben...");
 		this.cardsToTransfer = cardsToTransfer;
@@ -116,7 +115,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 				} catch (IOException ioe) {
 					CustomErrorHandling.showInternalError(owner, ioe);
 				} finally {
-					ChooseTargetProjectDialog.this.dispose();
+					FlashcardTransferDialog.this.dispose();
 				}
 			}
 		});
@@ -125,7 +124,7 @@ public class ChooseTargetProjectDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChooseTargetProjectDialog.this.dispose();
+				FlashcardTransferDialog.this.dispose();
 			}
 		});
 	}

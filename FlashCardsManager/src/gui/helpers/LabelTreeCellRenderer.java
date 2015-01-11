@@ -1,4 +1,4 @@
-package gui.editFlashcardsRefactoring;
+package gui.helpers;
 
 import exc.CustomErrorHandling;
 import gui.ProjectPanel;
@@ -16,11 +16,10 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeCellRenderer;
 
 import utils.Logger;
-import core.LearningProject;
-import core.Status;
+import core.*;
 
 @SuppressWarnings("serial")
-public class MyTreeCellRenderer extends DefaultTreeCellRenderer {
+public class LabelTreeCellRenderer extends DefaultTreeCellRenderer {
 
 	private static BufferedImage imgRed, imgYellow, imgGreen;
 
@@ -38,7 +37,7 @@ public class MyTreeCellRenderer extends DefaultTreeCellRenderer {
 	ImageIcon icnRed, icnYellow, icnGreen;
 	private LearningProject pnl;
 
-	public MyTreeCellRenderer(LearningProject proj) {
+	public LabelTreeCellRenderer(LearningProject proj) {
 		this.pnl = proj;
 		icnRed = new ImageIcon(imgRed);
 		icnYellow = new ImageIcon(imgYellow);

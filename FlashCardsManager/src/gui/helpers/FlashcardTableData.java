@@ -1,13 +1,13 @@
-package gui.editFlashcardsRefactoring;
+package gui.helpers;
 
 import core.FlashCard;
 
-public class TableData {
+public class FlashcardTableData {
 
 	private FlashCard card;
 	private boolean selected;
 
-	public TableData(FlashCard card) {
+	public FlashcardTableData(FlashCard card) {
 		this.card = card;
 	}
 

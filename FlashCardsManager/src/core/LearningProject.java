@@ -78,7 +78,6 @@ public class LearningProject {
 
 	// Adds a flashcard to the project
 	void addCard(FlashCard card) {
-		System.out.println(allCards);
 		allCards.add(card);
 	}
 

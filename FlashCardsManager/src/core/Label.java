@@ -1,4 +1,4 @@
-package gui.editFlashcardsRefactoring;
+package core;
 
 public class Label {
 	private int id;

@@ -12,7 +12,7 @@ public class StackBox extends Box {
 	private JCheckBox chk;
 	private JLabel lblStack, lblNoOfCards;
 
-	StackBox(int stackNo, int noOfCards, ChooseStacksDialog d) {
+	StackBox(int stackNo, int noOfCards, PrepareLearningSessionDialog d) {
 		super(BoxLayout.X_AXIS);
 		chk = new JCheckBox();
 		lblStack = new JLabel("Stapel " + stackNo + ": ");

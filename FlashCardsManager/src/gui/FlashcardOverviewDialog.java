@@ -1,13 +1,8 @@
-package gui.editFlashcardsRefactoring;
+package gui;
 
 import exc.CustomErrorHandling;
 import exc.CustomInfoHandling;
-import gui.AddFlashcardDialog;
-import gui.ChooseTargetProjectDialog;
-import gui.MainWindow;
-import gui.OkOrDisposeDialog;
-import gui.ProjectPanel;
-import gui.helpers.MyMenuItem;
+import gui.helpers.*;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -25,11 +20,10 @@ import javax.swing.event.*;
 import javax.swing.table.*;
 import javax.swing.tree.*;
 
-import core.FlashCard;
-import core.LearningProject;
+import core.*;
 
 @SuppressWarnings("serial")
-public class EditFlashcardsDialog extends JDialog {
+public class FlashcardOverviewDialog extends JDialog {
 
     private static BufferedImage imgSettings, imgPlus, imgFlashcardInfo, imgEdit, imgDelete;
     {
@@ -45,7 +39,7 @@ public class EditFlashcardsDialog extends JDialog {
         }
     }
 
-    private ArrayList<TableData> cardData;
+    private ArrayList<FlashcardTableData> cardData;
     private ArrayList<Label> labelData;
     private String[] columnNames = { "Auswahl", "ID", "Frage", "Stapel" };
     private TableRowSorter<TableModel> rowSorter;
@@ -55,6 +49,7 @@ public class EditFlashcardsDialog extends JDialog {
     private JTable tblCards;
     private JTree trProjects;
     private JScrollPane scpCards, scpProjects;
+    private JLabel lblEmptyProject;
     private JPanel pnlBottom, pnlControls;
     private JButton btnAddCard, btnEdit, btnDelete;
     private JButton btnClose;
@@ -69,16 +64,17 @@ public class EditFlashcardsDialog extends JDialog {
     private ProjectPanel projPnl;
     private ArrayList<FlashCard> cards;
 
+    boolean emptyProject = false;
     boolean selectable = false;
     // private ListSelectionModel listSelectionModel;
    //  protected boolean anyRowByClickSelected;
+    
 
-    public EditFlashcardsDialog(ProjectPanel projPnl, ArrayList<FlashCard> cards, LearningProject project) throws SQLException {
+    public FlashcardOverviewDialog(ProjectPanel projPnl, ArrayList<FlashCard> cards, LearningProject project) throws SQLException {
         // super(projPnl.getOwner(), true);
         this.owner = projPnl.getOwner();
         this.project = project;
         this.projPnl = projPnl;
-        System.out.println("***********************************" + project.getStatus());
         this.cards = cards;
         setTitle(project.getTitle() + " - Lernkarten bearbeiten (TESTING)");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -115,7 +111,8 @@ public class EditFlashcardsDialog extends JDialog {
         mnuSettingsNewCard = new MyMenuItem("Neue Lernkarte hinzuf\u00fcgen..");
         mnuSettingsTransferCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten verschieben..");
         mnuSettingsDeleteCards = new MyMenuItem("Ausgew\u00e4hlte Lernkarten l\u00f6schen");
-
+        
+        lblEmptyProject = new JLabel(new ImageIcon(imgFlashcardInfo));
         btnAddCard = new JButton(new ImageIcon(imgPlus));
         btnAddCard.setToolTipText("Neue Lernkarte hinzuf\u00fcgen");
         btnEdit = new JButton(new ImageIcon(imgEdit));
@@ -127,8 +124,8 @@ public class EditFlashcardsDialog extends JDialog {
         btnDelete.setEnabled(false);
         // btnPrintContent = new JButton("Ausgabe");
         btnClose = new JButton("Schlie\u00dfen");
-
-        scpCards = new JScrollPane(tblCards);
+        scpCards = new JScrollPane();
+        selectCardSectionContent();
         scpCards.setBorder(BorderFactory.createLoweredSoftBevelBorder());
         constructProjectTree();
         scpProjects = new JScrollPane(trProjects);
@@ -186,7 +183,7 @@ public class EditFlashcardsDialog extends JDialog {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                EditFlashcardsDialog.this.dispose();
+                FlashcardOverviewDialog.this.dispose();
             }
         });
 
@@ -195,10 +192,10 @@ public class EditFlashcardsDialog extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    AddFlashcardDialog d = new AddFlashcardDialog(null, EditFlashcardsDialog.this, project, projPnl);
+                    FlashcardEditorDialog d = new FlashcardEditorDialog(null, FlashcardOverviewDialog.this, project, projPnl);
                     d.setVisible(true);
                 } catch (IOException ioe) {
-                    CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
+                    CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
                 }
             }
         });
@@ -208,12 +205,12 @@ public class EditFlashcardsDialog extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    AddFlashcardDialog d = new AddFlashcardDialog(EditFlashcardsDialog.this, project, projPnl, getSelectedCards().get(0));
+                    FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl, getSelectedCards().get(0));
                     d.setVisible(true);
                 } catch (IOException ioe) {
-                    CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
+                    CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
                 } catch (SQLException sqle) {
-                    CustomErrorHandling.showDatabaseError(EditFlashcardsDialog.this, sqle);
+                    CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
                 } 
             }
         });
@@ -222,10 +219,10 @@ public class EditFlashcardsDialog extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    AddFlashcardDialog d = new AddFlashcardDialog(null, EditFlashcardsDialog.this, project, projPnl);
+                    FlashcardEditorDialog d = new FlashcardEditorDialog(null, FlashcardOverviewDialog.this, project, projPnl);
                     d.setVisible(true);
                 } catch (IOException ioe) {
-                    CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
+                    CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
                 }
             }
         });
@@ -236,8 +233,8 @@ public class EditFlashcardsDialog extends JDialog {
                 if (getSelectedCardsCount() == 0) {
                     CustomInfoHandling.showNoCardsSelectedInfo();
                 } else {
-                    ChooseTargetProjectDialog d = new ChooseTargetProjectDialog(owner.getProjectsController(), owner,
-                            EditFlashcardsDialog.this, project, getSelectedCards());
+                    FlashcardTransferDialog d = new FlashcardTransferDialog(owner.getProjectsController(), owner,
+                            FlashcardOverviewDialog.this, project, getSelectedCards());
                     d.setVisible(true);
                 }
             }
@@ -287,16 +284,14 @@ public class EditFlashcardsDialog extends JDialog {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     int rowAtPoint = tblCards.rowAtPoint(e.getPoint());
-                    System.out.print("clicked on gui row " + rowAtPoint + ", ");
                     int convertedRowAtPoint = rowSorter.convertRowIndexToModel(rowAtPoint);
-                    System.out.println("model row " + convertedRowAtPoint);
                     try {
-                        AddFlashcardDialog d = new AddFlashcardDialog(EditFlashcardsDialog.this, project, projPnl, cardData.get(convertedRowAtPoint).getCard());
+                        FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl, cardData.get(convertedRowAtPoint).getCard());
                         d.setVisible(true);
                     } catch (IOException ioe) {
-                        CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
+                        CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
                     } catch (SQLException sqle) {
-                        CustomErrorHandling.showDatabaseError(EditFlashcardsDialog.this, sqle);
+                        CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
                     } 
                 }
 
@@ -311,7 +306,7 @@ public class EditFlashcardsDialog extends JDialog {
                     boolean b = cardData.get(0).isSelected();
                     for (int i = 0; i < cardData.size(); i++) {
                         cardData.get(i).setSelected(!b);
-                        ((MyTableModel) tblCards.getModel()).updateRow(i);
+                        ((FlashcardTableModel) tblCards.getModel()).updateRow(i);
                     }
                     manageButtonActivation();
                 }
@@ -336,25 +331,34 @@ public class EditFlashcardsDialog extends JDialog {
 
             @Override
             public void tableChanged(TableModelEvent e) {
-                System.out.println("in tableChanged");
                 trProjects.repaint();
                 try {
                     projPnl.changeStatus(project.getStatus());
                 } catch (SQLException sqle) {
-                    CustomErrorHandling.showDatabaseError(EditFlashcardsDialog.this, sqle);
+                    CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
                 }
                 manageButtonActivation();
+                selectCardSectionContent();
             }
         });
     }
 
-    public void updateCardsView() {
+    public void updateCardsView() { 
         cardData.clear();
         for (int i = 0; i < cards.size(); i++) {
-            cardData.add(new TableData(cards.get(i)));
+            cardData.add(new FlashcardTableData(cards.get(i)));
         }
         ((AbstractTableModel)tblCards.getModel()).fireTableDataChanged();
         trProjects.repaint();
+        selectCardSectionContent();
+    }
+    
+    private void selectCardSectionContent() {
+        if (cardData.size() == 0) {
+            scpCards.setViewportView(lblEmptyProject);
+        } else {
+            scpCards.setViewportView(tblCards);
+        }
     }
 
     private void constructProjectTree() {
@@ -363,7 +367,7 @@ public class EditFlashcardsDialog extends JDialog {
         trProjects = new JTree(topNode);
         trProjects.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
         trProjects.setRowHeight(25);
-        trProjects.setCellRenderer(new MyTreeCellRenderer(project));
+        trProjects.setCellRenderer(new LabelTreeCellRenderer(project));
     }
 
     private void createTreeNodes(DefaultMutableTreeNode topNode) {
@@ -377,7 +381,7 @@ public class EditFlashcardsDialog extends JDialog {
 
     private void constructTable() {
         cardData = createFlashcardList();
-        MyTableModel model = new MyTableModel(cardData, columnNames);
+        FlashcardTableModel model = new FlashcardTableModel(cardData, columnNames);
         tblCards = new JTable(model);
         setCustomWidthAndHeight();
         setCustomAlignment();
@@ -395,10 +399,10 @@ public class EditFlashcardsDialog extends JDialog {
         return list;
     }
 
-    private ArrayList<TableData> createFlashcardList() {
-        ArrayList<TableData> list = new ArrayList<TableData>();
+    private ArrayList<FlashcardTableData> createFlashcardList() {
+        ArrayList<FlashcardTableData> list = new ArrayList<FlashcardTableData>();
         for (int i = 0; i < cards.size(); i++) {
-            list.add(new TableData(cards.get(i)));
+            list.add(new FlashcardTableData(cards.get(i)));
         }
         return list;
     }
@@ -452,7 +456,7 @@ public class EditFlashcardsDialog extends JDialog {
 
     private int getSelectedCardsCount() {
         int count = 0;
-        for (TableData d : cardData) {
+        for (FlashcardTableData d : cardData) {
             if (d.isSelected()) {
                 count++;
             }
@@ -477,14 +481,14 @@ public class EditFlashcardsDialog extends JDialog {
                 try {
                     for (int i = cardData.size() - 1; i >= 0; --i) {
                         if (cardData.get(i).isSelected()) {
-                            ((MyTableModel) tblCards.getModel()).removeCard(i);
+                            ((FlashcardTableModel) tblCards.getModel()).removeCard(i);
                         }
                     }
                     CustomInfoHandling.showSuccessfullyDeletedInfo();
                 } catch (SQLException sqle) {
-                    CustomErrorHandling.showDatabaseError(EditFlashcardsDialog.this, sqle);
+                    CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
                 } catch (IOException ioe) {
-                    CustomErrorHandling.showInternalError(EditFlashcardsDialog.this, ioe);
+                    CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
                 }
             }
         });

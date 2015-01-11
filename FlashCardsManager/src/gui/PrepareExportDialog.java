@@ -22,7 +22,7 @@ import gui.helpers.ExportTask;
 import gui.helpers.ProgressDialog;
 
 @SuppressWarnings("serial")
-public class ChooseProjectsDialog extends JDialog {
+public class PrepareExportDialog extends JDialog {
 	private ProjectsController ctl;
 	private MainWindow owner;
 	private ArrayList<LearningProject> allProjects;
@@ -35,7 +35,7 @@ public class ChooseProjectsDialog extends JDialog {
 
 	// private boolean delete = false;
 
-	ChooseProjectsDialog(MainWindow owner, ProjectsController ctl) {
+	PrepareExportDialog(MainWindow owner, ProjectsController ctl) {
 		super(owner, false);
 		this.owner = owner;
 		this.ctl = ctl;
@@ -88,7 +88,7 @@ public class ChooseProjectsDialog extends JDialog {
 		btnDiscard.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChooseProjectsDialog.this.dispose();
+				PrepareExportDialog.this.dispose();
 			}
 		});
 
@@ -112,9 +112,9 @@ public class ChooseProjectsDialog extends JDialog {
 			try {
 				doAction();
 			} catch (SQLException sqle) {
-				CustomErrorHandling.showDatabaseError(ChooseProjectsDialog.this, sqle);
+				CustomErrorHandling.showDatabaseError(PrepareExportDialog.this, sqle);
 			} catch (IOException ioe) {
-				CustomErrorHandling.showInternalError(ChooseProjectsDialog.this, ioe);
+				CustomErrorHandling.showInternalError(PrepareExportDialog.this, ioe);
 			}
 		}
 
@@ -129,8 +129,8 @@ public class ChooseProjectsDialog extends JDialog {
 		private void doAction() throws SQLException, IOException {
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-			int returnVal = fileChooser.showSaveDialog(ChooseProjectsDialog.this);
-			ChooseProjectsDialog.this.dispose();
+			int returnVal = fileChooser.showSaveDialog(PrepareExportDialog.this);
+			PrepareExportDialog.this.dispose();
 			String pathToExport = null;
 			if (fileChooser.getSelectedFile() != null) {
 				// prevent NullPointerExc when no path selected

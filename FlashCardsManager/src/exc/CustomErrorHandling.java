@@ -1,7 +1,5 @@
 package exc;
 
-import gui.MainWindow;
-
 import java.awt.Component;
 
 import javax.swing.JOptionPane;

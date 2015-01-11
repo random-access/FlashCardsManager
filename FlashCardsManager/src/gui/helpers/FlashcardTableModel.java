@@ -1,22 +1,21 @@
-package gui.editFlashcardsRefactoring;
+package gui.helpers;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
 
 import core.FlashCard;
 import exc.CustomErrorHandling;
 
 @SuppressWarnings("serial")
-public class MyTableModel extends AbstractTableModel {
+public class FlashcardTableModel extends AbstractTableModel {
 
-	private ArrayList<TableData> data;
+	private ArrayList<FlashcardTableData> data;
 	private String[] columnNames;
 
-	public MyTableModel(ArrayList<TableData> data, String[] columnNames) {
+	public FlashcardTableModel(ArrayList<FlashcardTableData> data, String[] columnNames) {
 		this.data = data;
 		this.columnNames = columnNames;
 	}
@@ -101,7 +100,7 @@ public class MyTableModel extends AbstractTableModel {
 	}
 	
 	public boolean someCardSelected() {
-		for (TableData d : data) {
+		for (FlashcardTableData d : data) {
 			if (d.isSelected()) {
 				return true;
 			}
