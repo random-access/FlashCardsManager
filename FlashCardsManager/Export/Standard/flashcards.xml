@@ -1,0 +1,6344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashcards>
+	<flashcard>
+		<card_id>1</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne &lt;b&gt;drei Ursachen&lt;/b&gt; f&amp;#252;r die massive &lt;b&gt;Verbreitung von 
+      Computern&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Effizienz: &lt;/b&gt;Die Hardware wurde immer preiswerter und 
+      leistungsf&amp;#228;higer
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Benutzerfreundlichkeit: &lt;/b&gt;Der Umgang mit Computern wurde immer 
+      einfacher, da das Betriebssystem die Hardware verwaltet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Vernetzbarkeit:&lt;/b&gt;Computer k&amp;#246;nnen zu Netzwerken 
+      zusammengeschlossen werden (Beispiel: Internet)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>2</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche zwei &lt;b&gt;Schnittstellen&lt;/b&gt; werden vom Betriebssystem zur &lt;b&gt;Verwaltung 
+      der Hardware&lt;/b&gt; bereitgestellt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Benutzerschnittstelle:&lt;/b&gt; Zur Kommunikation der Benutzer mit dem 
+      Betriebssystem
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Programmierschnittstelle:&lt;/b&gt; Zur Kommunikation der Programme mit 
+      dem Betriebssystem
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>3</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche 4 &lt;b&gt;Personengruppen&lt;/b&gt; haben mit &lt;b&gt;Betriebssystemen und 
+      Rechnernetzen zu tun&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Reine Benutzer:&lt;/b&gt; Arbeiten mit der &lt;u&gt;Benutzerschnittstelle&lt;/u&gt; 
+      (Dateioperationen, Starten von Anwendungen...)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.)&lt;b&gt; Anwendungsprogrammierer:&lt;/b&gt; Nutzen die &lt;u&gt;Programmierschnittstelle&lt;/u&gt;, 
+      ben&amp;#246;tigen &lt;u&gt;Kenntnisse &amp;#252;ber Rechnernetze&lt;/u&gt; (Protokolle, 
+      Client-Server-Betrieb)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Systemadministrator&lt;/b&gt;: Ben&amp;#246;tigt Kenntnisse der &lt;u&gt;Benutzer- 
+      und Programmierschnittstelle&lt;/u&gt; sowie spezielle &lt;u&gt;Admin-Kommandos&lt;/u&gt;, &lt;u&gt;Kenntnisse 
+      der internen Abl&amp;#228;ufe&lt;/u&gt; zur Behebung von Performanceproblemen und &lt;u&gt;grundlegende 
+      Hardwarekenntnisse&lt;/u&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Entwickler von Systemsoftware&lt;/b&gt; (z.B. Debugger, DBMS, GUIs, 
+      Compiler und Binder,...)&lt;b&gt; und Betriebssystemen&lt;/b&gt;: Muss &lt;u&gt;detaillierte 
+      Kenntnisse&lt;/u&gt; &amp;#252;ber die &lt;u&gt;interne Struktur des Betriebssystems&lt;/u&gt; 
+      und der &lt;u&gt;Rechnerhardware&lt;/u&gt; haben
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>4</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist das &lt;b&gt;Prinzip eines Von-Neumann-Rechners&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;auszuf&amp;#252;hrende Programm&lt;/b&gt; ist &lt;b&gt;nicht mehr ein fester Bestandteil 
+      des Rechners&lt;/b&gt;, es wird vielmehr - genau wie die ben&amp;#246;tigten Daten - &lt;b&gt;vor 
+      dem Programmablauf in den Speicher des Rechners geladen&lt;/b&gt; und&lt;b&gt; 
+      hinterher wieder entfernt&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Damit ben&amp;#246;tigt ein Rechner lediglich die F&amp;#228;higkeit, beliebige im 
+      Speicher befindliche Programme auszuf&amp;#252;hren.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>5</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne die &lt;b&gt;3 wesentlichen Bestandteile der Hardware&lt;/b&gt; eines modernen &lt;b&gt;Von-Neumann-Rechners&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Prozessor&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Speicher&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Ein-/Ausgabeger&amp;#228;te&lt;/b&gt; (Magnetplattenlaufwerk, 
+      Diskettenlaufwerk, Bandlaufwerk, CD-ROM Laufwerk, Drucker, Bildschirm, 
+      Maus,Tastatur,  Kommunikationsger&amp;#228;te zum Anschluss an Rechnernetze)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>6</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den &lt;b&gt;Aufbau des Hauptspeichers&lt;/b&gt;! Wieso hei&amp;#223;t der 
+      Hauptspeicher auch&lt;b&gt; RAM&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Hauptspeicher ist eine &lt;u&gt;lange Folge von gleich gro&amp;#223;en 
+      Speicherzellen&lt;/u&gt;, die &lt;u&gt;einzeln adressiert&lt;/u&gt; werden k&amp;#246;nnen. Der 
+      Name &lt;b&gt;RAM (Random Access Memory)&lt;/b&gt; kommt von diesem &lt;u&gt;wahlfreien 
+      Zugriff&lt;/u&gt;. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>7</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re, wie der Prozessor auf den Hauptspeicher zugreift!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;Befehlsz&amp;#228;hlregister&lt;/b&gt; enth&amp;#228;lt die Adresse der 
+      Speicheradresse, in der der Code des n&amp;#228;chsten auszuf&amp;#252;hrenden Befehls 
+      steht. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um auf diese Speicherzelle zuzugreifen, wird die Adresse ins &lt;b&gt;Speicheradressregister&lt;/b&gt; 
+      &amp;#252;bertragen und gelangt auf den &lt;b&gt;Adressbus&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Hierduch wird die entsprechende Zelle des &lt;b&gt;Hauptspeicher&lt;/b&gt; 
+      angesprochen, und ihr Inhalt wird &amp;#252;ber den&lt;b&gt; Datenbus &lt;/b&gt;in das &lt;b&gt;Speicherinhaltsregister&lt;/b&gt; 
+      des Prozessors &amp;#252;bertragen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dann wird interpretiert, obe es sich um einen Wert oder Befehl handelt, 
+      dementsprechend sieht die Verarbeitung in den verschiedenen Registern 
+      und das weitere Vorgehen aus.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>8</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was bedeutet &lt;b&gt;indirekte Adressierung&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der &lt;b&gt;Operand&lt;/b&gt; im Befehl enth&amp;#228;lt eine Zahl, die eine &lt;b&gt;Speicheradresse&lt;/b&gt; 
+      oder einen Teil von ihr darstellen und deren Wert verarbeitet werden 
+      soll.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>9</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wieso hei&amp;#223;t der &lt;b&gt;Programmz&amp;#228;hler&lt;/b&gt; so?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Weil er sich nach Ausf&amp;#252;hrung eines Befehls &lt;b&gt;automatisch erh&amp;#246;ht&lt;/b&gt; 
+      und so den &lt;b&gt;n&amp;#228;chsten Befehl adressiert&lt;/b&gt;, wenn keine Ausnahme 
+      besteht (Spr&amp;#252;nge)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>10</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist die &lt;b&gt;Taktfrequenz&lt;/b&gt; der CPU?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;CPU arbeitet getaktet&lt;/b&gt;, das bedeutet, sie kann pro Arbeitstakt 
+      gewisse &lt;b&gt;Elementarbefehle&lt;/b&gt; ausf&amp;#252;hren (z.B Kopieren einer Adresse 
+      vom Befehlsz&amp;#228;hlerregister ins Speicheradressregister, Heraufz&amp;#228;hlen des 
+      Befehlsz&amp;#228;hlregisters,...). 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Taktfrequenz&lt;/b&gt; ist die &lt;u&gt;Anzahl der Takte Pro Sekunde&lt;/u&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>11</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum ben&amp;#246;tigt ein&lt;b&gt; Zugriff auf den Hauptspeicher&lt;/b&gt; mehr als 
+      einen Arbeitstakt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Einerseits, weil &lt;u&gt;u.U. mehrere Elementarbefehle&lt;/u&gt; auszuf&amp;#252;hren sind 
+      (zusammengesetzte Operationen), andererseits, weil eine gewisse Zeit 
+      zwischen dem Aufbringen einer Adresse auf dem Adressbus und der Ankunft 
+      des zugeh&amp;#246;rigen Speicherzelleninhalts &amp;#252;ber den Datenbus vergeht. Diese 
+      sogenannte &lt;u&gt;Zugriffszeit&lt;/u&gt; h&amp;#228;ngt von der physikalischen 
+      Beschaffenheit des Hauptspeichers ab.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>12</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Cache&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein kleinerer, schnellerer Zwischenspeicher als der Hauptspeicher.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>13</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe einen &lt;b&gt;einfachen Cache-Algorithmus&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      H&amp;#228;ufig benutzte Daten werden vor&amp;#252;bergehend vom Hauptspeicher in den 
+      Cache kopiert. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn Daten ben&amp;#246;tigt werden, schaut man zun&amp;#228;chst im Cache nach. Findet 
+      man dort eine Kopie der gesuchten Daten, so verwendet man sie und 
+      braucht keinen Hauptspeicherzugriff auszuf&amp;#252;hren. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wird man aber im Cache nicht f&amp;#252;ndig, ist ein Zugriff auf den 
+      Hauptspeicher unvermeidlich; in diesem Fall legt man eine Kopie der 
+      Daten im Cache ab, weil man davon ausgeht, dass diese Daten bald noch 
+      einmal ben&amp;#246;tigt werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>14</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche zwei wichtigen &lt;b&gt;Aufgaben&lt;/b&gt; hat das&lt;b&gt; Betriebssystem 
+      bez&amp;#252;glich dem Cache&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Cache-Management:&lt;/b&gt; Wenn Daten im Cache abgelegt werden sollen 
+      und dort kein freier Platz mehr vorhanden ist, m&amp;#252;ssen alte Daten 
+      &amp;#252;berschrieben wernde. Welche Daten sol man daf&amp;#252;r opfern?
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Cache-Konsistenz: &lt;/b&gt;Angenommen, der Wert einer Variablen soll 
+      ver&amp;#228;ndert werden. Wenn diese &amp;#196;nderung nur an der Kopie im Cache 
+      vollzogen wird, so besteht anschlie&amp;#223;end eine Unterschied zwischen dem 
+      Original im Hauptspeicher und der Kopie im Cache. Das Betriebssystem 
+      muss daf&amp;#252;r sorgen, dass sich hieraus keine Fehler ergeben. Dieses 
+      Problem ist besonders gravierend bei Multiprozessorsystemen, bei denen 
+      jeder Prozessor &amp;#252;ber einen eigenen Cache verf&amp;#252;gt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>15</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum gibt es noch &lt;b&gt;andere Speicherm&amp;#246;glichkeiten neben 
+      Hauptspeicher und Cache&lt;/b&gt; im Rechner? Hauptspeicher und Cache sind 
+      doch von der Zugriffszeit her am schnellsten, oder?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit Hauptspeicher und Cache kann ein Rechner allein nicht auskommen,denn 
+      diese sind &lt;b&gt;knapp und fl&amp;#252;chtig&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) selbst wenn der Hauptspeicher pro MB preiswerter als der Cache ist, 
+      kann man seine Kapazit&amp;#228;t aus Kostengr&amp;#252;nden nicht so gro&amp;#223; auslegen, 
+      dass alle ben&amp;#246;tigten Programme udn Daten darin Platz finden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) beim Abschalten des Rechners oder bei einem Stromausfall geht der 
+      Inhalt des Hauptspeichers verloren
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>16</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den &lt;b&gt;physikalischen Aufbau einer Festplatte&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>17</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie erfolgt ein &lt;b&gt;Zugriff auf einen Sektor einer Magnetplatte&lt;/b&gt;?
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Woraus setzt sich die &lt;b&gt;Zugriffszeit &lt;/b&gt;zusammen? Welcher Abschnitt 
+      beim Zugriff ben&amp;#246;tigt am meisten Zeit?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Magnetplatte erm&amp;#246;glicht &lt;b&gt;wahlfreien Zugriff&lt;/b&gt; auf einzelne 
+      Sektoren.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Zugriffszeit&lt;/b&gt; setzt sich wie folgt zusammen:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;Positionierungszeit&lt;/b&gt;: Der Kopf wird durch Verdrehen der Well 
+      auf den richtigen Zylinder gebracht (ben&amp;#246;tigt derzeit die l&amp;#228;ngste Zeit)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .)&lt;b&gt; Latenzzeit:&lt;/b&gt; Die Zeit, bis der gesuchte Sektor am Kopf 
+      vorbeil&amp;#228;uft
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&amp;#220;bertragungszeit:&lt;/b&gt; Auslesen der Daten und &amp;#220;bertragung in 
+      einen Pufferspeicher bzw. Schreiben von Daten aus einem Pufferspeicher 
+      auf einen Sektor
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>18</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist die &lt;b&gt;Suchzeit auf der Festplatte&lt;/b&gt;? Wie kann diese 
+      verringert werden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Suchzeit ist die &lt;b&gt;Summe aus Positionierungszeit und Latenzzeit&lt;/b&gt; 
+      und kann in etwa durch die &lt;u&gt;Distanz &lt;/u&gt;gemessen werden, &lt;u&gt;die der 
+      Kopf zur&amp;#252;cklegt&lt;/u&gt;, dh. die Anzahl der Spuren, die &amp;#252;berquert 
+      werden m&amp;#252;ssen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Suchzeit kann &lt;b&gt;durch folgende Ma&amp;#223;nahmen verringert&lt;/b&gt; 
+      werden: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;u&gt;Zusammengeh&amp;#246;rende Informationen&lt;/u&gt; sollten m&amp;#246;glichst in &lt;u&gt;benachbarten 
+      Sektoren und Zylindern &lt;/u&gt;gespeichert werden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Wenn bei einem Plattenlaufwerk mehrere Schreib-/Leseauftr&amp;#228;ge 
+      gleichzeitig vorliegen, sollte eine &lt;u&gt;g&amp;#252;nstige Bearbeitungsreihenfolge&lt;/u&gt; 
+      gew&amp;#228;hlt werden
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>19</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne &lt;b&gt;3 Zugriffsstrategien f&amp;#252;r Festplattenzugriffe&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;FCFS (first-come, first-served): &lt;/b&gt;Die Auftr&amp;#228;ge werden in ihrer 
+      Eingangsreihenfolge bearbeitet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;SSTF (shortest-seek-time-first):&lt;/b&gt; Der Auftrag, der der 
+      aktuellen Spur am n&amp;#228;chsten liegt, wird als n&amp;#228;chstes bearbeitet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.)&lt;b&gt; SCAN:&lt;/b&gt; Der Kopf wird abwechselnd nach au&amp;#223;en und innen &amp;#252;ber die 
+      gesamte Platte bewegt und alle Auftr&amp;#228;ge, deren Spuren gerade &amp;#252;berquert 
+      werden, werden ausgef&amp;#252;hrt
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>20</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind &lt;b&gt;Parity Bits&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Bits zur Fehlerkorrektur&lt;/b&gt;: Beim Schreiben bzw. Lesen eines Sektors 
+      wird die Summe bestimmter Datenbits berechnet und in die Pr&amp;#252;fbits 
+      eingetragen bzw. mit den bereits vorhandenen Werten verglichen. Ergeben 
+      sich Abweichungen, so ist ein Fehler aufgetreten. Bei Verwendung 
+      geeigneter Codes kann man feststellen, welches Bit einen falschen Wert 
+      hat und den Fehler automatisch korrigieren.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>21</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine &lt;b&gt;RAM-disk&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein &lt;b&gt;fest reservierter Teil des Hauptspeichers&lt;/b&gt;, der von 
+      Anwenderprogrammen und Anwendern&lt;u&gt; wie eine Magnetplatte benutzt&lt;/u&gt; 
+      werden kann. Der Zugriff erfolgt fast so schnell wie auf den &amp;quot;reinen&amp;quot; 
+      Hauptspeicher. Nachteil: Wenn der PC keinen Strom mehr hat, sind die 
+      Daten weg.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>22</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Cache f&amp;#252;r Platten&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um zeitaufw&amp;#228;ndige Plattenzugriffe nach M&amp;#246;glichkeit einzusparen, kann ein &lt;b&gt;Cache 
+      im Hauptspeicher&lt;/b&gt; angelegt werden,in dem einzelne Bl&amp;#246;cke oder die 
+      Inhalte ganzer Spuren, die vermutlich in K&amp;#252;rze wieder ben&amp;#246;tigt werden, 
+      gespeichert werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>23</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum sind &lt;b&gt;Magnetplatten nicht gut f&amp;#252;r die Langzeitarchivierung&lt;/b&gt; 
+      geeignet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Preis&lt;/b&gt;: Magnetplatten sind f&amp;#252;r wahlfreien Zugriff konzipiert 
+      und deshalb pro MB Kapazit&amp;#228;t zu teuer, um darauf Informationen 
+      abzulegen, auf die nur selten zugegriffen wird
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Trennung vom PC&lt;/b&gt;: Da Magnetplatten oft im selben Geh&amp;#228;use wie 
+      Prozessor und Hauptspeicher untergebracht sind, k&amp;#246;nnen Informationen 
+      nicht so gut an getrennten Orten verwahrt oder auf andere Rechner 
+      transferiert werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>24</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne die &lt;b&gt;zwei wesentlichen Merkmale von Terti&amp;#228;rspeichern&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;preiswerte Herstellung&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.)&lt;b&gt; leicht vom Rechner entfernbar&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>25</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne &lt;b&gt;3 Beispiele f&amp;#252;r Terti&amp;#228;rspeiche&lt;/b&gt;r!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Disketten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) CDs / DVDs
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) USB-Sticks
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Magnetb&amp;#228;nder
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Blu-Ray Disc / HD DVD
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Externe Festplatten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Flash-Speicher
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>26</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das &lt;b&gt;Cache-Modell &lt;/b&gt;und die &lt;b&gt;Speicherhierarchie&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>27</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Unterschied zwischen &lt;b&gt;wahlfreiem und sequentiellem Zugriff&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Bei &lt;b&gt;sequentiellem Zugriff&lt;/b&gt; kann nur auf die beiden Bl&amp;#246;cke als 
+      n&amp;#228;chstes zugegriffen werden, die sich genau vor bzw. hinter dem 
+      Schreib-/Lesekopf befinden. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Bei &lt;b&gt;wahlfreiem Zugriff &lt;/b&gt;kann auf einen beliebigen, eindeutig 
+      addressierten Block als n&amp;#228;chstes zugegriffen werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>28</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Bus&lt;/b&gt;? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Grob gesagt ein &lt;b&gt;B&amp;#252;ndel von Leitungen&lt;/b&gt; zusammen mit einem&lt;b&gt; 
+      Protokoll&lt;/b&gt;, an dem &lt;b&gt;mehrere Ger&amp;#228;te angeschlossen&lt;/b&gt; sein 
+      k&amp;#246;nnen, aber &amp;#252;ber den &lt;b&gt;nur eine Nachricht auf einmal&lt;/b&gt; 
+      verschickt werden kann.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>29</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum werden die &lt;b&gt;Ein-/Ausgabeger&amp;#228;te nicht direkt an den Bus&lt;/b&gt; 
+      angeschlossen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Weil die CPU dann ausschlie&amp;#223;lich mit der Steuerung aller Ger&amp;#228;te 
+      besch&amp;#228;ftigt w&amp;#228;re. &lt;b&gt;Controller&lt;/b&gt; &amp;#252;bernehmen diese Aufgabe 
+      und sind auch f&amp;#252;r die Kommunikation mit der CPU zust&amp;#228;ndig.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>30</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Controller&lt;/b&gt;? Wie kommuniziert der Controller mit dem 
+      Betriebssystem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein St&amp;#252;ck &lt;b&gt;elektronische Hardware&lt;/b&gt;, dessen &lt;u&gt;Komplexit&amp;#228;t&lt;/u&gt; 
+      vom jeweiligen Ger&amp;#228;t, das er steuert, abh&amp;#228;ngt. Der Controller einer 
+      Magnetplatte ist z.B. ann&amp;#228;hernd ein vollwertiger Prozessor. Der 
+      Controller ist f&amp;#252;r die Ger&amp;#228;testeuerung verantwortlich und f&amp;#252;r die 
+      Kommunikation mit der CPU.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      F&amp;#252;r die &lt;u&gt;Kommunikation Betriebssystem - Controller&lt;/u&gt; ist ein 
+      eigener Teil des Betriebssystems zust&amp;#228;ndig, der&lt;b&gt; Treiber&lt;/b&gt;. Da 
+      die Controller unterschiedlich sind, ben&amp;#246;tigen sie auch unterschiedliche 
+      Treiber.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>31</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne die &lt;b&gt;Register eines Controllers &lt;/b&gt;und beschreibe sie kurz!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Datenausgangsregister:&lt;/b&gt; Hierhin schreibt der Treiber Daten, 
+      die f&amp;#252;r den Controller bestimmt sind.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Dateneingangsregister:&lt;/b&gt; In diese schreibt der Controller Daten 
+      f&amp;#252;r den Ger&amp;#228;tetreiber.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Statusregister:&lt;/b&gt; Hier kann der Treiber den Zustanda des Ger&amp;#228;ts 
+      abfragen, z.B. ob es noch besch&amp;#228;ftigt ist oder ob Daten aus dem 
+      Dateneingangsregister abgeholt werden k&amp;#246;nnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Kontrollregister:&lt;/b&gt; Hier hinterlegt der Treiber Befehle an den 
+      Controller, z.B. einen Lesebefehl.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>32</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Technik der &lt;b&gt;speicherabgebildeten Ein-/Ausgabe&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Controllerregister &lt;/b&gt;befinden sich nicht am Controller und 
+      werden durch spezielle Ein-/Ausgabebefehle &amp;#252;ber besondere Busadressen 
+      angesprochen, sondern sind als&lt;b&gt; Teil des Hauptspeichers&lt;/b&gt; 
+      realisiert. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dadurch kann der auf der CPU laufende Ger&amp;#228;tetreiber die schnelleren 
+      Prozessorbefehle f&amp;#252;r den Datenaustausch mit dem Controller verwenden. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>33</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist das &lt;b&gt;Virtuelle Ger&amp;#228;t&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Als &lt;b&gt;virtuelles Ger&amp;#228;t&lt;/b&gt; bezeichnet man die konzeptuelle Einheit 
+      aus Ger&amp;#228;tetreiber, Controller und Ger&amp;#228;t
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>34</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche &lt;b&gt;Konzepte&lt;/b&gt; stecken&lt;b&gt; im Modell des virtuellen Ger&amp;#228;ts&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Abstraktion:&lt;/b&gt; Konzentration aufs Wesentliche, Prinzipielle, 
+      ohne auf die technischen Details einzugehen (-&amp;gt; &amp;#246;ffentliche 
+      Schnittstelle)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Kapselung (Geheimnisprinzip): &lt;/b&gt;Gewisse Details &lt;u&gt;d&amp;#252;rfen&lt;/u&gt; 
+      auf einer h&amp;#246;heren Abstraktionsebene nicht bekannt sein, weil:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - dadurch Missbrauch verhindert wird und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - sp&amp;#228;tere &amp;#196;nderungen erleichtert werden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schichtenmodell: &lt;/b&gt;In jeder Schicht werden Auftr&amp;#228;ge von der 
+      oberen Schicht bearbeitet und zur weiteren Bearbeitung an die 
+      n&amp;#228;chsttiefere Schicht weitergegeben. Ist der Auftrag in der untersten 
+      Schicht erledigt, wird eine Antwort generiert, diese wird durch alle 
+      Schichten nach oben geleitet und die oberste Schicht schickt die Antwort 
+      an den externen Auftraggeber.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei der Aufteilung in Schichten muss sorgf&amp;#228;ltig &amp;#252;berlegt werden, in 
+      wieviele Schichten die Gesamtaufgabe zerlegt werden soll, da bei zu 
+      vielen Schichten der Verwaltungsaufwand so hoch wird, dass der Vorteil 
+      der Aufteilung in Schichten, n&amp;#228;mlich die Vereinfachung bei der 
+      Implementierung, wieder aufgehoben wird.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;au&amp;#223;erdem: Fehlerkorrektur und Optimierungen&lt;/i&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>35</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie erf&amp;#228;hrt die CPU von der Beendigung eines Auftrags, der an ein 
+      Ein-/Ausgabeger&amp;#228;t erteilt wurde?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Abfragebetrieb (polling):&lt;/b&gt; Die CPU kann &amp;#8211; neben ihrer anderen 
+      Arbeit &amp;#8211; immer wieder das Statusregister des Controllers abfragen, um 
+      festzustellen, ob der Auftrag schon erledigt ist. Liegen die Register im 
+      Hauptspeicherbereich &amp;#8211; wie im Fall von speicherabgebildeter 
+      Ein-/Ausgabe &amp;#8211; so l&amp;#228;sst sich eine solche Abfrage zwar recht 
+      schnell erledigen, aber wenn sie immer wieder erfolglos bleibt, wird insgesamt 
+      viel CPU-Zeit damit verbraucht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Unterbrechungsbetrieb (interrupt):&lt;/b&gt; Der Controller 
+      benachrichtigt die CPU, sobald er den Auftrag ausgef&amp;#252;hrt hat; 
+      hierzu unterbricht er die CPU bei ihrer augenblicklichen Arbeit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dieser Unterbrechungsbetrieb bildet die Grundlage f&amp;#252;r die Arbeitsweise moderner 
+      Computersysteme.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>36</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den &lt;b&gt;Ablauf der Behandlung eines Hardware-Interrupts&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Die CPU erh&amp;#228;lt &amp;#252;ber ihren &lt;b&gt;Unterbrechungseingang&lt;/b&gt; ein 
+      bin&amp;#228;res Signal f&amp;#252;r eine Unterbrechung
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Rettung des &lt;b&gt;Inhalts vom Befehlsz&amp;#228;hlregister&lt;/b&gt; in einen 
+      systemeigenen Bereich des Hauptspeichers
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Anfangsadresse einer &lt;b&gt;allgemeinen Prozedur zur 
+      Unterbrechungsbehandlung&lt;/b&gt; wird geladen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) Feststellung, &lt;b&gt;welches Ger&amp;#228;t&lt;/b&gt; die Unterbrechung verursacht 
+      hat:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; durch &lt;b&gt;Abfragen&lt;/b&gt; aller vorhandenen Ger&amp;#228;te oder &lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; &lt;b&gt;Unterbrechungscontroller&lt;/b&gt; verwaltet 
+      Unterbrechungsanforderungen&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.) Nummer i des unterbrechenden Ger&amp;#228;ts wird als Index f&amp;#252;r den &lt;b&gt;Unterbrechungsvektor 
+      &lt;/b&gt;verwendet, an Position i steht die Startadresse der speziellen 
+      Unterbrechungsroutine f&amp;#252;r Ger&amp;#228;t i.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      6.) Diese wird in das Befehlsz&amp;#228;hlerregister geladen und die &lt;b&gt;spezielle 
+      Unterbrechungsroutine&lt;/b&gt; wird gestartet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; bei l&amp;#228;ngeren Berechnungen werden auch die &lt;b&gt;Registerinhalte 
+      der CPU&lt;/b&gt; in den systemeigenen Speicher (meist ein &lt;b&gt;Stack&lt;/b&gt;) 
+      gerettet&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      7.) Nach Beendigung der Unterbrechungsroutine &lt;b&gt;Wiederherstellung der 
+      alten Registerinhalte&lt;/b&gt;, Laden des alten Wertes in 
+      Befehlsz&amp;#228;hlerregister und Befehl zur R&amp;#252;ckkehr von der Unterbrechung (&lt;b&gt;Return 
+      from Interrupt&lt;/b&gt;)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>37</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche M&amp;#246;glichkeiten gibt es, &lt;b&gt;mit mehreren Unterbrechungen&lt;/b&gt; 
+      umzugehen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Unterbrechungen sperren: &lt;/b&gt;Der Unterbrechungsausgang wird 
+      vor&amp;#252;bergehend au&amp;#223;er Betrieb gesetzt (&lt;b&gt;interrupt disabled&lt;/b&gt;), 
+      dadurch bleiben weitere Unterbrechungssignale wirkungslos und die CPU 
+      kann die zuerst eingetretene Unterbrechung ungest&amp;#246;rt bearbeiten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; Verfahren wird auch eingesetzt, wenn CPU bei &lt;b&gt;Ausf&amp;#252;hrung von 
+      kritischen Programmabschnitten&lt;/b&gt; nicht unterbrochen werden darf&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Priorit&amp;#228;ten vergeben:&lt;/b&gt; Jedem Unterbrechungswunsch wird 
+      eine Priorit&amp;#228;t zugeordnet, Unterbrechungen mit niedriger Priorit&amp;#228;t 
+      k&amp;#246;nnen von Unterbrechungen mit h&amp;#246;herer Priorit&amp;#228;t unterbrochen werden
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>38</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Arten von &lt;b&gt;Softwareunterbrechungen (Traps)&lt;/b&gt; gibt es?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Ausnahmen (Exceptions): &lt;/b&gt;z.B. Division durch Null, versuchter 
+      Zugriff auf nichtexistierende oder gesch&amp;#252;tzte Hauptspeicheradressen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Systemaufrufe: &lt;/b&gt;wenn ein Programm Dienste des Betriebssystems 
+      in Anspruch nehmen will. Die verf&amp;#252;gbaren Systemaufrufe bieten die 
+      Programmierschnittstelle zwischen Anwendungsprogrammen und 
+      Betriebssystem.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>39</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den Ablauf der &lt;b&gt;Behandlung einer Softwareunterbrechung&lt;/b&gt; 
+      aufgrund eines Systemaufrufs!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Systemaufruf hat die &lt;b&gt;Form eines Funktionsaufruf&lt;/b&gt;s, es k&amp;#246;nnen 
+      auch &lt;b&gt;Parameter &amp;#252;bergeben&lt;/b&gt; werden:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; &lt;b&gt;direkt &lt;/b&gt;in einem&lt;b&gt; CPU-Register&lt;/b&gt; oder 
+&lt;/i&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; &lt;b&gt;indirekt&lt;/b&gt; durch Angabe der&lt;b&gt; Anfangsadresse&lt;/b&gt; des zu 
+      &amp;#252;bergebenden Datenbereichs &lt;b&gt;im Hauptspeicher&lt;/b&gt;.&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Anschlie&amp;#223;end f&amp;#252;hrt der Systemaufruf einen &lt;b&gt;besonderen Befehl&lt;/b&gt; 
+      aus, die die &lt;b&gt;eigentliche Unterbrechung ausl&amp;#246;st&lt;/b&gt;. Dies ist 
+      derselbe Befehl bei allen Systemaufrufen, der &lt;b&gt;gew&amp;#252;nschte Systemdienst&lt;/b&gt; 
+      wird durch einen &lt;b&gt;Parameter &lt;/b&gt;bezeichnet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nun geschieht in etwa &lt;b&gt;dasselbe wie bei einer Hardware-Unterbrechung&lt;/b&gt;: 
+      Rettung von Befehlsz&amp;#228;hler- und Registerinhalten, Aufruf der 
+      entsprechenden Betriebssystemroutine.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; Bei Systemaufrufen werden meistens &lt;b&gt;Daten&lt;/b&gt; an das 
+      aufrufende Programm &lt;b&gt;zur&amp;#252;ckgegeben&lt;/b&gt;.&lt;/i&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>40</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf welche 2 Arten kann nach einem Lesesauftrag ein &lt;b&gt;Datenblock&lt;/b&gt; 
+      vom &lt;b&gt;Pufferspeicher des Controllers&lt;/b&gt; in den &lt;b&gt;Hauptspeicher&lt;/b&gt; 
+      gelangen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Programmierte Ein-/Ausgabe (PIO = programmed I/O):&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Controller schreibt jeweils 1 Wort in sein Dateneingangsregister und 
+      l&amp;#246;st eine Unterbrechung aus, das Wort wird von der CPU empfangen und in 
+      den Hauptspeicher geschrieben. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; Nachteil: CPU wird mit simpler Daten&amp;#252;bertragung besch&amp;#228;ftigt&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Direkter Speicherzugriff (DMA = direct memory access):&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Spezieller DMA-Controller &amp;#252;bertr&amp;#228;gt selbstst&amp;#228;ndig, ohne Mithilfe der 
+      CPU, &amp;#252;ber den Bus Daten in den Hauptspeicher.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>41</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die &lt;b&gt;Funktionsweise von DMA&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Ger&amp;#228;tetreiber teilt dem &lt;b&gt;Ger&amp;#228;tecontroller&lt;/b&gt; &amp;#252;ber 
+      dessen Register die &lt;u&gt;Nummer des zu lesenden Blocks&lt;/u&gt; mit und dem &lt;b&gt;DMA-Controller&lt;/b&gt; 
+      die &lt;u&gt;Anfangsadresse des Hauptspeicherbereichs&lt;/u&gt;, in den die Daten 
+      &amp;#252;bertragen werden sollen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Danach kann die CPU sich anderen Aufgaben widmen. Der Ger&amp;#228;tecontroller 
+      setzt sich nun &amp;#252;ber spezielle Leitungen mit dem DMA-Controller in 
+      Verbindung. Wann immer das n&amp;#228;chste Wort im Register des 
+      Ger&amp;#228;tecontrollers bereitsteht, sendet er &amp;#252;ber eine &lt;b&gt;Anforderungsleitung&lt;/b&gt; 
+      ein &lt;u&gt;Signal an den DMA-Controller&lt;/u&gt;; dieser schreibt die 
+      entsprechende &lt;u&gt;Hauptspeicheradresse&lt;/u&gt; auf den Adressbus und 
+      signalisiert &amp;#252;ber die &lt;b&gt;Best&amp;#228;tigungsleitung&lt;/b&gt; dem 
+      Ger&amp;#228;tecontroller, die &lt;u&gt;&amp;#220;bertragung durchzuf&amp;#252;hren&lt;/u&gt;. 
+      Dann z&amp;#228;hlt der DMA-Controller die &lt;b&gt;Adresse f&amp;#252;r das n&amp;#228;chste 
+      Wort&lt;/b&gt; hoch. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erst wenn &lt;b&gt;alle W&amp;#246;rter&lt;/b&gt; des gesamten Blocks &amp;#252;bertragen sind, 
+      l&amp;#246;st er eine &lt;b&gt;Unterbrechung der CPU&lt;/b&gt; aus.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; eine Kommunikation wie die zwischen DMA- und Ger&amp;#228;tecontroller 
+      wird als &lt;b&gt;&amp;quot;handshaking&amp;quot;&lt;/b&gt; bezeichnet und stellt einen 
+      einfachen Fall eines Protokolls dar&lt;/i&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>42</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert der Start des Rechners?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auch das Betriebssystem selbst ist ein Programm. Wenn der Rechner 
+      eingeschaltet wird, steht ein kleiner Teil des Systems &amp;#8211; der sogenannte &lt;b&gt;Ur-Lader 
+      &lt;/b&gt;&amp;#8211; in einem speziellen Teil des Hauptspeichers, der seinen 
+      Inhalt auch nach Abschalten des Stroms beh&amp;#228;lt. Meist ist der Ur-Lader in 
+      einem ROM (read only memory) fest eingebrannt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Ur-Lader l&amp;#228;dt zun&amp;#228;chst den eigentlichen Lader von der Magnetplatte. Der 
+      Lader wird nun gestartet und l&amp;#228;dt das Betriebssystem &amp;#8211; zumindest seine wesentlichen 
+      Teile &amp;#8211; in den Hauptspeicher. Dieser Vorgang wird als &lt;b&gt;hochfahren 
+      (booting)&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>43</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie stellt man sicher, dass z.B. nicht mehrere Programme gleichzeitig 
+      auf ein Ger&amp;#228;t zugreifen k&amp;#246;nnen oder dass ein Programm nicht sensible 
+      Daten im Hauptspeicher auslesen oder &amp;#252;berschreiben darf?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei modernen Prozessoren unterscheidet man durch ein besonderes Bit 
+      zwischen&lt;b&gt; Systemmodus und Benutzermodus.&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Alle Anwendungsprogramme arbeiten im Benutzermodus. Bestimmte 
+      privilegierte Maschinenbefehle wie der Zugriff auf Ein-/Ausgabeger&amp;#228;te 
+      bzw. der Zugriff auf s&amp;#228;mtliche Adressen, die au&amp;#223;erhalb des definierten 
+      Adressraums vom Programm liegen, k&amp;#246;nnen nur im Systemmodus ausgef&amp;#252;hrt 
+      werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;Umschalten&lt;/b&gt; passiert wie folgt: Wenn ein Benutzerprogramm 
+      einen Systemdienst ben&amp;#246;tigt, l&amp;#246;st es eine Unterbrechung aus. Die 
+      Prozedur zur Unterbrechungsbehandlung schaltet den Prozessor in den 
+      Systemmodus und startet die entsprechende Unterbrechungsroutine. Vor 
+      Beenden der Unterbrechungsroutine wird in den Benutzermodus 
+      zur&amp;#252;ckgeschalten. Damit wird verhindert, dass ein nicht 
+      vertrauensw&amp;#252;rdiges Programm den Prozessor im Systemmodus benutzen darf.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>44</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie verhindert man, dass die Teile vom Hauptspeicher, in denen 
+      Programmcode oder Betriebssystemcode steht, &amp;#252;berschrieben werden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bevor ein Programm gestartet wird, weist ihm das Betriebssystem einen 
+      bestimmten Bereich im Hauptspeicher zu, seinen sogenannten &lt;b&gt;Adressraum&lt;/b&gt;. 
+      Das Programm darf nur auf Adressen innnerhalb seines eigenen Adressraums 
+      zugreifen, das bedeutet: alle m&amp;#246;glicherweise ben&amp;#246;tigten Daten, aber auch 
+      das Programm selbst, m&amp;#252;ssen in diesem Adressraum enthalten sein.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein zusammenh&amp;#228;ngender Adressraum l&amp;#228;sst sich durch die Inhalte von zwei 
+      speziellen Registern der CPU festlegen:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Im&lt;b&gt; Basisregister &lt;/b&gt;steht die niedrigste Adresse des Adressraums;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) das &lt;b&gt;Grenzregister &lt;/b&gt;enth&amp;#228;lt die L&amp;#228;nge des Adressraums, also die 
+      Differenz aus der h&amp;#246;chsten und der niedrigsten erlaubten Adresse. Die 
+      Inhalte von Basis- und Grenzregister k&amp;#246;nnen nur mit speziellen 
+      Maschinenbefehlen ver&amp;#228;ndert werden. Diese Befehle sind privilegiert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dadurch k&amp;#246;nnen auch die &lt;b&gt;relativen Adressen&lt;/b&gt;, die der Compiler 
+      innerhalb des Programms vergibt, leicht &lt;b&gt;w&amp;#228;hrend der Laufzeit&lt;/b&gt; 
+      in &lt;b&gt;absolute Adressen&lt;/b&gt; umgerechnet werden, und zwar mit der Formel:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      &lt;i&gt;absolute Adresse = (Basisregister) + relative Adresse &lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      --&amp;gt; Weil die Programme zusammen mit ihren Adressr&amp;#228;umen beliebig im 
+      Hauptspeicher verschoben werden k&amp;#246;nnen, spricht man bei diesem Verfahren 
+      von &lt;b&gt;relokierbaren Programmen&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>45</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Prozess? Welche Bestandteile geh&amp;#246;ren zu einem Prozess?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Prozess ist ein &lt;b&gt;sich in Ausf&amp;#252;hrung befindliches Programm&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Zu einem Prozess geh&amp;#246;rt:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Der&lt;b&gt; Programmcode
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Der &lt;b&gt;Prozesskontext&lt;/b&gt;, u.a. bestehend aus:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Registerinhalten&lt;/b&gt;, insbesondere
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Befehlsz&amp;#228;hler&lt;/b&gt; und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Grenzen des Adressraums&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt;&lt;b&gt; Prozessnummer&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Prozesskontext wird im &lt;b&gt;Prozesskontrollblock&lt;/b&gt; gespeichert, wo 
+      auch vermerkt wird, ob der Prozess im &lt;u&gt;System- oder Benutzermodus&lt;/u&gt; 
+      arbeitet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>46</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In welchen Zust&amp;#228;nden kann sich ein Prozess befinden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>47</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Aufgabe hat der CPU-Scheduler? Nenne 2 Scheduling-Strategien und 
+      beschreibe ihre Vor- und Nachteile.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Scheduler entscheidet, welcher der Prozesse im Zustand &amp;quot;bereit&amp;quot; als 
+      n&amp;#228;chstes rechnen darf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Schedulingstrategien:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;FCFS (first-come, first-served)&lt;/b&gt;: Der Prozess, der am l&amp;#228;ngsten 
+      bereit ist, darf zuerst rechnen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Vorteil:&lt;/b&gt; Kann leicht mit einer Warteschlange realisiert 
+      werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Nachteil:&lt;/b&gt; Braucht ein Prozess sehr lange oder l&amp;#228;uft er 
+      gar in eine Endlosschleife, h&amp;#228;lt er alle anderen Prozesse auf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;SJF (shortest job first)&lt;/b&gt;: Der Prozess, der am wenigsten 
+      Rechenzeit ben&amp;#246;tigt, darf zuerst rechnen. Die Rechenzeit muss sich dazu 
+      aus Erfahrungswerten gut vorhersagen lassen k&amp;#246;nnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Vorteil:&lt;/b&gt; die Gesamtwartezeit wird minimiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Nachteil:&lt;/b&gt; Wenn immer wieder kurze Prozesse gestartet 
+      werden, kommen die langen Prozesse evtl. nie dran (starvation). Dies 
+      kann verhindert werden, wenn Priorit&amp;#228;ten an die Prozesse vergeben 
+      werden, die sich mit der Wartezeit erh&amp;#246;hen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>48</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Begriffe Stapel-/ Batch-Betrieb und Time-Sharing-Betrieb!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Batch/Stapelbetrieb:&lt;/b&gt; Der Rechner erh&amp;#228;lte einen ganzen Schub 
+      von Auftr&amp;#228;gen, die keine Interaktion mit dem Benutzer erfordern und 
+      regelm&amp;#228;&amp;#223;ig auszuf&amp;#252;hren sind, so dass man ihre Laufzeiten in etwa kennt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Time-Sharing-Betrieb&lt;/b&gt;: Mehrere Benutzer k&amp;#246;nnen zur selben Zeit 
+      an einem Rechner arbeiten, und jeder kann gleichzeitig mehrere Programme 
+      laufen lassen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>49</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie entsteht der Eindruck, dass mehrere Prozesse gleichzeitig laufen, 
+      auch auf einem Einprozessorsystem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Scheduler teilt in schnellem Wechsel jedem Prozess im Zustand 
+      &amp;quot;bereit&amp;quot; ein gewisses Quantum an Rechenzeit. Die&lt;b&gt; 
+      Umschaltung zwischen den Prozessen erfolgt so schnell, dass die 
+      Unterbrechungen nicht sp&amp;#252;rbar werden. &lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Ablauf: &lt;/b&gt;Wenn ein bereiter Prozess rechnend gemacht wird, weist 
+      der Scheduler ihm eine &lt;b&gt;Zeitscheibe (time slice) an Rechenzeit&lt;/b&gt; zu; 
+      ihre Dicke kann von der Priorit&amp;#228;t des Prozesses abh&amp;#228;ngen oder davon, 
+      wieviel Rechenzeit der Prozess insgesamt schon verbraucht hat.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein &lt;b&gt;Zeitgeber (timer)&lt;/b&gt; wacht dar&amp;#252;ber, dass der Prozess sein 
+      Quantum nicht &amp;#252;berschreitet; oft ist daf&amp;#252;r ein eigener Chip im Rechner 
+      vorhanden, der an den Takt der CPU angeschlossen ist. Die Dicke der 
+      zugewiesenen Zeitscheibe wird in einem Register des Zeitgebers 
+      gespeichert. Nach jeder verstrichenen Zeiteinheit wird der Inhalt dieses 
+      Registers um eins verringert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ist der Wert bei null angekommen, so ist die zugewiesene Zeitscheibe 
+      abgelaufen, und der Zeitgeber l&amp;#246;st eine Unterbrechung der CPU aus.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Prozess wird unterbrochen und wieder in die Menge der bereiten 
+      Prozesse eingereiht. Nun kommt ein anderer Prozess an die Reihe.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>50</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In welcher Reihenfolge erhalten die Prozesse &amp;#252;blicherweise ihre 
+      Zeitscheiben?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nach dem round-robin-Verfahren - bei diesem werden die Prozesse reihum 
+      bedient. Dazu kann man sie in der Reihenfolge ihres Eintreffens in einer 
+      kreisf&amp;#246;rmigen Warteschlange speichern. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>51</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie bezeichnet man das Umschalten zwischen Prozessen? Wer ist daf&amp;#252;r 
+      verantwortlich?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Umschalten zwischen Prozessen bezeichnet man auch als &lt;b&gt;Kontextwechsel&lt;/b&gt;, 
+      verantwortlich daf&amp;#252;r ist der&lt;b&gt; Dispatcher. &lt;/b&gt;Da solche 
+      Kontextwechsel h&amp;#228;ufig vorkommen, ist es wichtig, dass der Dispatcher 
+      m&amp;#246;glichst schnell arbeitet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>52</card_id>
+		<proj_id>1</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe, was bei Ausf&amp;#252;hrung des zum Hochsprachenbefehl &amp;quot;read&amp;quot; 
+      geh&amp;#246;renden Systemaufrufs in einem Prozesse P passiert!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Eine Software-Unterbrechung wird ausgel&amp;#246;st; der Kontext von P 
+      wird zun&amp;#228;chst gerettet, dann wird der (ger&amp;#228;teunabh&amp;#228;ngige) Ein/Ausgabeteil 
+      des Betriebssystems aufgerufen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Dieser pr&amp;#252;ft zun&amp;#228;chst, ob die ben&amp;#246;tigten Daten nicht 
+      schon im Cache im Hauptspeicher stehen; in dem Fall werden sie in den 
+      Adressraum von P kopiert, und nach der R&amp;#252;ckkehr von der 
+      Software-Unterbrechung wird der Prozess P sofort wieder rechnend.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Stehen die Daten nicht im Cache, ist ein Plattenzugriff 
+      erforderlich. Der Prozess P wird solange blockiert. Der Ein-/Ausgabeteil 
+      des Betriebssystems bestimmt die physische Datenadresse und h&amp;#228;ngt den 
+      Leseauftrag an die Ger&amp;#228;te-Warteschlange des Plattenlaufwerks an. 
+      Dann gibt es dem Ger&amp;#228;tetreiber Bescheid.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) Sobald der Ger&amp;#228;tetreiber frei ist und rechnend wird, entnimmt er den 
+      Auftrag der Ger&amp;#228;te-Warteschlange. Der Ger&amp;#228;tetreiber reserviert 
+      im betriebssystemeigenen Bereich Speicherplatz f&amp;#252;r die zu lesenden Daten 
+      und schickt einen Lesebefehl an den Ger&amp;#228;tecontroller. Dann f&amp;#252;hrt 
+      der Treiber den Systemaufruf Warten aus und blockiert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.) Der Ger&amp;#228;tecontroller f&amp;#252;hrt den Leseauftrag aus und 
+      &amp;#252;bertr&amp;#228;gt zusammen mit dem DMA-Controller die Daten in den 
+      reservierten Bereich im systemeigenen Speicher; w&amp;#228;hrenddessen k&amp;#246;nnen auf 
+      der CPU beliebige andere Prozesse rechnen. Danach wird eine Unterbrechung 
+      ausgel&amp;#246;st.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      6.) Mittels des Unterbrechungsvektors wird die Unterbrechungsroutine des 
+      Plattenlaufwerks gestartet. Sie schickt das Signal, auf das der 
+      Ger&amp;#228;tetreiber wartet, und kehrt dann von der Unterbrechung zur&amp;#252;ck. 
+      Der Ger&amp;#228;tetreiber wird dadurch bereit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      7.) Sobald der Ger&amp;#228;tetreiber rechnend wird, sieht er in der Ger&amp;#228;te-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warteschlange nach, von welchem Prozess der Leseauftrag stammte, gibt 
+      dem Ein-/Ausgabeteil des Betriebssystems Bescheid und geht in den 
+      Zustand bereit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      8.) Der Ein-/Ausgabeteil des Betriebssystems kopiert die Daten aus dem 
+      systemeigenen Speicher in den Adressraum des Prozesses P und versetzt P 
+      aus dem Zustand blockiert in den Zustand bereit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      9.) Sobald der Prozess P wieder rechnen darf, wird der Systemaufruf 
+      beendet, und P setzt seine Arbeit hinter dem read fort.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>53</card_id>
+		<proj_id>1</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wof&amp;#252;r gibt es eine Ger&amp;#228;te-Warteschlange zu jedem Speicherger&amp;#228;t? Was tut 
+      diese?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Im Time-Sharing-Betrieb kann es vorkommen, dass viele Prozesse kurz
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      nacheinander auf ein Ger&amp;#228;t zugreifen wollen. Deshalb wird zu jedem 
+      Speicherger&amp;#228;t eine eigene Ger&amp;#228;te-Warteschlange (device queue) 
+      eingerichtet, an die der Ein-/Ausgabeteil des Betriebssystems Auftr&amp;#228;ge 
+      anh&amp;#228;ngen kann. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Jeder Auftrag wird mit der Nummer des Prozesses versehen, der ihn 
+      erteilt hat. Der Ger&amp;#228;tetreiber holt die Auftr&amp;#228;ge einzeln aus der 
+      Warteschlange ab und f&amp;#252;hrt sie dem Controller zu. Dabei ist der 
+      Treiber nicht an die Reihenfolge in der Warteschlange gebunden; er kann 
+      vielmehr versuchen, durch geschickte Wahl des n&amp;#228;chsten Auftrags die 
+      Zugriffszeit des Ger&amp;#228;ts zu minimieren.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>54</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine Datenbank?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Datenbank ist eine &lt;b&gt;integrierte Ansammlung von Daten&lt;/b&gt;, die 
+      allen Benutzern 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      eines Anwendungsbereiches als gemeinsame Basis aktueller Information 
+      dient. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>55</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein DBMS?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das  DBMS (DataBase Management System)  ist  ein  Soft-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      waresystem, das es erm&amp;#246;glicht, eine Datenbank zu definieren, Daten zu 
+      speichern, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      zu ver&amp;#228;ndern und zu l&amp;#246;schen, sowie Anfragen an die Datenbank zu stellen. 
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>56</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Probleme bei Datenspeicherung in einem Dateisystem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      (1)  Redundanz: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        Da  die  Daten  jeweils  speziell  f&amp;#252;r  bestimmte  Anwendungen  
+      entworfen  wer-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      den,  werden  dieselben  Daten  in  verschiedenen  Dateien  wieder  
+      auftauchen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      (z.B. Namen, Adressen). Redundanz f&amp;#252;hrt zu Speicherverschwendung und zu 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      erh&amp;#246;hten Verarbeitungskosten, vor allem bei &amp;#196;nderungen. Schlimmer jedoch 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ist es, dass diese Redundanz in der Regel nicht zentral kontrolliert 
+      wird, so 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      dass Konsistenzprobleme auftreten. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      (2)  Inkonsistenz: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        Die  Konsistenz  der  Daten  (d.h.  die  logische  &amp;#220;bereinstimmung  
+      der  Datei-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Inhalte) kann nur schwer gew&amp;#228;hrleistet werden. Bei der &amp;#196;nderung einer 
+      Gr&amp;#246;-&amp;#223;e  m&amp;#252;ssten  alle  Dateien  ge&amp;#228;ndert  werden,  die  diese  Gr&amp;#246;&amp;#223;e  
+      beinhalten,  und 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      diese &amp;#196;nderungen m&amp;#252;ssten so miteinander abgestimmt geschehen, dass nicht 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      verschiedene Programme zum  selben Zeitpunkt unterschiedliche  Werte der-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      selben Gr&amp;#246;&amp;#223;e sehen k&amp;#246;nnen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      (3)  Daten-Programm-Abh&amp;#228;ngigkeit: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        &amp;#196;ndert sich der Aufbau einer Datei oder ihrer Organisationsform, so 
+      m&amp;#252;ssen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      darauf basierende Programme ge&amp;#228;ndert werden. Wird beispielsweise f&amp;#252;r 
+      eine 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Anwendung ein weiteres Datenelement in einem Satztyp ben&amp;#246;tigt (z.B. Tele-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      fonnummer  eines  Angestellten),  so  m&amp;#252;ssen  infolge  der  notwendigen  
+      Neu-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Definition der Datei alle Programme ge&amp;#228;ndert werden, unabh&amp;#228;ngig davon, 
+      ob 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      sie dieses neue Datenelement sehen wollen oder nicht. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      (4)  Inflexibilit&amp;#228;t: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        Da die Daten nicht in ihrer Gesamtheit, sondern nur anwendungs-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      bezogen gesehen werden, ist es in vielen F&amp;#228;llen sehr kompliziert, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      neue  Anwendungen  oder  Auswertungen  vorhandener  Daten  zu 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      realisieren.  Dies  gilt  insbesondere  f&amp;#252;r  Auswertungen,  die  Daten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      aus verschiedenen Dateien ben&amp;#246;tigen w&amp;#252;rden. Die Organisation nach diesem 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      konventionellen Vorgehen ist sehr wenig anpassungsf&amp;#228;hig an die sich 
+      ver&amp;#228;n-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      dernden Anforderungen in einem Unternehmen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>57</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In welchen Ebenen sind die Daten in einem Datenbanksystem organisiert 
+      (Tipp: Sichten) ?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Logische Gesamtsicht 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In der Datenbank sind alle wichtigen Unternehmensdaten  zusammengefasst 
+      (zur 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Verk&amp;#252;rzung der Schreibweise sprechen wir im Folgenden von 
+      Unternehmensdaten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      statt von den Daten des betrachteten Anwendungsbereiches). Um die 
+      Datenbank 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      erstellen  zu  k&amp;#246;nnen,  ist  eine  Gesamtschau  der  Unternehmensdaten  
+      notwendig. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Alle Daten m&amp;#252;ssen zun&amp;#228;chst auf logischer Ebene in Form von 
+      Informationseinhei-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ten  und  deren  Beziehungen  untereinander  beschrieben  werden,  
+      unabh&amp;#228;ngig  von 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      EDV-Gesichtspunkten. Diese Beschreibung der Gesamtheit der 
+      Unternehmensda-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ten nennen wir logische Gesamtsicht. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Interne Sicht 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Daten m&amp;#252;ssen auf den Speichern so organisiert werden, dass die 
+      Zugriffsan-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      forderungen der  verschiedenen Benutzer  m&amp;#246;glichst effizient  erf&amp;#252;llt 
+      werden k&amp;#246;n-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      nen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Externe Sichten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Jede Benutzergruppe sieht den Ausschnitt der Datenbank, der f&amp;#252;r sie von 
+      Bedeu-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      tung ist. Die Daten werden so dargestellt, wie es f&amp;#252;r die Benutzer 
+      w&amp;#252;nschenswert 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      oder nat&amp;#252;rlich ist. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>600</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>58</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind &amp;quot;Integrit&amp;#228;tsbedingungen&amp;quot;, die in einer Datenbank parallel zu 
+      den Daten gespeichert werden k&amp;#246;nnen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Zus&amp;#228;tzlich zu Informationen &amp;#252;ber Daten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      und Beziehungen zwischen Daten beschreibt das konzeptuelle Modell die 
+      Bedin-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      gungen, die f&amp;#252;r die Daten des Unternehmens immer gelten oder die 
+      Vorschriften 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      f&amp;#252;r  das  &amp;#196;ndern  von  Daten  machen.  Beispielsweise  k&amp;#246;nnen  solche  
+      Bedingungen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      festlegen, dass das &amp;#196;ndern bestimmter Daten das &amp;#196;ndern bestimmter 
+      anderer Da-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ten  zur  Folge  hat.  Da  solche  Bedingungen  im  realisierten  
+      Datenbanksystem  die 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      M&amp;#246;glichkeit zur Pr&amp;#252;fung der Korrektheit von Daten geben, hei&amp;#223;en solche 
+      Bedin-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      gungen auch Integrit&amp;#228;tsbedingungen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>59</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Unterschied zwischen einem Informationssystem und einem 
+      Datenbanksystem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+       Das 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Informationssystem  eines  Unternehmens  ist  die  Gesamtheit  aller  
+      Instanzen  und 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Prozesse, die die  f&amp;#252;r das Unternehmen wichtige  Information  von au&amp;#223;en 
+      aufneh-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      men, verarbeiten und entsprechende Information nach au&amp;#223;en wieder 
+      abgeben. Das 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Datenbanksystem ist damit nur ein Teil des Informationssystems, n&amp;#228;mlich 
+      derje-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      nige Teil, in dem die Informationsbasis des Unternehmens verwaltet wird. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>60</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In welchem Schema wird die physische Datenorganisation beschrieben?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Internes Schema.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>61</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Dinge/Informationen werden durch das internen Schema definiert?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Repr&amp;#228;sentation von Attributwerten  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Aufbau gespeicherter S&amp;#228;tze  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Zugriffsmethoden auf S&amp;#228;tze  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  zus&amp;#228;tzliche Zugriffspfade (Indexe, Verkettungen, usw.) 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>62</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was beschreiben die Transformationsregeln?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In den Transformationsregeln konzeptuelles/internes Schema wird die 
+      Beziehung 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      zwischen  den  physisch  abgespeicherten  Feldern,  S&amp;#228;tzen  usw.  und  
+      den  Objekten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      des konzeptuellen Schemas definiert.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>63</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreiben Sie die (9) Schritte, in denen eine Anfrage an eine 
+      Datenbank und dessen Verarbeitung geschieht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.  Das DBMS empf&amp;#228;ngt den Befehl des Anwendungsprogrammes, ein bestimm-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      tes Objekt eines externen Modells zu lesen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.  Das DBMS holt sich die ben&amp;#246;tigten Definitionen des entsprechenden 
+      Objekt-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      typs aus dem zugeh&amp;#246;rigen externen Schema. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.  Mit Hilfe der Transformationsregeln externes/konzeptuelles Schema 
+      stellt das 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      DBMS  fest,  welche  konzeptuellen  Objekte  und  Beziehungen  ben&amp;#246;tigt  
+      wer-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      den.  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.  Mit Hilfe der Transformationsregeln konzeptuelles/internes Schema 
+      stellt das 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      DBMS fest, welche physischen Objekte zu lesen sind, es ermittelt die 
+      auszu-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      n&amp;#252;tzenden Zugriffspfade. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.  Das DBMS &amp;#252;bergibt dem Betriebssystem die Nummern der zu lesenden 
+      Spei-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      cherbl&amp;#246;cke. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      6.  Das Betriebssystem &amp;#252;bergibt die verlangten Bl&amp;#246;cke an das DBMS in 
+      einem 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Systempuffer. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      7.  Mit Hilfe der Transformationsregeln  stellt das DBMS aus den 
+      vorhandenen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      physischen S&amp;#228;tzen das verlangte externe Objekt zusammen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       1. Einf&amp;#252;hrung - Architektur eines Datenbanksystems  19 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      8.  Das DBMS &amp;#252;bergibt das externe Objekt dem Anwendungsprogramm in sei-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      nen Arbeitsspeicher. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      9.  Das Anwendungsprogramm verarbeitet die vom DBMS &amp;#252;bergebenen Daten. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>64</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was versteht man unter &amp;quot;Binden&amp;quot; (bei Datenbanksystemen)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+       Um den Befehl  eines  Anwendungs-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      programms auszuf&amp;#252;hren,  m&amp;#252;ssen die Objekte des externen Modells 
+      ausgedr&amp;#252;ckt 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      werden durch Objekte des konzeptuellen Modells und schlie&amp;#223;lich durch 
+      Objekte 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      des internen Modells. Sobald der Befehl, der sich auf ein externes 
+      Objekt bezieht, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ersetzt ist durch Befehle, die sich auf das konzeptuelle Modell 
+      beziehen, sind die 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      entsprechenden Daten des Anwendungsprogrammes an das konzeptuelle Modell 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8222;gebunden&amp;#8220;, entsprechend f&amp;#252;r das interne Modell. &amp;#196;ndert sich nach dem 
+      vollst&amp;#228;n-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      digen Binden des Anwendungsprogrammes das interne Modell, so l&amp;#228;uft das 
+      An-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      wendungsprogramm fehlerhaft - es muss neu (an das ver&amp;#228;nderte interne 
+      Modell) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      gebunden werden. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>65</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In welchen Arten kann ein &amp;quot;binding&amp;quot; stattfinden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Binden zur &amp;#220;bersetzungszeit 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Binden zum Zeitpunkt des Zugriffs auf die Daten (Laufzeit).  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>66</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was f&amp;#252;r Aufgaben erf&amp;#252;llt ein DBMS?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Schnittstelle, um Benutzern und Programmen zu erm&amp;#246;glichen, Daten 
+      zur&amp;#252;ckzugeben
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Datendefinition: Das DBMS muss Datendefinitionen (externe Schemata, 
+      das konzeptuelle Schema, das interne Schema, die zugeh&amp;#246;rigen 
+      Transformationsregeln) in den zugeh&amp;#246;rigen DDLs  akzeptieren  und  
+      interpretieren  k&amp;#246;nnen.  Es  erzeugt  aus  der  Quellform (Source) 
+      eine interne Darstellung.  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       - Integrit&amp;#228;t der Datenbank: Das DBMS sollte in m&amp;#246;glichst gro&amp;#223;em 
+      Umfang in der Lage sein, Integrit&amp;#228;tsverletzungen  zu  verhindern  
+      (es  verwehrt beispielsweise  &amp;#196;nderungen  von  Daten,  die vorgegebenen 
+      Integrit&amp;#228;tsbedingungen widersprechen) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Datensicherung (Recovery) Nach dem Auftreten von Fehlern muss das 
+      DBMS in der Lage sein, die Datenbank  wieder  in  einen  konsistenten  
+      Zustand  zu  versetzen.  Fehler  dieser  Art  sind 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Abbr&amp;#252;che  von  Anwendungsprogrammen,  Systemzusammenbruch,  
+      Plattenfehler, etc. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Koordination gleichzeitig auf der Datenbank arbeitender Benutzer 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf gro&amp;#223;en Datenbanken arbeiten im allgemeinen viele Benutzer 
+      gleichzeitig. Das DBMS  muss  daf&amp;#252;r  sorgen,  dass  sich  die  parallel  
+      arbeitenden  Programme  nicht gegenseitig  st&amp;#246;ren  oder  infolge  
+      unkoordinierter  Parallelarbeit  die  Integrit&amp;#228;t  der Datenbank 
+      zerst&amp;#246;ren. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Schutz der Daten gegen unberechtigten Zugriff 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Hierzu geh&amp;#246;ren alle technischen Ma&amp;#223;nahmen zum Datenschutz, d.h. zum 
+      Schutz der Daten gegen Missbrauch  jeglicher  Art. Das DBMS  muss daf&amp;#252;r 
+      sorgen, dass nur  befugte  Benutzer  Daten  lesen,  l&amp;#246;schen  und  
+      ver&amp;#228;ndern  k&amp;#246;nnen.  Da  in  einer Datenbank sehr  viele Daten  
+      integriert vorhanden sind, spielen Datenschutzma&amp;#223;nahmen in 
+      Datenbanksystemen eine besondere Rolle. Ein einfaches Beispiel mag dieses 
+       verdeutlichen:  in  einem  Unternehmen  d&amp;#252;rfen  verschiedene  Personen  
+      Information &amp;#252;ber Angestellte und deren Geh&amp;#228;lter sehen (Abteilungsleiter, 
+      Lohnb&amp;#252;ro, Revision, usw.), das Recht zu &amp;#196;nderungen  muss aber einem 
+      sehr kleinen Personenkreis  vorbehalten bleiben.  Andere Personen d&amp;#252;rfen 
+       lediglich die Geh&amp;#228;lter alleine sehen, nicht aber, welcher 
+      Angestellte welches Gehalt verdient. Wieder andere Personen d&amp;#252;rfen 
+      nichts &amp;#252;ber die Geh&amp;#228;lter erfahren. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>67</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind gebr&amp;#228;uchliche Datenbank&amp;quot;tools&amp;quot;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Abfragesysteme 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Report-Writer 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Spreadsheets und Business Graphics Tools 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Tools f&amp;#252;r den Datenbankentwurf 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  4GL Entwicklungsumgebungen. 4GL (fourth generation language, Da-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      tenbanksprachen der vierten Generation) integrieren imperative Sprach-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      konzepte  mit SQL. Sie unterst&amp;#252;tzen typischerweise die  interaktive Pro-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      grammierung von Men&amp;#252;s, Masken und Formularen mit dahinterliegenden 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Prozeduren (Ausl&amp;#246;seregeln und Aktionen). 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  CASE Tools (computer aided software engineering) f&amp;#252;r den Entwurf von 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Datenbankanwendungen 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>68</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Datenbank &amp;quot;Utilities&amp;quot;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Kleinere Anwendungen, die vom DBS bereitgestellt werden oder anderen 
+      Anbietern. Beispiele sind:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Laderoutinen (f&amp;#252;r das erstmalige Laden der Datenbank), 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  statistische Routinen, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Routinen zur Fehleranalyse, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Routinen zur Reorganisation (der Daten auf den Speichern), 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Kopier- und Archivierungsroutinen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>69</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Data-Dictionary?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Art &amp;quot;Meta-Datenbank&amp;quot; die zus&amp;#228;tzliche Verwaltungsinformationen 
+      speichert:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Es dient dem DBMS zur Speicherung der Daten zur Verwaltung der Da-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      tenbank  (Schema-Informationen,  Sichten,  Zugriffsrechte,  
+      Informationen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      zur Optimierung von Anfragen wie etwa Statistiken usw.). 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Es dient dem Anwendungsprogrammierer zur Suche nach Informationen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#252;ber gespeicherte Daten und deren Struktur (Schema-Informationen) so-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      wie zur Analyse bei Leistungsproblemen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>70</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Repository in Bezug zu Datenbanken?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Es ist ein erweitertes Data-Dictionary mit mehr als nur zur 
+      Eigenverwaltung genutzen Informationen. Z.B:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Beschreibungen der Daten  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Angaben zu den Beziehungen zwischen den Daten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Beschreibungen der Programme (Transaktionen) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Angaben dar&amp;#252;ber, welche Programme welche Daten nutzen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Konsistenzbedingungen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Angaben &amp;#252;ber Zugriffsbefugnisse  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Entwurfsdaten  (grafische  konzeptuelle  Modelle,  Dokumentation  der 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Entwurfsschritte usw.) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Verantwortlichkeiten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Entwurfsdokumente, Quell-Code zu Anwendungsprogrammen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>71</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was versteht man unter physischen Datenunabh&amp;#228;ngigkeit?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Physische Datenunabh&amp;#228;ngigkeit bedeutet Isolierung der 
+      Anwendungsprogramme 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      von &amp;#196;nderungen der physischen Datenorganisation.  Diese Form der 
+      Datenunab-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      h&amp;#228;ngigkeit  wird  in  der  Drei-Schichten-Architektur  dadurch  
+      gew&amp;#228;hrleistet,  dass 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#196;nderungen des internen Modells das konzeptuelle Modell unber&amp;#252;hrt 
+      lassen: die 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#196;nderungen werden durch Modifikation der Transformationsregeln 
+      aufgefangen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da das konzeptuelle Modell unber&amp;#252;hrt bleibt, bleiben auch die externen 
+      Modelle 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      und damit alle Benutzerprogramme von &amp;#196;nderungen der Datenorganisation 
+      unbe-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      r&amp;#252;hrt. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>72</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was versteht man unter logischer Datenunabh&amp;#228;ngigkeit?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Logische  Datenunabh&amp;#228;ngigkeit  bedeutet  Isolierung  der  
+      Anwendungsprogramme 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      von  &amp;#196;nderungen  des  konzeptuellen  Modells.  Beispielsweise  k&amp;#246;nnen  
+      neue  An-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      wendungen dazu  f&amp;#252;hren,  dass  im konzeptuellen  Modell Objekttypen 
+      zus&amp;#228;tzliche 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Attribute erhalten, dass neue Beziehungstypen eingef&amp;#252;hrt werden m&amp;#252;ssen, 
+      usw. In 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      allen  diesen  F&amp;#228;llen  m&amp;#252;ssen  die  bestehenden  externen  Modelle  
+      nicht  ver&amp;#228;ndert 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      werden, d.h. die vorhandenen Programme bleiben unber&amp;#252;hrt. Lediglich die 
+      Trans-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      formationsregeln externes/konzeptuelles Modell m&amp;#252;ssen m&amp;#246;glicherweise 
+      abge&amp;#228;n-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      dert werden.  
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>73</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie wirkt sich Datenunabh&amp;#228;ngigkeit unter der Bindung aus?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der  Begriff  der  Datenunabh&amp;#228;ngigkeit  muss  auch  unter  dem  
+      Gesichtspunkt  des 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bindens gesehen werden. Im  Falle des  Bindens  zur &amp;#220;bersetzungszeit  
+      bleibt das 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Anwendungsprogramm nach &amp;#196;nderungen des internen oder konzeptuellen Sche-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      mas  unver&amp;#228;ndert,  muss  aber  neu  &amp;#252;bersetzt  werden.  Man  spricht  
+      von  statischer 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Datenunabh&amp;#228;ngigkeit.  Im  Falle  des  Bindens  zur  Zugriffszeit  ist  
+      auch  diese  Ab-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      h&amp;#228;ngigkeit aufgehoben, man spricht von dynamischer Datenunabh&amp;#228;ngigkeit. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>74</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Konstrukte (4) kennt das ER Modell?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Entity-Typ (entity type) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Beziehungstyp (relationship type) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Entity-Typen und Beziehungstypen haben Attribute 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Zu jedem Typ gibt es dann beliebig viele Instanzen, also Entities und 
+      Be-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ziehungen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>75</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Entity-Typ?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Entity-Typ repr&amp;#228;sentiert die Menge aller Entities, die die gleichen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      charakteristischen Eigenschaften besitzen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>76</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Entity?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Modellbildung besteht darin, dass wir gewisse Dinge der realen Welt 
+      als Ob-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      jekte, sogenannte Entities, ansehen, zwischen denen gewisse Beziehungen 
+      beste-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      hen. Es ist Aufgabe des Datenbankadministrators, im Einzelfalle zu 
+      beschlie&amp;#223;en, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      was eine Entity ist.  Als Entity wird man im allgemeinen solche Dinge 
+      ansehen, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      die in der realen Welt allein f&amp;#252;r sich identifizierbar sind.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>77</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was versteht man unter einer Beziehung(styp)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Entities k&amp;#246;nnen untereinander in Beziehung stehen. Beispielsweise kann 
+      die Enti-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ty &amp;#8222;Kurt M&amp;#252;ller&amp;#8220; in der Beziehung  &amp;#8222;ist-Vater-von&amp;#8220; zu der Entity &amp;#8222;Peter 
+      M&amp;#252;ller&amp;#8220; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      stehen. Ein anderes Beispiel ist die Beziehung zwischen einem bestimmten 
+      Mitar-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      beiter und einem Projekt, an dem er mitarbeitet. Genauso wie bei 
+      Entities betrach-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ten  wir  nicht  einzelne  Beziehungen,  sondern  Beziehungstypen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>78</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Attribute?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Jeder Entity-Typ besitzt Attribute. Attribute des Entity-Typs 
+      Angestellter sind z.B. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Name, Personalnummer, Beruf, Gehalt usw. Jedes Attribut kann Werte aus 
+      einem 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      bestimmten Wertebereich annehmen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>79</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nennen Sie ein Beispiel f&amp;#252;r ein Beziehungsattribut.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Analog zu den Entity-Typen k&amp;#246;nnen auch einem Beziehungstyp  Attribute 
+      zuge-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ordnet sein. Wenn in einem Unternehmen ein Angestellter gleichzeitig an 
+      mehre-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ren Projekten mitarbeiten kann, so wird es beispielsweise sinnvoll sein, 
+      dem Be-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ziehungstyp  IST-MITARBEITER-AN  das  Attribut  PROZENT-DER-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ARBEITSZEIT zuzuordnen. F&amp;#252;r die  Beziehung  &amp;#8222;Meyer  bearbeitet Projekt 
+      P10&amp;#8220; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      besagt der Wert dieses Attributes dann beispielsweise, dass Meyer mit 
+      50% seiner 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Arbeitszeit am Projekt P10 arbeitet. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>80</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Schl&amp;#252;ssel und ein Prim&amp;#228;rschl&amp;#252;ssel?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wir  hatten gesagt,  dass Entities  voneinander unterscheidbare 
+      Einheiten sind. Es gibt also ein Attribut oder eine Menge von Attributen 
+      f&amp;#252;r jeden Entity-Typ, deren Werte jede Entity identifizieren. Ein 
+      solches Attribut oder eine solche Menge von Attributen hei&amp;#223;t Schl&amp;#252;ssel 
+      f&amp;#252;r diesen Entity-Typ. Ein Schl&amp;#252;ssel f&amp;#252;r den Entity-Typ ANGESTELLTER 
+       ist  beispielsweise  die  Attributmenge  (NAME, GEBURTSDATUM).  
+      Gelegentlich  sind  solche  Schl&amp;#252;ssel  ungeeignet,  beispielsweise 
+      m&amp;#252;sste man in vielen Anwendungen zu (NAME, GEBURTSDATUM) weitere  
+      Attribute  hinzuf&amp;#252;gen,  um  einen  Schl&amp;#252;ssel  zu  erhalten.  Aus  diesem 
+       Grunde werden  oft  k&amp;#252;nstliche  Attribute  eingef&amp;#252;hrt,  die  als  
+      Schl&amp;#252;ssel  verwendet  werden sollen. Typisch ist etwa die 
+      Verwendung von Personalnummern in Betrieben. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Gibt es mehrere Schl&amp;#252;ssel f&amp;#252;r einen Entity-Typ, so wird im allgemeinen 
+      einer von 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ihnen als Prim&amp;#228;rschl&amp;#252;ssel ausgezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>87</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreiben Sie eine 1:1 Beziehung.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Von gro&amp;#223;er praktischer Bedeutung sind Aussagen &amp;#252;ber die  Art des 
+      Beziehungs-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      typs: kann eine Entity vom Typ E1 nur mit einer oder mit vielen Entities 
+      vom Typ 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      E2  in  Beziehung  stehen,  usw.  Im  ER-Modell  werden  deshalb  
+      Beziehungstypen 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      durch ihre Komplexit&amp;#228;t charakterisiert: Die einfachste Form der 
+      Beziehung zwi-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      schen zwei Entity-Typen E1
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       und E2
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       ist die 1:1-Beziehung.  Ein Beispiel f&amp;#252;r einen 1:1-Beziehungstyp ist 
+      VERHEIRATET. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>89</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine n:1 Beziehung?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+       Jede Entity e vom Typ E
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       steht in Be-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ziehung mit beliebig vielen (keinem, einem oder mehreren) Entities vom 
+      Typ E1, aber jede Entity vom Typ E1 steht in Beziehung zu h&amp;#246;chstens 
+      einer Entity vom Typ E2. Ein solcher Beziehungstyp hei&amp;#223;t n:1 von E1 
+      nach E2. Geh&amp;#246;rt jeder Mitarbeiter  einer  Firma  zu  h&amp;#246;chstens  
+      einer  Abteilung,  so  ist  der  Beziehungstyp  IST-ANGEH&amp;#214;RIGER-VON vom 
+      Typ n:1 von MITARBEITER zu ABTEILUNG. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>90</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine n:m Beziehung?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einem n:m-Beziehungstyp k&amp;#246;nnen einer Entity vom Typ E1 beliebig 
+      viele Entities vom Typ E2 zugeordnet sein und einer Entity vom Typ E2 
+      k&amp;#246;nnen beliebig viele  Entities  vom  Typ  E1  zugeordnet  sein.  
+      Dies  ist  die  komplizierteste  Beziehung, sie kann nicht in allen 
+      Datenmodellen unmittelbar ausgedr&amp;#252;ckt werden. Ein Beispiel f&amp;#252;r 
+      einen n:m-Beziehungstyp ist IST-MITARBEITER-AN zwischen Projekten und 
+      Mitarbeitern. Ein Mitarbeiter kann an mehreren Projekten mitarbeiten, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      an einem Projekt arbeiten meist mehrere Mitarbeiter mit. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>91</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind schwache Entity- und Beziehungstypen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Es kommt vor, dass eine Entity nicht durch ihre eigenen Attribute allein 
+      identifi-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ziert  werden  kann,  sondern  dass  die  eindeutige  Identifizierung  
+      die  Ausnutzung 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      einer Beziehung erfordert. Ein Beispiel: &amp;#220;ber die Kinder der 
+      Angestellten eines 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Unternehmens  sollen  die  Attribute  NAME  und  ALTER  abgespeichert  
+      werden. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Kinder sind eigene Entities, zur Identifizierung ist jedoch die 
+      Personalnum-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      mer des Vaters notwendig.  Mit anderen  Worten: die Identifizierung  ist 
+       m&amp;#246;glich 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#252;ber den Beziehungstyp VATER-VON, der den Entity-Typ ANGESTELLTE mit 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      dem Entity-Typ KIND verbindet.  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Entity-Typen,  die  -  wie  der  Typ  KIND  -  nur  in  Beziehung  mit  
+      anderen  Entity-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Typen identifizierbar sind, nennt man schwache Entity-Typen. 
+      Beziehungstypen, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      an denen ein schwacher Entity-Typ teilnimmt, hei&amp;#223;en schwache 
+      Beziehungstypen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>81</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreiben Sie, was Spezialisierung im ER Modell bedeutet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Entity-Mengen enthalten h&amp;#228;ufig Teilmengen, die aus Anwendungssicht von 
+      eige-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      nem Interesse sind. Beispielsweise wollen wir unter den Mitarbeitern 
+      einer Firma 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      zwischen  Angestellten  und  freien  Mitarbeitern  unterscheiden.  Freie 
+       Mitarbeiter 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      und Angestellte sind in diesem Falle Spezialisierungen des Typs 
+      Mitarbeiter.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>82</card_id>
+		<proj_id>2</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreiben Sie, was im ER Modell Generalisierung bedeutet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Falls 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      wir den Datenbankentwurf  mit den Entity-Typen Angestellter und  Freier 
+      Mitar-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      beiter begonnen h&amp;#228;tten, so w&amp;#252;rden wir umgekehrt die beiden Typen zum Typ 
+      Mit-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      arbeiter generalisieren, um in bestimmten Anwendungen nicht immer die 
+      Fallun-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      terscheidung machen zu m&amp;#252;ssen. Offensichtlich gilt: Angestellte ebenso 
+      wie Freie 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mitarbeiter  sind  Mitarbeiter,  wir  sagen  deshalb:  ANGESTELLTER  
+      is-a 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      MITARBEITER bzw. FREIER MITARBEITER is-a MITARBEITER (Bild 2.9). 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>83</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was versteht man unter einer Relation (mathematisch)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Sind D1, D2, ..., Dn
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       Mengen von Werten, so ist 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      R Element von D1 X D2 X ... X Dn eine n-stellige Relation &amp;#252;ber den 
+      Mengen (domains) und n ist der Grad (degree) der Relation. Hier ist &amp;quot;X&amp;quot; 
+      das Kreuzprodukt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>84</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was entspricht einem Entity in einer Relation?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Tupel einer Relation beschreibt offensichtlich ein Objekt unseres 
+      Interesses, ein Entity, &amp;#252;ber die  Kombination seiner  Werte. Ein solches 
+      Tupel  ist  beispielsweise Name, Beruf, Wohnort, Geburtsjahr des 
+      Angestellten Walter. Die Relation 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      entspricht dann der Menge aller Angestellten 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>85</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was entspricht einem Entitytyp in einer Relation?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#196;hnlich wie bei der Beschreibung der Struktur von Entities &amp;#252;ber 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Entity-Typen beschreiben wir die Eigenschaften einer Relation (gleichartige 
+      Menge von Tupeln!) durch das Relationenschema.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Relationenschema R(A1 , ..., An ) spezifiziert eine Relation mit 
+      Namen R und mit  den  paarweise  verschiedenen  Attributen A1 ,  ...,  
+      An (mit  den  Attributnamen A1 , ..., An). Jedem Attribut Ai  ist ein 
+      Wertebereich dom(Ai)  zugeordnet.  Die Wertmengen verschiedener 
+      Attribute k&amp;#246;nnen nat&amp;#252;rlich identisch sein. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die zu R(A 1 , ..., A n ) geh&amp;#246;rigen Relationen sind also s&amp;#228;mtlich 
+      Relationen des Typs  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      R Element von dom(A 1 ) X dom(A 2 ) X...X dom(A n ). 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In einer Datenbank existiert zu jedem Zeitpunkt genau eine Relation R 
+      zum Rela-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      tionenschema  R(A 1 , ..., A n ),  n&amp;#228;mlich  diejenige  mit  den  gerade  
+      g&amp;#252;ltigen  Werten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      (entsprechend den zu diesem Zeitpunkt existierenden Entities). Man sagt 
+      auch R 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      sei eine Auspr&amp;#228;gung von R(A 1 , ..., A n ). 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>86</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Eigenschaft fordert man vonAttributen eines Entity(-typs)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Jedes Attribut  einer Relation muss &lt;b&gt;elementar&lt;/b&gt; sein, d. h. der 
+      Wert eines Attributes 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ist unteilbar, er setzt sich nicht aus mehreren anderen Werten zusammen. 
+      Zusam-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      mengesetzte oder mehrwertige Werte sind nicht erlaubt. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>88</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie nennt man ein ER Schema in welchem alle Attribute elementar sind?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Relation bei der jedes Attribut elementar ist, ist in der ersten 
+      Normal-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      form (1NF). S&amp;#228;mtliche theoretischen Arbeiten &amp;#252;ber relationale 
+      Datenbanken 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      gehen von Relationen in 1. Normalform aus.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>92</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein (Relationen-)schema?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Gesamtheit der Relationenschemata einer Datenbank hei&amp;#223;t Schema der 
+      (relationalen)  Datenbank.  Zum  Schema  der  Datenbank  geh&amp;#246;rt  dar&amp;#252;ber 
+       hinaus  die Menge der Integrit&amp;#228;tsbedingungen, die Aussagen &amp;#252;ber die 
+      Korrektheit von Werten in der Datenbank machen. Auf diesen Aspekt gehen 
+      wir sp&amp;#228;ter ein. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>93</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was zeichnet einen Schl&amp;#252;ssel unter allen Kombinationen von Attributen 
+      aus?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1. Eindeutige Identifizierbarkeit eines Tupels
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2. Minimalit&amp;#228;t unter allen Mengen von Attributen, die 1. erf&amp;#252;llen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Genauer:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da eine Relation eine Menge ist, sind die Tupel unterscheidbar. Es gibt 
+      also f&amp;#252;r jede Relation R eine Menge von Attributen &amp;#8211; im Extremfall 
+      alle Attribute von R, deren Werte f&amp;#252;r die Tupel identifizierend sind. 
+      Solche Attributmengen nennen wir Schl&amp;#252;ssel, wenn  sie minimal  sind. 
+      D.h.: Ist X ein Schl&amp;#252;ssel  von  R, so  ist keine Teilmenge von X 
+      ebenfalls Schl&amp;#252;ssel von R. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beim Schemaentwurf spezifiziert man mit dem Relationenschema, welche 
+      Attributmenge einen Schl&amp;#252;ssel bilden soll. Es d&amp;#252;rfen dann beim Arbeiten 
+      mit der Datenbank nur solche Tupel eingef&amp;#252;gt werden, die die 
+      Schl&amp;#252;sseleigenschaft der gew&amp;#228;hlten Attributmenge nicht verletzen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>94</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Prim&amp;#228;rschl&amp;#252;ssel?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Relation kann mehrere Schl&amp;#252;ssel haben. Beispielsweise kann ein 
+      Angestell
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ter  identifiziert  werden  &amp;#252;ber  seine  Angestelltennummer,  aber  auch 
+       &amp;#252;ber  Name, Geburtstag und Adresse. In diesem Falle wird meist ein 
+      Schl&amp;#252;ssel ausgezeichnet und  zum  Prim&amp;#228;rschl&amp;#252;ssel  erkl&amp;#228;rt.  Die  
+      anderen  Schl&amp;#252;ssel  werden  oft  Schl&amp;#252;sselkandidaten oder 
+      candidate keys genannt; sie spielen bei einigen Entwurfsverfahren f&amp;#252;r 
+      relationale Datenbanken eine Rolle.  
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>95</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie ist eine Relationenalgebra (Beschreibung)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Spezifikation  von  gew&amp;#252;nschten  Relationen  durch  Angabe  einer  Folge 
+       von Operationen, mit der die Relationen aufgebaut werden sollen. Der 
+      Benutzer wendet spezielle Operationen auf Relationen an, um seine 
+      gew&amp;#252;nschte Relation zu konstruieren. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>96</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was versteht man unter einem Relationenkalk&amp;#252;l?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Spezifikation von gew&amp;#252;nschten Relationen in deskriptiver Weise, d. h. 
+      ohne 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Angabe,  welche  Operationen  zum  Aufbau  der  Relation  verwendet  
+      werden sollen.  Mit  Hilfe  des  Pr&amp;#228;dikatenkalk&amp;#252;ls  wird  die  Menge  
+      der  gew&amp;#252;nschten Tupel beschrieben: es wird ein Pr&amp;#228;dikat (eine 
+      Bedingung) angegeben, das die Tupel erf&amp;#252;llen m&amp;#252;ssen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>97</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Operationen muss eine Relationenalgebra unterst&amp;#252;tzen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Vereinigung
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Differenz
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Kartesisches Produkt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Projektion
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Selektion
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Umbenennung
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Verbund/Join
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - natural Join
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>98</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      {(Angestellter.Wohnort) | Angestellter.Beruf = &amp;quot;Programmierer&amp;quot;}
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>99</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Geben sie eine Relationenkalk&amp;#252;l zu folgender Frage an:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FINDE DEN (ODER DIE) PROGRAMMIERER 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        MIT DEM H&amp;#214;CHSTEN GEHALT.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+       RANGE ANGEST X 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        {(ANGEST.NAME) | ANGEST.BERUF = &amp;quot;PROGRAMMIERER&amp;quot; AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+              &amp;#172; EXISTS X ( X.BERUF = &amp;quot;PROGRAMMIERER&amp;quot; AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+                X.GEHALT &amp;gt; ANGEST.GEHALT)} 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>100</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Kalk&amp;#252;l von
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FINDE DIE NUMMERN ALLER ANGESTELLTEN DER 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        ABTEILUNG 6, DIE IN DORTMUND WOHNEN 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      {(ANGEST.ANGNR) |  ANGEST.ABTNR = 6 &amp;#61657;&amp;#61472;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#61472; &amp;#61472; ANGEST.WOHNORT = &amp;quot;DORTMUND&amp;quot;} 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>101</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie ist relationale Vollst&amp;#228;ndigkeit definiert?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Relationenkalk&amp;#252;l wird als Ma&amp;#223;stab f&amp;#252;r die Beurteilung der 
+      M&amp;#228;chtigkeit relationaler Abfragesprachen angesehen. Eine Sprache, 
+      die nicht mindestens die Ausdruckskraft  des  Relationenkalk&amp;#252;ls  
+      besitzt,  wird  als  unvollst&amp;#228;ndig  erachtet.  Man bezeichnet eine  
+      Abfragesprache als  relational  vollst&amp;#228;ndig (complete), wenn  mit ihr 
+      alles ausgedr&amp;#252;ckt werden kann, was im Relationenkalk&amp;#252;l ausgedr&amp;#252;ckt 
+      werden kann. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>102</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Schreibe eine SQL Anweisung f&amp;#252;r:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       FINDE DIE BERUFE DER ANGESTELLTEN IN ABTEILUNG 3.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT BERUF 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        FROM ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        WHERE ABTNR = 3
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>103</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SQL:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FINDE ALLE WOHNORTE DER ANGESTELLTEN. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT DISTINCT WOHNORT 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANGEST 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>104</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SQL:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FINDE  F&amp;#220;R  JEDES  PROJEKT  DIE  PROJEKTNUMMER  UND  DEN 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      NAMEN DES PROJEKTLEITERS 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+        SELECT PNR, NAME 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        FROM PROJEKT, ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        WHERE PROJEKT.P_LEITER = ANGEST.ANGNR 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>105</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FINDE  DIE  NAMEN  ALLER  ANGESTELLTEN,  DIE  AM  PROJEKT 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      MIT DER NUMMER 17 MITARBEITEN 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Als SQL-Abfrage lautet sie: 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT ANGEST.NAME 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANG_PRO, ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE  ANG_PRO.PNR = 17 AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ANG_PRO.ANGNR = ANGEST.ANGNR
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>106</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB  DIE  NAMEN  ALLER  PERSONEN  AUS,  DIE  MEHRERE 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      PROJEKTE LEITEN. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ... kann in SQL folgenderma&amp;#223;en dargestellt werden: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT DISTINCT ANGEST.NAME 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANGEST, PROJEKT AS P1, PROJEKT AS P2 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE  ANGEST.ANGNR = P1.P_LEITER AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        ANGEST.ANGNR = P2.P_LEITER AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        P1.PNR != P2.PNR8 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>107</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Definieren Sie die &amp;quot;outer Joins&amp;quot;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      LEFT OUTER JOIN: Es bleiben die nicht der JOIN-Bedingung ent-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      sprechenden Zeilen der Tabelle erhalten, die links (vom Schl&amp;#252;sselbe-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      griff OUTER JOIN) steht. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      RIGHT OUTER JOIN: Es bleiben die nicht der JOIN-Bedingung ent-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      sprechenden Zeilen der Tabelle erhalten, die rechts steht. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FULL OUTER JOIN: Es bleiben die nicht der JOIN-Bedingung ent-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      sprechenden Zeilen der Tabellen erhalten, die links und rechts stehen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>108</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Gib die Query zu
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB  DIE  NAMEN  ALLER  PERSONEN  AUS,  DIE  MEHRERE 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      PROJEKTE LEITEN. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      mittels einer Subquery an.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT DISTINCT NAME 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        FROM ANGEST, PROJEKT AS P1 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        WHERE  ANGNR = P1.P_LEITER AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+          EXISTS ( SELECT * 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+            FROM PROJEKT AS P2 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+            WHERE  ANGNR = P2.P_LEITER AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+              P1.PNR != P2.PNR) 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>109</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Konkretisieren Sie den Operator DISINCT an einem Beispiel.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT DISTINCT WOHNORT FROM ANGESTELLTER;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>110</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Konkretisieren Sie den Operator IN in Verbindung mit einer Subquery.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT NAME FROM ANGESTELLTER WHERE ANG_ID IN (SELECT PROJ_LEITUNG FROM 
+      PROJECT)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Finde alle Angestellten, die ein Projekt leiten.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>111</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB DIE SUMME DER GEH&amp;#196;LTER ALLER ANGESTELLTEN AN. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT SUM(GEHALT) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANGEST 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>112</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB DIE ZAHL ALLER ZEILEN DER TABELLE ANGEST AN. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB DIE ZAHL ALLER ZEILEN DER TABELLE ANGEST AN. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>113</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Gib die Zahl aller Projektleiter an.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT COUNT(DISTINCT P_LEITER) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM PROJEKT 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>114</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Gib die Zahl der geleiteten Projekte an.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT COUNT(P_LEITER) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM PROJEKT 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>115</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT EVERY(SPALTE) FROM WAHR1 gibt was zur&amp;#252;ck?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      false
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>116</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT EVERY(SPALTE) FROM WAHR2 gibt was zur&amp;#252;ck?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      true
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>117</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT ANY(SPALTE) FROM WAHR1 gibt was zur&amp;#252;ck?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      true
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>118</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT ANY(SPALTE) FROM WAHR3 gibt was zur&amp;#252;ck?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      false
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>119</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Geben Sie f&amp;#252;r die folgende Abfrage eine SQL-Abfrage mit der MAX-Funktion 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      und eine SQL-Abfrage ohne Aggregierungsfunktion an: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        GIB DAS H&amp;#214;CHSTE GEHALT EINES PROGRAMMIERERS AN. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit MAX-Funktion: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT MAX(GEHALT) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE BERUF = &amp;quot;PROGRAMMIERER&amp;quot;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ohne Aggregierungsfunktion: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT DISTINCT GEHALT 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE  BERUF = &amp;quot;PROGRAMMIERER&amp;quot; AND 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+        GEHALT &amp;gt;= ALL ( SELECT GEHALT 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+          FROM ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+          WHERE BERUF = &amp;quot;PROGRAMMIERER&amp;quot;) 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>120</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB  F&amp;#220;R  JEDE  ABTEILUNG  DEREN  NUMMER,  DIE  SUMME 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ALLER  GEH&amp;#196;LTER  UND  DAS  DURCHSCHNITTSGEHALT  DER 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ANGESTELLTEN DIESER ABTEILUNG AN. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Verwende GROUP  BY!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT ABTNR, SUM(GEHALT), AVG(GEHALT) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GROUP BY ABTNR 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>121</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB  F&amp;#220;R  JEDE  ABTEILUNG, DESSEN GEHALTSSUMME 6000 &amp;#220;BERSCHREITET DEREN  
+      NUMMER,  DIE  SUMME 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ALLER  GEH&amp;#196;LTER  UND  DAS  DURCHSCHNITTSGEHALT  DER 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ANGESTELLTEN DIESER ABTEILUNG AN.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT ABTNR, SUM(GEHALT), AVG(GEHALT) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GROUP BY ABTNR 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      HAVING SUM(GEHALT) &amp;gt; 6000; 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>122</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GIB  JEWEILS  DIE  SUMME  DER  ARBEITSZEIT  ALLER 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      MITARBEITER (Z.B.: 1150 PROZENT) F&amp;#220;R DIE PROJEKTE 10 BIS 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      19 AN, SOWEIT MEHR ALS ZEHN PERSONEN DARAN BETEILIGT 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SIND. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Tipp: GROUP BY und HAVING nutzen!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SELECT SUM(PROZ_ARB) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FROM ANG_PRO 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE PNR &amp;gt;= 10 AND PNR &amp;lt; 20 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      GROUP BY PNR 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      HAVING COUNT(*) &amp;gt; 10 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>123</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was bedeutet Konsistenz einer Datenbank?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Unter der Konsistenz einer Datenbank verstehen wir die Korrektheit und 
+      die Vollst&amp;#228;ndigkeit der darin enthaltenen Informationen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>124</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Geben Sie ein paar Beispiele an, wie Inkonsistenzen auftreten k&amp;#246;nnen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      a)  Referenz ins Leere (jemand l&amp;#246;scht ein Tupel, ohne dass die darauf 
+      verweisenden Referenzen korrigiert werden)  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      b)  Eine  Buchung  X  ist  vom  Konto  A  abgebucht,  aber  nicht  dem  
+      Zielkonto  B gutgeschrieben 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      c)  Ein Summenfeld gibt nicht die korrekte Summe der Einzelelemente 
+      (z.B. Gehaltssumme) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      d)  Ein negatives Alter 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      e)  Bei  Mehrfachspeicherung  derselben  Daten  in  verschiedenen  
+      S&amp;#228;tzen:  &amp;#196;nderung ist an einer Stelle erfolgt, nicht an der 
+      anderen 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>125</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Geben Sie Ursachen f&amp;#252;r Inkonsistenzen an.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.  Falsche Eingabedaten 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.  Fehler  im  Anwendungspramm
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.  Falsche Behandlung paralleler Anwendungsabl&amp;#228;ufe  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.  Abst&amp;#252;rze des Betriebssystems oder des DBMS 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.  Ausf&amp;#228;lle von Massenspeichern 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      6.  Falsche Schemadefinitionen (z.B. ein den Daten  nicht angemessener 
+      Datentyp) 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>126</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie verhindert ein DBS Inkonsistenz durch Parallelit&amp;#228;t der Zugriffe?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Transaktionsmanagement:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dies bedeutet, dass jedes Anwendungsprogramm immer 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      eine konsistente Sicht auf die Datenbank erh&amp;#228;lt, dass also die von ihm 
+      gelese-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      nen Daten konsistent und aktuell sind. (Transaktionsmanagement)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>127</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie verhindert ein DBS Inkonsistenzen durch Systemfehler (Abst&amp;#252;rze, 
+      Dateifehler, etc. )?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Recovery:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      fehlerhafte Daten k&amp;#246;nnen wiederhergestellt werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      (Durch Aufzeichnung eines Transaktionsprotokolls)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>128</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine Transaktion?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Transaktion ist eine Folge von Befehlen, die entweder vollst&amp;#228;ndig 
+      und 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      korrekt ausgef&amp;#252;hrt wird oder &amp;#252;berhaupt nicht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>129</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was bedeuten die Eigenschaften A C I D f&amp;#252;r eine Transaktion?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Unteilbarkeit (atomicity)  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Transaktion ist eine unteilbare Verarbeitungseinheit; sie wird 
+      entwe-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      der ganz oder &amp;#252;berhaupt nicht ausgef&amp;#252;hrt.  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Konsistenz (consistency) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine korrekte Ausf&amp;#252;hrung der Transaktion f&amp;#252;hrt die DB von einem konsis-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      tenten zu einem konsistenten Zustand.  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Isolation (isolation) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Transaktion muss so ablaufen, als sei sie die einzige im System. 
+      Zwi-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      schenzust&amp;#228;nde (die ja inkonsistent sein k&amp;#246;nnen) d&amp;#252;rfen f&amp;#252;r andere Trans-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      aktionen nicht sichtbar sein. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dauerhaftigkeit (durability) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ergebnisse  einer  erfolgreich  beendeten  Transaktion  sind  dauerhaft, 
+       d.h. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#252;berleben jeden nachfolgenden Fehler.  
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>130</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche SQL Befehle starten eine Transaktion?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+       -Jedes  SQL-Schema  Statement  ALTER,  CREATE,  DROP  sowie GRANT  UND REVOKE 
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Die SQL-Daten Statements  OPEN, CLOSE, FETCH, INSERT, UPDATE, DELETE, FREE 
+      LOCATOR, HOLD LOCATOR  
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Eines  der  neuen  SQL:1999  Transaktions-Statements:  START TRANSACTION, 
+      COMMIT AND CHAIN, ROLLBACK AND CHAIN 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -  Das SQL-Kontroll Statement RETURN, falls es die Abarbeitung einer Sub-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      query bewirkt und keine Transaktion aktiv ist. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>131</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreiben Sie, was bei folgendem Verlauf geschieht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      START TRANSACTION 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      INSERT INTO ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      VALUES ( 200, &amp;#180;MEIERLING&amp;#180;, &amp;#180;HAGEN&amp;#180;, &amp;#180;INGENIEUR&amp;#180;, 5000 , 3 ) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      INSERT INTO ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      VALUES ( 201, &amp;#180;M&amp;#220;LLER&amp;#180;, &amp;#180;HAGEN&amp;#180;, &amp;#180;INGENIEUR&amp;#180;, 5000 , 3 ) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      INSERT INTO ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      VALUES ( 202, &amp;#180;MAIEN&amp;#180;, &amp;#180;HAGEN&amp;#180;, &amp;#180;INGENIEUR&amp;#180;, 5000 , 3 ) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      COMMIT 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+         
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      START TRANSACTION 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UPDATE ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SET GEHALT = GEHALT + 500 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE ANGNR = 200 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      COMMIT 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      START TRANSACTION 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UPDATE ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SET GEHALT = GEHALT  + 500 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE ANGNR = 201 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ROLLBACK 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      START TRANSACTION 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UPDATE ANGEST 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      SET GEHALT = GEHALT  + 500 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE ANGNR = 202 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ... Fehler, Stromausfall 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+       
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die DB wird wieder hochgefahren. Welche Geh&amp;#228;lter haben die Angestellten 
+      mit den  Angestelltennummern  200,  201  und  202?  Sind  alle 
+      Transaktionen  verloren gegangen? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Angestellter 200 hat am Ende ein Gehalt von 5500 &amp;#8364;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Angestellter 201 hat am Ende immer noch ein Gehalt von 5000 &amp;#8364;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Angestellter 202 hat am Ende immer noch ein Gehalt von 5000 &amp;#8364; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Allerdings wird die Applikation im Falle des Stromausfalls auf das nicht 
+      durchgef&amp;#252;hrte  COMMIT  aufmerksam  und  kann  z.B.  sp&amp;#228;ter  versuchen,  
+      die  Transaktion doch noch durchzuf&amp;#252;hren.  Aufgrund  der  
+      Dauerhaftigkeitseigenschaft  von  Transaktionen  (Durability,  das &amp;#8222;D&amp;#8220; 
+      von ACID) sind die Ergebnisse aller abgeschlossenen Transaktionen bestehen 
+      geblieben. Die letzte Transaktion wurde nicht mit COMMIT abgeschlossen, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      befindet sich in einem Zwischenzustand, darf daher nicht sichtbar sein 
+      und muss von der Applikation wiederholt werden.  
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>132</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wogegen (im ACID) verstossen folgende Transaktionen?
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      START TRANSACTION
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      DELETE FROM ANGEST
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE ANGNR=117
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      COMMIT
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      DELETE FROM PROJEKT
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE P_LEITER=117
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      COMMIT
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      DELETE FROM ANG_PRO
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      WHERE ANGNR=117
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      COMMIT
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      K&amp;#246;nnte man die Reihenfolge tauschen, so dass die konsistenz erf&amp;#252;llt 
+      bleibt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Consistency ist nicht erf&amp;#252;llt, da z.B. nach der ersten Trans. in 
+      Tabelle Projekt eine LeiterID vergeben ist, die nicht mehr existiert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Man kann die 3. Transaktion zuerst ausf&amp;#252;hren, dann die 2.. Diese beiden 
+      speichern die Fremdschl&amp;#252;ssel.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>133</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Cursor (in Bezug zu Datenbanken)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Einen Cursor kann man sich vorstellen als einen Zeiger, mit dem die Er-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      gebnisrelation einer Abfrage Tupel f&amp;#252;r Tupel durchlaufen werden kann.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+</flashcards>

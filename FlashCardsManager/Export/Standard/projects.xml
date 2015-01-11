@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+	<project>
+		<proj_id>1</proj_id>
+		<proj_title>1801 - KE 1</proj_title>
+		<no_of_stacks>3</no_of_stacks>
+	</project>
+	<project>
+		<proj_id>2</proj_id>
+		<proj_title>Datenbanken KE1</proj_title>
+		<no_of_stacks>4</no_of_stacks>
+	</project>
+	<project>
+		<proj_id>3</proj_id>
+		<proj_title>Datenbanken KE2</proj_title>
+		<no_of_stacks>4</no_of_stacks>
+	</project>
+</projects>

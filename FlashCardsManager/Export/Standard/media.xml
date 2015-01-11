@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medias>
+	<media>
+		<media_id>1</media_id>
+		<card_id>115</card_id>
+		<path_to_media>pic-3-115-q.png</path_to_media>
+		<pictype>q</pictype>
+	</media>
+	<media>
+		<media_id>2</media_id>
+		<card_id>116</card_id>
+		<path_to_media>pic-3-116-q.png</path_to_media>
+		<pictype>q</pictype>
+	</media>
+	<media>
+		<media_id>3</media_id>
+		<card_id>117</card_id>
+		<path_to_media>pic-3-117-q.png</path_to_media>
+		<pictype>q</pictype>
+	</media>
+	<media>
+		<media_id>4</media_id>
+		<card_id>118</card_id>
+		<path_to_media>pic-3-118-q.png</path_to_media>
+		<pictype>q</pictype>
+	</media>
+</medias>
