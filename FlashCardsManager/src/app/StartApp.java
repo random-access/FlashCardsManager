@@ -5,11 +5,13 @@ import exc.CustomInfoHandling;
 import gui.IntroPanel;
 import gui.MainWindow;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import javax.swing.*;
+import javax.swing.UIManager;
 import javax.xml.stream.XMLStreamException;
 
 import utils.FileUtils;
@@ -19,8 +21,8 @@ import xml.XMLSettingsExchanger;
 import core.ProjectsController;
 
 public class StartApp {
-	
-	public static final boolean DEBUG = true;
+
+	public static final boolean DEBUG = false;
 
 	private static final String APP_FOLDER = FileUtils.appDirectory("Lernkarten");
 	private static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
@@ -50,7 +52,7 @@ public class StartApp {
 
 		} catch (SQLException exc) {
 			if (exc.getSQLState().equals("XJ040")) {
-				CustomInfoHandling.showSecondInstanceInfo(null,exc);
+				CustomInfoHandling.showSecondInstanceInfo(null, exc);
 			} else {
 				CustomErrorHandling.showDatabaseError(null, exc);
 			}
@@ -86,13 +88,13 @@ public class StartApp {
 	private static void initializeSettings() throws XMLStreamException, NumberFormatException, IOException {
 		newSettings = XMLSettingsExchanger.readConfig(defaultSettings);
 		if (new File(DEFAULT_SETTINGS_PATH).isFile()) {
-			if (DEBUG) System.out.println("Settings already in user folder");
+			if (DEBUG)
+				System.out.println("Settings already in user folder");
 			// settings already in user folder -> read from settings
 			currentSettings = XMLSettingsExchanger.readConfig(DEFAULT_SETTINGS_PATH);
-			
+
 			// database v1 still in settings
-			if (currentSettings.getDatabaseVersion() == 1 && 
-					newSettings.getDatabaseVersion() == 2) { 
+			if (currentSettings.getDatabaseVersion() == 1 && newSettings.getDatabaseVersion() == 2) {
 				// database v2 doesn't exist yet
 				if (!(new File(DEFAULT_DATABASE_PATH).exists())) {
 					CustomInfoHandling.showOldDatabaseInfo();
@@ -101,25 +103,29 @@ public class StartApp {
 					currentSettings.setDatabaseVersion(2);
 					currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
 					XMLSettingsExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
-					if (DEBUG) System.out.println("Updated database version.");
+					if (DEBUG)
+						System.out.println("Updated database version.");
 				}
 			}
 			if (!currentSettings.getPathToDatabase().endsWith("2")
 					|| !(new File(currentSettings.getPathToDatabase()).isDirectory())) {
-				if (DEBUG) System.out.println("Database not where it was expected or not there");
+				if (DEBUG)
+					System.out.println("Database not where it was expected or not there");
 				// database deleted -> create new DB on default path
 				currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
 				XMLSettingsExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
 			}
 
 			if (StartApp.updatedVersion()) {
-				if (DEBUG) System.out.println("was updated");
+				if (DEBUG)
+					System.out.println("was updated");
 				XMLSettingsExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);
 			}
 
 		} else {
 			// first install -> copy default settings.xml into user folder
-			if (DEBUG) System.out.println("XML Config not in user folder -> copy into user folder");
+			if (DEBUG)
+				System.out.println("XML Config not in user folder -> copy into user folder");
 			currentSettings = newSettings;
 			currentSettings.setPathToDatabase(DEFAULT_DATABASE_PATH);
 			XMLSettingsExchanger.writeConfig(DEFAULT_SETTINGS_PATH, currentSettings);

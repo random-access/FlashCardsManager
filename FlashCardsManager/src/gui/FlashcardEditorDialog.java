@@ -20,7 +20,7 @@ import exc.CustomErrorHandling;
 import gui.helpers.MyButton;
 
 @SuppressWarnings("serial")
-public class AddFlashcardDialog extends JDialog {
+public class FlashcardEditorDialog extends JDialog {
 
 	private static BufferedImage imgBold, imgItalic, imgUnderlined, imgLeftAlign, imgCenterAlign, imgRightAlign, imgList, imgNum,
 			imgSwitch, imgDiscard, imgSave, imgSaveAndNext, imgAddPic, imgEditPic, imgRemovePic, imgLargerCard, imgSmallerCard;
@@ -56,7 +56,7 @@ public class AddFlashcardDialog extends JDialog {
 	private LearningProject project;
 	private ProjectPanel projPnl;
 	// private String pathToQuestionPic, pathToAnswerPic;
-	private EditFlashcardsDialog efcDialog;
+	private FlashcardOverviewDialog efcDialog;
 
 	// only for existing flashcards
 	private FlashCard existingCard;
@@ -79,7 +79,7 @@ public class AddFlashcardDialog extends JDialog {
 	private Action rightAction = new StyledEditorKit.AlignmentAction("Right Align", StyleConstants.ALIGN_RIGHT);
 	private Action centerAction = new StyledEditorKit.AlignmentAction("Center Align", StyleConstants.ALIGN_CENTER);
 
-	public AddFlashcardDialog(EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card)
+	public FlashcardEditorDialog(FlashcardOverviewDialog efcDialog, LearningProject project, ProjectPanel projPnl, FlashCard card)
 			throws IOException, SQLException {
 		this(null, project, projPnl);
 		this.efcDialog = efcDialog;
@@ -96,7 +96,7 @@ public class AddFlashcardDialog extends JDialog {
 	}
 
 	// constructor for adding a new flashcard
-	public AddFlashcardDialog(Point lastLocation, LearningProject project, ProjectPanel projPnl) throws IOException {
+	public FlashcardEditorDialog(Point lastLocation, LearningProject project, ProjectPanel projPnl) throws IOException {
 		super(projPnl.getOwner(), true);
 		this.owner = projPnl.getOwner();
 		this.project = project;
@@ -122,7 +122,7 @@ public class AddFlashcardDialog extends JDialog {
 		}
 	}
 
-	public AddFlashcardDialog(Point lastLocation, EditFlashcardsDialog efcDialog, LearningProject project, ProjectPanel projPnl)
+	public FlashcardEditorDialog(Point lastLocation, FlashcardOverviewDialog efcDialog, LearningProject project, ProjectPanel projPnl)
 			throws IOException {
 		this(lastLocation, project, projPnl);
 		this.efcDialog = efcDialog;
@@ -309,7 +309,7 @@ public class AddFlashcardDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AddFlashcardDialog.this.dispose();
+				FlashcardEditorDialog.this.dispose();
 			}
 		});
 
@@ -330,13 +330,13 @@ public class AddFlashcardDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Point currentLocation = AddFlashcardDialog.this.getLocationOnScreen();
+				Point currentLocation = FlashcardEditorDialog.this.getLocationOnScreen();
 				saveNewCardToDatabase();
 				try {
-					AddFlashcardDialog d = new AddFlashcardDialog(currentLocation, efcDialog, project, projPnl);
+					FlashcardEditorDialog d = new FlashcardEditorDialog(currentLocation, efcDialog, project, projPnl);
 					d.setVisible(true);
 				} catch (IOException ioe) {
-					CustomErrorHandling.showInternalError(AddFlashcardDialog.this, ioe);
+					CustomErrorHandling.showInternalError(FlashcardEditorDialog.this, ioe);
 				}
 
 			}
@@ -369,7 +369,7 @@ public class AddFlashcardDialog extends JDialog {
 					pnlA.removePicture();
 				}
 				setPicButtons();
-				AddFlashcardDialog.this.revalidate();
+				FlashcardEditorDialog.this.revalidate();
 			}
 		});
 	}
@@ -384,13 +384,13 @@ public class AddFlashcardDialog extends JDialog {
 			existingCard.setAnswerWidth(pnlA.getCustomWidth());
 			existingCard.update();
 			if (efcDialog != null) {
-				efcDialog.updateCardPanels();
+				efcDialog.updateCardsView();
 			}
-			AddFlashcardDialog.this.dispose();
+			FlashcardEditorDialog.this.dispose();
 		} catch (SQLException sqle) {
-			CustomErrorHandling.showDatabaseError(AddFlashcardDialog.this, sqle);
+			CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, sqle);
 		} catch (IOException ioe) {
-			CustomErrorHandling.showInternalError(AddFlashcardDialog.this, ioe);
+			CustomErrorHandling.showInternalError(FlashcardEditorDialog.this, ioe);
 		}	
 	}
 
@@ -401,18 +401,18 @@ public class AddFlashcardDialog extends JDialog {
 			newCard.store();
 			owner.updateProjectStatus(project);
 			if (efcDialog != null) {
-				efcDialog.updateCardPanels();
+				efcDialog.updateCardsView();
 			}
-			AddFlashcardDialog.this.dispose();
+			FlashcardEditorDialog.this.dispose();
 		} catch (SQLException sqle) {
-			CustomErrorHandling.showDatabaseError(AddFlashcardDialog.this, sqle);
+			CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, sqle);
 		} catch (IOException ioe) {
-			CustomErrorHandling.showInternalError(AddFlashcardDialog.this, ioe);
+			CustomErrorHandling.showInternalError(FlashcardEditorDialog.this, ioe);
 		}
 	}
 
 	private void addPicFromFile() {
-		int returnVal = projPnl.getFileChooser().showOpenDialog(AddFlashcardDialog.this);
+		int returnVal = projPnl.getFileChooser().showOpenDialog(FlashcardEditorDialog.this);
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			try {
 				if (centerPanel.isAncestorOf(pnlQ)) {
@@ -421,9 +421,9 @@ public class AddFlashcardDialog extends JDialog {
 					pnlA.addPicture(projPnl.getFileChooser().getSelectedFile().getAbsolutePath());
 				}
 				setPicButtons();
-				AddFlashcardDialog.this.revalidate();
+				FlashcardEditorDialog.this.revalidate();
 			} catch (IOException ioe) {
-				CustomErrorHandling.showDatabaseError(AddFlashcardDialog.this, ioe);
+				CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, ioe);
 			}
 		}
 	}

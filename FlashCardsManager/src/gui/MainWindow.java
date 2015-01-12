@@ -284,8 +284,12 @@ public class MainWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
 			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this,
 					ctl);
+=======
+			PrepareExportDialog d = new PrepareExportDialog(MainWindow.this, ctl);
+>>>>>>> branch 'master' of https://github.com/random-access/FlashCardsManager.git
 			d.setVisible(true);
 		}
 	}

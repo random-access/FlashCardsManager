@@ -1,5 +1,6 @@
 package gui;
 
+import exc.CustomErrorHandling;
 import gui.helpers.MyTextPane;
 
 import java.awt.*;
@@ -37,7 +38,7 @@ public class PicAndTextPanel extends JPanel {
 	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.75);
 	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.85);
 
-	PicAndTextPanel(String pathToPic, String txt, PicType type, boolean editable, int customWidth) throws IOException {
+	public PicAndTextPanel(String pathToPic, String txt, PicType type, boolean editable, int customWidth) throws IOException {
 		super(new BorderLayout(10, 10));
 		this.pathToPic = pathToPic;
 		this.txt = txt;
@@ -78,8 +79,7 @@ public class PicAndTextPanel extends JPanel {
 				doc.insertString(0, txt, null);
 				txtPane.setDocument(doc);
 			} catch (BadLocationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				CustomErrorHandling.showInternalError(null, e);
 			}
 		}
 

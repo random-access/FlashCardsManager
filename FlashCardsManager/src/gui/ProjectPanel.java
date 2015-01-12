@@ -135,9 +135,9 @@ public class ProjectPanel extends JPanel {
 		return fileChooser;
 	}
 
-	Status getStatus() {
-		return this.status;
-	}
+//	public Status getStatus() {
+//		return this.status;
+//	}
 
 	private void setStatus(Status s) {
 		switch (s) {
@@ -155,7 +155,7 @@ public class ProjectPanel extends JPanel {
 		}
 	}
 
-	void changeStatus(Status s) {
+	public void changeStatus(Status s) {
 		remove(b);
 		b = Box.createHorizontalBox();
 		b.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -176,21 +176,7 @@ public class ProjectPanel extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						try {
-							IProgressPresenter pres = new IProgressPresenter() { // TODO remove cheat...
-								@Override
-								public void changeProgress(int progress) {
-
-								}
-								@Override
-								public void changeInfo(String text) {
-
-								}
-								@Override
-								public int getProgress() {
-									return 0;
-								}
-							};
-							project.loadFlashcards(pres);
+							project.loadFlashcards(null);
 							project.delete();
 							parentWindow.updateProjectList();
 						} catch (SQLException sqle) {
@@ -301,9 +287,9 @@ public class ProjectPanel extends JPanel {
 
 	private void showAddFlashcardsDialog() {
 		cards = project.getAllCards();
-		AddFlashcardDialog d;
+		FlashcardEditorDialog d;
 		try {
-			d = new AddFlashcardDialog(null, project, ProjectPanel.this);
+			d = new FlashcardEditorDialog(null, project, ProjectPanel.this);
 			d.setVisible(true);
 		} catch (IOException ioe) {
 			CustomErrorHandling.showInternalError(parentWindow, ioe);
@@ -313,13 +299,14 @@ public class ProjectPanel extends JPanel {
 
 	private void showEditFlashcardsDialog() {
 		cards = project.getAllCards();
-		EditFlashcardsDialog d;
+		FlashcardOverviewDialog d;
 		try {
-			d = new EditFlashcardsDialog(ProjectPanel.this, cards, project);
+			d = new FlashcardOverviewDialog(ProjectPanel.this, cards, project);
 			d.setVisible(true);
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(parentWindow, sqle);
 		}
+		
 
 	}
 
@@ -341,9 +328,9 @@ public class ProjectPanel extends JPanel {
 
 	private void prepareLearningSession() {
 		cards = project.getAllCards();
-		ChooseStacksDialog chooseStacks;
+		PrepareLearningSessionDialog chooseStacks;
 		try {
-			chooseStacks = new ChooseStacksDialog(ProjectPanel.this.getOwner(), ProjectPanel.this.cards,
+			chooseStacks = new PrepareLearningSessionDialog(ProjectPanel.this.getOwner(), ProjectPanel.this.cards,
 					ProjectPanel.this.project);
 			chooseStacks.setVisible(true);
 		} catch (SQLException sqle) {

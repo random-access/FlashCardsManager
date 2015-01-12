@@ -81,7 +81,6 @@ public class AddProjectDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// pruefe ob vollstaendige Eingabe
 				try {
 					if (missingInput()) {
 						if (txtTitle.getText().equals("")) {
