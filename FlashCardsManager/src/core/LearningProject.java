@@ -1,6 +1,5 @@
 package core;
 
-import gui.helpers.IProgressPresenter;
 import importExport.XMLLearningProject;
 
 import java.io.IOException;
@@ -11,6 +10,7 @@ import storage.DBExchanger;
 import storage.MediaExchanger;
 import exc.InvalidLengthException;
 import exc.InvalidValueException;
+import gui.helpers.IProgressPresenter;
 
 public class LearningProject {
 
@@ -77,7 +77,7 @@ public class LearningProject {
 	}
 
 	// Adds a flashcard to the project
-	void addCard(FlashCard card) {
+	public void addCard(FlashCard card) {
 		allCards.add(card);
 	}
 

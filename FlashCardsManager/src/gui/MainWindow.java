@@ -1,6 +1,11 @@
 package gui;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.ComponentOrientation;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -11,12 +16,30 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
-import core.*;
+import core.LearningProject;
+import core.ProjectsController;
+import core.Status;
 import exc.CustomErrorHandling;
 import exc.CustomInfoHandling;
-import gui.helpers.*;
+import gui.helpers.ImportTask;
+import gui.helpers.MyMenu;
+import gui.helpers.MyMenuItem;
+import gui.helpers.ProgressDialog;
 
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {
@@ -244,7 +267,7 @@ public class MainWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChooseProjectsDialog d = new ChooseProjectsDialog(MainWindow.this, ctl);
+			PrepareExportDialog d = new PrepareExportDialog(MainWindow.this, ctl);
 			d.setVisible(true);
 		}
 	}

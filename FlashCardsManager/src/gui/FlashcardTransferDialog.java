@@ -1,5 +1,25 @@
 package gui;
 
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 import core.FlashCard;
 import core.LearningProject;
 import core.ProjectsController;
@@ -19,9 +39,8 @@ public class FlashcardTransferDialog extends JDialog {
 	private JComboBox<LearningProject> cmbChooseProject;
 	private JCheckBox chkKeepProgress;
 
-	public FlashcardTransferDialog(ProjectsController ctl, MainWindow owner,
-			FlashcardOverviewDialog editDialog, LearningProject srcProj,
-			ArrayList<FlashCard> cardsToTransfer) {
+	public FlashcardTransferDialog(ProjectsController ctl, MainWindow owner, FlashcardOverviewDialog editDialog,
+			LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
 		super(owner, true);
 		setTitle("Lernkarten verschieben...");
 		this.cardsToTransfer = cardsToTransfer;
@@ -32,8 +51,7 @@ public class FlashcardTransferDialog extends JDialog {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException
-				| IllegalAccessException | UnsupportedLookAndFeelException exc) {
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
 			CustomErrorHandling.showInternalError(null, exc);
 		}
 
@@ -94,12 +112,10 @@ public class FlashcardTransferDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				LearningProject targetProject = (LearningProject) cmbChooseProject
-						.getModel().getSelectedItem();
+				LearningProject targetProject = (LearningProject) cmbChooseProject.getModel().getSelectedItem();
 				try {
 					for (FlashCard f : cardsToTransfer) {
-						f.transferTo(targetProject,
-								chkKeepProgress.isSelected());
+						f.transferTo(targetProject, chkKeepProgress.isSelected());
 					}
 					ctl.fireProjectDataChangedEvent();
 					// editDialog.updateCardsView(srcProj.getAllCards());
