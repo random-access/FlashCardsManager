@@ -44,23 +44,30 @@ import gui.helpers.ProgressDialog;
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {
 
-	private static BufferedImage imgIcon36x36, imgIcon24x24, imgIcon16x16, imgIcon12x12, imgSettings, imgPlus, imgAddProjectInfo;
+	private static BufferedImage imgIcon36x36, imgIcon24x24, imgIcon16x16,
+			imgIcon12x12, imgSettings, imgPlus, imgAddProjectInfo;
 
 	static {
 		try {
-			imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"img/Label_LearningCards_blue_36x36.png"));
-			imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"img/Label_LearningCards_blue_24x24.png"));
-			imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"img/Label_LearningCards_blue_16x16.png"));
-			imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"img/Label_LearningCards_blue_12x12.png"));
-			imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgSettings_28x28.png"));
+			imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader()
+					.getResourceAsStream(
+							"img/Label_LearningCards_blue_36x36.png"));
+			imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader()
+					.getResourceAsStream(
+							"img/Label_LearningCards_blue_24x24.png"));
+			imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader()
+					.getResourceAsStream(
+							"img/Label_LearningCards_blue_16x16.png"));
+			imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader()
+					.getResourceAsStream(
+							"img/Label_LearningCards_blue_12x12.png"));
+			imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader()
+					.getResourceAsStream("img/ImgSettings_28x28.png"));
 
-			imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("img/ImgPlus_16x16.png"));
-			imgAddProjectInfo = ImageIO.read(MainWindow.class.getClassLoader().getResourceAsStream(
-					"img/AddProjectInfo_450x338.png"));
+			imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader()
+					.getResourceAsStream("img/ImgPlus_16x16.png"));
+			imgAddProjectInfo = ImageIO.read(MainWindow.class.getClassLoader()
+					.getResourceAsStream("img/AddProjectInfo_450x338.png"));
 		} catch (IOException ioe) {
 			CustomErrorHandling.showInternalError(null, ioe);
 		}
@@ -71,8 +78,9 @@ public class MainWindow extends JFrame {
 	private JMenuBar mnuBar;
 	private JMenu mnuSettings;
 	private JMenu mnuSettingsNew, mnuSettingsImport, mnuSettingsExport;
-	private JMenuItem mnuSettingsView, mnuSettingsPrint, mnuSettingsStatistic, mnuSettingsHelp, mnuSettingsAbout,
-			mnuSettingsNewProject, mnuSettingsImportProject, mnuSettingsExportProject;
+	private JMenuItem mnuSettingsView, mnuSettingsPrint, mnuSettingsStatistic,
+			mnuSettingsHelp, mnuSettingsAbout, mnuSettingsNewProject,
+			mnuSettingsImportProject, mnuSettingsExportProject;
 	private JPanel pnlControls, pnlCenter;
 	private Box centerBox;
 	private ArrayList<ProjectPanel> projectPnls;
@@ -81,7 +89,8 @@ public class MainWindow extends JFrame {
 	private JButton btnAddProject;
 	private ProjectsController ctl;
 
-	public MainWindow(ProjectsController ctl, int majorVersion, int minorVersion, int patchLevel) {
+	public MainWindow(ProjectsController ctl, int majorVersion,
+			int minorVersion, int patchLevel) {
 		this.ctl = ctl;
 		this.majorVersion = majorVersion;
 		this.minorVersion = minorVersion;
@@ -98,7 +107,8 @@ public class MainWindow extends JFrame {
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException exc) {
+		} catch (ClassNotFoundException | InstantiationException
+				| IllegalAccessException | UnsupportedLookAndFeelException exc) {
 			CustomErrorHandling.showInternalError(null, exc);
 		}
 
@@ -122,10 +132,10 @@ public class MainWindow extends JFrame {
 	}
 
 	void computeProjectPanels() throws SQLException {
-		ctl.loadProjects();
 		projectPnls = new ArrayList<ProjectPanel>();
 		for (int i = 0; i < ctl.getProjects().size(); i++) {
-			ProjectPanel pnl = new ProjectPanel(ctl.getProjects().get(i), this, ctl);
+			ProjectPanel pnl = new ProjectPanel(ctl.getProjects().get(i), this,
+					ctl);
 			pnl.changeStatus(ctl.getProjects().get(i).getStatus());
 			projectPnls.add(pnl);
 		}
@@ -181,7 +191,8 @@ public class MainWindow extends JFrame {
 		/* */
 		pnlControls = new JPanel();
 		pnlControls.setLayout(new FlowLayout(FlowLayout.RIGHT));
-		pnlControls.setBorder(BorderFactory.createLineBorder(getContentPane().getBackground(), 8));
+		pnlControls.setBorder(BorderFactory.createLineBorder(getContentPane()
+				.getBackground(), 8));
 		pnlControls.setOpaque(true);
 		pnlControls.setBackground(Color.DARK_GRAY);
 		pnlCenter = new JPanel(new BorderLayout());
@@ -189,7 +200,8 @@ public class MainWindow extends JFrame {
 		lblAddProjectInfo = new JLabel(new ImageIcon(imgAddProjectInfo));
 		scpCenter = new JScrollPane(pnlCenter);
 		btnAddProject = new JButton(new ImageIcon(imgPlus));
-		btnAddProject.setFont(btnAddProject.getFont().deriveFont(Font.BOLD, 16));
+		btnAddProject
+				.setFont(btnAddProject.getFont().deriveFont(Font.BOLD, 16));
 		btnAddProject.setToolTipText("Neues Lernprojekt hinzuf\u00fcgen");
 	}
 
@@ -244,7 +256,8 @@ public class MainWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			final OkOrDisposeDialog d = new OkOrDisposeDialog(MainWindow.this, 450, 250);
+			final OkOrDisposeDialog d = new OkOrDisposeDialog(MainWindow.this,
+					450, 250);
 			d.setText("<html><center><b>Lernkarten - ein OpenSource Lernprogramm </b><br><br>Version: "
 					+ majorVersion
 					+ "."
@@ -267,7 +280,8 @@ public class MainWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			PrepareExportDialog d = new PrepareExportDialog(MainWindow.this, ctl);
+			PrepareExportDialog d = new PrepareExportDialog(MainWindow.this,
+					ctl);
 			d.setVisible(true);
 		}
 	}
@@ -280,9 +294,11 @@ public class MainWindow extends JFrame {
 		}
 
 		private void doTask(String pathToImport) {
-			ProgressDialog dialog = new ProgressDialog(MainWindow.this, "Vorbereiten...");
+			ProgressDialog dialog = new ProgressDialog(MainWindow.this,
+					"Vorbereiten...");
 			dialog.setVisible(true);
-			ImportTask task = new ImportTask(pathToImport, dialog, MainWindow.this, ctl);
+			ImportTask task = new ImportTask(pathToImport, dialog,
+					MainWindow.this, ctl);
 			task.addPropertyChangeListener(dialog);
 			task.execute();
 		}
@@ -303,7 +319,8 @@ public class MainWindow extends JFrame {
 				} else { // some path selected
 					File f = new File(pathToImport);
 					if (!f.canWrite()) { // can't read -> error message
-						CustomInfoHandling.showMissingPermissionsInfo(MainWindow.this, f.toString());
+						CustomInfoHandling.showMissingPermissionsInfo(
+								MainWindow.this, f.toString());
 						doAction();
 					} else { // it's possible to overwrite -> ask user
 						doTask(pathToImport);

@@ -13,9 +13,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.xml.stream.XMLStreamException;
+
+import org.apache.derby.impl.sql.catalog.SYSPERMSRowFactory;
 
 import utils.FileUtils;
 import xml.Settings;
@@ -33,15 +36,16 @@ public class ANKIImporter {
 
 	LearningProject project;
 	ArrayList<FlashCard> cards;
-	ArrayList<XMLLearningProject> xmlProjects;
-	ArrayList<XMLFlashCard> xmlFlashCards;
-	ArrayList<XMLMedia> xmlMedia;
+
 	Connection conn;
 
 	public ANKIImporter(String projectName, String pathToDatabase,
 			ProjectsController ctl, IProgressPresenter p) {
 		this.ctl = ctl;
 		this.pathToDatabase = pathToDatabase;
+		if (!pathToDatabase.endsWith("/")) {
+			this.pathToDatabase = this.pathToDatabase + "/";
+		}
 		this.p = p;
 		try {
 			project = new LearningProject(ctl, projectName, 3);
@@ -55,13 +59,38 @@ public class ANKIImporter {
 	public void doImport() throws NumberFormatException, XMLStreamException,
 			IOException, SQLException, InvalidValueException,
 			InvalidLengthException {
-		readCards();
-		storeObjects();
+
+		readAndStoreCards();
+
 	}
 
-	private void storeObjects() {
-		// TODO Auto-generated method stub
+	public Map<String, Integer> parseImageString(String istr) {
+		// filtern von {}"
+		istr = istr.replace("{", "");
+		istr = istr.replace("}", "");
+		istr = istr.replace("\"", "");
+		// aufsplitten in Wertepaare
+		Map<String, Integer> images = new HashMap<String, Integer>();
+		String[] pairs = istr.split(",");
+		for (String pair : pairs) {
+			String[] splittedPair = pair.split(":");
+			splittedPair[0] = splittedPair[0].trim();
+			splittedPair[1] = splittedPair[1].trim();
+			// speichern in der Map nur, wenn nicht leer
+			try {
+				if (splittedPair[0] != "" && splittedPair[1] != "") {
+					images.put(splittedPair[1],
+							Integer.parseInt(splittedPair[0]));
+				}
 
+			} catch (NumberFormatException e) {
+
+				e.printStackTrace();
+
+			}
+		}
+		System.out.println("done parsing ...");
+		return images;
 	}
 
 	public Map<String, Integer> readImages() {
@@ -84,10 +113,11 @@ public class ANKIImporter {
 			}
 		}
 		System.out.println(mediaText);
-		return null;
+		System.out.println("Parsing Images...");
+		return parseImageString(mediaText);
 	}
 
-	private void readCards() {
+	private void readAndStoreCards() {
 		Statement query;
 		ResultSet result = null;
 		try {
@@ -101,6 +131,7 @@ public class ANKIImporter {
 			while (result.next()) {
 				System.out.println(result.getString("sfld"));
 				System.out.println(result.getString("flds"));
+
 				// adding html framework
 				FlashCard card = new FlashCard(project,
 						"<html> <head>  </head>  <body>"
@@ -108,9 +139,46 @@ public class ANKIImporter {
 						"<html> <head>  </head>  <body>"
 								+ result.getString("flds") + "</body></html>",
 						null, null, 0, 0);
+				// filtering characters smaller than 32 (happened on import and
+				// gives errors)
+				for (int i = 0; i < card.getQuestionWidth(); i++) {
+					if (card.getQuestion().charAt(i) < 32
+							&& card.getQuestion().charAt(i) != 10
+							&& card.getQuestion().charAt(i) != 13) {
+						// remove control sequence if not CR or LF
+						card.setQuestion(card.getQuestion().substring(0, i)
+								+ card.getQuestion().substring(i));
+					}
+					if (card.getAnswer().charAt(i) < 32
+							&& card.getAnswer().charAt(i) != 10
+							&& card.getAnswer().charAt(i) != 13) {
+						// remove control sequence if not CR or LF
+						card.setAnswer(card.getAnswer().substring(0, i)
+								+ card.getAnswer().substring(i));
+					}
+				}
+
+				// adding pictures to cards, if any
+				Map<String, Integer> images = readImages();
+				String question = card.getQuestion();
+				String answer = card.getAnswer();
+				// lookup image url in question or answer
+				for (String imgName : images.keySet()) {
+					boolean found = false;
+					if (question.contains(imgName)) {
+						card.setPathToQuestionPic(pathToDatabase
+								+ images.get(imgName));
+						found = true;
+					}
+					if (answer.contains(imgName)) {
+						card.setPathToAnswerPic(pathToDatabase
+								+ images.get(imgName));
+						found = true;
+					}
+
+				}
 				project.addCard(card);
 				card.store();
-				// adding pictures to cards
 
 			}
 
@@ -143,62 +211,6 @@ public class ANKIImporter {
 		System.out.println("Opened database successfully");
 		return c;
 	}
-
-	// private void convertXMLObjects() throws SQLException, IOException,
-	// InvalidLengthException, InvalidValueException {
-	// p.changeProgress(0);
-	// importProjects = new ArrayList<LearningProject>();
-	// Iterator<XMLLearningProject> it = xmlProjects.iterator();
-	// while (it.hasNext()) {
-	// XMLLearningProject xmlP = it.next();
-	// p.changeInfo("Importiere " + xmlP.getProjTitle() + "...");
-	// LearningProject proj = xmlP.toLearningProject(ctl);
-	// proj.store();
-	// for (XMLFlashCard xmlC : xmlFlashCards) {
-	// System.out.println("for " + xmlC.getId());
-	// if (xmlC.getProjId() == xmlP.getProjId()) {
-	// System.out.println("if " + xmlP.getProjId());
-	// String qPath = null, aPath = null;
-	// for (XMLMedia xmlM : xmlMedia) {
-	// System.out.println("for: " + xmlM.getMediaId());
-	// if (xmlM.getCardId() == xmlC.getId()) {
-	// if (xmlM.getPicType() == PicType.QUESTION
-	// .getShortForm()
-	// && xmlM.getPathToMedia() != null) {
-	// qPath = pathToImportMediaFolder + "/"
-	// + xmlM.getPathToMedia();
-	// } else if (xmlM.getPicType() == PicType.ANSWER
-	// .getShortForm()
-	// && xmlM.getPathToMedia() != null) {
-	// aPath = pathToImportMediaFolder + "/"
-	// + xmlM.getPathToMedia();
-	// }
-	// }
-	// }
-	// FlashCard c = xmlC.toFlashCard(proj, qPath, aPath);
-	// c.store();
-	// System.out.println("Stored " + xmlC.getId());
-	// }
-	// }
-	// p.changeProgress(Math.min(
-	// p.getProgress() + 100 / xmlProjects.size(), 100));
-	// }
-	// }
-
-	// private void readXMLLists() throws NumberFormatException,
-	// XMLStreamException, IOException {
-	// p.changeProgress(0);
-	// p.changeInfo("Lese Daten...");
-	// XMLExchanger ex = new XMLExchanger();
-	// xmlProjects = ex.readProjects(pathToImport + "/"
-	// + XMLFiles.LEARNING_PROJECTS.getName());
-	// p.changeProgress(33);
-	// xmlMedia = ex.readMedia(pathToImport + "/" + XMLFiles.MEDIA.getName());
-	// p.changeProgress(66);
-	// xmlFlashCards = ex.readFlashcards(pathToImport + "/"
-	// + XMLFiles.FLASHCARDS.getName());
-	// p.changeProgress(99);
-	// }
 
 	public static void main(String args[]) {
 		String APP_FOLDER = FileUtils.appDirectory("Lernkarten");

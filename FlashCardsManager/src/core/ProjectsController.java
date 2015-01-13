@@ -1,5 +1,6 @@
 package core;
 
+import importExport.ANKIImporter;
 import importExport.ProjectExporter;
 import importExport.ProjectImporter;
 
@@ -28,12 +29,14 @@ public class ProjectsController implements ProjectChangedSource {
 
 	private ArrayList<ProjectDataChangedListener> listeners = new ArrayList<ProjectDataChangedListener>();
 
-	public ProjectsController(String pathToDatabase, String pathToMediaFolder) throws ClassNotFoundException, SQLException {
+	public ProjectsController(String pathToDatabase, String pathToMediaFolder)
+			throws ClassNotFoundException, SQLException {
 		dbex = new DBExchanger(pathToDatabase, this);
 		mex = new MediaExchanger(pathToMediaFolder);
 		this.pathToMediaFolder = pathToMediaFolder;
 		dbex.createConnection();
 		dbex.createTablesIfNotExisting();
+		loadProjects();
 	}
 
 	public void loadProjects() throws SQLException {
@@ -60,25 +63,39 @@ public class ProjectsController implements ProjectChangedSource {
 		return projects;
 	}
 
-	public void importProjects(String pathToImport, IProgressPresenter p) throws XMLStreamException, IOException, SQLException,
+	public void importProjects(String pathToImport, IProgressPresenter p)
+			throws XMLStreamException, IOException, SQLException,
 			InvalidValueException, InvalidLengthException {
-		ProjectImporter importer = new ProjectImporter(pathToImport, pathToMediaFolder, this, p);
+		ProjectImporter importer = new ProjectImporter(pathToImport,
+				pathToMediaFolder, this, p);
 		importer.doImport();
 	}
 
-	public void exportProject(ArrayList<LearningProject> projects, String pathToExport, IProgressPresenter p)
-			throws SQLException, XMLStreamException, IOException {
-		ProjectExporter exporter = new ProjectExporter(projects, pathToMediaFolder, pathToExport, p);
+	public void importANKI(String pathToImport, IProgressPresenter p)
+			throws XMLStreamException, IOException, SQLException,
+			InvalidValueException, InvalidLengthException {
+		ANKIImporter importer = new ANKIImporter("ANKIImport" + p.toString(),
+				pathToImport, this, p);
+		importer.doImport();
+	}
+
+	public void exportProject(ArrayList<LearningProject> projects,
+			String pathToExport, IProgressPresenter p) throws SQLException,
+			XMLStreamException, IOException {
+		ProjectExporter exporter = new ProjectExporter(projects,
+				pathToMediaFolder, pathToExport, p);
 		exporter.doExport();
 	}
 
 	@Override
-	public synchronized void addEventListener(ProjectDataChangedListener listener) {
+	public synchronized void addEventListener(
+			ProjectDataChangedListener listener) {
 		listeners.add(listener);
 	}
 
 	@Override
-	public synchronized void removeEventListener(ProjectDataChangedListener listener) {
+	public synchronized void removeEventListener(
+			ProjectDataChangedListener listener) {
 		listeners.remove(listener);
 	}
 
