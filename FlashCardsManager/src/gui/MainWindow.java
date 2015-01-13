@@ -1,13 +1,7 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.ComponentOrientation;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -16,30 +10,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
-import core.LearningProject;
-import core.ProjectsController;
-import core.Status;
+import core.*;
 import exc.CustomErrorHandling;
 import exc.CustomInfoHandling;
-import gui.helpers.ImportTask;
-import gui.helpers.MyMenu;
-import gui.helpers.MyMenuItem;
-import gui.helpers.ProgressDialog;
+import gui.helpers.*;
 
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame {
@@ -119,7 +95,7 @@ public class MainWindow extends JFrame {
 			addWidgets();
 			setListeners();
 
-			setSize(500, 450);
+			setSize(getPreferredSize().width + 20, 450);
 			setLocationRelativeTo(null);
 			setVisible(true);
 		} catch (SQLException sqle) {
@@ -132,6 +108,7 @@ public class MainWindow extends JFrame {
 	}
 
 	void computeProjectPanels() throws SQLException {
+		ctl.loadProjects();
 		projectPnls = new ArrayList<ProjectPanel>();
 		for (int i = 0; i < ctl.getProjects().size(); i++) {
 			ProjectPanel pnl = new ProjectPanel(ctl.getProjects().get(i), this,
@@ -250,6 +227,15 @@ public class MainWindow extends JFrame {
 		mnuSettingsAbout.addActionListener(new AboutProjectListener());
 		mnuSettingsExportProject.addActionListener(new ExportProjectListener());
 		mnuSettingsImportProject.addActionListener(new ImportProjectListener());
+
+		addWindowListener(new WindowAdapter() {
+
+			@Override
+			public void windowClosing(WindowEvent e) {
+				ctl.shutdownDatabase();
+			}
+
+		});
 	}
 
 	private class AboutProjectListener implements ActionListener {
