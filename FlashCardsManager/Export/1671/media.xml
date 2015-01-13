@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medias>
+	<media>
+		<media_id>27</media_id>
+		<card_id>11</card_id>
+		<path_to_media>pic-2-11-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>28</media_id>
+		<card_id>15</card_id>
+		<path_to_media>pic-2-15-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>29</media_id>
+		<card_id>16</card_id>
+		<path_to_media>pic-2-16-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>30</media_id>
+		<card_id>17</card_id>
+		<path_to_media>pic-2-17-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+</medias>

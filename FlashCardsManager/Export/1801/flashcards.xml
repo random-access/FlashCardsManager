@@ -1,0 +1,2862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashcards>
+	<flashcard>
+		<card_id>22</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne &lt;b&gt;drei Ursachen&lt;/b&gt; f&amp;#252;r die massive &lt;b&gt;Verbreitung von 
+      Computern&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Effizienz: &lt;/b&gt;Die Hardware wurde immer preiswerter und 
+      leistungsf&amp;#228;higer
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Benutzerfreundlichkeit: &lt;/b&gt;Der Umgang mit Computern wurde immer 
+      einfacher, da das Betriebssystem die Hardware verwaltet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Vernetzbarkeit:&lt;/b&gt;Computer k&amp;#246;nnen zu Netzwerken 
+      zusammengeschlossen werden (Beispiel: Internet)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>23</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche zwei &lt;b&gt;Schnittstellen&lt;/b&gt; werden vom Betriebssystem zur &lt;b&gt;Verwaltung 
+      der Hardware&lt;/b&gt; bereitgestellt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Benutzerschnittstelle:&lt;/b&gt; Zur Kommunikation der Benutzer mit dem 
+      Betriebssystem
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Programmierschnittstelle:&lt;/b&gt; Zur Kommunikation der Programme mit 
+      dem Betriebssystem
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>24</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche 4 &lt;b&gt;Personengruppen&lt;/b&gt; haben mit &lt;b&gt;Betriebssystemen und 
+      Rechnernetzen zu tun&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Reine Benutzer:&lt;/b&gt; Arbeiten mit der &lt;u&gt;Benutzerschnittstelle&lt;/u&gt; 
+      (Dateioperationen, Starten von Anwendungen...)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.)&lt;b&gt; Anwendungsprogrammierer:&lt;/b&gt; Nutzen die &lt;u&gt;Programmierschnittstelle&lt;/u&gt;, 
+      ben&amp;#246;tigen &lt;u&gt;Kenntnisse &amp;#252;ber Rechnernetze&lt;/u&gt; (Protokolle, 
+      Client-Server-Betrieb)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Systemadministrator&lt;/b&gt;: Ben&amp;#246;tigt Kenntnisse der &lt;u&gt;Benutzer- 
+      und Programmierschnittstelle&lt;/u&gt; sowie spezielle &lt;u&gt;Admin-Kommandos&lt;/u&gt;, &lt;u&gt;Kenntnisse 
+      der internen Abl&amp;#228;ufe&lt;/u&gt; zur Behebung von Performanceproblemen und &lt;u&gt;grundlegende 
+      Hardwarekenntnisse&lt;/u&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Entwickler von Systemsoftware&lt;/b&gt; (z.B. Debugger, DBMS, GUIs, 
+      Compiler und Binder,...)&lt;b&gt; und Betriebssystemen&lt;/b&gt;: Muss &lt;u&gt;detaillierte 
+      Kenntnisse&lt;/u&gt; &amp;#252;ber die &lt;u&gt;interne Struktur des Betriebssystems&lt;/u&gt; 
+      und der &lt;u&gt;Rechnerhardware&lt;/u&gt; haben
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>25</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist das &lt;b&gt;Prinzip eines Von-Neumann-Rechners&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;auszuf&amp;#252;hrende Programm&lt;/b&gt; ist &lt;b&gt;nicht mehr ein fester Bestandteil 
+      des Rechners&lt;/b&gt;, es wird vielmehr - genau wie die ben&amp;#246;tigten Daten - &lt;b&gt;vor 
+      dem Programmablauf in den Speicher des Rechners geladen&lt;/b&gt; und&lt;b&gt; 
+      hinterher wieder entfernt&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Damit ben&amp;#246;tigt ein Rechner lediglich die F&amp;#228;higkeit, beliebige im 
+      Speicher befindliche Programme auszuf&amp;#252;hren.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>26</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne die &lt;b&gt;3 wesentlichen Bestandteile der Hardware&lt;/b&gt; eines modernen &lt;b&gt;Von-Neumann-Rechners&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Prozessor&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Speicher&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Ein-/Ausgabeger&amp;#228;te&lt;/b&gt; (Magnetplattenlaufwerk, 
+      Diskettenlaufwerk, Bandlaufwerk, CD-ROM Laufwerk, Drucker, Bildschirm, 
+      Maus,Tastatur,  Kommunikationsger&amp;#228;te zum Anschluss an Rechnernetze)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>27</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den &lt;b&gt;Aufbau des Hauptspeichers&lt;/b&gt;! Wieso hei&amp;#223;t der 
+      Hauptspeicher auch&lt;b&gt; RAM&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Hauptspeicher ist eine &lt;u&gt;lange Folge von gleich gro&amp;#223;en 
+      Speicherzellen&lt;/u&gt;, die &lt;u&gt;einzeln adressiert&lt;/u&gt; werden k&amp;#246;nnen. Der 
+      Name &lt;b&gt;RAM (Random Access Memory)&lt;/b&gt; kommt von diesem &lt;u&gt;wahlfreien 
+      Zugriff&lt;/u&gt;. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>28</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re, wie der Prozessor auf den Hauptspeicher zugreift!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;Befehlsz&amp;#228;hlregister&lt;/b&gt; enth&amp;#228;lt die Adresse der 
+      Speicheradresse, in der der Code des n&amp;#228;chsten auszuf&amp;#252;hrenden Befehls 
+      steht. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um auf diese Speicherzelle zuzugreifen, wird die Adresse ins &lt;b&gt;Speicheradressregister&lt;/b&gt; 
+      &amp;#252;bertragen und gelangt auf den &lt;b&gt;Adressbus&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Hierduch wird die entsprechende Zelle des &lt;b&gt;Hauptspeicher&lt;/b&gt; 
+      angesprochen, und ihr Inhalt wird &amp;#252;ber den&lt;b&gt; Datenbus &lt;/b&gt;in das &lt;b&gt;Speicherinhaltsregister&lt;/b&gt; 
+      des Prozessors &amp;#252;bertragen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dann wird interpretiert, obe es sich um einen Wert oder Befehl handelt, 
+      dementsprechend sieht die Verarbeitung in den verschiedenen Registern 
+      und das weitere Vorgehen aus.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>29</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was bedeutet &lt;b&gt;indirekte Adressierung&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der &lt;b&gt;Operand&lt;/b&gt; im Befehl enth&amp;#228;lt eine Zahl, die eine &lt;b&gt;Speicheradresse&lt;/b&gt; 
+      oder einen Teil von ihr darstellen und deren Wert verarbeitet werden 
+      soll.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>57</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wieso hei&amp;#223;t der &lt;b&gt;Programmz&amp;#228;hler&lt;/b&gt; so?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Weil er sich nach Ausf&amp;#252;hrung eines Befehls &lt;b&gt;automatisch erh&amp;#246;ht&lt;/b&gt; 
+      und so den &lt;b&gt;n&amp;#228;chsten Befehl adressiert&lt;/b&gt;, wenn keine Ausnahme 
+      besteht (Spr&amp;#252;nge)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>58</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist die &lt;b&gt;Taktfrequenz&lt;/b&gt; der CPU?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;CPU arbeitet getaktet&lt;/b&gt;, das bedeutet, sie kann pro Arbeitstakt 
+      gewisse &lt;b&gt;Elementarbefehle&lt;/b&gt; ausf&amp;#252;hren (z.B Kopieren einer Adresse 
+      vom Befehlsz&amp;#228;hlerregister ins Speicheradressregister, Heraufz&amp;#228;hlen des 
+      Befehlsz&amp;#228;hlregisters,...). 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Taktfrequenz&lt;/b&gt; ist die &lt;u&gt;Anzahl der Takte Pro Sekunde&lt;/u&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>59</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum ben&amp;#246;tigt ein&lt;b&gt; Zugriff auf den Hauptspeicher&lt;/b&gt; mehr als 
+      einen Arbeitstakt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Einerseits, weil &lt;u&gt;u.U. mehrere Elementarbefehle&lt;/u&gt; auszuf&amp;#252;hren sind 
+      (zusammengesetzte Operationen), andererseits, weil eine gewisse Zeit 
+      zwischen dem Aufbringen einer Adresse auf dem Adressbus und der Ankunft 
+      des zugeh&amp;#246;rigen Speicherzelleninhalts &amp;#252;ber den Datenbus vergeht. Diese 
+      sogenannte &lt;u&gt;Zugriffszeit&lt;/u&gt; h&amp;#228;ngt von der physikalischen 
+      Beschaffenheit des Hauptspeichers ab.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>60</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Cache&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein kleinerer, schnellerer Zwischenspeicher als der Hauptspeicher.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>61</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe einen &lt;b&gt;einfachen Cache-Algorithmus&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      H&amp;#228;ufig benutzte Daten werden vor&amp;#252;bergehend vom Hauptspeicher in den 
+      Cache kopiert. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn Daten ben&amp;#246;tigt werden, schaut man zun&amp;#228;chst im Cache nach. Findet 
+      man dort eine Kopie der gesuchten Daten, so verwendet man sie und 
+      braucht keinen Hauptspeicherzugriff auszuf&amp;#252;hren. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wird man aber im Cache nicht f&amp;#252;ndig, ist ein Zugriff auf den 
+      Hauptspeicher unvermeidlich; in diesem Fall legt man eine Kopie der 
+      Daten im Cache ab, weil man davon ausgeht, dass diese Daten bald noch 
+      einmal ben&amp;#246;tigt werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>62</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche zwei wichtigen &lt;b&gt;Aufgaben&lt;/b&gt; hat das&lt;b&gt; Betriebssystem 
+      bez&amp;#252;glich dem Cache&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Cache-Management:&lt;/b&gt; Wenn Daten im Cache abgelegt werden sollen 
+      und dort kein freier Platz mehr vorhanden ist, m&amp;#252;ssen alte Daten 
+      &amp;#252;berschrieben wernde. Welche Daten sol man daf&amp;#252;r opfern?
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Cache-Konsistenz: &lt;/b&gt;Angenommen, der Wert einer Variablen soll 
+      ver&amp;#228;ndert werden. Wenn diese &amp;#196;nderung nur an der Kopie im Cache 
+      vollzogen wird, so besteht anschlie&amp;#223;end eine Unterschied zwischen dem 
+      Original im Hauptspeicher und der Kopie im Cache. Das Betriebssystem 
+      muss daf&amp;#252;r sorgen, dass sich hieraus keine Fehler ergeben. Dieses 
+      Problem ist besonders gravierend bei Multiprozessorsystemen, bei denen 
+      jeder Prozessor &amp;#252;ber einen eigenen Cache verf&amp;#252;gt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>63</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum gibt es noch &lt;b&gt;andere Speicherm&amp;#246;glichkeiten neben 
+      Hauptspeicher und Cache&lt;/b&gt; im Rechner? Hauptspeicher und Cache sind 
+      doch von der Zugriffszeit her am schnellsten, oder?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit Hauptspeicher und Cache kann ein Rechner allein nicht auskommen,denn 
+      diese sind &lt;b&gt;knapp und fl&amp;#252;chtig&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) selbst wenn der Hauptspeicher pro MB preiswerter als der Cache ist, 
+      kann man seine Kapazit&amp;#228;t aus Kostengr&amp;#252;nden nicht so gro&amp;#223; auslegen, 
+      dass alle ben&amp;#246;tigten Programme udn Daten darin Platz finden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) beim Abschalten des Rechners oder bei einem Stromausfall geht der 
+      Inhalt des Hauptspeichers verloren
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>64</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den &lt;b&gt;physikalischen Aufbau einer Festplatte&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>65</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie erfolgt ein &lt;b&gt;Zugriff auf einen Sektor einer Magnetplatte&lt;/b&gt;?
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Woraus setzt sich die &lt;b&gt;Zugriffszeit &lt;/b&gt;zusammen? Welcher Abschnitt 
+      beim Zugriff ben&amp;#246;tigt am meisten Zeit?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Magnetplatte erm&amp;#246;glicht &lt;b&gt;wahlfreien Zugriff&lt;/b&gt; auf einzelne 
+      Sektoren.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Zugriffszeit&lt;/b&gt; setzt sich wie folgt zusammen:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;Positionierungszeit&lt;/b&gt;: Der Kopf wird durch Verdrehen der Well 
+      auf den richtigen Zylinder gebracht (ben&amp;#246;tigt derzeit die l&amp;#228;ngste Zeit)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .)&lt;b&gt; Latenzzeit:&lt;/b&gt; Die Zeit, bis der gesuchte Sektor am Kopf 
+      vorbeil&amp;#228;uft
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&amp;#220;bertragungszeit:&lt;/b&gt; Auslesen der Daten und &amp;#220;bertragung in 
+      einen Pufferspeicher bzw. Schreiben von Daten aus einem Pufferspeicher 
+      auf einen Sektor
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>66</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist die &lt;b&gt;Suchzeit auf der Festplatte&lt;/b&gt;? Wie kann diese 
+      verringert werden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Suchzeit ist die &lt;b&gt;Summe aus Positionierungszeit und Latenzzeit&lt;/b&gt; 
+      und kann in etwa durch die &lt;u&gt;Distanz &lt;/u&gt;gemessen werden, &lt;u&gt;die der 
+      Kopf zur&amp;#252;cklegt&lt;/u&gt;, dh. die Anzahl der Spuren, die &amp;#252;berquert 
+      werden m&amp;#252;ssen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Suchzeit kann &lt;b&gt;durch folgende Ma&amp;#223;nahmen verringert&lt;/b&gt; 
+      werden: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;u&gt;Zusammengeh&amp;#246;rende Informationen&lt;/u&gt; sollten m&amp;#246;glichst in &lt;u&gt;benachbarten 
+      Sektoren und Zylindern &lt;/u&gt;gespeichert werden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Wenn bei einem Plattenlaufwerk mehrere Schreib-/Leseauftr&amp;#228;ge 
+      gleichzeitig vorliegen, sollte eine &lt;u&gt;g&amp;#252;nstige Bearbeitungsreihenfolge&lt;/u&gt; 
+      gew&amp;#228;hlt werden
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>67</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne &lt;b&gt;3 Zugriffsstrategien f&amp;#252;r Festplattenzugriffe&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;FCFS (first-come, first-served): &lt;/b&gt;Die Auftr&amp;#228;ge werden in ihrer 
+      Eingangsreihenfolge bearbeitet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;SSTF (shortest-seek-time-first):&lt;/b&gt; Der Auftrag, der der 
+      aktuellen Spur am n&amp;#228;chsten liegt, wird als n&amp;#228;chstes bearbeitet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.)&lt;b&gt; SCAN:&lt;/b&gt; Der Kopf wird abwechselnd nach au&amp;#223;en und innen &amp;#252;ber die 
+      gesamte Platte bewegt und alle Auftr&amp;#228;ge, deren Spuren gerade &amp;#252;berquert 
+      werden, werden ausgef&amp;#252;hrt
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>68</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind &lt;b&gt;Parity Bits&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Bits zur Fehlerkorrektur&lt;/b&gt;: Beim Schreiben bzw. Lesen eines Sektors 
+      wird die Summe bestimmter Datenbits berechnet und in die Pr&amp;#252;fbits 
+      eingetragen bzw. mit den bereits vorhandenen Werten verglichen. Ergeben 
+      sich Abweichungen, so ist ein Fehler aufgetreten. Bei Verwendung 
+      geeigneter Codes kann man feststellen, welches Bit einen falschen Wert 
+      hat und den Fehler automatisch korrigieren.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>69</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine &lt;b&gt;RAM-disk&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein &lt;b&gt;fest reservierter Teil des Hauptspeichers&lt;/b&gt;, der von 
+      Anwenderprogrammen und Anwendern&lt;u&gt; wie eine Magnetplatte benutzt&lt;/u&gt; 
+      werden kann. Der Zugriff erfolgt fast so schnell wie auf den &amp;quot;reinen&amp;quot; 
+      Hauptspeicher. Nachteil: Wenn der PC keinen Strom mehr hat, sind die 
+      Daten weg.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>70</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Cache f&amp;#252;r Platten&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um zeitaufw&amp;#228;ndige Plattenzugriffe nach M&amp;#246;glichkeit einzusparen, kann ein &lt;b&gt;Cache 
+      im Hauptspeicher&lt;/b&gt; angelegt werden,in dem einzelne Bl&amp;#246;cke oder die 
+      Inhalte ganzer Spuren, die vermutlich in K&amp;#252;rze wieder ben&amp;#246;tigt werden, 
+      gespeichert werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>71</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum sind &lt;b&gt;Magnetplatten nicht gut f&amp;#252;r die Langzeitarchivierung&lt;/b&gt; 
+      geeignet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Preis&lt;/b&gt;: Magnetplatten sind f&amp;#252;r wahlfreien Zugriff konzipiert 
+      und deshalb pro MB Kapazit&amp;#228;t zu teuer, um darauf Informationen 
+      abzulegen, auf die nur selten zugegriffen wird
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Trennung vom PC&lt;/b&gt;: Da Magnetplatten oft im selben Geh&amp;#228;use wie 
+      Prozessor und Hauptspeicher untergebracht sind, k&amp;#246;nnen Informationen 
+      nicht so gut an getrennten Orten verwahrt oder auf andere Rechner 
+      transferiert werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>72</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne die &lt;b&gt;zwei wesentlichen Merkmale von Terti&amp;#228;rspeichern&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;preiswerte Herstellung&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.)&lt;b&gt; leicht vom Rechner entfernbar&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>167</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne &lt;b&gt;3 Beispiele f&amp;#252;r Terti&amp;#228;rspeiche&lt;/b&gt;r!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Disketten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) CDs / DVDs
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) USB-Sticks
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Magnetb&amp;#228;nder
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Blu-Ray Disc / HD DVD
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Externe Festplatten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Flash-Speicher
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>168</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das &lt;b&gt;Cache-Modell &lt;/b&gt;und die &lt;b&gt;Speicherhierarchie&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>169</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Unterschied zwischen &lt;b&gt;wahlfreiem und sequentiellem Zugriff&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Bei &lt;b&gt;sequentiellem Zugriff&lt;/b&gt; kann nur auf die beiden Bl&amp;#246;cke als 
+      n&amp;#228;chstes zugegriffen werden, die sich genau vor bzw. hinter dem 
+      Schreib-/Lesekopf befinden. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Bei &lt;b&gt;wahlfreiem Zugriff &lt;/b&gt;kann auf einen beliebigen, eindeutig 
+      addressierten Block als n&amp;#228;chstes zugegriffen werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>170</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Bus&lt;/b&gt;? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Grob gesagt ein &lt;b&gt;B&amp;#252;ndel von Leitungen&lt;/b&gt; zusammen mit einem&lt;b&gt; 
+      Protokoll&lt;/b&gt;, an dem &lt;b&gt;mehrere Ger&amp;#228;te angeschlossen&lt;/b&gt; sein 
+      k&amp;#246;nnen, aber &amp;#252;ber den &lt;b&gt;nur eine Nachricht auf einmal&lt;/b&gt; 
+      verschickt werden kann.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>171</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum werden die &lt;b&gt;Ein-/Ausgabeger&amp;#228;te nicht direkt an den Bus&lt;/b&gt; 
+      angeschlossen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Weil die CPU dann ausschlie&amp;#223;lich mit der Steuerung aller Ger&amp;#228;te 
+      besch&amp;#228;ftigt w&amp;#228;re. &lt;b&gt;Controller&lt;/b&gt; &amp;#252;bernehmen diese Aufgabe 
+      und sind auch f&amp;#252;r die Kommunikation mit der CPU zust&amp;#228;ndig.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>172</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein &lt;b&gt;Controller&lt;/b&gt;? Wie kommuniziert der Controller mit dem 
+      Betriebssystem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein St&amp;#252;ck &lt;b&gt;elektronische Hardware&lt;/b&gt;, dessen &lt;u&gt;Komplexit&amp;#228;t&lt;/u&gt; 
+      vom jeweiligen Ger&amp;#228;t, das er steuert, abh&amp;#228;ngt. Der Controller einer 
+      Magnetplatte ist z.B. ann&amp;#228;hernd ein vollwertiger Prozessor. Der 
+      Controller ist f&amp;#252;r die Ger&amp;#228;testeuerung verantwortlich und f&amp;#252;r die 
+      Kommunikation mit der CPU.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      F&amp;#252;r die &lt;u&gt;Kommunikation Betriebssystem - Controller&lt;/u&gt; ist ein 
+      eigener Teil des Betriebssystems zust&amp;#228;ndig, der&lt;b&gt; Treiber&lt;/b&gt;. Da 
+      die Controller unterschiedlich sind, ben&amp;#246;tigen sie auch unterschiedliche 
+      Treiber.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>173</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne die &lt;b&gt;Register eines Controllers &lt;/b&gt;und beschreibe sie kurz!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Datenausgangsregister:&lt;/b&gt; Hierhin schreibt der Treiber Daten, 
+      die f&amp;#252;r den Controller bestimmt sind.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Dateneingangsregister:&lt;/b&gt; In diese schreibt der Controller Daten 
+      f&amp;#252;r den Ger&amp;#228;tetreiber.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Statusregister:&lt;/b&gt; Hier kann der Treiber den Zustanda des Ger&amp;#228;ts 
+      abfragen, z.B. ob es noch besch&amp;#228;ftigt ist oder ob Daten aus dem 
+      Dateneingangsregister abgeholt werden k&amp;#246;nnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Kontrollregister:&lt;/b&gt; Hier hinterlegt der Treiber Befehle an den 
+      Controller, z.B. einen Lesebefehl.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>174</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Technik der &lt;b&gt;speicherabgebildeten Ein-/Ausgabe&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Controllerregister &lt;/b&gt;befinden sich nicht am Controller und 
+      werden durch spezielle Ein-/Ausgabebefehle &amp;#252;ber besondere Busadressen 
+      angesprochen, sondern sind als&lt;b&gt; Teil des Hauptspeichers&lt;/b&gt; 
+      realisiert. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dadurch kann der auf der CPU laufende Ger&amp;#228;tetreiber die schnelleren 
+      Prozessorbefehle f&amp;#252;r den Datenaustausch mit dem Controller verwenden. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>175</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist das &lt;b&gt;Virtuelle Ger&amp;#228;t&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Als &lt;b&gt;virtuelles Ger&amp;#228;t&lt;/b&gt; bezeichnet man die konzeptuelle Einheit 
+      aus Ger&amp;#228;tetreiber, Controller und Ger&amp;#228;t
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>176</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche &lt;b&gt;Konzepte&lt;/b&gt; stecken&lt;b&gt; im Modell des virtuellen Ger&amp;#228;ts&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Abstraktion:&lt;/b&gt; Konzentration aufs Wesentliche, Prinzipielle, 
+      ohne auf die technischen Details einzugehen (-&amp;gt; &amp;#246;ffentliche 
+      Schnittstelle)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Kapselung (Geheimnisprinzip): &lt;/b&gt;Gewisse Details &lt;u&gt;d&amp;#252;rfen&lt;/u&gt; 
+      auf einer h&amp;#246;heren Abstraktionsebene nicht bekannt sein, weil:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - dadurch Missbrauch verhindert wird und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - sp&amp;#228;tere &amp;#196;nderungen erleichtert werden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schichtenmodell: &lt;/b&gt;In jeder Schicht werden Auftr&amp;#228;ge von der 
+      oberen Schicht bearbeitet und zur weiteren Bearbeitung an die 
+      n&amp;#228;chsttiefere Schicht weitergegeben. Ist der Auftrag in der untersten 
+      Schicht erledigt, wird eine Antwort generiert, diese wird durch alle 
+      Schichten nach oben geleitet und die oberste Schicht schickt die Antwort 
+      an den externen Auftraggeber.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei der Aufteilung in Schichten muss sorgf&amp;#228;ltig &amp;#252;berlegt werden, in 
+      wieviele Schichten die Gesamtaufgabe zerlegt werden soll, da bei zu 
+      vielen Schichten der Verwaltungsaufwand so hoch wird, dass der Vorteil 
+      der Aufteilung in Schichten, n&amp;#228;mlich die Vereinfachung bei der 
+      Implementierung, wieder aufgehoben wird.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;au&amp;#223;erdem: Fehlerkorrektur und Optimierungen&lt;/i&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>177</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie erf&amp;#228;hrt die CPU von der Beendigung eines Auftrags, der an ein 
+      Ein-/Ausgabeger&amp;#228;t erteilt wurde?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Abfragebetrieb (polling):&lt;/b&gt; Die CPU kann &amp;#8211; neben ihrer anderen 
+      Arbeit &amp;#8211; immer wieder das Statusregister des Controllers abfragen, um 
+      festzustellen, ob der Auftrag schon erledigt ist. Liegen die Register im 
+      Hauptspeicherbereich &amp;#8211; wie im Fall von speicherabgebildeter 
+      Ein-/Ausgabe &amp;#8211; so l&amp;#228;sst sich eine solche Abfrage zwar recht 
+      schnell erledigen, aber wenn sie immer wieder erfolglos bleibt, wird insgesamt 
+      viel CPU-Zeit damit verbraucht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Unterbrechungsbetrieb (interrupt):&lt;/b&gt; Der Controller 
+      benachrichtigt die CPU, sobald er den Auftrag ausgef&amp;#252;hrt hat; 
+      hierzu unterbricht er die CPU bei ihrer augenblicklichen Arbeit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dieser Unterbrechungsbetrieb bildet die Grundlage f&amp;#252;r die Arbeitsweise moderner 
+      Computersysteme.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>178</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den &lt;b&gt;Ablauf der Behandlung eines Hardware-Interrupts&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Die CPU erh&amp;#228;lt &amp;#252;ber ihren &lt;b&gt;Unterbrechungseingang&lt;/b&gt; ein 
+      bin&amp;#228;res Signal f&amp;#252;r eine Unterbrechung von einem Ger&amp;#228;t
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Rettung des &lt;b&gt;Inhalts vom Befehlsz&amp;#228;hlregister&lt;/b&gt; in einen 
+      systemeigenen Bereich des Hauptspeichers
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Anfangsadresse einer &lt;b&gt;allgemeinen Prozedur zur 
+      Unterbrechungsbehandlung&lt;/b&gt; wird geladen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) Feststellung, &lt;b&gt;welches Ger&amp;#228;t&lt;/b&gt; die Unterbrechung verursacht 
+      hat:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; durch &lt;b&gt;Abfragen&lt;/b&gt; aller vorhandenen Ger&amp;#228;te oder &lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; &lt;b&gt;Unterbrechungscontroller&lt;/b&gt; verwaltet 
+      Unterbrechungsanforderungen&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.) Nummer i des unterbrechenden Ger&amp;#228;ts wird als Index f&amp;#252;r den &lt;b&gt;Unterbrechungsvektor 
+      &lt;/b&gt;verwendet, an Position i steht die Startadresse der speziellen 
+      Unterbrechungsroutine f&amp;#252;r Ger&amp;#228;t i.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      6.) Diese wird in das Befehlsz&amp;#228;hlerregister geladen und die &lt;b&gt;spezielle 
+      Unterbrechungsroutine&lt;/b&gt; wird gestartet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; bei l&amp;#228;ngeren Berechnungen werden auch die &lt;b&gt;Registerinhalte 
+      der CPU&lt;/b&gt; in den systemeigenen Speicher (meist ein &lt;b&gt;Stack&lt;/b&gt;) 
+      gerettet&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      7.) Nach Beendigung der Unterbrechungsroutine &lt;b&gt;Wiederherstellung der 
+      alten Registerinhalte&lt;/b&gt;, Laden des alten Wertes in 
+      Befehlsz&amp;#228;hlerregister und Befehl zur R&amp;#252;ckkehr von der Unterbrechung (&lt;b&gt;Return 
+      from Interrupt&lt;/b&gt;)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>179</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche M&amp;#246;glichkeiten gibt es, &lt;b&gt;mit mehreren Unterbrechungen&lt;/b&gt; 
+      umzugehen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Unterbrechungen sperren: &lt;/b&gt;Der Unterbrechungsausgang wird 
+      vor&amp;#252;bergehend au&amp;#223;er Betrieb gesetzt (&lt;b&gt;interrupt disabled&lt;/b&gt;), 
+      dadurch bleiben weitere Unterbrechungssignale wirkungslos und die CPU 
+      kann die zuerst eingetretene Unterbrechung ungest&amp;#246;rt bearbeiten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; Verfahren wird auch eingesetzt, wenn CPU bei &lt;b&gt;Ausf&amp;#252;hrung von 
+      kritischen Programmabschnitten&lt;/b&gt; nicht unterbrochen werden darf&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Priorit&amp;#228;ten vergeben:&lt;/b&gt; Jedem Unterbrechungswunsch wird 
+      eine Priorit&amp;#228;t zugeordnet, Unterbrechungen mit niedriger Priorit&amp;#228;t 
+      k&amp;#246;nnen von Unterbrechungen mit h&amp;#246;herer Priorit&amp;#228;t unterbrochen werden
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>180</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Arten von &lt;b&gt;Softwareunterbrechungen (Traps)&lt;/b&gt; gibt es?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Ausnahmen (Exceptions): &lt;/b&gt;z.B. Division durch Null, versuchter 
+      Zugriff auf nichtexistierende oder gesch&amp;#252;tzte Hauptspeicheradressen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Systemaufrufe: &lt;/b&gt;wenn ein Programm Dienste des Betriebssystems 
+      in Anspruch nehmen will. Die verf&amp;#252;gbaren Systemaufrufe bieten die 
+      Programmierschnittstelle zwischen Anwendungsprogrammen und 
+      Betriebssystem.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>181</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den Ablauf der &lt;b&gt;Behandlung einer Softwareunterbrechung&lt;/b&gt; 
+      aufgrund eines Systemaufrufs!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Systemaufruf hat die &lt;b&gt;Form eines Funktionsaufruf&lt;/b&gt;s, es k&amp;#246;nnen 
+      auch &lt;b&gt;Parameter &amp;#252;bergeben&lt;/b&gt; werden:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; &lt;b&gt;direkt &lt;/b&gt;in einem&lt;b&gt; CPU-Register&lt;/b&gt; oder 
+&lt;/i&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; &lt;b&gt;indirekt&lt;/b&gt; durch Angabe der&lt;b&gt; Anfangsadresse&lt;/b&gt; des zu 
+      &amp;#252;bergebenden Datenbereichs &lt;b&gt;im Hauptspeicher&lt;/b&gt;.&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Anschlie&amp;#223;end f&amp;#252;hrt der Systemaufruf einen &lt;b&gt;besonderen Befehl&lt;/b&gt; 
+      aus, die die &lt;b&gt;eigentliche Unterbrechung ausl&amp;#246;st&lt;/b&gt;. Dies ist 
+      derselbe Befehl bei allen Systemaufrufen, der &lt;b&gt;gew&amp;#252;nschte Systemdienst&lt;/b&gt; 
+      wird durch einen &lt;b&gt;Parameter &lt;/b&gt;bezeichnet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nun geschieht in etwa &lt;b&gt;dasselbe wie bei einer Hardware-Unterbrechung&lt;/b&gt;: 
+      Rettung von Befehlsz&amp;#228;hler- und Registerinhalten, Aufruf der 
+      entsprechenden Betriebssystemroutine.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; Bei Systemaufrufen werden meistens &lt;b&gt;Daten&lt;/b&gt; an das 
+      aufrufende Programm &lt;b&gt;zur&amp;#252;ckgegeben&lt;/b&gt;.&lt;/i&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>182</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf welche 2 Arten kann nach einem Lesesauftrag ein &lt;b&gt;Datenblock&lt;/b&gt; 
+      vom &lt;b&gt;Pufferspeicher des Controllers&lt;/b&gt; in den &lt;b&gt;Hauptspeicher&lt;/b&gt; 
+      gelangen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Programmierte Ein-/Ausgabe (PIO = programmed I/O):&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Controller schreibt jeweils 1 Wort in sein Dateneingangsregister und 
+      l&amp;#246;st eine Unterbrechung aus, das Wort wird von der CPU empfangen und in 
+      den Hauptspeicher geschrieben. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; Nachteil: CPU wird mit simpler Daten&amp;#252;bertragung besch&amp;#228;ftigt&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Direkter Speicherzugriff (DMA = direct memory access):&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Spezieller DMA-Controller &amp;#252;bertr&amp;#228;gt selbstst&amp;#228;ndig, ohne Mithilfe der 
+      CPU, &amp;#252;ber den Bus Daten in den Hauptspeicher.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>183</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die &lt;b&gt;Funktionsweise von DMA&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Ger&amp;#228;tetreiber teilt dem &lt;b&gt;Ger&amp;#228;tecontroller&lt;/b&gt; &amp;#252;ber 
+      dessen Register die &lt;u&gt;Nummer des zu lesenden Blocks&lt;/u&gt; mit und dem &lt;b&gt;DMA-Controller&lt;/b&gt; 
+      die &lt;u&gt;Anfangsadresse des Hauptspeicherbereichs&lt;/u&gt;, in den die Daten 
+      &amp;#252;bertragen werden sollen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Danach kann die CPU sich anderen Aufgaben widmen. Der Ger&amp;#228;tecontroller 
+      setzt sich nun &amp;#252;ber spezielle Leitungen mit dem DMA-Controller in 
+      Verbindung. Wann immer das n&amp;#228;chste Wort im Register des 
+      Ger&amp;#228;tecontrollers bereitsteht, sendet er &amp;#252;ber eine &lt;b&gt;Anforderungsleitung&lt;/b&gt; 
+      ein &lt;u&gt;Signal an den DMA-Controller&lt;/u&gt;; dieser schreibt die 
+      entsprechende &lt;u&gt;Hauptspeicheradresse&lt;/u&gt; auf den Adressbus und 
+      signalisiert &amp;#252;ber die &lt;b&gt;Best&amp;#228;tigungsleitung&lt;/b&gt; dem 
+      Ger&amp;#228;tecontroller, die &lt;u&gt;&amp;#220;bertragung durchzuf&amp;#252;hren&lt;/u&gt;. 
+      Dann z&amp;#228;hlt der DMA-Controller die &lt;b&gt;Adresse f&amp;#252;r das n&amp;#228;chste 
+      Wort&lt;/b&gt; hoch. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erst wenn &lt;b&gt;alle W&amp;#246;rter&lt;/b&gt; des gesamten Blocks &amp;#252;bertragen sind, 
+      l&amp;#246;st er eine &lt;b&gt;Unterbrechung der CPU&lt;/b&gt; aus.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; eine Kommunikation wie die zwischen DMA- und Ger&amp;#228;tecontroller 
+      wird als &lt;b&gt;&amp;quot;handshaking&amp;quot;&lt;/b&gt; bezeichnet und stellt einen 
+      einfachen Fall eines Protokolls dar&lt;/i&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>184</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert der Start des Rechners?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auch das Betriebssystem selbst ist ein Programm. Wenn der Rechner 
+      eingeschaltet wird, steht ein kleiner Teil des Systems &amp;#8211; der sogenannte &lt;b&gt;Ur-Lader 
+      &lt;/b&gt;&amp;#8211; in einem speziellen Teil des Hauptspeichers, der seinen 
+      Inhalt auch nach Abschalten des Stroms beh&amp;#228;lt. Meist ist der Ur-Lader in 
+      einem ROM (read only memory) fest eingebrannt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Ur-Lader l&amp;#228;dt zun&amp;#228;chst den eigentlichen Lader von der Magnetplatte. Der 
+      Lader wird nun gestartet und l&amp;#228;dt das Betriebssystem &amp;#8211; zumindest seine wesentlichen 
+      Teile &amp;#8211; in den Hauptspeicher. Dieser Vorgang wird als &lt;b&gt;hochfahren 
+      (booting)&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>185</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie stellt man sicher, dass z.B. nicht mehrere Programme gleichzeitig 
+      auf ein Ger&amp;#228;t zugreifen k&amp;#246;nnen oder dass ein Programm nicht sensible 
+      Daten im Hauptspeicher auslesen oder &amp;#252;berschreiben darf?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei modernen Prozessoren unterscheidet man durch ein besonderes Bit 
+      zwischen&lt;b&gt; Systemmodus und Benutzermodus.&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Alle Anwendungsprogramme arbeiten im Benutzermodus. Bestimmte 
+      privilegierte Maschinenbefehle wie der Zugriff auf Ein-/Ausgabeger&amp;#228;te 
+      bzw. der Zugriff auf s&amp;#228;mtliche Adressen, die au&amp;#223;erhalb des definierten 
+      Adressraums vom Programm liegen, k&amp;#246;nnen nur im Systemmodus ausgef&amp;#252;hrt 
+      werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;Umschalten&lt;/b&gt; passiert wie folgt: Wenn ein Benutzerprogramm 
+      einen Systemdienst ben&amp;#246;tigt, l&amp;#246;st es eine Unterbrechung aus. Die 
+      Prozedur zur Unterbrechungsbehandlung schaltet den Prozessor in den 
+      Systemmodus und startet die entsprechende Unterbrechungsroutine. Vor 
+      Beenden der Unterbrechungsroutine wird in den Benutzermodus 
+      zur&amp;#252;ckgeschalten. Damit wird verhindert, dass ein nicht 
+      vertrauensw&amp;#252;rdiges Programm den Prozessor im Systemmodus benutzen darf.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>186</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie verhindert man, dass die Teile vom Hauptspeicher, in denen 
+      Programmcode oder Betriebssystemcode steht, &amp;#252;berschrieben werden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bevor ein Programm gestartet wird, weist ihm das Betriebssystem einen 
+      bestimmten Bereich im Hauptspeicher zu, seinen sogenannten &lt;b&gt;Adressraum&lt;/b&gt;. 
+      Das Programm darf nur auf Adressen innnerhalb seines eigenen Adressraums 
+      zugreifen, das bedeutet: alle m&amp;#246;glicherweise ben&amp;#246;tigten Daten, aber auch 
+      das Programm selbst, m&amp;#252;ssen in diesem Adressraum enthalten sein.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein zusammenh&amp;#228;ngender Adressraum l&amp;#228;sst sich durch die Inhalte von zwei 
+      speziellen Registern der CPU festlegen:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Im&lt;b&gt; Basisregister &lt;/b&gt;steht die niedrigste Adresse des Adressraums;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) das &lt;b&gt;Grenzregister &lt;/b&gt;enth&amp;#228;lt die L&amp;#228;nge des Adressraums, also die 
+      Differenz aus der h&amp;#246;chsten und der niedrigsten erlaubten Adresse. Die 
+      Inhalte von Basis- und Grenzregister k&amp;#246;nnen nur mit speziellen 
+      Maschinenbefehlen ver&amp;#228;ndert werden. Diese Befehle sind privilegiert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dadurch k&amp;#246;nnen auch die &lt;b&gt;relativen Adressen&lt;/b&gt;, die der Compiler 
+      innerhalb des Programms vergibt, leicht &lt;b&gt;w&amp;#228;hrend der Laufzeit&lt;/b&gt; 
+      in &lt;b&gt;absolute Adressen&lt;/b&gt; umgerechnet werden, und zwar mit der Formel:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      &lt;i&gt;absolute Adresse = (Basisregister) + relative Adresse &lt;/i&gt;
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      --&amp;gt; Weil die Programme zusammen mit ihren Adressr&amp;#228;umen beliebig im 
+      Hauptspeicher verschoben werden k&amp;#246;nnen, spricht man bei diesem Verfahren 
+      von &lt;b&gt;relokierbaren Programmen&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>187</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Prozess? Welche Bestandteile geh&amp;#246;ren zu einem Prozess?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Prozess ist ein &lt;b&gt;sich in Ausf&amp;#252;hrung befindliches Programm&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Zu einem Prozess geh&amp;#246;rt:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Der&lt;b&gt; Programmcode
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Der &lt;b&gt;Prozesskontext&lt;/b&gt;, u.a. bestehend aus:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Registerinhalten&lt;/b&gt;, insbesondere
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Befehlsz&amp;#228;hler&lt;/b&gt; und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Grenzen des Adressraums&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt;&lt;b&gt; Prozessnummer&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Prozesskontext wird im &lt;b&gt;Prozesskontrollblock&lt;/b&gt; gespeichert, wo 
+      auch vermerkt wird, ob der Prozess im &lt;u&gt;System- oder Benutzermodus&lt;/u&gt; 
+      arbeitet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>188</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In welchen Zust&amp;#228;nden kann sich ein Prozess befinden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>189</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Aufgabe hat der CPU-Scheduler? Nenne 2 Scheduling-Strategien und 
+      beschreibe ihre Vor- und Nachteile.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Scheduler entscheidet, welcher der Prozesse im Zustand &amp;quot;bereit&amp;quot; als 
+      n&amp;#228;chstes rechnen darf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Schedulingstrategien:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;FCFS (first-come, first-served)&lt;/b&gt;: Der Prozess, der am l&amp;#228;ngsten 
+      bereit ist, darf zuerst rechnen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Vorteil:&lt;/b&gt; Kann leicht mit einer Warteschlange realisiert 
+      werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Nachteil:&lt;/b&gt; Braucht ein Prozess sehr lange oder l&amp;#228;uft er 
+      gar in eine Endlosschleife, h&amp;#228;lt er alle anderen Prozesse auf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;SJF (shortest job first)&lt;/b&gt;: Der Prozess, der am wenigsten 
+      Rechenzeit ben&amp;#246;tigt, darf zuerst rechnen. Die Rechenzeit muss sich dazu 
+      aus Erfahrungswerten gut vorhersagen lassen k&amp;#246;nnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Vorteil:&lt;/b&gt; die Gesamtwartezeit wird minimiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ---&amp;gt; &lt;b&gt;Nachteil:&lt;/b&gt; Wenn immer wieder kurze Prozesse gestartet 
+      werden, kommen die langen Prozesse evtl. nie dran (starvation). Dies 
+      kann verhindert werden, wenn Priorit&amp;#228;ten an die Prozesse vergeben 
+      werden, die sich mit der Wartezeit erh&amp;#246;hen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>190</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Begriffe Stapel-/ Batch-Betrieb und Time-Sharing-Betrieb!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Batch/Stapelbetrieb:&lt;/b&gt; Der Rechner erh&amp;#228;lte einen ganzen Schub 
+      von Auftr&amp;#228;gen, die keine Interaktion mit dem Benutzer erfordern und 
+      regelm&amp;#228;&amp;#223;ig auszuf&amp;#252;hren sind, so dass man ihre Laufzeiten in etwa kennt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Time-Sharing-Betrieb&lt;/b&gt;: Mehrere Benutzer k&amp;#246;nnen zur selben Zeit 
+      an einem Rechner arbeiten, und jeder kann gleichzeitig mehrere Programme 
+      laufen lassen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>191</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie entsteht der Eindruck, dass mehrere Prozesse gleichzeitig laufen, 
+      auch auf einem Einprozessorsystem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Scheduler teilt in schnellem Wechsel jedem Prozess im Zustand 
+      &amp;quot;bereit&amp;quot; ein gewisses Quantum an Rechenzeit. Die&lt;b&gt; 
+      Umschaltung zwischen den Prozessen erfolgt so schnell, dass die 
+      Unterbrechungen nicht sp&amp;#252;rbar werden. &lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Ablauf: &lt;/b&gt;Wenn ein bereiter Prozess rechnend gemacht wird, weist 
+      der Scheduler ihm eine &lt;b&gt;Zeitscheibe (time slice) an Rechenzeit&lt;/b&gt; zu; 
+      ihre Dicke kann von der Priorit&amp;#228;t des Prozesses abh&amp;#228;ngen oder davon, 
+      wieviel Rechenzeit der Prozess insgesamt schon verbraucht hat.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein &lt;b&gt;Zeitgeber (timer)&lt;/b&gt; wacht dar&amp;#252;ber, dass der Prozess sein 
+      Quantum nicht &amp;#252;berschreitet; oft ist daf&amp;#252;r ein eigener Chip im Rechner 
+      vorhanden, der an den Takt der CPU angeschlossen ist. Die Dicke der 
+      zugewiesenen Zeitscheibe wird in einem Register des Zeitgebers 
+      gespeichert. Nach jeder verstrichenen Zeiteinheit wird der Inhalt dieses 
+      Registers um eins verringert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ist der Wert bei null angekommen, so ist die zugewiesene Zeitscheibe 
+      abgelaufen, und der Zeitgeber l&amp;#246;st eine Unterbrechung der CPU aus.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Prozess wird unterbrochen und wieder in die Menge der bereiten 
+      Prozesse eingereiht. Nun kommt ein anderer Prozess an die Reihe.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>192</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In welcher Reihenfolge erhalten die Prozesse &amp;#252;blicherweise ihre 
+      Zeitscheiben?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nach dem round-robin-Verfahren - bei diesem werden die Prozesse reihum 
+      bedient. Dazu kann man sie in der Reihenfolge ihres Eintreffens in einer 
+      kreisf&amp;#246;rmigen Warteschlange speichern. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>193</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie bezeichnet man das Umschalten zwischen Prozessen? Wer ist daf&amp;#252;r 
+      verantwortlich?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Umschalten zwischen Prozessen bezeichnet man auch als &lt;b&gt;Kontextwechsel&lt;/b&gt;, 
+      verantwortlich daf&amp;#252;r ist der&lt;b&gt; Dispatcher. &lt;/b&gt;Da solche 
+      Kontextwechsel h&amp;#228;ufig vorkommen, ist es wichtig, dass der Dispatcher 
+      m&amp;#246;glichst schnell arbeitet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>194</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe, was bei Ausf&amp;#252;hrung des zum Hochsprachenbefehl &amp;quot;read&amp;quot; 
+      geh&amp;#246;renden Systemaufrufs in einem Prozesse P passiert!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Eine Software-Unterbrechung wird ausgel&amp;#246;st; der Kontext von P 
+      wird zun&amp;#228;chst gerettet, dann wird der (ger&amp;#228;teunabh&amp;#228;ngige) Ein/Ausgabeteil 
+      des Betriebssystems aufgerufen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Dieser pr&amp;#252;ft zun&amp;#228;chst, ob die ben&amp;#246;tigten Daten nicht 
+      schon im Cache im Hauptspeicher stehen; in dem Fall werden sie in den 
+      Adressraum von P kopiert, und nach der R&amp;#252;ckkehr von der 
+      Software-Unterbrechung wird der Prozess P sofort wieder rechnend.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Stehen die Daten nicht im Cache, ist ein Plattenzugriff 
+      erforderlich. Der Prozess P wird solange blockiert. Der Ein-/Ausgabeteil 
+      des Betriebssystems bestimmt die physische Datenadresse und h&amp;#228;ngt den 
+      Leseauftrag an die Ger&amp;#228;te-Warteschlange des Plattenlaufwerks an. 
+      Dann gibt es dem Ger&amp;#228;tetreiber Bescheid.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) Sobald der Ger&amp;#228;tetreiber frei ist und rechnend wird, entnimmt er den 
+      Auftrag der Ger&amp;#228;te-Warteschlange. Der Ger&amp;#228;tetreiber reserviert 
+      im betriebssystemeigenen Bereich Speicherplatz f&amp;#252;r die zu lesenden Daten 
+      und schickt einen Lesebefehl an den Ger&amp;#228;tecontroller. Dann f&amp;#252;hrt 
+      der Treiber den Systemaufruf Warten aus und blockiert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.) Der Ger&amp;#228;tecontroller f&amp;#252;hrt den Leseauftrag aus und 
+      &amp;#252;bertr&amp;#228;gt zusammen mit dem DMA-Controller die Daten in den 
+      reservierten Bereich im systemeigenen Speicher; w&amp;#228;hrenddessen k&amp;#246;nnen auf 
+      der CPU beliebige andere Prozesse rechnen. Danach wird eine Unterbrechung 
+      ausgel&amp;#246;st.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      6.) Mittels des Unterbrechungsvektors wird die Unterbrechungsroutine des 
+      Plattenlaufwerks gestartet. Sie schickt das Signal, auf das der 
+      Ger&amp;#228;tetreiber wartet, und kehrt dann von der Unterbrechung zur&amp;#252;ck. 
+      Der Ger&amp;#228;tetreiber wird dadurch bereit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      7.) Sobald der Ger&amp;#228;tetreiber rechnend wird, sieht er in der Ger&amp;#228;te-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warteschlange nach, von welchem Prozess der Leseauftrag stammte, gibt 
+      dem Ein-/Ausgabeteil des Betriebssystems Bescheid und geht in den 
+      Zustand bereit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      8.) Der Ein-/Ausgabeteil des Betriebssystems kopiert die Daten aus dem 
+      systemeigenen Speicher in den Adressraum des Prozesses P und versetzt P 
+      aus dem Zustand blockiert in den Zustand bereit.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      9.) Sobald der Prozess P wieder rechnen darf, wird der Systemaufruf 
+      beendet, und P setzt seine Arbeit hinter dem read fort.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>195</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wof&amp;#252;r gibt es eine Ger&amp;#228;te-Warteschlange zu jedem Speicherger&amp;#228;t? Was tut 
+      diese?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Im Time-Sharing-Betrieb kann es vorkommen, dass viele Prozesse kurz
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      nacheinander auf ein Ger&amp;#228;t zugreifen wollen. Deshalb wird zu jedem 
+      Speicherger&amp;#228;t eine eigene Ger&amp;#228;te-Warteschlange (device queue) 
+      eingerichtet, an die der Ein-/Ausgabeteil des Betriebssystems Auftr&amp;#228;ge 
+      anh&amp;#228;ngen kann. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Jeder Auftrag wird mit der Nummer des Prozesses versehen, der ihn 
+      erteilt hat. Der Ger&amp;#228;tetreiber holt die Auftr&amp;#228;ge einzeln aus der 
+      Warteschlange ab und f&amp;#252;hrt sie dem Controller zu. Dabei ist der 
+      Treiber nicht an die Reihenfolge in der Warteschlange gebunden; er kann 
+      vielmehr versuchen, durch geschickte Wahl des n&amp;#228;chsten Auftrags die 
+      Zugriffszeit des Ger&amp;#228;ts zu minimieren.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>196</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den &lt;b&gt;Kern des Betriebssystems &lt;/b&gt;und seine &lt;b&gt;Schnittstellen&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>197</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche &lt;b&gt;Kategorien von Systemaufrufen&lt;/b&gt; bietet die 
+      Programmierstelle? Erl&amp;#228;utere diese und nenne Beispiele!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Prozesse: &lt;/b&gt;Steuerung der verschiedenen Prozesszust&amp;#228;nde.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; warten auf Ereignis, Ereignis senden, selbst anhalten, Abbruch bei 
+      Fehler, Fehlermeldung ausgeben, dump (Registerinhalt und 
+      Adressrauminhalt ausgeben), landeres Programm laden, Kindprozess 
+      erzeugen und ausf&amp;#252;hren, Attribute bei Kindprozess setzen, Kindprozess 
+      terminieren
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Dateien: &lt;/b&gt;Abbildung der logischen Sicht auf die physische 
+      Dateiorganisation in Bl&amp;#246;cken.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; Dateien anlegen, l&amp;#246;schen, &amp;#246;ffnen, schlie&amp;#223;en; in Dateien lesen, 
+      schreiben, Datei &amp;quot;vor- und zur&amp;#252;ckspulen&amp;quot;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Information: &lt;/b&gt;Ausgeben von Systeminformationen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; Ausgabe von Zeit, Datum, Betriebssystemversion, Liste der aktiven 
+      Prozesse
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Kommunikation: &lt;/b&gt;Informationsaustausch zwischen Prozessen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      a) &lt;u&gt;Nachrichtenaustausch&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;i&gt;verbindungslos: &lt;/i&gt;&lt;/b&gt;Versenden und Empfangen von Nachrichten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; kurze Nachrichten: Prozesssignale s.o., f&amp;#252;r l&amp;#228;ngere Nachrichten 
+      Systemaufrufe zum Senden/Empfangen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;i&gt;verbindungsorientiert: &lt;/i&gt;&lt;/b&gt;Verbindungaufbau-Kommunikation-Verbindungsabbau
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; &amp;#246;ffnen &amp;amp; schlie&amp;#223;en der Verbindung, warten auf Verbindung, Verbindung 
+      akzeptieren
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      b) &lt;u&gt;gemeinsamer Speicherbereich&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      da Prozesse normalerweise getrennte Adressr&amp;#228;ume haben, braucht man  
+      Systemaufrufe, um vor&amp;#252;bergehend eine Teil des Adressraums in den anderen 
+      abzubilden sowie Synchronisationsmechanismen
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>550</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>198</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine &lt;b&gt;Datei&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Grob gesagt eine Sammlung zusammengeh&amp;#246;riger Informationen. Dateien 
+      k&amp;#246;nnen Programme in Maschinencode, Videos, HTML-Seiten,... sein.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dateien befinden sich im Sekund&amp;#228;r- und Terti&amp;#228;rspeicher, auch das 
+      Betriebssystem und die Systemprogramme sind Dateien.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Aus der Sicht des Benutzers sind Dateien abstrakte Datentypen, &amp;#228;hnlich 
+      wie virtuelle Ger&amp;#228;te. Sie sind in logische Datens&amp;#228;tze (records) 
+      aufgeteilt, die einzelne Informationseinheiten darstellen und oft 
+      dieselbe L&amp;#228;nge haben. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Zugriff auf die Datens&amp;#228;tze erfolgt entweder sequentiell oder 
+      wahlfrei. Manchmal kann man &amp;#252;ber einen Schl&amp;#252;ssel zugreifen (z.B. 
+      Personal-ID)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>199</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Kategorien von Systemprogrammen bietet die Benutzerschnittstelle? 
+      Erl&amp;#228;utere diese und nenne Beispiele!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Programme: Aktivit&amp;#228;ten zum Herstellen und Ausf&amp;#252;hren von Programmen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; Editor, Compiler, Interpreter, Binder, Loader, Debugger
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Dateien und Verzeichnisse: Datei-Operationen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; Dateien/Verzeichnisse anlegen, kopieren, drucken, umbenennen, 
+      l&amp;#246;schen, Setzen von Zugriffsberechtigungen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Information: Anzeigen von Systemparametern
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; Zeit, Datum, freier Speicherplatz, CPU-Auslastung,...
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) Kommunikation: Regelung der Kommunikation zwischen Benutzern
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      -&amp;gt; E-Mail, Dateitransfer (FTP,..), Fernzugriff,..
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>200</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Kommandointerpreter?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Kommandointerpreter nimmt Eingaben des Benutzers entgegen und 
+      veranlasst ihre Ausf&amp;#252;hrung. W&amp;#228;hrend fr&amp;#252;her alle Kommandos eingetippt 
+      werden mussten, kann man heute die Maus einsetzen oder z.B. durch einen 
+      Doppelklick ein Programm starten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Fr&amp;#252;her waren die Programme zur Ausf&amp;#252;hrung der Benutzerkommandos selbst 
+      Teil des Kommandointerpreters, wodurch dieser unhandlich und &amp;#196;nderungen 
+      m&amp;#252;hsam wurden. Heute kann man jedem Nutzer einen ma&amp;#223;geschneiderten 
+      Kommandointerpreter (shell) zur Verf&amp;#252;gung stellen, in dem auch eigene 
+      Kommandos definiert werden k&amp;#246;nnen, indem man eine Datei mit dem Namen 
+      des Kommandos anlegt, in der das zugeh&amp;#246;rige ausf&amp;#252;hrbare Systemprogramm 
+      steht und dem System beim Aufruf mitteilt, in welchem Verzeichnis sich 
+      diese Datei befindet (-&amp;gt; Setzen von Umgebungsvariablen).
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>201</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Parallelrechner?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei Parallelrechnern, auch Multiprozessorsysteme genannt, wird die &lt;b&gt;&lt;i&gt;Arbeit 
+      auf mehrere Prozessoren verteilt&lt;/i&gt;&lt;/b&gt;. Diese teilen sich einen &lt;b&gt;&lt;i&gt;gemeinsamen 
+      Hauptspeicher&lt;/i&gt;&lt;/b&gt;, der Zugriff erfolgt &amp;#252;ber einen&lt;b&gt;&lt;i&gt; Bus&lt;/i&gt;&lt;/b&gt; 
+      oder der Hauptspeicher wird in gleich gro&amp;#223;e Teile zerlegt und ein &lt;b&gt;&lt;i&gt;Schalterwerk&lt;/i&gt;&lt;/b&gt; 
+      regelt den Zugriff
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Vorteile:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;Effizienzsteigerung durch Parallelisierung&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;Kostenersparnis&lt;/b&gt;, da mehrere CPUs in einem Geh&amp;#228;use billiger
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;Fehlertoleranz&lt;/b&gt; bei mehrfach ausgef&amp;#252;hrten Berechnungen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ! Bei einer Aufteilung auf k Prozessoren l&amp;#228;sst sich ein Problem jedoch 
+      nicht k-mal so schnell ausf&amp;#252;hren, da 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1. die Kommunikation zwischen den Prozessoren Zeit braucht, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2. der m&amp;#246;gliche Parallelisierungsgrad nicht bei allen Problemen gleich 
+      hoch ist.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>202</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind verteilte Systeme?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einem verteilten System hat jeder Prozessor seinen &lt;b&gt;&lt;i&gt;eigenen 
+      Speicher&lt;/i&gt;&lt;/b&gt;, auf den nur er selbst zugreifen kann. Die 
+      Kommunikation zwischen den Prozessoren kann also nur &amp;#252;ber den &lt;b&gt;&lt;i&gt;Versand 
+      von Nachrichten&lt;/i&gt;&lt;/b&gt; erfolgen. Die Prozessoren k&amp;#246;nnen &lt;b&gt;&lt;i&gt;im 
+      selben Geh&amp;#228;use&lt;/i&gt;&lt;/b&gt; sein, aber auch &lt;b&gt;&lt;i&gt;auf einzelnen 
+      Rechnern, &lt;/i&gt;&lt;/b&gt;die durch ein Netzwerk verbunden sind.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beispiel f. Prozessoren im selben Geh&amp;#228;use: &lt;b&gt;Hypercube-Architektur&lt;/b&gt;. 
+      Beim d-dimensionalen Hypercube gibt es f&amp;#252;r jeden der 2 d m&amp;#246;glichen 
+      Vektoren, die man aus d Nullen und Einsen bilden kann, einen Prozessor. 
+      Nun ist aber nicht jeder Prozessor direkt mit jedem anderen verbunden, 
+      sondern nur mit den den Prozessoren, deren Vektor sich an genau einer 
+      Stelle vom eigenen Vektor unter-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      scheidet
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>203</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Realzeitsysteme?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Ergebnis muss bei Realzeitsystemen innerhalb einer vorgegebenen Zeit 
+      berechnet werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da sich mit g&amp;#228;ngigen Multitaskingsystemen diese Anforderungen nicht 
+      erf&amp;#252;llen lassen, werden Realzeitsysteme anders aufgebaut, z.B. werden 
+      gro&amp;#223;e Teile der Software in ROMs untergebracht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+</flashcards>
