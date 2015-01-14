@@ -6,7 +6,6 @@ import importExport.XMLMedia;
 import java.io.IOException;
 import java.io.StringReader;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import storage.*;
 import utils.HTMLToText;
@@ -24,8 +23,6 @@ public class FlashCard {
     private int questionWidth;
     private int answerWidth;
 
-    private ArrayList<Label> labels;
-
     private String pathToQuestionPic;
     private String pathToAnswerPic;
 
@@ -35,15 +32,13 @@ public class FlashCard {
             int questionWidth, int answerWidth) throws SQLException {
         dbex = proj.getDBEX();
         mex = proj.getMex();
-        this.id = dbex.nextFlashcardId();
+        this.id = dbex.nextId(TableType.FLASHCARDS);
         this.proj = proj;
         this.stack = 1;
         this.question = question;
         this.answer = answer;
         this.questionWidth = questionWidth;
         this.answerWidth = answerWidth;
-
-        labels = new ArrayList<Label>();
 
         this.pathToQuestionPic = pathToQuestionPic;
         this.pathToAnswerPic = pathToAnswerPic;
@@ -61,8 +56,6 @@ public class FlashCard {
         this.answer = answer;
         this.questionWidth = questionWidth;
         this.answerWidth = answerWidth;
-
-        labels = new ArrayList<Label>();
 
         this.pathToQuestionPic = pathToQuestionPic;
         this.pathToAnswerPic = pathToAnswerPic;
@@ -202,18 +195,6 @@ public class FlashCard {
         this.answerWidth = answerWidth;
     }
 
-    public ArrayList<Label> getLabels() {
-        return labels;
-    }
-
-    public void addLabel(Label newLabel) {
-        labels.add(newLabel);
-    }
-
-    public void removeLabel(Label labelToRemove) {
-        labels.remove(labelToRemove);
-    }
-
     public String toString() {
         return "ID: " + this.getId() + ", PROJECT: " + this.getProj().getTitle() + ", STACK " + this.getStack() + " QUESTION: "
                 + this.getQuestion() + ", ANSWER: " + this.getAnswer() + ", PATH TO QUESTION PIC: " + this.getPathToQuestionPic()
@@ -221,7 +202,7 @@ public class FlashCard {
                 + ", CUSTOM_WIDTH_A: " + this.getAnswerWidth();
     }
 
-    public String getQuestionInPlainText() {
+    public Object getQuestionInPlainText() {
         StringReader in = new StringReader(this.getQuestion());
         HTMLToText parser = new HTMLToText();
         String question = null;

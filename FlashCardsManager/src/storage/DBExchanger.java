@@ -242,6 +242,96 @@ public class DBExchanger {
 
     /***************************************** LABEL QUERIES ****************************************************/
 
+    public ArrayList<Label> getAllLabels(LearningProject p) throws SQLException {
+        ArrayList<Label> labels = new ArrayList<Label>();
+        Statement st = conn.createStatement();
+        st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId());
+        conn.commit();
+        if (StartApp.DEBUG)
+            System.out.println("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId());
+        ResultSet res = st.getResultSet();
+        if (res.next()) {
+            Label l = new Label(res.getInt(1), res.getString(2), p);
+            labels.add(l);
+        }
+        res.close();
+        return labels;
+    }
+
+    public ArrayList<Label> getAllLabels(FlashCard f) throws SQLException {
+        ArrayList<Label> labels = new ArrayList<Label>();
+        Statement st = conn.createStatement();
+        st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " INNER JOIN " + labelsFlashcardsTable
+                + " ON LABEL_ID_PK = LABEL_ID_FK AND CARD_ID_FK = " + f.getId());
+        conn.commit();
+        if (StartApp.DEBUG)
+            System.out.println("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " INNER JOIN " + labelsFlashcardsTable
+                    + " ON LABEL_ID_PK = LABEL_ID_FK AND CARD_ID_FK = " + f.getId());
+        ResultSet res = st.getResultSet();
+        if (res.next()) {
+            Label l = new Label(res.getInt(1), res.getString(2), f.getProj());
+            labels.add(l);
+        }
+        res.close();
+        return labels;
+    }
+
+    public void addLabelToProject(Label l) throws SQLException {
+        Statement st = conn.createStatement();
+        st.execute("INSERT INTO " + labelsTable + " VALUES (" + l.getId() + ", '" + l.getTitle() + "', " + l.getProject().getId()
+                + ")");
+        conn.commit();
+        if (StartApp.DEBUG)
+            System.out.println("INSERT INTO " + labelsTable + " VALUES (" + l.getId() + ", '" + l.getTitle() + "', "
+                    + l.getProject().getId() + ")");
+        st.close();
+    }
+
+    public void addLabelToFlashcard(Label l, FlashCard f) throws SQLException {
+        Statement st = conn.createStatement();
+        st.execute("INSERT INTO " + labelsFlashcardsTable + " VALUES (" + nextId(TableType.LABELS_FLASHCARDS) + ", " + l.getId()
+                + "', " + f.getId() + ")");
+        conn.commit();
+        if (StartApp.DEBUG)
+            System.out.println("INSERT INTO " + labelsFlashcardsTable + " VALUES (" + nextId(TableType.LABELS_FLASHCARDS) + ", "
+                    + l.getId() + "', " + f.getId() + ")");
+        st.close();
+    }
+
+    public void updateLabelFromProject(Label l) throws SQLException {
+        Statement st = conn.createStatement();
+        st.execute("UPDATE " + labelsTable + " SET LABEL_NAME = '" + l.getTitle() + "', PROJ_ID_PK = " + l.getProject().getId()
+                + " WHERE LABEL_ID_PK = " + l.getId());
+        conn.commit();
+        if (StartApp.DEBUG)
+            System.out.println("UPDATE " + labelsTable + " SET LABEL_NAME = '" + l.getTitle() + "', PROJ_ID_PK = "
+                    + l.getProject().getId() + " WHERE LABEL_ID_PK = " + l.getId());
+        st.close();
+    }
+
+    public void deleteLabelFromFlashCard(Label l, FlashCard f) throws SQLException {
+        Statement st = conn.createStatement();
+        st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK = " + l.getId() + " AND CARD_ID_FK = "
+                + f.getId());
+        conn.commit();
+        if (StartApp.DEBUG)
+            System.out.println("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK = " + l.getId()
+                    + " AND CARD_ID_FK = " + f.getId());
+        st.close();
+    }
+
+    public void deleteLabelFromProject(Label l) throws SQLException {
+        Statement st = conn.createStatement();
+        st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK = " + l.getId());
+        if (StartApp.DEBUG)
+            System.out.println("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK = " + l.getId());
+        st.execute("DELETE FROM " + labelsTable + " WHERE LABEL_ID_PK = " + l.getId());
+        if (StartApp.DEBUG)
+            System.out.println("DELETE FROM " + labelsTable + " WHERE LABEL_ID_PK = " + l.getId());
+        conn.commit();
+        st.close();
+    }
+
     /***************************************** FLASHCARD QUERIES ****************************************************/
     // ADD FLASHCARD: insert flashcard into table
     public void addFlashcard(FlashCard card) throws SQLException {
@@ -383,10 +473,10 @@ public class DBExchanger {
             break;
         }
         if (StartApp.DEBUG)
-            System.out.println("INSERT INTO " + mediaTable + " VALUES (" + nextMediaId() + ", " + f.getId() + ", '" + newPath
-                    + "', '" + type.getShortForm() + "')");
-        st.execute("INSERT INTO " + mediaTable + " VALUES (" + nextMediaId() + ", " + f.getId() + ", '" + newPath + "', '"
-                + type.getShortForm() + "')");
+            System.out.println("INSERT INTO " + mediaTable + " VALUES (" + nextId(TableType.MEDIA) + ", " + f.getId() + ", '"
+                    + newPath + "', '" + type.getShortForm() + "')");
+        st.execute("INSERT INTO " + mediaTable + " VALUES (" + nextId(TableType.MEDIA) + ", " + f.getId() + ", '" + newPath
+                + "', '" + type.getShortForm() + "')");
         conn.commit();
         st.close();
     }
@@ -457,59 +547,6 @@ public class DBExchanger {
     }
 
     /***************************************** OTHER QUERIES ****************************************************/
-
-    private int nextMediaId() throws SQLException {
-        int count = 1;
-        Statement st = conn.createStatement();
-        if (StartApp.DEBUG)
-            System.out.println("SELECT MEDIA_ID_PK FROM " + mediaTable + " ORDER BY MEDIA_ID_PK ASC");
-        st.execute("SELECT MEDIA_ID_PK FROM " + mediaTable + " ORDER BY MEDIA_ID_PK ASC");
-        ResultSet res = st.getResultSet();
-        while (res.next()) {
-            int id = res.getInt(1);
-            if (id != count) {
-                return count;
-            }
-            count++;
-        }
-        return count;
-    }
-
-    public int nextFlashcardId() throws SQLException {
-        int count = 1;
-        Statement st = conn.createStatement();
-        if (StartApp.DEBUG)
-            System.out.println("SELECT CARD_ID_PK FROM " + flashcardsTable + " ORDER BY CARD_ID_PK ASC");
-        st.execute("SELECT CARD_ID_PK FROM " + flashcardsTable + " ORDER BY CARD_ID_PK ASC");
-        ResultSet res = st.getResultSet();
-        while (res.next()) {
-            int id = res.getInt(1);
-            if (id != count) {
-                return count;
-            }
-            count++;
-        }
-        return count;
-    }
-
-    // public int nextProjectId() throws SQLException {
-    // Statement st = conn.createStatement();
-    // if (StartApp.DEBUG)
-    // System.out.println("SELECT PROJ_ID_PK FROM " + projectsTable +
-    // " ORDER BY PROJ_ID_PK ASC");
-    // st.execute("SELECT PROJ_ID_PK FROM " + projectsTable +
-    // " ORDER BY PROJ_ID_PK ASC");
-    // ResultSet res = st.getResultSet();
-    // int count = 1;
-    // while (res.next()) {
-    // int id = res.getInt(1);
-    // if (id != count) {
-    // return count;
-    // }
-    // count++;
-    // }
-    // return count;
-    // }
 
     public int nextId(TableType type) throws SQLException {
         String table = getTableName(type);
