@@ -6,215 +6,234 @@ import importExport.XMLMedia;
 import java.io.IOException;
 import java.io.StringReader;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
-import exc.CustomErrorHandling;
 import storage.*;
 import utils.HTMLToText;
+import exc.CustomErrorHandling;
 
 public class FlashCard {
 
-	private final DBExchanger dbex;
-	private final MediaExchanger mex;
-	private int id;
-	private LearningProject proj;
-	private int stack;
-	private String question;
-	private String answer;
-	private int questionWidth;
-	private int answerWidth;
+    private final DBExchanger dbex;
+    private final MediaExchanger mex;
+    private int id;
+    private LearningProject proj;
+    private int stack;
+    private String question;
+    private String answer;
+    private int questionWidth;
+    private int answerWidth;
 
-	private String pathToQuestionPic;
-	private String pathToAnswerPic;
+    private ArrayList<Label> labels;
 
-	// CONSTRUCTORS
-	// constructs a new flashcard
-	public FlashCard(LearningProject proj, String question, String answer, String pathToQuestionPic, String pathToAnswerPic,
-			int questionWidth, int answerWidth) throws SQLException {
-		dbex = proj.getDBEX();
-		mex = proj.getMex();
-		this.id = dbex.nextFlashcardId();
-		this.proj = proj;
-		this.stack = 1;
-		this.question = question;
-		this.answer = answer;
-		this.questionWidth = questionWidth;
-		this.answerWidth = answerWidth;
+    private String pathToQuestionPic;
+    private String pathToAnswerPic;
 
-		this.pathToQuestionPic = pathToQuestionPic;
-		this.pathToAnswerPic = pathToAnswerPic;
-	}
+    // CONSTRUCTORS
+    // constructs a new flashcard
+    public FlashCard(LearningProject proj, String question, String answer, String pathToQuestionPic, String pathToAnswerPic,
+            int questionWidth, int answerWidth) throws SQLException {
+        dbex = proj.getDBEX();
+        mex = proj.getMex();
+        this.id = dbex.nextFlashcardId();
+        this.proj = proj;
+        this.stack = 1;
+        this.question = question;
+        this.answer = answer;
+        this.questionWidth = questionWidth;
+        this.answerWidth = answerWidth;
 
-	// restores a flashcard from database
-	public FlashCard(int id, LearningProject proj, int stack, String question, String answer, String pathToQuestionPic,
-			String pathToAnswerPic, int questionWidth, int answerWidth) {
-		dbex = proj.getDBEX();
-		mex = proj.getMex();
-		this.id = id;
-		this.proj = proj;
-		this.stack = stack;
-		this.question = question;
-		this.answer = answer;
-		this.questionWidth = questionWidth;
-		this.answerWidth = answerWidth;
+        labels = new ArrayList<Label>();
 
-		this.pathToQuestionPic = pathToQuestionPic;
-		this.pathToAnswerPic = pathToAnswerPic;
-	}
+        this.pathToQuestionPic = pathToQuestionPic;
+        this.pathToAnswerPic = pathToAnswerPic;
+    }
 
-	public void store() throws SQLException, IOException {
-		proj.addCard(this);
-		mex.storePic(this, PicType.QUESTION);
-		mex.storePic(this, PicType.ANSWER);
-		dbex.addFlashcard(this);
-	}
-	
-	public void transferTo(LearningProject newProj, boolean keepSuccess) throws SQLException, IOException {
-	   proj.removeCard(this);
-	   setProj(newProj);
-	   setStack (keepSuccess ? Math.min(getStack(), newProj.getNumberOfStacks()) : 1);
-	   mex.transferPic(this, PicType.QUESTION);
-	   mex.transferPic(this, PicType.ANSWER);
-	   dbex.updateFlashcard(this);
-	}
+    // restores a flashcard from database
+    public FlashCard(int id, LearningProject proj, int stack, String question, String answer, String pathToQuestionPic,
+            String pathToAnswerPic, int questionWidth, int answerWidth) {
+        dbex = proj.getDBEX();
+        mex = proj.getMex();
+        this.id = id;
+        this.proj = proj;
+        this.stack = stack;
+        this.question = question;
+        this.answer = answer;
+        this.questionWidth = questionWidth;
+        this.answerWidth = answerWidth;
 
-	public void update() throws SQLException, IOException {
-		mex.storePic(this, PicType.QUESTION);
-		mex.storePic(this, PicType.ANSWER);
-		dbex.updateFlashcard(this);
-	}
+        labels = new ArrayList<Label>();
 
-	public void delete() throws SQLException, IOException {
-		mex.deleteAllPics(this);
-		proj.removeCard(this);
-		dbex.deleteFlashcard(this);
-	}
+        this.pathToQuestionPic = pathToQuestionPic;
+        this.pathToAnswerPic = pathToAnswerPic;
+    }
 
-	// ID - Getter
-	public int getId() {
-		return this.id;
-	}
-	
-	public int getNumberInProj() throws SQLException {
-		return dbex.getCardNumberInProject(this);
-	}
+    public void store() throws SQLException, IOException {
+        proj.addCard(this);
+        mex.storePic(this, PicType.QUESTION);
+        mex.storePic(this, PicType.ANSWER);
+        dbex.addFlashcard(this);
+    }
 
-	public void nextLevel() throws SQLException {
-		int maxStack = proj.getNumberOfStacks();
-		if (stack < maxStack) {
-			stack++;
-		}
-	}
+    public void transferTo(LearningProject newProj, boolean keepSuccess) throws SQLException, IOException {
+        proj.removeCard(this);
+        setProj(newProj);
+        setStack(keepSuccess ? Math.min(getStack(), newProj.getNumberOfStacks()) : 1);
+        mex.transferPic(this, PicType.QUESTION);
+        mex.transferPic(this, PicType.ANSWER);
+        dbex.updateFlashcard(this);
+    }
 
-	public void levelDown() throws SQLException {
-		if (stack > 1) {
-			stack--;
-		}
-	}
+    public void update() throws SQLException, IOException {
+        mex.storePic(this, PicType.QUESTION);
+        mex.storePic(this, PicType.ANSWER);
+        dbex.updateFlashcard(this);
+    }
 
-	public XMLFlashCard toXMLFlashcard() {
-		XMLFlashCard card = new XMLFlashCard();
-		card.setId(this.id);
-		card.setProjId(this.proj.getId());
-		card.setStack(this.stack);
-		card.setQuestion(question.equals("") ? " " : this.question);
-		card.setAnswer(answer.equals("") ? " " : this.answer);
-		card.setCustomWidthQuestion(this.questionWidth);
-		card.setCustomWidthAnswer(this.answerWidth);
-		return card;
-	}
+    public void delete() throws SQLException, IOException {
+        mex.deleteAllPics(this);
+        proj.removeCard(this);
+        dbex.deleteFlashcard(this);
+    }
 
-	public XMLMedia getXMLQuestionMedia() throws SQLException {
-		return dbex.getPic(this, PicType.QUESTION);
-	}
+    // ID - Getter
+    public int getId() {
+        return this.id;
+    }
 
-	public XMLMedia getXMLAnswerMedia() throws SQLException {
-		return dbex.getPic(this, PicType.ANSWER);
-	}
+    public int getNumberInProj() throws SQLException {
+        return dbex.getCardNumberInProject(this);
+    }
 
-	public String getQuestion() {
-		return question;
-	}
+    public void nextLevel() throws SQLException {
+        int maxStack = proj.getNumberOfStacks();
+        if (stack < maxStack) {
+            stack++;
+        }
+    }
 
-	public void setQuestion(String question) {
-		this.question = question;
-	}
+    public void levelDown() throws SQLException {
+        if (stack > 1) {
+            stack--;
+        }
+    }
 
-	public String getAnswer() {
-		return answer;
-	}
+    public XMLFlashCard toXMLFlashcard() {
+        XMLFlashCard card = new XMLFlashCard();
+        card.setId(this.id);
+        card.setProjId(this.proj.getId());
+        card.setStack(this.stack);
+        card.setQuestion(question.equals("") ? " " : this.question);
+        card.setAnswer(answer.equals("") ? " " : this.answer);
+        card.setCustomWidthQuestion(this.questionWidth);
+        card.setCustomWidthAnswer(this.answerWidth);
+        return card;
+    }
 
-	public void setAnswer(String answer) {
-		this.answer = answer;
-	}
+    public XMLMedia getXMLQuestionMedia() throws SQLException {
+        return dbex.getPic(this, PicType.QUESTION);
+    }
 
-	public String getPathToQuestionPic() {
-		return pathToQuestionPic;
-	}
+    public XMLMedia getXMLAnswerMedia() throws SQLException {
+        return dbex.getPic(this, PicType.ANSWER);
+    }
 
-	public void setPathToQuestionPic(String pathToQuestionPic) {
-		this.pathToQuestionPic = pathToQuestionPic;
-	}
+    public String getQuestion() {
+        return question;
+    }
 
-	public String getPathToAnswerPic() {
-		return pathToAnswerPic;
-	}
+    public void setQuestion(String question) {
+        this.question = question;
+    }
 
-	public void setPathToAnswerPic(String pathToAnswerPic) {
-		this.pathToAnswerPic = pathToAnswerPic;
-	}
+    public String getAnswer() {
+        return answer;
+    }
 
-	public LearningProject getProj() {
-		return proj;
-	}
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
 
-	public void setProj(LearningProject proj) {
-		this.proj = proj;
-	}
+    public String getPathToQuestionPic() {
+        return pathToQuestionPic;
+    }
 
-	public int getStack() {
-		return stack;
-	}
+    public void setPathToQuestionPic(String pathToQuestionPic) {
+        this.pathToQuestionPic = pathToQuestionPic;
+    }
 
-	public void setStack(int stack) {
-		this.stack = stack;
-	}
+    public String getPathToAnswerPic() {
+        return pathToAnswerPic;
+    }
 
-	public int getQuestionWidth() {
-		return questionWidth;
-	}
+    public void setPathToAnswerPic(String pathToAnswerPic) {
+        this.pathToAnswerPic = pathToAnswerPic;
+    }
 
-	public void setQuestionWidth(int questionWidth) {
-		this.questionWidth = questionWidth;
-	}
+    public LearningProject getProj() {
+        return proj;
+    }
 
-	public int getAnswerWidth() {
-		return answerWidth;
-	}
+    public void setProj(LearningProject proj) {
+        this.proj = proj;
+    }
 
-	public void setAnswerWidth(int answerWidth) {
-		this.answerWidth = answerWidth;
-	}
+    public int getStack() {
+        return stack;
+    }
 
-	public String toString() {
-		return "ID: " + this.getId() + ", PROJECT: " + this.getProj().getTitle() + ", STACK " + this.getStack() + " QUESTION: "
-				+ this.getQuestion() + ", ANSWER: " + this.getAnswer() + ", PATH TO QUESTION PIC: " + this.getPathToQuestionPic()
-				+ ", PATH TO ANSWER PIC: " + this.getPathToAnswerPic() + ", CUSTOM_WIDTH_Q: " + this.getQuestionWidth()
-				+ ", CUSTOM_WIDTH_A: " + this.getAnswerWidth();
-	}
+    public void setStack(int stack) {
+        this.stack = stack;
+    }
 
-	public Object getQuestionInPlainText() {
-			StringReader in = new StringReader(this.getQuestion());
-			HTMLToText parser = new HTMLToText();
-			String question = null;
-			try {
-				parser.parse(in);
-				in.close();
-				question = parser.getText();
-			} catch (IOException ioe) {
-				CustomErrorHandling.showParseError(null, ioe);
-				question = this.getQuestion();
-			}
-		return question;
-	}
+    public int getQuestionWidth() {
+        return questionWidth;
+    }
+
+    public void setQuestionWidth(int questionWidth) {
+        this.questionWidth = questionWidth;
+    }
+
+    public int getAnswerWidth() {
+        return answerWidth;
+    }
+
+    public void setAnswerWidth(int answerWidth) {
+        this.answerWidth = answerWidth;
+    }
+
+    public ArrayList<Label> getLabels() {
+        return labels;
+    }
+
+    public void addLabel(Label newLabel) {
+        labels.add(newLabel);
+    }
+
+    public void removeLabel(Label labelToRemove) {
+        labels.remove(labelToRemove);
+    }
+
+    public String toString() {
+        return "ID: " + this.getId() + ", PROJECT: " + this.getProj().getTitle() + ", STACK " + this.getStack() + " QUESTION: "
+                + this.getQuestion() + ", ANSWER: " + this.getAnswer() + ", PATH TO QUESTION PIC: " + this.getPathToQuestionPic()
+                + ", PATH TO ANSWER PIC: " + this.getPathToAnswerPic() + ", CUSTOM_WIDTH_Q: " + this.getQuestionWidth()
+                + ", CUSTOM_WIDTH_A: " + this.getAnswerWidth();
+    }
+
+    public String getQuestionInPlainText() {
+        StringReader in = new StringReader(this.getQuestion());
+        HTMLToText parser = new HTMLToText();
+        String question = null;
+        try {
+            parser.parse(in);
+            in.close();
+            question = parser.getText();
+        } catch (IOException ioe) {
+            CustomErrorHandling.showParseError(null, ioe);
+            question = this.getQuestion();
+        }
+        return question;
+    }
 
 }

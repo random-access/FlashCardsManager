@@ -133,6 +133,8 @@ public class DBExchanger {
         st.close();
     }
 
+    /***************************************** PROJECT QUERIES ****************************************************/
+
     // ADD PROJECT: insert project into table
     public void addProject(LearningProject project) throws SQLException, InvalidLengthException {
         if (project.getTitle().length() > maxShortString / 5) {
@@ -238,7 +240,10 @@ public class DBExchanger {
         return minStack;
     }
 
-    // ADD ROW: insert flashcard into table
+    /***************************************** LABEL QUERIES ****************************************************/
+
+    /***************************************** FLASHCARD QUERIES ****************************************************/
+    // ADD FLASHCARD: insert flashcard into table
     public void addFlashcard(FlashCard card) throws SQLException {
         Statement st = conn.createStatement();
         st.execute("INSERT INTO " + flashcardsTable + " VALUES (" + card.getId() + ", " + card.getProj().getId() + ", "
@@ -255,6 +260,7 @@ public class DBExchanger {
         updatePathToPics(card);
     }
 
+    // UPDATE FLASHCARD: insert flashcard into table
     public void updateFlashcard(FlashCard card) throws SQLException {
         Statement st = conn.createStatement();
         st.execute("UPDATE " + flashcardsTable + " SET PROJ_ID_FK = " + card.getProj().getId() + ", STACK = " + card.getStack()
@@ -397,7 +403,7 @@ public class DBExchanger {
         st.close();
     }
 
-    // COUNT ROWS: returns the number of rows in a table
+    // COUNT ROWS: returns the number of flashcards belonging to 1 project
     public int countRows(LearningProject p) throws SQLException {
         int count = 0;
         Statement st = conn.createStatement();
@@ -414,6 +420,8 @@ public class DBExchanger {
         return count;
     }
 
+    // COUNT ROWS: returns the number of flashcards belonging to 1 project and 1
+    // stack
     public int countRows(LearningProject proj, int stack) throws SQLException {
         int count = 0;
         Statement st = conn.createStatement();
@@ -435,8 +443,8 @@ public class DBExchanger {
     public int getCardNumberInProject(FlashCard f) throws SQLException {
         int number = 0;
         Statement st = conn.createStatement();
-        st.execute("SELECT CARD_ID_PK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + f.getProj().getId()
-                + " ORDER BY CARD_ID_PK ASC");
+        st.execute("SELECT CARD_ID_PK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + f.getProj().getId());
+        // + " ORDER BY CARD_ID_PK ASC");
         ResultSet res = st.getResultSet();
         while (res.next()) {
             number++;
@@ -447,6 +455,8 @@ public class DBExchanger {
         }
         return number;
     }
+
+    /***************************************** OTHER QUERIES ****************************************************/
 
     private int nextMediaId() throws SQLException {
         int count = 1;
@@ -482,11 +492,32 @@ public class DBExchanger {
         return count;
     }
 
-    public int nextProjectId() throws SQLException {
+    // public int nextProjectId() throws SQLException {
+    // Statement st = conn.createStatement();
+    // if (StartApp.DEBUG)
+    // System.out.println("SELECT PROJ_ID_PK FROM " + projectsTable +
+    // " ORDER BY PROJ_ID_PK ASC");
+    // st.execute("SELECT PROJ_ID_PK FROM " + projectsTable +
+    // " ORDER BY PROJ_ID_PK ASC");
+    // ResultSet res = st.getResultSet();
+    // int count = 1;
+    // while (res.next()) {
+    // int id = res.getInt(1);
+    // if (id != count) {
+    // return count;
+    // }
+    // count++;
+    // }
+    // return count;
+    // }
+
+    public int nextId(TableType type) throws SQLException {
+        String table = getTableName(type);
+        String primaryKey = getPrimaryKey(type);
         Statement st = conn.createStatement();
         if (StartApp.DEBUG)
-            System.out.println("SELECT PROJ_ID_PK FROM " + projectsTable + " ORDER BY PROJ_ID_PK ASC");
-        st.execute("SELECT PROJ_ID_PK FROM " + projectsTable + " ORDER BY PROJ_ID_PK ASC");
+            System.out.println("SELECT " + primaryKey + " FROM " + table + " ORDER BY " + primaryKey + " ASC");
+        st.execute("SELECT " + primaryKey + " FROM " + table + " ORDER BY " + primaryKey + " ASC");
         ResultSet res = st.getResultSet();
         int count = 1;
         while (res.next()) {
@@ -497,6 +528,40 @@ public class DBExchanger {
             count++;
         }
         return count;
+    }
+
+    private String getPrimaryKey(TableType type) {
+        switch (type) {
+        case PROJECTS:
+            return "PROJ_ID_PK";
+        case FLASHCARDS:
+            return "CARD_ID_PK";
+        case MEDIA:
+            return "MEDIA_ID_PK";
+        case LABELS:
+            return "LABEL_ID_PK";
+        case LABELS_FLASHCARDS:
+            return "LABELS_FLASHCARDS_ID_PK";
+        default:
+            return "";
+        }
+    }
+
+    private String getTableName(TableType type) {
+        switch (type) {
+        case PROJECTS:
+            return projectsTable;
+        case FLASHCARDS:
+            return flashcardsTable;
+        case MEDIA:
+            return mediaTable;
+        case LABELS:
+            return labelsTable;
+        case LABELS_FLASHCARDS:
+            return labelsFlashcardsTable;
+        default:
+            return "";
+        }
     }
 
 }
