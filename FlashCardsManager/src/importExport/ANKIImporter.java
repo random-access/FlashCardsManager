@@ -42,8 +42,8 @@ public class ANKIImporter {
     public ANKIImporter(String projectName, String pathToDatabase, ProjectsController ctl, IProgressPresenter p) {
         this.ctl = ctl;
         this.pathToDatabase = pathToDatabase;
-        if (!pathToDatabase.endsWith("/")) {
-            this.pathToDatabase = this.pathToDatabase + "/";
+        if (!(pathToDatabase.endsWith("/") || pathToDatabase.endsWith("\\"))) {
+            this.pathToDatabase = this.pathToDatabase + "\\";
         }
         this.p = p;
         try {
@@ -51,7 +51,7 @@ public class ANKIImporter {
         } catch (SQLException | InvalidValueException e) {
             e.printStackTrace();
         }
-        conn = openConnection(pathToDatabase + "collection.anki2");
+        conn = openConnection(pathToDatabase + "/collection.anki2");
 
     }
 
@@ -120,11 +120,9 @@ public class ANKIImporter {
         try {
             project.store();
             query = conn.createStatement();
-
             query.execute("SELECT sfld,flds FROM cards INNER JOIN notes ON CARDS.nid = NOTES.id");
-
             result = query.getResultSet();
-
+            Map<String, Integer> images = readImages();
             while (result.next()) {
                 System.out.println(result.getString("sfld"));
                 System.out.println(result.getString("flds"));
@@ -146,9 +144,7 @@ public class ANKIImporter {
                         card.setAnswer(card.getAnswer().substring(0, i) + card.getAnswer().substring(i));
                     }
                 }
-
                 // adding pictures to cards, if any
-                Map<String, Integer> images = readImages();
                 String question = card.getQuestion();
                 String answer = card.getAnswer();
                 // lookup image url in question or answer
@@ -157,15 +153,32 @@ public class ANKIImporter {
                     for (String imgName : images.keySet()) {
                         // first renaming the images giving them an extension
                         // jpg
+                        // then adding the pic path and removing the pic ref in
+                        // html
                         FileUtils.movePicFile(pathToDatabase + images.get(imgName).toString(),
                                 pathToDatabase + images.get(imgName).toString() + ".jpg");
                         boolean found = false;
                         if (question.contains(imgName)) {
-                            card.setPathToQuestionPic(pathToDatabase + images.get(imgName));
+                            card.setPathToQuestionPic(pathToDatabase + images.get(imgName) + ".jpg");
+                            // finding and deleting the image tag
+                            int startpos = question.indexOf("<img");
+                            int endpos = question.indexOf("/>", startpos);
+                            if (startpos != -1 && endpos != -1) {
+                                question = question.substring(0, startpos) + question.substring(endpos + 2);
+                                card.setQuestion(question);
+                            }
                             found = true;
                         }
                         if (answer.contains(imgName)) {
-                            card.setPathToAnswerPic(pathToDatabase + images.get(imgName));
+                            card.setPathToAnswerPic(pathToDatabase + images.get(imgName) + ".jpg");
+                            int startpos = answer.indexOf("<img");
+                            int endpos = answer.indexOf("/>", startpos);
+                            while (startpos != -1 && endpos != -1) {
+                                answer = answer.substring(0, startpos) + answer.substring(endpos + 2, answer.length());
+                                startpos = answer.indexOf("<img");
+                                endpos = answer.indexOf("/>", startpos);
+                            }
+                            card.setAnswer(answer);
                             found = true;
                         }
 
