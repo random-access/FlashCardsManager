@@ -11,7 +11,7 @@ import exc.InvalidLengthException;
 import exc.InvalidValueException;
 import gui.helpers.IProgressPresenter;
 
-public class LearningProject {
+public class LearningProject implements IHasStatus {
 
     private final DBExchanger dbex;
     private final MediaExchanger mex;
@@ -49,11 +49,14 @@ public class LearningProject {
         this.id = id;
         this.title = title;
         this.numberOfStacks = numberOfStacks;
-        labels = new ArrayList<Label>();
     }
 
     public void loadFlashcards(IProgressPresenter t) throws SQLException {
         allCards = dbex.getAllCards(this, t);
+    }
+
+    public void loadLabels() throws SQLException {
+        labels = dbex.getAllLabels(this);
     }
 
     public void store() throws SQLException, InvalidLengthException {

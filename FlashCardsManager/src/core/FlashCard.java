@@ -6,6 +6,7 @@ import importExport.XMLMedia;
 import java.io.IOException;
 import java.io.StringReader;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import storage.*;
 import utils.HTMLToText;
@@ -22,6 +23,8 @@ public class FlashCard {
     private String answer;
     private int questionWidth;
     private int answerWidth;
+
+    private ArrayList<Label> labels;
 
     private String pathToQuestionPic;
     private String pathToAnswerPic;
@@ -40,13 +43,15 @@ public class FlashCard {
         this.questionWidth = questionWidth;
         this.answerWidth = answerWidth;
 
+        this.labels = new ArrayList<Label>();
+
         this.pathToQuestionPic = pathToQuestionPic;
         this.pathToAnswerPic = pathToAnswerPic;
     }
 
     // restores a flashcard from database
     public FlashCard(int id, LearningProject proj, int stack, String question, String answer, String pathToQuestionPic,
-            String pathToAnswerPic, int questionWidth, int answerWidth) {
+            String pathToAnswerPic, int questionWidth, int answerWidth) throws SQLException {
         dbex = proj.getDBEX();
         mex = proj.getMex();
         this.id = id;
@@ -56,7 +61,7 @@ public class FlashCard {
         this.answer = answer;
         this.questionWidth = questionWidth;
         this.answerWidth = answerWidth;
-
+        this.labels = dbex.getAllLabels(this);
         this.pathToQuestionPic = pathToQuestionPic;
         this.pathToAnswerPic = pathToAnswerPic;
     }
@@ -193,6 +198,39 @@ public class FlashCard {
 
     public void setAnswerWidth(int answerWidth) {
         this.answerWidth = answerWidth;
+    }
+
+    public ArrayList<Label> getLabels() {
+        return labels;
+    }
+
+    public void synchronizeLabels(ArrayList<Label> newLabels) throws SQLException {
+        for (int i = 0; i < newLabels.size(); i++) {
+            if (!this.labels.contains(newLabels.get(i))) {
+                dbex.addLabelToFlashcard(labels.get(i), this);
+                labels.add(labels.get(i));
+            }
+        }
+        for (int i = 0; i < labels.size(); i++) {
+            if (!newLabels.contains(labels.get(i))) {
+                dbex.deleteLabelFromFlashCard(labels.get(i), this);
+                labels.remove(labels.get(i));
+            }
+        }
+    }
+
+    public void addLabel(Label label) throws SQLException {
+        if (!this.labels.contains(label)) {
+            dbex.addLabelToFlashcard(label, this);
+            labels.add(label);
+        }
+    }
+
+    public void removeLabel(Label label) throws SQLException {
+        if (this.labels.contains(label)) {
+            dbex.deleteLabelFromFlashCard(label, this);
+            labels.remove(label);
+        }
     }
 
     public String toString() {

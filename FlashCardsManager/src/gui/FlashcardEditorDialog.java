@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -14,8 +15,8 @@ import javax.swing.text.StyledEditorKit;
 
 import storage.PicType;
 import utils.IndividualAction;
-import core.FlashCard;
-import core.LearningProject;
+import core.*;
+import core.Label;
 import exc.CustomErrorHandling;
 import gui.helpers.MyButton;
 
@@ -61,11 +62,13 @@ public class FlashcardEditorDialog extends JDialog {
     // only for existing flashcards
     private FlashCard existingCard;
 
+    private ArrayList<Label> labels;
+
     private PicAndTextPanel pnlQ, pnlA;
     private JPanel pnlTitle, pnlTop, pnlEditor, pnlEdit, pnlBottom, centerPanel;
     private JScrollPane scpEditor, scpCenter;
     private JLabel lblTitle;
-    private MyButton btnLargerCard, btnSmallerCard, btnFlip, btnDiscard, btnSave, btnSaveAndNext;
+    private MyButton btnLargerCard, btnSmallerCard, btnFlip, btnDiscard, btnSave, btnSaveAndNext, btnAddLabel;
     private MyButton btnBold, btnItalic, btnUnderlined, btnLeftAlign, btnRightAlign, btnCenterAlign, btnList, btnNum, btnAddPic,
             btnEditPic, btnRemovePic;
     private JComboBox<String> cmbFontFamilies;
@@ -84,6 +87,7 @@ public class FlashcardEditorDialog extends JDialog {
         this(null, project, projPnl);
         this.efcDialog = efcDialog;
         this.existingCard = card;
+        labels = card.getLabels();
         centerPanel.remove(pnlQ);
         pnlQ = new PicAndTextPanel(card.getPathToQuestionPic(), card.getQuestion(), PicType.QUESTION, true,
                 card.getQuestionWidth());
@@ -101,6 +105,7 @@ public class FlashcardEditorDialog extends JDialog {
         this.owner = projPnl.getOwner();
         this.project = project;
         this.projPnl = projPnl;
+        labels = new ArrayList<Label>();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -191,6 +196,7 @@ public class FlashcardEditorDialog extends JDialog {
         btnEditPic.setToolTipText("Bild \u00e4ndern");
         btnRemovePic = new MyButton(new ImageIcon(imgRemovePic));
         btnRemovePic.setToolTipText("Bild l\u00f6schen");
+        btnAddLabel = new MyButton("Labels...");
 
         // bottom area: control buttons
         pnlBottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -236,6 +242,7 @@ public class FlashcardEditorDialog extends JDialog {
         pnlEditor.add(btnList);
         pnlEditor.add(btnNum);
         pnlEditor.add(btnAddPic);
+        pnlEditor.add(btnAddLabel);
 
         pnlBottom.add(btnLargerCard);
         pnlBottom.add(btnSmallerCard);
@@ -378,6 +385,22 @@ public class FlashcardEditorDialog extends JDialog {
                 FlashcardEditorDialog.this.revalidate();
             }
         });
+
+        btnAddLabel.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddLabelToCardDialog d;
+                try {
+                    d = new AddLabelToCardDialog(FlashcardEditorDialog.this, project, existingCard);
+                    d.setVisible(true);
+                } catch (SQLException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+
+            }
+        });
     }
 
     private void loadComponentCenter(Point lastLocation) {
@@ -403,8 +426,9 @@ public class FlashcardEditorDialog extends JDialog {
             existingCard.setQuestionWidth(pnlQ.getCustomWidth());
             existingCard.setAnswerWidth(pnlA.getCustomWidth());
             existingCard.update();
+            existingCard.synchronizeLabels(labels);
             if (efcDialog != null) {
-                efcDialog.updateCardsView();
+                efcDialog.updateView();
             }
             FlashcardEditorDialog.this.dispose();
         } catch (SQLException sqle) {
@@ -419,9 +443,10 @@ public class FlashcardEditorDialog extends JDialog {
             FlashCard newCard = new FlashCard(project, pnlQ.getText(), pnlA.getText(), pnlQ.getPathToPic(), pnlA.getPathToPic(),
                     pnlQ.getCustomWidth(), pnlA.getCustomWidth());
             newCard.store();
+            newCard.synchronizeLabels(labels);
             owner.updateProjectStatus(project);
             if (efcDialog != null) {
-                efcDialog.updateCardsView();
+                efcDialog.updateView();
             }
             FlashcardEditorDialog.this.dispose();
         } catch (SQLException sqle) {
@@ -482,6 +507,14 @@ public class FlashcardEditorDialog extends JDialog {
         pnlEditor.remove(btnAddPic);
         pnlEditor.add(btnEditPic);
         pnlEditor.add(btnRemovePic);
+    }
+
+    public ArrayList<Label> getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(ArrayList<Label> labels) {
+        this.labels = labels;
     }
 
 }

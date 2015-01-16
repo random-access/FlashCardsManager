@@ -1,4 +1,4 @@
-package gui.helpers;
+package jTreeTest;
 
 import exc.CustomErrorHandling;
 import gui.ProjectPanel;
@@ -17,7 +17,7 @@ import utils.Logger;
 import core.IHasStatus;
 
 @SuppressWarnings("serial")
-public class LabelTreeCellRenderer extends DefaultTreeCellRenderer {
+public class MyTreeCellRenderer extends DefaultTreeCellRenderer {
 
     private static BufferedImage imgRed, imgYellow, imgGreen;
 
@@ -34,7 +34,7 @@ public class LabelTreeCellRenderer extends DefaultTreeCellRenderer {
 
     ImageIcon icnRed, icnYellow, icnGreen;
 
-    public LabelTreeCellRenderer() {
+    public MyTreeCellRenderer() {
         icnRed = new ImageIcon(imgRed);
         icnYellow = new ImageIcon(imgYellow);
         icnGreen = new ImageIcon(imgGreen);

@@ -20,7 +20,7 @@ import core.ProjectsController;
 
 public class StartApp {
 
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = false;
 
     private static final String APP_FOLDER = FileUtils.appDirectory("Lernkarten");
     private static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
