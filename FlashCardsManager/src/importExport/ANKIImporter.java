@@ -4,28 +4,19 @@ import exc.InvalidLengthException;
 import exc.InvalidValueException;
 import gui.helpers.IProgressPresenter;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.sql.*;
+import java.util.*;
 
+import javax.imageio.ImageIO;
 import javax.xml.stream.XMLStreamException;
-
-import org.apache.derby.impl.sql.catalog.SYSPERMSRowFactory;
 
 import utils.FileUtils;
 import xml.Settings;
 import xml.XMLSettingsExchanger;
-import core.FlashCard;
-import core.LearningProject;
-import core.ProjectsController;
+import core.*;
 
 public class ANKIImporter {
 
@@ -42,6 +33,7 @@ public class ANKIImporter {
     public ANKIImporter(String projectName, String pathToDatabase, ProjectsController ctl, IProgressPresenter p) {
         this.ctl = ctl;
         this.pathToDatabase = pathToDatabase;
+
         if (!(pathToDatabase.endsWith("/") || pathToDatabase.endsWith("\\"))) {
             this.pathToDatabase = this.pathToDatabase + "\\";
         }
@@ -123,6 +115,7 @@ public class ANKIImporter {
             query.execute("SELECT sfld,flds FROM cards INNER JOIN notes ON CARDS.nid = NOTES.id");
             result = query.getResultSet();
             Map<String, Integer> images = readImages();
+
             while (result.next()) {
                 System.out.println(result.getString("sfld"));
                 System.out.println(result.getString("flds"));
@@ -144,33 +137,31 @@ public class ANKIImporter {
                         card.setAnswer(card.getAnswer().substring(0, i) + card.getAnswer().substring(i));
                     }
                 }
-                // adding pictures to cards, if any
-                String question = card.getQuestion();
-                String answer = card.getAnswer();
-                // lookup image url in question or answer
 
+                // adding pictures to cards, if any
+                // lookup image url in question or answer
                 try {
+                    String question = card.getQuestion();
+                    String answer = card.getAnswer();
+                    // lookup image url in question or answer
+                    List<String> aImages = new ArrayList<String>();
+                    List<String> qImages = new ArrayList<String>();
                     for (String imgName : images.keySet()) {
-                        // first renaming the images giving them an extension
-                        // jpg
-                        // then adding the pic path and removing the pic ref in
-                        // html
-                        FileUtils.movePicFile(pathToDatabase + images.get(imgName).toString(),
-                                pathToDatabase + images.get(imgName).toString() + ".jpg");
                         boolean found = false;
                         if (question.contains(imgName)) {
-                            card.setPathToQuestionPic(pathToDatabase + images.get(imgName) + ".jpg");
-                            // finding and deleting the image tag
+                            qImages.add(images.get(imgName).toString());
                             int startpos = question.indexOf("<img");
                             int endpos = question.indexOf("/>", startpos);
-                            if (startpos != -1 && endpos != -1) {
+                            while (startpos != -1 && endpos != -1) {
                                 question = question.substring(0, startpos) + question.substring(endpos + 2);
-                                card.setQuestion(question);
+                                startpos = question.indexOf("<img");
+                                endpos = question.indexOf("/>", startpos);
                             }
+                            card.setQuestion(question);
                             found = true;
                         }
                         if (answer.contains(imgName)) {
-                            card.setPathToAnswerPic(pathToDatabase + images.get(imgName) + ".jpg");
+                            aImages.add(images.get(imgName).toString());
                             int startpos = answer.indexOf("<img");
                             int endpos = answer.indexOf("/>", startpos);
                             while (startpos != -1 && endpos != -1) {
@@ -181,6 +172,12 @@ public class ANKIImporter {
                             card.setAnswer(answer);
                             found = true;
                         }
+                        if (!qImages.isEmpty()) {
+                            card.setPathToQuestionPic(combineImage(qImages));
+                        }
+                        if (!aImages.isEmpty()) {
+                            card.setPathToAnswerPic(combineImage(aImages));
+                        }
 
                     }
 
@@ -190,19 +187,18 @@ public class ANKIImporter {
                     // something happened. We rename back the files and end
                     e.printStackTrace();
                 } finally {
-                    // renaming the images back
-                    for (Integer imgName : images.values()) {
-                        FileUtils.movePicFile(pathToDatabase + imgName.toString() + ".jpg", pathToDatabase + imgName.toString());
-                    }
+                    // // renaming the images back
+                    // for (Integer imgName : images.values()) {
+                    // FileUtils.movePicFile(pathToDatabase + imgName.toString()
+                    // + ".jpg", pathToDatabase + imgName.toString());
+                    // }
                 }
+
             }
 
             result.close();
             query.close();
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (InvalidLengthException e) {
             // TODO Auto-generated catch block
@@ -210,6 +206,32 @@ public class ANKIImporter {
         }
         System.out.println("Result: " + result.toString());
 
+    }
+
+    public String combineImage(List<String> images) throws IOException {
+        // reading the images to BufferedImage[] and painting them to a new one
+        List<BufferedImage> bufferedImages = new ArrayList<BufferedImage>();
+        // estimating width and height
+        int width = 0, height = 0;
+        for (String image : images) {
+            BufferedImage bufIm = ImageIO.read(new File(pathToDatabase + "/" + image));
+            bufferedImages.add(bufIm);
+            height += bufIm.getHeight();
+            width = (width < bufIm.getWidth()) ? bufIm.getWidth() : width;
+        }
+
+        BufferedImage combinedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        Graphics g = combinedImage.getGraphics();
+        int actualHeight = 0;
+        for (BufferedImage buf : bufferedImages) {
+            g.drawImage(buf, 0, actualHeight, buf.getWidth(), actualHeight + buf.getHeight(), 0, 0, buf.getWidth(),
+                    buf.getHeight(), null);
+        }
+        g.dispose();
+        String combinedFilename = pathToDatabase + "/temp"
+                + combinedImage.toString().substring(0, combinedImage.toString().indexOf(":")) + ".jpg";
+        ImageIO.write(combinedImage, "jpg", new File(combinedFilename));
+        return combinedFilename;
     }
 
     private Connection openConnection(String pathToDatabase) {
