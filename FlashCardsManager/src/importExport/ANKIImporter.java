@@ -107,6 +107,8 @@ public class ANKIImporter {
     }
 
     private void readAndStoreCards() {
+        // creating working directory "temp"
+        FileUtils.createDirectory(pathToDatabase + "/" + "temp/");
         Statement query;
         ResultSet result = null;
         try {
@@ -152,7 +154,7 @@ public class ANKIImporter {
                             qImages.add(images.get(imgName).toString());
                             int startpos = question.indexOf("<img");
                             int endpos = question.indexOf("/>", startpos);
-                            while (startpos != -1 && endpos != -1) {
+                            if (startpos != -1 && endpos != -1) {
                                 question = question.substring(0, startpos) + question.substring(endpos + 2);
                                 startpos = question.indexOf("<img");
                                 endpos = question.indexOf("/>", startpos);
@@ -164,7 +166,7 @@ public class ANKIImporter {
                             aImages.add(images.get(imgName).toString());
                             int startpos = answer.indexOf("<img");
                             int endpos = answer.indexOf("/>", startpos);
-                            while (startpos != -1 && endpos != -1) {
+                            if (startpos != -1 && endpos != -1) {
                                 answer = answer.substring(0, startpos) + answer.substring(endpos + 2, answer.length());
                                 startpos = answer.indexOf("<img");
                                 endpos = answer.indexOf("/>", startpos);
@@ -172,15 +174,15 @@ public class ANKIImporter {
                             card.setAnswer(answer);
                             found = true;
                         }
-                        if (!qImages.isEmpty()) {
-                            card.setPathToQuestionPic(combineImage(qImages));
-                        }
-                        if (!aImages.isEmpty()) {
-                            card.setPathToAnswerPic(combineImage(aImages));
-                        }
 
                     }
 
+                    if (!qImages.isEmpty()) {
+                        card.setPathToQuestionPic(combineImage(qImages));
+                    }
+                    if (!aImages.isEmpty()) {
+                        card.setPathToAnswerPic(combineImage(aImages));
+                    }
                     project.addCard(card);
                     card.store();
                 } catch (Exception e) {
@@ -192,6 +194,7 @@ public class ANKIImporter {
                     // FileUtils.movePicFile(pathToDatabase + imgName.toString()
                     // + ".jpg", pathToDatabase + imgName.toString());
                     // }
+
                 }
 
             }
@@ -203,6 +206,13 @@ public class ANKIImporter {
         } catch (InvalidLengthException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        } finally {
+            try {
+                FileUtils.deleteDirectory(pathToDatabase + "/" + "temp/");
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
         System.out.println("Result: " + result.toString());
 
@@ -226,9 +236,12 @@ public class ANKIImporter {
         for (BufferedImage buf : bufferedImages) {
             g.drawImage(buf, 0, actualHeight, buf.getWidth(), actualHeight + buf.getHeight(), 0, 0, buf.getWidth(),
                     buf.getHeight(), null);
+            if (images.size() > 1)
+                System.out.println("got " + bufferedImages.size() + " images, thus writing more than one pic");
+            actualHeight += buf.getHeight();
         }
         g.dispose();
-        String combinedFilename = pathToDatabase + "/temp"
+        String combinedFilename = pathToDatabase + "temp/"
                 + combinedImage.toString().substring(0, combinedImage.toString().indexOf(":")) + ".jpg";
         ImageIO.write(combinedImage, "jpg", new File(combinedFilename));
         return combinedFilename;
