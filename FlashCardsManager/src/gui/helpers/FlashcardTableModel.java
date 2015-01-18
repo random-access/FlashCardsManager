@@ -5,14 +5,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.JFrame;
 import javax.swing.table.AbstractTableModel;
 
 import core.FlashCard;
 import core.LearningProject;
 import exc.CustomErrorHandling;
-import gui.ProjectPanel;
-import gui.ProjectPanel.DialogType;
 
 @SuppressWarnings("serial")
 public class FlashcardTableModel extends AbstractTableModel {
@@ -48,11 +45,11 @@ public class FlashcardTableModel extends AbstractTableModel {
 				return data.get(rowIndex).isSelected();
 			case 1:
 				try {
-                    return data.get(rowIndex).getCard().getNumberInProj();
-                } catch (SQLException sqle) {
-                    CustomErrorHandling.showDatabaseError(null, sqle);
-                    return -1;
-                }
+					return data.get(rowIndex).getCard().getNumberInProj();
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(null, sqle);
+					return -1;
+				}
 			case 2:
 				return data.get(rowIndex).getCard().getQuestionInPlainText();
 			case 3:
@@ -63,7 +60,7 @@ public class FlashcardTableModel extends AbstractTableModel {
 		}
 		return 0;
 	}
-	
+
 	public FlashCard getCard(int row) {
 		return data.get(row).getCard();
 	}
@@ -85,15 +82,15 @@ public class FlashcardTableModel extends AbstractTableModel {
 			fireTableCellUpdated(row, column);
 		}
 		if (value instanceof Integer && column == 3) {
-		    FlashCard c = data.get(row).getCard();
+			FlashCard c = data.get(row).getCard();
 			c.setStack((int) value);
 			try {
-                c.update();
-            } catch (SQLException sqle) {
-                CustomErrorHandling.showDatabaseError(null, sqle);
-            } catch (IOException ioe) {
-                CustomErrorHandling.showInternalError(null, ioe);
-            }
+				c.update();
+			} catch (SQLException sqle) {
+				CustomErrorHandling.showDatabaseError(null, sqle);
+			} catch (IOException ioe) {
+				CustomErrorHandling.showInternalError(null, ioe);
+			}
 			fireTableCellUpdated(row, column);
 		}
 	}
@@ -107,7 +104,7 @@ public class FlashcardTableModel extends AbstractTableModel {
 	public void updateRow(int row) {
 		fireTableRowsUpdated(row, row);
 	}
-	
+
 	public boolean someCardSelected() {
 		for (FlashcardTableData d : data) {
 			if (d.isSelected()) {
@@ -116,19 +113,19 @@ public class FlashcardTableModel extends AbstractTableModel {
 		}
 		return false;
 	}
-	
+
 	public void recreateTable(LearningProject p, Component owner) throws SQLException {
-        data.clear();
-        p.loadFlashcards(null);
-        data = createFlashcardList(p.getAllCards());
-        fireTableDataChanged();
-    }
-	
-    private ArrayList<FlashcardTableData> createFlashcardList(ArrayList<FlashCard> cards) {
-        ArrayList<FlashcardTableData> list = new ArrayList<FlashcardTableData>();
-        for (int i = 0; i < cards.size(); i++) {
-            list.add(new FlashcardTableData(cards.get(i)));
-        }
-        return list;
-    }
+		data.clear();
+		p.loadLabelsAndFlashcards(null);
+		data = createFlashcardList(p.getAllCards());
+		fireTableDataChanged();
+	}
+
+	private ArrayList<FlashcardTableData> createFlashcardList(ArrayList<FlashCard> cards) {
+		ArrayList<FlashcardTableData> list = new ArrayList<FlashcardTableData>();
+		for (int i = 0; i < cards.size(); i++) {
+			list.add(new FlashcardTableData(cards.get(i)));
+		}
+		return list;
+	}
 }

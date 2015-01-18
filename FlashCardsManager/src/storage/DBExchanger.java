@@ -1,5 +1,7 @@
 package storage;
 
+import gui.helpers.IProgressPresenter;
+import importExport.XMLLabelFlashcardRelation;
 import importExport.XMLMedia;
 
 import java.io.File;
@@ -10,7 +12,6 @@ import app.StartApp;
 import core.*;
 import exc.CustomErrorHandling;
 import exc.InvalidLengthException;
-import gui.helpers.IProgressPresenter;
 
 public class DBExchanger {
 
@@ -79,56 +80,56 @@ public class DBExchanger {
 	public void createTablesIfNotExisting() throws SQLException {
 		Statement st = conn.createStatement();
 		if (!DerbyTools.tableAlreadyExisting(projectsTable, conn)) {
-			st.execute("CREATE TABLE " + projectsTable + " (PROJ_ID_PK INT PRIMARY KEY, " + "PROJ_TITLE VARCHAR ("
-					+ maxShortString + ") NOT NULL, " + "NO_OF_STACKS INT NOT NULL)");
-			conn.commit();
 			if (StartApp.DEBUG)
 				System.out.println("CREATE TABLE " + projectsTable + " (PROJ_ID_PK INT PRIMARY KEY, " + "PROJ_TITLE VARCHAR ("
 						+ maxShortString + ") NOT NULL, " + "NO_OF_STACKS INT NOT NULL)");
+			st.execute("CREATE TABLE " + projectsTable + " (PROJ_ID_PK INT PRIMARY KEY, " + "PROJ_TITLE VARCHAR ("
+					+ maxShortString + ") NOT NULL, " + "NO_OF_STACKS INT NOT NULL)");
+			conn.commit();
 		}
 		if (!DerbyTools.tableAlreadyExisting(flashcardsTable, conn)) {
-			st.execute("CREATE TABLE " + flashcardsTable + " (CARD_ID_PK INT PRIMARY KEY, "
-					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_FL REFERENCES PROJECTS(PROJ_ID_PK), " + "STACK INT NOT NULL,"
-					+ "QUESTION VARCHAR (" + maxVarcharLength + "), " + "ANSWER VARCHAR(" + maxVarcharLength + "), "
-					+ "CUSTOM_WIDTH_Q INT, " + "CUSTOM_WIDTH_A INT)");
-			conn.commit();
 			if (StartApp.DEBUG)
 				System.out.println("CREATE TABLE " + flashcardsTable + " (CARD_ID_PK INT PRIMARY KEY, "
 						+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_FL REFERENCES PROJECTS(PROJ_ID_PK), " + "STACK INT NOT NULL,"
 						+ "QUESTION VARCHAR (" + maxVarcharLength + "), " + "ANSWER VARCHAR(" + maxVarcharLength + "), "
 						+ "CUSTOM_WIDTH_Q INT, " + "CUSTOM_WIDTH_A INT)");
+			st.execute("CREATE TABLE " + flashcardsTable + " (CARD_ID_PK INT PRIMARY KEY, "
+					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_FL REFERENCES PROJECTS(PROJ_ID_PK), " + "STACK INT NOT NULL,"
+					+ "QUESTION VARCHAR (" + maxVarcharLength + "), " + "ANSWER VARCHAR(" + maxVarcharLength + "), "
+					+ "CUSTOM_WIDTH_Q INT, " + "CUSTOM_WIDTH_A INT)");
+			conn.commit();
 		}
 		if (!DerbyTools.tableAlreadyExisting(labelsTable, conn)) {
-			st.execute("CREATE TABLE " + labelsTable + " (LABEL_ID_PK INT PRIMARY KEY, "
-					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_LA REFERENCES PROJECTS(PROJ_ID_PK), " + "LABEL_NAME VARCHAR ("
-					+ maxShortString + ") NOT NULL)");
-			conn.commit();
 			if (StartApp.DEBUG)
 				System.out.println("CREATE TABLE " + labelsTable + " (LABEL_ID_PK INT PRIMARY KEY, "
 						+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_LA REFERENCES PROJECTS(PROJ_ID_PK), " + "LABEL_NAME VARCHAR ("
 						+ maxShortString + ") NOT NULL)");
+			st.execute("CREATE TABLE " + labelsTable + " (LABEL_ID_PK INT PRIMARY KEY, "
+					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_LA REFERENCES PROJECTS(PROJ_ID_PK), " + "LABEL_NAME VARCHAR ("
+					+ maxShortString + ") NOT NULL)");
+			conn.commit();
 		}
 		if (!DerbyTools.tableAlreadyExisting(labelsFlashcardsTable, conn)) {
-			st.execute("CREATE TABLE " + labelsFlashcardsTable + " (LABELS_FLASHCARDS_ID_PK INT PRIMARY KEY, "
-					+ "LABEL_ID_FK INT CONSTRAINT LABEL_ID_FK_LF REFERENCES LABELS(LABEL_ID_PK" + "), "
-					+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_LF REFERENCES FLASHCARDS(CARD_ID_PK), "
-					+ "UNIQUE(LABEL_ID_FK, CARD_ID_FK))");
-			conn.commit();
 			if (StartApp.DEBUG)
 				System.out.println("CREATE TABLE " + labelsFlashcardsTable + " (LABELS_FLASHCARDS_ID_PK INT PRIMARY KEY, "
 						+ "LABEL_ID_FK INT CONSTRAINT LABEL_ID_FK_LF REFERENCES LABELS(LABEL_ID_PK" + "), "
 						+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_LF REFERENCES FLASHCARDS(CARD_ID_PK), "
 						+ "UNIQUE(LABEL_ID_FK, CARD_ID_FK))");
+			st.execute("CREATE TABLE " + labelsFlashcardsTable + " (LABELS_FLASHCARDS_ID_PK INT PRIMARY KEY, "
+					+ "LABEL_ID_FK INT CONSTRAINT LABEL_ID_FK_LF REFERENCES LABELS(LABEL_ID_PK" + "), "
+					+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_LF REFERENCES FLASHCARDS(CARD_ID_PK), "
+					+ "UNIQUE(LABEL_ID_FK, CARD_ID_FK))");
+			conn.commit();
 		}
 		if (!DerbyTools.tableAlreadyExisting(mediaTable, conn)) {
-			st.execute("CREATE TABLE " + mediaTable + " (MEDIA_ID_PK INT PRIMARY KEY, "
-					+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_ME REFERENCES FLASHCARDS(CARD_ID_PK), " + "PATH_TO_MEDIA VARCHAR("
-					+ maxShortString + ") NOT NULL, " + "PICTYPE CHAR NOT NULL)");
-			conn.commit();
 			if (StartApp.DEBUG)
 				System.out.println("CREATE TABLE " + mediaTable + " (MEDIA_ID_PK INT PRIMARY KEY, "
 						+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_ME REFERENCES FLASHCARDS(CARD_ID_PK), "
 						+ "PATH_TO_MEDIA VARCHAR(" + maxShortString + ") NOT NULL, " + "PICTYPE CHAR NOT NULL)");
+			st.execute("CREATE TABLE " + mediaTable + " (MEDIA_ID_PK INT PRIMARY KEY, "
+					+ "CARD_ID_FK INT CONSTRAINT CARD_ID_FK_ME REFERENCES FLASHCARDS(CARD_ID_PK), " + "PATH_TO_MEDIA VARCHAR("
+					+ maxShortString + ") NOT NULL, " + "PICTYPE CHAR NOT NULL)");
+			conn.commit();
 		}
 		st.close();
 	}
@@ -141,64 +142,62 @@ public class DBExchanger {
 			throw new InvalidLengthException();
 		}
 		Statement st = conn.createStatement();
-		st.execute("INSERT INTO " + projectsTable + " VALUES (" + project.getId() + ",'" + project.getTitle() + "', "
-				+ project.getNumberOfStacks() + ")");
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("INSERT INTO " + projectsTable + " VALUES (" + project.getId() + ",'" + project.getTitle() + "', "
 					+ project.getNumberOfStacks() + ")");
+		st.execute("INSERT INTO " + projectsTable + " VALUES (" + project.getId() + ",'" + project.getTitle() + "', "
+				+ project.getNumberOfStacks() + ")");
+		conn.commit();
 		st.close();
 	}
 
 	// UPDATE PROJECT: update project
 	public void updateProject(LearningProject project) throws SQLException {
 		Statement st = conn.createStatement();
-		st.execute("UPDATE " + projectsTable + " SET PROJ_TITLE = '" + project.getTitle() + "', NO_OF_STACKS = "
-				+ project.getNumberOfStacks() + " WHERE PROJ_ID_PK = " + project.getId());
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("UPDATE " + projectsTable + " SET PROJ_TITLE = '" + project.getTitle() + "', NO_OF_STACKS = "
 					+ project.getNumberOfStacks() + " WHERE PROJ_ID_PK = " + project.getId());
+		st.execute("UPDATE " + projectsTable + " SET PROJ_TITLE = '" + project.getTitle() + "', NO_OF_STACKS = "
+				+ project.getNumberOfStacks() + " WHERE PROJ_ID_PK = " + project.getId());
+		conn.commit();
 		st.close();
 	}
 
 	public void deleteProject(LearningProject project) throws SQLException {
 		Statement st = conn.createStatement();
-
-		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK IN " + "(SELECT LABEL_ID_PK FROM " + labelsTable
-				+ " WHERE PROJ_ID_FK = " + project.getId() + ")");
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK IN " + "(SELECT LABEL_ID_PK FROM "
 					+ labelsTable + " WHERE PROJ_ID_FK = " + project.getId() + ")");
+		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK IN " + "(SELECT LABEL_ID_PK FROM " + labelsTable
+				+ " WHERE PROJ_ID_FK = " + project.getId() + ")");
 
-		st.execute("DELETE FROM " + labelsTable + " WHERE PROJ_ID_FK = " + project.getId());
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + labelsTable + " WHERE PROJ_ID_FK = " + project.getId());
+		st.execute("DELETE FROM " + labelsTable + " WHERE PROJ_ID_FK = " + project.getId());
 
-		st.execute("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK IN " + "(SELECT CARD_ID_PK FROM " + flashcardsTable
-				+ " WHERE PROJ_ID_FK = " + project.getId() + ")");
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK IN " + "(SELECT CARD_ID_PK FROM "
 					+ flashcardsTable + " WHERE PROJ_ID_FK = " + project.getId() + ")");
+		st.execute("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK IN " + "(SELECT CARD_ID_PK FROM " + flashcardsTable
+				+ " WHERE PROJ_ID_FK = " + project.getId() + ")");
 
-		st.execute("DELETE FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + project.getId());
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + project.getId());
+		st.execute("DELETE FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + project.getId());
 
-		st.execute("DELETE FROM " + projectsTable + " WHERE Proj_ID_PK = " + project.getId());
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + projectsTable + " WHERE Proj_ID_PK = " + project.getId());
-
+		st.execute("DELETE FROM " + projectsTable + " WHERE Proj_ID_PK = " + project.getId());
 		conn.commit();
 	}
 
 	public ArrayList<LearningProject> getAllProjects() throws SQLException {
 		ArrayList<LearningProject> projects = new ArrayList<LearningProject>();
 		Statement st = conn.createStatement();
-		st.execute("SELECT * FROM " + projectsTable);
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT * FROM " + projectsTable);
+		st.execute("SELECT * FROM " + projectsTable);
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		while (res.next()) {
 			LearningProject p = new LearningProject(ctl, res.getInt(1), res.getString(2), res.getInt(3));
@@ -211,11 +210,11 @@ public class DBExchanger {
 	public int getMaxStack(LearningProject p) throws SQLException {
 		int maxStack = 0;
 		Statement st = conn.createStatement();
-		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK DESC");
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId()
 					+ " ORDER BY STACK DESC");
+		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK DESC");
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		if (res.next()) {
 			maxStack = res.getInt(1);
@@ -227,11 +226,11 @@ public class DBExchanger {
 	public int getMinStack(LearningProject p) throws SQLException {
 		int minStack = 0;
 		Statement st = conn.createStatement();
-		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK ASC");
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId()
 					+ " ORDER BY STACK ASC");
+		st.execute("SELECT STACK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + p.getId() + " ORDER BY STACK ASC");
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		if (res.next()) {
 			minStack = res.getInt(1);
@@ -245,10 +244,10 @@ public class DBExchanger {
 	public ArrayList<Label> getAllLabels(LearningProject p) throws SQLException {
 		ArrayList<Label> labels = new ArrayList<Label>();
 		Statement st = conn.createStatement();
-		st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId());
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId());
+		st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId());
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		while (res.next()) {
 			Label l = new Label(res.getInt(1), res.getString(2), p);
@@ -261,30 +260,33 @@ public class DBExchanger {
 	public ArrayList<Label> getAllLabels(FlashCard f) throws SQLException {
 		ArrayList<Label> labels = new ArrayList<Label>();
 		Statement st = conn.createStatement();
-		st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " INNER JOIN " + labelsFlashcardsTable
-				+ " ON LABEL_ID_PK = LABEL_ID_FK AND CARD_ID_FK = " + f.getId());
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " INNER JOIN " + labelsFlashcardsTable
 					+ " ON LABEL_ID_PK = LABEL_ID_FK AND CARD_ID_FK = " + f.getId());
+		st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " INNER JOIN " + labelsFlashcardsTable
+				+ " ON LABEL_ID_PK = LABEL_ID_FK AND CARD_ID_FK = " + f.getId());
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		while (res.next()) {
-			Label l = new Label(res.getInt(1), res.getString(2), f.getProj());
-			labels.add(l);
+			for (Label l : f.getProj().getLabels()) {
+				if (l.getId() == res.getInt(1)) {
+					labels.add(l);
+				}
+			}
 		}
 		res.close();
 		return labels;
 	}
 
 	public void addLabelToProject(Label l) throws SQLException, InvalidLengthException {
-		if (l.getTitle().length() > maxShortString / 5) {
+		if (l.getName().length() > maxShortString / 5) {
 			throw new InvalidLengthException();
 		}
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
 			System.out.println("INSERT INTO " + labelsTable + " VALUES (" + l.getId() + ", " + l.getProject().getId() + ", '"
-					+ l.getTitle() + "')");
-		st.execute("INSERT INTO " + labelsTable + " VALUES (" + l.getId() + ", " + l.getProject().getId() + ", '" + l.getTitle()
+					+ l.getName() + "')");
+		st.execute("INSERT INTO " + labelsTable + " VALUES (" + l.getId() + ", " + l.getProject().getId() + ", '" + l.getName()
 				+ "')");
 		conn.commit();
 		st.close();
@@ -303,23 +305,23 @@ public class DBExchanger {
 
 	public void updateLabelFromProject(Label l) throws SQLException {
 		Statement st = conn.createStatement();
-		st.execute("UPDATE " + labelsTable + " SET LABEL_NAME = '" + l.getTitle() + "', PROJ_ID_FK = " + l.getProject().getId()
+		if (StartApp.DEBUG)
+			System.out.println("UPDATE " + labelsTable + " SET LABEL_NAME = '" + l.getName() + "', PROJ_ID_PK = "
+					+ l.getProject().getId() + " WHERE LABEL_ID_PK = " + l.getId());
+		st.execute("UPDATE " + labelsTable + " SET LABEL_NAME = '" + l.getName() + "', PROJ_ID_FK = " + l.getProject().getId()
 				+ " WHERE LABEL_ID_PK = " + l.getId());
 		conn.commit();
-		if (StartApp.DEBUG)
-			System.out.println("UPDATE " + labelsTable + " SET LABEL_NAME = '" + l.getTitle() + "', PROJ_ID_PK = "
-					+ l.getProject().getId() + " WHERE LABEL_ID_PK = " + l.getId());
 		st.close();
 	}
 
 	public void deleteLabelFromFlashCard(Label l, FlashCard f) throws SQLException {
 		Statement st = conn.createStatement();
-		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK = " + l.getId() + " AND CARD_ID_FK = "
-				+ f.getId());
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK = " + l.getId()
 					+ " AND CARD_ID_FK = " + f.getId());
+		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE LABEL_ID_FK = " + l.getId() + " AND CARD_ID_FK = "
+				+ f.getId());
+		conn.commit();
 		st.close();
 	}
 
@@ -338,13 +340,13 @@ public class DBExchanger {
 	public int getMaxStack(Label l) throws SQLException {
 		int maxStack = 0;
 		Statement st = conn.createStatement();
-		st.execute("SELECT STACK FROM FLASHCARDS INNER JOIN LABELS_FLASHCARDS ON CARD_ID_PK = CARD_ID_FK "
-				+ "INNER JOIN LABELS ON LABEL_ID_FK = LABEL_ID_PK " + "AND LABEL_ID_FK = " + l.getId() + " ORDER BY STACK DESC");
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT STACK FROM FLASHCARDS INNER JOIN LABELS_FLASHCARDS ON CARD_ID_PK = CARD_ID_FK "
 					+ "INNER JOIN LABELS ON LABEL_ID_FK = LABEL_ID_PK " + "AND LABEL_ID_FK = " + l.getId()
 					+ " ORDER BY STACK DESC");
+		st.execute("SELECT STACK FROM FLASHCARDS INNER JOIN LABELS_FLASHCARDS ON CARD_ID_PK = CARD_ID_FK "
+				+ "INNER JOIN LABELS ON LABEL_ID_FK = LABEL_ID_PK " + "AND LABEL_ID_FK = " + l.getId() + " ORDER BY STACK DESC");
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		if (res.next()) {
 			maxStack = res.getInt(1);
@@ -356,13 +358,13 @@ public class DBExchanger {
 	public int getMinStack(Label l) throws SQLException {
 		int minStack = 0;
 		Statement st = conn.createStatement();
-		st.execute("SELECT STACK FROM FLASHCARDS INNER JOIN LABELS_FLASHCARDS ON CARD_ID_PK = CARD_ID_FK "
-				+ "INNER JOIN LABELS ON LABEL_ID_FK = LABEL_ID_PK " + "AND LABEL_ID_FK = " + l.getId() + " ORDER BY STACK ASC");
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT STACK FROM FLASHCARDS INNER JOIN LABELS_FLASHCARDS ON CARD_ID_PK = CARD_ID_FK "
 					+ "INNER JOIN LABELS ON LABEL_ID_FK = LABEL_ID_PK " + "AND LABEL_ID_FK = " + l.getId()
 					+ " ORDER BY STACK ASC");
+		st.execute("SELECT STACK FROM FLASHCARDS INNER JOIN LABELS_FLASHCARDS ON CARD_ID_PK = CARD_ID_FK "
+				+ "INNER JOIN LABELS ON LABEL_ID_FK = LABEL_ID_PK " + "AND LABEL_ID_FK = " + l.getId() + " ORDER BY STACK ASC");
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		if (res.next()) {
 			minStack = res.getInt(1);
@@ -371,20 +373,39 @@ public class DBExchanger {
 		return minStack;
 	}
 
+	public ArrayList<XMLLabelFlashcardRelation> getXMLLfRelations(FlashCard f) throws SQLException {
+		ArrayList<XMLLabelFlashcardRelation> lfrelations = new ArrayList<XMLLabelFlashcardRelation>();
+		Statement st = conn.createStatement();
+		if (StartApp.DEBUG)
+			st.execute("SELECT * FROM " + labelsFlashcardsTable + " WHERE CARD_ID_FK = " + f.getId());
+		st.execute("SELECT * FROM " + labelsFlashcardsTable + " WHERE CARD_ID_FK = " + f.getId());
+		conn.commit();
+		ResultSet res = st.getResultSet();
+		while (res.next()) {
+			XMLLabelFlashcardRelation lfrel = new XMLLabelFlashcardRelation();
+			lfrel.setId(res.getInt(1));
+			lfrel.setLabelId(res.getInt(2));
+			lfrel.setCardId(res.getInt(3));
+			lfrelations.add(lfrel);
+		}
+		res.close();
+		return lfrelations;
+	}
+
 	/***************************************** FLASHCARD QUERIES ****************************************************/
 	// ADD FLASHCARD: insert flashcard into table
 	public void addFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
-		st.execute("INSERT INTO " + flashcardsTable + " VALUES (" + card.getId() + ", " + card.getProj().getId() + ", "
-				+ card.getStack() + ", '" + card.getQuestion().replaceAll("\'", "&apos;") + "', '"
-				+ card.getAnswer().replaceAll("\'", "&apos;") + "', " + card.getQuestionWidth() + "," + card.getAnswerWidth()
-				+ ")");
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("INSERT INTO " + flashcardsTable + " VALUES (" + card.getId() + ", " + card.getProj().getId()
 					+ ", " + card.getStack() + ", '" + card.getQuestion().replaceAll("\'", "&apos;") + "', '"
 					+ card.getAnswer().replaceAll("\'", "&apos;") + "', " + card.getQuestionWidth() + "," + card.getAnswerWidth()
 					+ ")");
+		st.execute("INSERT INTO " + flashcardsTable + " VALUES (" + card.getId() + ", " + card.getProj().getId() + ", "
+				+ card.getStack() + ", '" + card.getQuestion().replaceAll("\'", "&apos;") + "', '"
+				+ card.getAnswer().replaceAll("\'", "&apos;") + "', " + card.getQuestionWidth() + "," + card.getAnswerWidth()
+				+ ")");
+		conn.commit();
 		st.close();
 		updatePathToPics(card);
 	}
@@ -392,16 +413,16 @@ public class DBExchanger {
 	// UPDATE FLASHCARD: insert flashcard into table
 	public void updateFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
-		st.execute("UPDATE " + flashcardsTable + " SET PROJ_ID_FK = " + card.getProj().getId() + ", STACK = " + card.getStack()
-				+ ", QUESTION = '" + card.getQuestion().replaceAll("\'", "&apos;") + "', ANSWER = '"
-				+ card.getAnswer().replaceAll("\'", "&apos;") + "', CUSTOM_WIDTH_Q = " + card.getQuestionWidth()
-				+ ", CUSTOM_WIDTH_A = " + card.getAnswerWidth() + " WHERE CARD_ID_PK = " + card.getId());
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("UPDATE " + flashcardsTable + " SET PROJ_ID_FK = " + card.getProj().getId() + ", STACK = "
 					+ card.getStack() + ", QUESTION = '" + card.getQuestion().replaceAll("\'", "&apos;") + "', ANSWER = '"
 					+ card.getAnswer().replaceAll("\'", "&apos;") + "', CUSTOM_WIDTH_Q = " + card.getQuestionWidth()
 					+ ", CUSTOM_WIDTH_A = " + card.getAnswerWidth() + " WHERE CARD_ID_PK = " + card.getId());
+		st.execute("UPDATE " + flashcardsTable + " SET PROJ_ID_FK = " + card.getProj().getId() + ", STACK = " + card.getStack()
+				+ ", QUESTION = '" + card.getQuestion().replaceAll("\'", "&apos;") + "', ANSWER = '"
+				+ card.getAnswer().replaceAll("\'", "&apos;") + "', CUSTOM_WIDTH_Q = " + card.getQuestionWidth()
+				+ ", CUSTOM_WIDTH_A = " + card.getAnswerWidth() + " WHERE CARD_ID_PK = " + card.getId());
+		conn.commit();
 		st.close();
 		updatePathToPics(card);
 	}
@@ -421,17 +442,15 @@ public class DBExchanger {
 
 	public void deleteFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
-		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE CARD_ID_FK = " + card.getId());
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + labelsFlashcardsTable + " WHERE CARD_ID_FK = " + card.getId());
-
-		st.execute("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK = " + card.getId());
+		st.execute("DELETE FROM " + labelsFlashcardsTable + " WHERE CARD_ID_FK = " + card.getId());
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK = " + card.getId());
-
-		st.execute("DELETE FROM " + flashcardsTable + " WHERE CARD_ID_PK = " + card.getId());
+		st.execute("DELETE FROM " + mediaTable + " WHERE CARD_ID_FK = " + card.getId());
 		if (StartApp.DEBUG)
 			System.out.println("DELETE FROM " + flashcardsTable + " WHERE CARD_ID_PK = " + card.getId());
+		st.execute("DELETE FROM " + flashcardsTable + " WHERE CARD_ID_PK = " + card.getId());
 		conn.commit();
 	}
 
@@ -444,10 +463,10 @@ public class DBExchanger {
 		if (p != null)
 			p.changeProgress(Math.min(p.getProgress() + 100 / noOfCards, 100));
 		Statement st = conn.createStatement();
-		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
+		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
+		conn.commit();
 		ResultSet res = st.getResultSet();
 		while (res.next()) {
 			FlashCard f = new FlashCard(res.getInt(1), proj, res.getInt(3), res.getString(4).replaceAll("&apos;", "\'"), res
@@ -465,6 +484,9 @@ public class DBExchanger {
 	// GET PIC as XMLMedia
 	public XMLMedia getPic(FlashCard card, PicType type) throws SQLException {
 		XMLMedia media = new XMLMedia();
+		if (StartApp.DEBUG)
+			System.out.println("SELECT * FROM " + mediaTable + " WHERE CARD_ID_FK = " + card.getId() + " AND PICTYPE = '"
+					+ type.getShortForm() + "'");
 		Statement st = conn.createStatement();
 		st.executeQuery("SELECT * FROM " + mediaTable + " WHERE CARD_ID_FK = " + card.getId() + " AND PICTYPE = '"
 				+ type.getShortForm() + "'");
@@ -483,12 +505,13 @@ public class DBExchanger {
 	// GET PATH TO PIC: get picture of flashcard from DB
 	public String getPathToPic(FlashCard f, PicType type) throws SQLException {
 		Statement st = conn.createStatement();
-		st.execute("SELECT PATH_TO_MEDIA FROM " + mediaTable + " WHERE CARD_ID_FK = " + f.getId() + " AND PICTYPE = '"
-				+ type.getShortForm() + "'");
-		conn.commit();
 		if (StartApp.DEBUG)
 			System.out.println("SELECT PATH_TO_MEDIA FROM " + mediaTable + " WHERE CARD_ID_FK = " + f.getId()
 					+ " AND PICTYPE = '" + type.getShortForm() + "'");
+		st.execute("SELECT PATH_TO_MEDIA FROM " + mediaTable + " WHERE CARD_ID_FK = " + f.getId() + " AND PICTYPE = '"
+				+ type.getShortForm() + "'");
+		conn.commit();
+
 		ResultSet res = st.getResultSet();
 		String path = null;
 		if (res.next()) {
@@ -572,6 +595,8 @@ public class DBExchanger {
 	public int getCardNumberInProject(FlashCard f) throws SQLException {
 		int number = 0;
 		Statement st = conn.createStatement();
+		if (StartApp.DEBUG)
+			System.out.println("SELECT CARD_ID_PK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + f.getProj().getId());
 		st.execute("SELECT CARD_ID_PK FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + f.getProj().getId());
 		// + " ORDER BY CARD_ID_PK ASC");
 		ResultSet res = st.getResultSet();

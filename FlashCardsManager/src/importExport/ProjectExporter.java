@@ -12,8 +12,7 @@ import java.util.Iterator;
 
 import javax.xml.stream.XMLStreamException;
 
-import core.FlashCard;
-import core.LearningProject;
+import core.*;
 
 public class ProjectExporter {
 
@@ -22,9 +21,11 @@ public class ProjectExporter {
 	private String pathToMediaFolder;
 	private IProgressPresenter p;
 
-	private ArrayList<XMLLearningProject> xmlProjects;
-	private ArrayList<XMLFlashCard> xmlFlashCards;
-	private ArrayList<XMLMedia> xmlMedia;
+	private ArrayList<XMLLearningProject> xmlProjects = new ArrayList<XMLLearningProject>();
+	private ArrayList<XMLFlashCard> xmlFlashCards = new ArrayList<XMLFlashCard>();
+	private ArrayList<XMLMedia> xmlMedia = new ArrayList<XMLMedia>();
+	private ArrayList<XMLLabel> xmlLabels = new ArrayList<XMLLabel>();
+	private ArrayList<XMLLabelFlashcardRelation> xmlLfRel = new ArrayList<XMLLabelFlashcardRelation>();
 
 	public ProjectExporter(ArrayList<LearningProject> exportProjects, String pathToMediaFolder, String pathToExportFolder,
 			IProgressPresenter p) {
@@ -35,17 +36,17 @@ public class ProjectExporter {
 	}
 
 	public void doExport() throws SQLException, XMLStreamException, IOException {
-		loadCards();
+		loadCardsAndLabels();
 		Files.createDirectory(Paths.get(pathToExportFolder));
 		loadXMLLists();
 		writeXMLFiles();
 		copyPics();
 	}
 
-	private void loadCards() throws SQLException {
+	private void loadCardsAndLabels() throws SQLException {
 		for (LearningProject proj : exportProjects) {
 			p.changeInfo("Lade Karten: " + proj.getTitle());
-			proj.loadFlashcards(p);
+			proj.loadLabelsAndFlashcards(p);
 			p.changeProgress(0);
 		}
 
@@ -65,23 +66,27 @@ public class ProjectExporter {
 		p.changeInfo("Exportiere...");
 		XMLExchanger ex = new XMLExchanger();
 		ex.writeProjects(pathToExportFolder + "/" + XMLFiles.LEARNING_PROJECTS.getName(), xmlProjects);
-		p.changeProgress(33);
+		p.changeProgress(20);
+		ex.writeLabels(pathToExportFolder + "/" + XMLFiles.LABELS.getName(), xmlLabels);
+		p.changeProgress(40);
 		ex.writeFlashcards(pathToExportFolder + "/" + XMLFiles.FLASHCARDS.getName(), xmlFlashCards);
-		p.changeProgress(66);
+		p.changeProgress(60);
+		ex.writeLabelFlashcardRelation(pathToExportFolder + "/" + XMLFiles.LABELS_FLASHCARDS.getName(), xmlLfRel);
+		p.changeProgress(80);
 		ex.writeMedia(pathToExportFolder + "/" + XMLFiles.MEDIA.getName(), xmlMedia);
-		p.changeProgress(99);
+		p.changeProgress(100);
 	}
 
 	private void loadXMLLists() throws SQLException {
 		p.changeProgress(0);
 		p.changeInfo("Erstelle Export-Objekte...");
-		xmlProjects = new ArrayList<XMLLearningProject>();
-		xmlFlashCards = new ArrayList<XMLFlashCard>();
-		xmlMedia = new ArrayList<XMLMedia>();
 		Iterator<LearningProject> it = exportProjects.iterator();
 		while (it.hasNext()) {
 			LearningProject proj = it.next();
 			xmlProjects.add(proj.toXMLLearningProject());
+			for (Label l : proj.getLabels()) {
+				xmlLabels.add(l.toXMLLabel());
+			}
 			for (FlashCard c : proj.getAllCards()) {
 				xmlFlashCards.add(c.toXMLFlashcard());
 				XMLMedia mQuestion = c.getXMLQuestionMedia();
@@ -92,8 +97,11 @@ public class ProjectExporter {
 				if (mAnswer != null) {
 					xmlMedia.add(mAnswer);
 				}
+				for (XMLLabelFlashcardRelation lfrel : c.getXMLLfRelations()) {
+					xmlLfRel.add(lfrel);
+				}
 			}
-			p.changeProgress(Math.min(100, p.getProgress() + 100/exportProjects.size()));
+			p.changeProgress(Math.min(100, p.getProgress() + 100 / exportProjects.size()));
 		}
 	}
 }

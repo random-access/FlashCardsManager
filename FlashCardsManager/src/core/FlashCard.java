@@ -1,7 +1,6 @@
 package core;
 
-import importExport.XMLFlashCard;
-import importExport.XMLMedia;
+import importExport.*;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -134,6 +133,10 @@ public class FlashCard {
 
 	public XMLMedia getXMLAnswerMedia() throws SQLException {
 		return dbex.getPic(this, PicType.ANSWER);
+	}
+
+	public ArrayList<XMLLabelFlashcardRelation> getXMLLfRelations() throws SQLException {
+		return dbex.getXMLLfRelations(this);
 	}
 
 	public String getQuestion() {

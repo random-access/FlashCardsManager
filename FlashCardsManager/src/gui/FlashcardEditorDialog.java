@@ -56,7 +56,7 @@ public class FlashcardEditorDialog extends JDialog {
 	// private MainWindow owner;
 	private LearningProject project;
 	private ProjectPanel projPnl;
-	private FlashcardOverviewDialog editFrame;
+	private FlashcardOverviewFrame editFrame;
 
 	// only for existing flashcards
 	private FlashCard existingCard;
@@ -100,8 +100,8 @@ public class FlashcardEditorDialog extends JDialog {
 	// constructor for adding a new flashcard
 	public FlashcardEditorDialog(JFrame owner, LearningProject project, ProjectPanel projPnl) throws IOException {
 		super(owner, true);
-		if (owner instanceof FlashcardOverviewDialog) {
-			editFrame = (FlashcardOverviewDialog) owner;
+		if (owner instanceof FlashcardOverviewFrame) {
+			editFrame = (FlashcardOverviewFrame) owner;
 		}
 		this.project = project;
 		this.projPnl = projPnl;
@@ -383,9 +383,8 @@ public class FlashcardEditorDialog extends JDialog {
 				try {
 					d = new AddLabelToCardDialog(FlashcardEditorDialog.this, project, existingCard);
 					d.setVisible(true);
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (SQLException sqle) {
+					CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, sqle);
 				}
 
 			}

@@ -22,7 +22,7 @@ import exc.CustomInfoHandling;
 import gui.helpers.*;
 
 @SuppressWarnings("serial")
-public class FlashcardOverviewDialog extends JFrame implements ProjectDataChangedListener {
+public class FlashcardOverviewFrame extends JFrame implements ProjectDataChangedListener {
 
 	private static BufferedImage imgSettings, imgPlus, imgFlashcardInfo, imgEdit, imgDelete;
 	{
@@ -62,7 +62,7 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 	private LearningProject project;
 	private ProjectPanel projPnl;
 
-	public FlashcardOverviewDialog(ProjectPanel projPnl, ArrayList<FlashCard> cards, LearningProject project) throws SQLException {
+	public FlashcardOverviewFrame(ProjectPanel projPnl, ArrayList<FlashCard> cards, LearningProject project) throws SQLException {
 		// super(projPnl.getOwner(), true);
 		this.owner = projPnl.getMainWindow();
 		this.project = project;
@@ -170,10 +170,10 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl);
+					FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewFrame.this, project, projPnl);
 					d.setVisible(true);
 				} catch (IOException ioe) {
-					CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
+					CustomErrorHandling.showInternalError(FlashcardOverviewFrame.this, ioe);
 				}
 			}
 		});
@@ -183,13 +183,13 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl,
+					FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewFrame.this, project, projPnl,
 							getSelectedCards().get(0));
 					d.setVisible(true);
 				} catch (IOException ioe) {
-					CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
+					CustomErrorHandling.showInternalError(FlashcardOverviewFrame.this, ioe);
 				} catch (SQLException sqle) {
-					CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
+					CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 				}
 			}
 		});
@@ -198,10 +198,10 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl);
+					FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewFrame.this, project, projPnl);
 					d.setVisible(true);
 				} catch (IOException ioe) {
-					CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
+					CustomErrorHandling.showInternalError(FlashcardOverviewFrame.this, ioe);
 				}
 			}
 		});
@@ -210,7 +210,7 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AddLabelDialog d = new AddLabelDialog(FlashcardOverviewDialog.this, trProjects, project);
+				AddLabelDialog d = new AddLabelDialog(FlashcardOverviewFrame.this, trProjects, project);
 				d.setVisible(true);
 			}
 		});
@@ -227,9 +227,8 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 					for (int i = 0; i < selection.size(); i++) {
 						try {
 							selection.get(i).addLabel(selectedLabel);
-						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
+						} catch (SQLException sqle) {
+							CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 						}
 					}
 				}
@@ -247,9 +246,8 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 					for (int i = 0; i < selection.size(); i++) {
 						try {
 							selection.get(i).removeLabel(selectedLabel);
-						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
+						} catch (SQLException sqle) {
+							CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 						}
 					}
 				}
@@ -267,12 +265,12 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 						Label l = (Label) node.getUserObject();
 						try {
 							l.delete();
-						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
+						} catch (SQLException sqle) {
+							CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 						}
 					}
 					model.removeNodeFromParent(node);
+					trProjects.setSelectionRow(0);
 				}
 			}
 		});
@@ -284,7 +282,7 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 					CustomInfoHandling.showNoCardsSelectedInfo();
 				} else {
 					FlashcardTransferDialog d = new FlashcardTransferDialog(owner.getProjectsController(),
-							FlashcardOverviewDialog.this, project, getSelectedCards());
+							FlashcardOverviewFrame.this, project, getSelectedCards());
 					d.setVisible(true);
 				}
 			}
@@ -333,13 +331,13 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 					int rowAtPoint = tblCards.rowAtPoint(e.getPoint());
 					int convertedRowAtPoint = rowSorter.convertRowIndexToModel(rowAtPoint);
 					try {
-						FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewDialog.this, project, projPnl,
+						FlashcardEditorDialog d = new FlashcardEditorDialog(FlashcardOverviewFrame.this, project, projPnl,
 								((FlashcardTableModel) tblCards.getModel()).getCard(convertedRowAtPoint));
 						d.setVisible(true);
 					} catch (IOException ioe) {
-						CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
+						CustomErrorHandling.showInternalError(FlashcardOverviewFrame.this, ioe);
 					} catch (SQLException sqle) {
-						CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
+						CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 					}
 				}
 
@@ -376,7 +374,7 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 				try {
 					projPnl.changeStatus(project.getStatus());
 				} catch (SQLException sqle) {
-					CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
+					CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 				}
 				manageButtonActivation();
 				selectCardSectionContent();
@@ -448,7 +446,6 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 	}
 
 	private void createTreeNodes(DefaultMutableTreeNode topNode) throws SQLException {
-		project.loadLabels();
 		labelData = project.getLabels();
 		DefaultMutableTreeNode label = null;
 		for (int i = 0; i < labelData.size(); i++) {
@@ -534,7 +531,7 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 	}
 
 	public void deleteSelectedCards(int count) {
-		final OkOrDisposeDialog d = new OkOrDisposeDialog(FlashcardOverviewDialog.this, 300, 150);
+		final OkOrDisposeDialog d = new OkOrDisposeDialog(FlashcardOverviewFrame.this, 300, 150);
 		d.setText("<html>M\u00f6chtest Du wirklich " + count + " Karten l\u00f6schen?</html>");
 		d.setTitle("Wirklich l\u00f6schen?");
 		d.addOkAction(new ActionListener() {
@@ -550,9 +547,9 @@ public class FlashcardOverviewDialog extends JFrame implements ProjectDataChange
 					}
 					CustomInfoHandling.showSuccessfullyDeletedInfo();
 				} catch (SQLException sqle) {
-					CustomErrorHandling.showDatabaseError(FlashcardOverviewDialog.this, sqle);
+					CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 				} catch (IOException ioe) {
-					CustomErrorHandling.showInternalError(FlashcardOverviewDialog.this, ioe);
+					CustomErrorHandling.showInternalError(FlashcardOverviewFrame.this, ioe);
 				}
 			}
 		});

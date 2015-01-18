@@ -92,6 +92,7 @@ public class AddLabelDialog extends JDialog {
 						DefaultTreeModel model = (DefaultTreeModel) tree.getModel();
 						model.insertNodeInto(new DefaultMutableTreeNode(l), (MutableTreeNode) model.getRoot(),
 								model.getChildCount(model.getRoot()));
+						tree.expandPath(tree.getPathForRow(0));
 						AddLabelDialog.this.dispose();
 					}
 				} catch (SQLException sqle) {

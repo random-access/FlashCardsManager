@@ -20,7 +20,7 @@ public class LabelTreeModel extends DefaultTreeModel {
         DefaultMutableTreeNode node = (DefaultMutableTreeNode) path.getLastPathComponent();
         if (node.getUserObject() instanceof Label) {
             Label l = (Label) node.getUserObject();
-            l.setTitle((String) newValue);
+            l.setName((String) newValue);
             try {
                 l.update();
             } catch (SQLException sqle) {

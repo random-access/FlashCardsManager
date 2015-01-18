@@ -1,23 +1,11 @@
 package importExport;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javax.xml.stream.XMLEventFactory;
-import javax.xml.stream.XMLEventReader;
-import javax.xml.stream.XMLEventWriter;
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLOutputFactory;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.events.Characters;
-import javax.xml.stream.events.EndElement;
-import javax.xml.stream.events.StartDocument;
-import javax.xml.stream.events.StartElement;
-import javax.xml.stream.events.XMLEvent;
+import javax.xml.stream.*;
+import javax.xml.stream.events.*;
 
 import exc.CustomErrorHandling;
 
@@ -46,13 +34,24 @@ public class XMLExchanger {
 	private static final String ELEM_PATH_TO_MEDIA = "path_to_media";
 	private static final String ELEM_PICTYPE = "pictype";
 
+	// label property strings
+	private static final String ELEM_LABELS = "labels";
+	private static final String ELEM_LABEL = "label";
+	private static final String ELEM_LABEL_ID = "label_id";
+	private static final String ELEM_LABEL_NAME = "label_name";
+
+	// labels-flashcards property strings
+	private static final String ELEM_LABELS_FLASHCARDS = "labels_flashcards";
+	private static final String ELEM_LABEL_FLASHCARD = "label_flashcard";
+	private static final String ELEM_LABELS_FLASHCARDS_ID = "labels_flashcards_id";
+
 	// ******************** flashcard import/export ***************************
 	public ArrayList<XMLFlashCard> readFlashcards(String inputFile) throws NumberFormatException, XMLStreamException, IOException {
 		ArrayList<XMLFlashCard> cards = new ArrayList<XMLFlashCard>();
 		XMLFlashCard card = null;
 		XMLInputFactory factory = XMLInputFactory.newInstance();
-		factory.setProperty(XMLInputFactory.IS_COALESCING, true); 
-			// for reading all signs from xml stream
+		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
+		// for reading all signs from xml stream
 		FileInputStream inputStream = new FileInputStream(inputFile);
 		XMLEventReader reader = factory.createXMLEventReader(inputStream);
 		while (reader.hasNext()) {
@@ -111,7 +110,7 @@ public class XMLExchanger {
 		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
 		FileOutputStream outputStream = new FileOutputStream(outputFile);
 		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
-		// for debugging print to console: 
+		// for debugging print to console:
 		// XMLEventWriter xmlEventWriter =
 		// xmlOutputFactory.createXMLEventWriter(System.out);
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
@@ -147,7 +146,7 @@ public class XMLExchanger {
 		ArrayList<XMLLearningProject> projects = new ArrayList<XMLLearningProject>();
 		XMLLearningProject project = null;
 		XMLInputFactory factory = XMLInputFactory.newInstance();
-		factory.setProperty(XMLInputFactory.IS_COALESCING, true); 
+		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
 		// for reading everything from xml
 		FileInputStream inputStream = new FileInputStream(inputFile);
 		XMLEventReader reader = factory.createXMLEventReader(inputStream);
@@ -191,7 +190,7 @@ public class XMLExchanger {
 		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
 		FileOutputStream outputStream = new FileOutputStream(outputFile);
 		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
-		// for debugging print to console: 
+		// for debugging print to console:
 		// XMLEventWriter xmlEventWriter =
 		// xmlOutputFactory.createXMLEventWriter(System.out);
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
@@ -221,8 +220,8 @@ public class XMLExchanger {
 		ArrayList<XMLMedia> medias = new ArrayList<XMLMedia>();
 		XMLMedia media = null;
 		XMLInputFactory factory = XMLInputFactory.newInstance();
-		factory.setProperty(XMLInputFactory.IS_COALESCING, true); 
-			// for reading everything from xml
+		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
+		// for reading everything from xml
 		FileInputStream inputStream = new FileInputStream(inputFile);
 		XMLEventReader reader = factory.createXMLEventReader(inputStream);
 		while (reader.hasNext()) {
@@ -268,7 +267,7 @@ public class XMLExchanger {
 		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
 		FileOutputStream outputStream = new FileOutputStream(outputFile);
 		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
-		// for debugging print to console: 
+		// for debugging print to console:
 		// XMLEventWriter xmlEventWriter =
 		// xmlOutputFactory.createXMLEventWriter(System.out);
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
@@ -285,6 +284,154 @@ public class XMLExchanger {
 			createEndElem(ELEM_MEDIA, xmlEventWriter, eventFactory, end);
 		}
 		createRootEndAndCloseStream(ELEM_MEDIAS, xmlEventWriter, eventFactory, end);
+		if (outputStream != null) {
+			try {
+				outputStream.close();
+			} catch (IOException ioe) {
+				CustomErrorHandling.showExportError(null, ioe);
+			}
+		}
+	}
+
+	// ********************* label import/export ***********************
+	public ArrayList<XMLLabel> readLabels(String inputFile) throws NumberFormatException, XMLStreamException, IOException {
+		ArrayList<XMLLabel> labels = new ArrayList<XMLLabel>();
+		XMLLabel label = null;
+		XMLInputFactory factory = XMLInputFactory.newInstance();
+		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
+		// for reading everything from xml
+		FileInputStream inputStream = new FileInputStream(inputFile);
+		XMLEventReader reader = factory.createXMLEventReader(inputStream);
+		while (reader.hasNext()) {
+			XMLEvent event = reader.nextEvent();
+			if (event.isStartElement()) {
+				StartElement startElement = event.asStartElement();
+				switch (startElement.getName().getLocalPart()) {
+				case ELEM_LABEL:
+					label = new XMLLabel();
+					break;
+				case ELEM_LABEL_ID:
+					event = reader.nextEvent();
+					label.setId(Integer.parseInt(event.asCharacters().getData()));
+					break;
+				case ELEM_PROJ_ID:
+					event = reader.nextEvent();
+					label.setProjId(Integer.parseInt(event.asCharacters().getData()));
+					break;
+				case ELEM_LABEL_NAME:
+					event = reader.nextEvent();
+					label.setName(event.asCharacters().getData());
+					break;
+				}
+			}
+			if (event.isEndElement()) {
+				EndElement endElement = event.asEndElement();
+				if (endElement.getName().getLocalPart().equals(ELEM_LABEL)) {
+					labels.add(label);
+				}
+			}
+		}
+		if (inputStream != null) {
+			inputStream.close();
+		}
+		return labels;
+	}
+
+	public void writeLabels(String outputFile, ArrayList<XMLLabel> labels) throws FileNotFoundException, XMLStreamException {
+		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
+		FileOutputStream outputStream = new FileOutputStream(outputFile);
+		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
+		// for debugging print to console:
+		// XMLEventWriter xmlEventWriter =
+		// xmlOutputFactory.createXMLEventWriter(System.out);
+		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
+		XMLEvent end = eventFactory.createDTD("\n");
+		startDocAndCreateRootElement(ELEM_LABELS, xmlEventWriter, eventFactory, end);
+		Iterator<XMLLabel> it = labels.iterator();
+		while (it.hasNext()) {
+			XMLLabel label = it.next();
+			createStartElem(ELEM_LABEL, xmlEventWriter, eventFactory, end);
+			createNode(xmlEventWriter, ELEM_LABEL_ID, Integer.toString(label.getId()));
+			createNode(xmlEventWriter, ELEM_PROJ_ID, Integer.toString(label.getProjId()));
+			createNode(xmlEventWriter, ELEM_LABEL_NAME, label.getName());
+			createEndElem(ELEM_LABEL, xmlEventWriter, eventFactory, end);
+		}
+		createRootEndAndCloseStream(ELEM_LABELS, xmlEventWriter, eventFactory, end);
+		if (outputStream != null) {
+			try {
+				outputStream.close();
+			} catch (IOException ioe) {
+				CustomErrorHandling.showExportError(null, ioe);
+			}
+		}
+	}
+
+	// ************ label-flashcard-relation import/export *************
+	public ArrayList<XMLLabelFlashcardRelation> readLabelFlashcardRelations(String inputFile) throws NumberFormatException,
+			XMLStreamException, IOException {
+		ArrayList<XMLLabelFlashcardRelation> lfrelations = new ArrayList<XMLLabelFlashcardRelation>();
+		XMLLabelFlashcardRelation lfrelation = null;
+		XMLInputFactory factory = XMLInputFactory.newInstance();
+		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
+		// for reading everything from xml
+		FileInputStream inputStream = new FileInputStream(inputFile);
+		XMLEventReader reader = factory.createXMLEventReader(inputStream);
+		while (reader.hasNext()) {
+			XMLEvent event = reader.nextEvent();
+			if (event.isStartElement()) {
+				StartElement startElement = event.asStartElement();
+				switch (startElement.getName().getLocalPart()) {
+				case ELEM_LABEL_FLASHCARD:
+					lfrelation = new XMLLabelFlashcardRelation();
+					break;
+				case ELEM_LABELS_FLASHCARDS_ID:
+					event = reader.nextEvent();
+					lfrelation.setId(Integer.parseInt(event.asCharacters().getData()));
+					break;
+				case ELEM_LABEL_ID:
+					event = reader.nextEvent();
+					lfrelation.setLabelId(Integer.parseInt(event.asCharacters().getData()));
+					break;
+				case ELEM_CARD_ID:
+					event = reader.nextEvent();
+					lfrelation.setCardId(Integer.parseInt(event.asCharacters().getData()));
+					break;
+				}
+			}
+			if (event.isEndElement()) {
+				EndElement endElement = event.asEndElement();
+				if (endElement.getName().getLocalPart().equals(ELEM_LABEL_FLASHCARD)) {
+					lfrelations.add(lfrelation);
+				}
+			}
+		}
+		if (inputStream != null) {
+			inputStream.close();
+		}
+		return lfrelations;
+	}
+
+	public void writeLabelFlashcardRelation(String outputFile, ArrayList<XMLLabelFlashcardRelation> lfrelations)
+			throws FileNotFoundException, XMLStreamException {
+		XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
+		FileOutputStream outputStream = new FileOutputStream(outputFile);
+		XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
+		// for debugging print to console:
+		// XMLEventWriter xmlEventWriter =
+		// xmlOutputFactory.createXMLEventWriter(System.out);
+		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
+		XMLEvent end = eventFactory.createDTD("\n");
+		startDocAndCreateRootElement(ELEM_LABELS_FLASHCARDS, xmlEventWriter, eventFactory, end);
+		Iterator<XMLLabelFlashcardRelation> it = lfrelations.iterator();
+		while (it.hasNext()) {
+			XMLLabelFlashcardRelation lfrelation = it.next();
+			createStartElem(ELEM_LABEL_FLASHCARD, xmlEventWriter, eventFactory, end);
+			createNode(xmlEventWriter, ELEM_LABELS_FLASHCARDS_ID, Integer.toString(lfrelation.getId()));
+			createNode(xmlEventWriter, ELEM_LABEL_ID, Integer.toString(lfrelation.getLabelId()));
+			createNode(xmlEventWriter, ELEM_CARD_ID, Integer.toString(lfrelation.getCardId()));
+			createEndElem(ELEM_LABEL_FLASHCARD, xmlEventWriter, eventFactory, end);
+		}
+		createRootEndAndCloseStream(ELEM_LABELS_FLASHCARDS, xmlEventWriter, eventFactory, end);
 		if (outputStream != null) {
 			try {
 				outputStream.close();

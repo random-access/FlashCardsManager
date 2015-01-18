@@ -178,7 +178,7 @@ public class ProjectPanel extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						try {
-							project.loadFlashcards(null);
+							project.loadLabelsAndFlashcards(null);
 							project.delete();
 							parentWindow.updateProjectList();
 						} catch (SQLException sqle) {
@@ -301,9 +301,9 @@ public class ProjectPanel extends JPanel {
 
 	private void showEditFlashcardsDialog() {
 		cards = project.getAllCards();
-		FlashcardOverviewDialog d;
+		FlashcardOverviewFrame d;
 		try {
-			d = new FlashcardOverviewDialog(ProjectPanel.this, cards, project);
+			d = new FlashcardOverviewFrame(ProjectPanel.this, cards, project);
 			d.setVisible(true);
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(parentWindow, sqle);

@@ -1,5 +1,7 @@
 package core;
 
+import importExport.XMLLabel;
+
 import java.sql.SQLException;
 
 import storage.DBExchanger;
@@ -7,25 +9,25 @@ import storage.TableType;
 import exc.InvalidLengthException;
 
 public class Label implements IHasStatus {
-	private DBExchanger dbex; // TODO final
+	private final DBExchanger dbex;
 
 	private int id;
-	private String title;
+	private String name;
 	private LearningProject project;
 
 	// Add new label
-	public Label(String title, LearningProject project) throws SQLException {
+	public Label(String name, LearningProject project) throws SQLException {
 		dbex = project.getDBEX();
 		this.id = dbex.nextId(TableType.LABELS);
-		this.title = title;
+		this.name = name;
 		this.project = project;
 	}
 
 	// Restore a label from database
-	public Label(int id, String title, LearningProject project) {
+	public Label(int id, String name, LearningProject project) {
 		dbex = project.getDBEX();
 		this.id = id;
-		this.title = title;
+		this.name = name;
 		this.project = project;
 	}
 
@@ -48,6 +50,14 @@ public class Label implements IHasStatus {
 		dbex.deleteLabelFromProject(this);
 	}
 
+	public XMLLabel toXMLLabel() {
+		XMLLabel xmlLabel = new XMLLabel();
+		xmlLabel.setId(id);
+		xmlLabel.setProjId(project.getId());
+		xmlLabel.setName(name);
+		return xmlLabel;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -56,12 +66,12 @@ public class Label implements IHasStatus {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public LearningProject getProject() {
@@ -87,7 +97,7 @@ public class Label implements IHasStatus {
 	}
 
 	public String toString() {
-		return this.title;
+		return this.name;
 	}
 
 	@Override
@@ -96,7 +106,7 @@ public class Label implements IHasStatus {
 		int result = 1;
 		result = prime * result + id;
 		result = prime * result + ((project == null) ? 0 : project.hashCode());
-		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
 
@@ -116,10 +126,10 @@ public class Label implements IHasStatus {
 				return false;
 		} else if (!project.equals(other.project))
 			return false;
-		if (title == null) {
-			if (other.title != null)
+		if (name == null) {
+			if (other.name != null)
 				return false;
-		} else if (!title.equals(other.title))
+		} else if (!name.equals(other.name))
 			return false;
 		return true;
 	}

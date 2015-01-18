@@ -24,9 +24,9 @@ public class FlashcardTransferDialog extends JDialog {
 	private JLabel lblSourceProject, lblSourceProjectName, lblTargetProject;
 	private JComboBox<LearningProject> cmbChooseProject;
 	private JCheckBox chkKeepProgress;
-	private FlashcardOverviewDialog editFrame;
+	private FlashcardOverviewFrame editFrame;
 
-	public FlashcardTransferDialog(ProjectsController ctl, FlashcardOverviewDialog editFrame, LearningProject srcProj,
+	public FlashcardTransferDialog(ProjectsController ctl, FlashcardOverviewFrame editFrame, LearningProject srcProj,
 			ArrayList<FlashCard> cardsToTransfer) {
 		super(editFrame, true);
 		setTitle("Lernkarten verschieben...");

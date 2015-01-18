@@ -56,7 +56,7 @@ public class AddLabelToCardDialog extends JDialog implements IHasOkButton {
 		scpCenter.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		boxes = new StackBox[p.getLabels().size()];
 		for (int i = 0; i < p.getLabels().size(); i++) {
-			boxes[i] = new StackBox(p.getLabels().get(i).getTitle(), AddLabelToCardDialog.this, hasLabel(p.getLabels().get(i)));
+			boxes[i] = new StackBox(p.getLabels().get(i).getName(), AddLabelToCardDialog.this, hasLabel(p.getLabels().get(i)));
 		}
 
 		btnOk = new JButton("Ok");
