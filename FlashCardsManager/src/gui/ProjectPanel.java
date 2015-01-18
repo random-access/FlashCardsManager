@@ -1,8 +1,5 @@
 package gui;
 
-import exc.CustomErrorHandling;
-import gui.helpers.*;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +14,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import utils.Logger;
 import core.*;
+import exc.CustomErrorHandling;
+import gui.helpers.LoadCardsTask;
+import gui.helpers.ProgressDialog;
 
 @SuppressWarnings("serial")
 public class ProjectPanel extends JPanel {
@@ -38,8 +38,9 @@ public class ProjectPanel extends JPanel {
 		}
 	}
 
-	static JFileChooser fileChooser; 
-	// this is static to hand it over to flashcard editing for open it at last chosen path
+	static JFileChooser fileChooser;
+	// this is static to hand it over to flashcard editing for open it at last
+	// chosen path
 
 	int noOfStacks;
 	private Box b;
@@ -73,10 +74,10 @@ public class ProjectPanel extends JPanel {
 		setListeners();
 	}
 
-	public MainWindow getOwner() {
+	public MainWindow getMainWindow() {
 		return this.parentWindow;
 	}
-	
+
 	public String getProjectTitle() {
 		return projectTitle;
 	}
@@ -127,17 +128,18 @@ public class ProjectPanel extends JPanel {
 
 		fileChooser = new JFileChooser();
 		fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg", "jpeg")); 
-		// TODO test if other extensions work as well; add them; global list of known extensions
+		fileChooser.setFileFilter(new FileNameExtensionFilter("Bilddateien", "png", "jpg", "jpeg"));
+		// TODO test if other extensions work as well; add them; global list of
+		// known extensions
 	}
 
 	JFileChooser getFileChooser() {
 		return fileChooser;
 	}
 
-//	public Status getStatus() {
-//		return this.status;
-//	}
+	// public Status getStatus() {
+	// return this.status;
+	// }
 
 	private void setStatus(Status s) {
 		switch (s) {
@@ -191,7 +193,7 @@ public class ProjectPanel extends JPanel {
 				d.setVisible(true);
 			}
 		});
-		
+
 		// open edit menu with several options
 		btnEdit.addActionListener(new ActionListener() {
 
@@ -200,7 +202,7 @@ public class ProjectPanel extends JPanel {
 				Component source = (Component) e.getSource();
 				Dimension size = source.getSize();
 				int xPos = size.width - btnEdit.getPreferredSize().width;
-				int yPos = size.width; 
+				int yPos = size.width;
 				popupEdit.show(source, xPos, yPos);
 			}
 		});
@@ -252,7 +254,7 @@ public class ProjectPanel extends JPanel {
 		popupEditResetProgress.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				final OkOrDisposeDialog d = new OkOrDisposeDialog(ProjectPanel.this.getOwner(), 300, 150);
+				final OkOrDisposeDialog d = new OkOrDisposeDialog(ProjectPanel.this.getMainWindow(), 300, 150);
 				d.setText("<html>M\u00f6chtest Du wirklich alle Karten <br> in den ersten Stapel zur\u00fccklegen?</html>");
 				d.setTitle("Lernerfolg zur\u00fccksetzen?");
 				d.addOkAction(new ActionListener() {
@@ -289,7 +291,7 @@ public class ProjectPanel extends JPanel {
 		cards = project.getAllCards();
 		FlashcardEditorDialog d;
 		try {
-			d = new FlashcardEditorDialog(null, project, ProjectPanel.this);
+			d = new FlashcardEditorDialog(this.getMainWindow(), project, ProjectPanel.this);
 			d.setVisible(true);
 		} catch (IOException ioe) {
 			CustomErrorHandling.showInternalError(parentWindow, ioe);
@@ -306,7 +308,6 @@ public class ProjectPanel extends JPanel {
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(parentWindow, sqle);
 		}
-		
 
 	}
 
@@ -330,7 +331,7 @@ public class ProjectPanel extends JPanel {
 		cards = project.getAllCards();
 		PrepareLearningSessionDialog chooseStacks;
 		try {
-			chooseStacks = new PrepareLearningSessionDialog(ProjectPanel.this.getOwner(), ProjectPanel.this.cards,
+			chooseStacks = new PrepareLearningSessionDialog(ProjectPanel.this.getMainWindow(), ProjectPanel.this.cards,
 					ProjectPanel.this.project);
 			chooseStacks.setVisible(true);
 		} catch (SQLException sqle) {
@@ -342,7 +343,7 @@ public class ProjectPanel extends JPanel {
 		ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, ctl);
 		p.setVisible(true);
 	}
-	
+
 	// TODO work on better solution (own event handling? wait/notify?)
 	public void resume(DialogType type) {
 		switch (type) {
