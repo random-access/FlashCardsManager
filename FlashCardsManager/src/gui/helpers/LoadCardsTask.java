@@ -47,7 +47,7 @@ public class LoadCardsTask extends SwingWorker<Void, Void> implements IProgressP
 		});
 		setProgress(0);
 		try {
-			proj.loadFlashcards(this);
+			proj.loadLabelsAndFlashcards(this);
 			setProgress(100);
 			SwingUtilities.invokeLater(new Runnable() {
 				@Override

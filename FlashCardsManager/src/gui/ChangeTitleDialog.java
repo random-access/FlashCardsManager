@@ -28,8 +28,8 @@ public class ChangeTitleDialog extends JDialog {
 	private LearningProject proj;
 
 	ChangeTitleDialog(ProjectPanel pnl, LearningProject proj) {
-		super(pnl.getOwner(), true);
-		this.owner = pnl.getOwner();
+		super(pnl.getMainWindow(), true);
+		this.owner = pnl.getMainWindow();
 		this.proj = proj;
 		this.pnl = pnl;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);

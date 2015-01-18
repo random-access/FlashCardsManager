@@ -27,8 +27,8 @@ public class ChangeStacksDialog extends JDialog {
 	private LearningProject project;
 
 	ChangeStacksDialog(ProjectPanel pnl, LearningProject project, ProjectsController ctl) {
-		super(pnl.getOwner(), true);
-		this.owner = pnl.getOwner();
+		super(pnl.getMainWindow(), true);
+		this.owner = pnl.getMainWindow();
 		this.project = project;
 		this.pnl = pnl;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);

@@ -1,28 +1,15 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
-import core.FlashCard;
-import core.LearningProject;
-import core.ProjectsController;
+import core.*;
 import exc.CustomErrorHandling;
 import gui.helpers.MyComboBoxModel;
 
@@ -31,22 +18,22 @@ public class FlashcardTransferDialog extends JDialog {
 	private ArrayList<FlashCard> cardsToTransfer;
 	private LearningProject srcProj;
 	private ProjectsController ctl;
-	private MainWindow owner;
 
 	private JPanel pnlBottom, pnlCenter, pnlGrid;
 	private JButton btnDiscard, btnOk;
 	private JLabel lblSourceProject, lblSourceProjectName, lblTargetProject;
 	private JComboBox<LearningProject> cmbChooseProject;
 	private JCheckBox chkKeepProgress;
+	private FlashcardOverviewFrame editFrame;
 
-	public FlashcardTransferDialog(ProjectsController ctl, MainWindow owner, FlashcardOverviewDialog editDialog,
-			LearningProject srcProj, ArrayList<FlashCard> cardsToTransfer) {
-		super(owner, true);
+	public FlashcardTransferDialog(ProjectsController ctl, FlashcardOverviewFrame editFrame, LearningProject srcProj,
+			ArrayList<FlashCard> cardsToTransfer) {
+		super(editFrame, true);
 		setTitle("Lernkarten verschieben...");
 		this.cardsToTransfer = cardsToTransfer;
 		this.srcProj = srcProj;
 		this.ctl = ctl;
-		this.owner = owner;
+		this.editFrame = editFrame;
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
 		try {
@@ -60,7 +47,7 @@ public class FlashcardTransferDialog extends JDialog {
 		setListeners();
 
 		pack();
-		setLocationRelativeTo(owner);
+		setLocationRelativeTo(editFrame);
 	}
 
 	private void addWidgets() {
@@ -119,11 +106,11 @@ public class FlashcardTransferDialog extends JDialog {
 					}
 					ctl.fireProjectDataChangedEvent();
 					// editDialog.updateCardsView(srcProj.getAllCards());
-					owner.updateProjectList();
+					editFrame.getMainFrame().updateProjectList();
 				} catch (SQLException sqle) {
-					CustomErrorHandling.showDatabaseError(owner, sqle);
+					CustomErrorHandling.showDatabaseError(editFrame, sqle);
 				} catch (IOException ioe) {
-					CustomErrorHandling.showInternalError(owner, ioe);
+					CustomErrorHandling.showInternalError(editFrame, ioe);
 				} finally {
 					FlashcardTransferDialog.this.dispose();
 				}
