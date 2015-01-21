@@ -34,12 +34,16 @@ public class MyTableTestModel extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex) {
         case 0:
-            return data.get(rowIndex).isSelected();
-        case 1:
             return data.get(rowIndex).getId();
+        case 1:
+            return data.get(rowIndex).getTitle();
         default:
-            return -1;
+            return null;
         }
+    }
+
+    public TableTestData getRowAt(int rowIndex) {
+        return data.get(rowIndex);
     }
 
     @Override
@@ -49,14 +53,18 @@ public class MyTableTestModel extends AbstractTableModel {
 
     @Override
     public boolean isCellEditable(int row, int column) {
-        return column == 0;
+        return true;
     }
 
     @Override
     public void setValueAt(Object value, int row, int column) {
-        if (value instanceof Boolean && column == 0) {
-            data.get(row).setSelected((boolean) value);
-            fireTableCellUpdated(row, column);
+        switch (column) {
+        case 0:
+            data.get(row).setId((int) value);
+            break;
+        case 1:
+            data.get(row).setTitle((String) value);
+            break;
         }
     }
 

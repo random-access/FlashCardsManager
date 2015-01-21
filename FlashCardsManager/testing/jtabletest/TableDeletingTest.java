@@ -1,35 +1,36 @@
 package jtabletest;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.*;
+import java.awt.dnd.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
 
-@SuppressWarnings("serial")
-public class TableDeletingTest extends JFrame {
+import dndTest.TransferableTestdata;
 
-    private String[] columnNames = { "Auswahl", "ID" };
+@SuppressWarnings("serial")
+public class TableDeletingTest extends JPanel implements DragGestureListener {
+
+    private String[] columnNames = { "ID", "Name" };
     private ArrayList<TableTestData> data;
     private JTable table;
 
-    private JScrollPane scp;
     private JPanel pnlControls;
     private JButton btnDelete;
+    private JScrollPane scp;
 
     public TableDeletingTest() {
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+        setLayout(new BorderLayout());
         createTestData(5);
         constructTable();
+
+        DragSource ds = new DragSource();
+        ds.createDefaultDragGestureRecognizer(table, DnDConstants.ACTION_COPY, this);
+
         createGUI();
         setListeners();
-
-        pack();
-        setLocationRelativeTo(null);
-        setVisible(true);
     }
 
     private void createGUI() {
@@ -43,14 +44,16 @@ public class TableDeletingTest extends JFrame {
 
     private void createTestData(int length) {
         data = new ArrayList<TableTestData>();
-        for (int i = 0; i < length; i++) {
-            data.add(new TableTestData(i));
+        for (int i = 1; i <= length; i++) {
+            data.add(new TableTestData(i, "Testdaten " + i));
         }
     }
 
     private void constructTable() {
         MyTableTestModel model = new MyTableTestModel(data, columnNames);
         table = new JTable(model);
+        table.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        // table.setDragEnabled(true);
     }
 
     private void setListeners() {
@@ -58,23 +61,25 @@ public class TableDeletingTest extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i = data.size()-1; i >= 0; --i) {
-                    if (data.get(i).isSelected()) {
-                        ((MyTableTestModel) table.getModel()).removeRow(i);
-                    }
+                while (table.getSelectedRow() != -1) {
+                    ((MyTableTestModel) table.getModel()).removeRow(table.getSelectedRow());
                 }
             }
         });
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
+    @Override
+    public void dragGestureRecognized(DragGestureEvent dge) {
+        Cursor cursor = null;
+        JTable table = (JTable) dge.getComponent();
 
-            @Override
-            public void run() {
-                new TableDeletingTest();
-            }
-        });
+        TableTestData data = ((MyTableTestModel) table.getModel()).getRowAt(table.getSelectedRow());
+
+        if (dge.getDragAction() == DnDConstants.ACTION_COPY) {
+            cursor = DragSource.DefaultCopyDrop;
+        }
+
+        dge.startDrag(cursor, new TransferableTestdata(data));
     }
 
 }
