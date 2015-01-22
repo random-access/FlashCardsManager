@@ -427,7 +427,7 @@ public class FlashcardEditorDialog extends JDialog {
 			existingCard.update();
 			existingCard.synchronizeLabels(labels);
 			if (editFrame != null) {
-				editFrame.updateView();
+				editFrame.updateTableView();
 			}
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, sqle);
@@ -444,7 +444,7 @@ public class FlashcardEditorDialog extends JDialog {
 			newCard.synchronizeLabels(labels);
 			projPnl.getMainWindow().updateProjectStatus(project);
 			if (editFrame != null) {
-				editFrame.updateView();
+				editFrame.updateTableView();
 			}
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, sqle);

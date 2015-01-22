@@ -11,7 +11,7 @@ import javax.swing.*;
 import dndTest.TransferableTestdata;
 
 @SuppressWarnings("serial")
-public class TableDeletingTest extends JPanel implements DragGestureListener {
+public class JTableTestPanel extends JPanel implements DragGestureListener {
 
     private String[] columnNames = { "ID", "Name" };
     private ArrayList<TableTestData> data;
@@ -21,7 +21,7 @@ public class TableDeletingTest extends JPanel implements DragGestureListener {
     private JButton btnDelete;
     private JScrollPane scp;
 
-    public TableDeletingTest() {
+    public JTableTestPanel() {
         setLayout(new BorderLayout());
         createTestData(5);
         constructTable();

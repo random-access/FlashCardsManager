@@ -1,12 +1,12 @@
 package dndTest;
 
-import jTreeTest.JTreeTest;
+import jTreeTest.JTreeTestPanel;
 
 import java.awt.BorderLayout;
 
 import javax.swing.*;
 
-import jtabletest.TableDeletingTest;
+import jtabletest.JTableTestPanel;
 
 @SuppressWarnings("serial")
 public class DragAndDropTestFrame extends JFrame {
@@ -34,6 +34,6 @@ public class DragAndDropTestFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        new DragAndDropTestFrame(new JTreeTest(), new TableDeletingTest());
+        new DragAndDropTestFrame(new JTreeTestPanel(), new JTableTestPanel());
     }
 }
