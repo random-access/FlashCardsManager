@@ -52,12 +52,14 @@ public class FlashcardDropTargetListener extends DropTargetAdapter {
 	public void drop(DropTargetDropEvent dtde) {
 		try {
 			Transferable tr = dtde.getTransferable();
-			FlashCard card = (FlashCard) tr.getTransferData(TransferableFlashcard.flashcardFlavor);
-			if (dtde.isDataFlavorSupported(TransferableFlashcard.flashcardFlavor)) {
+			FlashCard[] cards = (FlashCard[]) tr.getTransferData(TransferableFlashcards.flashcardsFlavor);
+			if (dtde.isDataFlavorSupported(TransferableFlashcards.flashcardsFlavor)) {
 				dtde.acceptDrop(DnDConstants.ACTION_COPY);
 				DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 				if (node.getUserObject() instanceof Label) {
-					card.addLabel((Label) node.getUserObject());
+					for (FlashCard c : cards) {
+						c.addLabel((Label) node.getUserObject());
+					}
 				}
 				dtde.dropComplete(true);
 				ctl.fireProjectDataChangedEvent();

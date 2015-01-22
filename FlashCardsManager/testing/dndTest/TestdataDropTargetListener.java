@@ -23,7 +23,7 @@ public class TestdataDropTargetListener extends DropTargetAdapter {
 	public void drop(DropTargetDropEvent dtde) {
 		try {
 			Transferable tr = dtde.getTransferable();
-			TableTestData data = (TableTestData) tr.getTransferData(TransferableTestdata.testFlavor);
+			TableTestData[] data = (TableTestData[]) tr.getTransferData(TransferableTestdata.testFlavor);
 
 			if (dtde.isDataFlavorSupported(TransferableTestdata.testFlavor)) {
 
@@ -32,8 +32,8 @@ public class TestdataDropTargetListener extends DropTargetAdapter {
 				DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 				System.out.println(node);
 				if (node.getUserObject() instanceof TestLabel) {
-					((TestLabel) node.getUserObject()).setId(data.getId());
-					((TestLabel) node.getUserObject()).setTitle(data.getTitle());
+					((TestLabel) node.getUserObject()).setId(data[0].getId());
+					((TestLabel) node.getUserObject()).setTitle(data[0].getTitle());
 					tree.repaint();
 
 					System.out.println("done");

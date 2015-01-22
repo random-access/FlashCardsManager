@@ -7,30 +7,40 @@ import jtabletest.TableTestData;
 
 public class TransferableTestdata implements Transferable {
 
-    protected static DataFlavor testFlavor = new DataFlavor(TableTestData.class, "TestData");
-    protected static DataFlavor[] supportedFlavors = { testFlavor };
+	protected static DataFlavor testFlavor;
 
-    private TableTestData data;
+	static {
+		try {
+			testFlavor = new DataFlavor(DataFlavor.javaJVMLocalObjectMimeType + ";class=\"" + TableTestData[].class.getName()
+					+ "\"");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
-    public TransferableTestdata(TableTestData data) {
-        this.data = data;
-    }
+	protected static DataFlavor[] supportedFlavors = { testFlavor };
+	private TableTestData[] data;
 
-    @Override
-    public DataFlavor[] getTransferDataFlavors() {
-        return supportedFlavors;
-    }
+	public TransferableTestdata(TableTestData[] data) {
+		this.data = data;
+	}
 
-    @Override
-    public boolean isDataFlavorSupported(DataFlavor flavor) {
-        return flavor.equals(testFlavor);
-    }
+	@Override
+	public DataFlavor[] getTransferDataFlavors() {
+		return supportedFlavors;
+	}
 
-    @Override
-    public Object getTransferData(DataFlavor flavor) throws UnsupportedFlavorException, IOException {
-        if (flavor.equals(testFlavor))
-            return data;
-        else
-            throw new UnsupportedFlavorException(flavor);
-    }
+	@Override
+	public boolean isDataFlavorSupported(DataFlavor flavor) {
+		return flavor.equals(testFlavor);
+	}
+
+	@Override
+	public Object getTransferData(DataFlavor flavor) throws UnsupportedFlavorException, IOException {
+		if (flavor.equals(testFlavor))
+			return data;
+		else
+			throw new UnsupportedFlavorException(flavor);
+	}
 }

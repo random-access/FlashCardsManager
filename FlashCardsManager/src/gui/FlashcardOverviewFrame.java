@@ -19,8 +19,8 @@ import core.Label;
 import events.ProjectDataChangedListener;
 import exc.CustomErrorHandling;
 import exc.CustomInfoHandling;
-import gui.dndHelpers.DragTable;
 import gui.dndHelpers.FlashcardDropTargetListener;
+import gui.dndHelpers.FlashcardsExportHandler;
 import gui.helpers.*;
 
 @SuppressWarnings("serial")
@@ -311,8 +311,8 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
 						CustomErrorHandling.showDatabaseError(FlashcardOverviewFrame.this, sqle);
 					}
 				}
-
 				manageButtonActivation();
+
 			}
 		});
 
@@ -428,8 +428,9 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
 
 	private void constructTable(ArrayList<FlashCard> cards) {
 		FlashcardTableModel model = new FlashcardTableModel(cards, columnNames);
-		tblCards = new DragTable(model);
-		// tblCards.setDragEnabled(true);
+		tblCards = new JTable(model);
+		tblCards.setDragEnabled(true);
+		tblCards.setTransferHandler(new FlashcardsExportHandler());
 		setCustomWidthAndHeight();
 		setCustomAlignment();
 		setRowSelectionHandling();
@@ -498,7 +499,7 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
 
 	public void setRowSelectionHandling() {
 		tblCards.setRowSelectionAllowed(true);
-		tblCards.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		tblCards.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		// listSelectionModel = tblCards.getSelectionModel();
 	}
 
