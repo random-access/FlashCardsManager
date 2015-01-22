@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import storage.*;
+import app.StartApp;
 import exc.InvalidLengthException;
 import exc.InvalidValueException;
 import gui.helpers.IProgressPresenter;
@@ -181,9 +182,13 @@ public class LearningProject implements IHasStatus {
 	}
 
 	public String toString() {
-		return this.getTitle(); // --> for combobox; TODO use other method
-		// return "ID: " + this.getId() + ", TITLE: " + this.getTitle() +
-		// ", NO_OF_STACKS: " + this.getNumberOfStacks();
+		try {
+			return this.getTitle() + " (" + dbex.countRows(this) + ")";
+		} catch (SQLException e) {
+			if (StartApp.DEBUG)
+				e.printStackTrace();
+			return this.getTitle();
+		}
 	}
 
 }

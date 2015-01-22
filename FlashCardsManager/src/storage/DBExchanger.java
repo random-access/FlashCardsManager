@@ -592,6 +592,24 @@ public class DBExchanger {
 		return count;
 	}
 
+	// COUNT ROWS: returns the number of flashcards belonging to 1 project and 1
+	// stack
+	public int countRows(Label l) throws SQLException {
+		int count = 0;
+		Statement st = conn.createStatement();
+		if (StartApp.DEBUG)
+			System.out.println("SELECT COUNT (*) FROM " + labelsFlashcardsTable + " where LABEL_ID_FK = " + l.getId());
+		st.executeQuery("SELECT COUNT (*) FROM " + labelsFlashcardsTable + " where LABEL_ID_FK = " + l.getId());
+		conn.commit();
+		ResultSet rs = st.getResultSet();
+		if (rs.next()) {
+			count = rs.getInt(1);
+		}
+		rs.close();
+		st.close();
+		return count;
+	}
+
 	public int getCardNumberInProject(FlashCard f) throws SQLException {
 		int number = 0;
 		Statement st = conn.createStatement();

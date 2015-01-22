@@ -65,7 +65,7 @@ public class ProjectPanel extends JPanel {
 		this.ctl = ctl;
 		this.project = project;
 		this.status = Status.RED;
-		this.projectTitle = project.getTitle();
+		this.projectTitle = project.toString();
 		this.parentWindow = parentWindow;
 		this.noOfStacks = project.getNumberOfStacks();
 		this.setLayout(new BorderLayout());

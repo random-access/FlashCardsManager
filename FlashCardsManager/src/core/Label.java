@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import storage.DBExchanger;
 import storage.TableType;
+import app.StartApp;
 import exc.InvalidLengthException;
 
 public class Label implements IHasStatus {
@@ -97,7 +98,13 @@ public class Label implements IHasStatus {
 	}
 
 	public String toString() {
-		return this.name;
+		try {
+			return this.name + " (" + this.getNumberOfCards() + ")";
+		} catch (SQLException e) {
+			if (StartApp.DEBUG)
+				e.printStackTrace();
+			return this.name;
+		}
 	}
 
 	@Override
@@ -132,6 +139,10 @@ public class Label implements IHasStatus {
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
+	}
+
+	public int getNumberOfCards() throws SQLException {
+		return dbex.countRows(this);
 	}
 
 }
