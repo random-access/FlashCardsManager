@@ -9,7 +9,7 @@ import java.util.Iterator;
 
 import javax.xml.stream.XMLStreamException;
 
-import storage.DBExchanger;
+import storage.DerbyDBExchanger;
 import storage.MediaExchanger;
 import events.*;
 import exc.InvalidLengthException;
@@ -18,7 +18,7 @@ import gui.helpers.IProgressPresenter;
 
 public class ProjectsController implements ProjectChangedSource {
 
-	private final DBExchanger dbex;
+	private final DerbyDBExchanger dbex;
 	private final MediaExchanger mex;
 	private ArrayList<LearningProject> projects;
 	private String pathToMediaFolder;
@@ -26,7 +26,7 @@ public class ProjectsController implements ProjectChangedSource {
 	private ArrayList<ProjectDataChangedListener> listeners = new ArrayList<ProjectDataChangedListener>();
 
 	public ProjectsController(String pathToDatabase, String pathToMediaFolder) throws ClassNotFoundException, SQLException {
-		dbex = new DBExchanger(pathToDatabase, this);
+		dbex = new DerbyDBExchanger(pathToDatabase, this);
 		mex = new MediaExchanger(pathToMediaFolder);
 		this.pathToMediaFolder = pathToMediaFolder;
 		dbex.createConnection();
@@ -38,7 +38,7 @@ public class ProjectsController implements ProjectChangedSource {
 		projects = dbex.getAllProjects();
 	}
 
-	public DBExchanger getDbex() {
+	public DerbyDBExchanger getDbex() {
 		return dbex;
 	}
 

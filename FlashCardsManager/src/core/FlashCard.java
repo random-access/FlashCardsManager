@@ -13,7 +13,7 @@ import exc.CustomErrorHandling;
 
 public class FlashCard {
 
-	private final DBExchanger dbex;
+	private final DerbyDBExchanger dbex;
 	private final MediaExchanger mex;
 	private int id;
 	private LearningProject proj;

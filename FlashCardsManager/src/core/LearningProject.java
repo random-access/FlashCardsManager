@@ -14,7 +14,7 @@ import gui.helpers.IProgressPresenter;
 
 public class LearningProject implements IHasStatus {
 
-	private final DBExchanger dbex;
+	private final DerbyDBExchanger dbex;
 	private final MediaExchanger mex;
 	private final ProjectsController ctl;
 
@@ -95,7 +95,7 @@ public class LearningProject implements IHasStatus {
 	}
 
 	// Get database exchanger
-	public DBExchanger getDBEX() {
+	public DerbyDBExchanger getDBEX() {
 		return this.dbex;
 	}
 

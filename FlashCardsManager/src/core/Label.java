@@ -4,13 +4,13 @@ import importExport.XMLLabel;
 
 import java.sql.SQLException;
 
-import storage.DBExchanger;
+import storage.DerbyDBExchanger;
 import storage.TableType;
 import app.StartApp;
 import exc.InvalidLengthException;
 
 public class Label implements IHasStatus {
-	private final DBExchanger dbex;
+	private final DerbyDBExchanger dbex;
 
 	private int id;
 	private String name;
