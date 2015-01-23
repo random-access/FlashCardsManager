@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flashcards>
 	<flashcard>
-		<card_id>22</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>53</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -40,8 +40,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>23</card_id>
-		<proj_id>3</proj_id>
+		<card_id>54</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -78,8 +78,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>24</card_id>
-		<proj_id>3</proj_id>
+		<card_id>55</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -135,8 +135,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>25</card_id>
-		<proj_id>3</proj_id>
+		<card_id>56</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -174,8 +174,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>26</card_id>
-		<proj_id>3</proj_id>
+		<card_id>57</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -217,8 +217,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>27</card_id>
-		<proj_id>3</proj_id>
+		<card_id>58</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -250,8 +250,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>28</card_id>
-		<proj_id>3</proj_id>
+		<card_id>59</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -304,8 +304,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>29</card_id>
-		<proj_id>3</proj_id>
+		<card_id>60</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -335,8 +335,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>57</card_id>
-		<proj_id>3</proj_id>
+		<card_id>61</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -366,8 +366,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>58</card_id>
-		<proj_id>3</proj_id>
+		<card_id>62</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -404,8 +404,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>59</card_id>
-		<proj_id>3</proj_id>
+		<card_id>63</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -439,8 +439,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>60</card_id>
-		<proj_id>3</proj_id>
+		<card_id>64</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -468,9 +468,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>61</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>65</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -515,8 +515,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>62</card_id>
-		<proj_id>3</proj_id>
+		<card_id>66</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -559,8 +559,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>63</card_id>
-		<proj_id>3</proj_id>
+		<card_id>67</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -606,9 +606,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>64</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>68</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -635,8 +635,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>65</card_id>
-		<proj_id>3</proj_id>
+		<card_id>69</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -703,8 +703,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>66</card_id>
-		<proj_id>3</proj_id>
+		<card_id>70</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -758,8 +758,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>67</card_id>
-		<proj_id>3</proj_id>
+		<card_id>71</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -803,8 +803,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>68</card_id>
-		<proj_id>3</proj_id>
+		<card_id>72</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -837,8 +837,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>69</card_id>
-		<proj_id>3</proj_id>
+		<card_id>73</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -870,8 +870,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>70</card_id>
-		<proj_id>3</proj_id>
+		<card_id>74</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -902,8 +902,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>71</card_id>
-		<proj_id>3</proj_id>
+		<card_id>75</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -943,8 +943,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>72</card_id>
-		<proj_id>3</proj_id>
+		<card_id>76</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -978,8 +978,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>167</card_id>
-		<proj_id>3</proj_id>
+		<card_id>77</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1025,8 +1025,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>168</card_id>
-		<proj_id>3</proj_id>
+		<card_id>78</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1054,8 +1054,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>169</card_id>
-		<proj_id>3</proj_id>
+		<card_id>79</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1092,8 +1092,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>170</card_id>
-		<proj_id>3</proj_id>
+		<card_id>80</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1124,8 +1124,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>171</card_id>
-		<proj_id>3</proj_id>
+		<card_id>81</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1156,8 +1156,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>172</card_id>
-		<proj_id>3</proj_id>
+		<card_id>82</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1199,8 +1199,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>173</card_id>
-		<proj_id>3</proj_id>
+		<card_id>83</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1251,9 +1251,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>174</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>84</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1290,8 +1290,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>175</card_id>
-		<proj_id>3</proj_id>
+		<card_id>85</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1320,8 +1320,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>176</card_id>
-		<proj_id>3</proj_id>
+		<card_id>86</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1388,8 +1388,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>177</card_id>
-		<proj_id>3</proj_id>
+		<card_id>87</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1436,8 +1436,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>178</card_id>
-		<proj_id>3</proj_id>
+		<card_id>88</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1457,7 +1457,7 @@
   &lt;body&gt;
     &lt;p style="margin-top: 0"&gt;
       1.) Die CPU erh&amp;#228;lt &amp;#252;ber ihren &lt;b&gt;Unterbrechungseingang&lt;/b&gt; ein 
-      bin&amp;#228;res Signal f&amp;#252;r eine Unterbrechung von einem Ger&amp;#228;t
+      bin&amp;#228;res Signal f&amp;#252;r eine Unterbrechung
     &lt;/p&gt;
     &lt;p style="margin-top: 0"&gt;
       
@@ -1519,12 +1519,12 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </answer>
-		<custom_width_question>450</custom_width_question>
-		<custom_width_answer>450</custom_width_answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>179</card_id>
-		<proj_id>3</proj_id>
+		<card_id>89</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1568,8 +1568,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>180</card_id>
-		<proj_id>3</proj_id>
+		<card_id>90</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1610,8 +1610,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>181</card_id>
-		<proj_id>3</proj_id>
+		<card_id>91</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1672,8 +1672,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>182</card_id>
-		<proj_id>3</proj_id>
+		<card_id>92</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1721,8 +1721,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>183</card_id>
-		<proj_id>3</proj_id>
+		<card_id>93</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1783,8 +1783,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>184</card_id>
-		<proj_id>3</proj_id>
+		<card_id>94</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1825,8 +1825,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>185</card_id>
-		<proj_id>3</proj_id>
+		<card_id>95</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1879,8 +1879,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>186</card_id>
-		<proj_id>3</proj_id>
+		<card_id>96</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1951,8 +1951,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>187</card_id>
-		<proj_id>3</proj_id>
+		<card_id>97</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2018,8 +2018,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>188</card_id>
-		<proj_id>3</proj_id>
+		<card_id>98</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2047,8 +2047,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>189</card_id>
-		<proj_id>3</proj_id>
+		<card_id>99</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2113,8 +2113,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>190</card_id>
-		<proj_id>3</proj_id>
+		<card_id>100</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2152,8 +2152,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>191</card_id>
-		<proj_id>3</proj_id>
+		<card_id>101</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2219,8 +2219,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>192</card_id>
-		<proj_id>3</proj_id>
+		<card_id>102</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2251,8 +2251,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>193</card_id>
-		<proj_id>3</proj_id>
+		<card_id>103</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2284,8 +2284,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>194</card_id>
-		<proj_id>3</proj_id>
+		<card_id>104</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2390,8 +2390,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>195</card_id>
-		<proj_id>3</proj_id>
+		<card_id>105</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2437,9 +2437,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>196</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>1</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -2466,8 +2466,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>197</card_id>
-		<proj_id>3</proj_id>
+		<card_id>2</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2555,8 +2555,8 @@
 		<custom_width_answer>550</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>198</card_id>
-		<proj_id>3</proj_id>
+		<card_id>119</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2606,8 +2606,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>199</card_id>
-		<proj_id>3</proj_id>
+		<card_id>120</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2667,8 +2667,8 @@
 		<custom_width_answer>500</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>200</card_id>
-		<proj_id>3</proj_id>
+		<card_id>121</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2712,8 +2712,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>201</card_id>
-		<proj_id>3</proj_id>
+		<card_id>122</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2774,8 +2774,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>202</card_id>
-		<proj_id>3</proj_id>
+		<card_id>123</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2822,8 +2822,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>203</card_id>
-		<proj_id>3</proj_id>
+		<card_id>124</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2852,6 +2852,886 @@
       Da sich mit g&amp;#228;ngigen Multitaskingsystemen diese Anforderungen nicht 
       erf&amp;#252;llen lassen, werden Realzeitsysteme anders aufgebaut, z.B. werden 
       gro&amp;#223;e Teile der Software in ROMs untergebracht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>235</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist die Aufgabe eines Langzeit-Schedulers?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Langzeit-Scheduler entscheidet, welche Prozesse ausgelagert werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; Das Aus- und Einlagern wird auch als &lt;b&gt;&lt;i&gt;swapping&lt;/i&gt;&lt;/b&gt; 
+      bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>236</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was bedeutet externe Fragmentierung im Hauptspeicher? Nenne Strategien 
+      zu deren Verringerung bzw. Vermeidung!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da sich die Menge der existierenden Prozesse st&amp;#228;ndig &amp;#228;ndert, entstehen 
+      L&amp;#252;cken zwischen den Adressr&amp;#228;umen der Prozesse im Hauptspeicher. Dieses 
+      Ph&amp;#228;nomen nennt man &lt;b&gt;&lt;i&gt;externe Fragmentierung&lt;/i&gt;&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;u&gt;Strategien zur Verringerung externer Fragmentierung&lt;/u&gt;: &lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&lt;i&gt;Kompaktifizierung:&lt;/i&gt;&lt;/b&gt; gelegentliches Zusammenschieben der 
+      Adressr&amp;#228;ume im HSP -&amp;gt; aufw&amp;#228;ndig
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&lt;i&gt;Segmentation:&lt;/i&gt;&lt;/b&gt; Aufgabe der Forderung nach einem 
+      zusammenh&amp;#228;ngenden Adressraum, stattdessen Zuweisung mehrerer (u.U. 
+      unterschiedlich langer) Segmente an einen Prozess
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&lt;i&gt;Paging: &lt;/i&gt;&lt;/b&gt;Der Hauptspeicher wird in gleich gro&amp;#223;e St&amp;#252;cke 
+      aufgeteilt, jeder Prozess erh&amp;#228;lt so viele dieser St&amp;#252;cke wie n&amp;#246;tig. 
+      Dadurch wird externe Fragmentierung vollst&amp;#228;ndig vermieden, allerdings 
+      kommt es stattdessen zu &lt;b&gt;&lt;i&gt;interner Fragmentierung&lt;/i&gt;&lt;/b&gt;, da ein 
+      Prozess nicht unbedingt x volle St&amp;#252;cke an Speicherplatz braucht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>237</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie genau funktioniert &lt;b&gt;&lt;i&gt;paging&lt;/i&gt;&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der logische Speicher (Speicher aus Benutzer-/Programmierersicht) wird 
+      in gleichgro&amp;#223;e St&amp;#252;cke aufgeteilt, die &lt;b&gt;&lt;i&gt;Seiten (pages)&lt;/i&gt;&lt;/b&gt; 
+      genannt werden. Der physische Speicher wird in &lt;b&gt;&lt;i&gt;Seitenrahmen 
+      (frames)&lt;/i&gt;&lt;/b&gt; aufgeteilt. Eine Seite passt genau in einen 
+      Seitenrahmen. Die &lt;b&gt;&lt;i&gt;Seitentabelle (page table)&lt;/i&gt;&lt;/b&gt; enth&amp;#228;lt die 
+      Zuordnung von Seiten zu Seitenrahmen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei der &lt;b&gt;&lt;i&gt;Adressierung&lt;/i&gt;&lt;/b&gt; werden die &lt;i&gt;h&amp;#246;heren Stellen &lt;/i&gt;als 
+      Index f&amp;#252;r die Seitentabelle verwendet, die&lt;i&gt; niedrigeren Stellen&lt;/i&gt; 
+      werden 1:1 an die in der Seitentabelle angegebene Adresse angeh&amp;#228;ngt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; die Seitentabelle ist ein Teil des Prozesskontextes!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>238</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welcher Vorteil ergibt sich bei Aufteilung des Hauptspeichers in Seiten 
+      bzw. Segmente noch au&amp;#223;er der Verringerung der externen Fragmentierung?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Man kann einem Prozess einen &amp;quot;&amp;#246;ffentlichen&amp;quot; Speicherbereich, dh. einen 
+      Speicherbereich, den er sich mit anderen Prozessen teilt, zuteilen. 
+      Diese Speicherbereiche kann man zur Kommunikation zwischen Prozessen 
+      oder zum Datenaustausch nutzen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#214;ffentliche Speicherbereiche kann man ganz einfach kennzeichnen, indem 
+      man bei jedem Segment bzw. jeder Seite vermerkt, welche Prozesse 
+      Schreib- oder Leserechte darauf haben.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; nat&amp;#252;rlich ben&amp;#246;tigt jeder Prozess auch ein eigenes Datensegment und 
+      Stacksegment
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>239</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das &lt;b&gt;Konzept des virtuellen Speichers&lt;/b&gt;! Was versteht man 
+      unter dem Begriff &lt;b&gt;&lt;i&gt;&amp;quot;Seitenfehler&amp;quot;&lt;/i&gt;&lt;/b&gt;? Was ist &lt;b&gt;&lt;i&gt;&amp;quot;demand 
+      paging&amp;quot;&lt;/i&gt;&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Konzept des virtuellen Speichers &lt;b&gt;kombiniert zwei Ans&amp;#228;tze&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Die &lt;b&gt;&lt;i&gt;Einteilung&lt;/i&gt;&lt;/b&gt; des physischen Speichers &lt;b&gt;&lt;i&gt;in Seiten&lt;/i&gt;&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Die Idee,&lt;b&gt;&lt;i&gt; nur die aktuell ben&amp;#246;tigten Informationen&lt;/i&gt;&lt;/b&gt; 
+      im Hauptspeicher zu halten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Vorteile&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Es k&amp;#246;nnen beliebig gro&amp;#223;e Adressr&amp;#228;ume angesprochen 
+      werden, ohne auf physische Grenzen achten zu m&amp;#252;ssen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Ein bereiter Prozess kann rechnend gemacht werden, auch wenn sich 
+      nicht alle seine Seiten im Hauptspeicher befinden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Als &lt;b&gt;&lt;i&gt;Seitenfehler &lt;/i&gt;&lt;/b&gt;bezeichnet man einen Zugriff auf eine 
+      Seite, die nicht im Hauptspeicher steht - in diesem Fall wird eine 
+      Hardware-Unterbrechung ausgel&amp;#246;st und die Seite wird von der Festplatte 
+      nachgeladen. Diese Technik nennt man &lt;b&gt;&lt;i&gt;demand paging.
+&lt;/i&gt;&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Auslagern von Seiten, wenn der HSP voll ist, erfolgt nach 
+      verschiedenen Strategien, z.B. &lt;i&gt;&lt;b&gt;LRU (last recently used)&lt;/b&gt;&lt;/i&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>240</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Buddy-Strategie von Linux!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      F&amp;#252;r den physischen Speicher gibt es einen Seitenallokierer, der auch
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bereiche von aufeinander folgenden Seitenrahmen bereitstellen kann. Der 
+      Hauptspeicher besteht aus zusammenh&amp;#228;ngenden St&amp;#252;cken, die jeweils eine 
+      Zweierpotenz viele Seiten enthalten. Ein St&amp;#252;ck ist entweder belegt oder 
+      frei. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn der Allokierer einen zusammenh&amp;#228;ngenden Bereich einer bestimmten 
+      L&amp;#228;nge ben&amp;#246;tigt, nimmt er das kleinste freie St&amp;#252;ck, das 
+      mindestens die erforderliche L&amp;#228;nge aufweist. Wenn es mehr als 
+      doppelt so lang ist wie der ben&amp;#246;tigte Bereich, so wird es halbiert; das 
+      eine halbe St&amp;#252;ck wird benutzt, das andere &amp;#8212; sein buddy 5 &amp;#8212; bleibt frei.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wann immer ein Prozess terminiert und dadurch zwei buddies frei werden, 
+      so werden sie wieder verschmolzen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>241</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wof&amp;#252;r braucht man Prozess-Synchronisation?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um den Zugriff auf gemeinsame Variablen in kritischen Bereichen zu 
+      reglementieren, sodass es zu keinen Fehlern aufgrund der Reihenfolge der 
+      ausgef&amp;#252;hrten Befehle kommt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Synchronisationsfehler k&amp;#246;nnen sowohl bei Einprozessorsystemen, als auch 
+      bei Multiprozessorsystemen aufgrund von Wettkampfbedingungen (race 
+      conditons) auftreten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>242</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 2 M&amp;#246;glichkeiten, Prozesse zu synchronisieren!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Synchronisation durch eine Synchronisationsvariable
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Synchronisation mittels Semaphoren
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>243</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert die Prozesssynchronisation mittels einer gemeinsamen 
+      Variablen? Welchen Nachteil weist diese L&amp;#246;sung auf?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;u&gt;Nachteile:
+&lt;/u&gt;&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Beide Prozesse verbrauchen wertvolle CPU-Zeit, w&amp;#228;hrend sie in ihren 
+      while-Schleifen warten. Ein solches &lt;b&gt;&lt;i&gt;gesch&amp;#228;ftiges Warten (busy 
+      waiting)&lt;/i&gt;&lt;/b&gt; ist unerw&amp;#252;nscht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Die beiden Prozesse k&amp;#246;nnen nur abwechselnd in ihre kritischen 
+      Abschnitte eintreten. wenn einer von ihnen innerhalb des kritischen 
+      Abschnitts beendet werden sollte, kann der andere nie wieder den 
+      kritischen Abschnitt betreten.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>244</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert die Synchronisation mit Semaphoren?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Prinzip der Semaphore wurde von &lt;b&gt;&lt;i&gt;Dijkstra &lt;/i&gt;&lt;/b&gt;zur L&amp;#246;sung 
+      von Problemen entwickelt, bei dene mehrere Prozesse ein Betriebsmittel 
+      belegen wollen, von dem insgesamt n St&amp;#252;ck zur Verf&amp;#252;gung stehen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf einem Semaphor S sind zwei Operationen definiert, &lt;b&gt;&lt;i&gt;down&lt;/i&gt;&lt;/b&gt; 
+      und &lt;b&gt;&lt;i&gt;up&lt;/i&gt;&lt;/b&gt;. Wenn ein Prozess ein Betriebsmittel benutzen will, 
+      ruft er die Operation down auf, will er es wieder freigeben, ruft er die 
+      Operation up auf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; die Operationen down und up enthalten selbst kritische Abschnitte 
+      und m&amp;#252;ssen daher im Betriebssystem so implementiert werden, dass sie in 
+      diesen nicht unterbrochen werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>245</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie nennt man Operationen, die nicht unterbrochen werden d&amp;#252;rfen noch?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Atomare Operationen / unteilbare Operationen
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>246</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe ein bekanntes Problem, bei dem mehrere Semaphore gebraucht 
+      werden und ein Zugriff auf eine Betriebsmittelanzahl &amp;gt; 1 geregelt werden 
+      muss!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Beispiel: Erzeuger-Verbraucher-Problem
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; down(Frei) bzw. down(Belegt) darf nicht mit down(Zugriff) vertauscht 
+      werden, da es sonst zu einer Verklemmung kommen kann.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>9</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das &lt;b&gt;&lt;i&gt;Philosophen-Problem von Dijkstra&lt;/i&gt;&lt;/b&gt; und eine 
+      M&amp;#246;glichkeit der Synchronisation mit dem &lt;b&gt;&lt;i&gt;Semaphor Mutex&lt;/i&gt;&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Philosophen-Problem:
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      n &amp;gt;= 2 Philosophen sitzen an einem runden Tisch. Jeder der Philosophen 
+      durchl&amp;#228;uft die Zust&amp;#228;nde &amp;quot;Denken&amp;quot;, &amp;quot;Hungrig&amp;quot; und &amp;quot;Essen&amp;quot; zyklisch. Um 
+      essen zu k&amp;#246;nnen, ben&amp;#246;tigt ein Philosoph sein rechtes und sein linkes 
+      Essst&amp;#228;bchen, das er sich jedoch mit seinem Nachbar teilt, dh. es gibt 
+      insgesamt nur n Essst&amp;#228;bchen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Begr&amp;#252;ndung der L&amp;#246;sung mittels Mutex:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      W&amp;#252;rde man lediglich jedem St&amp;#228;bchen einen Semaphor zuteilen, k&amp;#246;nnte man 
+      zwar den Zugriff auf dieses regeln. Da man aber festlegen muss welches 
+      St&amp;#228;bchen zuerst genommen wird, k&amp;#246;nnte es passieren, dass jeder Philosoph 
+      z.B. sein linkes St&amp;#228;bchen genommen hat und aufs rechte St&amp;#228;bchen wartet, 
+      was zu einer kompletten Verklemmung f&amp;#252;hren w&amp;#252;rde.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Daher f&amp;#252;hrt man einen zus&amp;#228;tzlichen Semaphor mutex ein, der bewirkt, dass 
+      nur ein Philosoph gleichzeitig St&amp;#228;bchen aufnehmen darf,  au&amp;#223;erdem darf 
+      ein Philosoph nur die St&amp;#228;bchen aufnehmen wenn beide frei sind, das pr&amp;#252;ft 
+      er mit der Methode teste[i]- ist dies nicht der Fall, wird er mittels 
+      eines weiteren Semaphors p[i] schlafen gelegt. Legt ein Philosoph seine 
+      St&amp;#228;bchen ab, weckt er seine Nachbarn, indem er auf ihnen teste(links[i]) 
+      und teste (rechts[i]) ausf&amp;#252;hrt. Die Nachbarn nehmen nat&amp;#252;rlich nur dann 
+      beide St&amp;#228;bchen auf, wenn beide verf&amp;#252;gbar sind und sie im Zustand hungrig 
+      sind.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>10</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Systemaufrufe &lt;b&gt;&lt;i&gt;fork, kill &lt;/i&gt;&lt;/b&gt;und &lt;b&gt;&lt;i&gt;execvp&lt;/i&gt;&lt;/b&gt; 
+      und die Befehl&lt;b&gt;&lt;i&gt;e&lt;/i&gt;&lt;/b&gt; &lt;b&gt;&lt;i&gt;top&lt;/i&gt;&lt;/b&gt;, und &lt;b&gt;&lt;i&gt;man&lt;/i&gt;&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .)&lt;b&gt; fork() &lt;/b&gt;erzeugt eine genaue Kopie vom Elternprozess und macht 
+      diese bereit. Auch die Registerinhalte, insbesondere der Inhalt des 
+      Befehlsz&amp;#228;hlers, werden kopiert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;execvp(&amp;lt;Programmname&amp;gt;, &amp;lt;argv&amp;gt;) &lt;/b&gt;bewirkt, dass das 
+      gegenw&amp;#228;rtige Programm durch das Programm in der Datei &amp;lt;Programmname&amp;gt; 
+      ersetzt und mit den Parametern &amp;lt;argv&amp;gt; ausgef&amp;#252;hrt wird.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;top &lt;/b&gt;listet unter UNIX alle existierenden Prozesse und deren 
+      Ressourcenverbrauch auf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;kill (&amp;lt;Prozessnummer&amp;gt;, 9) &lt;/b&gt;bewirkt das Beenden des 
+      Prozesses mit der Prozessnummer &amp;lt;Prozessnummer&amp;gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;man &amp;lt;Befehl&amp;gt;&lt;/b&gt; zeigt Informationen &amp;#252;ber &amp;lt;Befehl&amp;gt; unter 
+      Unix an
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>11</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Unterschied zwischen &lt;b&gt;Prozessen&lt;/b&gt; und &lt;b&gt;Threads&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Prozesse&lt;/b&gt; haben jeweils ihren eigenen Adressraum  und ihre eigenen 
+      Dateien. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Threads (leichtgewichtige Prozesse)&lt;/b&gt; teilen sich Adressraum, 
+      Programm und Dateien. Sie haben jedoch jeweils eigene Registerinhalte 
+      und ein eigenes Stacksegment.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Gruppe von leichtgewichtigen Prozessen wird als &lt;b&gt;Task &lt;/b&gt;bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>12</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen &lt;b&gt;Kernel-Threads&lt;/b&gt; und &lt;b&gt;Benutzer-Threads&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Kernel-Threads&lt;/b&gt; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden im Betriebssystemkern realisiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden unter UNIX mittels &lt;b&gt;&lt;i&gt;clone&lt;/i&gt;&lt;/b&gt; erzeugt, dabei wird ein 
+      Kindprozess erstellt, der Programm und Speicherbereich vom 
+      Erzeugerprozess erbt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden vom Betriebssystem (insbesondere beim Scheduling) wie 
+      schwergewichtige Prozesse behandelt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Benutzer-Threads&lt;/b&gt; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden im privaten Speicherbereich eines Prozesses realisiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden mit Hilfe von Bibliotheksprozeduren auf Benutzerebene 
+      implementiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - das Betriebssystem behandelt einen Task (insbesondere beim Scheduling) 
+      wie einen einzelnen schwergewichtigen Prozess
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; es gibt auch &lt;b&gt;&lt;i&gt;Mischformen&lt;/i&gt;&lt;/b&gt; aus beiden 
+      Implementierungen
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>13</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum wird die Forderung nach einer zusammenh&amp;#228;ngenden Speicherung auch 
+      im Sekund&amp;#228;rspeicher aufgegeben?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wegen der externen Fragmentierung, und da eine Kompaktifizierung 
+      (Zusammenschieben von Dateien) wegen ihres hohen Zeitaufwands nicht im 
+      laufenden Betrieb durchgef&amp;#252;hrt werden sollte.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>14</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der gr&amp;#246;&amp;#223;te Nachteil an einer Verkettung der Bl&amp;#246;cke durch eine 
+      Liste, um die zu einer Datei geh&amp;#246;renden Bl&amp;#246;cke wiederzufinden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Es ist kein wahlfreier Zugriff m&amp;#246;glich - um Block Nr. i zu lesen, ist 
+      ein Externzugriff auf i-1 Bl&amp;#246;cke n&amp;#246;tig.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>15</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert FAT?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FAT steht f&amp;#252;r &lt;b&gt;&lt;i&gt;File Allocation Table&lt;/i&gt;&lt;/b&gt; und verkettet 
+      nicht die Bl&amp;#246;cke der zu einer Datei geh&amp;#246;renden Bl&amp;#246;cke, sondern deren 
+      physische Blockadressen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die File Allocation Table enth&amp;#228;lt f&amp;#252;r jeden Block auf der Festplatte 
+      einen Eintrag - dieser enth&amp;#228;lt 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - die &lt;b&gt;physische Adresse&lt;/b&gt; des n&amp;#228;chsten Blocks in der Datei, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;eof&lt;/b&gt; (end of file) wenn es der letzte Block einer Datei ist
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;free&lt;/b&gt;, wenn der Block noch frei ist
     &lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
