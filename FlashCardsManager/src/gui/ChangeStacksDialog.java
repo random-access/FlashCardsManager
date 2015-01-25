@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import javax.swing.*;
 
 import core.LearningProject;
-import core.ProjectsController;
 import exc.*;
 import gui.helpers.CustomColor;
 import gui.helpers.TransparencyTextField;
@@ -26,7 +25,7 @@ public class ChangeStacksDialog extends JDialog {
 	private ProjectPanel pnl;
 	private LearningProject project;
 
-	ChangeStacksDialog(ProjectPanel pnl, LearningProject project, ProjectsController ctl) {
+	public ChangeStacksDialog(ProjectPanel pnl, LearningProject project) {
 		super(pnl.getMainWindow(), true);
 		this.owner = pnl.getMainWindow();
 		this.project = project;
@@ -71,7 +70,9 @@ public class ChangeStacksDialog extends JDialog {
 					CustomInfoHandling.showInvalidCharSequenceInfo(ChangeStacksDialog.this);
 				} catch (InvalidValueException ive) {
 					txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
-					CustomInfoHandling.showInvalidValueInfo(ChangeStacksDialog.this, 99, 0); // TODO global value
+					CustomInfoHandling.showInvalidValueInfo(ChangeStacksDialog.this, 99, 0); // TODO
+																								// global
+																								// value
 				} catch (SQLException sqle) {
 					CustomErrorHandling.showDatabaseError(ChangeStacksDialog.this, sqle);
 				} catch (IOException ioe) {

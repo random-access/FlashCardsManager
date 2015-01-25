@@ -1,9 +1,5 @@
 package gui;
 
-import exc.*;
-import gui.helpers.CustomColor;
-import gui.helpers.TransparencyTextField;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,9 +8,13 @@ import java.sql.SQLException;
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 
-import utils.*;
+import utils.InvalidCharsFilter;
+import utils.SizeFilterExtended;
 import core.LearningProject;
-import core.ProjectsController;
+import core.IProjectsController;
+import exc.*;
+import gui.helpers.CustomColor;
+import gui.helpers.TransparencyTextField;
 
 @SuppressWarnings("serial")
 public class AddProjectDialog extends JDialog {
@@ -24,9 +24,9 @@ public class AddProjectDialog extends JDialog {
 	private JTextField txtTitle, txtNoOfStacks;
 	private JButton btnOk, btnDiscard;
 	private MainWindow owner;
-	private ProjectsController ctl;
+	private IProjectsController ctl;
 
-	AddProjectDialog(MainWindow owner, ProjectsController ctl) {
+	AddProjectDialog(MainWindow owner, IProjectsController ctl) {
 		super(owner, true);
 		this.owner = owner;
 		this.ctl = ctl;
@@ -89,7 +89,7 @@ public class AddProjectDialog extends JDialog {
 						if (txtNoOfStacks.getText().equals("")) {
 							txtNoOfStacks.setBackground(CustomColor.BACKGROUND_ERROR_RED);
 						}
-						CustomInfoHandling.showNoInputInfo(AddProjectDialog.this); 
+						CustomInfoHandling.showNoInputInfo(AddProjectDialog.this);
 					} else {
 						int noOfStacks = Integer.parseInt(txtNoOfStacks.getText());
 						String title = txtTitle.getText();
@@ -104,10 +104,14 @@ public class AddProjectDialog extends JDialog {
 					CustomInfoHandling.showInvalidCharSequenceInfo(AddProjectDialog.this);
 					txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
 				} catch (InvalidLengthException ile) {
-					CustomInfoHandling.showInvalidLengthInfo(AddProjectDialog.this, 150); // TODO global max
+					CustomInfoHandling.showInvalidLengthInfo(AddProjectDialog.this, 150); // TODO
+																							// global
+																							// max
 					txtTitle.setForeground(CustomColor.FOREGROUND_ERROR_RED);
 				} catch (InvalidValueException ive) {
-					CustomInfoHandling.showInvalidValueInfo(AddProjectDialog.this, 99, 0); // TODO global max
+					CustomInfoHandling.showInvalidValueInfo(AddProjectDialog.this, 99, 0); // TODO
+																							// global
+																							// max
 					txtNoOfStacks.setForeground(CustomColor.FOREGROUND_ERROR_RED);
 				}
 			}

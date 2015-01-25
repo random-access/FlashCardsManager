@@ -13,8 +13,9 @@ import exc.CustomErrorHandling;
 
 public class FlashCard {
 
-	private final DerbyDBExchanger dbex;
-	private final MediaExchanger mex;
+	private final IDBExchanger dbex;
+	private final XMLDBExchanger xmlDbex;
+	private final IMediaExchanger mex;
 	private int id;
 	private LearningProject proj;
 	private int stack;
@@ -33,6 +34,7 @@ public class FlashCard {
 	public FlashCard(LearningProject proj, String question, String answer, String pathToQuestionPic, String pathToAnswerPic,
 			int questionWidth, int answerWidth) throws SQLException {
 		dbex = proj.getDBEX();
+		xmlDbex = (XMLDBExchanger) dbex;
 		mex = proj.getMex();
 		this.id = dbex.nextId(TableType.FLASHCARDS);
 		this.proj = proj;
@@ -52,6 +54,7 @@ public class FlashCard {
 	public FlashCard(int id, LearningProject proj, int stack, String question, String answer, String pathToQuestionPic,
 			String pathToAnswerPic, int questionWidth, int answerWidth) throws SQLException {
 		dbex = proj.getDBEX();
+		xmlDbex = (XMLDBExchanger) dbex;
 		mex = proj.getMex();
 		this.id = id;
 		this.proj = proj;
@@ -128,15 +131,15 @@ public class FlashCard {
 	}
 
 	public XMLMedia getXMLQuestionMedia() throws SQLException {
-		return dbex.getPic(this, PicType.QUESTION);
+		return xmlDbex.getPic(this, PicType.QUESTION);
 	}
 
 	public XMLMedia getXMLAnswerMedia() throws SQLException {
-		return dbex.getPic(this, PicType.ANSWER);
+		return xmlDbex.getPic(this, PicType.ANSWER);
 	}
 
 	public ArrayList<XMLLabelFlashcardRelation> getXMLLfRelations() throws SQLException {
-		return dbex.getXMLLfRelations(this);
+		return xmlDbex.getXMLLfRelations(this);
 	}
 
 	public String getQuestion() {

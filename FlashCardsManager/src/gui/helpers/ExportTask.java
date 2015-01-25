@@ -13,18 +13,17 @@ import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 import javax.xml.stream.XMLStreamException;
 
-import core.LearningProject;
-import core.ProjectsController;
+import core.*;
 
 public class ExportTask extends SwingWorker<Void, Void> implements IProgressPresenter {
 	String pathToExport;
 	ProgressDialog dialog;
 	MainWindow mw;
-	ProjectsController ctl;
+	IProjectsController ctl;
 	ArrayList<LearningProject> projects;
 
 	public ExportTask(String pathToExport, ArrayList<LearningProject> projects, ProgressDialog dialog, MainWindow mw,
-			ProjectsController ctl) {
+			IProjectsController ctl) {
 		this.pathToExport = pathToExport;
 		this.projects = projects;
 		this.dialog = dialog;
@@ -53,7 +52,7 @@ public class ExportTask extends SwingWorker<Void, Void> implements IProgressPres
 		setProgress(0);
 		// --> export project to selected location and show progress
 		try {
-			ctl.exportProject(projects, pathToExport, this);
+			((OfflineProjectsController) ctl).exportProject(projects, pathToExport, this);
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(mw, sqle);
 		} catch (IOException ioe) {

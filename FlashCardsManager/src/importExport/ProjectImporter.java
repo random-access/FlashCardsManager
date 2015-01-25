@@ -14,7 +14,7 @@ import storage.PicType;
 import core.*;
 
 public class ProjectImporter {
-	ProjectsController ctl;
+	OfflineProjectsController ctl;
 	String pathToImport;
 	String pathToImportMediaFolder;
 	String pathToMediaFolder;
@@ -28,7 +28,7 @@ public class ProjectImporter {
 	ArrayList<XMLLabelFlashcardRelation> xmlLfRels;
 	Map<Integer, Integer> labelIdConversionMap = new HashMap<Integer, Integer>();
 
-	public ProjectImporter(String pathToImport, String pathToMediaFolder, ProjectsController ctl, IProgressPresenter p) {
+	public ProjectImporter(String pathToImport, String pathToMediaFolder, OfflineProjectsController ctl, IProgressPresenter p) {
 		this.ctl = ctl;
 		this.pathToImport = pathToImport;
 		this.pathToMediaFolder = pathToMediaFolder;

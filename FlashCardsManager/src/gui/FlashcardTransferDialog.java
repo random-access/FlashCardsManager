@@ -17,7 +17,7 @@ import gui.helpers.MyComboBoxModel;
 public class FlashcardTransferDialog extends JDialog {
 	private ArrayList<FlashCard> cardsToTransfer;
 	private LearningProject srcProj;
-	private ProjectsController ctl;
+	private IProjectsController ctl;
 
 	private JPanel pnlBottom, pnlCenter, pnlGrid;
 	private JButton btnDiscard, btnOk;
@@ -26,7 +26,7 @@ public class FlashcardTransferDialog extends JDialog {
 	private JCheckBox chkKeepProgress;
 	private FlashcardOverviewFrame editFrame;
 
-	public FlashcardTransferDialog(ProjectsController ctl, FlashcardOverviewFrame editFrame, LearningProject srcProj,
+	public FlashcardTransferDialog(IProjectsController ctl, FlashcardOverviewFrame editFrame, LearningProject srcProj,
 			ArrayList<FlashCard> cardsToTransfer) {
 		super(editFrame, true);
 		setTitle("Lernkarten verschieben...");

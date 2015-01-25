@@ -9,53 +9,64 @@ import java.util.Iterator;
 
 import javax.xml.stream.XMLStreamException;
 
-import storage.DerbyDBExchanger;
-import storage.MediaExchanger;
-import events.*;
+import storage.*;
+import events.ProjectDataChangedEvent;
+import events.ProjectDataChangedListener;
 import exc.InvalidLengthException;
 import exc.InvalidValueException;
 import gui.helpers.IProgressPresenter;
 
-public class ProjectsController implements ProjectChangedSource {
+public class OfflineProjectsController implements IProjectsController {
 
-	private final DerbyDBExchanger dbex;
-	private final MediaExchanger mex;
+	private final IDBExchanger dbex;
+	private final IMediaExchanger mex;
 	private ArrayList<LearningProject> projects;
 	private String pathToMediaFolder;
 
 	private ArrayList<ProjectDataChangedListener> listeners = new ArrayList<ProjectDataChangedListener>();
 
-	public ProjectsController(String pathToDatabase, String pathToMediaFolder) throws ClassNotFoundException, SQLException {
-		dbex = new DerbyDBExchanger(pathToDatabase, this);
-		mex = new MediaExchanger(pathToMediaFolder);
+	public OfflineProjectsController(String pathToDatabase, String pathToMediaFolder) throws ClassNotFoundException, SQLException {
+		dbex = new OfflineDBExchanger(pathToDatabase, this);
+		mex = new OfflineMediaExchanger(pathToMediaFolder);
 		this.pathToMediaFolder = pathToMediaFolder;
 		dbex.createConnection();
 		dbex.createTablesIfNotExisting();
 		loadProjects();
 	}
 
+	@Override
 	public void loadProjects() throws SQLException {
 		projects = dbex.getAllProjects();
 	}
 
-	public DerbyDBExchanger getDbex() {
+	@Override
+	public IDBExchanger getDbex() {
 		return dbex;
 	}
 
-	public MediaExchanger getMex() {
+	@Override
+	public IMediaExchanger getMex() {
 		return mex;
 	}
 
+	@Override
 	public void addProject(LearningProject p) {
 		projects.add(p);
 	}
 
+	@Override
 	public void removeProject(LearningProject p) {
 		projects.remove(p);
 	}
 
+	@Override
 	public ArrayList<LearningProject> getProjects() {
 		return projects;
+	}
+
+	@Override
+	public void disconnectFromDatabase() {
+		dbex.closeConnection();
 	}
 
 	public void importProjects(String pathToImport, IProgressPresenter p) throws XMLStreamException, IOException, SQLException,
@@ -95,7 +106,4 @@ public class ProjectsController implements ProjectChangedSource {
 		}
 	}
 
-	public void shutdownDatabase() {
-		dbex.closeConnection();
-	}
 }

@@ -52,7 +52,7 @@ public class ProjectPanel extends JPanel {
 	private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks, popupEditAddCards, popupEditOrganizeCards,
 			popupEditResetProgress;
 	private MainWindow parentWindow;
-	private ProjectsController ctl;
+	private IProjectsController ctl;
 	private LearningProject project;
 	private ArrayList<FlashCard> cards;
 
@@ -61,7 +61,7 @@ public class ProjectPanel extends JPanel {
 	}
 
 	// Constructor
-	public ProjectPanel(LearningProject project, MainWindow parentWindow, ProjectsController ctl) {
+	public ProjectPanel(LearningProject project, MainWindow parentWindow, IProjectsController ctl) {
 		this.ctl = ctl;
 		this.project = project;
 		this.status = Status.RED;
@@ -340,7 +340,7 @@ public class ProjectPanel extends JPanel {
 	}
 
 	private void showChangeStacksDialog() {
-		ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project, ctl);
+		ChangeStacksDialog p = new ChangeStacksDialog(ProjectPanel.this, project);
 		p.setVisible(true);
 	}
 

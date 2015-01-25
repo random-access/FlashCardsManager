@@ -16,9 +16,9 @@ import exc.CustomErrorHandling;
 public class FlashcardDropTargetListener extends DropTargetAdapter {
 
 	private JTree tree;
-	private ProjectsController ctl;
+	private IProjectsController ctl;
 
-	public FlashcardDropTargetListener(JTree tree, ProjectsController ctl) {
+	public FlashcardDropTargetListener(JTree tree, IProjectsController ctl) {
 		this.tree = tree;
 		this.ctl = ctl;
 		new DropTarget(tree, DnDConstants.ACTION_COPY, this, true, null);

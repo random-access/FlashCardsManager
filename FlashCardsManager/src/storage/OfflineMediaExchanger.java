@@ -7,15 +7,16 @@ import app.StartApp;
 import core.FlashCard;
 import core.LearningProject;
 
-public class MediaExchanger {
+public class OfflineMediaExchanger implements IMediaExchanger {
 
 	private String pathToMediaFolder;
 
-	public MediaExchanger(String pathToMediaFolder) {
+	public OfflineMediaExchanger(String pathToMediaFolder) {
 
 		this.pathToMediaFolder = pathToMediaFolder;
 	}
 
+	@Override
 	public void storePic(FlashCard card, PicType type) throws IOException {
 		String targetPathWithoutExtension = computeTargetPathWithoutEnding(card, type);
 		String extension = null;
@@ -58,6 +59,7 @@ public class MediaExchanger {
 		}
 	}
 
+	@Override
 	public void transferPic(FlashCard card, PicType type) throws IOException {
 		String targetPathWithoutExtension = computeTargetPathWithoutEnding(card, type);
 		String extension;
@@ -68,7 +70,7 @@ public class MediaExchanger {
 			if (extension != null) {
 				targetPath = targetPathWithoutExtension + "." + extension;
 			}
-			if (card.getPathToQuestionPic() == null ||!card.getPathToQuestionPic().equals(targetPath)) {
+			if (card.getPathToQuestionPic() == null || !card.getPathToQuestionPic().equals(targetPath)) {
 				FileUtils.deleteIfExistsWithAnyExtension(targetPathWithoutExtension);
 				if (StartApp.DEBUG)
 					System.out.println("delete if exists: " + targetPathWithoutExtension);
@@ -101,13 +103,15 @@ public class MediaExchanger {
 		}
 
 	}
-	
+
+	@Override
 	public void deleteAllPics(LearningProject proj) throws IOException {
 		for (FlashCard c : proj.getAllCards()) {
 			deleteAllPics(c);
 		}
 	}
 
+	@Override
 	public void deleteAllPics(FlashCard card) throws IOException {
 		String targetQPath = computeTargetPathWithoutEnding(card, PicType.QUESTION);
 		String targetAPath = computeTargetPathWithoutEnding(card, PicType.ANSWER);
@@ -118,8 +122,9 @@ public class MediaExchanger {
 	}
 
 	private String computeTargetPathWithoutEnding(FlashCard card, PicType type) {
-		if (StartApp.DEBUG) System.out.println("path to media folder=" + pathToMediaFolder + ", card.getProj().getId()=" + card.getProj().getId()
-				+ ", card.getId()=" + card.getId() + ", type.getShortForm=" + type.getShortForm());
+		if (StartApp.DEBUG)
+			System.out.println("path to media folder=" + pathToMediaFolder + ", card.getProj().getId()=" + card.getProj().getId()
+					+ ", card.getId()=" + card.getId() + ", type.getShortForm=" + type.getShortForm());
 		return pathToMediaFolder + "/pic-" + card.getProj().getId() + "-" + card.getId() + "-" + type.getShortForm();
 	}
 

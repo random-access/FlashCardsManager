@@ -14,9 +14,9 @@ import gui.helpers.IProgressPresenter;
 
 public class LearningProject implements IHasStatus {
 
-	private final DerbyDBExchanger dbex;
-	private final MediaExchanger mex;
-	private final ProjectsController ctl;
+	private IDBExchanger dbex; // TODO final
+	private IMediaExchanger mex; // TODO final
+	private IProjectsController ctl;
 
 	private final int id;
 	private String title;
@@ -27,7 +27,7 @@ public class LearningProject implements IHasStatus {
 
 	// CONSTRUCTORS
 	// new project
-	public LearningProject(ProjectsController ctl, String title, int numberOfStacks) throws SQLException, InvalidValueException {
+	public LearningProject(IProjectsController ctl, String title, int numberOfStacks) throws SQLException, InvalidValueException {
 		this.ctl = ctl;
 		dbex = ctl.getDbex();
 		mex = ctl.getMex();
@@ -43,7 +43,7 @@ public class LearningProject implements IHasStatus {
 	}
 
 	// restore from database
-	public LearningProject(ProjectsController ctl, int id, String title, int numberOfStacks) {
+	public LearningProject(IProjectsController ctl, int id, String title, int numberOfStacks) {
 		this.ctl = ctl;
 		dbex = ctl.getDbex();
 		mex = ctl.getMex();
@@ -95,12 +95,12 @@ public class LearningProject implements IHasStatus {
 	}
 
 	// Get database exchanger
-	public DerbyDBExchanger getDBEX() {
+	public IDBExchanger getDBEX() {
 		return this.dbex;
 	}
 
 	// Get media exchanger
-	public MediaExchanger getMex() {
+	public IMediaExchanger getMex() {
 		return mex;
 	}
 
