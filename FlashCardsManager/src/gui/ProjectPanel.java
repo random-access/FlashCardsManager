@@ -52,7 +52,7 @@ public class ProjectPanel extends JPanel {
     private JMenuItem popupEditChangeName, popupEditChangeNoOfStacks, popupEditAddCards, popupEditOrganizeCards,
             popupEditResetProgress;
     private MainWindow parentWindow;
-    private IProjectsController ctl;
+
     private LearningProject project;
     private ArrayList<FlashCard> cards;
 
@@ -61,8 +61,7 @@ public class ProjectPanel extends JPanel {
     }
 
     // Constructor
-    public ProjectPanel(LearningProject project, MainWindow parentWindow, IProjectsController ctl) {
-        this.ctl = ctl;
+    public ProjectPanel(LearningProject project, MainWindow parentWindow) {
         this.project = project;
         this.status = Status.RED;
         this.projectTitle = project.toString();

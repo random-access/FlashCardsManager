@@ -393,7 +393,7 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
         });
     }
 
-    public void updateTableView() {
+    public void updateTableView() throws SQLException {
         try {
             ((FlashcardTableModel) tblCards.getModel()).recreateTable(project, this);
         } catch (SQLException sqle) {
@@ -401,6 +401,7 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
         }
         trProjects.repaint();
         selectCardSectionContent();
+        owner.updateProjectList();
     }
 
     private void selectCardSectionContent() {
@@ -538,7 +539,12 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
 
     @Override
     public void projectDataChanged(EventObject e) {
-        updateTableView();
+        try {
+            updateTableView();
+        } catch (SQLException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
     }
 
     public MainWindow getMainFrame() {

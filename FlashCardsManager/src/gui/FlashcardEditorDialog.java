@@ -327,7 +327,6 @@ public class FlashcardEditorDialog extends JDialog {
                     } else {
                         saveNewCardToDatabase();
                     }
-                    project.unloadLabelsAndFlashcards();
                 } catch (SQLException e1) {
                     // TODO Auto-generated catch block
                     e1.printStackTrace();
@@ -344,7 +343,6 @@ public class FlashcardEditorDialog extends JDialog {
                 try {
                     project.loadLabelsAndFlashcards(null);
                     saveNewCardToDatabase();
-                    project.unloadLabelsAndFlashcards();
                     resetEditor();
                 } catch (IOException ioe) {
                     CustomErrorHandling.showInternalError(FlashcardEditorDialog.this, ioe);
