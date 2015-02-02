@@ -497,9 +497,10 @@ public class OfflineDBExchanger implements IDBExchanger, XMLDBExchanger {
             f.setPathToQuestionPic(getPathToPic(f, PicType.QUESTION));
             f.setPathToAnswerPic(getPathToPic(f, PicType.ANSWER));
             cards.add(f);
-            if (p != null)
+            if (p != null) {
                 cardCount++;
-            p.changeProgress((int) Math.min(((double) cardCount / noOfCards) * 100, 100));
+                p.changeProgress((int) Math.min(((double) cardCount / noOfCards) * 100, 100));
+            }
         }
         res.close();
         return cards;

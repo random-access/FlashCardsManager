@@ -14,181 +14,193 @@ import gui.helpers.IProgressPresenter;
 
 public class LearningProject implements IHasStatus {
 
-	private IDBExchanger dbex; // TODO final
-	private IMediaExchanger mex; // TODO final
-	private IProjectsController ctl;
+    private IDBExchanger dbex; // TODO final
+    private IMediaExchanger mex; // TODO final
+    private IProjectsController ctl;
 
-	private final int id;
-	private String title;
-	private int numberOfStacks;
-	private ArrayList<FlashCard> allCards;
+    private final int id;
+    private String title;
+    private int numberOfStacks;
+    private ArrayList<FlashCard> allCards;
 
-	private ArrayList<Label> labels;
+    private ArrayList<Label> labels;
 
-	// CONSTRUCTORS
-	// new project
-	public LearningProject(IProjectsController ctl, String title, int numberOfStacks) throws SQLException, InvalidValueException {
-		this.ctl = ctl;
-		dbex = ctl.getDbex();
-		mex = ctl.getMex();
-		id = dbex.nextId(TableType.PROJECTS);
-		this.title = title;
-		if (!validNoOfStacks(numberOfStacks)) {
-			throw new InvalidValueException();
-		} else {
-			this.numberOfStacks = numberOfStacks;
-		}
-		allCards = new ArrayList<FlashCard>();
-		labels = new ArrayList<Label>();
-	}
+    // CONSTRUCTORS
+    // new project
+    public LearningProject(IProjectsController ctl, String title, int numberOfStacks) throws SQLException, InvalidValueException {
+        this.ctl = ctl;
+        dbex = ctl.getDbex();
+        mex = ctl.getMex();
+        id = dbex.nextId(TableType.PROJECTS);
+        this.title = title;
+        if (!validNoOfStacks(numberOfStacks)) {
+            throw new InvalidValueException();
+        } else {
+            this.numberOfStacks = numberOfStacks;
+        }
+        allCards = new ArrayList<FlashCard>();
+        labels = new ArrayList<Label>();
+    }
 
-	// restore from database
-	public LearningProject(IProjectsController ctl, int id, String title, int numberOfStacks) {
-		this.ctl = ctl;
-		dbex = ctl.getDbex();
-		mex = ctl.getMex();
-		this.id = id;
-		this.title = title;
-		this.numberOfStacks = numberOfStacks;
-	}
+    // restore from database
+    public LearningProject(IProjectsController ctl, int id, String title, int numberOfStacks) {
+        this.ctl = ctl;
+        dbex = ctl.getDbex();
+        mex = ctl.getMex();
+        this.id = id;
+        this.title = title;
+        this.numberOfStacks = numberOfStacks;
+    }
 
-	public void loadLabelsAndFlashcards(IProgressPresenter t) throws SQLException {
-		labels = dbex.getAllLabels(this);
-		allCards = dbex.getAllCards(this, t);
-	}
+    public void loadLabels() throws SQLException {
+        labels = dbex.getAllLabels(this);
+    }
 
-	public void store() throws SQLException, InvalidLengthException {
-		dbex.addProject(this);
-		ctl.addProject(this);
-	}
+    public void loadLabelsAndFlashcards(IProgressPresenter t) throws SQLException {
+        labels = dbex.getAllLabels(this);
+        allCards = dbex.getAllCards(this, t);
+    }
 
-	public void update() throws SQLException {
-		dbex.updateProject(this);
-	}
+    public void unloadLabelsAndFlashcards() {
+        allCards = null;
+        labels = null;
+    }
 
-	public void delete() throws SQLException, IOException {
-		ctl.removeProject(this);
-		mex.deleteAllPics(this);
-		dbex.deleteProject(this);
-	}
+    public void store() throws SQLException, InvalidLengthException {
+        dbex.addProject(this);
+        ctl.addProject(this);
+    }
 
-	public XMLLearningProject toXMLLearningProject() {
-		XMLLearningProject proj = new XMLLearningProject();
-		proj.setProjId(id);
-		proj.setProjTitle(title);
-		proj.setNoOfStacks(numberOfStacks);
-		return proj;
-	}
+    public void update() throws SQLException {
+        dbex.updateProject(this);
+    }
 
-	// Adds a flashcard to the project
-	public void addCard(FlashCard card) {
-		allCards.add(card);
-	}
+    public void delete() throws SQLException, IOException {
+        ctl.removeProject(this);
+        mex.deleteAllPics(this);
+        dbex.deleteProject(this);
+    }
 
-	// Removes a flashcard from the project
-	void removeCard(FlashCard card) {
-		allCards.remove(card);
-	}
+    public XMLLearningProject toXMLLearningProject() {
+        XMLLearningProject proj = new XMLLearningProject();
+        proj.setProjId(id);
+        proj.setProjTitle(title);
+        proj.setNoOfStacks(numberOfStacks);
+        return proj;
+    }
 
-	public ArrayList<FlashCard> getAllCards() {
-		return allCards;
-	}
+    // Adds a flashcard to the project
+    public void addCard(FlashCard card) {
+        allCards.add(card);
+    }
 
-	// Get database exchanger
-	public IDBExchanger getDBEX() {
-		return this.dbex;
-	}
+    // Removes a flashcard from the project
+    void removeCard(FlashCard card) {
+        allCards.remove(card);
+    }
 
-	// Get media exchanger
-	public IMediaExchanger getMex() {
-		return mex;
-	}
+    public ArrayList<FlashCard> getAllCards() {
+        return allCards;
+    }
 
-	// TITLE - Getter & setter
-	public String getTitle() {
-		return title;
-	}
+    // Get database exchanger
+    public IDBExchanger getDBEX() {
+        return this.dbex;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    // Get media exchanger
+    public IMediaExchanger getMex() {
+        return mex;
+    }
 
-	// ID - Getter
-	public int getId() {
-		return id;
-	}
+    // TITLE - Getter & setter
+    public String getTitle() {
+        return title;
+    }
 
-	// NUMBER OF STACKS - Getter & Setter
-	public int getNumberOfStacks() {
-		return numberOfStacks;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setNumberOfStacks(int newNumberOfStacks) throws InvalidValueException, SQLException, IOException {
-		if (!validNoOfStacks(newNumberOfStacks)) {
-			throw new InvalidValueException();
-		}
-		// if there are less stacks than before, shift all cards with too high
-		// no of stack into highest stack
-		if (this.numberOfStacks > newNumberOfStacks) {
-			for (int i = 0; i < allCards.size(); i++) {
-				FlashCard f = allCards.get(i);
-				if (f.getStack() > newNumberOfStacks) {
-					f.setStack(newNumberOfStacks);
-					f.update();
-				}
-			}
-		}
-		this.numberOfStacks = newNumberOfStacks;
-		this.update();
-	}
+    // ID - Getter
+    public int getId() {
+        return id;
+    }
 
-	public boolean validNoOfStacks(int noOfStacks) {
-		return (noOfStacks > 0 && noOfStacks < 100);
-	}
+    // NUMBER OF STACKS - Getter & Setter
+    public int getNumberOfStacks() {
+        return numberOfStacks;
+    }
 
-	// COUNT CARDS in whole project / stacks
-	public int getNumberOfCards() throws SQLException {
-		return dbex.countRows(this);
-	}
+    public void setNumberOfStacks(int newNumberOfStacks) throws InvalidValueException, SQLException, IOException {
+        if (!validNoOfStacks(newNumberOfStacks)) {
+            throw new InvalidValueException();
+        }
+        // if there are less stacks than before, shift all cards with too high
+        // no of stack into highest stack
+        if (allCards == null) {
+            this.loadLabelsAndFlashcards(null);
+        }
+        if (this.numberOfStacks > newNumberOfStacks) {
+            for (int i = 0; i < allCards.size(); i++) {
+                FlashCard f = allCards.get(i);
+                if (f.getStack() > newNumberOfStacks) {
+                    f.setStack(newNumberOfStacks);
+                    f.update();
+                }
+            }
+        }
+        this.numberOfStacks = newNumberOfStacks;
+        this.update();
+    }
 
-	public int getNumberOfCards(int stack) throws SQLException {
-		return dbex.countRows(this, stack);
-	}
+    public boolean validNoOfStacks(int noOfStacks) {
+        return (noOfStacks > 0 && noOfStacks < 100);
+    }
 
-	public Status getStatus() throws SQLException {
-		int maxStack = dbex.getMaxStack(this);
-		int minStack = dbex.getMinStack(this);
-		Status s;
-		if (maxStack == 1 || maxStack == 0) {
-			s = Status.RED;
-		} else if (maxStack == numberOfStacks && maxStack == minStack) {
-			s = Status.GREEN;
-		} else {
-			s = Status.YELLOW;
-		}
-		return s;
-	}
+    // COUNT CARDS in whole project / stacks
+    public int getNumberOfCards() throws SQLException {
+        return dbex.countRows(this);
+    }
 
-	public ArrayList<Label> getLabels() {
-		return labels;
-	}
+    public int getNumberOfCards(int stack) throws SQLException {
+        return dbex.countRows(this, stack);
+    }
 
-	public void addLabel(Label newLabel) {
-		labels.add(newLabel);
-	}
+    public Status getStatus() throws SQLException {
+        int maxStack = dbex.getMaxStack(this);
+        int minStack = dbex.getMinStack(this);
+        Status s;
+        if (maxStack == 1 || maxStack == 0) {
+            s = Status.RED;
+        } else if (maxStack == numberOfStacks && maxStack == minStack) {
+            s = Status.GREEN;
+        } else {
+            s = Status.YELLOW;
+        }
+        return s;
+    }
 
-	public void removeLabel(Label labelToRemove) {
-		labels.remove(labelToRemove);
-	}
+    public ArrayList<Label> getLabels() {
+        return labels;
+    }
 
-	public String toString() {
-		try {
-			return this.getTitle() + " (" + dbex.countRows(this) + ")";
-		} catch (SQLException e) {
-			if (StartApp.DEBUG)
-				e.printStackTrace();
-			return this.getTitle();
-		}
-	}
+    public void addLabel(Label newLabel) {
+        labels.add(newLabel);
+    }
+
+    public void removeLabel(Label labelToRemove) {
+        labels.remove(labelToRemove);
+    }
+
+    public String toString() {
+        try {
+            return this.getTitle() + " (" + dbex.countRows(this) + ")";
+        } catch (SQLException e) {
+            if (StartApp.DEBUG)
+                e.printStackTrace();
+            return this.getTitle();
+        }
+    }
 
 }
