@@ -36,7 +36,7 @@ public class PicAndTextPanel extends JPanel {
 	private static final int DEFAULT_CARD_HEIGHT_TEXT_ONLY = 250;
 	private static final int DEFAULT_CARD_HEIGHT_PIC_AND_TEXT = 50;
 	private static final int MAX_PIC_WIDTH = (int) (Toolkit.getDefaultToolkit().getScreenSize().width * 0.75);
-	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit().getScreenSize().height * 0.85);
+	private static final int MAX_PIC_HEIGHT = (int) (Toolkit.getDefaultToolkit().getScreenSize().height);
 
 	public PicAndTextPanel(String pathToPic, String txt, PicType type, boolean editable, int customWidth) throws IOException {
 		super(new BorderLayout(10, 10));
