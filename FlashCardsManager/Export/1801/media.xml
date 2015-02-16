@@ -168,4 +168,10 @@
 		<path_to_media>pic-5-375-a.PNG</path_to_media>
 		<pictype>a</pictype>
 	</media>
+	<media>
+		<media_id>96</media_id>
+		<card_id>377</card_id>
+		<path_to_media>pic-5-377-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
 </medias>

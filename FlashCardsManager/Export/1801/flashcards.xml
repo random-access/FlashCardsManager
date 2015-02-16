@@ -6752,4 +6752,525 @@
 		<custom_width_question>450</custom_width_question>
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
+	<flashcard>
+		<card_id>376</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie viele Verbindungen werden ben&amp;#246;tigt, um eine Website zu laden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;1 UDP-Verbindung&lt;/b&gt; f&amp;#252;r &lt;b&gt;Abfrage der IP-Adresse bei 
+      DNS-Server&lt;/b&gt; (falls Seite nicht in lokalem Cache ist)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;1 TCP-Verbindung&lt;/b&gt; f&amp;#252;r &lt;b&gt;Abruf der Seite selbst&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;n TCP-Verbindungen&lt;/b&gt;, wenn &lt;b&gt;n Referenzen&lt;/b&gt; abgerufen werden 
+      bei &lt;b&gt;nicht-persistenten Verbindungen&lt;/b&gt; (HTTP 1.0 oder explizit so 
+      gefordert bei HTTP 1.1) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      *oder*
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;0 &amp;lt;= m &amp;lt;= n TCP-Verbindungen&lt;/b&gt; bei&lt;b&gt; persistenten 
+      Verbindungen&lt;/b&gt; (HTTP 1.1), wenn &lt;b&gt;n Referenzen von m verschiedenen 
+      Servern&lt;/b&gt; angefordert werden m&amp;#252;ssen (und alle Server HTTP 1.1 
+      unterst&amp;#252;tzen)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt;&lt;b&gt; Referenzen&lt;/b&gt; k&amp;#246;nnen Bilder, Videos, ... sein
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>377</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Arten von HTTP-Nachrichten gibt es? Beschreibe deren Bestandteile!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;HTTP-Anfragenachricht:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Statuszeile&lt;/u&gt;: GET-Methode, Dateiname, HTTP-Version
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Header-Zeilen&lt;/u&gt;: Webserver, auf dem die Datei liegt, explizite 
+      Anforderung einer nicht persistenten Verbindung, Webbrowser...
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;HTTP-Antwortnachricht: &lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Statuszeile&lt;/u&gt;: HTTP-Version, Statuscode, Phrase
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Header-Zeilen&lt;/u&gt;: Lieferdatum,Server, Objektbeschreibungen...
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Body&lt;/u&gt;: eigentliche Nachricht
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>378</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Versionen von HTTP gibt es? Welche entscheidenden Unterschiede 
+      gibt es?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Es gibt derzeit &lt;u&gt;zwei HTTP-Versionen&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;- HTTP 1.0
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;- HTTP 1.1&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Unterschiede:&lt;/u&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      HTTP 1.0 arbeitet nur mit &lt;b&gt;nicht-persistenten Verbindungen&lt;/b&gt;. Das 
+      bedeutet, dass die TPC-Verbindung sofort nachdem der Server die 
+      angeforderte Seite ausgeliefert hat abgebaut wird.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei HTTP 1.1 werden standardm&amp;#228;&amp;#223;ig &lt;b&gt;persistente Verbindungen&lt;/b&gt; 
+      verwendet. Dabei bleibt die Verbindung f&amp;#252;r eine konfigurierbare Zeit (&lt;b&gt;Timeout-Intervall&lt;/b&gt;) 
+      aktiv, kann also zur &amp;#220;bertragung mehrerer Objekte vom selben Server 
+      genutzt werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Man unterscheidet au&amp;#223;erdem zwischen persistenten Verbindungen &lt;b&gt;mit 
+      Pipelining&lt;/b&gt; (Client sendet Anfragen f&amp;#252;r Referenzen, bevor die vorige 
+      Anfrage abgearbeitet wurde) und &lt;b&gt;ohne Pipelining&lt;/b&gt; (eine Abfrage 
+      nach der anderen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>379</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Web-Caches?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Web-Caches sind Web-Server, die von (lokalen) Organisationen eingesetzt 
+      werden, um &lt;b&gt;Kopien der zuletzt angeforderten Objekte&lt;/b&gt; zu speichern. 
+      Die Web-Browser der Benutzer werden so konfiguriert,dass sie zun&amp;#228;chst 
+      beim Web-Cache nach Objekten anfragen. Verf&amp;#252;gt der Web-Cache &amp;#252;ber 
+      das Objekt, so liefert er es direkt zur&amp;#252;ck.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Andernfalls fungiert der Web-Cache als Web-Client und fordert das Objekt 
+      seinerseits vom dem Originalhost an, hinterlegt eine Kopie und liefert 
+      dem Web-Browser das gew&amp;#252;nschte Objekt. Web-Caches k&amp;#246;nnen also 
+      gleichzeitig als Server und Client operieren. Sie werden durch 
+      sogenannte &lt;b&gt;Proxy-Server &lt;/b&gt;implementiert. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>380</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Gr&amp;#252;nde sprechen f&amp;#252;r die Einf&amp;#252;hrung von Web-Caches?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Gr&amp;#252;nde f&amp;#252;r die Einf&amp;#252;hrung von Web-Caches&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1. Die &lt;b&gt;Reaktionszeit auf eine Client-Anfrage&lt;/b&gt; kann &lt;b&gt;reduziert&lt;/b&gt; 
+      werden. Dieser Effekt wird noch verst&amp;#228;rkt, wenn eine 
+      Hochgeschwindigkeitsverbindung zwischen Web-Cache und Hosts besteht, was 
+      in vielen Organisationen der Fall ist.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2. Der Verkehr von einer Institution in das &amp;#246;ffentliche Internet kann 
+      reduziert werden, so dass die Institution mit &lt;b&gt;weniger Bandbreite&lt;/b&gt; 
+      an das &amp;#246;ffentliche Netz angeschlossen sein muss.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3. Ein Host soll nicht im Internet als Client eines Web-Servers 
+      erkennbar sein. Er benutzt einen vertrauensw&amp;#252;rdigen Proxy-Server, so 
+      dass der Web-Server nicht erf&amp;#228;hrt, von welchem Host aus die Anfrage 
+      wirklich kommt, der &lt;b&gt;Client bleibt &lt;/b&gt;also dem Server gegen&amp;#252;ber&lt;b&gt; 
+      anonym&lt;/b&gt;. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>381</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Besonderheiten bez&amp;#252;glich der Verbindung gibt es bei FTP? Was sind 
+      die zwei wichtigsten Unterschiede zu HTTP?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FTP nutzt &lt;u&gt;2 TPC-Verbindungen&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Steuerverbindung&lt;/b&gt;: &amp;#220;bertragung von Steuerinformationen 
+      (Anmeldedaten, Navigation durch Verzeichnisse,..)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Datenverbindung&lt;/b&gt;: wird bei Dateitransfer aufgebaut
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Out-of-band&lt;/b&gt; bedeutet, dass wie bei &lt;i&gt;&lt;b&gt;FTP &lt;/b&gt;&lt;/i&gt;die 
+      Steuerinformationen separat &amp;#252;bertragen werden.&lt;b&gt;&lt;i&gt; HTTP&lt;/i&gt;&lt;/b&gt; 
+      &amp;#252;bertr&amp;#228;gt seine Steuerinformationen&lt;b&gt; In-band&lt;/b&gt;, also in 
+      denselben TCP-Paketen, in denen die Daten &amp;#252;bertragen werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      HTTP ist ein &lt;b&gt;zustandsloses Protokoll&lt;/b&gt;, das bedeutet, dass 
+      Webserver keine Informationen &amp;#252;ber die Clients speichern, im Gegensatz 
+      von FTP, wo der aktuelle Sitzungsstand (z.B. aktuelles 
+      Arbeitsverzeichnis) gespeichert wird.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>382</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert E-Mail?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das E-Mail-System des Internets basierte urspr&amp;#252;nglich nur auf &lt;b&gt;SMTP 
+      (Simple Mail Transfer Protocol)&lt;/b&gt;, das schon seit 1982 existiert und 
+      also wesentlich &amp;#228;lter ist als z. B. HTTP. Dieses SMTP ist ein sehr 
+      einfach gehaltenes Protokoll zum Versenden von E-Mails zwischen 
+      sogenannten Mail-Servern mittels TCP, das nur besonderen Wert auf 
+      Zuverl&amp;#228;ssigkeit bei Ausfall von Leitungen oder Hosts legt, an 
+      Authentifizierung und &amp;#228;hnlichen Luxus wurde damals jedoch nicht gedacht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf allen Mail-Servern, die heute &amp;#252;blicherweise von ISPs betrieben 
+      werden, l&amp;#228;uft ein besonderer Prozess, der &lt;b&gt;Message Transfer Agent 
+      (MTA)&lt;/b&gt;, der E-Mails annimmt (oder die Annahme verweigert) und 
+      entweder in lokalen Mailboxen f&amp;#252;r seine Benutzer abspeichert oder per 
+      SMTP an andere Mail-Server weiterleitet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um es den Endbenutzern m&amp;#246;glichst bequem zu machen, sind heute weitere 
+      Protokolle im Einsatz. Zum Abholen der E-Mails vom Mail-Server auf den 
+      eigenen Rechner wird &lt;b&gt;POP3 (Post Office Protocol Version 3)&lt;/b&gt; 
+      benutzt, zum komfortablen Verwalten von Mailboxen, die auf dem Server 
+      bleiben, dient &lt;b&gt;IMAP (Internet Message Access Protocol)&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Benutzer hat auf seinem Rechner ein meist sehr m&amp;#228;chtiges Programm, 
+      den &lt;b&gt;Mail User Agent (MUA&lt;/b&gt;, z. B. Mozilla Thunderbird oder 
+      Microsoft Outlook), der einmal auf die verwendeten Protokolle und 
+      Benutzerdaten eingestellt werden muss. Zum Versenden der E-Mails wird 
+      auch vom MUA weiter SMTP benutzt, seit einiger Zeit aber mit 
+      Authentifizierung.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auch ein Abruf via HTTP ist bei vielen Mailanbietern m&amp;#246;glich (Webmail).
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>383</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind MIME und wof&amp;#252;r werden sie bei SMTP ben&amp;#246;tigt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da bei SMTP nur eine &lt;b&gt;&amp;#220;bertragung von 7-bit-ASCII Zeichen&lt;/b&gt; 
+      m&amp;#246;glich ist, entwickelte man einen &lt;b&gt;Kodierungsstandard&lt;/b&gt; f&amp;#252;r 
+      Sonderzeichen sowie f&amp;#252;r das Versenden von beliebigen Dateiformaten als 
+      Mailanhang. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;MIME&lt;/b&gt; steht f&amp;#252;r &lt;b&gt;Multipurpose Internet Mail Extensions&lt;/b&gt; 
+      und sollte von jedem MUA verstanden werden. Mit MIME werden beliebige 
+      Dateiformate in 7-bit-Zeichen kodiert. Mit dem MIME-Typ kann angegeben 
+      werden, um welches Dateiformat es sich handelt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>384</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>385</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen Pull-Protokollen und Push-Protokollen 
+      und nenne Beispiele!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einem &lt;b&gt;Push-Protokoll&lt;/b&gt; schickt der Sender unaufgefordert 
+      Nachrichten an den Empf&amp;#228;nger. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einem &lt;b&gt;Pull-Protokoll &lt;/b&gt;spielt der Empf&amp;#228;nger den aktiven Part 
+      und holt sich seine Informationen selbst. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;SMTP ist ein Push-Protokoll&lt;/b&gt;, dh. der sendende Mailserver &lt;b&gt;&lt;i&gt;schiebt&lt;/i&gt;&lt;/b&gt; 
+      die E-Mail unaufgefordert auf den empfangende Mailserver. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Webserver hingegen sendet niemals unaufgefordert Daten. Bei HTTP &lt;b&gt;&lt;i&gt;zieht&lt;/i&gt;&lt;/b&gt; 
+      die Anfragenachricht die Information bei Bedarf vom Web-Server; &lt;b&gt;HTTP 
+      ist ein Pull-Protokoll.&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
 </flashcards>
