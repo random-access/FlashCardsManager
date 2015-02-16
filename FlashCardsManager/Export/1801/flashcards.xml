@@ -6162,4 +6162,594 @@
 		<custom_width_question>450</custom_width_question>
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
+	<flashcard>
+		<card_id>364</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Z&amp;#228;hle die Schichten im Internet-Schichtenmodell auf und nenne die 
+      dazugeh&amp;#246;rigen PDU's!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>365</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Anwendungsschicht des Internet-Schichtenmodells grob und 
+      nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Anwendungsschicht&lt;/b&gt; ist zust&amp;#228;ndig f&amp;#252;r die Unterst&amp;#252;tzung von&lt;b&gt; 
+      Netzwerk- Anwendungsanwendungen&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Sie beinhaltet viele Protokolle, darunter&lt;b&gt; HTTP&lt;/b&gt; f&amp;#252;r das Web, &lt;b&gt;SMTP 
+      &lt;/b&gt;f&amp;#252;r E-Mail, &lt;b&gt;FTP&lt;/b&gt; f&amp;#252;r Filetransfer,&lt;b&gt; NNTP&lt;/b&gt; f&amp;#252;r 
+      News, &lt;b&gt;Telnet&lt;/b&gt; f&amp;#252;r Remote Login und &lt;b&gt;SIP &lt;/b&gt;f&amp;#252;r 
+      Internettelefonie. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In der Internet-Terminologie wird die Anwendungsschicht auch als &lt;b&gt;Verarbeitungsschicht&lt;/b&gt; 
+      bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>366</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Transportschicht des Internet-Schichtenmodells grob und 
+      nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Transportschicht&lt;/b&gt; stellt einen Kommunikationsdienst zwischen 
+      zwei Anwendungsprozessen bereit und erm&amp;#246;glicht so eine 
+      Endpunkt-zu-Endpunkt-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Kommunikation von Quell-Host zu Ziel-Host. Es gibt zwei 
+      &amp;#220;bertragungsprotokolle: TCP und UDP. &lt;b&gt;TCP &lt;/b&gt;bietet einen 
+      zuverl&amp;#228;ssigen, verbindungsorientierten Dienst, &amp;#252;ber das ein 
+      Bytestrom von einem Rechner im Internet fehlerfrei einem anderen Rechner 
+      zugestellt wird. &lt;b&gt;UDP&lt;/b&gt; bietet einen unzuverl&amp;#228;ssigen, verbindungslosen 
+      Dienst.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>367</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die&lt;b&gt; Vermittlungsschicht&lt;/b&gt; des Internet-Schichtenmodells 
+      grob und nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Vermittlungsschicht &lt;/b&gt;bietet einen Endpunkt-zu-Endpunkt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Kommunikationsdienst. Sie transportiert Datagramme vom Quellhost zum
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Zielhost. Die Vermittlungsschicht des Internets besteht aus zwei 
+      Hauptkomponenten: dem IP und vielen Routing-Protokollen. Das &lt;b&gt;IP&lt;/b&gt; 
+      definiert das Format eines IP-Datagrammes. Die &lt;b&gt;Routing-Protokolle &lt;/b&gt;bestimmen, 
+      welche Routen die Datagramme zwischen Quelle und Ziel nehmen. Innerhalb 
+      eines Netzwerks kann der Netzwerkadministrator jedes beliebige 
+      Routing-Protokoll benutzen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Vermittlungsschicht, die das IP und viele Routing-Protokolle 
+      enth&amp;#228;lt, wird
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      auch als &lt;b&gt;IP-Schicht &lt;/b&gt;oder &lt;b&gt;Internet-Schicht&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>368</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die&lt;b&gt; Sicherungsschicht&lt;/b&gt; des Internet-Schichtenmodells 
+      grob und nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die&lt;b&gt; Sicherungsschicht&lt;/b&gt; ist f&amp;#252;r die Bef&amp;#246;rderung ganzer Rahmen von 
+      einem
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Knoten (Host oder Paket-Switch) zu einem benachbarten Knoten zust&amp;#228;ndig,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      die physikalisch &amp;#252;ber einen &amp;#220;bertragungskanal, z. B. ein Kabel, eine 
+      Telefonleitung oder eine Punkt-zu-Punkt-Funkverbindung, miteinander 
+      verbunden sind.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der auf der Sicherungsschicht bereitgestellte Dienst h&amp;#228;ngt von dem 
+      spezifischen Sicherungsschichtprotokoll ab. &lt;b&gt;Ethernet&lt;/b&gt; und &lt;b&gt;PPP&lt;/b&gt; 
+      (Point-to-Point Protocol) und in gewissem Umfang auch &lt;b&gt;ATM&lt;/b&gt; und &lt;b&gt;Frame-Relay&lt;/b&gt; 
+      sind Beispiele f&amp;#252;r die Sicherungsschicht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>369</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die&lt;b&gt; Bit&amp;#252;bertragungsschicht&lt;/b&gt; des 
+      Internet-Schichtenmodells grob!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Bit&amp;#252;bertragungsschicht&lt;/b&gt; &amp;#252;bertr&amp;#228;gt die einzelnen Bits der 1-PDU 
+      von einem Router zum n&amp;#228;chsten. Die Protokolle dieser Schicht h&amp;#228;ngen 
+      wesentlich von der Verbindungsleitung und vom &amp;#220;bertragungsmedium der 
+      Verbindungsleitung ab. Ethernet benutzt z.B. viele Protokolle f&amp;#252;r die 
+      Bit&amp;#252;bertragungsschicht: eines f&amp;#252;r Twisted-Pair Kabel, eines f&amp;#252;r 
+      Koaxialkabel, eines f&amp;#252;r Glasfaser usw. Je nach Medium wird ein Bit 
+      unterschiedlich auf der Verbindungsleitung &amp;#252;bertragen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>370</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Ger&amp;#228;te im Internet implementieren wieviele Schichten des 
+      Internet-Schichtenmodells? Warum gibt es diese Unterschiede?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1. Router: implementieren Schicht 1-3
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2. Bridges: implementieren Schicht 1-2
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3. Endsysteme: implementieren Schicht 1-5
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die reduzierte Komplexit&amp;#228;t von Routern und Bridges h&amp;#228;ngt mit dem 
+      Bestreben zusammen, einen gro&amp;#223;en Teil der Komplexit&amp;#228;t der 
+      Internet-Architektur auf die R&amp;#228;nder des Netzwerks zu legen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>371</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist das ISO/OSI Referenzmodell und wof&amp;#252;r wird es eingesetzt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das ISO/OSI Referenzmodell ist definiert durch die internationale Norm &lt;b&gt;ISO/IS 
+      7498&lt;/b&gt; mit dem Titel &lt;b&gt;&amp;quot;Information Processing Systems: Open 
+      Systems Interconnection - Basic Reference Model&amp;quot;&lt;/b&gt;.  Hier wurde 
+      ein Rahmen geschaffen, um die Kommunikation zwischen Computersystemen zu 
+      standardisieren. Das ISO/OSI Referenzmodell definiert &lt;b&gt;sieben 
+      Schichten.&lt;/b&gt; Das Referenzmodell schreibt keine Implementierung dieser 
+      Schichten vor, sondern beschreibt zu jeder Schicht ihre allgemeinen 
+      Aufgaben, ihre der n&amp;#228;chsth&amp;#246;heren Schicht bereitzustellenden Dienste und 
+      die in ihr zu realisierenden Funktionen. Das Modell bildet damit ein&lt;b&gt; 
+      Rahmenwerk zur Implementierung von Protokollen&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>372</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe kurz die einzelnen Schichten vom ISO/OSI Referenzmodell
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 1:&lt;/b&gt; &lt;b&gt;Bit&amp;#252;bertragungsschicht (physical layer):&lt;/b&gt; 
+      stellt physikalische
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#220;bertragungskan&amp;#228;le zur Verf&amp;#252;gung, die es gestatten, beliebige Bitfolgen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      zu &amp;#252;bertragen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 2: Sicherungsschicht (data link layer):&lt;/b&gt; stellt 
+      weitgehend sichere
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#220;bertragungskan&amp;#228;le f&amp;#252;r die &amp;#220;bertragung von Datenbl&amp;#246;cken zur Verf&amp;#252;gung. 
+      Hierzu werden Verfahren zur Fehlererkennung und Fehlerkorrektur eingesetzt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 3: Vermittlungsschicht (network layer):&lt;/b&gt; stellt 
+      logische &amp;#220;bertragungskan&amp;#228;le zwischen Endsystemen zur Verf&amp;#252;gung. Ein 
+      Beispiel ist
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      das IP im Internet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 4: Transportschicht (transport layer):&lt;/b&gt; stellt logische 
+      &amp;#220;bertragungskan&amp;#228;le zwischen den auf den Endsystemen aktiven, miteinander
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      kommunizierenden Anwendungsprozessen zur Verf&amp;#252;gung. Beispiele sind
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      die schon kurz angesprochenen Protokolle TCP und UDP im Internet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 5: Kommunikationssteuerungsschicht / Sitzungsschicht
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;(session layer): &lt;/b&gt;stellt Dienste zur Verf&amp;#252;gung, die es den 
+      kommunizierenden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Prozessen erlauben, ihren Dialog zu kontrollieren und zu synchronisieren.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 6: Darstellungsschicht (presentation layer):&lt;/b&gt; stellt 
+      Dienste zur
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Verf&amp;#252;gung, die die Darstellung von Daten in unterschiedlichen 
+      Repr&amp;#228;sentationen (z. B. zwischen verschiedenen Zeichencodierungen) 
+      umwandeln.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 7: Anwendungsschicht (application layer): &lt;/b&gt;implementiert 
+      die eigentliche Anwendungsfunktionalit&amp;#228;t.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>373</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Unterschied zwischen &lt;b&gt;Netzwerkanwendungen&lt;/b&gt; und&lt;b&gt; 
+      Protokollen der Anwendungsschicht&lt;/b&gt;? Nenne Beispiele!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die bekannteste &lt;b&gt;&lt;u&gt;Netzwerkanwendung&lt;/u&gt; &lt;/b&gt;ist das &lt;b&gt;WWW&lt;/b&gt;. 
+      Diese besteht aus: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) einem &lt;b&gt;Web-Browser &lt;/b&gt;als Benutzerschnittstelle, z. B. Netscape 
+      Navigator, Microsoft Internet Explorer, Opera, OmniWeb, Mozilla etc.,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;HTML (HyperText Markup Language),&lt;/b&gt; einem Standard f&amp;#252;r 
+      Dokumentenformate, damit der Browser die Dokumente anzeigen kann,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Web-Servern&lt;/b&gt;, die die Dokumente bereithalten, z. B. Apache-, 
+      Microsoft-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Netscape-Server, und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;HTTP (HyperText Transfer Protocol)&lt;/b&gt;, einem &lt;b&gt;&lt;u&gt;Protokoll der 
+      Anwendungsschicht&lt;/u&gt;&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Protokolle stellen also Kommunikationsrichtlinien von 
+      Netzwerkanwendungen dar.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>374</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das Client-Server-Modell!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Im &lt;b&gt;Client/Server-Modell &lt;/b&gt;werden Prozesse in zwei Gruppen 
+      eingeteilt. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Ein &lt;b&gt;Server&lt;/b&gt; ist ein Prozess, der einen bestimmten Dienst 
+      implementiert und bereitstellt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Ein &lt;b&gt;Client &lt;/b&gt;ist ein Prozess, der einen Dienst von einem Server 
+      anfordert,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      indem er ihm eine Anforderung sendet und dann auf die Antwort des Servers
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      wartet. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Anders ausgedr&amp;#252;ckt: Der Client ist eine Anwendung, die auf einer 
+      Anwendungsmaschine l&amp;#228;uft, Dienste beim Server anfordert und deren 
+      Ergebnisse vom Server zur&amp;#252;ck erh&amp;#228;lt. Zum Beispiel fordern Web-Clients, 
+      in der Regel implementiert in Web-Browsern, Dokumente beim Web-Server an 
+      und stellen diese f&amp;#252;r ihre Benutzer dar. Der Web-Server unterst&amp;#252;tzt das 
+      Abholen von Dokumenten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Client ist &amp;#252;blicherweise in die Anwendung eingebettet. Ein Web-Browser 
+      implementiert beispielsweise die Funktionalit&amp;#228;t von HTTP, die ein Client zur 
+      Kommunikation mit dem Web-Server ben&amp;#246;tigt, die sogenannte &lt;b&gt;Client-Seite 
+      von HTTP&lt;/b&gt;. Der Web-Server implementiert analog die &lt;b&gt;Server-Seite 
+      von HTTP&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>375</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein URL?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine &lt;b&gt;URL (Uniform Resource Locator)&lt;/b&gt; identifiziert eine Ressource 
+      (z. B. eine Webseite) auf eindeutige Weise.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine URL besteht aus drei Teilen: dem &lt;b&gt;Protoko&lt;/b&gt;ll, dem &lt;b&gt;DNS-Name&lt;/b&gt;n&lt;b&gt; 
+      oder&lt;/b&gt; der
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;IP-Adresse&lt;/b&gt; des Rechners (den eindeutigen Namen des Hosts), auf 
+      dem sich
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      die Seite befindet und einem &lt;b&gt;lokalen eindeutigen Namen&lt;/b&gt; der Seite. 
+      Dazu wird
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      das Namensschema &lt;b&gt;&amp;lt;protocol id&amp;gt;:&amp;lt;protocol specific address&amp;gt;&lt;/b&gt; 
+      verwendet, siehe Abbildung.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
 </flashcards>
