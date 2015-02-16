@@ -3,10 +3,12 @@ package jtabletest;
 public class TableTestData {
 
     private int id;
-    private boolean selected;
+    private String title;
 
-    public TableTestData(int id) {
+    public TableTestData(int id, String title) {
+        super();
         this.id = id;
+        this.title = title;
     }
 
     public int getId() {
@@ -17,12 +19,12 @@ public class TableTestData {
         this.id = id;
     }
 
-    public boolean isSelected() {
-        return selected;
+    public String getTitle() {
+        return title;
     }
 
-    public void setSelected(boolean selected) {
-        this.selected = selected;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
 }

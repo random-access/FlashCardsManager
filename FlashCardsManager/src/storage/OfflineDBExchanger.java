@@ -1,8 +1,7 @@
 package storage;
 
 import gui.helpers.IProgressPresenter;
-import importExport.XMLLabelFlashcardRelation;
-import importExport.XMLMedia;
+import importExport.*;
 
 import java.io.File;
 import java.sql.*;
@@ -13,7 +12,7 @@ import core.*;
 import exc.CustomErrorHandling;
 import exc.InvalidLengthException;
 
-public class DBExchanger {
+public class OfflineDBExchanger implements IDBExchanger, XMLDBExchanger {
 
 	private final String driver = "org.apache.derby.jdbc.EmbeddedDriver"; // db-driver
 	private final String protocol = "jdbc:derby:"; // database protocol
@@ -28,14 +27,15 @@ public class DBExchanger {
 	private final int maxVarcharLength = 32672;
 
 	private Connection conn; // connection
-	private ProjectsController ctl;
+	private OfflineProjectsController ctl;
 
-	public DBExchanger(String dbLocation, ProjectsController ctl) throws ClassNotFoundException {
+	public OfflineDBExchanger(String dbLocation, OfflineProjectsController ctl) throws ClassNotFoundException {
 		this.dbLocation = dbLocation;
 		this.ctl = ctl;
 		Class.forName(driver); // check if driver is reachable
 	}
 
+	@Override
 	// CREATE CONNECTION - Establish connection with database
 	public void createConnection() throws SQLException {
 		conn = DriverManager.getConnection(protocol + dbLocation + ";create=true");
@@ -49,6 +49,7 @@ public class DBExchanger {
 		}
 	}
 
+	@Override
 	// disconnect from database
 	public void closeConnection() {
 		try {
@@ -76,6 +77,7 @@ public class DBExchanger {
 		}
 	}
 
+	@Override
 	// CREATE TABLES if they don't exist yet
 	public void createTablesIfNotExisting() throws SQLException {
 		Statement st = conn.createStatement();
@@ -94,7 +96,7 @@ public class DBExchanger {
 						+ "QUESTION VARCHAR (" + maxVarcharLength + "), " + "ANSWER VARCHAR(" + maxVarcharLength + "), "
 						+ "CUSTOM_WIDTH_Q INT, " + "CUSTOM_WIDTH_A INT)");
 			st.execute("CREATE TABLE " + flashcardsTable + " (CARD_ID_PK INT PRIMARY KEY, "
-					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_FL REFERENCES PROJECTS(PROJ_ID_PK), " + "STACK INT NOT NULL,"
+					+ "PROJ_ID_FK INT CONSTRAINT PROJ_ID_FK_FL REFERENCES PROJECTS(PROJ_ID_PK), " + "STACK INT NOT NULL, "
 					+ "QUESTION VARCHAR (" + maxVarcharLength + "), " + "ANSWER VARCHAR(" + maxVarcharLength + "), "
 					+ "CUSTOM_WIDTH_Q INT, " + "CUSTOM_WIDTH_A INT)");
 			conn.commit();
@@ -134,8 +136,9 @@ public class DBExchanger {
 		st.close();
 	}
 
-	/***************************************** PROJECT QUERIES ****************************************************/
+	/*********************************** PROJECT QUERIES *********************************************/
 
+	@Override
 	// ADD PROJECT: insert project into table
 	public void addProject(LearningProject project) throws SQLException, InvalidLengthException {
 		if (project.getTitle().length() > maxShortString / 5) {
@@ -151,6 +154,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	// UPDATE PROJECT: update project
 	public void updateProject(LearningProject project) throws SQLException {
 		Statement st = conn.createStatement();
@@ -163,6 +167,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	public void deleteProject(LearningProject project) throws SQLException {
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
@@ -191,6 +196,7 @@ public class DBExchanger {
 		conn.commit();
 	}
 
+	@Override
 	public ArrayList<LearningProject> getAllProjects() throws SQLException {
 		ArrayList<LearningProject> projects = new ArrayList<LearningProject>();
 		Statement st = conn.createStatement();
@@ -207,6 +213,7 @@ public class DBExchanger {
 		return projects;
 	}
 
+	@Override
 	public int getMaxStack(LearningProject p) throws SQLException {
 		int maxStack = 0;
 		Statement st = conn.createStatement();
@@ -223,6 +230,7 @@ public class DBExchanger {
 		return maxStack;
 	}
 
+	@Override
 	public int getMinStack(LearningProject p) throws SQLException {
 		int minStack = 0;
 		Statement st = conn.createStatement();
@@ -239,14 +247,17 @@ public class DBExchanger {
 		return minStack;
 	}
 
-	/***************************************** LABEL QUERIES ****************************************************/
+	/************************************* LABEL QUERIES **********************************************/
 
+	@Override
 	public ArrayList<Label> getAllLabels(LearningProject p) throws SQLException {
 		ArrayList<Label> labels = new ArrayList<Label>();
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
-			System.out.println("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId());
-		st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId());
+			System.out.println("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId()
+					+ "ORDER BY LABEL_NAME ASC");
+		st.execute("SELECT LABEL_ID_PK, LABEL_NAME FROM " + labelsTable + " WHERE PROJ_ID_FK = " + p.getId()
+				+ "ORDER BY LABEL_NAME ASC");
 		conn.commit();
 		ResultSet res = st.getResultSet();
 		while (res.next()) {
@@ -257,6 +268,7 @@ public class DBExchanger {
 		return labels;
 	}
 
+	@Override
 	public ArrayList<Label> getAllLabels(FlashCard f) throws SQLException {
 		ArrayList<Label> labels = new ArrayList<Label>();
 		Statement st = conn.createStatement();
@@ -278,6 +290,7 @@ public class DBExchanger {
 		return labels;
 	}
 
+	@Override
 	public void addLabelToProject(Label l) throws SQLException, InvalidLengthException {
 		if (l.getName().length() > maxShortString / 5) {
 			throw new InvalidLengthException();
@@ -292,6 +305,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	public void addLabelToFlashcard(Label l, FlashCard f) throws SQLException {
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
@@ -303,6 +317,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	public void updateLabelFromProject(Label l) throws SQLException {
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
@@ -314,6 +329,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	public void deleteLabelFromFlashCard(Label l, FlashCard f) throws SQLException {
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
@@ -325,6 +341,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	public void deleteLabelFromProject(Label l) throws SQLException {
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
@@ -337,6 +354,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	public int getMaxStack(Label l) throws SQLException {
 		int maxStack = 0;
 		Statement st = conn.createStatement();
@@ -355,6 +373,7 @@ public class DBExchanger {
 		return maxStack;
 	}
 
+	@Override
 	public int getMinStack(Label l) throws SQLException {
 		int minStack = 0;
 		Statement st = conn.createStatement();
@@ -373,6 +392,7 @@ public class DBExchanger {
 		return minStack;
 	}
 
+	@Override
 	public ArrayList<XMLLabelFlashcardRelation> getXMLLfRelations(FlashCard f) throws SQLException {
 		ArrayList<XMLLabelFlashcardRelation> lfrelations = new ArrayList<XMLLabelFlashcardRelation>();
 		Statement st = conn.createStatement();
@@ -392,7 +412,8 @@ public class DBExchanger {
 		return lfrelations;
 	}
 
-	/***************************************** FLASHCARD QUERIES ****************************************************/
+	/************************************* FLASHCARD QUERIES **********************************************/
+	@Override
 	// ADD FLASHCARD: insert flashcard into table
 	public void addFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
@@ -410,6 +431,7 @@ public class DBExchanger {
 		updatePathToPics(card);
 	}
 
+	@Override
 	// UPDATE FLASHCARD: insert flashcard into table
 	public void updateFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
@@ -440,6 +462,7 @@ public class DBExchanger {
 		}
 	}
 
+	@Override
 	public void deleteFlashcard(FlashCard card) throws SQLException {
 		Statement st = conn.createStatement();
 		if (StartApp.DEBUG)
@@ -454,6 +477,7 @@ public class DBExchanger {
 		conn.commit();
 	}
 
+	@Override
 	public ArrayList<FlashCard> getAllCards(LearningProject proj, IProgressPresenter p) throws SQLException {
 		ArrayList<FlashCard> cards = new ArrayList<FlashCard>();
 		int noOfCards = this.countRows(proj);
@@ -468,19 +492,23 @@ public class DBExchanger {
 		st.execute("SELECT * FROM " + flashcardsTable + " WHERE PROJ_ID_FK = " + proj.getId());
 		conn.commit();
 		ResultSet res = st.getResultSet();
+		int cardCount = 0;
 		while (res.next()) {
 			FlashCard f = new FlashCard(res.getInt(1), proj, res.getInt(3), res.getString(4).replaceAll("&apos;", "\'"), res
 					.getString(5).replaceAll("&apos;", "\'"), null, null, res.getInt(6), res.getInt(7));
 			f.setPathToQuestionPic(getPathToPic(f, PicType.QUESTION));
 			f.setPathToAnswerPic(getPathToPic(f, PicType.ANSWER));
 			cards.add(f);
-			if (p != null)
-				p.changeProgress(Math.min(p.getProgress() + 100 / noOfCards, 100));
+			if (p != null) {
+				cardCount++;
+				p.changeProgress((int) Math.min(((double) cardCount / noOfCards) * 100, 100));
+			}
 		}
 		res.close();
 		return cards;
 	}
 
+	@Override
 	// GET PIC as XMLMedia
 	public XMLMedia getPic(FlashCard card, PicType type) throws SQLException {
 		XMLMedia media = new XMLMedia();
@@ -502,6 +530,7 @@ public class DBExchanger {
 		return null;
 	}
 
+	@Override
 	// GET PATH TO PIC: get picture of flashcard from DB
 	public String getPathToPic(FlashCard f, PicType type) throws SQLException {
 		Statement st = conn.createStatement();
@@ -521,6 +550,7 @@ public class DBExchanger {
 		return path;
 	}
 
+	@Override
 	// SET PATH TO PIC
 	public void setPathToPic(FlashCard f, PicType type) throws SQLException {
 		deletePathToPic(f, type);
@@ -543,6 +573,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	// DELETE PATH TO PIC
 	public void deletePathToPic(FlashCard f, PicType type) throws SQLException {
 		Statement st = conn.createStatement();
@@ -555,6 +586,7 @@ public class DBExchanger {
 		st.close();
 	}
 
+	@Override
 	// COUNT ROWS: returns the number of flashcards belonging to 1 project
 	public int countRows(LearningProject p) throws SQLException {
 		int count = 0;
@@ -572,8 +604,9 @@ public class DBExchanger {
 		return count;
 	}
 
-	// COUNT ROWS: returns the number of flashcards belonging to 1 project and 1
-	// stack
+	@Override
+	// COUNT ROWS: returns the number of flashcards belonging to 1 project
+	// and 1 stack
 	public int countRows(LearningProject proj, int stack) throws SQLException {
 		int count = 0;
 		Statement st = conn.createStatement();
@@ -592,6 +625,26 @@ public class DBExchanger {
 		return count;
 	}
 
+	@Override
+	// COUNT ROWS: returns the number of flashcards belonging to 1 project
+	// an 1 stack
+	public int countRows(Label l) throws SQLException {
+		int count = 0;
+		Statement st = conn.createStatement();
+		if (StartApp.DEBUG)
+			System.out.println("SELECT COUNT (*) FROM " + labelsFlashcardsTable + " where LABEL_ID_FK = " + l.getId());
+		st.executeQuery("SELECT COUNT (*) FROM " + labelsFlashcardsTable + " where LABEL_ID_FK = " + l.getId());
+		conn.commit();
+		ResultSet rs = st.getResultSet();
+		if (rs.next()) {
+			count = rs.getInt(1);
+		}
+		rs.close();
+		st.close();
+		return count;
+	}
+
+	@Override
 	public int getCardNumberInProject(FlashCard f) throws SQLException {
 		int number = 0;
 		Statement st = conn.createStatement();
@@ -610,8 +663,9 @@ public class DBExchanger {
 		return number;
 	}
 
-	/***************************************** OTHER QUERIES ****************************************************/
+	/************************************ OTHER QUERIES ********************************************/
 
+	@Override
 	public int nextId(TableType type) throws SQLException {
 		String table = getTableName(type);
 		String primaryKey = getPrimaryKey(type);

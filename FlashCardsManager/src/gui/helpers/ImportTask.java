@@ -15,15 +15,16 @@ import javax.xml.stream.XMLStreamException;
 import org.apache.derby.iapi.services.io.ArrayUtil;
 
 import utils.FileUtils;
-import core.ProjectsController;
+import core.OfflineProjectsController;
+import core.IProjectsController;
 
 public class ImportTask extends SwingWorker<Void, Void> implements IProgressPresenter {
 	String pathToImport;
 	ProgressDialog dialog;
 	MainWindow mw;
-	ProjectsController ctl;
+	IProjectsController ctl;
 
-	public ImportTask(String pathToImport, ProgressDialog dialog, MainWindow mw, ProjectsController ctl) {
+	public ImportTask(String pathToImport, ProgressDialog dialog, MainWindow mw, IProjectsController ctl) {
 		this.pathToImport = pathToImport;
 		this.dialog = dialog;
 		this.mw = mw;
@@ -52,7 +53,7 @@ public class ImportTask extends SwingWorker<Void, Void> implements IProgressPres
 			if (FileUtils.directoryContainsCertainFines(pathToImport,
 					new ArrayList<String>(ArrayUtil.asReadOnlyList(new String[] { "collection.anki2" })))) {
 				System.out.println("Recognized ANKI format...");
-				ctl.importANKI(pathToImport, this);
+				((OfflineProjectsController) ctl).importANKI(pathToImport, this);
 			}
 
 			if (FileUtils.directoryContainsCertainFines(
@@ -60,7 +61,7 @@ public class ImportTask extends SwingWorker<Void, Void> implements IProgressPres
 					new ArrayList<String>(ArrayUtil
 							.asReadOnlyList(new String[] { "flashcards.xml", "media.xml", "projects.xml" })))) {
 				System.out.println("Recognized FlashCard (TM) format...");
-				ctl.importProjects(pathToImport, this);
+				((OfflineProjectsController) ctl).importProjects(pathToImport, this);
 			}
 
 		} catch (SQLException sqle) {

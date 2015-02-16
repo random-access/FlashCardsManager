@@ -10,8 +10,9 @@ import javax.swing.tree.*;
 import tests.JComponentTestFrame;
 import core.IHasStatus;
 import core.Status;
+import dndTest.TestdataDropTargetListener;
 
-public class JTreeTest extends JPanel {
+public class JTreeTestPanel extends JPanel {
 
 	private TestLearningProject proj;
 	private JTree tree;
@@ -20,7 +21,7 @@ public class JTreeTest extends JPanel {
 	private JButton btnAddLabel, btnRemoveLabel;
 	private JPanel pnlControls;
 
-	public JTreeTest() {
+	public JTreeTestPanel() {
 		labels = createTestingLabelsList();
 		proj = new TestLearningProject(1, "TestProjekt", Status.YELLOW);
 		DefaultMutableTreeNode topNode = new DefaultMutableTreeNode(proj);
@@ -31,6 +32,7 @@ public class JTreeTest extends JPanel {
 		tree.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
 		tree.setRowHeight(25);
 		tree.setCellRenderer(new MyTreeCellRenderer());
+		tree.setDropMode(DropMode.ON);
 		this.setLayout(new BorderLayout());
 		this.add(tree, BorderLayout.CENTER);
 
@@ -44,7 +46,7 @@ public class JTreeTest extends JPanel {
 	}
 
 	private void setListeners() {
-
+		new TestdataDropTargetListener(tree);
 	}
 
 	private void createTreeNodes(DefaultMutableTreeNode topNode) {
@@ -79,7 +81,7 @@ public class JTreeTest extends JPanel {
 	public static void main(String[] args) {
 		TestLabel l = new TestLabel(1, "Test", Status.RED);
 		System.out.println(l instanceof IHasStatus);
-		new JComponentTestFrame(new JTreeTest());
+		new JComponentTestFrame(new JTreeTestPanel());
 	}
 
 }

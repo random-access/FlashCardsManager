@@ -320,10 +320,16 @@ public class FlashcardEditorDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (existingCard != null) {
-					saveExistingCardToDatabase();
-				} else {
-					saveNewCardToDatabase();
+				try {
+					project.loadLabelsAndFlashcards(null);
+					if (existingCard != null) {
+						saveExistingCardToDatabase();
+					} else {
+						saveNewCardToDatabase();
+					}
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 				FlashcardEditorDialog.this.dispose();
 			}
@@ -334,11 +340,15 @@ public class FlashcardEditorDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				saveNewCardToDatabase();
 				try {
+					project.loadLabelsAndFlashcards(null);
+					saveNewCardToDatabase();
 					resetEditor();
 				} catch (IOException ioe) {
 					CustomErrorHandling.showInternalError(FlashcardEditorDialog.this, ioe);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 
 			}
@@ -379,6 +389,12 @@ public class FlashcardEditorDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				try {
+					project.loadLabels();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				AddLabelToCardDialog d;
 				try {
 					d = new AddLabelToCardDialog(FlashcardEditorDialog.this, project, existingCard);
@@ -400,6 +416,7 @@ public class FlashcardEditorDialog extends JDialog {
 		btnFlip.setToolTipText("Antwort zeigen");
 		setPicButtons();
 		this.revalidate();
+		this.repaint();
 	}
 
 	private void loadComponentCenter(Point lastLocation) {
@@ -427,7 +444,7 @@ public class FlashcardEditorDialog extends JDialog {
 			existingCard.update();
 			existingCard.synchronizeLabels(labels);
 			if (editFrame != null) {
-				editFrame.updateView();
+				editFrame.updateTableView();
 			}
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, sqle);
@@ -444,7 +461,7 @@ public class FlashcardEditorDialog extends JDialog {
 			newCard.synchronizeLabels(labels);
 			projPnl.getMainWindow().updateProjectStatus(project);
 			if (editFrame != null) {
-				editFrame.updateView();
+				editFrame.updateTableView();
 			}
 		} catch (SQLException sqle) {
 			CustomErrorHandling.showDatabaseError(FlashcardEditorDialog.this, sqle);

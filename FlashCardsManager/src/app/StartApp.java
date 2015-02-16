@@ -16,7 +16,7 @@ import utils.FileUtils;
 import utils.Logger;
 import xml.Settings;
 import xml.XMLSettingsExchanger;
-import core.ProjectsController;
+import core.OfflineProjectsController;
 
 public class StartApp {
 
@@ -44,7 +44,7 @@ public class StartApp {
             Logger.init(5);
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             initializeSettings();
-            final ProjectsController ctl = new ProjectsController(currentSettings.getPathToDatabase(), PATH_TO_MEDIA);
+            final OfflineProjectsController ctl = new OfflineProjectsController(currentSettings.getPathToDatabase(), PATH_TO_MEDIA);
             new MainWindow(ctl, currentSettings.getMajorVersion(), currentSettings.getMinorVersion(),
                     currentSettings.getPatchLevel());
 

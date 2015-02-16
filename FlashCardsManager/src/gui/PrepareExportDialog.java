@@ -11,21 +11,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 import utils.FileUtils;
 import core.LearningProject;
-import core.ProjectsController;
+import core.IProjectsController;
 import exc.CustomErrorHandling;
 import exc.CustomInfoHandling;
 import gui.helpers.ExportTask;
@@ -33,7 +23,7 @@ import gui.helpers.ProgressDialog;
 
 @SuppressWarnings("serial")
 public class PrepareExportDialog extends JDialog {
-	private ProjectsController ctl;
+	private IProjectsController ctl;
 	private MainWindow owner;
 	private ArrayList<LearningProject> allProjects;
 
@@ -45,7 +35,7 @@ public class PrepareExportDialog extends JDialog {
 
 	// private boolean delete = false;
 
-	PrepareExportDialog(MainWindow owner, ProjectsController ctl) {
+	PrepareExportDialog(MainWindow owner, IProjectsController ctl) {
 		super(owner, false);
 		this.owner = owner;
 		this.ctl = ctl;

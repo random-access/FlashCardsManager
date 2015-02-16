@@ -20,7 +20,7 @@ import core.*;
 
 public class ANKIImporter {
 
-	ProjectsController ctl;
+	OfflineProjectsController ctl;
 	String pathToDatabase;
 	String pathToMediaFolder;
 	IProgressPresenter p;
@@ -30,7 +30,7 @@ public class ANKIImporter {
 
 	Connection conn;
 
-	public ANKIImporter(String projectName, String pathToDatabase, ProjectsController ctl, IProgressPresenter p) {
+	public ANKIImporter(String projectName, String pathToDatabase, OfflineProjectsController ctl, IProgressPresenter p) {
 		this.ctl = ctl;
 		this.pathToDatabase = pathToDatabase;
 
@@ -273,7 +273,7 @@ public class ANKIImporter {
 		try {
 			currentSettings = XMLSettingsExchanger.readConfig(DEFAULT_SETTINGS_PATH);
 
-			anki = new ANKIImporter("TestImportANKI", "resources/ANKITestFolder/1895/", new ProjectsController(
+			anki = new ANKIImporter("TestImportANKI", "resources/ANKITestFolder/1895/", new OfflineProjectsController(
 					currentSettings.getPathToDatabase(), PATH_TO_MEDIA), null);
 		} catch (NumberFormatException | XMLStreamException | IOException | SQLException | ClassNotFoundException e1) {
 			// TODO Auto-generated catch block

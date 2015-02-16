@@ -4,6 +4,7 @@ import exc.InvalidLengthException;
 import exc.InvalidValueException;
 import gui.helpers.IProgressPresenter;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.*;
@@ -14,7 +15,7 @@ import storage.PicType;
 import core.*;
 
 public class ProjectImporter {
-	ProjectsController ctl;
+	OfflineProjectsController ctl;
 	String pathToImport;
 	String pathToImportMediaFolder;
 	String pathToMediaFolder;
@@ -28,7 +29,7 @@ public class ProjectImporter {
 	ArrayList<XMLLabelFlashcardRelation> xmlLfRels;
 	Map<Integer, Integer> labelIdConversionMap = new HashMap<Integer, Integer>();
 
-	public ProjectImporter(String pathToImport, String pathToMediaFolder, ProjectsController ctl, IProgressPresenter p) {
+	public ProjectImporter(String pathToImport, String pathToMediaFolder, OfflineProjectsController ctl, IProgressPresenter p) {
 		this.ctl = ctl;
 		this.pathToImport = pathToImport;
 		this.pathToMediaFolder = pathToMediaFolder;
@@ -116,13 +117,21 @@ public class ProjectImporter {
 		XMLExchanger ex = new XMLExchanger();
 		xmlProjects = ex.readProjects(pathToImport + "/" + XMLFiles.LEARNING_PROJECTS.getName());
 		p.changeProgress(20);
-		xmlLabels = ex.readLabels(pathToImport + "/" + XMLFiles.LABELS.getName());
+		if (new File(pathToImport + "/" + XMLFiles.LABELS.getName()).exists()) {
+			xmlLabels = ex.readLabels(pathToImport + "/" + XMLFiles.LABELS.getName());
+		} else {
+			xmlLabels = new ArrayList<XMLLabel>();
+		}
 		p.changeProgress(40);
 		xmlMedia = ex.readMedia(pathToImport + "/" + XMLFiles.MEDIA.getName());
 		p.changeProgress(60);
 		xmlFlashCards = ex.readFlashcards(pathToImport + "/" + XMLFiles.FLASHCARDS.getName());
 		p.changeProgress(80);
-		xmlLfRels = ex.readLabelFlashcardRelations(pathToImport + "/" + XMLFiles.LABELS_FLASHCARDS.getName());
+		if (new File(pathToImport + "/" + XMLFiles.LABELS_FLASHCARDS.getName()).exists()) {
+			xmlLfRels = ex.readLabelFlashcardRelations(pathToImport + "/" + XMLFiles.LABELS_FLASHCARDS.getName());
+		} else {
+			xmlLfRels = new ArrayList<XMLLabelFlashcardRelation>();
+		}
 		p.changeProgress(100);
 	}
 }

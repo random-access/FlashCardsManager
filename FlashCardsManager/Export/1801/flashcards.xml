@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flashcards>
 	<flashcard>
-		<card_id>22</card_id>
-		<proj_id>3</proj_id>
+		<card_id>53</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -40,8 +40,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>23</card_id>
-		<proj_id>3</proj_id>
+		<card_id>54</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -78,8 +78,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>24</card_id>
-		<proj_id>3</proj_id>
+		<card_id>55</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -135,8 +135,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>25</card_id>
-		<proj_id>3</proj_id>
+		<card_id>56</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -174,9 +174,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>26</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>57</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -217,9 +217,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>27</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>58</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -250,8 +250,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>28</card_id>
-		<proj_id>3</proj_id>
+		<card_id>59</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -304,8 +304,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>29</card_id>
-		<proj_id>3</proj_id>
+		<card_id>60</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -335,8 +335,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>57</card_id>
-		<proj_id>3</proj_id>
+		<card_id>61</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -366,8 +366,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>58</card_id>
-		<proj_id>3</proj_id>
+		<card_id>62</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -404,8 +404,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>59</card_id>
-		<proj_id>3</proj_id>
+		<card_id>63</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -439,8 +439,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>60</card_id>
-		<proj_id>3</proj_id>
+		<card_id>64</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -468,9 +468,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>61</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>65</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -515,8 +515,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>62</card_id>
-		<proj_id>3</proj_id>
+		<card_id>66</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -559,8 +559,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>63</card_id>
-		<proj_id>3</proj_id>
+		<card_id>67</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -606,8 +606,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>64</card_id>
-		<proj_id>3</proj_id>
+		<card_id>68</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -635,9 +635,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>65</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>69</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -703,8 +703,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>66</card_id>
-		<proj_id>3</proj_id>
+		<card_id>70</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -758,8 +758,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>67</card_id>
-		<proj_id>3</proj_id>
+		<card_id>71</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -803,8 +803,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>68</card_id>
-		<proj_id>3</proj_id>
+		<card_id>72</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -837,8 +837,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>69</card_id>
-		<proj_id>3</proj_id>
+		<card_id>73</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -870,8 +870,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>70</card_id>
-		<proj_id>3</proj_id>
+		<card_id>74</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -902,8 +902,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>71</card_id>
-		<proj_id>3</proj_id>
+		<card_id>75</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -943,9 +943,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>72</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>76</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -978,8 +978,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>167</card_id>
-		<proj_id>3</proj_id>
+		<card_id>77</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1025,9 +1025,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>168</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>78</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1054,9 +1054,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>169</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>79</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1092,8 +1092,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>170</card_id>
-		<proj_id>3</proj_id>
+		<card_id>80</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1124,8 +1124,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>171</card_id>
-		<proj_id>3</proj_id>
+		<card_id>81</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1156,8 +1156,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>172</card_id>
-		<proj_id>3</proj_id>
+		<card_id>82</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1199,8 +1199,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>173</card_id>
-		<proj_id>3</proj_id>
+		<card_id>83</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1251,9 +1251,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>174</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>84</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1290,8 +1290,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>175</card_id>
-		<proj_id>3</proj_id>
+		<card_id>85</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1320,9 +1320,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>176</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>86</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -1388,8 +1388,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>177</card_id>
-		<proj_id>3</proj_id>
+		<card_id>87</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1436,8 +1436,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>178</card_id>
-		<proj_id>3</proj_id>
+		<card_id>88</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1457,7 +1457,7 @@
   &lt;body&gt;
     &lt;p style="margin-top: 0"&gt;
       1.) Die CPU erh&amp;#228;lt &amp;#252;ber ihren &lt;b&gt;Unterbrechungseingang&lt;/b&gt; ein 
-      bin&amp;#228;res Signal f&amp;#252;r eine Unterbrechung von einem Ger&amp;#228;t
+      bin&amp;#228;res Signal f&amp;#252;r eine Unterbrechung
     &lt;/p&gt;
     &lt;p style="margin-top: 0"&gt;
       
@@ -1519,13 +1519,13 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </answer>
-		<custom_width_question>450</custom_width_question>
-		<custom_width_answer>450</custom_width_answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>179</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>89</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -1568,8 +1568,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>180</card_id>
-		<proj_id>3</proj_id>
+		<card_id>90</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1610,8 +1610,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>181</card_id>
-		<proj_id>3</proj_id>
+		<card_id>91</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1672,9 +1672,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>182</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>92</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1721,8 +1721,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>183</card_id>
-		<proj_id>3</proj_id>
+		<card_id>93</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1783,9 +1783,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>184</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>94</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1825,8 +1825,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>185</card_id>
-		<proj_id>3</proj_id>
+		<card_id>95</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1879,8 +1879,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>186</card_id>
-		<proj_id>3</proj_id>
+		<card_id>96</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1951,8 +1951,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>187</card_id>
-		<proj_id>3</proj_id>
+		<card_id>97</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2018,8 +2018,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>188</card_id>
-		<proj_id>3</proj_id>
+		<card_id>98</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2047,8 +2047,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>189</card_id>
-		<proj_id>3</proj_id>
+		<card_id>99</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2113,8 +2113,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>190</card_id>
-		<proj_id>3</proj_id>
+		<card_id>100</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2152,9 +2152,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>191</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>101</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -2219,9 +2219,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>192</card_id>
-		<proj_id>3</proj_id>
-		<stack>1</stack>
+		<card_id>102</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -2251,8 +2251,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>193</card_id>
-		<proj_id>3</proj_id>
+		<card_id>103</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2284,8 +2284,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>194</card_id>
-		<proj_id>3</proj_id>
+		<card_id>104</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2390,8 +2390,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>195</card_id>
-		<proj_id>3</proj_id>
+		<card_id>105</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2437,8 +2437,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>196</card_id>
-		<proj_id>3</proj_id>
+		<card_id>1</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2466,8 +2466,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>197</card_id>
-		<proj_id>3</proj_id>
+		<card_id>2</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2555,8 +2555,8 @@
 		<custom_width_answer>550</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>198</card_id>
-		<proj_id>3</proj_id>
+		<card_id>119</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2606,8 +2606,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>199</card_id>
-		<proj_id>3</proj_id>
+		<card_id>120</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2667,8 +2667,8 @@
 		<custom_width_answer>500</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>200</card_id>
-		<proj_id>3</proj_id>
+		<card_id>121</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2712,8 +2712,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>201</card_id>
-		<proj_id>3</proj_id>
+		<card_id>122</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2774,8 +2774,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>202</card_id>
-		<proj_id>3</proj_id>
+		<card_id>123</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2822,8 +2822,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>203</card_id>
-		<proj_id>3</proj_id>
+		<card_id>124</card_id>
+		<proj_id>5</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2852,6 +2852,4420 @@
       Da sich mit g&amp;#228;ngigen Multitaskingsystemen diese Anforderungen nicht 
       erf&amp;#252;llen lassen, werden Realzeitsysteme anders aufgebaut, z.B. werden 
       gro&amp;#223;e Teile der Software in ROMs untergebracht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>235</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist die Aufgabe eines Langzeit-Schedulers?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Langzeit-Scheduler entscheidet, welche Prozesse ausgelagert werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; Das Aus- und Einlagern wird auch als &lt;b&gt;&lt;i&gt;swapping&lt;/i&gt;&lt;/b&gt; 
+      bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>236</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was bedeutet externe Fragmentierung im Hauptspeicher? Nenne Strategien 
+      zu deren Verringerung bzw. Vermeidung!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da sich die Menge der existierenden Prozesse st&amp;#228;ndig &amp;#228;ndert, entstehen 
+      L&amp;#252;cken zwischen den Adressr&amp;#228;umen der Prozesse im Hauptspeicher. Dieses 
+      Ph&amp;#228;nomen nennt man &lt;b&gt;&lt;i&gt;externe Fragmentierung&lt;/i&gt;&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;u&gt;Strategien zur Verringerung externer Fragmentierung&lt;/u&gt;: &lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&lt;i&gt;Kompaktifizierung:&lt;/i&gt;&lt;/b&gt; gelegentliches Zusammenschieben der 
+      Adressr&amp;#228;ume im HSP -&amp;gt; aufw&amp;#228;ndig
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&lt;i&gt;Segmentation:&lt;/i&gt;&lt;/b&gt; Aufgabe der Forderung nach einem 
+      zusammenh&amp;#228;ngenden Adressraum, stattdessen Zuweisung mehrerer (u.U. 
+      unterschiedlich langer) Segmente an einen Prozess
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;&lt;i&gt;Paging: &lt;/i&gt;&lt;/b&gt;Der Hauptspeicher wird in gleich gro&amp;#223;e St&amp;#252;cke 
+      aufgeteilt, jeder Prozess erh&amp;#228;lt so viele dieser St&amp;#252;cke wie n&amp;#246;tig. 
+      Dadurch wird externe Fragmentierung vollst&amp;#228;ndig vermieden, allerdings 
+      kommt es stattdessen zu &lt;b&gt;&lt;i&gt;interner Fragmentierung&lt;/i&gt;&lt;/b&gt;, da ein 
+      Prozess nicht unbedingt x volle St&amp;#252;cke an Speicherplatz braucht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>237</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie genau funktioniert &lt;b&gt;&lt;i&gt;paging&lt;/i&gt;&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der logische Speicher (Speicher aus Benutzer-/Programmierersicht) wird 
+      in gleichgro&amp;#223;e St&amp;#252;cke aufgeteilt, die &lt;b&gt;&lt;i&gt;Seiten (pages)&lt;/i&gt;&lt;/b&gt; 
+      genannt werden. Der physische Speicher wird in &lt;b&gt;&lt;i&gt;Seitenrahmen 
+      (frames)&lt;/i&gt;&lt;/b&gt; aufgeteilt. Eine Seite passt genau in einen 
+      Seitenrahmen. Die &lt;b&gt;&lt;i&gt;Seitentabelle (page table)&lt;/i&gt;&lt;/b&gt; enth&amp;#228;lt die 
+      Zuordnung von Seiten zu Seitenrahmen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei der &lt;b&gt;&lt;i&gt;Adressierung&lt;/i&gt;&lt;/b&gt; werden die &lt;i&gt;h&amp;#246;heren Stellen &lt;/i&gt;als 
+      Index f&amp;#252;r die Seitentabelle verwendet, die&lt;i&gt; niedrigeren Stellen&lt;/i&gt; 
+      werden 1:1 an die in der Seitentabelle angegebene Adresse angeh&amp;#228;ngt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; die Seitentabelle ist ein Teil des Prozesskontextes!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>238</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welcher Vorteil ergibt sich bei Aufteilung des Hauptspeichers in Seiten 
+      bzw. Segmente noch au&amp;#223;er der Verringerung der externen Fragmentierung?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Man kann einem Prozess einen &amp;quot;&amp;#246;ffentlichen&amp;quot; Speicherbereich, dh. einen 
+      Speicherbereich, den er sich mit anderen Prozessen teilt, zuteilen. 
+      Diese Speicherbereiche kann man zur Kommunikation zwischen Prozessen 
+      oder zum Datenaustausch nutzen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#214;ffentliche Speicherbereiche kann man ganz einfach kennzeichnen, indem 
+      man bei jedem Segment bzw. jeder Seite vermerkt, welche Prozesse 
+      Schreib- oder Leserechte darauf haben.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; nat&amp;#252;rlich ben&amp;#246;tigt jeder Prozess auch ein eigenes Datensegment und 
+      Stacksegment
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>239</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das &lt;b&gt;Konzept des virtuellen Speichers&lt;/b&gt;! Was versteht man 
+      unter dem Begriff &lt;b&gt;&lt;i&gt;&amp;quot;Seitenfehler&amp;quot;&lt;/i&gt;&lt;/b&gt;? Was ist &lt;b&gt;&lt;i&gt;&amp;quot;demand 
+      paging&amp;quot;&lt;/i&gt;&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Konzept des virtuellen Speichers &lt;b&gt;kombiniert zwei Ans&amp;#228;tze&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Die &lt;b&gt;&lt;i&gt;Einteilung&lt;/i&gt;&lt;/b&gt; des physischen Speichers &lt;b&gt;&lt;i&gt;in Seiten&lt;/i&gt;&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - Die Idee,&lt;b&gt;&lt;i&gt; nur die aktuell ben&amp;#246;tigten Informationen&lt;/i&gt;&lt;/b&gt; 
+      im Hauptspeicher zu halten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Vorteile&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Es k&amp;#246;nnen beliebig gro&amp;#223;e Adressr&amp;#228;ume angesprochen 
+      werden, ohne auf physische Grenzen achten zu m&amp;#252;ssen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Ein bereiter Prozess kann rechnend gemacht werden, auch wenn sich 
+      nicht alle seine Seiten im Hauptspeicher befinden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Als &lt;b&gt;&lt;i&gt;Seitenfehler &lt;/i&gt;&lt;/b&gt;bezeichnet man einen Zugriff auf eine 
+      Seite, die nicht im Hauptspeicher steht - in diesem Fall wird eine 
+      Hardware-Unterbrechung ausgel&amp;#246;st und die Seite wird von der Festplatte 
+      nachgeladen. Diese Technik nennt man &lt;b&gt;&lt;i&gt;demand paging.
+&lt;/i&gt;&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Auslagern von Seiten, wenn der HSP voll ist, erfolgt nach 
+      verschiedenen Strategien, z.B. &lt;i&gt;&lt;b&gt;LRU (last recently used)&lt;/b&gt;&lt;/i&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>240</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Buddy-Strategie von Linux!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      F&amp;#252;r den physischen Speicher gibt es einen Seitenallokierer, der auch
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bereiche von aufeinander folgenden Seitenrahmen bereitstellen kann. Der 
+      Hauptspeicher besteht aus zusammenh&amp;#228;ngenden St&amp;#252;cken, die jeweils eine 
+      Zweierpotenz viele Seiten enthalten. Ein St&amp;#252;ck ist entweder belegt oder 
+      frei. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn der Allokierer einen zusammenh&amp;#228;ngenden Bereich einer bestimmten 
+      L&amp;#228;nge ben&amp;#246;tigt, nimmt er das kleinste freie St&amp;#252;ck, das 
+      mindestens die erforderliche L&amp;#228;nge aufweist. Wenn es mehr als 
+      doppelt so lang ist wie der ben&amp;#246;tigte Bereich, so wird es halbiert; das 
+      eine halbe St&amp;#252;ck wird benutzt, das andere &amp;#8212; sein buddy 5 &amp;#8212; bleibt frei.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wann immer ein Prozess terminiert und dadurch zwei buddies frei werden, 
+      so werden sie wieder verschmolzen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>241</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wof&amp;#252;r braucht man Prozess-Synchronisation?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um den Zugriff auf gemeinsame Variablen in kritischen Bereichen zu 
+      reglementieren, sodass es zu keinen Fehlern aufgrund der Reihenfolge der 
+      ausgef&amp;#252;hrten Befehle kommt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Synchronisationsfehler k&amp;#246;nnen sowohl bei Einprozessorsystemen, als auch 
+      bei Multiprozessorsystemen aufgrund von Wettkampfbedingungen (race 
+      conditons) auftreten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>242</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 2 M&amp;#246;glichkeiten, Prozesse zu synchronisieren!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Synchronisation durch eine Synchronisationsvariable
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Synchronisation mittels Semaphoren
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>243</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert die Prozesssynchronisation mittels einer gemeinsamen 
+      Variablen? Welchen Nachteil weist diese L&amp;#246;sung auf?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;u&gt;Nachteile:
+&lt;/u&gt;&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Beide Prozesse verbrauchen wertvolle CPU-Zeit, w&amp;#228;hrend sie in ihren 
+      while-Schleifen warten. Ein solches &lt;b&gt;&lt;i&gt;gesch&amp;#228;ftiges Warten (busy 
+      waiting)&lt;/i&gt;&lt;/b&gt; ist unerw&amp;#252;nscht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Die beiden Prozesse k&amp;#246;nnen nur abwechselnd in ihre kritischen 
+      Abschnitte eintreten. wenn einer von ihnen innerhalb des kritischen 
+      Abschnitts beendet werden sollte, kann der andere nie wieder den 
+      kritischen Abschnitt betreten.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>244</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert die Synchronisation mit Semaphoren?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Prinzip der Semaphore wurde von &lt;b&gt;&lt;i&gt;Dijkstra &lt;/i&gt;&lt;/b&gt;zur L&amp;#246;sung 
+      von Problemen entwickelt, bei dene mehrere Prozesse ein Betriebsmittel 
+      belegen wollen, von dem insgesamt n St&amp;#252;ck zur Verf&amp;#252;gung stehen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf einem Semaphor S sind zwei Operationen definiert, &lt;b&gt;&lt;i&gt;down&lt;/i&gt;&lt;/b&gt; 
+      und &lt;b&gt;&lt;i&gt;up&lt;/i&gt;&lt;/b&gt;. Wenn ein Prozess ein Betriebsmittel benutzen will, 
+      ruft er die Operation down auf, will er es wieder freigeben, ruft er die 
+      Operation up auf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; die Operationen down und up enthalten selbst kritische Abschnitte 
+      und m&amp;#252;ssen daher im Betriebssystem so implementiert werden, dass sie in 
+      diesen nicht unterbrochen werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>245</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie nennt man Operationen, die nicht unterbrochen werden d&amp;#252;rfen noch?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Atomare Operationen / unteilbare Operationen
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>246</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe ein bekanntes Problem, bei dem mehrere Semaphore gebraucht 
+      werden und ein Zugriff auf eine Betriebsmittelanzahl &amp;gt; 1 geregelt werden 
+      muss!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Beispiel: Erzeuger-Verbraucher-Problem
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; down(Frei) bzw. down(Belegt) darf nicht mit down(Zugriff) vertauscht 
+      werden, da es sonst zu einer Verklemmung kommen kann.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>9</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das &lt;b&gt;&lt;i&gt;Philosophen-Problem von Dijkstra&lt;/i&gt;&lt;/b&gt; und eine 
+      M&amp;#246;glichkeit der Synchronisation mit dem &lt;b&gt;&lt;i&gt;Semaphor Mutex&lt;/i&gt;&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Philosophen-Problem:
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      n &amp;gt;= 2 Philosophen sitzen an einem runden Tisch. Jeder der Philosophen 
+      durchl&amp;#228;uft die Zust&amp;#228;nde &amp;quot;Denken&amp;quot;, &amp;quot;Hungrig&amp;quot; und &amp;quot;Essen&amp;quot; zyklisch. Um 
+      essen zu k&amp;#246;nnen, ben&amp;#246;tigt ein Philosoph sein rechtes und sein linkes 
+      Essst&amp;#228;bchen, das er sich jedoch mit seinem Nachbar teilt, dh. es gibt 
+      insgesamt nur n Essst&amp;#228;bchen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Begr&amp;#252;ndung der L&amp;#246;sung mittels Mutex:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      W&amp;#252;rde man lediglich jedem St&amp;#228;bchen einen Semaphor zuteilen, k&amp;#246;nnte man 
+      zwar den Zugriff auf dieses regeln. Da man aber festlegen muss welches 
+      St&amp;#228;bchen zuerst genommen wird, k&amp;#246;nnte es passieren, dass jeder Philosoph 
+      z.B. sein linkes St&amp;#228;bchen genommen hat und aufs rechte St&amp;#228;bchen wartet, 
+      was zu einer kompletten Verklemmung f&amp;#252;hren w&amp;#252;rde.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Daher f&amp;#252;hrt man einen zus&amp;#228;tzlichen Semaphor mutex ein, der bewirkt, dass 
+      nur ein Philosoph gleichzeitig St&amp;#228;bchen aufnehmen darf,  au&amp;#223;erdem darf 
+      ein Philosoph nur die St&amp;#228;bchen aufnehmen wenn beide frei sind, das pr&amp;#252;ft 
+      er mit der Methode teste[i]- ist dies nicht der Fall, wird er mittels 
+      eines weiteren Semaphors p[i] schlafen gelegt. Legt ein Philosoph seine 
+      St&amp;#228;bchen ab, weckt er seine Nachbarn, indem er auf ihnen teste(links[i]) 
+      und teste (rechts[i]) ausf&amp;#252;hrt. Die Nachbarn nehmen nat&amp;#252;rlich nur dann 
+      beide St&amp;#228;bchen auf, wenn beide verf&amp;#252;gbar sind und sie im Zustand hungrig 
+      sind.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>10</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Systemaufrufe &lt;b&gt;&lt;i&gt;fork, kill &lt;/i&gt;&lt;/b&gt;und &lt;b&gt;&lt;i&gt;execvp&lt;/i&gt;&lt;/b&gt; 
+      und die Befehl&lt;b&gt;&lt;i&gt;e&lt;/i&gt;&lt;/b&gt; &lt;b&gt;&lt;i&gt;top&lt;/i&gt;&lt;/b&gt;, und &lt;b&gt;&lt;i&gt;man&lt;/i&gt;&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .)&lt;b&gt; fork() &lt;/b&gt;erzeugt eine genaue Kopie vom Elternprozess und macht 
+      diese bereit. Auch die Registerinhalte, insbesondere der Inhalt des 
+      Befehlsz&amp;#228;hlers, werden kopiert.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;execvp(&amp;lt;Programmname&amp;gt;, &amp;lt;argv&amp;gt;) &lt;/b&gt;bewirkt, dass das 
+      gegenw&amp;#228;rtige Programm durch das Programm in der Datei &amp;lt;Programmname&amp;gt; 
+      ersetzt und mit den Parametern &amp;lt;argv&amp;gt; ausgef&amp;#252;hrt wird.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;top &lt;/b&gt;listet unter UNIX alle existierenden Prozesse und deren 
+      Ressourcenverbrauch auf.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;kill (&amp;lt;Prozessnummer&amp;gt;, 9) &lt;/b&gt;bewirkt das Beenden des 
+      Prozesses mit der Prozessnummer &amp;lt;Prozessnummer&amp;gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;man &amp;lt;Befehl&amp;gt;&lt;/b&gt; zeigt Informationen &amp;#252;ber &amp;lt;Befehl&amp;gt; unter 
+      Unix an
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>11</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Unterschied zwischen &lt;b&gt;Prozessen&lt;/b&gt; und &lt;b&gt;Threads&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Prozesse&lt;/b&gt; haben jeweils ihren eigenen Adressraum  und ihre eigenen 
+      Dateien. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Threads (leichtgewichtige Prozesse)&lt;/b&gt; teilen sich Adressraum, 
+      Programm und Dateien. Sie haben jedoch jeweils eigene Registerinhalte 
+      und ein eigenes Stacksegment.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Gruppe von leichtgewichtigen Prozessen wird als &lt;b&gt;Task &lt;/b&gt;bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>12</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen &lt;b&gt;Kernel-Threads&lt;/b&gt; und &lt;b&gt;Benutzer-Threads&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Kernel-Threads&lt;/b&gt; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden im Betriebssystemkern realisiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden unter UNIX mittels &lt;b&gt;&lt;i&gt;clone&lt;/i&gt;&lt;/b&gt; erzeugt, dabei wird ein 
+      Kindprozess erstellt, der Programm und Speicherbereich vom 
+      Erzeugerprozess erbt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden vom Betriebssystem (insbesondere beim Scheduling) wie 
+      schwergewichtige Prozesse behandelt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Benutzer-Threads&lt;/b&gt; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden im privaten Speicherbereich eines Prozesses realisiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - werden mit Hilfe von Bibliotheksprozeduren auf Benutzerebene 
+      implementiert
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - das Betriebssystem behandelt einen Task (insbesondere beim Scheduling) 
+      wie einen einzelnen schwergewichtigen Prozess
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; es gibt auch &lt;b&gt;&lt;i&gt;Mischformen&lt;/i&gt;&lt;/b&gt; aus beiden 
+      Implementierungen
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>13</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum wird die Forderung nach einer zusammenh&amp;#228;ngenden Speicherung auch 
+      im Sekund&amp;#228;rspeicher aufgegeben?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wegen der externen Fragmentierung, und da eine Kompaktifizierung 
+      (Zusammenschieben von Dateien) wegen ihres hohen Zeitaufwands nicht im 
+      laufenden Betrieb durchgef&amp;#252;hrt werden sollte.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>14</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der gr&amp;#246;&amp;#223;te Nachteil an einer Verkettung der Bl&amp;#246;cke durch eine 
+      Liste, um die zu einer Datei geh&amp;#246;renden Bl&amp;#246;cke wiederzufinden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Es ist kein wahlfreier Zugriff m&amp;#246;glich - um Block Nr. i zu lesen, ist 
+      ein Externzugriff auf i-1 Bl&amp;#246;cke n&amp;#246;tig.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>15</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert FAT?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FAT steht f&amp;#252;r &lt;b&gt;&lt;i&gt;File Allocation Table&lt;/i&gt;&lt;/b&gt; und verkettet 
+      nicht die Bl&amp;#246;cke der zu einer Datei geh&amp;#246;renden Bl&amp;#246;cke, sondern deren 
+      physische Blockadressen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die File Allocation Table enth&amp;#228;lt f&amp;#252;r jeden Block auf der Festplatte 
+      einen Eintrag - dieser enth&amp;#228;lt 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - die &lt;b&gt;physische Adresse&lt;/b&gt; des n&amp;#228;chsten Blocks in der Datei, 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;eof&lt;/b&gt; (end of file) wenn es der letzte Block einer Datei ist
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;free&lt;/b&gt;, wenn der Block noch frei ist
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>16</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re das Prinzip von &lt;b&gt;Inodes&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>17</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie werden unter UNIX die Zugriffsrechte auf eine Datei oder ein 
+      Verzeichnis festgelegt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Man teilt die Systembenutzer in drei Gruppen ein: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - den Eigent&amp;#252;mer des Objekts (&lt;b&gt;&lt;i&gt;user&lt;/i&gt;&lt;/b&gt;), 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - die Arbeitsgruppe (&lt;b&gt;&lt;i&gt;group&lt;/i&gt;&lt;/b&gt;), der er angeh&amp;#246;rt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - alle &amp;#252;brigen Systembenutzer (&lt;b&gt;&lt;i&gt;other&lt;/i&gt;&lt;/b&gt;).
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Au&amp;#223;erdem unterscheidet man zwischen den Zugriffsarten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - lesen (&lt;b&gt;&lt;i&gt;read&lt;/i&gt;&lt;/b&gt;)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - schreiben (&lt;b&gt;&lt;i&gt;write&lt;/i&gt;&lt;/b&gt;)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ausf&amp;#252;hren (&lt;b&gt;&lt;i&gt;execute&lt;/i&gt;&lt;/b&gt;)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Rechte werden mittels einem 9-stelligen (9 bit) System vergeben:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      &lt;b&gt;rwxr-xr--&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      bedeutet z.B: 
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - der User darf lesen, schreiben und ausf&amp;#252;hren (rwx)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - die Arbeitsgruppe darf lesen und ausf&amp;#252;hren (r-x)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - alle &amp;#252;brigen Systembenutzer d&amp;#252;rfen nur lesen
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; (nicht kursrelevant):&lt;/i&gt; es gibt eine alternative, k&amp;#252;rzere 
+      Schreibweise mit Zahlencodes, dabei wird &amp;quot;rwx&amp;quot; als Bitsequenz 
+      betrachtet, dh. 1 steht f&amp;#252;r Ausf&amp;#252;hren, 2 f&amp;#252;r schreiben und 4 f&amp;#252;r Lesen. 
+      Will man lesen+schreiben erlauben, addiert man die Zahlen, in diesem 
+      Fall also 4+2 = 6.
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      Obiges Beispiel lautet in der Zahlencode-Notation daher
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      &lt;b&gt;754
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      denn:
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - 7 = lesen (4) + schreiben (2) + ausf&amp;#252;hren (1)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - 5 = lesen (4) + ausf&amp;#252;hren (1)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - 4 = lesen (4)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>18</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen absoluten und relativen Pfadangaben 
+      sowie die Bezeichnungen &amp;quot;.&amp;quot; und &amp;quot;..&amp;quot; !
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Relative Pfadnamen gehen immer vom Arbeitsverzeichnis aus, dieses 
+      kann man mit &lt;b&gt;&lt;i&gt;pwd (print working directory)&lt;/i&gt;&lt;/b&gt; ausgeben 
+      lassen, mit &lt;b&gt;&lt;i&gt;chdir (change directory)&lt;/i&gt;&lt;/b&gt; kann man das 
+      Arbeitsverzeichnis &amp;#228;ndern.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Absolute Pfadnamen gehen immer vom Wurzelverzeichnis (in Unix mit &amp;quot;/&amp;quot; 
+      bezeichnet) aus.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.  &lt;/b&gt;bezeichnet das aktuelle Verzeichnis
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.. &lt;/b&gt;bezeichnet das Elternverzeichnis
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Beispiele: &lt;/u&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;./meinedatei.txt&lt;/b&gt; ist dasselbe wie meinedatei.txt da .. in 
+      diesem Fall &amp;quot;wirkungslos&amp;quot; ist 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - gibt es einen Ordner order der einen Unterordner unterordner enth&amp;#228;lt 
+      sowie eine Datei datei.txt, kann man aus unterordner heraus datei.txt 
+      wie folgt ansprechen: &lt;b&gt;../datei.txt&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>19</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit welchem Befehl kann man unter UNIX &lt;b&gt;Dateiberechtigungen &amp;#228;ndern&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit dem Befehl &lt;b&gt;chmod &amp;lt;Benutzer&amp;gt; [+/-] &amp;lt;Berechtigung/-en&amp;gt;&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Beispiele:&lt;/u&gt; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;&lt;i&gt;chmod u+x &lt;/i&gt;&lt;/b&gt;:= User darf ausf&amp;#252;hren
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;&lt;i&gt;chmod o-w &lt;/i&gt;&lt;/b&gt;:= Andere d&amp;#252;rfen nicht lesen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;&lt;i&gt;chmod g+rx &lt;/i&gt;&lt;/b&gt;:= Die Arbeitsgruppe darf lesen und ausf&amp;#252;hren
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>20</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche 3 Aufgaben beim Nachrichtentransport sind Sache der 
+      Vermittlungsschicht?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Pfadermittlung (Routing): Die Vermittlungsschicht muss die Topologie 
+      der Router kennen und einen geeigneten Pfad f&amp;#252;r ein Paket vom Senderhost 
+      zum Empf&amp;#228;ngerhost bestimmen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Vermittlung von Paketen: Die Vermittlungsschicht muss entscheiden, 
+      &amp;#252;ber welche ausgehende Verbindung Pakete, die bei einem Transitsystem 
+      angekommen sind, weitergeschickt werden sollen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Call-Setup: In VC-Netzwerken m&amp;#252;ssen alle Transitsysteme auf einem 
+      Pfad bei Aufbau eines virtuellen Kanals richtig konfiguriert werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>21</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Eigenschaften weist ein verbindungsloser Best-Effort-Dienst, wie 
+      z.B. durch die Vermittlungsschicht des Internets bereitgestellt, auf?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Pakete k&amp;#246;nnen verloren gehen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Pakete k&amp;#246;nnen in einer anderen Reihenfolge empfangen werden, als sie 
+      gesendet wurden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &amp;#252;ber die Dauer des Transports eines Paketes bis zur Ankunft beim 
+      Empf&amp;#228;nger wird keine Aussage gemacht
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) es werden keine Zusagen &amp;#252;ber die Bandbreite zwischen Sender und 
+      Empf&amp;#228;nger gemacht
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.) es werdne keine Informationen bzgl. einer &amp;#220;berlastund des Netzwerkes 
+      an den Sender- oder Empf&amp;#228;ngerprozess weitergegeben
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>22</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nach welchen Unterscheidungsmerkmalen kann man Routing-Algorithmen 
+      klassifizieren? Erl&amp;#228;utere die einzelnen Typen kurz!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) global - dezentral&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ein globaler Routing-Algorithmus hat eine &amp;#220;bersicht &amp;#252;ber alle 
+      Verbindungen und deren Kosten. Die Berechnung der billigsten Pfade 
+      erfolgt zuallererst und kann sowohl zentral als auch an mehreren Stellen 
+      verteilt stattfinden. Beispiel: Link-State-Algorithmus
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - bei einem dezentraler Routing-Algorithmus kennt jeder Knoten nur die 
+      Informationen &amp;#252;ber seine direkten Verbindungen, durch 
+      Informationsaustausch mit seinen Nachbarn wird der billigste Pfad 
+      iterativ berechnet. Beispiel: Distanzvektor-Algorithmus
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) statisch - dynamisch&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ein statischer Routing-Algorithmus &amp;#228;ndert seine Routing-Entscheidungen 
+      nur aufgrund manueller Eingaben
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ein dynamischer Routing-Algorithmus passt sich automatisch an 
+      ver&amp;#228;nderte  Netzwerksituationen an, die Anpassung kann entweder 
+      periodisch erfolgen oder durch Ver&amp;#228;nderungen im Netzwerk ausgel&amp;#246;st werden
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>23</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert der &lt;b&gt;Link-State-Algorithmus&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beim Linkstate-Algorithmus schickt jeder Router&lt;b&gt; 
+      Link-State-Broadcast-Nachrichten&lt;/b&gt; mit den Kosten der an ihn 
+      angeschlossenen Verbindungen an alle anderen Knoten, sodass jeder Knoten 
+      die gesamte Netzwerk-Topologie kennt und die billigste Verbindung zu 
+      allen anderen Knoten berechnen kann.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Berechnung erfolgt durch &lt;b&gt;Dijkstra's Algorithmus&lt;/b&gt; (s.o.) wobei:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;c(i,j) &lt;/b&gt;.... Kosten Direktverbindung Knoten i -&amp;gt; Knoten j
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;D_i &lt;/b&gt;...... Kosten von Quellknoten Q zu Zielknoten i mit den 
+      aktuell billigsten Kosten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;p_i&lt;/b&gt; ...... Vorg&amp;#228;ngerknoten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;S&lt;/b&gt; ........ Menge aller Knoten, in der die billigsten Pfade 
+      bereits bekannt sind
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;u&gt;Zeitkomplexit&amp;#228;t:&lt;/u&gt;&lt;/b&gt; O(n&amp;#178;)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>600</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>24</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert der &lt;b&gt;Distanzvektor-Algorithmus&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Distanzvektoralgorithmus ist ein &lt;b&gt;dezentrales, iteratives und 
+      asynchrones Verfahren&lt;/b&gt; zur Berechnung der billigsten Pfade.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      An jedem Knoten wird eine &lt;b&gt;Distanztabelle&lt;/b&gt; gespeichert, die zeigt, 
+      &amp;#252;ber welchen Nachbarn der billigste Weg zu einem best. Ziel im Netzwerk 
+      ist. Sie wird dargestellt als eine Matrix, deren Zeilen die Zielknoten, 
+      deren Spalten die direkten Nachbarn und deren Werte die aktuell 
+      bekannten Kosten sind.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Berechnung der Kosten erfolgt mit dem &lt;b&gt;Bellman-Ford-Algorithmus&lt;/b&gt; 
+      (s.o.). Immer wenn ein Knoten eine &amp;#196;nderung der Kosten der direkt 
+      anliegenden Strecken bemerkt oder ein Update der billigsten Pfade vom 
+      Nachbarn empf&amp;#228;ngt, &amp;#228;ndert er seine Werte und benachrichtigt seine 
+      Nachbarn.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>247</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie k&amp;#246;nnen beim Distanzvektor-Algorithmus Routingschleifen entstehen? 
+      Was ist das Count-To-Infinity-Problem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Routingschleifen&lt;/b&gt; k&amp;#246;nnen wie folgt entstehen: Ein Router T_2 
+      bemerkt eine Kostenver&amp;#228;nderung an seiner Verbindungsleitung zu Router 
+      T_1 und &amp;#228;ndert den neuen besten Pfad auf eine nicht direkte Verbindung 
+      &amp;#252;ber Router T_5. Da T_2 nicht wei&amp;#223;, dass der billigste Pfad von T_5 auch 
+      &amp;#252;ber die nun viel teurere Verbindung von sich selbst nach T_1 l&amp;#228;uft, 
+      schickt er Router T_5 ein Update mit dem billigsten Pfad, der bei ihm 
+      nun &amp;#252;ber T_5 verl&amp;#228;uft. Da T_5 nicht wei&amp;#223;, wie T_2 routet, schickt er die 
+      Pakete wieder an T_2 retour, wenn seine Direktverbindung teurer ist als 
+      der billigste Pfad von T_2 nach T_1. Beim Update seines billigsten 
+      Pfades nach T_1 orientiert er sich damit ebenfalls an T_2's Nachricht. 
+      Die beiden Router T_2 und T_5 schicken so lange Nachrichten hin und her, 
+      bis ihre Tabellen die tats&amp;#228;chlich billigste Verbindung auch beinhalten. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dieses ewige Hochz&amp;#228;hlen wird auch als &lt;b&gt;Count-to-Infinity-Problem&lt;/b&gt; 
+      bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>248</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;TODO!&lt;/b&gt; Wie funktioniert die Poisoned Reverse Strategie? Warum 
+      verhindert sie Routingschleifen beim Distanzvektor-Algorithmus? Was kann 
+      die Poisoned Reverse Strategie jedoch nicht verhindern?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>249</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Vergleiche den Linkstate- und den Distanzvektor-Algorithmus anhand ihrer &lt;b&gt;Komplexit&amp;#228;t&lt;/b&gt; 
+      (Menge an ausgetauschten Nachrichten), &lt;b&gt;Konvergenzgeschwindigkeit&lt;/b&gt; 
+      und &lt;b&gt;Robustheit&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&amp;#8226; Komplexit&amp;#228;t bzgl. Nachrichtenmenge:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Link-State-Algorithmus: Das Senden von O(nL) Nachrichten 
+      sindnotwendig, damit jeder Knoten den gesamten Graphen mit Kosten kennt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Distanzvektor-Algorithmus: In jeder Iteration m&amp;#252;ssen Nachrichten nur 
+      dann geschickt werden, wenn sich ein anderer billigster Weg zu einem 
+      Knoten ergibt, und zwar nur an die direkten Nachbarn.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&amp;#8226; Konvergenzgeschwindigkeit:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Link-State-Algorithmus: Um den gesamten Graphen mit Kosten zu kennen, 
+      werden O(nL) Nachrichten ben&amp;#246;tigt. Bei jedem Knoten werden O(n 2 ) 
+      Operationen ausgef&amp;#252;hrt, um den billigsten Pfad von ihm zu allen n &amp;#8722; 1 
+      anderen Knoten zu berechnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Distanzvektor-Algorithmus: Der Algorithmus reagiert schnell auf gute 
+      Nachrichten und konvergiert langsam bei schlechten Nachrichten. Er kann 
+      Routing-Schleifen verursachen und leidet unter dem 
+      Count-to-Infinity-Problem.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&amp;#8226; Robustheit:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Link-State-Algorithmus: Ein fehlerhafter Knoten kann lediglich falsche 
+      Kosten f&amp;#252;r eine der an ihn angeschlossenen Verbindungen durch 
+      Broadcast-Nachrichten verbreiten. Ein Knoten kann eingehende besch&amp;#228;digte 
+      Broadcast-Nachrichten ignorieren. Jeder Knoten berechnet nur seine 
+      eigene Routing-Tabelle. Hierdurch entsteht ein
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      gewisses Ausma&amp;#223; von Robustheit des verteilten Systems. Der Algorithmus 
+      wird in der Praxis recht h&amp;#228;ufig verwendet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Distanzvektor-Algorithmus: Die Knoten teilen bei jeder Iteration ihre 
+      Kosten an alle Nachbarn mit, dadurch k&amp;#246;nnen sich falsche Angaben &amp;#252;ber 
+      das gesamte Netzwerk verteilen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>250</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum ist es in der Praxis nicht immer so, dass das gesamte Netzwerk 
+      (z.B. Internet) denseben Routing-Algorithmus verwendet und Pfade durch 
+      das gesamte Netzwerk berechnet werden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) wegen der &lt;b&gt;Gr&amp;#246;&amp;#223;e realer Netzwerke&lt;/b&gt;: im Internet gibt 
+      es Millionen von Routern, der Aufwand w&amp;#228;re zu hoch, die Menge an 
+      &amp;#252;bertragenen Informationen zu gro&amp;#223; und z.B. der Distanzvektoralgorithmus 
+      w&amp;#252;rde kaum je konvergieren
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) wegen &lt;b&gt;heterogener Routing-Anforderungen&lt;/b&gt;: Organisationen 
+      wollen ihre Netze so betreiben, wie sie es wollen, bzw. wie es f&amp;#252;r sie 
+      am effizientesten ist. Au&amp;#223;erdem sollen andere Netzwerke angedockt werden 
+      k&amp;#246;nnen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>251</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine Autonomes System? Wie werden Knoten au&amp;#223;erhalb vom autonomen 
+      System erreicht? Welche verschiedenen Routing-Protokolle sind hierbei 
+      von Bedeutung? Wie nennt man dieses Routing-Konzept?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein &lt;b&gt;Autonomes System (AS)&lt;/b&gt; ist eine Menge von Transit-Systemen, 
+      die alle denselben Routing-Algorithmus benutzen. Dieser wird &lt;b&gt;Intra-AS-Routing&lt;/b&gt; 
+      genannt. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Gateways &lt;/b&gt;sind spezielle Transitsysteme in einem AS, die Pakete an 
+      Zielknoten au&amp;#223;erhalb des AS weiterleiten. Gateways nutzen das &lt;b&gt;Inter-AS-Routing&lt;/b&gt;, 
+      um Pakete von einem AS in ein anderes weiterzuleiten. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Liegt das Ziel eines Paketes in einem anderen AS, wird das Paket mittels 
+      Intra-AS von Gateway zu Gateway geleitet, bis es ins richtige AS 
+      gelangt. &amp;#220;ber welche Gateways es geroutet wird, entscheidet das 
+      Inter-AS-Routing.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dieses Konzept wird auch als &lt;b&gt;hierarchisches Routing&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>252</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Aus welchen 3 Komponeneten besteht die Vermittlungsschicht im Internet? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Das &lt;b&gt;Internetprotokoll &lt;/b&gt;der derzeit noch oft benutzten Version &lt;b&gt;IPv4&lt;/b&gt; 
+      definiert die Adressierung in der Vermittlungsschicht, die Felder eines 
+      Datagramms und die Aktionen, die durch Router und Endsysteme auf einem 
+      Datagramm in Abh&amp;#228;ngigkeit von den Inhalten seiner Felder ausgef&amp;#252;hrt 
+      werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Die &lt;b&gt;Pfadbestimmungskomponente&lt;/b&gt; bestimmt den Pfad, den eine 
+      Datagramm auf dem Weg vom Sender zum Empf&amp;#228;nger durch das Internet nimmt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Das&lt;b&gt; ICMP-Protokoll (Internet Control Messaging Protocol)&lt;/b&gt; ist 
+      die Komponente, die es im Internet erlaubt, Fehler in Datagrammen 
+      anzuzeigen und Informationen &amp;#252;ber die Vermittlungsschicht abzufragen
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>253</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die 5 Klassen von IP-Adressen in IPv4!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>254</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Woraus setzt sich eine IP-Adresse zusammen? Wozu dient eine 
+      Netzwerkmaske?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine IP-Adresse besteht aus:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) dem &lt;b&gt;Netzwerkpr&amp;#228;fix&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) dem &lt;b&gt;Hostteil&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Netzwerkmaske / Subnetzmaske&lt;/b&gt; legt fest, welcher Teil von der 
+      IP-Adresse zum Netzwerkpr&amp;#228;fix und welcher zum Hostteil geh&amp;#246;rt. Alle 
+      Bits, die zum Netzwerkpr&amp;#228;fix geh&amp;#246;ren, haben den Wert 1, und alle Bits, 
+      die zum Hostanteil geh&amp;#246;ren, haben den Wert 0. Die Subnetzmaske bildet 
+      den Hostanteil der IP-Adresse durch eine bitweise durchgef&amp;#252;hrte 
+      AND-Operation auf Subnetzmaske und IP-Adresse auf 0 ab - damit wird die 
+      gesamte IP-Adresse auf die Basisadresse des Netzwerkes abgebildet, wenn 
+      sie zu diesem geh&amp;#246;rt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>255</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was erm&amp;#246;glicht der CIDR-Standard?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der &lt;b&gt;CIDR-Standard (Classless Interdomain Routing Standard)&lt;/b&gt; 
+      erm&amp;#246;glicht es, die 32 bit einer IP-Adresse flexibel in Hostanteil und 
+      Netzwerkpr&amp;#228;fix aufzuteilen. Durch die starre 5-Klassen-Aufteilung 
+      blieben n&amp;#228;mlich viele IP-Adressen in gro&amp;#223;en Netzwerken ungenutzt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>256</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie kann ein Host zu einer IP-Adresse bzw. dem Hostanteil zum festen 
+      Netzwerkpr&amp;#228;fix kommen? Wie erh&amp;#228;lt man einen Netzwerkpr&amp;#228;fix (also eine 
+      Netzwerkadresse)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Einem Host kann auf 2 Arten eine IP-Adresse zugewiesen werden:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) manuell (durch Schreiben in eine Datei)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) automatisch per &lt;b&gt;DHCP (Dynamic Host Configuration Protocol)
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Einen Netzwerkadresse erh&amp;#228;lt man von seinem Provider, dieser wiederum 
+      hat seine Adressr&amp;#228;ume bei der &lt;b&gt;ICANN (Internet Corporation for 
+      Assigned Names and Numbers)&lt;/b&gt; bzw. einer der von ihr lizenzierten &lt;b&gt;regionalen 
+      Internet Registries&lt;/b&gt; eingekauft.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>257</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 4 wichtige &lt;b&gt;Felder &lt;/b&gt;in einem &lt;b&gt;IP-Datagramm! Wie gro&amp;#223;&lt;/b&gt; 
+      ist ein &lt;b&gt;IP-Header&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein IP-Datagramm besitzt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein Feld f&amp;#252;r die &lt;b&gt;IP-Adresse des Senders&lt;/b&gt;,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein Feld f&amp;#252;r die &lt;b&gt;IP-Adresse des Empf&amp;#228;ngers&lt;/b&gt;,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein &lt;b&gt;Datenfeld&lt;/b&gt; f&amp;#252;r ein TCP- oder UDP-Segement
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein &lt;b&gt;L&amp;#228;ngenfeld&lt;/b&gt; (Anzahl der genutzten Bytes)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) weitere &lt;b&gt;Spezialfelder
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein IP-Header hat eine &lt;b&gt;Gr&amp;#246;&amp;#223;e von 20 byte.&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>258</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert das Routing von IP-Datagrammen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Jeder Host hat eine Routingtabelle. In dieser sucht er nach dem 
+      Netzwerkpr&amp;#228;fix des Empf&amp;#228;ngers. In der Routingtabelle steht der Router, 
+      an den das Paket weitergeschickt werden muss, sowie die Anzahl der Hops. 
+      Ist die Anzahl der Hops = 1, wei&amp;#223; der Absender, dass sich der Empf&amp;#228;nger 
+      im selben Netzwerk befindet, in diesem Fall transportiert die 
+      Sicherungsschicht das Paket direkt zum Zielhost.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einer Hop-Anzahl &amp;gt;= 2 wird das Paket an die in der Routingtabelle 
+      angegebene Schnittstelle gesendet. Der n&amp;#228;chste Router konsultiert 
+      wiederum seine Routingtabelle, um herauszufinden, wohin das Paket 
+      weitergeschickt werden soll. Die Sicherungsschicht &amp;#252;bertragt so das 
+      Paket von Router zu Router, ohne dass die Empf&amp;#228;nger-IP-Adresse ge&amp;#228;ndert 
+      wird.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>259</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was wird mit der &lt;b&gt;Anzahl der Hops&lt;/b&gt; angegeben?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Anzahl der Netzwerke, die ein Datenpaket vom sendenden Host bis zum 
+      Zielhost &amp;#252;berquert, einschlie&amp;#223;lich des Zielnetzwerks. Ist die Anzahl der 
+      Hops = 1, befindet sich der Zielhost im selben Netzwerk wie der 
+      Absender, ist die Anzahl der Hops &amp;gt;= 2, liegt mindestens ein Router 
+      zwischen Absender und Zielhost.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>260</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welcher Mechanismus regelt den Umgang mit zu gro&amp;#223;en IP-Datagrammen f&amp;#252;r 
+      eine bestimmte Verbindung? Was ist deren Maximalgr&amp;#246;&amp;#223;e, die &amp;#252;blicherweise 
+      &amp;#252;ber Ethernet &amp;#252;bertragen werden kann? Was ist die Mindestgr&amp;#246;&amp;#223;e, die im 
+      Internet jedenfalls unterst&amp;#252;tzt wird?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      IP-Datagramme, die zu gro&amp;#223; sind f&amp;#252;r eine bestimmte Verbindungsstrecke, 
+      werden im Router &lt;b&gt;fragmentiert&lt;/b&gt;, dh. in kleinere IP-Datagramme 
+      zerteilt. 3 Felder in IPv4 unterst&amp;#252;tzen das Zusammensetzen (&lt;b&gt;reassemblieren&lt;/b&gt;) 
+      der IP-Datagramme in den Endsystemen:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Das&lt;b&gt; Identification (ID)&lt;/b&gt;-Feld enth&amp;#228;lt bei zusammengeh&amp;#246;renden 
+      Fragmenten dieselbe ID
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Das &lt;b&gt;Flag&lt;/b&gt;-Feld wird bei allen Fragmenten, au&amp;#223;er dem letzten, 
+      auf 1 gesetzt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Das Feld &lt;b&gt;Fragmentation Offset&lt;/b&gt; nummeriert die Fragmente 
+      aufsteigend
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;MTU (maximum transfer size)&lt;/b&gt; betr&amp;#228;gt:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - f&amp;#252;r Ethernet &amp;#252;blicherweise 1500 bytes
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - im Internet mindestens 576 bytes
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>600</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>261</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Routing-Protokolle f&amp;#252;r Intra-AS-Routing kommen im Internet 
+      &amp;#252;blicherweise zum Einsatz?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Drei Intra-AS-Routingprotokolle kommen im Internet zum Einsatz:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;RIP&lt;/b&gt; - Routing Information Protocol
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;OSFP&lt;/b&gt; - Open Shortest Path First
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;EIGRP&lt;/b&gt; - Enhanced Internet Gateway Routing Protocol
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>262</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert &lt;b&gt;RIP&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      RIP nutzt eine Art von &lt;b&gt;Distanzvektor-Algorithmus&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die RIP Version 1 verwendet als &lt;b&gt;Kosten die Anzahl der Hops&lt;/b&gt;, 
+      au&amp;#223;erdem sind die &lt;b&gt;Maximalkosten auf 15 beschr&amp;#228;nkt&lt;/b&gt;, dh. 
+      eine AS darf nur einem maximalen Durchmesser von 15 Routern haben.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nachbarknoten tauschen im RIP &lt;b&gt;ca. alle 30 Sekunden 
+      Routing-Informationen&lt;/b&gt; mit sogenannten &lt;b&gt;RIP Response Messages&lt;/b&gt; 
+      aus, indem sie ihre &lt;b&gt;Routingtabellen f&amp;#252;r h&amp;#246;chstens 25 Zielnetzwerke&lt;/b&gt; 
+      im autonomen System verschicken.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn RIP auf einem Router &lt;b&gt;mehr als 180 Sekunden kein Update&lt;/b&gt; von 
+      einem Nachbarn erh&amp;#228;lt, betrachtet es den Nachbarn als unerreichbar. RIP 
+      modifiziert dann die lokale Routing-Tabelle und schickt Updates zu 
+      seinen Nachbarn.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ebenfalls k&amp;#246;nnen Router &amp;#252;ber RIP von Nachbarn deren&lt;b&gt; Kosten&lt;/b&gt; 
+      zu einem Zielknoten&lt;b&gt; abfragen&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      RIP benutzt zur Kommunikation einzelne&lt;b&gt; UDP-Datagramme&lt;/b&gt; &amp;#252;ber den &lt;b&gt;Standardport 
+      520&lt;/b&gt;. Es benutzt daher ein Transportschichtprotokoll zur Realisierung 
+      einer Funktion der Vermittlungsschicht, dies liegt an der 
+      Implementierung von RIP auf UNIX-Systemen als Anwendungsprozess. RIP ist 
+      daher ein &lt;b&gt;&lt;u&gt;Protokoll auf der Anwendungsschicht&lt;/u&gt;&lt;/b&gt;&lt;u&gt;!!&lt;/u&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>263</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welches Protokoll ist momentan Standard f&amp;#252;r Inter-AS-Routing im Internet 
+      und wie funktioniert dieses? Wie bezeichnet man administrative Dom&amp;#228;nen 
+      im Internet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Standard f&amp;#252;r Inter-AS-Routing im Internet ist &lt;b&gt;BGP4 (Border 
+      Gateway Protocol Version 4)&lt;/b&gt;. Autonome System im Internet werden als &lt;b&gt;administrative 
+      Dom&amp;#228;nen&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      BGP basiert auf der Idee des Distanzvektoralgorithmus, ist allerdings 
+      ein &lt;b&gt;Pfadvektor-Protokoll,&lt;/b&gt; da BGP in einem Router keine 
+      Kosteninformationen hinterlegt, sondern &lt;b&gt;Informationen &amp;#252;ber den 
+      kopmpletten Pfad&lt;/b&gt; vom Quell-AS zum Ziel-AS. Welcher Pfad gew&amp;#228;hlt 
+      wird, ist eine &lt;b&gt;Richtlinienentscheidung&lt;/b&gt; des Dom&amp;#228;nenadministrators.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      BGP-Informationen werden durch das Netzwerk propagiert, indem die 
+      unmittelbaren Nachbarn BGP-Nachrichten austauschen. BGP nutzt &lt;b&gt;TCP&lt;/b&gt; 
+      als Verbindungsprotokoll &amp;#252;ber den &lt;b&gt;Port 179.&lt;/b&gt; Das 
+      BGP-Protokoll definiert &lt;b&gt;4 Nachrichtentypen&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Open-Nachricht&lt;/b&gt;: Authentifizierung bei den Nachbarn, 
+      akzeptieren diese den neuen Router, senden sie ihm 
+      Keep-Alive-Nachrichten zur&amp;#252;ck
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Update-Nachricht&lt;/b&gt;: Melden oder Zur&amp;#252;ckziehen von Pfaden bei 
+      Nachbarn
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;KeepAlive-Nachricht&lt;/b&gt;: Akzeptieren eines Verbindungsaufbaus 
+      oder Lebenszeichen, wenn der Sender keine neuen Infos hat
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Notification Nachricht&lt;/b&gt;: Signalisiert Fehler in der vorigen 
+      Nachricht oder Verbindungsabbau
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da ein Router &lt;b&gt;BGP-Nachrichten auch ablehnen kann &lt;/b&gt;(z.B. weil diese 
+      &amp;#252;ber ihn selbst laufen) entstehen keine Routingschleifen und das 
+      Count-to-Infinity Problem wird vermieden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>264</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welches Protokoll dient dem&lt;b&gt; Austausch von 
+      Vermittlungsschicht-Informationen&lt;/b&gt; im Internet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;ICMP (Internet Controll Messaging Protocol) &lt;/b&gt;ist ein Protokoll zum 
+      Austausch von Vermittlungsschicht-Informationen, wie z.B. 
+      Fehlermeldungen oder Informationen &amp;#252;ber benutzte Netzwerkpfade.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ICMP &lt;b&gt;nutzt zur Kommunikation IP-Datagramme&lt;/b&gt; und ist daher &lt;b&gt;konzeptionell 
+      ein Protokoll der Transportschicht&lt;/b&gt;, wird jedoch &lt;b&gt;der 
+      Vermittlungsschicht zugeordnet&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;ICMP-Nachrichten&lt;/b&gt; setzen sich zusammen aus
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - einem &lt;b&gt;Typ&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - einem Feld namens &lt;b&gt;Code&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - den &lt;b&gt;ersten 8 Byte des IP-Datagramms&lt;/b&gt;, welches zur Erzeugung der 
+      ICMP-Nachricht f&amp;#252;hrte
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; die Programme &lt;b&gt;ping &lt;/b&gt;und &lt;b&gt;traceroute &lt;/b&gt;nutzen ICMP
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>265</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 3 ICMP-Typ / Code- Kombinationen und deren Bedeutung!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>266</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie nutzt Ping das ICMP-Protokoll?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Programm ping sendet eine ICMP-Nachricht vom Typ 8 mit Code 0 an den 
+      Zielhost. Der Zielhost empf&amp;#228;ngt die Echo-Anforderung und sendet eine 
+      Echo-Antwort (ICMP-Nachricht Typ 0 mit Code 0) zur&amp;#252;ck.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>267</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie nutzt das Programm traceroute das ICMP-Protokoll?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Programm traceroute ermittelt den Pfad, den IP-Datagramme zu einem 
+      angegebenen Zielhost nehmen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dazu sendet das Programm&lt;b&gt; eine Reihe gew&amp;#246;hnlicher IP-Datagramme&lt;/b&gt; 
+      an den Zielhost. Dabei &lt;b&gt;erh&amp;#246;ht&lt;/b&gt; es bei jedem neuen 
+      IP-Datagramm &lt;b&gt;das Feld TTL (Time-To-Live) um eins&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Router, die das IP-Datagramm &lt;b&gt;&amp;#252;bertragen, verringern das TTL-Feld&lt;/b&gt; 
+      bei jeder &amp;#220;bertragung um 1. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn das &lt;b&gt;TTL-Feld auf Null gesetzt&lt;/b&gt; wird, wird das&lt;b&gt; IP-Datagramm 
+      verworfen&lt;/b&gt;. In diesem Fall aber sendet der Router eine &lt;b&gt;Warnung 
+      (ICMP-Nachricht mit Typ 11 und Code 0)&lt;/b&gt; an den Senderhost, die auch 
+      die &lt;b&gt;IP-Adresse des Routers und den Zeitstempel&lt;/b&gt; der Paketerzeugung 
+      enth&amp;#228;lt. Mit diesen Informationen kann ICMP dann den &lt;b&gt;Pfad und 
+      die Umlaufzeit der Pakete auf dem Pfad berechnen&lt;/b&gt; und anzeigen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>268</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wieso wurde das &lt;b&gt;Internet Protokoll Version 6 (IPv6)&lt;/b&gt; entwickelt 
+      und welche Verbesserungen bringt es mit sich?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      IPv6 wurde aufgrund von &lt;b&gt;Problemen mit IPv4&lt;/b&gt; entwickelt und wie 
+      folgt verbessert: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Gr&amp;#246;&amp;#223;ere Anzahl an verf&amp;#252;gbaren IP-Adressen&lt;/b&gt;: 
+      Durch das rapide Wachstum des Internets werden die eindeutigen 
+      IP-Adressen langsam knapp. Mit IPv6 k&amp;#246;nnen &lt;b&gt;&lt;i&gt;2^128 Adressen&lt;/i&gt;&lt;/b&gt; 
+      erzeugt werden, statt den 2^32 m&amp;#246;glichen Adressen von IPv4.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Einf&amp;#252;hrung von Anycast-Adressen&lt;/b&gt;: mit diesen kann ein &lt;b&gt;&lt;i&gt;Datagramm 
+      an irgendeinen Host in einer Anycast-Gruppe gesendet werden&lt;/i&gt;&lt;/b&gt;. 
+      Damit kann der am schnellsten erreichbare Knoten den gew&amp;#252;nschten Dienst 
+      erbringen, wenn mehrere Dienstanbieter im Netzwerk verf&amp;#252;gbar sind (z.B. 
+      Mirror-Websites oder DNS-Anfragen).
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Optimierung des Headers&lt;/b&gt;: Der IPv6 Header ist 40 byte lang. 
+      Das &lt;b&gt;&lt;i&gt;Pr&amp;#252;fsummenfeld wurde entfernt&lt;/i&gt;&lt;/b&gt;, da ohnehin auf der 
+      Transportschicht und Sicherungsschicht Pr&amp;#252;fungen stattfinden, somit 
+      entf&amp;#228;llt das Berechen von IP-Pr&amp;#252;fsummen. Au&amp;#223;erdem werden &lt;b&gt;&lt;i&gt;IP-Datagramme 
+      nicht mehr fragmentiert&lt;/i&gt;&lt;/b&gt;, sondern einfach neu angefordert, wenn 
+      sie zu gro&amp;#223; f&amp;#252;r einen bestimmten Router auf der Verbindungsstrecke sind.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>269</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf welche 3 Arten kann der &amp;#220;bergang von IPv4 zu IPv6 erfolgen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) An einem &lt;b&gt;Stichtag&lt;/b&gt; k&amp;#246;nnte der &amp;#220;bergang aller Hosts und Router 
+      verpflichtend sein -&amp;gt; unwahrscheinlich aufgrund der Anzahl der 
+      umzustellenden Hosts im Internet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Dual-Stack Ansatz:&lt;/b&gt; Jeder IPv6 Knoten k&amp;#246;nnte parallel eine 
+      IPv4 und eine IPv6-Implementierung enthalten. Solche Knoten m&amp;#252;ssten dann 
+      mit Hilfe von DNS feststellen, welche IP-Version ein Empf&amp;#228;ngerknoten 
+      unterst&amp;#252;tzt und dementsprechende Pakete weiterleiten. Nachteil: Pakete, 
+      die &amp;#252;ber mindestens 1 IPv4 Knoten gehen, k&amp;#246;nnen die Vorteile von IPv6 
+      nicht nutzen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Tunneling Ansatz:&lt;/b&gt; IPv6 Knoten bauen zwischen sich TUnnel auf, 
+      indem sie den IPv6-Verkehr bei &amp;#220;bertragung &amp;#252;ber IPv4-Knoten insgesamt in 
+      IPv4-Datagramme einpacken. Hierbei kann der IPv6-Empf&amp;#228;nger dann das 
+      IPv6-Datagramm wieder auspacken und normal weiterverarbeiten.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>350</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 3 Gr&amp;#252;nde, Rechner miteinander zu vernetzen!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Betriebsmittel-. Funktions- und Datenverbund:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beim Betriebsmittel- oder Funktionsverbund steht das Ziel im 
+      Vordergrund, s&amp;#228;mtliche im Netz vorhandene Betriebsmittel wie Daten, 
+      Programme oder Ger&amp;#228;te auf jedem am Rechnernetz beteiligten Rechner 
+      zug&amp;#228;nglich zu machen. Auch das gesamte Kommunikationsnetz kann in diesem 
+      Zusammenhang als Betriebsmittel gesehen werden. Besteht das Hauptziel 
+      eines Betriebsmittelverbundes darin, auf netzweit verteilte 
+      Datenbest&amp;#228;nde zuzugreifen, spricht man auch von einem Datenverbund (data 
+      sharing), wobei auch das mehrfache Halten von Datenbest&amp;#228;nden aus 
+      Sicherheitsgr&amp;#252;nden eine Rolle spielen kann.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Last-, Leistungs- und Wartungsverbund:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Last- und Leistungsverbund gestattet es, anfallende Rechenlasten 
+      gleichm&amp;#228;&amp;#223;ig auf mehrere Rechner zu verteilen bzw. mehrere Rechner f&amp;#252;r 
+      das L&amp;#246;sen einer einzigen umfangreichen Aufgabe einzusetzen. Ein 
+      Wartungsverbund schlie&amp;#223;lich erm&amp;#246;glicht die zentrale Wartung, 
+      St&amp;#246;rungserkennung und -behebung bei einer Vielzahl r&amp;#228;umlich verteilter 
+      Rechner.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;3.) Computerunterst&amp;#252;tzte Gruppenarbeit:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Seit dem internationalen Siegeszug des Internets und insbesondere des 
+      auf ihm realisierten World Wide Web (WWW) stehen der Online-Zugriff auf 
+      weltweit erfasste Dokumente sowie die Kommunikation zwischen 
+      menschlichen Benutzern im Vordergrund des Einsatzes von Rechnernetzen. 
+      Der Austausch von Nachrichten durch E-Mail, das Arbeiten an gemeinsamen 
+      Projekten oder das Veranstalten internationaler Videokonferenzen sind 
+      aus dem beruflichen und zunehmend auch aus dem privaten Alltag nicht 
+      mehr wegzudenken. Die Fachdisziplin der Informatik, die sich mit der 
+      Unterst&amp;#252;tzung der Zusammenarbeit von Menschen durch den Einsatz von 
+      Computertechnologie befasst, wird als computerunterst&amp;#252;tzte Gruppenarbeit 
+      (Computer Supported Cooperative Work, CSCW) bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>600</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>351</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie kann man Rechnernetze nach ihrer r&amp;#228;umlichen Ausdehnung unterteilen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Pers&amp;#246;nliche Netze (Personal Area Network, PAN)&lt;/b&gt; mit 
+      Ausdehnungen von bis zu 1 bis 2 Metern
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Lokale Netze (Local Area Network, LAN)&lt;/b&gt; mit Ausdehnungen von 
+      h&amp;#246;chstens wenigen Kilometern
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Regionale Netze (Metropolitan Area Network, MAN)&lt;/b&gt; mit 
+      Ausdehnungen von ca. 100 km
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Weitverkehrsnetze (Wide Area Network, WAN)&lt;/b&gt;, diese umspannen 
+      ganze L&amp;#228;nder und Kontinente und im Weitverkehrsverbund die gesamte Erde
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>352</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Protokoll? Was wird durch ein (Netzwerk-) Protokoll 
+      definiert? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein&lt;b&gt; Protokoll &lt;/b&gt;legt die Regeln und Konventionen einer 
+      Kommunikation zwischen kommunizierenden Parteien fest.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Protokoll &lt;u&gt;definiert&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) die&lt;b&gt; Nachrichtentypen&lt;/b&gt; (z.B. Anforderungen und Antworten)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ihre &lt;b&gt;Syntax&lt;/b&gt; (dh. Felder und Feldabgrenzungen in den 
+      verschiedenen Nachrichtentypen)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) die &lt;b&gt;Semantik&lt;/b&gt; der Nachrichtentypen und der Felder (die im 
+      &amp;#252;brigen nur f&amp;#252;r das Protokoll von Belang sind und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) die &lt;b&gt;Regeln&lt;/b&gt;, wenn und wie eine Prozess Nachrichten eines 
+      bestimmten Typs sendet bzw. wie er auf diese Nachrichten reagiert 
+      (beispielsweise durch das Senden von Antwortnachrichten oder Ausf&amp;#252;hren 
+      von Programmen, wie z.B. Lesen oder Schreiben von Dateien)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>353</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den prinzipiellen Aufbau einer geschichteten 
+      Protokollarchitektur!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einer geschichteten Protokollarchitektur geh&amp;#246;rt jedes Protokoll zu 
+      einer bestimmten Schicht. Ein &lt;b&gt;Protokoll der Schicht n&lt;/b&gt; definiert 
+      also genau die Regeln, mit denen zwei Endsysteme Nachrichten auf der 
+      Schicht n austauschen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Tats&amp;#228;chlich werden Daten nicht direkt von Schicht n eines Rechners 
+      zu Schicht n eines anderen &amp;#252;bertragen. Vielmehr nutzt eine Schicht 
+      den &lt;b&gt;Dienst&lt;/b&gt; der direkt darunter liegenden Schicht, den es &amp;#252;ber 
+      einen &lt;b&gt;Dienstzugangspunkt&lt;/b&gt; erreicht, der auch als Schnittstelle 
+      (Interface) bezeichnet wird. Die Schnittstelle definiert, welche 
+      Operationen und Dienste die untere Schicht der oberen Schicht anbietet. 
+      Nur in der untersten Schicht findet die eigentliche Kommunikation, die &lt;b&gt;Nachrichten&amp;#252;bertragung&lt;/b&gt;, 
+      statt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>354</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie werden die Nachrichten einer Schicht der Protokollarchitektur f&amp;#252;r 
+      die untergeordnete Schicht aufbereitet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Schicht &lt;b&gt;darf die Daten&lt;/b&gt;, die sie von der &amp;#252;bergeordneten 
+      Schicht erh&amp;#228;lt, &lt;b&gt;nicht ver&amp;#228;ndern&lt;/b&gt;, damit die Nachricht 
+      beim Empf&amp;#228;nger exakt so ankommt, wie sie abgeschickt wurde. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Sie darf jedoch die Nachricht &lt;b&gt;durch Anf&amp;#252;gen von Zeichensequenzen 
+      davor und dahinter umklammern&lt;/b&gt;. Eine vor der Originalnachricht 
+      hinzugef&amp;#252;gte Zeichensequenz nennt man&lt;b&gt; Header&lt;/b&gt;, die hinter der 
+      Originalnachricht hinzugef&amp;#252;gte Sequenz nennt man &lt;b&gt;Trailer&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>355</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Begriffe &lt;b&gt;Protokolldateneinheit&lt;/b&gt; und &lt;b&gt;Protokollstapel&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Protokolldateneinheiten (PDUs)&lt;/b&gt; sind Nachrichten einer bestimmten 
+      Schicht. Eine PDU der Schicht n wird auch als&lt;b&gt; n-PDU&lt;/b&gt; bezeichnet. 
+      Diese werden zwischen Quellhost und Zielhost zur &amp;#220;bertragung von 
+      Nachrichten ausgetauscht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine n-PDU kann in der darunterliegenden Ebene in mehrere n-1-PDUs&lt;b&gt; 
+      zerlegt (disassembliert)&lt;/b&gt; werden. Im Zielsystem wird sie auf dem Weg 
+      nach oben von Schicht n-1 nach Schicht n wieder &lt;b&gt;zusammengesetzt 
+      (reassembliert)&lt;/b&gt;. Auch eine Zusammenfassung mehrerer PDUs f&amp;#252;r den 
+      Transport und Wiederaufspaltung im Zielsystem ist m&amp;#246;glich.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit &lt;b&gt;Protokollstapel&lt;/b&gt; wird die Gesamtheit aller Protokolle auf 
+      allen Schichten bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>356</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den prinzipiellen Aufbau eines Computernettzes am Beispiel des 
+      Internets!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Netzwerkanwendungen laufen auf Endsystemen, auch Hosts genannt. 
+      Diese sind durch Kommunikationsleitungen, z.B. gef&amp;#252;hrte Medien wie 
+      Koaxialkabel, Kupferkabel, Glasfaser oder auch ungef&amp;#252;hrte Medien 
+      (&amp;#220;bertragung durch Funksignale) miteinander verbunden. Die 
+      &amp;#220;bertragungsgeschwindigkeit (Bandbreite, gemessen in Bit/s) gibt an, wie 
+      schnell die Daten&amp;#252;bertragung stattfinden kann.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In einem gr&amp;#246;&amp;#223;eren Netzwerk wie dem Internet sind die Endger&amp;#228;te nicht 
+      direkt miteinander verbunden. Zwischen ihnen ausgetauschte Nachrichten 
+      passieren sogenannte Transitsysteme (Router / Bridges). Den Weg, den ein 
+      Paket vom Quellhost zum Zielhost nimmt, bezeichnet man auch als Route 
+      oder Pfad.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Internet ist kein homogenes Netzwerk, sondern ein hierarchischer 
+      Zusammenschluss aus privaten und &amp;#246;ffentlichen Netzen. Endsysteme sind 
+      &amp;#252;ber Zugangsnetzwerke (LANs, W&amp;#228;hlverbindung, mobiler Access Point) an 
+      lokale ISP's (Internet Service Provider) angebunden. Lokale ISP's sind 
+      wiederum mit regionalen ISP's verbunden, diese mit nationalen ISP's und 
+      diese mit internationalen ISP's.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Verbindungen und Nachrichten im Internet befolgen Internetstandards, 
+      die von der IETF (Internet Engineering Task Force) entwickelt werden. 
+      Die Standardiesierungsdokumente werden RFCs (Request for Comments) 
+      genannt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>357</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Begriffe Client und Server!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Clients und Server sind&lt;b&gt; Endsysteme &lt;/b&gt;(Ger&amp;#228;te, die am &amp;#228;u&amp;#223;eren Rand 
+      des Internets angekoppelt sind).
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Server&lt;/b&gt; sind Rechner, die Dienstleistungen f&amp;#252;r andere Rechner 
+      anbieten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Clients &lt;/b&gt;sind Rechner, die Dienste anderer Rechner in Anspruch 
+      nehmen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>358</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen Leitungsvermittlung und 
+      Paketvermittlung!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In&lt;b&gt; leitungsvermittelten Netzen &lt;/b&gt;wird f&amp;#252;r jede 
+      Kommunikationsanforderung eine &lt;i&gt;&lt;b&gt;dauerhafte Verbindung&lt;/b&gt;&lt;/i&gt; 
+      aufgebaut. Dazu werden die auf einem Pfad vom Sender zum Empf&amp;#228;nger zur 
+      Kommunikation zwischen den Endsystemen&lt;i&gt;&lt;b&gt; ben&amp;#246;tigten Ressourcen&lt;/b&gt;&lt;/i&gt; 
+      (Puffer, Leitungsbandbreite) f&amp;#252;r die &lt;b&gt;&lt;i&gt;Dauer der Sitzung 
+      reserviert&lt;/i&gt;&lt;/b&gt;, d. h. f&amp;#252;r den Zeitraums, in dem Sender und Empf&amp;#228;nger 
+      Nachrichten austauschen wollen. Ein &lt;b&gt;&lt;i&gt;Beispiel&lt;/i&gt;&lt;/b&gt; daf&amp;#252;r ist das 
+      alte, &lt;b&gt;&lt;i&gt;analoge Telefonnetz&lt;/i&gt;&lt;/b&gt;; hier wurde f&amp;#252;r jedes 
+      Telefongespr&amp;#228;ch eine Leitungsverbindung geschaltet, die erst bei 
+      Beendigung des Gespr&amp;#228;chs wieder abgebaut wurde.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In &lt;b&gt;paketvermittelten Netzen&lt;/b&gt; werden diese &lt;b&gt;&lt;i&gt;Ressourcen nicht 
+      reserviert&lt;/i&gt;&lt;/b&gt;. Jede Nachricht, die in einer Sitzung gesendet wird, 
+      verwendet die &lt;b&gt;&lt;i&gt;Ressourcen nach Bedarf.&lt;/i&gt;&lt;/b&gt; Es kann daher 
+      vorkommen, dass Nachrichten oder Teile davon auf den Zugriff auf eine 
+      Verbindungsleitung warten m&amp;#252;ssen. Sie stehen dann z. B. in einer &lt;b&gt;&lt;i&gt;Warteschlange&lt;/i&gt;&lt;/b&gt; 
+      an. Die Paketvermittlung erlaubt die &lt;b&gt;&lt;i&gt;gleichzeitige Nutzung von 
+      Pfaden oder Teilpfaden&lt;/i&gt;&lt;/b&gt; durch mehrere Endsysteme. In modernen, 
+      paketvermittelten Netzen schickt der Quellhost, auf dem der 
+      Senderprozess l&amp;#228;uft, &lt;b&gt;&lt;i&gt;lange Nachrichten als Folge kleiner 
+      Pakete&lt;/i&gt;&lt;/b&gt;. Dazu teilt er die Nachricht in Teile und gibt diese and 
+      die darunterliegende Schicht weiter. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>550</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>359</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Art von Vermittlung findet im Internet statt - Leitungs- oder 
+      Paketvermittlung? Warum?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Internet ist ein &lt;b&gt;paketvermitteltes Netz&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Gr&amp;#252;nde:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Vorl&amp;#228;ufer des Internets war das sogenannte &lt;b&gt;ARPANET&lt;/b&gt;, das 
+      in den 1960er Jahren von der ARPA (Advanced Research Projects Agency) 
+      entwickelt wurde, einer Forschungseinrichtung des amerikanischen 
+      Verteidigungsministeriums. Im Unterschied zum leitungsvermittelten 
+      Telefonnetz sollte ein sehr&lt;b&gt;&lt;i&gt; ausfallsicheres Netz&lt;/i&gt;&lt;/b&gt; 
+      entstehen, das auch bei Zerst&amp;#246;rung von Tielen der Verbindungen weiterhin 
+      funktionsf&amp;#228;hig blieb. Au&amp;#223;erdem sollten die &lt;b&gt;&lt;i&gt;Verbindungsleitungen 
+      gemeinsam genutzt&lt;/i&gt;&lt;/b&gt; und nicht f&amp;#252;r eine Verbindung zwischen zwei 
+      Knoten exklusiv reserviert werden. Jeder Knoten im Netz konnte im 
+      Prinzip &lt;b&gt;&lt;i&gt;zu jeder Zeit Nachrichten an jeden&lt;/i&gt;&lt;/b&gt; anderen 
+      schicken, wobei auch der&lt;b&gt;&lt;i&gt; Weg zwischen den Knoten nicht unbedingt 
+      festgelegt&lt;/i&gt;&lt;/b&gt; war. Diese Anforderungen waren nur durch 
+      Paketvermittlung zu erf&amp;#252;llen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>360</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum werden Nachrichten nicht als  ganzes versendet, sondern in &lt;b&gt;kleine 
+      Pakete aufgeteilt&lt;/b&gt; und wie bezeichnet man diese&lt;b&gt; Form der 
+      Paketvermittlung&lt;/b&gt;? Welche &amp;#220;berlegungen ergeben sich im Bezug auf die &lt;b&gt;Nachrichtengr&amp;#246;&amp;#223;e&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Werden bei der Paketvermittlung Nachrichten in kleine Pakete aufgeteilt, 
+      so bezeichnet man dies als &lt;b&gt;Nachrichtenvermittlung&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der &lt;b&gt;Vorteil &lt;/b&gt;von vielen kleinen Nachrichten ist die &lt;i&gt;&lt;b&gt;Nutzung 
+      paralleler &amp;#220;bertragungswege&lt;/b&gt;&lt;/i&gt;. &lt;b&gt;&lt;i&gt;Bei &amp;#220;bertragungsfehlern&lt;/i&gt;&lt;/b&gt; 
+      muss au&amp;#223;erdem &lt;b&gt;&lt;i&gt;nicht die ganze Nachricht wiederholt &lt;/i&gt;&lt;/b&gt;gesendet 
+      werden, sondern nur das fehlerhafte Paket. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der&lt;b&gt; Nachteil&lt;/b&gt; von vielen kleinen Nachrichten ist der steigende &lt;b&gt;&lt;i&gt;Header-Overhead&lt;/i&gt;&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>361</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche &lt;b&gt;2 Klassen der Paketvermittlung&lt;/b&gt; gibt es?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Datagramm-Netzwerke&lt;/b&gt; - Pakete werden anhand von 
+      Hostzieladressen weitergeleitet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beispiel: &lt;b&gt;&lt;i&gt;IP &lt;/i&gt;&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.)&lt;b&gt;&lt;i&gt; &lt;/i&gt;VC-Netzwerke (Virtual Channels, virtuelle Kan&amp;#228;le)&lt;/b&gt; 
+      - Pakete werden anhand von virtuellen Kanalnummern weitergeleitet. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beispiel: &lt;b&gt;&lt;i&gt;X.25, ATM, Frame-Relay&lt;/i&gt;&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>362</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welchen Verz&amp;#246;gerungen unterliegt ein Paket von einem Router zum n&amp;#228;chsten?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die&lt;b&gt; Gesamtverz&amp;#246;gerung&lt;/b&gt; setzt sich zusammen aus:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.)&lt;b&gt; Verarbeitungsverz&amp;#246;gerung&lt;/b&gt;: Die Zeit, die ein Router f&amp;#252;r 
+      die Feststellung ben&amp;#246;tigt, wohin das Paket weiterzuleiten ist, ggfs. 
+      auch die Zeit, um Bitfehler zu entdecken, die durch St&amp;#246;rungen auf der 
+      Leitung bei der &amp;#220;bertragung auftreten k&amp;#246;nnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Warteschlangenverz&amp;#246;gerung: &lt;/b&gt;Die Zeit, die das Paket in 
+      einer Warteschlange eines Routers verbringt, um auf die &amp;#220;bertragung auf 
+      einer ausgehenden Verbindungsleitung zu warten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;&amp;#220;bertragungsverz&amp;#246;gerung&lt;/b&gt;: Die Zeit, die f&amp;#252;r die 
+      Einstellung aller Paketbits in das &amp;#220;bertragungsmedium erforderlich ist, 
+      d. h. Gr&amp;#246;&amp;#223;e des Pakets in Bit geteilt durch die Bandbreite der 
+      Kommunikationsschnittstelle zu dem physischen Medium in bps.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Ausbreitungsverz&amp;#246;gerung:&lt;/b&gt; Die Zeit, die ein Bit braucht, 
+      um sich von Router A bis zum n&amp;#228;chsten Router B auszubreiten, nachdem es 
+      auf die Verbindungsleitung bef&amp;#246;rdert wurde. Die Ausbreitungsverz&amp;#246;gerung 
+      von A nach B ist die Entfernung zwischen A und B geteilt durch die 
+      Ausbreitungsgeschwindigkeit, die vom physischen Medium der 
+      Verbindungsleitung abh&amp;#228;ngt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Merkhilfe&lt;/b&gt;: &lt;b&gt;V&lt;/b&gt;iele &lt;b&gt;W&lt;/b&gt;erden &lt;b&gt;&amp;#220;&lt;/b&gt;berall &lt;b&gt;A&lt;/b&gt;nkommen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit &lt;b&gt;Ende-zu-Ende-Verz&amp;#246;gerung&lt;/b&gt; bezeichnet man die Summe der 
+      Gesamtverz&amp;#246;gerungen in allen Routern, die ein Paket am Pfad von 
+      Quellhost zu Zielhost passiert.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>363</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie kann es zu &lt;b&gt;Paketverlusten &lt;/b&gt;kommen, obwohl keine 
+      Verbindundungsstrecke unterbroche ist und alle Router ihre Arbeit tun?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn ein Router keinen Platz mehr in seiner Warteschlange f&amp;#252;r weitere 
+      Pakete hat, verwirft er die n&amp;#228;chsten ankommenden Pakete.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>364</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Z&amp;#228;hle die Schichten im Internet-Schichtenmodell auf und nenne die 
+      dazugeh&amp;#246;rigen PDU's!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>365</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Anwendungsschicht des Internet-Schichtenmodells grob und 
+      nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Anwendungsschicht&lt;/b&gt; ist zust&amp;#228;ndig f&amp;#252;r die Unterst&amp;#252;tzung von&lt;b&gt; 
+      Netzwerk- Anwendungsanwendungen&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Sie beinhaltet viele Protokolle, darunter&lt;b&gt; HTTP&lt;/b&gt; f&amp;#252;r das Web, &lt;b&gt;SMTP 
+      &lt;/b&gt;f&amp;#252;r E-Mail, &lt;b&gt;FTP&lt;/b&gt; f&amp;#252;r Filetransfer,&lt;b&gt; NNTP&lt;/b&gt; f&amp;#252;r 
+      News, &lt;b&gt;Telnet&lt;/b&gt; f&amp;#252;r Remote Login und &lt;b&gt;SIP &lt;/b&gt;f&amp;#252;r 
+      Internettelefonie. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In der Internet-Terminologie wird die Anwendungsschicht auch als &lt;b&gt;Verarbeitungsschicht&lt;/b&gt; 
+      bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>366</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die Transportschicht des Internet-Schichtenmodells grob und 
+      nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Transportschicht&lt;/b&gt; stellt einen Kommunikationsdienst zwischen 
+      zwei Anwendungsprozessen bereit und erm&amp;#246;glicht so eine 
+      Endpunkt-zu-Endpunkt-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Kommunikation von Quell-Host zu Ziel-Host. Es gibt zwei 
+      &amp;#220;bertragungsprotokolle: TCP und UDP. &lt;b&gt;TCP &lt;/b&gt;bietet einen 
+      zuverl&amp;#228;ssigen, verbindungsorientierten Dienst, &amp;#252;ber das ein 
+      Bytestrom von einem Rechner im Internet fehlerfrei einem anderen Rechner 
+      zugestellt wird. &lt;b&gt;UDP&lt;/b&gt; bietet einen unzuverl&amp;#228;ssigen, verbindungslosen 
+      Dienst.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>367</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die&lt;b&gt; Vermittlungsschicht&lt;/b&gt; des Internet-Schichtenmodells 
+      grob und nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Vermittlungsschicht &lt;/b&gt;bietet einen Endpunkt-zu-Endpunkt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Kommunikationsdienst. Sie transportiert Datagramme vom Quellhost zum
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Zielhost. Die Vermittlungsschicht des Internets besteht aus zwei 
+      Hauptkomponenten: dem IP und vielen Routing-Protokollen. Das &lt;b&gt;IP&lt;/b&gt; 
+      definiert das Format eines IP-Datagrammes. Die &lt;b&gt;Routing-Protokolle &lt;/b&gt;bestimmen, 
+      welche Routen die Datagramme zwischen Quelle und Ziel nehmen. Innerhalb 
+      eines Netzwerks kann der Netzwerkadministrator jedes beliebige 
+      Routing-Protokoll benutzen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Vermittlungsschicht, die das IP und viele Routing-Protokolle 
+      enth&amp;#228;lt, wird
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      auch als &lt;b&gt;IP-Schicht &lt;/b&gt;oder &lt;b&gt;Internet-Schicht&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>368</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die&lt;b&gt; Sicherungsschicht&lt;/b&gt; des Internet-Schichtenmodells 
+      grob und nenne Beispiele f&amp;#252;r Protokolle!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die&lt;b&gt; Sicherungsschicht&lt;/b&gt; ist f&amp;#252;r die Bef&amp;#246;rderung ganzer Rahmen von 
+      einem
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Knoten (Host oder Paket-Switch) zu einem benachbarten Knoten zust&amp;#228;ndig,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      die physikalisch &amp;#252;ber einen &amp;#220;bertragungskanal, z. B. ein Kabel, eine 
+      Telefonleitung oder eine Punkt-zu-Punkt-Funkverbindung, miteinander 
+      verbunden sind.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der auf der Sicherungsschicht bereitgestellte Dienst h&amp;#228;ngt von dem 
+      spezifischen Sicherungsschichtprotokoll ab. &lt;b&gt;Ethernet&lt;/b&gt; und &lt;b&gt;PPP&lt;/b&gt; 
+      (Point-to-Point Protocol) und in gewissem Umfang auch &lt;b&gt;ATM&lt;/b&gt; und &lt;b&gt;Frame-Relay&lt;/b&gt; 
+      sind Beispiele f&amp;#252;r die Sicherungsschicht.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>369</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die&lt;b&gt; Bit&amp;#252;bertragungsschicht&lt;/b&gt; des 
+      Internet-Schichtenmodells grob!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Bit&amp;#252;bertragungsschicht&lt;/b&gt; &amp;#252;bertr&amp;#228;gt die einzelnen Bits der 1-PDU 
+      von einem Router zum n&amp;#228;chsten. Die Protokolle dieser Schicht h&amp;#228;ngen 
+      wesentlich von der Verbindungsleitung und vom &amp;#220;bertragungsmedium der 
+      Verbindungsleitung ab. Ethernet benutzt z.B. viele Protokolle f&amp;#252;r die 
+      Bit&amp;#252;bertragungsschicht: eines f&amp;#252;r Twisted-Pair Kabel, eines f&amp;#252;r 
+      Koaxialkabel, eines f&amp;#252;r Glasfaser usw. Je nach Medium wird ein Bit 
+      unterschiedlich auf der Verbindungsleitung &amp;#252;bertragen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>370</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Ger&amp;#228;te im Internet implementieren wieviele Schichten des 
+      Internet-Schichtenmodells? Warum gibt es diese Unterschiede?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1. Router: implementieren Schicht 1-3
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2. Bridges: implementieren Schicht 1-2
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3. Endsysteme: implementieren Schicht 1-5
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die reduzierte Komplexit&amp;#228;t von Routern und Bridges h&amp;#228;ngt mit dem 
+      Bestreben zusammen, einen gro&amp;#223;en Teil der Komplexit&amp;#228;t der 
+      Internet-Architektur auf die R&amp;#228;nder des Netzwerks zu legen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>371</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist das ISO/OSI Referenzmodell und wof&amp;#252;r wird es eingesetzt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das ISO/OSI Referenzmodell ist definiert durch die internationale Norm &lt;b&gt;ISO/IS 
+      7498&lt;/b&gt; mit dem Titel &lt;b&gt;&amp;quot;Information Processing Systems: Open 
+      Systems Interconnection - Basic Reference Model&amp;quot;&lt;/b&gt;.  Hier wurde 
+      ein Rahmen geschaffen, um die Kommunikation zwischen Computersystemen zu 
+      standardisieren. Das ISO/OSI Referenzmodell definiert &lt;b&gt;sieben 
+      Schichten.&lt;/b&gt; Das Referenzmodell schreibt keine Implementierung dieser 
+      Schichten vor, sondern beschreibt zu jeder Schicht ihre allgemeinen 
+      Aufgaben, ihre der n&amp;#228;chsth&amp;#246;heren Schicht bereitzustellenden Dienste und 
+      die in ihr zu realisierenden Funktionen. Das Modell bildet damit ein&lt;b&gt; 
+      Rahmenwerk zur Implementierung von Protokollen&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>372</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe kurz die einzelnen Schichten vom ISO/OSI Referenzmodell
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 1:&lt;/b&gt; &lt;b&gt;Bit&amp;#252;bertragungsschicht (physical layer):&lt;/b&gt; 
+      stellt physikalische
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#220;bertragungskan&amp;#228;le zur Verf&amp;#252;gung, die es gestatten, beliebige Bitfolgen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      zu &amp;#252;bertragen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 2: Sicherungsschicht (data link layer):&lt;/b&gt; stellt 
+      weitgehend sichere
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#220;bertragungskan&amp;#228;le f&amp;#252;r die &amp;#220;bertragung von Datenbl&amp;#246;cken zur Verf&amp;#252;gung. 
+      Hierzu werden Verfahren zur Fehlererkennung und Fehlerkorrektur eingesetzt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 3: Vermittlungsschicht (network layer):&lt;/b&gt; stellt 
+      logische &amp;#220;bertragungskan&amp;#228;le zwischen Endsystemen zur Verf&amp;#252;gung. Ein 
+      Beispiel ist
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      das IP im Internet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 4: Transportschicht (transport layer):&lt;/b&gt; stellt logische 
+      &amp;#220;bertragungskan&amp;#228;le zwischen den auf den Endsystemen aktiven, miteinander
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      kommunizierenden Anwendungsprozessen zur Verf&amp;#252;gung. Beispiele sind
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      die schon kurz angesprochenen Protokolle TCP und UDP im Internet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 5: Kommunikationssteuerungsschicht / Sitzungsschicht
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;(session layer): &lt;/b&gt;stellt Dienste zur Verf&amp;#252;gung, die es den 
+      kommunizierenden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Prozessen erlauben, ihren Dialog zu kontrollieren und zu synchronisieren.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 6: Darstellungsschicht (presentation layer):&lt;/b&gt; stellt 
+      Dienste zur
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Verf&amp;#252;gung, die die Darstellung von Daten in unterschiedlichen 
+      Repr&amp;#228;sentationen (z. B. zwischen verschiedenen Zeichencodierungen) 
+      umwandeln.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Schicht 7: Anwendungsschicht (application layer): &lt;/b&gt;implementiert 
+      die eigentliche Anwendungsfunktionalit&amp;#228;t.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>373</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist der Unterschied zwischen &lt;b&gt;Netzwerkanwendungen&lt;/b&gt; und&lt;b&gt; 
+      Protokollen der Anwendungsschicht&lt;/b&gt;? Nenne Beispiele!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die bekannteste &lt;b&gt;&lt;u&gt;Netzwerkanwendung&lt;/u&gt; &lt;/b&gt;ist das &lt;b&gt;WWW&lt;/b&gt;. 
+      Diese besteht aus: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) einem &lt;b&gt;Web-Browser &lt;/b&gt;als Benutzerschnittstelle, z. B. Netscape 
+      Navigator, Microsoft Internet Explorer, Opera, OmniWeb, Mozilla etc.,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;HTML (HyperText Markup Language),&lt;/b&gt; einem Standard f&amp;#252;r 
+      Dokumentenformate, damit der Browser die Dokumente anzeigen kann,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Web-Servern&lt;/b&gt;, die die Dokumente bereithalten, z. B. Apache-, 
+      Microsoft-
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Netscape-Server, und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;HTTP (HyperText Transfer Protocol)&lt;/b&gt;, einem &lt;b&gt;&lt;u&gt;Protokoll der 
+      Anwendungsschicht&lt;/u&gt;&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Protokolle stellen also Kommunikationsrichtlinien von 
+      Netzwerkanwendungen dar.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>374</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das Client-Server-Modell!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Im &lt;b&gt;Client/Server-Modell &lt;/b&gt;werden Prozesse in zwei Gruppen 
+      eingeteilt. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Ein &lt;b&gt;Server&lt;/b&gt; ist ein Prozess, der einen bestimmten Dienst 
+      implementiert und bereitstellt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Ein &lt;b&gt;Client &lt;/b&gt;ist ein Prozess, der einen Dienst von einem Server 
+      anfordert,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      indem er ihm eine Anforderung sendet und dann auf die Antwort des Servers
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      wartet. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Anders ausgedr&amp;#252;ckt: Der Client ist eine Anwendung, die auf einer 
+      Anwendungsmaschine l&amp;#228;uft, Dienste beim Server anfordert und deren 
+      Ergebnisse vom Server zur&amp;#252;ck erh&amp;#228;lt. Zum Beispiel fordern Web-Clients, 
+      in der Regel implementiert in Web-Browsern, Dokumente beim Web-Server an 
+      und stellen diese f&amp;#252;r ihre Benutzer dar. Der Web-Server unterst&amp;#252;tzt das 
+      Abholen von Dokumenten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Client ist &amp;#252;blicherweise in die Anwendung eingebettet. Ein Web-Browser 
+      implementiert beispielsweise die Funktionalit&amp;#228;t von HTTP, die ein Client zur 
+      Kommunikation mit dem Web-Server ben&amp;#246;tigt, die sogenannte &lt;b&gt;Client-Seite 
+      von HTTP&lt;/b&gt;. Der Web-Server implementiert analog die &lt;b&gt;Server-Seite 
+      von HTTP&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>375</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein URL?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine &lt;b&gt;URL (Uniform Resource Locator)&lt;/b&gt; identifiziert eine Ressource 
+      (z. B. eine Webseite) auf eindeutige Weise.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine URL besteht aus drei Teilen: dem &lt;b&gt;Protoko&lt;/b&gt;ll, dem &lt;b&gt;DNS-Name&lt;/b&gt;n&lt;b&gt; 
+      oder&lt;/b&gt; der
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;IP-Adresse&lt;/b&gt; des Rechners (den eindeutigen Namen des Hosts), auf 
+      dem sich
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      die Seite befindet und einem &lt;b&gt;lokalen eindeutigen Namen&lt;/b&gt; der Seite. 
+      Dazu wird
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      das Namensschema &lt;b&gt;&amp;lt;protocol id&amp;gt;:&amp;lt;protocol specific address&amp;gt;&lt;/b&gt; 
+      verwendet, siehe Abbildung.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>376</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie viele Verbindungen werden ben&amp;#246;tigt, um eine Website zu laden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;1 UDP-Verbindung&lt;/b&gt; f&amp;#252;r &lt;b&gt;Abfrage der IP-Adresse bei 
+      DNS-Server&lt;/b&gt; (falls Seite nicht in lokalem Cache ist)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;1 TCP-Verbindung&lt;/b&gt; f&amp;#252;r &lt;b&gt;Abruf der Seite selbst&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;n TCP-Verbindungen&lt;/b&gt;, wenn &lt;b&gt;n Referenzen&lt;/b&gt; abgerufen werden 
+      bei &lt;b&gt;nicht-persistenten Verbindungen&lt;/b&gt; (HTTP 1.0 oder explizit so 
+      gefordert bei HTTP 1.1) 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      *oder*
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) &lt;b&gt;0 &amp;lt;= m &amp;lt;= n TCP-Verbindungen&lt;/b&gt; bei&lt;b&gt; persistenten 
+      Verbindungen&lt;/b&gt; (HTTP 1.1), wenn &lt;b&gt;n Referenzen von m verschiedenen 
+      Servern&lt;/b&gt; angefordert werden m&amp;#252;ssen (und alle Server HTTP 1.1 
+      unterst&amp;#252;tzen)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt;&lt;b&gt; Referenzen&lt;/b&gt; k&amp;#246;nnen Bilder, Videos, ... sein
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>377</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Arten von HTTP-Nachrichten gibt es? Beschreibe deren Bestandteile!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;HTTP-Anfragenachricht:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Statuszeile&lt;/u&gt;: GET-Methode, Dateiname, HTTP-Version
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Header-Zeilen&lt;/u&gt;: Webserver, auf dem die Datei liegt, explizite 
+      Anforderung einer nicht persistenten Verbindung, Webbrowser...
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;HTTP-Antwortnachricht: &lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Statuszeile&lt;/u&gt;: HTTP-Version, Statuscode, Phrase
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Header-Zeilen&lt;/u&gt;: Lieferdatum,Server, Objektbeschreibungen...
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Body&lt;/u&gt;: eigentliche Nachricht
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>378</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Versionen von HTTP gibt es? Welche entscheidenden Unterschiede 
+      gibt es?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Es gibt derzeit &lt;u&gt;zwei HTTP-Versionen&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;- HTTP 1.0
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;- HTTP 1.1&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Unterschiede:&lt;/u&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      HTTP 1.0 arbeitet nur mit &lt;b&gt;nicht-persistenten Verbindungen&lt;/b&gt;. Das 
+      bedeutet, dass die TPC-Verbindung sofort nachdem der Server die 
+      angeforderte Seite ausgeliefert hat abgebaut wird.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei HTTP 1.1 werden standardm&amp;#228;&amp;#223;ig &lt;b&gt;persistente Verbindungen&lt;/b&gt; 
+      verwendet. Dabei bleibt die Verbindung f&amp;#252;r eine konfigurierbare Zeit (&lt;b&gt;Timeout-Intervall&lt;/b&gt;) 
+      aktiv, kann also zur &amp;#220;bertragung mehrerer Objekte vom selben Server 
+      genutzt werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Man unterscheidet au&amp;#223;erdem zwischen persistenten Verbindungen &lt;b&gt;mit 
+      Pipelining&lt;/b&gt; (Client sendet Anfragen f&amp;#252;r Referenzen, bevor die vorige 
+      Anfrage abgearbeitet wurde) und &lt;b&gt;ohne Pipelining&lt;/b&gt; (eine Abfrage 
+      nach der anderen. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>379</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Web-Caches?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Web-Caches sind Web-Server, die von (lokalen) Organisationen eingesetzt 
+      werden, um &lt;b&gt;Kopien der zuletzt angeforderten Objekte&lt;/b&gt; zu speichern. 
+      Die Web-Browser der Benutzer werden so konfiguriert,dass sie zun&amp;#228;chst 
+      beim Web-Cache nach Objekten anfragen. Verf&amp;#252;gt der Web-Cache &amp;#252;ber 
+      das Objekt, so liefert er es direkt zur&amp;#252;ck.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Andernfalls fungiert der Web-Cache als Web-Client und fordert das Objekt 
+      seinerseits vom dem Originalhost an, hinterlegt eine Kopie und liefert 
+      dem Web-Browser das gew&amp;#252;nschte Objekt. Web-Caches k&amp;#246;nnen also 
+      gleichzeitig als Server und Client operieren. Sie werden durch 
+      sogenannte &lt;b&gt;Proxy-Server &lt;/b&gt;implementiert. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>380</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Gr&amp;#252;nde sprechen f&amp;#252;r die Einf&amp;#252;hrung von Web-Caches?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Gr&amp;#252;nde f&amp;#252;r die Einf&amp;#252;hrung von Web-Caches&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1. Die &lt;b&gt;Reaktionszeit auf eine Client-Anfrage&lt;/b&gt; kann &lt;b&gt;reduziert&lt;/b&gt; 
+      werden. Dieser Effekt wird noch verst&amp;#228;rkt, wenn eine 
+      Hochgeschwindigkeitsverbindung zwischen Web-Cache und Hosts besteht, was 
+      in vielen Organisationen der Fall ist.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2. Der Verkehr von einer Institution in das &amp;#246;ffentliche Internet kann 
+      reduziert werden, so dass die Institution mit &lt;b&gt;weniger Bandbreite&lt;/b&gt; 
+      an das &amp;#246;ffentliche Netz angeschlossen sein muss.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3. Ein Host soll nicht im Internet als Client eines Web-Servers 
+      erkennbar sein. Er benutzt einen vertrauensw&amp;#252;rdigen Proxy-Server, so 
+      dass der Web-Server nicht erf&amp;#228;hrt, von welchem Host aus die Anfrage 
+      wirklich kommt, der &lt;b&gt;Client bleibt &lt;/b&gt;also dem Server gegen&amp;#252;ber&lt;b&gt; 
+      anonym&lt;/b&gt;. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>381</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Besonderheiten bez&amp;#252;glich der Verbindung gibt es bei FTP? Was sind 
+      die zwei wichtigsten Unterschiede zu HTTP?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      FTP nutzt &lt;u&gt;2 TPC-Verbindungen&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Steuerverbindung&lt;/b&gt;: &amp;#220;bertragung von Steuerinformationen 
+      (Anmeldedaten, Navigation durch Verzeichnisse,..)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Datenverbindung&lt;/b&gt;: wird bei Dateitransfer aufgebaut
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Out-of-band&lt;/b&gt; bedeutet, dass wie bei &lt;i&gt;&lt;b&gt;FTP &lt;/b&gt;&lt;/i&gt;die 
+      Steuerinformationen separat &amp;#252;bertragen werden.&lt;b&gt;&lt;i&gt; HTTP&lt;/i&gt;&lt;/b&gt; 
+      &amp;#252;bertr&amp;#228;gt seine Steuerinformationen&lt;b&gt; In-band&lt;/b&gt;, also in 
+      denselben TCP-Paketen, in denen die Daten &amp;#252;bertragen werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      HTTP ist ein &lt;b&gt;zustandsloses Protokoll&lt;/b&gt;, das bedeutet, dass 
+      Webserver keine Informationen &amp;#252;ber die Clients speichern, im Gegensatz 
+      von FTP, wo der aktuelle Sitzungsstand (z.B. aktuelles 
+      Arbeitsverzeichnis) gespeichert wird.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>382</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert E-Mail?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das E-Mail-System des Internets basierte urspr&amp;#252;nglich nur auf &lt;b&gt;SMTP 
+      (Simple Mail Transfer Protocol)&lt;/b&gt;, das schon seit 1982 existiert und 
+      also wesentlich &amp;#228;lter ist als z. B. HTTP. Dieses SMTP ist ein sehr 
+      einfach gehaltenes Protokoll zum Versenden von E-Mails zwischen 
+      sogenannten Mail-Servern mittels TCP, das nur besonderen Wert auf 
+      Zuverl&amp;#228;ssigkeit bei Ausfall von Leitungen oder Hosts legt, an 
+      Authentifizierung und &amp;#228;hnlichen Luxus wurde damals jedoch nicht gedacht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf allen Mail-Servern, die heute &amp;#252;blicherweise von ISPs betrieben 
+      werden, l&amp;#228;uft ein besonderer Prozess, der &lt;b&gt;Message Transfer Agent 
+      (MTA)&lt;/b&gt;, der E-Mails annimmt (oder die Annahme verweigert) und 
+      entweder in lokalen Mailboxen f&amp;#252;r seine Benutzer abspeichert oder per 
+      SMTP an andere Mail-Server weiterleitet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Um es den Endbenutzern m&amp;#246;glichst bequem zu machen, sind heute weitere 
+      Protokolle im Einsatz. Zum Abholen der E-Mails vom Mail-Server auf den 
+      eigenen Rechner wird &lt;b&gt;POP3 (Post Office Protocol Version 3)&lt;/b&gt; 
+      benutzt, zum komfortablen Verwalten von Mailboxen, die auf dem Server 
+      bleiben, dient &lt;b&gt;IMAP (Internet Message Access Protocol)&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Benutzer hat auf seinem Rechner ein meist sehr m&amp;#228;chtiges Programm, 
+      den &lt;b&gt;Mail User Agent (MUA&lt;/b&gt;, z. B. Mozilla Thunderbird oder 
+      Microsoft Outlook), der einmal auf die verwendeten Protokolle und 
+      Benutzerdaten eingestellt werden muss. Zum Versenden der E-Mails wird 
+      auch vom MUA weiter SMTP benutzt, seit einiger Zeit aber mit 
+      Authentifizierung.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auch ein Abruf via HTTP ist bei vielen Mailanbietern m&amp;#246;glich (Webmail).
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>383</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind MIME und wof&amp;#252;r werden sie bei SMTP ben&amp;#246;tigt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da bei SMTP nur eine &lt;b&gt;&amp;#220;bertragung von 7-bit-ASCII Zeichen&lt;/b&gt; 
+      m&amp;#246;glich ist, entwickelte man einen &lt;b&gt;Kodierungsstandard&lt;/b&gt; f&amp;#252;r 
+      Sonderzeichen sowie f&amp;#252;r das Versenden von beliebigen Dateiformaten als 
+      Mailanhang. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;MIME&lt;/b&gt; steht f&amp;#252;r &lt;b&gt;Multipurpose Internet Mail Extensions&lt;/b&gt; 
+      und sollte von jedem MUA verstanden werden. Mit MIME werden beliebige 
+      Dateiformate in 7-bit-Zeichen kodiert. Mit dem MIME-Typ kann angegeben 
+      werden, um welches Dateiformat es sich handelt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>384</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>385</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen Pull-Protokollen und Push-Protokollen 
+      und nenne Beispiele!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einem &lt;b&gt;Push-Protokoll&lt;/b&gt; schickt der Sender unaufgefordert 
+      Nachrichten an den Empf&amp;#228;nger. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einem &lt;b&gt;Pull-Protokoll &lt;/b&gt;spielt der Empf&amp;#228;nger den aktiven Part 
+      und holt sich seine Informationen selbst. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;SMTP ist ein Push-Protokoll&lt;/b&gt;, dh. der sendende Mailserver &lt;b&gt;&lt;i&gt;schiebt&lt;/i&gt;&lt;/b&gt; 
+      die E-Mail unaufgefordert auf den empfangende Mailserver. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Webserver hingegen sendet niemals unaufgefordert Daten. Bei HTTP &lt;b&gt;&lt;i&gt;zieht&lt;/i&gt;&lt;/b&gt; 
+      die Anfragenachricht die Information bei Bedarf vom Web-Server; &lt;b&gt;HTTP 
+      ist ein Pull-Protokoll.&lt;/b&gt;
     &lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
