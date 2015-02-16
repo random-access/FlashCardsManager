@@ -10,4 +10,14 @@
 		<proj_id>5</proj_id>
 		<label_name>KE 2</label_name>
 	</label>
+	<label>
+		<label_id>14</label_id>
+		<proj_id>5</proj_id>
+		<label_name>KE 3</label_name>
+	</label>
+	<label>
+		<label_id>2</label_id>
+		<proj_id>5</proj_id>
+		<label_name>KE 4</label_name>
+	</label>
 </labels>

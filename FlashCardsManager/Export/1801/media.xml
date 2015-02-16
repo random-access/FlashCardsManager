@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <medias>
 	<media>
-		<media_id>32</media_id>
+		<media_id>14</media_id>
 		<card_id>54</card_id>
 		<path_to_media>pic-5-54-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>33</media_id>
+		<media_id>32</media_id>
 		<card_id>59</card_id>
 		<path_to_media>pic-5-59-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>34</media_id>
+		<media_id>33</media_id>
 		<card_id>68</card_id>
 		<path_to_media>pic-5-68-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>35</media_id>
+		<media_id>34</media_id>
 		<card_id>78</card_id>
 		<path_to_media>pic-5-78-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>36</media_id>
+		<media_id>35</media_id>
 		<card_id>80</card_id>
 		<path_to_media>pic-5-80-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>37</media_id>
+		<media_id>36</media_id>
 		<card_id>85</card_id>
 		<path_to_media>pic-5-85-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>38</media_id>
+		<media_id>37</media_id>
 		<card_id>88</card_id>
 		<path_to_media>pic-5-88-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>39</media_id>
+		<media_id>38</media_id>
 		<card_id>93</card_id>
 		<path_to_media>pic-5-93-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>40</media_id>
+		<media_id>39</media_id>
 		<card_id>96</card_id>
 		<path_to_media>pic-5-96-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>41</media_id>
+		<media_id>40</media_id>
 		<card_id>98</card_id>
 		<path_to_media>pic-5-98-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>47</media_id>
+		<media_id>41</media_id>
 		<card_id>1</card_id>
 		<path_to_media>pic-5-1-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>84</media_id>
+		<media_id>47</media_id>
 		<card_id>237</card_id>
 		<path_to_media>pic-5-237-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>85</media_id>
+		<media_id>84</media_id>
 		<card_id>243</card_id>
 		<path_to_media>pic-5-243-a.PNG</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>86</media_id>
+		<media_id>85</media_id>
 		<card_id>244</card_id>
 		<path_to_media>pic-5-244-a.PNG</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>87</media_id>
+		<media_id>86</media_id>
 		<card_id>246</card_id>
 		<path_to_media>pic-5-246-a.PNG</path_to_media>
 		<pictype>a</pictype>
@@ -100,6 +100,42 @@
 		<media_id>7</media_id>
 		<card_id>15</card_id>
 		<path_to_media>pic-5-15-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>8</media_id>
+		<card_id>16</card_id>
+		<path_to_media>pic-5-16-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>9</media_id>
+		<card_id>23</card_id>
+		<path_to_media>pic-5-23-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>10</media_id>
+		<card_id>24</card_id>
+		<path_to_media>pic-5-24-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>11</media_id>
+		<card_id>247</card_id>
+		<path_to_media>pic-5-247-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>12</media_id>
+		<card_id>253</card_id>
+		<path_to_media>pic-5-253-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>13</media_id>
+		<card_id>265</card_id>
+		<path_to_media>pic-5-265-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 </medias>

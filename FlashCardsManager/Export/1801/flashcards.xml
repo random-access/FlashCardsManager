@@ -3,7 +3,7 @@
 	<flashcard>
 		<card_id>53</card_id>
 		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -176,7 +176,7 @@
 	<flashcard>
 		<card_id>57</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -219,7 +219,7 @@
 	<flashcard>
 		<card_id>58</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -608,7 +608,7 @@
 	<flashcard>
 		<card_id>68</card_id>
 		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -637,7 +637,7 @@
 	<flashcard>
 		<card_id>69</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -945,7 +945,7 @@
 	<flashcard>
 		<card_id>76</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1027,7 +1027,7 @@
 	<flashcard>
 		<card_id>78</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1056,7 +1056,7 @@
 	<flashcard>
 		<card_id>79</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1322,7 +1322,7 @@
 	<flashcard>
 		<card_id>86</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -1525,7 +1525,7 @@
 	<flashcard>
 		<card_id>89</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -1674,7 +1674,7 @@
 	<flashcard>
 		<card_id>92</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1785,7 +1785,7 @@
 	<flashcard>
 		<card_id>94</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -2154,7 +2154,7 @@
 	<flashcard>
 		<card_id>101</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -2221,7 +2221,7 @@
 	<flashcard>
 		<card_id>102</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -2439,7 +2439,7 @@
 	<flashcard>
 		<card_id>1</card_id>
 		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -2952,7 +2952,7 @@
 	<flashcard>
 		<card_id>237</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3048,7 +3048,7 @@
 	<flashcard>
 		<card_id>239</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3334,7 +3334,7 @@
 	<flashcard>
 		<card_id>245</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3698,7 +3698,7 @@
 	<flashcard>
 		<card_id>15</card_id>
 		<proj_id>5</proj_id>
-		<stack>1</stack>
+		<stack>2</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3732,6 +3732,2429 @@
     &lt;/p&gt;
     &lt;p style="margin-top: 0"&gt;
       - &lt;b&gt;free&lt;/b&gt;, wenn der Block noch frei ist
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>16</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re das Prinzip von &lt;b&gt;Inodes&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>17</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie werden unter UNIX die Zugriffsrechte auf eine Datei oder ein 
+      Verzeichnis festgelegt?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Man teilt die Systembenutzer in drei Gruppen ein: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - den Eigent&amp;#252;mer des Objekts (&lt;b&gt;&lt;i&gt;user&lt;/i&gt;&lt;/b&gt;), 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - die Arbeitsgruppe (&lt;b&gt;&lt;i&gt;group&lt;/i&gt;&lt;/b&gt;), der er angeh&amp;#246;rt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - alle &amp;#252;brigen Systembenutzer (&lt;b&gt;&lt;i&gt;other&lt;/i&gt;&lt;/b&gt;).
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Au&amp;#223;erdem unterscheidet man zwischen den Zugriffsarten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - lesen (&lt;b&gt;&lt;i&gt;read&lt;/i&gt;&lt;/b&gt;)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - schreiben (&lt;b&gt;&lt;i&gt;write&lt;/i&gt;&lt;/b&gt;)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ausf&amp;#252;hren (&lt;b&gt;&lt;i&gt;execute&lt;/i&gt;&lt;/b&gt;)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Rechte werden mittels einem 9-stelligen (9 bit) System vergeben:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      &lt;b&gt;rwxr-xr--&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      bedeutet z.B: 
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - der User darf lesen, schreiben und ausf&amp;#252;hren (rwx)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - die Arbeitsgruppe darf lesen und ausf&amp;#252;hren (r-x)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - alle &amp;#252;brigen Systembenutzer d&amp;#252;rfen nur lesen
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; (nicht kursrelevant):&lt;/i&gt; es gibt eine alternative, k&amp;#252;rzere 
+      Schreibweise mit Zahlencodes, dabei wird &amp;quot;rwx&amp;quot; als Bitsequenz 
+      betrachtet, dh. 1 steht f&amp;#252;r Ausf&amp;#252;hren, 2 f&amp;#252;r schreiben und 4 f&amp;#252;r Lesen. 
+      Will man lesen+schreiben erlauben, addiert man die Zahlen, in diesem 
+      Fall also 4+2 = 6.
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      Obiges Beispiel lautet in der Zahlencode-Notation daher
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="center" style="margin-top: 0"&gt;
+      &lt;b&gt;754
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      denn:
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - 7 = lesen (4) + schreiben (2) + ausf&amp;#252;hren (1)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - 5 = lesen (4) + ausf&amp;#252;hren (1)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      - 4 = lesen (4)
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p align="left" style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>18</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen absoluten und relativen Pfadangaben 
+      sowie die Bezeichnungen &amp;quot;.&amp;quot; und &amp;quot;..&amp;quot; !
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Relative Pfadnamen gehen immer vom Arbeitsverzeichnis aus, dieses 
+      kann man mit &lt;b&gt;&lt;i&gt;pwd (print working directory)&lt;/i&gt;&lt;/b&gt; ausgeben 
+      lassen, mit &lt;b&gt;&lt;i&gt;chdir (change directory)&lt;/i&gt;&lt;/b&gt; kann man das 
+      Arbeitsverzeichnis &amp;#228;ndern.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) Absolute Pfadnamen gehen immer vom Wurzelverzeichnis (in Unix mit &amp;quot;/&amp;quot; 
+      bezeichnet) aus.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.  &lt;/b&gt;bezeichnet das aktuelle Verzeichnis
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.. &lt;/b&gt;bezeichnet das Elternverzeichnis
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Beispiele: &lt;/u&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;./meinedatei.txt&lt;/b&gt; ist dasselbe wie meinedatei.txt da .. in 
+      diesem Fall &amp;quot;wirkungslos&amp;quot; ist 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - gibt es einen Ordner order der einen Unterordner unterordner enth&amp;#228;lt 
+      sowie eine Datei datei.txt, kann man aus unterordner heraus datei.txt 
+      wie folgt ansprechen: &lt;b&gt;../datei.txt&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>19</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit welchem Befehl kann man unter UNIX &lt;b&gt;Dateiberechtigungen &amp;#228;ndern&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit dem Befehl &lt;b&gt;chmod &amp;lt;Benutzer&amp;gt; [+/-] &amp;lt;Berechtigung/-en&amp;gt;&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;u&gt;Beispiele:&lt;/u&gt; 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;&lt;i&gt;chmod u+x &lt;/i&gt;&lt;/b&gt;:= User darf ausf&amp;#252;hren
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;&lt;i&gt;chmod o-w &lt;/i&gt;&lt;/b&gt;:= Andere d&amp;#252;rfen nicht lesen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - &lt;b&gt;&lt;i&gt;chmod g+rx &lt;/i&gt;&lt;/b&gt;:= Die Arbeitsgruppe darf lesen und ausf&amp;#252;hren
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>20</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche 3 Aufgaben beim Nachrichtentransport sind Sache der 
+      Vermittlungsschicht?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Pfadermittlung (Routing): Die Vermittlungsschicht muss die Topologie 
+      der Router kennen und einen geeigneten Pfad f&amp;#252;r ein Paket vom Senderhost 
+      zum Empf&amp;#228;ngerhost bestimmen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Vermittlung von Paketen: Die Vermittlungsschicht muss entscheiden, 
+      &amp;#252;ber welche ausgehende Verbindung Pakete, die bei einem Transitsystem 
+      angekommen sind, weitergeschickt werden sollen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Call-Setup: In VC-Netzwerken m&amp;#252;ssen alle Transitsysteme auf einem 
+      Pfad bei Aufbau eines virtuellen Kanals richtig konfiguriert werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>21</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Eigenschaften weist ein verbindungsloser Best-Effort-Dienst, wie 
+      z.B. durch die Vermittlungsschicht des Internets bereitgestellt, auf?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Pakete k&amp;#246;nnen verloren gehen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Pakete k&amp;#246;nnen in einer anderen Reihenfolge empfangen werden, als sie 
+      gesendet wurden
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &amp;#252;ber die Dauer des Transports eines Paketes bis zur Ankunft beim 
+      Empf&amp;#228;nger wird keine Aussage gemacht
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) es werden keine Zusagen &amp;#252;ber die Bandbreite zwischen Sender und 
+      Empf&amp;#228;nger gemacht
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      5.) es werdne keine Informationen bzgl. einer &amp;#220;berlastund des Netzwerkes 
+      an den Sender- oder Empf&amp;#228;ngerprozess weitergegeben
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>22</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nach welchen Unterscheidungsmerkmalen kann man Routing-Algorithmen 
+      klassifizieren? Erl&amp;#228;utere die einzelnen Typen kurz!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) global - dezentral&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ein globaler Routing-Algorithmus hat eine &amp;#220;bersicht &amp;#252;ber alle 
+      Verbindungen und deren Kosten. Die Berechnung der billigsten Pfade 
+      erfolgt zuallererst und kann sowohl zentral als auch an mehreren Stellen 
+      verteilt stattfinden. Beispiel: Link-State-Algorithmus
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - bei einem dezentraler Routing-Algorithmus kennt jeder Knoten nur die 
+      Informationen &amp;#252;ber seine direkten Verbindungen, durch 
+      Informationsaustausch mit seinen Nachbarn wird der billigste Pfad 
+      iterativ berechnet. Beispiel: Distanzvektor-Algorithmus
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) statisch - dynamisch&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ein statischer Routing-Algorithmus &amp;#228;ndert seine Routing-Entscheidungen 
+      nur aufgrund manueller Eingaben
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - ein dynamischer Routing-Algorithmus passt sich automatisch an 
+      ver&amp;#228;nderte  Netzwerksituationen an, die Anpassung kann entweder 
+      periodisch erfolgen oder durch Ver&amp;#228;nderungen im Netzwerk ausgel&amp;#246;st werden
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>23</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert der &lt;b&gt;Link-State-Algorithmus&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beim Linkstate-Algorithmus schickt jeder Router&lt;b&gt; 
+      Link-State-Broadcast-Nachrichten&lt;/b&gt; mit den Kosten der an ihn 
+      angeschlossenen Verbindungen an alle anderen Knoten, sodass jeder Knoten 
+      die gesamte Netzwerk-Topologie kennt und die billigste Verbindung zu 
+      allen anderen Knoten berechnen kann.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Berechnung erfolgt durch &lt;b&gt;Dijkstra's Algorithmus&lt;/b&gt; (s.o.) wobei:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;c(i,j) &lt;/b&gt;.... Kosten Direktverbindung Knoten i -&amp;gt; Knoten j
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;D_i &lt;/b&gt;...... Kosten von Quellknoten Q zu Zielknoten i mit den 
+      aktuell billigsten Kosten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;p_i&lt;/b&gt; ...... Vorg&amp;#228;ngerknoten
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;S&lt;/b&gt; ........ Menge aller Knoten, in der die billigsten Pfade 
+      bereits bekannt sind
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;u&gt;Zeitkomplexit&amp;#228;t:&lt;/u&gt;&lt;/b&gt; O(n&amp;#178;)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>600</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>24</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert der &lt;b&gt;Distanzvektor-Algorithmus&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Distanzvektoralgorithmus ist ein &lt;b&gt;dezentrales, iteratives und 
+      asynchrones Verfahren&lt;/b&gt; zur Berechnung der billigsten Pfade.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      An jedem Knoten wird eine &lt;b&gt;Distanztabelle&lt;/b&gt; gespeichert, die zeigt, 
+      &amp;#252;ber welchen Nachbarn der billigste Weg zu einem best. Ziel im Netzwerk 
+      ist. Sie wird dargestellt als eine Matrix, deren Zeilen die Zielknoten, 
+      deren Spalten die direkten Nachbarn und deren Werte die aktuell 
+      bekannten Kosten sind.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Berechnung der Kosten erfolgt mit dem &lt;b&gt;Bellman-Ford-Algorithmus&lt;/b&gt; 
+      (s.o.). Immer wenn ein Knoten eine &amp;#196;nderung der Kosten der direkt 
+      anliegenden Strecken bemerkt oder ein Update der billigsten Pfade vom 
+      Nachbarn empf&amp;#228;ngt, &amp;#228;ndert er seine Werte und benachrichtigt seine 
+      Nachbarn.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>247</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie k&amp;#246;nnen beim Distanzvektor-Algorithmus Routingschleifen entstehen? 
+      Was ist das Count-To-Infinity-Problem?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Routingschleifen&lt;/b&gt; k&amp;#246;nnen wie folgt entstehen: Ein Router T_2 
+      bemerkt eine Kostenver&amp;#228;nderung an seiner Verbindungsleitung zu Router 
+      T_1 und &amp;#228;ndert den neuen besten Pfad auf eine nicht direkte Verbindung 
+      &amp;#252;ber Router T_5. Da T_2 nicht wei&amp;#223;, dass der billigste Pfad von T_5 auch 
+      &amp;#252;ber die nun viel teurere Verbindung von sich selbst nach T_1 l&amp;#228;uft, 
+      schickt er Router T_5 ein Update mit dem billigsten Pfad, der bei ihm 
+      nun &amp;#252;ber T_5 verl&amp;#228;uft. Da T_5 nicht wei&amp;#223;, wie T_2 routet, schickt er die 
+      Pakete wieder an T_2 retour, wenn seine Direktverbindung teurer ist als 
+      der billigste Pfad von T_2 nach T_1. Beim Update seines billigsten 
+      Pfades nach T_1 orientiert er sich damit ebenfalls an T_2's Nachricht. 
+      Die beiden Router T_2 und T_5 schicken so lange Nachrichten hin und her, 
+      bis ihre Tabellen die tats&amp;#228;chlich billigste Verbindung auch beinhalten. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dieses ewige Hochz&amp;#228;hlen wird auch als &lt;b&gt;Count-to-Infinity-Problem&lt;/b&gt; 
+      bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>248</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;TODO!&lt;/b&gt; Wie funktioniert die Poisoned Reverse Strategie? Warum 
+      verhindert sie Routingschleifen beim Distanzvektor-Algorithmus? Was kann 
+      die Poisoned Reverse Strategie jedoch nicht verhindern?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>249</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Vergleiche den Linkstate- und den Distanzvektor-Algorithmus anhand ihrer &lt;b&gt;Komplexit&amp;#228;t&lt;/b&gt; 
+      (Menge an ausgetauschten Nachrichten), &lt;b&gt;Konvergenzgeschwindigkeit&lt;/b&gt; 
+      und &lt;b&gt;Robustheit&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&amp;#8226; Komplexit&amp;#228;t bzgl. Nachrichtenmenge:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Link-State-Algorithmus: Das Senden von O(nL) Nachrichten 
+      sindnotwendig, damit jeder Knoten den gesamten Graphen mit Kosten kennt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Distanzvektor-Algorithmus: In jeder Iteration m&amp;#252;ssen Nachrichten nur 
+      dann geschickt werden, wenn sich ein anderer billigster Weg zu einem 
+      Knoten ergibt, und zwar nur an die direkten Nachbarn.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&amp;#8226; Konvergenzgeschwindigkeit:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Link-State-Algorithmus: Um den gesamten Graphen mit Kosten zu kennen, 
+      werden O(nL) Nachrichten ben&amp;#246;tigt. Bei jedem Knoten werden O(n 2 ) 
+      Operationen ausgef&amp;#252;hrt, um den billigsten Pfad von ihm zu allen n &amp;#8722; 1 
+      anderen Knoten zu berechnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Distanzvektor-Algorithmus: Der Algorithmus reagiert schnell auf gute 
+      Nachrichten und konvergiert langsam bei schlechten Nachrichten. Er kann 
+      Routing-Schleifen verursachen und leidet unter dem 
+      Count-to-Infinity-Problem.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&amp;#8226; Robustheit:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Link-State-Algorithmus: Ein fehlerhafter Knoten kann lediglich falsche 
+      Kosten f&amp;#252;r eine der an ihn angeschlossenen Verbindungen durch 
+      Broadcast-Nachrichten verbreiten. Ein Knoten kann eingehende besch&amp;#228;digte 
+      Broadcast-Nachrichten ignorieren. Jeder Knoten berechnet nur seine 
+      eigene Routing-Tabelle. Hierdurch entsteht ein
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      gewisses Ausma&amp;#223; von Robustheit des verteilten Systems. Der Algorithmus 
+      wird in der Praxis recht h&amp;#228;ufig verwendet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &amp;#8211; Distanzvektor-Algorithmus: Die Knoten teilen bei jeder Iteration ihre 
+      Kosten an alle Nachbarn mit, dadurch k&amp;#246;nnen sich falsche Angaben &amp;#252;ber 
+      das gesamte Netzwerk verteilen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>250</card_id>
+		<proj_id>5</proj_id>
+		<stack>2</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum ist es in der Praxis nicht immer so, dass das gesamte Netzwerk 
+      (z.B. Internet) denseben Routing-Algorithmus verwendet und Pfade durch 
+      das gesamte Netzwerk berechnet werden?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) wegen der &lt;b&gt;Gr&amp;#246;&amp;#223;e realer Netzwerke&lt;/b&gt;: im Internet gibt 
+      es Millionen von Routern, der Aufwand w&amp;#228;re zu hoch, die Menge an 
+      &amp;#252;bertragenen Informationen zu gro&amp;#223; und z.B. der Distanzvektoralgorithmus 
+      w&amp;#252;rde kaum je konvergieren
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) wegen &lt;b&gt;heterogener Routing-Anforderungen&lt;/b&gt;: Organisationen 
+      wollen ihre Netze so betreiben, wie sie es wollen, bzw. wie es f&amp;#252;r sie 
+      am effizientesten ist. Au&amp;#223;erdem sollen andere Netzwerke angedockt werden 
+      k&amp;#246;nnen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>251</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist eine Autonomes System? Wie werden Knoten au&amp;#223;erhalb vom autonomen 
+      System erreicht? Welche verschiedenen Routing-Protokolle sind hierbei 
+      von Bedeutung? Wie nennt man dieses Routing-Konzept?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein &lt;b&gt;Autonomes System (AS)&lt;/b&gt; ist eine Menge von Transit-Systemen, 
+      die alle denselben Routing-Algorithmus benutzen. Dieser wird &lt;b&gt;Intra-AS-Routing&lt;/b&gt; 
+      genannt. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Gateways &lt;/b&gt;sind spezielle Transitsysteme in einem AS, die Pakete an 
+      Zielknoten au&amp;#223;erhalb des AS weiterleiten. Gateways nutzen das &lt;b&gt;Inter-AS-Routing&lt;/b&gt;, 
+      um Pakete von einem AS in ein anderes weiterzuleiten. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Liegt das Ziel eines Paketes in einem anderen AS, wird das Paket mittels 
+      Intra-AS von Gateway zu Gateway geleitet, bis es ins richtige AS 
+      gelangt. &amp;#220;ber welche Gateways es geroutet wird, entscheidet das 
+      Inter-AS-Routing.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dieses Konzept wird auch als &lt;b&gt;hierarchisches Routing&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>252</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Aus welchen 3 Komponeneten besteht die Vermittlungsschicht im Internet? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Das &lt;b&gt;Internetprotokoll &lt;/b&gt;der derzeit noch oft benutzten Version &lt;b&gt;IPv4&lt;/b&gt; 
+      definiert die Adressierung in der Vermittlungsschicht, die Felder eines 
+      Datagramms und die Aktionen, die durch Router und Endsysteme auf einem 
+      Datagramm in Abh&amp;#228;ngigkeit von den Inhalten seiner Felder ausgef&amp;#252;hrt 
+      werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Die &lt;b&gt;Pfadbestimmungskomponente&lt;/b&gt; bestimmt den Pfad, den eine 
+      Datagramm auf dem Weg vom Sender zum Empf&amp;#228;nger durch das Internet nimmt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Das&lt;b&gt; ICMP-Protokoll (Internet Control Messaging Protocol)&lt;/b&gt; ist 
+      die Komponente, die es im Internet erlaubt, Fehler in Datagrammen 
+      anzuzeigen und Informationen &amp;#252;ber die Vermittlungsschicht abzufragen
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>253</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe die 5 Klassen von IP-Adressen in IPv4!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>254</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Woraus setzt sich eine IP-Adresse zusammen? Wozu dient eine 
+      Netzwerkmaske?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine IP-Adresse besteht aus:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) dem &lt;b&gt;Netzwerkpr&amp;#228;fix&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) dem &lt;b&gt;Hostteil&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;Netzwerkmaske / Subnetzmaske&lt;/b&gt; legt fest, welcher Teil von der 
+      IP-Adresse zum Netzwerkpr&amp;#228;fix und welcher zum Hostteil geh&amp;#246;rt. Alle 
+      Bits, die zum Netzwerkpr&amp;#228;fix geh&amp;#246;ren, haben den Wert 1, und alle Bits, 
+      die zum Hostanteil geh&amp;#246;ren, haben den Wert 0. Die Subnetzmaske bildet 
+      den Hostanteil der IP-Adresse durch eine bitweise durchgef&amp;#252;hrte 
+      AND-Operation auf Subnetzmaske und IP-Adresse auf 0 ab - damit wird die 
+      gesamte IP-Adresse auf die Basisadresse des Netzwerkes abgebildet, wenn 
+      sie zu diesem geh&amp;#246;rt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>255</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was erm&amp;#246;glicht der CIDR-Standard?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der &lt;b&gt;CIDR-Standard (Classless Interdomain Routing Standard)&lt;/b&gt; 
+      erm&amp;#246;glicht es, die 32 bit einer IP-Adresse flexibel in Hostanteil und 
+      Netzwerkpr&amp;#228;fix aufzuteilen. Durch die starre 5-Klassen-Aufteilung 
+      blieben n&amp;#228;mlich viele IP-Adressen in gro&amp;#223;en Netzwerken ungenutzt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>256</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie kann ein Host zu einer IP-Adresse bzw. dem Hostanteil zum festen 
+      Netzwerkpr&amp;#228;fix kommen? Wie erh&amp;#228;lt man einen Netzwerkpr&amp;#228;fix (also eine 
+      Netzwerkadresse)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Einem Host kann auf 2 Arten eine IP-Adresse zugewiesen werden:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) manuell (durch Schreiben in eine Datei)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) automatisch per &lt;b&gt;DHCP (Dynamic Host Configuration Protocol)
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Einen Netzwerkadresse erh&amp;#228;lt man von seinem Provider, dieser wiederum 
+      hat seine Adressr&amp;#228;ume bei der &lt;b&gt;ICANN (Internet Corporation for 
+      Assigned Names and Numbers)&lt;/b&gt; bzw. einer der von ihr lizenzierten &lt;b&gt;regionalen 
+      Internet Registries&lt;/b&gt; eingekauft.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>257</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 4 wichtige &lt;b&gt;Felder &lt;/b&gt;in einem &lt;b&gt;IP-Datagramm! Wie gro&amp;#223;&lt;/b&gt; 
+      ist ein &lt;b&gt;IP-Header&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein IP-Datagramm besitzt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein Feld f&amp;#252;r die &lt;b&gt;IP-Adresse des Senders&lt;/b&gt;,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein Feld f&amp;#252;r die &lt;b&gt;IP-Adresse des Empf&amp;#228;ngers&lt;/b&gt;,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein &lt;b&gt;Datenfeld&lt;/b&gt; f&amp;#252;r ein TCP- oder UDP-Segement
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ein &lt;b&gt;L&amp;#228;ngenfeld&lt;/b&gt; (Anzahl der genutzten Bytes)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) weitere &lt;b&gt;Spezialfelder
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein IP-Header hat eine &lt;b&gt;Gr&amp;#246;&amp;#223;e von 20 byte.&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>258</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert das Routing von IP-Datagrammen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Jeder Host hat eine Routingtabelle. In dieser sucht er nach dem 
+      Netzwerkpr&amp;#228;fix des Empf&amp;#228;ngers. In der Routingtabelle steht der Router, 
+      an den das Paket weitergeschickt werden muss, sowie die Anzahl der Hops. 
+      Ist die Anzahl der Hops = 1, wei&amp;#223; der Absender, dass sich der Empf&amp;#228;nger 
+      im selben Netzwerk befindet, in diesem Fall transportiert die 
+      Sicherungsschicht das Paket direkt zum Zielhost.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einer Hop-Anzahl &amp;gt;= 2 wird das Paket an die in der Routingtabelle 
+      angegebene Schnittstelle gesendet. Der n&amp;#228;chste Router konsultiert 
+      wiederum seine Routingtabelle, um herauszufinden, wohin das Paket 
+      weitergeschickt werden soll. Die Sicherungsschicht &amp;#252;bertragt so das 
+      Paket von Router zu Router, ohne dass die Empf&amp;#228;nger-IP-Adresse ge&amp;#228;ndert 
+      wird.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>259</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was wird mit der &lt;b&gt;Anzahl der Hops&lt;/b&gt; angegeben?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Anzahl der Netzwerke, die ein Datenpaket vom sendenden Host bis zum 
+      Zielhost &amp;#252;berquert, einschlie&amp;#223;lich des Zielnetzwerks. Ist die Anzahl der 
+      Hops = 1, befindet sich der Zielhost im selben Netzwerk wie der 
+      Absender, ist die Anzahl der Hops &amp;gt;= 2, liegt mindestens ein Router 
+      zwischen Absender und Zielhost.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>260</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welcher Mechanismus regelt den Umgang mit zu gro&amp;#223;en IP-Datagrammen f&amp;#252;r 
+      eine bestimmte Verbindung? Was ist deren Maximalgr&amp;#246;&amp;#223;e, die &amp;#252;blicherweise 
+      &amp;#252;ber Ethernet &amp;#252;bertragen werden kann? Was ist die Mindestgr&amp;#246;&amp;#223;e, die im 
+      Internet jedenfalls unterst&amp;#252;tzt wird?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      IP-Datagramme, die zu gro&amp;#223; sind f&amp;#252;r eine bestimmte Verbindungsstrecke, 
+      werden im Router &lt;b&gt;fragmentiert&lt;/b&gt;, dh. in kleinere IP-Datagramme 
+      zerteilt. 3 Felder in IPv4 unterst&amp;#252;tzen das Zusammensetzen (&lt;b&gt;reassemblieren&lt;/b&gt;) 
+      der IP-Datagramme in den Endsystemen:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Das&lt;b&gt; Identification (ID)&lt;/b&gt;-Feld enth&amp;#228;lt bei zusammengeh&amp;#246;renden 
+      Fragmenten dieselbe ID
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Das &lt;b&gt;Flag&lt;/b&gt;-Feld wird bei allen Fragmenten, au&amp;#223;er dem letzten, 
+      auf 1 gesetzt
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) Das Feld &lt;b&gt;Fragmentation Offset&lt;/b&gt; nummeriert die Fragmente 
+      aufsteigend
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die &lt;b&gt;MTU (maximum transfer size)&lt;/b&gt; betr&amp;#228;gt:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - f&amp;#252;r Ethernet &amp;#252;blicherweise 1500 bytes
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - im Internet mindestens 576 bytes
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>600</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>261</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Routing-Protokolle f&amp;#252;r Intra-AS-Routing kommen im Internet 
+      &amp;#252;blicherweise zum Einsatz?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Drei Intra-AS-Routingprotokolle kommen im Internet zum Einsatz:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;RIP&lt;/b&gt; - Routing Information Protocol
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;OSFP&lt;/b&gt; - Open Shortest Path First
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;EIGRP&lt;/b&gt; - Enhanced Internet Gateway Routing Protocol
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>262</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert &lt;b&gt;RIP&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      RIP nutzt eine Art von &lt;b&gt;Distanzvektor-Algorithmus&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die RIP Version 1 verwendet als &lt;b&gt;Kosten die Anzahl der Hops&lt;/b&gt;, 
+      au&amp;#223;erdem sind die &lt;b&gt;Maximalkosten auf 15 beschr&amp;#228;nkt&lt;/b&gt;, dh. 
+      eine AS darf nur einem maximalen Durchmesser von 15 Routern haben.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nachbarknoten tauschen im RIP &lt;b&gt;ca. alle 30 Sekunden 
+      Routing-Informationen&lt;/b&gt; mit sogenannten &lt;b&gt;RIP Response Messages&lt;/b&gt; 
+      aus, indem sie ihre &lt;b&gt;Routingtabellen f&amp;#252;r h&amp;#246;chstens 25 Zielnetzwerke&lt;/b&gt; 
+      im autonomen System verschicken.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn RIP auf einem Router &lt;b&gt;mehr als 180 Sekunden kein Update&lt;/b&gt; von 
+      einem Nachbarn erh&amp;#228;lt, betrachtet es den Nachbarn als unerreichbar. RIP 
+      modifiziert dann die lokale Routing-Tabelle und schickt Updates zu 
+      seinen Nachbarn.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ebenfalls k&amp;#246;nnen Router &amp;#252;ber RIP von Nachbarn deren&lt;b&gt; Kosten&lt;/b&gt; 
+      zu einem Zielknoten&lt;b&gt; abfragen&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      RIP benutzt zur Kommunikation einzelne&lt;b&gt; UDP-Datagramme&lt;/b&gt; &amp;#252;ber den &lt;b&gt;Standardport 
+      520&lt;/b&gt;. Es benutzt daher ein Transportschichtprotokoll zur Realisierung 
+      einer Funktion der Vermittlungsschicht, dies liegt an der 
+      Implementierung von RIP auf UNIX-Systemen als Anwendungsprozess. RIP ist 
+      daher ein &lt;b&gt;&lt;u&gt;Protokoll auf der Anwendungsschicht&lt;/u&gt;&lt;/b&gt;&lt;u&gt;!!&lt;/u&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>263</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welches Protokoll ist momentan Standard f&amp;#252;r Inter-AS-Routing im Internet 
+      und wie funktioniert dieses? Wie bezeichnet man administrative Dom&amp;#228;nen 
+      im Internet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Standard f&amp;#252;r Inter-AS-Routing im Internet ist &lt;b&gt;BGP4 (Border 
+      Gateway Protocol Version 4)&lt;/b&gt;. Autonome System im Internet werden als &lt;b&gt;administrative 
+      Dom&amp;#228;nen&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      BGP basiert auf der Idee des Distanzvektoralgorithmus, ist allerdings 
+      ein &lt;b&gt;Pfadvektor-Protokoll,&lt;/b&gt; da BGP in einem Router keine 
+      Kosteninformationen hinterlegt, sondern &lt;b&gt;Informationen &amp;#252;ber den 
+      kopmpletten Pfad&lt;/b&gt; vom Quell-AS zum Ziel-AS. Welcher Pfad gew&amp;#228;hlt 
+      wird, ist eine &lt;b&gt;Richtlinienentscheidung&lt;/b&gt; des Dom&amp;#228;nenadministrators.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      BGP-Informationen werden durch das Netzwerk propagiert, indem die 
+      unmittelbaren Nachbarn BGP-Nachrichten austauschen. BGP nutzt &lt;b&gt;TCP&lt;/b&gt; 
+      als Verbindungsprotokoll &amp;#252;ber den &lt;b&gt;Port 179.&lt;/b&gt; Das 
+      BGP-Protokoll definiert &lt;b&gt;4 Nachrichtentypen&lt;/b&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Open-Nachricht&lt;/b&gt;: Authentifizierung bei den Nachbarn, 
+      akzeptieren diese den neuen Router, senden sie ihm 
+      Keep-Alive-Nachrichten zur&amp;#252;ck
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Update-Nachricht&lt;/b&gt;: Melden oder Zur&amp;#252;ckziehen von Pfaden bei 
+      Nachbarn
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;KeepAlive-Nachricht&lt;/b&gt;: Akzeptieren eines Verbindungsaufbaus 
+      oder Lebenszeichen, wenn der Sender keine neuen Infos hat
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Notification Nachricht&lt;/b&gt;: Signalisiert Fehler in der vorigen 
+      Nachricht oder Verbindungsabbau
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da ein Router &lt;b&gt;BGP-Nachrichten auch ablehnen kann &lt;/b&gt;(z.B. weil diese 
+      &amp;#252;ber ihn selbst laufen) entstehen keine Routingschleifen und das 
+      Count-to-Infinity Problem wird vermieden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>500</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>264</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welches Protokoll dient dem&lt;b&gt; Austausch von 
+      Vermittlungsschicht-Informationen&lt;/b&gt; im Internet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;ICMP (Internet Controll Messaging Protocol) &lt;/b&gt;ist ein Protokoll zum 
+      Austausch von Vermittlungsschicht-Informationen, wie z.B. 
+      Fehlermeldungen oder Informationen &amp;#252;ber benutzte Netzwerkpfade.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      ICMP &lt;b&gt;nutzt zur Kommunikation IP-Datagramme&lt;/b&gt; und ist daher &lt;b&gt;konzeptionell 
+      ein Protokoll der Transportschicht&lt;/b&gt;, wird jedoch &lt;b&gt;der 
+      Vermittlungsschicht zugeordnet&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;ICMP-Nachrichten&lt;/b&gt; setzen sich zusammen aus
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - einem &lt;b&gt;Typ&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - einem Feld namens &lt;b&gt;Code&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      - den &lt;b&gt;ersten 8 Byte des IP-Datagramms&lt;/b&gt;, welches zur Erzeugung der 
+      ICMP-Nachricht f&amp;#252;hrte
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; die Programme &lt;b&gt;ping &lt;/b&gt;und &lt;b&gt;traceroute &lt;/b&gt;nutzen ICMP
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>265</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 3 ICMP-Typ / Code- Kombinationen und deren Bedeutung!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>266</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie nutzt Ping das ICMP-Protokoll?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Programm ping sendet eine ICMP-Nachricht vom Typ 8 mit Code 0 an den 
+      Zielhost. Der Zielhost empf&amp;#228;ngt die Echo-Anforderung und sendet eine 
+      Echo-Antwort (ICMP-Nachricht Typ 0 mit Code 0) zur&amp;#252;ck.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>267</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie nutzt das Programm traceroute das ICMP-Protokoll?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Programm traceroute ermittelt den Pfad, den IP-Datagramme zu einem 
+      angegebenen Zielhost nehmen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Dazu sendet das Programm&lt;b&gt; eine Reihe gew&amp;#246;hnlicher IP-Datagramme&lt;/b&gt; 
+      an den Zielhost. Dabei &lt;b&gt;erh&amp;#246;ht&lt;/b&gt; es bei jedem neuen 
+      IP-Datagramm &lt;b&gt;das Feld TTL (Time-To-Live) um eins&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Router, die das IP-Datagramm &lt;b&gt;&amp;#252;bertragen, verringern das TTL-Feld&lt;/b&gt; 
+      bei jeder &amp;#220;bertragung um 1. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn das &lt;b&gt;TTL-Feld auf Null gesetzt&lt;/b&gt; wird, wird das&lt;b&gt; IP-Datagramm 
+      verworfen&lt;/b&gt;. In diesem Fall aber sendet der Router eine &lt;b&gt;Warnung 
+      (ICMP-Nachricht mit Typ 11 und Code 0)&lt;/b&gt; an den Senderhost, die auch 
+      die &lt;b&gt;IP-Adresse des Routers und den Zeitstempel&lt;/b&gt; der Paketerzeugung 
+      enth&amp;#228;lt. Mit diesen Informationen kann ICMP dann den &lt;b&gt;Pfad und 
+      die Umlaufzeit der Pakete auf dem Pfad berechnen&lt;/b&gt; und anzeigen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>268</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wieso wurde das &lt;b&gt;Internet Protokoll Version 6 (IPv6)&lt;/b&gt; entwickelt 
+      und welche Verbesserungen bringt es mit sich?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      IPv6 wurde aufgrund von &lt;b&gt;Problemen mit IPv4&lt;/b&gt; entwickelt und wie 
+      folgt verbessert: 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Gr&amp;#246;&amp;#223;ere Anzahl an verf&amp;#252;gbaren IP-Adressen&lt;/b&gt;: 
+      Durch das rapide Wachstum des Internets werden die eindeutigen 
+      IP-Adressen langsam knapp. Mit IPv6 k&amp;#246;nnen &lt;b&gt;&lt;i&gt;2^128 Adressen&lt;/i&gt;&lt;/b&gt; 
+      erzeugt werden, statt den 2^32 m&amp;#246;glichen Adressen von IPv4.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Einf&amp;#252;hrung von Anycast-Adressen&lt;/b&gt;: mit diesen kann ein &lt;b&gt;&lt;i&gt;Datagramm 
+      an irgendeinen Host in einer Anycast-Gruppe gesendet werden&lt;/i&gt;&lt;/b&gt;. 
+      Damit kann der am schnellsten erreichbare Knoten den gew&amp;#252;nschten Dienst 
+      erbringen, wenn mehrere Dienstanbieter im Netzwerk verf&amp;#252;gbar sind (z.B. 
+      Mirror-Websites oder DNS-Anfragen).
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Optimierung des Headers&lt;/b&gt;: Der IPv6 Header ist 40 byte lang. 
+      Das &lt;b&gt;&lt;i&gt;Pr&amp;#252;fsummenfeld wurde entfernt&lt;/i&gt;&lt;/b&gt;, da ohnehin auf der 
+      Transportschicht und Sicherungsschicht Pr&amp;#252;fungen stattfinden, somit 
+      entf&amp;#228;llt das Berechen von IP-Pr&amp;#252;fsummen. Au&amp;#223;erdem werden &lt;b&gt;&lt;i&gt;IP-Datagramme 
+      nicht mehr fragmentiert&lt;/i&gt;&lt;/b&gt;, sondern einfach neu angefordert, wenn 
+      sie zu gro&amp;#223; f&amp;#252;r einen bestimmten Router auf der Verbindungsstrecke sind.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>269</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Auf welche 3 Arten kann der &amp;#220;bergang von IPv4 zu IPv6 erfolgen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) An einem &lt;b&gt;Stichtag&lt;/b&gt; k&amp;#246;nnte der &amp;#220;bergang aller Hosts und Router 
+      verpflichtend sein -&amp;gt; unwahrscheinlich aufgrund der Anzahl der 
+      umzustellenden Hosts im Internet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Dual-Stack Ansatz:&lt;/b&gt; Jeder IPv6 Knoten k&amp;#246;nnte parallel eine 
+      IPv4 und eine IPv6-Implementierung enthalten. Solche Knoten m&amp;#252;ssten dann 
+      mit Hilfe von DNS feststellen, welche IP-Version ein Empf&amp;#228;ngerknoten 
+      unterst&amp;#252;tzt und dementsprechende Pakete weiterleiten. Nachteil: Pakete, 
+      die &amp;#252;ber mindestens 1 IPv4 Knoten gehen, k&amp;#246;nnen die Vorteile von IPv6 
+      nicht nutzen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Tunneling Ansatz:&lt;/b&gt; IPv6 Knoten bauen zwischen sich TUnnel auf, 
+      indem sie den IPv6-Verkehr bei &amp;#220;bertragung &amp;#252;ber IPv4-Knoten insgesamt in 
+      IPv4-Datagramme einpacken. Hierbei kann der IPv6-Empf&amp;#228;nger dann das 
+      IPv6-Datagramm wieder auspacken und normal weiterverarbeiten.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>350</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 3 Gr&amp;#252;nde, Rechner miteinander zu vernetzen!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;1.) Betriebsmittel-. Funktions- und Datenverbund:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beim Betriebsmittel- oder Funktionsverbund steht das Ziel im 
+      Vordergrund, s&amp;#228;mtliche im Netz vorhandene Betriebsmittel wie Daten, 
+      Programme oder Ger&amp;#228;te auf jedem am Rechnernetz beteiligten Rechner 
+      zug&amp;#228;nglich zu machen. Auch das gesamte Kommunikationsnetz kann in diesem 
+      Zusammenhang als Betriebsmittel gesehen werden. Besteht das Hauptziel 
+      eines Betriebsmittelverbundes darin, auf netzweit verteilte 
+      Datenbest&amp;#228;nde zuzugreifen, spricht man auch von einem Datenverbund (data 
+      sharing), wobei auch das mehrfache Halten von Datenbest&amp;#228;nden aus 
+      Sicherheitsgr&amp;#252;nden eine Rolle spielen kann.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;2.) Last-, Leistungs- und Wartungsverbund:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Last- und Leistungsverbund gestattet es, anfallende Rechenlasten 
+      gleichm&amp;#228;&amp;#223;ig auf mehrere Rechner zu verteilen bzw. mehrere Rechner f&amp;#252;r 
+      das L&amp;#246;sen einer einzigen umfangreichen Aufgabe einzusetzen. Ein 
+      Wartungsverbund schlie&amp;#223;lich erm&amp;#246;glicht die zentrale Wartung, 
+      St&amp;#246;rungserkennung und -behebung bei einer Vielzahl r&amp;#228;umlich verteilter 
+      Rechner.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;3.) Computerunterst&amp;#252;tzte Gruppenarbeit:&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Seit dem internationalen Siegeszug des Internets und insbesondere des 
+      auf ihm realisierten World Wide Web (WWW) stehen der Online-Zugriff auf 
+      weltweit erfasste Dokumente sowie die Kommunikation zwischen 
+      menschlichen Benutzern im Vordergrund des Einsatzes von Rechnernetzen. 
+      Der Austausch von Nachrichten durch E-Mail, das Arbeiten an gemeinsamen 
+      Projekten oder das Veranstalten internationaler Videokonferenzen sind 
+      aus dem beruflichen und zunehmend auch aus dem privaten Alltag nicht 
+      mehr wegzudenken. Die Fachdisziplin der Informatik, die sich mit der 
+      Unterst&amp;#252;tzung der Zusammenarbeit von Menschen durch den Einsatz von 
+      Computertechnologie befasst, wird als computerunterst&amp;#252;tzte Gruppenarbeit 
+      (Computer Supported Cooperative Work, CSCW) bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>600</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>351</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie kann man Rechnernetze nach ihrer r&amp;#228;umlichen Ausdehnung unterteilen?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Pers&amp;#246;nliche Netze (Personal Area Network, PAN)&lt;/b&gt; mit 
+      Ausdehnungen von bis zu 1 bis 2 Metern
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Lokale Netze (Local Area Network, LAN)&lt;/b&gt; mit Ausdehnungen von 
+      h&amp;#246;chstens wenigen Kilometern
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Regionale Netze (Metropolitan Area Network, MAN)&lt;/b&gt; mit 
+      Ausdehnungen von ca. 100 km
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Weitverkehrsnetze (Wide Area Network, WAN)&lt;/b&gt;, diese umspannen 
+      ganze L&amp;#228;nder und Kontinente und im Weitverkehrsverbund die gesamte Erde
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>352</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was ist ein Protokoll? Was wird durch ein (Netzwerk-) Protokoll 
+      definiert? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein&lt;b&gt; Protokoll &lt;/b&gt;legt die Regeln und Konventionen einer 
+      Kommunikation zwischen kommunizierenden Parteien fest.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Protokoll &lt;u&gt;definiert&lt;/u&gt;:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) die&lt;b&gt; Nachrichtentypen&lt;/b&gt; (z.B. Anforderungen und Antworten)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) ihre &lt;b&gt;Syntax&lt;/b&gt; (dh. Felder und Feldabgrenzungen in den 
+      verschiedenen Nachrichtentypen)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) die &lt;b&gt;Semantik&lt;/b&gt; der Nachrichtentypen und der Felder (die im 
+      &amp;#252;brigen nur f&amp;#252;r das Protokoll von Belang sind und
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      .) die &lt;b&gt;Regeln&lt;/b&gt;, wenn und wie eine Prozess Nachrichten eines 
+      bestimmten Typs sendet bzw. wie er auf diese Nachrichten reagiert 
+      (beispielsweise durch das Senden von Antwortnachrichten oder Ausf&amp;#252;hren 
+      von Programmen, wie z.B. Lesen oder Schreiben von Dateien)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>353</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe den prinzipiellen Aufbau einer geschichteten 
+      Protokollarchitektur!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Bei einer geschichteten Protokollarchitektur geh&amp;#246;rt jedes Protokoll zu 
+      einer bestimmten Schicht. Ein &lt;b&gt;Protokoll der Schicht n&lt;/b&gt; definiert 
+      also genau die Regeln, mit denen zwei Endsysteme Nachrichten auf der 
+      Schicht n austauschen. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Tats&amp;#228;chlich werden Daten nicht direkt von Schicht n eines Rechners 
+      zu Schicht n eines anderen &amp;#252;bertragen. Vielmehr nutzt eine Schicht 
+      den &lt;b&gt;Dienst&lt;/b&gt; der direkt darunter liegenden Schicht, den es &amp;#252;ber 
+      einen &lt;b&gt;Dienstzugangspunkt&lt;/b&gt; erreicht, der auch als Schnittstelle 
+      (Interface) bezeichnet wird. Die Schnittstelle definiert, welche 
+      Operationen und Dienste die untere Schicht der oberen Schicht anbietet. 
+      Nur in der untersten Schicht findet die eigentliche Kommunikation, die &lt;b&gt;Nachrichten&amp;#252;bertragung&lt;/b&gt;, 
+      statt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>354</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie werden die Nachrichten einer Schicht der Protokollarchitektur f&amp;#252;r 
+      die untergeordnete Schicht aufbereitet?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine Schicht &lt;b&gt;darf die Daten&lt;/b&gt;, die sie von der &amp;#252;bergeordneten 
+      Schicht erh&amp;#228;lt, &lt;b&gt;nicht ver&amp;#228;ndern&lt;/b&gt;, damit die Nachricht 
+      beim Empf&amp;#228;nger exakt so ankommt, wie sie abgeschickt wurde. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Sie darf jedoch die Nachricht &lt;b&gt;durch Anf&amp;#252;gen von Zeichensequenzen 
+      davor und dahinter umklammern&lt;/b&gt;. Eine vor der Originalnachricht 
+      hinzugef&amp;#252;gte Zeichensequenz nennt man&lt;b&gt; Header&lt;/b&gt;, die hinter der 
+      Originalnachricht hinzugef&amp;#252;gte Sequenz nennt man &lt;b&gt;Trailer&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>355</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Begriffe &lt;b&gt;Protokolldateneinheit&lt;/b&gt; und &lt;b&gt;Protokollstapel&lt;/b&gt;!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Protokolldateneinheiten (PDUs)&lt;/b&gt; sind Nachrichten einer bestimmten 
+      Schicht. Eine PDU der Schicht n wird auch als&lt;b&gt; n-PDU&lt;/b&gt; bezeichnet. 
+      Diese werden zwischen Quellhost und Zielhost zur &amp;#220;bertragung von 
+      Nachrichten ausgetauscht.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Eine n-PDU kann in der darunterliegenden Ebene in mehrere n-1-PDUs&lt;b&gt; 
+      zerlegt (disassembliert)&lt;/b&gt; werden. Im Zielsystem wird sie auf dem Weg 
+      nach oben von Schicht n-1 nach Schicht n wieder &lt;b&gt;zusammengesetzt 
+      (reassembliert)&lt;/b&gt;. Auch eine Zusammenfassung mehrerer PDUs f&amp;#252;r den 
+      Transport und Wiederaufspaltung im Zielsystem ist m&amp;#246;glich.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit &lt;b&gt;Protokollstapel&lt;/b&gt; wird die Gesamtheit aller Protokolle auf 
+      allen Schichten bezeichnet.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>356</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den prinzipiellen Aufbau eines Computernettzes am Beispiel des 
+      Internets!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Netzwerkanwendungen laufen auf Endsystemen, auch Hosts genannt. 
+      Diese sind durch Kommunikationsleitungen, z.B. gef&amp;#252;hrte Medien wie 
+      Koaxialkabel, Kupferkabel, Glasfaser oder auch ungef&amp;#252;hrte Medien 
+      (&amp;#220;bertragung durch Funksignale) miteinander verbunden. Die 
+      &amp;#220;bertragungsgeschwindigkeit (Bandbreite, gemessen in Bit/s) gibt an, wie 
+      schnell die Daten&amp;#252;bertragung stattfinden kann.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In einem gr&amp;#246;&amp;#223;eren Netzwerk wie dem Internet sind die Endger&amp;#228;te nicht 
+      direkt miteinander verbunden. Zwischen ihnen ausgetauschte Nachrichten 
+      passieren sogenannte Transitsysteme (Router / Bridges). Den Weg, den ein 
+      Paket vom Quellhost zum Zielhost nimmt, bezeichnet man auch als Route 
+      oder Pfad.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Internet ist kein homogenes Netzwerk, sondern ein hierarchischer 
+      Zusammenschluss aus privaten und &amp;#246;ffentlichen Netzen. Endsysteme sind 
+      &amp;#252;ber Zugangsnetzwerke (LANs, W&amp;#228;hlverbindung, mobiler Access Point) an 
+      lokale ISP's (Internet Service Provider) angebunden. Lokale ISP's sind 
+      wiederum mit regionalen ISP's verbunden, diese mit nationalen ISP's und 
+      diese mit internationalen ISP's.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Verbindungen und Nachrichten im Internet befolgen Internetstandards, 
+      die von der IETF (Internet Engineering Task Force) entwickelt werden. 
+      Die Standardiesierungsdokumente werden RFCs (Request for Comments) 
+      genannt.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>357</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re die Begriffe Client und Server!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Clients und Server sind&lt;b&gt; Endsysteme &lt;/b&gt;(Ger&amp;#228;te, die am &amp;#228;u&amp;#223;eren Rand 
+      des Internets angekoppelt sind).
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Server&lt;/b&gt; sind Rechner, die Dienstleistungen f&amp;#252;r andere Rechner 
+      anbieten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Clients &lt;/b&gt;sind Rechner, die Dienste anderer Rechner in Anspruch 
+      nehmen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>358</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Erkl&amp;#228;re den Unterschied zwischen Leitungsvermittlung und 
+      Paketvermittlung!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In&lt;b&gt; leitungsvermittelten Netzen &lt;/b&gt;wird f&amp;#252;r jede 
+      Kommunikationsanforderung eine &lt;i&gt;&lt;b&gt;dauerhafte Verbindung&lt;/b&gt;&lt;/i&gt; 
+      aufgebaut. Dazu werden die auf einem Pfad vom Sender zum Empf&amp;#228;nger zur 
+      Kommunikation zwischen den Endsystemen&lt;i&gt;&lt;b&gt; ben&amp;#246;tigten Ressourcen&lt;/b&gt;&lt;/i&gt; 
+      (Puffer, Leitungsbandbreite) f&amp;#252;r die &lt;b&gt;&lt;i&gt;Dauer der Sitzung 
+      reserviert&lt;/i&gt;&lt;/b&gt;, d. h. f&amp;#252;r den Zeitraums, in dem Sender und Empf&amp;#228;nger 
+      Nachrichten austauschen wollen. Ein &lt;b&gt;&lt;i&gt;Beispiel&lt;/i&gt;&lt;/b&gt; daf&amp;#252;r ist das 
+      alte, &lt;b&gt;&lt;i&gt;analoge Telefonnetz&lt;/i&gt;&lt;/b&gt;; hier wurde f&amp;#252;r jedes 
+      Telefongespr&amp;#228;ch eine Leitungsverbindung geschaltet, die erst bei 
+      Beendigung des Gespr&amp;#228;chs wieder abgebaut wurde.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      In &lt;b&gt;paketvermittelten Netzen&lt;/b&gt; werden diese &lt;b&gt;&lt;i&gt;Ressourcen nicht 
+      reserviert&lt;/i&gt;&lt;/b&gt;. Jede Nachricht, die in einer Sitzung gesendet wird, 
+      verwendet die &lt;b&gt;&lt;i&gt;Ressourcen nach Bedarf.&lt;/i&gt;&lt;/b&gt; Es kann daher 
+      vorkommen, dass Nachrichten oder Teile davon auf den Zugriff auf eine 
+      Verbindungsleitung warten m&amp;#252;ssen. Sie stehen dann z. B. in einer &lt;b&gt;&lt;i&gt;Warteschlange&lt;/i&gt;&lt;/b&gt; 
+      an. Die Paketvermittlung erlaubt die &lt;b&gt;&lt;i&gt;gleichzeitige Nutzung von 
+      Pfaden oder Teilpfaden&lt;/i&gt;&lt;/b&gt; durch mehrere Endsysteme. In modernen, 
+      paketvermittelten Netzen schickt der Quellhost, auf dem der 
+      Senderprozess l&amp;#228;uft, &lt;b&gt;&lt;i&gt;lange Nachrichten als Folge kleiner 
+      Pakete&lt;/i&gt;&lt;/b&gt;. Dazu teilt er die Nachricht in Teile und gibt diese and 
+      die darunterliegende Schicht weiter. 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>550</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>359</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche Art von Vermittlung findet im Internet statt - Leitungs- oder 
+      Paketvermittlung? Warum?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das Internet ist ein &lt;b&gt;paketvermitteltes Netz&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Gr&amp;#252;nde:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der Vorl&amp;#228;ufer des Internets war das sogenannte &lt;b&gt;ARPANET&lt;/b&gt;, das 
+      in den 1960er Jahren von der ARPA (Advanced Research Projects Agency) 
+      entwickelt wurde, einer Forschungseinrichtung des amerikanischen 
+      Verteidigungsministeriums. Im Unterschied zum leitungsvermittelten 
+      Telefonnetz sollte ein sehr&lt;b&gt;&lt;i&gt; ausfallsicheres Netz&lt;/i&gt;&lt;/b&gt; 
+      entstehen, das auch bei Zerst&amp;#246;rung von Tielen der Verbindungen weiterhin 
+      funktionsf&amp;#228;hig blieb. Au&amp;#223;erdem sollten die &lt;b&gt;&lt;i&gt;Verbindungsleitungen 
+      gemeinsam genutzt&lt;/i&gt;&lt;/b&gt; und nicht f&amp;#252;r eine Verbindung zwischen zwei 
+      Knoten exklusiv reserviert werden. Jeder Knoten im Netz konnte im 
+      Prinzip &lt;b&gt;&lt;i&gt;zu jeder Zeit Nachrichten an jeden&lt;/i&gt;&lt;/b&gt; anderen 
+      schicken, wobei auch der&lt;b&gt;&lt;i&gt; Weg zwischen den Knoten nicht unbedingt 
+      festgelegt&lt;/i&gt;&lt;/b&gt; war. Diese Anforderungen waren nur durch 
+      Paketvermittlung zu erf&amp;#252;llen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>360</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Warum werden Nachrichten nicht als  ganzes versendet, sondern in &lt;b&gt;kleine 
+      Pakete aufgeteilt&lt;/b&gt; und wie bezeichnet man diese&lt;b&gt; Form der 
+      Paketvermittlung&lt;/b&gt;? Welche &amp;#220;berlegungen ergeben sich im Bezug auf die &lt;b&gt;Nachrichtengr&amp;#246;&amp;#223;e&lt;/b&gt;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Werden bei der Paketvermittlung Nachrichten in kleine Pakete aufgeteilt, 
+      so bezeichnet man dies als &lt;b&gt;Nachrichtenvermittlung&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der &lt;b&gt;Vorteil &lt;/b&gt;von vielen kleinen Nachrichten ist die &lt;i&gt;&lt;b&gt;Nutzung 
+      paralleler &amp;#220;bertragungswege&lt;/b&gt;&lt;/i&gt;. &lt;b&gt;&lt;i&gt;Bei &amp;#220;bertragungsfehlern&lt;/i&gt;&lt;/b&gt; 
+      muss au&amp;#223;erdem &lt;b&gt;&lt;i&gt;nicht die ganze Nachricht wiederholt &lt;/i&gt;&lt;/b&gt;gesendet 
+      werden, sondern nur das fehlerhafte Paket. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der&lt;b&gt; Nachteil&lt;/b&gt; von vielen kleinen Nachrichten ist der steigende &lt;b&gt;&lt;i&gt;Header-Overhead&lt;/i&gt;&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>361</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welche &lt;b&gt;2 Klassen der Paketvermittlung&lt;/b&gt; gibt es?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Datagramm-Netzwerke&lt;/b&gt; - Pakete werden anhand von 
+      Hostzieladressen weitergeleitet
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beispiel: &lt;b&gt;&lt;i&gt;IP &lt;/i&gt;&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.)&lt;b&gt;&lt;i&gt; &lt;/i&gt;VC-Netzwerke (Virtual Channels, virtuelle Kan&amp;#228;le)&lt;/b&gt; 
+      - Pakete werden anhand von virtuellen Kanalnummern weitergeleitet. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beispiel: &lt;b&gt;&lt;i&gt;X.25, ATM, Frame-Relay&lt;/i&gt;&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>362</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Welchen Verz&amp;#246;gerungen unterliegt ein Paket von einem Router zum n&amp;#228;chsten?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die&lt;b&gt; Gesamtverz&amp;#246;gerung&lt;/b&gt; setzt sich zusammen aus:
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.)&lt;b&gt; Verarbeitungsverz&amp;#246;gerung&lt;/b&gt;: Die Zeit, die ein Router f&amp;#252;r 
+      die Feststellung ben&amp;#246;tigt, wohin das Paket weiterzuleiten ist, ggfs. 
+      auch die Zeit, um Bitfehler zu entdecken, die durch St&amp;#246;rungen auf der 
+      Leitung bei der &amp;#220;bertragung auftreten k&amp;#246;nnen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Warteschlangenverz&amp;#246;gerung: &lt;/b&gt;Die Zeit, die das Paket in 
+      einer Warteschlange eines Routers verbringt, um auf die &amp;#220;bertragung auf 
+      einer ausgehenden Verbindungsleitung zu warten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;&amp;#220;bertragungsverz&amp;#246;gerung&lt;/b&gt;: Die Zeit, die f&amp;#252;r die 
+      Einstellung aller Paketbits in das &amp;#220;bertragungsmedium erforderlich ist, 
+      d. h. Gr&amp;#246;&amp;#223;e des Pakets in Bit geteilt durch die Bandbreite der 
+      Kommunikationsschnittstelle zu dem physischen Medium in bps.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      4.) &lt;b&gt;Ausbreitungsverz&amp;#246;gerung:&lt;/b&gt; Die Zeit, die ein Bit braucht, 
+      um sich von Router A bis zum n&amp;#228;chsten Router B auszubreiten, nachdem es 
+      auf die Verbindungsleitung bef&amp;#246;rdert wurde. Die Ausbreitungsverz&amp;#246;gerung 
+      von A nach B ist die Entfernung zwischen A und B geteilt durch die 
+      Ausbreitungsgeschwindigkeit, die vom physischen Medium der 
+      Verbindungsleitung abh&amp;#228;ngt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      --&amp;gt; &lt;b&gt;Merkhilfe&lt;/b&gt;: &lt;b&gt;V&lt;/b&gt;iele &lt;b&gt;W&lt;/b&gt;erden &lt;b&gt;&amp;#220;&lt;/b&gt;berall &lt;b&gt;A&lt;/b&gt;nkommen
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Mit &lt;b&gt;Ende-zu-Ende-Verz&amp;#246;gerung&lt;/b&gt; bezeichnet man die Summe der 
+      Gesamtverz&amp;#246;gerungen in allen Routern, die ein Paket am Pfad von 
+      Quellhost zu Zielhost passiert.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>363</card_id>
+		<proj_id>5</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie kann es zu &lt;b&gt;Paketverlusten &lt;/b&gt;kommen, obwohl keine 
+      Verbindundungsstrecke unterbroche ist und alle Router ihre Arbeit tun?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wenn ein Router keinen Platz mehr in seiner Warteschlange f&amp;#252;r weitere 
+      Pakete hat, verwirft er die n&amp;#228;chsten ankommenden Pakete.
     &lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
