@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flashcards>
 	<flashcard>
-		<card_id>53</card_id>
-		<proj_id>5</proj_id>
+		<card_id>350</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -40,8 +40,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>54</card_id>
-		<proj_id>5</proj_id>
+		<card_id>351</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -78,8 +78,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>55</card_id>
-		<proj_id>5</proj_id>
+		<card_id>352</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -135,8 +135,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>56</card_id>
-		<proj_id>5</proj_id>
+		<card_id>353</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -174,9 +174,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>57</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>354</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -217,9 +217,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>58</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>355</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -250,8 +250,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>59</card_id>
-		<proj_id>5</proj_id>
+		<card_id>356</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -304,8 +304,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>60</card_id>
-		<proj_id>5</proj_id>
+		<card_id>357</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -335,8 +335,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>61</card_id>
-		<proj_id>5</proj_id>
+		<card_id>358</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -366,8 +366,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>62</card_id>
-		<proj_id>5</proj_id>
+		<card_id>359</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -404,8 +404,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>63</card_id>
-		<proj_id>5</proj_id>
+		<card_id>360</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -439,8 +439,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>64</card_id>
-		<proj_id>5</proj_id>
+		<card_id>361</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -468,9 +468,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>65</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>362</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -515,8 +515,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>66</card_id>
-		<proj_id>5</proj_id>
+		<card_id>363</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -559,8 +559,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>67</card_id>
-		<proj_id>5</proj_id>
+		<card_id>364</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -606,8 +606,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>68</card_id>
-		<proj_id>5</proj_id>
+		<card_id>365</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -635,9 +635,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>69</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>366</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -703,8 +703,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>70</card_id>
-		<proj_id>5</proj_id>
+		<card_id>367</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -758,8 +758,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>71</card_id>
-		<proj_id>5</proj_id>
+		<card_id>368</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -803,8 +803,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>72</card_id>
-		<proj_id>5</proj_id>
+		<card_id>369</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -837,8 +837,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>73</card_id>
-		<proj_id>5</proj_id>
+		<card_id>370</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -870,8 +870,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>74</card_id>
-		<proj_id>5</proj_id>
+		<card_id>371</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -902,8 +902,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>75</card_id>
-		<proj_id>5</proj_id>
+		<card_id>372</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -943,9 +943,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>76</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>373</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -978,8 +978,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>77</card_id>
-		<proj_id>5</proj_id>
+		<card_id>374</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1025,9 +1025,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>78</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>375</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1054,9 +1054,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>79</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>376</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1092,8 +1092,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>80</card_id>
-		<proj_id>5</proj_id>
+		<card_id>377</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1124,8 +1124,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>81</card_id>
-		<proj_id>5</proj_id>
+		<card_id>378</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1156,8 +1156,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>82</card_id>
-		<proj_id>5</proj_id>
+		<card_id>379</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1199,8 +1199,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>83</card_id>
-		<proj_id>5</proj_id>
+		<card_id>380</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1251,9 +1251,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>84</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>381</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1290,8 +1290,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>85</card_id>
-		<proj_id>5</proj_id>
+		<card_id>382</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1320,9 +1320,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>86</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>383</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -1388,8 +1388,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>87</card_id>
-		<proj_id>5</proj_id>
+		<card_id>384</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1436,8 +1436,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>88</card_id>
-		<proj_id>5</proj_id>
+		<card_id>385</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1523,9 +1523,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>89</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>386</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -1568,8 +1568,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>90</card_id>
-		<proj_id>5</proj_id>
+		<card_id>387</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1610,8 +1610,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>91</card_id>
-		<proj_id>5</proj_id>
+		<card_id>388</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1672,9 +1672,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>92</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>389</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1721,8 +1721,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>93</card_id>
-		<proj_id>5</proj_id>
+		<card_id>390</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1783,9 +1783,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>94</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>391</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -1825,8 +1825,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>95</card_id>
-		<proj_id>5</proj_id>
+		<card_id>392</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1879,8 +1879,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>96</card_id>
-		<proj_id>5</proj_id>
+		<card_id>393</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -1951,8 +1951,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>97</card_id>
-		<proj_id>5</proj_id>
+		<card_id>394</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2018,8 +2018,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>98</card_id>
-		<proj_id>5</proj_id>
+		<card_id>395</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2047,8 +2047,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>99</card_id>
-		<proj_id>5</proj_id>
+		<card_id>396</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2113,8 +2113,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>100</card_id>
-		<proj_id>5</proj_id>
+		<card_id>397</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2152,9 +2152,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>101</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>398</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
     
@@ -2219,9 +2219,9 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>102</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>399</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -2251,8 +2251,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>103</card_id>
-		<proj_id>5</proj_id>
+		<card_id>400</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2284,8 +2284,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>104</card_id>
-		<proj_id>5</proj_id>
+		<card_id>401</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2390,8 +2390,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>105</card_id>
-		<proj_id>5</proj_id>
+		<card_id>402</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2437,8 +2437,8 @@
 		<custom_width_answer>0</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>1</card_id>
-		<proj_id>5</proj_id>
+		<card_id>403</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2466,8 +2466,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>2</card_id>
-		<proj_id>5</proj_id>
+		<card_id>404</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2555,8 +2555,8 @@
 		<custom_width_answer>550</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>119</card_id>
-		<proj_id>5</proj_id>
+		<card_id>405</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2606,8 +2606,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>120</card_id>
-		<proj_id>5</proj_id>
+		<card_id>406</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2667,8 +2667,8 @@
 		<custom_width_answer>500</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>121</card_id>
-		<proj_id>5</proj_id>
+		<card_id>407</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2712,8 +2712,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>122</card_id>
-		<proj_id>5</proj_id>
+		<card_id>408</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2774,8 +2774,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>123</card_id>
-		<proj_id>5</proj_id>
+		<card_id>409</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2822,8 +2822,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>124</card_id>
-		<proj_id>5</proj_id>
+		<card_id>410</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2860,8 +2860,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>235</card_id>
-		<proj_id>5</proj_id>
+		<card_id>411</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2896,8 +2896,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>236</card_id>
-		<proj_id>5</proj_id>
+		<card_id>412</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -2950,9 +2950,9 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>237</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>413</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -2998,8 +2998,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>238</card_id>
-		<proj_id>5</proj_id>
+		<card_id>414</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3046,9 +3046,9 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>239</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>415</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3114,8 +3114,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>240</card_id>
-		<proj_id>5</proj_id>
+		<card_id>416</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3169,8 +3169,8 @@
 		<custom_width_answer>500</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>241</card_id>
-		<proj_id>5</proj_id>
+		<card_id>417</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3211,8 +3211,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>242</card_id>
-		<proj_id>5</proj_id>
+		<card_id>418</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3246,8 +3246,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>243</card_id>
-		<proj_id>5</proj_id>
+		<card_id>419</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3287,8 +3287,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>244</card_id>
-		<proj_id>5</proj_id>
+		<card_id>420</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3332,9 +3332,9 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>245</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>421</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3361,8 +3361,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>246</card_id>
-		<proj_id>5</proj_id>
+		<card_id>422</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3399,8 +3399,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>9</card_id>
-		<proj_id>5</proj_id>
+		<card_id>423</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3463,8 +3463,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>10</card_id>
-		<proj_id>5</proj_id>
+		<card_id>424</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3524,8 +3524,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>11</card_id>
-		<proj_id>5</proj_id>
+		<card_id>425</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3568,8 +3568,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>12</card_id>
-		<proj_id>5</proj_id>
+		<card_id>426</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3633,8 +3633,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>13</card_id>
-		<proj_id>5</proj_id>
+		<card_id>427</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3665,8 +3665,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>14</card_id>
-		<proj_id>5</proj_id>
+		<card_id>428</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3696,9 +3696,9 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>15</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>429</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3740,8 +3740,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>16</card_id>
-		<proj_id>5</proj_id>
+		<card_id>430</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3769,8 +3769,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>17</card_id>
-		<proj_id>5</proj_id>
+		<card_id>431</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -3893,9 +3893,9 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>18</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>432</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -3960,9 +3960,9 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>19</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>433</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -4004,8 +4004,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>20</card_id>
-		<proj_id>5</proj_id>
+		<card_id>434</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4051,8 +4051,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>21</card_id>
-		<proj_id>5</proj_id>
+		<card_id>435</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4109,8 +4109,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>22</card_id>
-		<proj_id>5</proj_id>
+		<card_id>436</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4172,8 +4172,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>23</card_id>
-		<proj_id>5</proj_id>
+		<card_id>437</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4231,8 +4231,8 @@
 		<custom_width_answer>600</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>24</card_id>
-		<proj_id>5</proj_id>
+		<card_id>438</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4281,8 +4281,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>247</card_id>
-		<proj_id>5</proj_id>
+		<card_id>439</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4329,8 +4329,8 @@
 		<custom_width_answer>500</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>248</card_id>
-		<proj_id>5</proj_id>
+		<card_id>440</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4360,8 +4360,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>249</card_id>
-		<proj_id>5</proj_id>
+		<card_id>441</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4440,9 +4440,9 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>250</card_id>
-		<proj_id>5</proj_id>
-		<stack>2</stack>
+		<card_id>442</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
 
@@ -4483,8 +4483,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>251</card_id>
-		<proj_id>5</proj_id>
+		<card_id>443</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4539,8 +4539,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>252</card_id>
-		<proj_id>5</proj_id>
+		<card_id>444</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4587,8 +4587,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>253</card_id>
-		<proj_id>5</proj_id>
+		<card_id>445</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4616,8 +4616,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>254</card_id>
-		<proj_id>5</proj_id>
+		<card_id>446</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4668,8 +4668,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>255</card_id>
-		<proj_id>5</proj_id>
+		<card_id>447</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4700,8 +4700,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>256</card_id>
-		<proj_id>5</proj_id>
+		<card_id>448</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4746,8 +4746,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>257</card_id>
-		<proj_id>5</proj_id>
+		<card_id>449</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4797,8 +4797,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>258</card_id>
-		<proj_id>5</proj_id>
+		<card_id>450</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4842,8 +4842,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>259</card_id>
-		<proj_id>5</proj_id>
+		<card_id>451</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4875,8 +4875,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>260</card_id>
-		<proj_id>5</proj_id>
+		<card_id>452</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4934,8 +4934,8 @@
 		<custom_width_answer>600</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>261</card_id>
-		<proj_id>5</proj_id>
+		<card_id>453</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -4976,8 +4976,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>262</card_id>
-		<proj_id>5</proj_id>
+		<card_id>454</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5045,8 +5045,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>263</card_id>
-		<proj_id>5</proj_id>
+		<card_id>455</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5134,8 +5134,8 @@
 		<custom_width_answer>500</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>264</card_id>
-		<proj_id>5</proj_id>
+		<card_id>456</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5196,8 +5196,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>265</card_id>
-		<proj_id>5</proj_id>
+		<card_id>457</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5225,8 +5225,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>266</card_id>
-		<proj_id>5</proj_id>
+		<card_id>458</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5256,8 +5256,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>267</card_id>
-		<proj_id>5</proj_id>
+		<card_id>459</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5312,8 +5312,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>268</card_id>
-		<proj_id>5</proj_id>
+		<card_id>460</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5373,8 +5373,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>269</card_id>
-		<proj_id>5</proj_id>
+		<card_id>461</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5424,8 +5424,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>350</card_id>
-		<proj_id>5</proj_id>
+		<card_id>462</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5497,8 +5497,8 @@
 		<custom_width_answer>600</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>351</card_id>
-		<proj_id>5</proj_id>
+		<card_id>463</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5548,8 +5548,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>352</card_id>
-		<proj_id>5</proj_id>
+		<card_id>464</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5614,8 +5614,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>353</card_id>
-		<proj_id>5</proj_id>
+		<card_id>465</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5660,8 +5660,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>354</card_id>
-		<proj_id>5</proj_id>
+		<card_id>466</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5701,8 +5701,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>355</card_id>
-		<proj_id>5</proj_id>
+		<card_id>467</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5750,8 +5750,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>356</card_id>
-		<proj_id>5</proj_id>
+		<card_id>468</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5815,8 +5815,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>357</card_id>
-		<proj_id>5</proj_id>
+		<card_id>469</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5859,8 +5859,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>358</card_id>
-		<proj_id>5</proj_id>
+		<card_id>470</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5914,8 +5914,8 @@
 		<custom_width_answer>550</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>359</card_id>
-		<proj_id>5</proj_id>
+		<card_id>471</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -5965,8 +5965,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>360</card_id>
-		<proj_id>5</proj_id>
+		<card_id>472</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6009,8 +6009,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>361</card_id>
-		<proj_id>5</proj_id>
+		<card_id>473</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6052,8 +6052,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>362</card_id>
-		<proj_id>5</proj_id>
+		<card_id>474</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6132,8 +6132,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>363</card_id>
-		<proj_id>5</proj_id>
+		<card_id>475</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6163,8 +6163,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>364</card_id>
-		<proj_id>5</proj_id>
+		<card_id>476</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6193,8 +6193,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>365</card_id>
-		<proj_id>5</proj_id>
+		<card_id>477</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6234,8 +6234,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>366</card_id>
-		<proj_id>5</proj_id>
+		<card_id>478</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6274,8 +6274,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>367</card_id>
-		<proj_id>5</proj_id>
+		<card_id>479</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6322,8 +6322,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>368</card_id>
-		<proj_id>5</proj_id>
+		<card_id>480</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6367,8 +6367,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>369</card_id>
-		<proj_id>5</proj_id>
+		<card_id>481</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6403,8 +6403,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>370</card_id>
-		<proj_id>5</proj_id>
+		<card_id>482</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6447,8 +6447,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>371</card_id>
-		<proj_id>5</proj_id>
+		<card_id>483</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6485,8 +6485,8 @@
 		<custom_width_answer>500</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>372</card_id>
-		<proj_id>5</proj_id>
+		<card_id>484</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6588,8 +6588,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>373</card_id>
-		<proj_id>5</proj_id>
+		<card_id>485</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6648,8 +6648,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>374</card_id>
-		<proj_id>5</proj_id>
+		<card_id>486</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6707,8 +6707,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>375</card_id>
-		<proj_id>5</proj_id>
+		<card_id>487</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6753,8 +6753,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>376</card_id>
-		<proj_id>5</proj_id>
+		<card_id>488</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6818,8 +6818,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>377</card_id>
-		<proj_id>5</proj_id>
+		<card_id>489</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6869,8 +6869,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>378</card_id>
-		<proj_id>5</proj_id>
+		<card_id>490</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6931,8 +6931,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>379</card_id>
-		<proj_id>5</proj_id>
+		<card_id>491</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -6971,8 +6971,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>380</card_id>
-		<proj_id>5</proj_id>
+		<card_id>492</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -7027,8 +7027,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>381</card_id>
-		<proj_id>5</proj_id>
+		<card_id>493</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -7088,8 +7088,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>382</card_id>
-		<proj_id>5</proj_id>
+		<card_id>494</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -7160,8 +7160,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>383</card_id>
-		<proj_id>5</proj_id>
+		<card_id>495</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -7198,37 +7198,8 @@
 		<custom_width_answer>450</custom_width_answer>
 	</flashcard>
 	<flashcard>
-		<card_id>384</card_id>
-		<proj_id>5</proj_id>
-		<stack>1</stack>
-		<question>&lt;html&gt;
-  &lt;head&gt;
-
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p style="margin-top: 0"&gt;
-      
-    &lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</question>
-		<answer>&lt;html&gt;
-  &lt;head&gt;
-
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p style="margin-top: 0"&gt;
-      
-    &lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</answer>
-		<custom_width_question>450</custom_width_question>
-		<custom_width_answer>450</custom_width_answer>
-	</flashcard>
-	<flashcard>
-		<card_id>385</card_id>
-		<proj_id>5</proj_id>
+		<card_id>497</card_id>
+		<proj_id>7</proj_id>
 		<stack>1</stack>
 		<question>&lt;html&gt;
   &lt;head&gt;
@@ -7266,6 +7237,477 @@
       Ein Webserver hingegen sendet niemals unaufgefordert Daten. Bei HTTP &lt;b&gt;&lt;i&gt;zieht&lt;/i&gt;&lt;/b&gt; 
       die Anfragenachricht die Information bei Bedarf vom Web-Server; &lt;b&gt;HTTP 
       ist ein Pull-Protokoll.&lt;/b&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>22</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Was sind Sockets?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      TCP ist ein Dienst der Internet-Transportschicht, mit dem Nachrichten 
+      zwischen Anwendungsprozessen ausgetauscht werden k&amp;#246;nnen. Hierzu 
+      existiert eine Schnittstelle zur Transportschicht, die auch als &lt;b&gt;API 
+      (Application Programming Interface)&lt;/b&gt; zwischen der Anwendung und dem 
+      Netzwerk bezeichnet wird. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Diese Schnittstelle bietet als Dienstzugangspunkt zu dem Dienst einen 
+      sogenannten &lt;b&gt;Socket&lt;/b&gt;. Clients und -Server kommunizieren also, indem 
+      sie ihre HTTP-Nachrichten an einen Socket &amp;#252;bergeben. Das &lt;b&gt;Socket-Interface&lt;/b&gt; 
+      in einem Client ist die T&amp;#252;r zur TCP-Verbindung zu einen Server, der 
+      ebenfalls &amp;#252;ber einen Socket eine T&amp;#252;r zu dieser Verbindung hat.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>23</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Nenne 3 Anforderungsbereiche, die Anwendungen an die Transportschicht 
+      stellen!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) &lt;b&gt;Zuverl&amp;#228;ssigkeit &lt;/b&gt;(Datenverluste)
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) &lt;b&gt;Bandbreite&lt;/b&gt;nbedarf
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      3.) &lt;b&gt;Zeit&lt;/b&gt;bedarf (Verz&amp;#246;gerung)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>24</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie wird ein Prozess auf einem entfernten Rechner adressiert?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Durch seine &lt;b&gt;Portnummer.&lt;/b&gt; Eine Portnummer besteht aus 16 Bit (d. h. 
+      eine Zahl von 0 bis 65535). Ein Host hat damit 65536 Ports oder m&amp;#246;gliche 
+      ansprechbare Prozesse. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Portnummern 0 bis 1023 sind f&amp;#252;r bekannte Anwendungsprotokolle 
+      reserviert. Der RFC 1700 listet diese &lt;b&gt;bekannten Portnummern 
+      (well-known port numbers)&lt;/b&gt; auf. HTTP benutzt zum Beispiel Portnummer 
+      80 und FTP Portnummer 21, d. h. den Web-Serverprozess auf einem Host 
+      findet man am Port 80, den FTP-Serverprozess am Port 21. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Stellt man einen eigenen Serverdienst einer verteilten Anwendung bereit, 
+      so sollte man eine Portnummer zwischen 1024 und 65535 als Zugang 
+      festlegen und in der Benutzerinformation dokumentieren. Der 
+      bereitgestellte Dienst ist dann f&amp;#252;r potentielle Nutzer auffindbar und ansprechbar.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>25</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie wird ein Host im Internet identifiziert?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Hosts werden im Internet durch sogenannte IP-Adressen identifiziert. 
+      IP-Adressen sind 32 Bit lang. Die 32 Bit werden als 4 Byte 
+      interpretiert, die von links nach rechts gelesen eine hierarchische 
+      Struktur repr&amp;#228;sentieren.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      IP-Adressen werden dezimal als vier durch Punkte getrennte Zahlen von 0 
+      bis
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      255 geschrieben, beispielsweise 132.176.71.2. Diese Notation hei&amp;#223;t auch &lt;b&gt;Punktdezimalnotation 
+      (dotted-decimal notation)&lt;/b&gt;. IP-Adressen sind global eindeutig. Deshalb 
+      k&amp;#246;nnen diese Adressen nicht vom Host beliebig gew&amp;#228;hlt werden.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>26</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wozu dient DNS? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die mnemonischen Bezeichnungen von Internethosts sind von Routern schwer 
+      zu verarbeiten. Router benutzen deshalb ausschlie&amp;#223;lich die IP-Adressen 
+      zum Weiterleiten von Nachrichten.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;Domain Name System (DNS)&lt;/b&gt; des Internets &amp;#252;bernimmt die Aufgabe, 
+      die &lt;b&gt;&lt;i&gt;mnemonische Hostnamen auf IP-Adressen abzubilden&lt;/i&gt;&lt;/b&gt;. 
+      Protokolle der Anwendungsschicht wie HTTP, SMTP und FTP benutzen den 
+      DNS-Dienst,
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      um zu einem vom Benutzer eingegebenen Hostnamen die IP-Adresse zu 
+      ermitteln. Dabei ist &lt;b&gt;DNS&lt;/b&gt; selbst ein &lt;b&gt;Protokoll der 
+      Anwendungsschicht&lt;/b&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>28</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Beschreibe das hierarchische System der DNS-Server!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Lokaler Nameserver: &lt;/b&gt;vom ISP betrieben, wird dem Host im 
+      lokalen Netz beim Internetzugang zugewiesen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Autoritativer Nameserver: &lt;/b&gt;von Organisationen betrieben, die 
+      Second-Level-Domains vertrieben, kann alle Anfragen zu diesen Domains 
+      beantworten. Oft sind lokale Nameserver auch gleichzeitig autoritative 
+      Nameserver.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Top-Level-Nameserver: &lt;/b&gt;von Organisationen betrieben, die 
+      Top-Level-Domains verwalten und die richtigen autoritativen Nameserver 
+      f&amp;#252;r ihre Subdomains kennen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Root Nameserver: &lt;/b&gt;Kennen mindestens alle Top-Level-Nameserver
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Alle Nameserver haben &lt;b&gt;Caches&lt;/b&gt;, in denen sie die letzten Anfragen 
+      und Antworten speichern, sodass ein Nameserver selten bei einem anderen 
+      Nameserver nachfragen muss.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>29</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie unterscheiden sich die Nameserver verschiedenen Hierarchien in ihrem 
+      Abfrageprinzip?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Der lokale Name-Server arbeitet nach dem Prinzip der &lt;b&gt;rekursiven
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Namensaufl&amp;#246;sung&lt;/b&gt;: er &amp;#252;bernimmt die Anfrage eines Hosts, 
+      erledigt alles Notwendige zur Beantwortung und liefert die endg&amp;#252;ltige 
+      Antwort zur&amp;#252;ck, falls m&amp;#246;glich.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Die Arbeitsweise der Name-Server auf den h&amp;#246;heren Stufen nennen wir 
+      dagegen&lt;b&gt; iterative Namensaufl&amp;#246;sung:&lt;/b&gt; Sie antworten nur mit dem 
+      Verweis auf einen anderen (niedrigeren) Server, der die Frage 
+      weiterbearbeiten kann. An diesen ist dann dieselbe Anfrage noch einmal 
+      zu richten. Das iterative Prinzip ist f&amp;#252;r die viel besch&amp;#228;ftigten 
+      Name-Server vorteilhaft, weil sie so ohne jede Verz&amp;#246;gerung die 
+      Anfragen endg&amp;#252;ltig erledigen k&amp;#246;nnen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>57</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert eine DNS Abfrage?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>58</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      An der Schnittstelle Transportschicht - Vermittlungsschicht m&amp;#252;ssen 
+      mehrere Prozesse &amp;#252;ber ein und dieselbe Kommunikationsleitung miteinander 
+      kommunizieren. Wie nennt man die dazu eingesetzten Techniken? Welche 
+      Rolle spielen dabei IP-Adresse und Port?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Multiplexen: &lt;/b&gt;Nachrichten von verschiedenen Anwendungsprozessen 
+      werden vom Senderhost in einem Nachrichtenstrom geb&amp;#252;ndelt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;.) Demultiplexen: &lt;/b&gt;Nachrichten werden beim Empf&amp;#228;ngerhost dem 
+      gemeinsamen Nachrichtenstrom entnommen und auf die verschiedenen 
+      Prozesse verteilt.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Rolle der Ports:&lt;/b&gt; Die Kombination aus Quell- und Zielport im 
+      Header des Transportprotolls gibt dem Empf&amp;#228;nger an, zu welchem Prozess 
+      das jeweilige Segment geh&amp;#246;rt. Das Hinzuf&amp;#252;gen der Ports passiert also 
+      beim Multiplexen.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Rolle der IP-Adressen: &lt;/b&gt;Wenn zwei Quellhosts denselben Source-Port 
+      verwenden und dieselbe Anwendung am Zielhost ansprechen (gleicher 
+      Destination-Port) kann man ein Segment nur anhand der Source-IP-Adresse 
+      der richtigen logischen Verbindung zuordnen. Diese hilft also beim 
+      Demultiplexen.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>27</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie unterscheiden sich TCP und UDP bez&amp;#252;glich des Kriteriums 
+      &amp;quot;Zuverl&amp;#228;ssigkeit&amp;quot;?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;UDP-Protokoll &lt;/b&gt;erlaubt das Senden einzelner Nachrichten 
+      zwischen Prozessen. Es macht dabei &lt;b&gt;keine Garantien&lt;/b&gt; bez&amp;#252;glich der &lt;b&gt;&lt;i&gt;Ankunft 
+      (Datenverlust&lt;/i&gt;&lt;/b&gt;) und der &lt;b&gt;&lt;i&gt;Reihenfolg&lt;/i&gt;&lt;/b&gt;e der 
+      Nachrichten. UDP funktioniert praktisch wie die gelbe Post: Der Sender 
+      baut keine Verbindung zum Empf&amp;#228;nger auf, sondern schickt die Nachrichten 
+      einfach los. Der Empf&amp;#228;nger weiss also gar nicht, dass Nachrichten an ihn 
+      gesendet werden. UDP wird deshalb als &lt;b&gt;&lt;u&gt;verbindungsloser Dienst&lt;/u&gt;&lt;/b&gt; 
+      bezeichnet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Das &lt;b&gt;TCP-Protokoll&lt;/b&gt; &lt;b&gt;garantiert&lt;/b&gt;, dass die von einen 
+      Senderprozess zu einem
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Empf&amp;#228;ngerprozess &amp;#252;bertragenen Nachrichten irgendwann &lt;b&gt;&lt;i&gt;in 
+      der richtigen &lt;/i&gt;&lt;/b&gt;
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;&lt;i&gt;Reihenfolge&lt;/i&gt;&lt;/b&gt; und &lt;b&gt;&lt;i&gt;vollst&amp;#228;ndig&lt;/i&gt;&lt;/b&gt; beim 
+      Empf&amp;#228;ngerprozess ankommen. Der
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Sender baut vor dem &amp;#220;bertragen der Daten eine &lt;b&gt;&lt;i&gt;virtuelle 
+      Verbindung&lt;/i&gt;&lt;/b&gt; zum Empf&amp;#228;nger auf, &amp;#228;hnlich dem Telefonieren: Erst 
+      wenn der Empf&amp;#228;nger den H&amp;#246;rer abnimmt, kann der Sender dem Empf&amp;#228;nger die 
+      Nachricht mitteilen. TCP wird deshalb als &lt;b&gt;&lt;u&gt;verbindungsorientierter 
+      Dienst&lt;/u&gt;&lt;/b&gt; bezeichnet.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;i&gt;--&amp;gt; F&amp;#252;r die anderen beiden Anforderungen von Anwendungen, Bandbreite 
+      und Zeit, gibt es im derzeitigen Internet keine Unterst&amp;#252;tzung. Die neue 
+      Version des Internets (IP Version 6) stellt hierf&amp;#252;r neue Konzepte zur 
+      Verf&amp;#252;gung.&lt;/i&gt;
     &lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
