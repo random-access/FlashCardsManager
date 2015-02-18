@@ -1,6 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flashcards>
 	<flashcard>
+		<card_id>59</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Charakterisiere den Dienst, den UDP bereitstellt!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UDP ist ein &lt;b&gt;verbindungsloser Dienst&lt;/b&gt;, d. h. ein Senderprozess kann 
+      direkt UDP-Segmente verschicken, ohne vorher eine Verbindung mit dem 
+      Empf&amp;#228;ngerprozess aufgebaut zu haben. Dies entspricht der Briefzustellung 
+      per Post, bei der ein Absender ja auch einen Brief verschicken kann, ohne 
+      dass der Empf&amp;#228;nger etwas davon wei&amp;#223;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UDP realisiert einen &lt;b&gt;unzuverl&amp;#228;ssigen Transportdienst&lt;/b&gt;, d.h.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      1.) Nachrichten k&amp;#246;nnen&lt;b&gt; verloren gehen&lt;/b&gt;.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      2.) Nachrichten, die in einer Reihenfolge vom Senderprozess an den Empf&amp;#228;ngerprozess 
+      gesendet werden, k&amp;#246;nnen&lt;b&gt; in einer anderen Reihenfolge&lt;/b&gt; beim 
+      Empf&amp;#228;ngerprozess abgeliefert werden.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>60</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      F&amp;#252;r welche Art von Anwendungen wird UDP genutzt? Nenne Beispiele!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UDP wird bevorzugt f&amp;#252;r&lt;b&gt; einmalige Abfragen&lt;/b&gt; und Anwendungen in 
+      Client/Server-Umgebungen benutzt, in denen die S&lt;b&gt;chnelligkeit der
+&lt;/b&gt;    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      &lt;b&gt;Zustellung wichtiger ist als die Genauigkeit&lt;/b&gt;, z. B. die &lt;b&gt;&amp;#220;bertragung 
+      von Sprache oder Video&lt;/b&gt;. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Beispiel f&amp;#252;r die Anwendung von UDP ist das Senden von &lt;b&gt;DNS-Anfragen&lt;/b&gt;. 
+      Nach der DNS-Spezifikation kann DNS auch &amp;#252;ber TCP laufen, aber es 
+      wird fast immer &amp;#252;ber UDP realisiert, da eine DNS-Anfrage relativ klein 
+      ist und in ein UDP-Segment passt. So kann ein DNS-Server jede 
+      hereinkommende Anfrage gleich beantworten und sofort wieder vergessen. 
+      Wenn eine DNS-Anfrage erfolglos ist, kann der DNS-Client die Anfrage bei 
+      einem anderen Name-Server versuchen oder die anfragende Anwendung 
+      informieren, dass der Server nicht erreichbar ist.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>61</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert eine UDP-Abfrage?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Ein Anwendungsprozess erzeugt zuerst einen &lt;b&gt;Dienstzugangspunkt&lt;/b&gt; zum 
+      UDP-Dienst. Dies ist &amp;#252;blicherweise ein &lt;b&gt;Socket vom Typ 
+      Datagramm-Socket&lt;/b&gt;, der dem Anwendungsprozess eine eindeutige 
+      IP-Adresse und Portnummer zuordnet. Der
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Anwendungsprozess kann nun von dem Socket Nachrichten empfangen oder verschicken. 
+      Bei Ende des Anwendungsprozesses wird der Socket wieder freigegeben.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>62</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie ist eine UDP-Segment aufgebaut? Was ist die maximale L&amp;#228;nge eines 
+      UDP-Segments (inkl. Header)?
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UDP-Segmente bestehen aus einem Header mit vier Feldern und einem Datenfeld 
+      mit den Anwendungsdaten. Im Header stehen die &lt;b&gt;Source-Portnummer&lt;/b&gt; 
+      (2 Byte) und die &lt;b&gt;Destination-Portnummer &lt;/b&gt;(2 Byte) zur Identifikation 
+      von Sender- und Empf&amp;#228;ngerprozess. Hinzu kommen die &lt;b&gt;L&amp;#228;nge des 
+      Segmentes&lt;/b&gt; (inklusive Header) in Byte (2 Byte) und eine &lt;b&gt;Pr&amp;#252;fsumme&lt;/b&gt; 
+      (check sum), die zur Fehlererkennung bei fehlerhafter &amp;#220;bertragung des 
+      Headers bzw. des Datenfeldes dient.
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Da die L&amp;#228;nge des Segments in Bytes durch 2 Bytes dargestellt werden 
+      kann, k&amp;#246;nnen Bytes von 0 bis 2^16-1 adressiert werden - die maximale 
+      L&amp;#228;nge eines UDP-Segments betr&amp;#228;gt daher 64 KByte.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>63</card_id>
+		<proj_id>7</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Wie funktioniert die Fehlererkennung bei UDP? 
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style="margin-top: 0"&gt;
+      UDP f&amp;#252;hrt eine simple Fehlererkennung ein, da nicht alle 
+      Vermittlungsprotokolle eine Fehlererkennung oder -korrektur aufweisen. 
+      Falls UDP einen Fehler erkennt, dann wird das Segment entweder verworfen 
+      oder mit einer Warnung an den Anwendungsprozess weitergereicht. 
+    &lt;/p&gt;
+    &lt;p style="margin-top: 0"&gt;
+      Zur Fehlererkennung speichert UDP eine Pr&amp;#252;fsumme (2 Byte) im Header des 
+      UDP-Segments. Die UDP-Pr&amp;#252;fsumme wird berechnet als &lt;b&gt;1er-Komplement 
+      der 1er-Komplement-Summe&lt;/b&gt; &lt;b&gt;aller 16-Bit-W&amp;#246;rter&lt;/b&gt; des 
+      Segments. Das UDP-Protokoll auf dem Empf&amp;#228;nger-Host wird dann die 
+      gleiche Operation auf dem Segment durchf&amp;#252;hren, aber inklusive der 
+      Pr&amp;#252;fsumme; hier sollte dann das Resultat 1111111111111111 herauskommen. 
+      Ist dagegen mindestens ein Bit gleich 0, dann ist ein &amp;#220;bertragungsfehler aufgetreten.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
 		<card_id>350</card_id>
 		<proj_id>7</proj_id>
 		<stack>1</stack>

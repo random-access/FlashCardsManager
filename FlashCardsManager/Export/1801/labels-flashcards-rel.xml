@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <labels_flashcards>
 	<label_flashcard>
+		<labels_flashcards_id>11</labels_flashcards_id>
+		<label_id>11</label_id>
+		<card_id>59</card_id>
+	</label_flashcard>
+	<label_flashcard>
+		<labels_flashcards_id>12</labels_flashcards_id>
+		<label_id>11</label_id>
+		<card_id>60</card_id>
+	</label_flashcard>
+	<label_flashcard>
+		<labels_flashcards_id>13</labels_flashcards_id>
+		<label_id>11</label_id>
+		<card_id>61</card_id>
+	</label_flashcard>
+	<label_flashcard>
+		<labels_flashcards_id>14</labels_flashcards_id>
+		<label_id>11</label_id>
+		<card_id>62</card_id>
+	</label_flashcard>
+	<label_flashcard>
+		<labels_flashcards_id>15</labels_flashcards_id>
+		<label_id>11</label_id>
+		<card_id>63</card_id>
+	</label_flashcard>
+	<label_flashcard>
 		<labels_flashcards_id>243</labels_flashcards_id>
 		<label_id>9</label_id>
 		<card_id>350</card_id>

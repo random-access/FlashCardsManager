@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <medias>
 	<media>
+		<media_id>32</media_id>
+		<card_id>61</card_id>
+		<path_to_media>pic-7-61-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>33</media_id>
+		<card_id>62</card_id>
+		<path_to_media>pic-7-62-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
 		<media_id>85</media_id>
 		<card_id>351</card_id>
 		<path_to_media>pic-7-351-a.png</path_to_media>
