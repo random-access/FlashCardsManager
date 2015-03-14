@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashcards>
+	<flashcard>
+		<card_id>43</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Rational Unified Process: Ordnen Sie die Tätigkeiten 1 bis 6 den Phasen zu, in denen sie schwerpunktmäßig durchgeführt werden. Tragen Sie die Nummer der Tätigkeit unter die zugehörige(n) Phase(n) ein:
+
+Entwicklung der Architektur
+Verfeinerung der Basisanforderungen
+Implementierung
+Ermittlung der Basisanforderungen
+Anwenderschulung
+Aufwandsschätzung
+ paste-25902947762177.jpg Wichtig, Klausurrelevant! Tabelle wird vorgegeben.
+&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;&lt;b&gt;Rational Unified Process:&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div align="left"&gt;Ordnen Sie die Tätigkeiten 1 bis 6 den Phasen zu, in denen sie schwerpunktmäßig durchgeführt werden. Tragen Sie die Nummer der Tätigkeit unter die zugehörige(n) Phase(n) ein:&lt;br /&gt;
+&lt;ol&gt;
+&lt;li&gt;Entwicklung der Architektur&lt;/li&gt;
+&lt;li&gt;Verfeinerung der Basisanforderungen&lt;/li&gt;
+&lt;li&gt;Implementierung&lt;/li&gt;
+&lt;li&gt;Ermittlung der Basisanforderungen&lt;/li&gt;
+&lt;li&gt;Anwenderschulung&lt;/li&gt;
+&lt;li&gt;Aufwandsschätzung&lt;/li&gt;
+&lt;/ol&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;b&gt;Wichtig, Klausurrelevant! Tabelle wird vorgegeben.&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;img src="paste-24416889077761.jpg" /&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>44</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei Gründe, warum das Extreme Programming hohe Anforderungen an die Qualifikation der Projektmitarbeiter stellt.&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei Gründe, warum das Extreme Programming hohe Anforderungen an die Qualifikation der Projektmitarbeiter stellt.&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;Das Programmieren in Paaren hat letzlich nur dann Sinn, wenn &lt;b&gt;beide Partner zur Aufgabe beitragen können&lt;/b&gt;. Ein Team aus einem erfahrenen Mitarbeiter und einem Anfänger würde der Idee des XP nicht entsprechen.&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Da die Entwickler innerhalb der Paare die Rollen im Bedarfsfall tauschen sollen, muss &lt;b&gt;jeder Projektmitarbeiter sowohl die Kodierung&lt;/b&gt; als auch &lt;b&gt;qualitätssichernde Maßnahmen&lt;/b&gt; und die &lt;b&gt;Entwicklung von Strategien für weitere Implementierungen beherrschen&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Durch die dynamische Teambildung ist eine &lt;b&gt;schnelle Einarbeitungsfähigkeit in alle Aspekte des Systems&lt;/b&gt; (Benutzungsoberfläche, Datenhaltung, ...) sinnvoll.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>45</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Beschreiben Sie knapp, wie sich die Aktivitäten der Phasen des Wasserfall-Modells (siehe unten) beim Extreme Programming wiederfinden lassen. paste-26598732464129.jpg Kommt so nicht in der Klausur vor, da zu komplex[Extreme Programming]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Selbstständig:&lt;/div&gt;Beschreiben Sie knapp, wie sich die Aktivitäten der Phasen des Wasserfall-Modells (siehe unten) beim Extreme Programming wiederfinden lassen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Kommt so nicht in der Klausur vor, da zu komplex&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;&lt;br /&gt;&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Extreme Programming]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;table border="1"&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;th&gt;Phase&lt;/th&gt; &lt;th&gt;Abdeckung im Extreme Programming&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Analyse und Definition&lt;/td&gt;
+&lt;td&gt;Die Machbarkeit des Systems wird im Rahmen des &lt;i&gt;Planspiels&lt;/i&gt; zwischen Entwicklern und Kunde von den Entwicklern beurteilt. Über die hierzu anzuwendenden Techniken macht XP keine detaillierten Aussagen. Da die einzelnen Schritte, die im Rahmen eines Planspiels betrachtet werden, jeweils sehr klein sind, fehlt eine umfassende Machbarkeitsbetrachtung zum Gesamtsystem. Lediglich für das jeweils nächste Release wird eine Betrachtung angestellt. Auch die Anforderungsermittlung erfolgt im Rahmen des oben erwähnten Planspiels. Dazu ist ein &lt;i&gt;Vertreter des Kunden im Projektteam&lt;/i&gt; erforderlich, der die Anforderungen des Kunden einbringt. Daneben werden die Anforderungen primär in &lt;i&gt;Testfällen&lt;/i&gt; dokumentiert.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Entwurf&lt;/td&gt;
+&lt;td&gt;Der Entwurf (d.h. das Erstellen einer Softwarearchitektur) wird im  XP-Ansatz durch eine &lt;i&gt;Systemmetapher&lt;/i&gt; ersetzt, die für Entwickler und Anwender verständlich sein sollte. Diese Metapher bleibt aber sowohl vom umfassenden Charakter als auch vom Detaillierungsgrad her weit hinter einem klassischen Produkt-Design zurück.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Implementierung&lt;/td&gt;
+&lt;td&gt;Im Extreme Programming erfolgt die &lt;i&gt;Implementierung in Paaren&lt;/i&gt;. Diese Praktik bildet den Kern des Ansatzes. Darüber hinaus sind entsprechende &lt;i&gt;Programmierrichtlinien&lt;/i&gt; zu entwickeln und zu beachten.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Erstellung eines Prototyps&lt;/td&gt;
+&lt;td&gt;In XP wird &lt;i&gt;evolutionäres Prototyping&lt;/i&gt; eingesetzt.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Einsatz und Wartung&lt;/td&gt;
+&lt;td&gt;Die Wartung des Systems wird durch den &lt;i&gt;selbsterklärenden Code&lt;/i&gt; unterstützt. Eine weitere Dokumentation ist absichtlich nicht vorgegeben, weil sie in der Praxis im Regelfall nicht gepflegt wird und deshalb schnell veraltet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Qualitätssicherung und Test&lt;/td&gt;
+&lt;td&gt;Die einzige Qualitätssicherungsmaßnahme bei dem XP-Ansatz besteht in der Bildung von Zweierteams mit klarer Rollenverteilung, d.h. ein Programmierer schreibt den Code und der andere untersucht diesen Code auf Fehler. Eine der zentralen Praktiken des Extreme Programming ist das automatische Testen. Jedes Mal, wenn ein Programmierer eine Änderung am System vornimmt, ist er verpflichtet, alle vorhandenen Tests erneut ablaufen zu lassen, um die Funktionstüchtigkeit des Systems zu gewährleisten.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>46</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Erl&amp;#228;utern Sie in jeweils maximal drei kurzen S&amp;#228;tzen die Begriffe 
+    Leitungsstelle, ausf&amp;#252;hrende Stelle und 
+    Stabsstelle.[Grundlagen_der_Aufbauorganisation]
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      Erl&amp;#228;utern Sie in jeweils maximal drei kurzen S&amp;#228;tzen die Begriffe 
+      Leitungsstelle, ausf&amp;#252;hrende Stelle und Stabsstelle.
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;br&gt;
+      
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;i&gt;[Grundlagen_der_Aufbauorganisation]&lt;/i&gt;
+    &lt;/div&gt;
+    &amp;#31;
+
+    &lt;div align="left"&gt;
+      &lt;div&gt;
+        
+      &lt;/div&gt;
+      &lt;ul&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          Die &lt;b&gt;Leitungsstelle&lt;/b&gt; hat die Aufgabe, die Weisungsbeziehungen 
+          zwischen den Stellen zu regeln, d.h., welche Stelle welchen Stellen 
+          direkt unterstellt ist. Es wird zwischen Einliniensystemen, bei 
+          denen jede Stelle eindeutig genau einer anderen Stelle zugeordnet 
+          ist, und Mehrliniensysteme, bei denen eine Stelle auch mehreren 
+          anderen Stellen untergeordnet sein kann, unterschieden. Bei 
+          Mehrliniensystemen kann es zu Kompetenzproblemen kommen, da f&amp;#252;r 
+          manche Stellen mehrere Vorgesetzte Weisungsbefugnisse haben k&amp;#246;nnen.&lt;br&gt;
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          Die &lt;b&gt;ausf&amp;#252;hrende Stelle&lt;/b&gt; ist einer Leitungsstelle 
+          untergeordnet und hat keine Weisungsbefugnis. Sie nimmt die 
+          Weisungen ihrer direkt zugeordneten Leitungsstelle entgegen und 
+          f&amp;#252;hrt diese aus.&lt;br&gt;
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          Die &lt;b&gt;Stabsstelle&lt;/b&gt; ist einer Leitungsstelle zugeordnet und 
+          besitzt keine Weisungsbefugnis. Sie unterst&amp;#252;tzt die Leitungsstelle 
+          bei unternehmerischen, wirtschaftlichen und strategischen 
+          Entscheidungen durch Entscheidungsvorbereitung und 
+          Informationsaufbereitung.&amp;#160;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>47</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Z&amp;#228;hlen Sie stichpunktartig die Vor- und Nachteile einer Gruppierung nach 
+    Funktionen im Vergleich zu einer Gruppierung nach Produkten 
+    auf.[Grundlagen_der_Aufbauorganisation]
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      Z&amp;#228;hlen Sie stichpunktartig die Vor- und Nachteile einer Gruppierung nach 
+      Funktionen &lt;b&gt;im Vergleich&lt;/b&gt; zu einer Gruppierung nach Produkten auf.
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;br&gt;
+      
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;i&gt;[Grundlagen_der_Aufbauorganisation]&lt;/i&gt;
+    &lt;/div&gt;
+    &amp;#31;
+
+    &lt;div align="left"&gt;
+      
+    &lt;/div&gt;
+    &lt;div align="left"&gt;
+      &lt;br&gt;
+      
+    &lt;/div&gt;
+    &lt;div align="left"&gt;
+      &lt;b&gt;Vorteile einer Gruppierung nach Funktionen: &lt;/b&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt;
+          die Spezialisierung bei den Mitarbeitern wird gef&amp;#246;rdert
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          der gegenseitige Austausch innerhalb der Qualifikationen wird 
+          gef&amp;#246;rdert, da Mitarbeiter mit gleicher Qualifikation in einer 
+          Abteilung zusammenarbeiten
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          Aufstiegsm&amp;#246;glichkeiten innerhalb der jeweiligen Qualifikation werden 
+          erm&amp;#246;glicht.
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+      &lt;/ul&gt;
+      &lt;b&gt;Nachteile einer Gruppierung nach Funktionen: &lt;/b&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt;
+          das Abteilungsdenken verl&amp;#228;uft orthogonal zu Projekten, innerhalb 
+          derer nat&amp;#252;rlich alle Funktionen ben&amp;#246;tigt werden
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          es fehlt ein eingebauter Mechanismus zur Koordinierung des 
+          Arbeitsablaufes in Projekten
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          zur Projektsteuerung und -&amp;#252;berwachung werden zus&amp;#228;tzliche 
+          Koordinationsinstrumente ben&amp;#246;tigt
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          es werden mehr F&amp;#252;hrungskr&amp;#228;fte ben&amp;#246;tigt, weil F&amp;#252;hrungskr&amp;#228;fte f&amp;#252;r die 
+          funktionsorientierten Organisationseinheiten und andererseits 
+          F&amp;#252;hrungskr&amp;#228;fte f&amp;#252;r Projekte ben&amp;#246;tigt werden
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>48</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie jeweils einen Vor- und Nachteil einer zentralen und einer dezentralen IT-Organisation in einem Unternehmen dar.[Einordnung_IT-Bereich_in_Aufbauorganisation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Nennen Sie jeweils einen Vor- und Nachteil einer &lt;i&gt;zentralen&lt;/i&gt;&amp;nbsp;und einer &lt;i&gt;dezentralen IT-Organisation&lt;/i&gt;&amp;nbsp;in einem Unternehmen dar.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Einordnung_IT-Bereich_in_Aufbauorganisation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;zentrale IT-Organisation&lt;/b&gt;&lt;br /&gt;
+Vorteile:
+&lt;ul&gt;
+&lt;li&gt;Standardisierung der unternehmensweit eingesetzten Software&lt;/li&gt;
+&lt;li&gt;IT-Spezialisten können in zentralen Organisationen besser fortgebildet und ausgelastet werden&lt;/li&gt;
+&lt;li&gt;Bei hohen Sicherheitsanforderungen können zentral gehaltene Daten besser geschützt werden. Hinzu kommt, dass es weniger redundante Informationen gibt.&lt;/li&gt;
+&lt;li&gt;Zentrale Überwachung der Kundenzufriedenheit
+&lt;/li&gt;
+&lt;/ul&gt;
+
+Nachteile:
+&lt;ul&gt;
+&lt;li&gt;Ein IT-Mitarbeiter kann selten die Probleme einer Fachabteilung ausreichend verstehen&lt;/li&gt;
+&lt;li&gt;Flexibles Eingehen auf die Wünsche der Fachabteilungen, sowie auf Kundenwünsche ist nicht möglich&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;dezentrale IT-Organisation&lt;/b&gt;&lt;br /&gt;
+Vorteile:
+&lt;ul&gt;
+&lt;li&gt;Bei großen Unternehmen ist eine bessere Übersicht über die Verantwortungsbereiche möglich&lt;/li&gt;
+&lt;/ul&gt;
+
+Nachteile:
+&lt;ul&gt;
+&lt;li&gt;Gesamtüberwachung der Zufriedenheit der Fachabteilungen und Kunden ist nicht möglich.&lt;/li&gt;
+&lt;li&gt;Fortbildung der IT-Spezialisten ist schwer möglich
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>49</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in jeweils einem Satz die zwei Möglichkeiten, wie eine zentrale IT-Organisation in die Aufbauorganisation eines Unternehmens eingeordnet werden kann.[Einordnung_IT-Bereich_in_Aufbauorganisation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Beschreiben Sie in jeweils einem Satz die zwei Möglichkeiten, wie eine &lt;i&gt;zentrale IT-Organisation&lt;/i&gt;&amp;nbsp;in die Aufbauorganisation eines Unternehmens eingeordnet werden kann.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Einordnung_IT-Bereich_in_Aufbauorganisation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;Zum einen kann der IT-Bereich &lt;b&gt;mit anderen bereichsübergreifenden Bereichen unter der Verwaltung&lt;/b&gt; zusammengefasst werden. Dabei sind dem Leiter der Verwaltung alle bereichsübergreifenden Bereiche unterstellt.&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Eine zweite Möglichkeit besteht darin, den &lt;b&gt;IT-Bereich alleinstehend&lt;/b&gt; in ein Unternehmen einzuordnen. Hier sollte als Leiter ein IT-Spezialist eingesetzt werden, da er ausschließlich für den IT-Bereich zuständig ist.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>50</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Beschreiben Sie knapp die drei Hauptabteilungen des 
+    IT-Bereichs.[Aufbauorganisation_IT-Bereich]
+  &lt;/body&gt;
+&lt;/html&gt;
+</question>
+		<answer>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    Beschreiben Sie knapp die drei Hauptabteilungen des IT-Bereichs.
+
+    &lt;div&gt;
+      &lt;br&gt;
+      
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;i&gt;[Aufbauorganisation_IT-Bereich]&lt;/i&gt;
+    &lt;/div&gt;
+    &amp;#31;
+
+    &lt;div align="left"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          Zu den Aufgaben des &lt;b&gt;Systembetriebs&lt;/b&gt; geh&amp;#246;ren prim&amp;#228;r die 
+          Bereitstellung und Instandhaltung der IT-Infrastruktur.
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          Die &lt;b&gt;Systementwicklung&lt;/b&gt; befasst sich mit den Aufgaben der 
+          Systemwartung und der &amp;#252;bergreifenden Systemgestaltung, sowie der 
+          Anpassung von Kaufsoftware an das bestehende System.
+        &lt;/li&gt;
+        &lt;br&gt;
+        
+
+        &lt;li&gt;
+          Das &lt;b&gt;Benutzer-Servicezentrum&lt;/b&gt; ist f&amp;#252;r die Betreuung der 
+          Anwender bei Problemen als auch f&amp;#252;r die Weiterbildung im IT-Bereich 
+          verantwortlich.
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</answer>
+		<custom_width_question>450</custom_width_question>
+		<custom_width_answer>450</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>51</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Viele Problemstellungen in einem Unternehmen können heute z.B. in Form einer Applikation für eine Tabellenkalkulation oder durch eine PC-Datenbank angegangen werden. Die Versuchung für Fachabteilungen, dies in eigener Regie zu übernehmen, ist insbesondere dann sehr groß, wenn ein entsprechender Projektantrag von der zentralen IT-Abteilung abgelehnt wurde. Nennen Sie drei Probleme, die sich aus einem solchen Vorgehen ergeben können.[Aufbauorganisation des IT-Bereichs]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Selbstständig:&lt;/div&gt;&lt;div&gt;Viele Problemstellungen in einem Unternehmen können heute z.B. in Form einer Applikation für eine Tabellenkalkulation oder durch eine PC-Datenbank angegangen werden. Die Versuchung für Fachabteilungen, dies in eigener Regie zu übernehmen, ist insbesondere dann sehr groß, wenn ein entsprechender Projektantrag von der zentralen IT-Abteilung abgelehnt wurde. Nennen Sie drei Probleme, die sich aus einem solchen Vorgehen ergeben können.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Aufbauorganisation des IT-Bereichs]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Durch eine fehlende zentrale Koordination können &lt;b&gt;parallele Mehrfachentwicklungen&lt;/b&gt; im Unternehmen nicht ausgeschlossen werden.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Durch die einseitige Sichtweise der Fachabteilung können leicht &lt;b&gt;fachliche Schnittstellen zu anderen Bereichen übersehen werden&lt;/b&gt;.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Eine saubere technische Integration mit der sonstigen Unternehmens-EDV ist nicht gewährleistet.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Die Fachabteilung ist oft - ggf. unter Einbeziehung externer Berater - noch in der Lage, eine Entwicklung selbst zu leisten. &lt;b&gt;Spätestens in der Wartungsphase ergeben sich aber Probleme&lt;/b&gt;, weil die Fachabteilung hierfür nicht die nötigen Ressourcen hat.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Die &lt;b&gt;Einhaltung der Standards&lt;/b&gt; der zentralen IT-Abteilung ist nicht gewährleistet.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;Sicherheitsaspekte&lt;/b&gt;, &lt;b&gt;Backup&lt;/b&gt;, usw. werden oft vernachlässigt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>52</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Nennen Sie fünf Kriterien zur Beurteilung von Ansätzen zur Integration von Softwareprojekten in die Aufbauorganisation eines Unternehmens und beurteilen Sie die Vorteilhaftigkeit der reinen Projektorganisation, der Einfluss-Projektorganisation und der Matrix-Projektorganisation bezüglich dieser Kriterien. Verwenden Sie dazu die Urteile + (gut), o (durchschnittlich), - (schlecht).[Integration_v._Softwareprojekten]Tabelle wird vorgegeben, sollte die Aufgabe vorkommen (Spalten wie Zeilen)! Vermutlich wird sie jedoch weg gelassen.&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Nennen Sie fünf Kriterien zur Beurteilung von Ansätzen zur Integration von Softwareprojekten in die Aufbauorganisation eines Unternehmens und beurteilen Sie die Vorteilhaftigkeit der &lt;i&gt;reinen Projektorganisation, &lt;/i&gt;der &lt;i&gt;Einfluss-Projektorganisation&lt;/i&gt;&amp;nbsp;und der &lt;i&gt;Matrix-Projektorganisation&lt;/i&gt;&amp;nbsp;bezüglich dieser Kriterien.&amp;nbsp;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Verwenden Sie dazu die Urteile + (gut), o (durchschnittlich), - (schlecht).&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Integration_v._Softwareprojekten]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Tabelle wird vorgegeben, sollte die Aufgabe vorkommen (Spalten wie Zeilen)! Vermutlich wird sie jedoch weg gelassen.&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>53</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Gesucht ist ein Mitarbeiter, der während der Entwicklung eines Echtzeitsystems im Bereich "Qualitätssicherung und Test" als stellvertretender Leiter fungieren soll. Geben Sie fünf Anforderungen an.[Projektinterne_Aufbauorganisation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Gesucht ist ein Mitarbeiter, der während der Entwicklung eines Echtzeitsystems im Bereich "Qualitätssicherung und Test" als stellvertretender Leiter fungieren soll. Geben Sie fünf Anforderungen an.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektinterne_Aufbauorganisation]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align="left"&gt;
+Die folgende Auflistung dient lediglich als Beispiel. Es geht darum, die einzelnen Aspekte präzise zu beschreiben:
+
+&lt;ul&gt;
+&lt;li&gt;Zeitliche Verfügbarkeit&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt; vom 1. Dezember 2001 bis 30. Juni 2003&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;Anforderungen bezüglich Qualifikation
+&lt;ul&gt;
+&lt;li&gt; Allgemeine Kenntnisse im Bereich Qualitätssicherung &lt;/li&gt;
+&lt;li&gt; spezielle Kenntnisse zum Test von Echtzeitsystemen &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt; Erfahrung
+&lt;ul&gt;
+&lt;li&gt; min. 2 Jahre aktive QS- und Testerfahrung, da die Person die Tests eigenverantwortlich durchführen soll und im Bedarfsfall den Projektbereich QS und Test in Vertretung leiten muss.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Personalführungsqualitäten&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>54</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Zählen Sie die vier Personengruppen auf, die das Arbeitsfeld des Projektleiters prägen.[Projektinterne_Aufbauorganisation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Zählen Sie die vier Personengruppen auf, die das Arbeitsfeld des Projektleiters prägen.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[&lt;/i&gt;&lt;i&gt;Projektinterne_Aufbauorganisation&lt;/i&gt;]&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Auftraggeber&lt;/li&gt;
+&lt;li&gt;Benutzer&lt;/li&gt;
+&lt;li&gt;Management&lt;/li&gt;
+&lt;li&gt;Mitarbeiter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>55</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie für jede Personengruppe einen Aspekt, auf den der Projektleiter bei der Kommunikation mit der Personengruppe achten muss.[Projektinterne_Aufbauorganisation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie für jede Personengruppe einen Aspekt, auf den der Projektleiter bei der Kommunikation mit der Personengruppe achten muss.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;[&lt;i&gt;Projektinterne_Aufbauorganisation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt; &lt;b&gt;Auftraggeber&lt;/b&gt;&lt;ul&gt;
+&lt;li&gt;Der Projektleiter sollte die Probleme des Auftraggebers verstehen.&lt;/li&gt;
+&lt;li&gt;Der Projektleiter muss technische Lösungen vermitteln können.&lt;/li&gt;&lt;li&gt;Der Projektleiter muss beim Auftraggeber Anerkennung finden.&lt;/li&gt;&lt;li&gt;Der Projektleiter muss dem Auftraggeber vermitteln können, was seine Wünsche bedeuten.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Benutzer&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Der Projektleiter muss sich in die Lage der Benutzer versetzen können und Verständnis für ihre Sorgen und Ängste haben.&lt;/li&gt;&lt;li&gt;Dazu benötigt er Sachkenntnis im Arbeitsumfeld der Benutzer.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Management&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Der Projektleiter muss kosten-, termin- und qualitätsbewusst vorgehen.&lt;/li&gt;&lt;li&gt;Der Projektleiter muss das Management zielgerichtet informieren und rechtzeitig auf potenzielle Probleme aufmerksam machen.&lt;/li&gt;&lt;li&gt;Der Projektleiter muss Verständnis für die Interessen des Managements haben.&lt;/li&gt;&lt;li&gt;Der Projektleiter muss gegenüber seinem Management vor allem gute und "passende" Mitarbeiter sowie die zur Durchführung des Projekts erforderlichen Kompetenzen einfordern.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Mitarbeiter&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Der Projektleiter muss Ziele und Aufgaben klar definieren und eine hinreichende Information über die mit der einzelnen Aufgabe verbundenen Zusammenhänge bei den Mitarbeitern gewährleisten.&lt;/li&gt;&lt;li&gt;Der Projektleiter muss den Mitarbeitern Feedback zu ihren Arbeiten geben.&lt;/li&gt;&lt;li&gt;Der Projektleiter muss sich um die Motivation der Mitarbeiter bemühen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>56</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Geben Sie je fünf gut und schlecht monetär bewertbare Nutzenarten an.[Kosten_und_Nutzen_eines_Projekts]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Geben Sie je fünf gut und schlecht monetär bewertbare Nutzenarten an.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Kosten_und_Nutzen_eines_Projekts]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;gut monetär bewertbare Nutzenarten:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt; Personaleinsparungen durch Selbstbedienungslösungen für einfache Dienstleistungen (z.B. in einer Bank)
+&lt;/li&gt;
+&lt;li&gt; Personaleinsparungen durch optimierte Arbeitsabläufe
+&lt;/li&gt;
+&lt;li&gt; bessere Ressourcenausnutzung (z.B.im Fuhrpark einer Spedition durch Einführung eines Systems zur Auslastungsoptimierung)
+&lt;/li&gt;
+&lt;li&gt; eingesparte Zinsen durch eine geringere Kapitalanbindung (z.B. bei der Ersetzung eines Zentralrechnersystems durch eine verteilte Lösung)
+&lt;/li&gt;
+&lt;li&gt; Performance-Gewinn (z.B. durch  Erhöhung des Transaktionsvolumens)
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;schlecht monetär bewertbare Nutzenarten:&lt;/b&gt;&lt;ul&gt;
+&lt;li&gt; erhöhte Servicequalität für die Kunden (z.B. bei der Einrichtung einer dem Kunden zugänglichen internetbasierten Auftragsverfolgung)
+&lt;/li&gt;
+&lt;li&gt; schnellere Verfügbarkeit von Informationen zur Entscheidungsunterstützung für das Management
+&lt;/li&gt;
+&lt;li&gt; bessere Skalierbarkeit der Systeme (z.B. bei Infrastrukturprojekten)
+&lt;/li&gt;
+&lt;li&gt;ergonomische Benutzungsschnittstelle&lt;/li&gt;
+&lt;li&gt;Erfahrungsgewinn bei den Mitarbeitern im Projekt
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>64</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Sie sind Eigentümer eines Ladens für Modellflugartikel und wollen Ihre Artikel ab sofort einem breiten Publikum über Internet anbieten. Dazu wollen Sie eine neue Webseite mit E-Shop-Funktionalität einrichten. Geben Sie zu diesem Projekt stichpunktartig eine Liste von je fünf relevanten Kosten- und Nutzenarten an.[Kosten_und_Nutzen_eines_Projekts]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Selbstständig:&lt;/div&gt;&lt;div&gt;Sie sind Eigentümer eines Ladens für Modellflugartikel und wollen Ihre Artikel ab sofort einem breiten Publikum über Internet anbieten. Dazu wollen Sie eine neue Webseite mit E-Shop-Funktionalität einrichten. Geben Sie zu diesem Projekt stichpunktartig eine Liste von je fünf relevanten Kosten- und Nutzenarten an.&lt;/div&gt;&lt;div style="font-style: italic; "&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;i&gt;[Kosten_und_Nutzen_eines_Projekts]&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;Kostenarten:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt; Entwicklungskosten für das neue System (insbesondere Personalaufwand)
+&lt;/li&gt;
+&lt;li&gt; Kauf, Wartung, Leasing von Basissoftware
+&lt;/li&gt;
+&lt;li&gt;Kauf, Wartung, Leasing der erforderlichen Hardware (Entwicklungs-, Einsatz- und Testumgebung)
+&lt;/li&gt;
+&lt;li&gt;Laufende Unterhaltskosten für die Web-Präsenz
+&lt;/li&gt;
+&lt;li&gt;Versandkosten für die verkauften Waren
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Nutzenarten:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Erschließung neuer Kundengruppen
+&lt;/li&gt;
+&lt;li&gt;Überregionale, aktuelle und permanente Präsenz
+&lt;/li&gt;
+&lt;li&gt; Durch erhöhten Umsatz Erzielung höherer Rabatte bei den Lieferanten
+&lt;/li&gt;
+&lt;li&gt;Rund um die Uhr zugreifbar
+&lt;/li&gt;
+&lt;li&gt; Besserer Service für die Kunden
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>65</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Grenzen Sie mit höchstens fünf Sätzen statische von dynamischen Verfahren ab.[Investitionsentscheidungen]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Grenzen Sie mit höchstens fünf Sätzen statische von dynamischen Verfahren ab.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Investitionsentscheidungen]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt; Das Charakteristische an den &lt;b&gt;statischen Verfahren&lt;/b&gt; ist, dass bei ihnen der zeitliche Anfall von Kosten und Erträgen nicht berücksichtigt wird. Man arbeitet stattdessen mit Durchschnittswerten und nimmt an, dass die Kosten und Erträge über die Zeit hinweg relativ konstant anfallen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt; Bei den &lt;b&gt;dynamischen Verfahren&lt;/b&gt; wird dagegen der zeitliche Anfall von Kosten und Erträgen berücksichtigt. Man betrachtet dazu periodenbezogen die Kosten und die Erträge, die sich aus der Investition ergeben. Der Anfall der Kosten und der Erträge muss deshalb bei diesem Verfahren im Zeitablauf nicht konstant sein.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>66</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Maximin-Regel, sowie die Maximax-Regel.[Investitionsentscheidungen; Eigen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die &lt;i&gt;Maximin-Regel&lt;/i&gt;, sowie die &lt;i&gt;Maximax-Regel.&lt;/i&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Investitionsentscheidungen; Eigen]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;div&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt; &lt;b&gt;Die Maximin-Regel&lt;/b&gt;&lt;br /&gt;
+Diese Regel besagt, dass die Aktion ausgewählt werden sollte, die über alle Szenarien hinweg das maximale Minimum aufweist. &lt;br /&gt;
+&lt;br /&gt;D.h. man wählt die Aktion, die, wenn man für jede Aktion immer den schlechtesten Fall betrachtet, unter allen Aktionen das beste Ergebnis liefert. &lt;b&gt;Hier wird also das Risiko minimiert.&lt;br /&gt;&lt;/b&gt;&lt;br /&gt;&lt;i&gt;
+Bezogen auf die Tabelle würde diese Regel zu einer Auswahl der Aktion a2 führen, weil diese mit dem Wert 14 über das höchste Zeilenminimum verfügt.&lt;/i&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt; &lt;b&gt;Die Maximax-Regel&lt;br /&gt;&lt;/b&gt;Bei der Maximax-Regel wird die Aktion ausgewählt, die über alle Szenarien hinweg das maximale Maximum aufweist.&lt;br /&gt;&lt;br /&gt;Hier wird also unter Inkaufnahme eines hohen Risikos der &lt;b&gt;mögliche Nutzen maximiert&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Bezogen auf die Tabelle würde die Auswahl zu der Aktion &amp;nbsp;a1 führen, weil diese mit dem Wert 35 über das höchste Zeilenmaximum verfügt.&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>67</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Pessimismus-Optimismus-Regel, sowie die Laplace-Regel.[Investitionsentscheidungen; Eigen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die&amp;nbsp;&lt;i&gt;Pessimismus-Optimismus-Regel&lt;/i&gt;, sowie die&amp;nbsp;&lt;i&gt;Laplace-Regel.&lt;/i&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Investitionsentscheidungen; Eigen]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Die Pessimismus-Optimismus-Regel&lt;/b&gt;&lt;br /&gt;Diese Regel kombiniert die Maximin- und die Maximax-Regel durch Einführung eines &lt;i&gt;Optimierungsparameters λ. &lt;br /&gt;&lt;/i&gt;&lt;br /&gt;Ausgewählt wird dabei die Aktion, für die der Wert&lt;br /&gt;(Zeilenmaximum * λ + Zeilenminimum * (1-λ))&lt;br /&gt;maximal ist. Dabei ist&amp;nbsp;λ ein Parameter, der zwischen 0 und 1 liegt.&lt;br /&gt;&lt;br /&gt;Ein Wert für&amp;nbsp;λ, der...&lt;ul&gt;
+&lt;li&gt;...nahe bei 0 liegt,&lt;br /&gt;führt hier zu einer eher &lt;b&gt;sicherheitsorientierten Entscheidung.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;...nahe bei 1 liegt,&lt;br /&gt;bedeutet eine &lt;b&gt;hohe Risikobereitschaft&lt;/b&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Die Laplace-Regel&lt;/b&gt;&lt;br /&gt;Diese Regel unterstellt eine Gleichwahrscheinlichkeit der möglichen Szenarien. Bei drei Szenarien würde dies bedeuten, dass für jedes Szenario eine Eintrittswahrscheinlichkeit von 1/3 angenommen wird. Basierend auf dieser Einschätzung wird dann der Erwartungswert für den Nutzen gebildet. Die Aktion mit maximalem Erwartungswert wird ausgewählt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt; &lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>68</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Regel des kleinsten Nutzenverlusts.[Investitionsentscheidungen; Eigen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die&amp;nbsp;&lt;i&gt;Regel des kleinsten Nutzenverlusts.&lt;/i&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Investitionsentscheidungen; Eigen]&lt;/i&gt;&lt;/div&gt;&lt;div align=left&gt;&lt;br&gt;Als Auswahlkriterium dient hier die Minimierung des höchstmöglichen, durch eine Fehleinschätzung der Umweltsituation bedingten Nachteils. Dieser Nachteil wird durch die Differenz zwischen dem zu erwartenden und dem maximalen Nutzen ausgedrückt, den man bei Kenntnis des eingetretenen Szenarios hätte erreichen können.&lt;br&gt;&lt;i&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Sollte sich in o.g. Tabelle das Szenario z2 ergeben, so hätten wir,&lt;br&gt;&lt;/i&gt;&lt;ul&gt;&lt;br&gt;&lt;li&gt;&lt;i&gt;wenn wir Aktion a1 ausgewählt hätten, die richtige Entscheidung getroffen. &lt;/i&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;i&gt;Hätten wir aber Aktion a2 ausgewählt, so hätten wir durch unsere Fehleinschätzung einen Nutzenverlust von 35-14 &amp;nbsp;= 21 im Vergleich zu Aktion a1 erlitten. &lt;/i&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;i&gt;Hätten wir Aktion a3 ausgewählt, so hätte der Nutzenverlust 35 - 15 = 20 betragen.&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;Bei der Regel des kleinsten Nutzenverlusts bestimmen wir den Nutzenverlust nun für jede Aktion und jedes Szenario. Wir wählen dann die Aktion aus, die über alle Szenarien hinweg &lt;b&gt;den geringsten potenziellen Nutzenverlust&lt;/b&gt; aufweist.D.h. wir wählen aus einer Tabelle, in der wir die Nutzenverluste eingetragen haben, die durchzuführende Aktion nach dem kleinsten Zeilenmaximum aus.&lt;br&gt;&lt;b&gt;In &amp;nbsp;o.g. Tabelle führt dies zur Auswahl der Aktion a3.&lt;/b&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>69</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt; Gegeben seien folgende Aktionen mit den zugehörigen Szenarien und den entsprechenden Gesamtnutzenwerten:
+ paste-20834886352897.jpg 
+
+
+Bestimmen Sie, welche der Aktionen bei Anwendung der 
+
+Maximin-Regel,
+Maximax-Regel,
+Pessimismus-Optimismus-Regel (in Abhängigkeit von λ),Regel des kleinsten Nutzenverlusts, sowie derLaplace-Regel
+ausgewählt werden.
+[Investitionsentscheidungen KE3]Für die Klausur müssen die Formeln nicht bekannt sein, lediglich die Notwendigkeit müsse verstanden werden.&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt; Gegeben seien folgende Aktionen mit den zugehörigen Szenarien und den entsprechenden Gesamtnutzenwerten:&lt;br /&gt;
+
+&lt;br /&gt;
+
+Bestimmen Sie, welche der Aktionen bei Anwendung der 
+&lt;ul&gt;
+&lt;li&gt;Maximin-Regel,&lt;/li&gt;
+&lt;li&gt;Maximax-Regel,&lt;/li&gt;
+&lt;li&gt;Pessimismus-Optimismus-Regel (in Abhängigkeit von λ),&lt;/li&gt;&lt;li&gt;Regel des kleinsten Nutzenverlusts, sowie der&lt;/li&gt;&lt;li&gt;Laplace-Regel&lt;/li&gt;&lt;/ul&gt;
+ausgewählt werden.&lt;/div&gt;&lt;div align="left"&gt;&lt;br /&gt;
+&lt;i&gt;[Investitionsentscheidungen KE3]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;&lt;u&gt;Für die Klausur müssen die Formeln nicht bekannt sein, lediglich die Notwendigkeit müsse verstanden werden.&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Nach der &lt;b&gt;Maximin-Regel&lt;/b&gt;&amp;nbsp;wird die Aktion a1 ausgewählt, da sie das maximale Zeilenminimum besitzt (20).&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Nach der &lt;b&gt;Maximax-Regel&lt;/b&gt;&amp;nbsp;wird die Aktion a3 ausgewählt, da sie das maximale Zeilenmaximum besitzt (70).&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei Anwendung der &lt;b&gt;Pessimismus-Optimismus-Regel&lt;/b&gt;&amp;nbsp;erhält man für die Aktionen folgende (von λ abhängige) Werte:
+&lt;ul&gt;
+&lt;li&gt;a1: 25λ + 20 * (1 - λ) = 20 + 5λ&lt;/li&gt;
+&lt;li&gt;a2: 45λ + 5 * (1 - λ)  =  5 + 40λ&lt;/li&gt;
+&lt;li&gt;a3: 70λ + 10 * (1 - λ) = 10 + 60λ&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+Für eine &lt;b&gt;sicherheitsorientierte Entscheidung&lt;/b&gt; mit&amp;nbsp;λ=0.1 hätte die Aktion &lt;i&gt;a1 &lt;/i&gt;mit 20.5 den höchsten Wert und wäre nach der Pessimismus-Optimismus-Regel auszuwählen.&lt;br /&gt;&lt;br /&gt;Bei einer &lt;b&gt;risikoreichen Entscheidung &lt;/b&gt;mit&amp;nbsp;λ=0.9 hätte die Aktion &lt;i&gt;a3 &lt;/i&gt;mit 64 den höchsten Wert und wäre damit den anderen Aktionen vorzuziehen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei Anwendung der &lt;b&gt;Regel des kleinsten Nutzenverlusts &lt;/b&gt;wird die Aktion&lt;i&gt;&amp;nbsp;a3&lt;/i&gt;&amp;nbsp;ausgewählt.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Wendet man die &lt;b&gt;Laplace-Regel&lt;/b&gt;&amp;nbsp;an, so erhält man für die Aktionen
+&lt;ul&gt;
+&lt;li&gt;&lt;i&gt;a1&lt;/i&gt;: 115 * 1 / 5 = 23&lt;/li&gt;&lt;li&gt;&lt;i&gt;a2&lt;/i&gt;: 125 * 1 / 5 = 25&lt;/li&gt;&lt;li&gt;&lt;i&gt;a3&lt;/i&gt;: 130 * 1 / 5 = 26&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+Nach &amp;nbsp;der Laplace-Regel wird die Aktion &lt;i&gt;a3 &lt;/i&gt;ausgewählt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>70</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie zwei Gründe, weshalb eine fundierte Aufwandsschätzung notwendig ist.[Aufwandsschätzung]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie zwei Gründe, weshalb eine fundierte Aufwandsschätzung notwendig ist.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;[Aufwandsschätzung]&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Als Basis für die Investitionsentscheidung&lt;/li&gt;&lt;li&gt;Als Basis für die Ressourcenplanung&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>71</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal drei Sätzen die COCOMO-Methode und die Function-Point-Analyse.[Aufwandsschätzung]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal drei Sätzen die &lt;i&gt;COCOMO-Methode&amp;nbsp;&lt;/i&gt;und die &lt;i&gt;Function-Point-Analyse.&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;[Aufwandsschätzung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;COCOMO &lt;/b&gt;gehört zu den Verfahren, die eine Aufwandsschätzung aus dem ebenfalls zu schätzenden Umfang des Programm-Codes berechnen. Dabei wird von der Annahme ausgegangen, dass die Anzahl der Programmzeilen leichter und sicherer abgeschätzt werden kann, als der Aufwand selbst. COCOMO zeichnet sich dadurch aus, dass neben der Anzahl der Programmzeilen auch eine Vielzahl anderer Einflussfaktoren berücksichtigt werden kann.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die &lt;b&gt;Function-Point-Analyse&lt;/b&gt;umgeht das Problem der COCOMO-Methode, die Lines of Code zu schätzen, indem sie auf im Projektablauf früh zur Verfügung stehende erste Analyseergebnisse aufsetzt. Die Basis für die Analyse stellen die Funktionen dar, die nach Art und Komplexität gewichtet werden.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>72</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie zu der COCOMO-Methode jeweils einen Vorteil und einen Nachteil.[Aufwandsschätzung]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie zu der &lt;i&gt;&lt;b&gt;COCOMO-Methode&lt;/b&gt;&lt;/i&gt; jeweils einen Vorteil und einen Nachteil.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Aufwandsschätzung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;Vorteile der COCOMO-Methode:&lt;/b&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;COCOMO kann &lt;b&gt;für Projekte verschiedenster Größe&lt;/b&gt; sinnvoll eingesetzt werden. Während man sich bei einem kleinen Projekt gegebenfalls auf die Anwendung des Basismodells oder des Zwischenmodells ohne Komponentenschätzung beschränkt, kann man bei großen Projekten die vollen Möglichkeiten des Endmodells ausschöpfen. So kann man den Aufwand für die Schätzung in einem sinnvollen Verhältnis zum gesamten Projektaufwand halten.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Mit der COCOMO-Methode kann neben dem Aufwand auch die &lt;b&gt;Dauer des Projekts geschätzt werden&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die Entstehung der Schätzung ist durch die konkreten Hilfen zur Schätzung der einzelnen Parameter sehr gut &lt;b&gt;nachvollziehbar&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;COCOMO ist ein &lt;b&gt;sehr gut dokumentiertes und ausgearbeitetes&lt;/b&gt; Verfahren.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Mit der COCOMO-Methode kann neben dem Entwicklungsaufwand &lt;b&gt;auch der Wartungsaufwand geschätzt werden&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Es können &lt;b&gt;Sensitivitätsanalysen&lt;/b&gt; und &lt;b&gt;Kosten/Nutzen-Analysen für Investitionen&lt;/b&gt; durchgeführt werden.&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;b&gt;Nachteile der COCOMO-Methode:&lt;/b&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;COCOMO ist in seiner Grundform &lt;b&gt;an ein wasserfallartiges Modell zur Softwareentwicklung gebunden&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die Basis für die Berechnung bildet die Anzahl der Programmzeilen. Zu deren Schätzung bietet die COCOMO-Methode jedoch keine Hilfestellung.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die Zuordnung zu den Entwicklungsarten &lt;i&gt;organisch, teilintegriert &lt;/i&gt;oder &lt;i&gt;eingebettet&lt;/i&gt;&amp;nbsp;ist in der konkreten Situation nicht immer eindeutig zu treffen.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>73</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Wie kann eine sinnvolle Kombination aus dem COCOMO-Basismodell und der Function-Point-Analyse aussehen?Begründen Sie Ihre Entscheidung in maximal fünf Sätzen.[Aufwandsschätzung]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Wie kann eine sinnvolle Kombination aus dem COCOMO-Basismodell und der Function-Point-Analyse aussehen?&lt;div&gt;Begründen Sie Ihre Entscheidung in maximal fünf Sätzen.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Aufwandsschätzung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;Die COCOMO-Methode wird gerne der Function-Point-Analyse und der Object-Point-Methode vorgezogen, da sie einfach, gut verstanden und dokumentiert sowie allgemein verwendbar ist.&amp;nbsp;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Weiterhin lässt sich mit COCOMO nicht nur der Aufwand, sondern auch die Projektdauer abschätzen. Das Problem bei COCOMO ist, dass alle Aussagen (Schätzungen) auf einer Schätzung des Programmumfangs beruhen, zu der COCOMO keine Hilfestellung anbietet.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Hier kann die Function-Point-Analyse helfen, indem man mit ihr den Programmumfang schätzt und das Ergebnis als Grundlage für die weitere Bearbeitung mit dem COCOMO-Modell nimmt.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>74</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Wie kann eine sinnvolle Kombination aus dem COCOMO-Basismodell und der Function-Point-Analyse aussehen?Begründen Sie Ihre Entscheidung in einem Satz.[Aufwandsschätzung]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Wie kann eine sinnvolle Kombination aus dem COCOMO-Basismodell und der Function-Point-Analyse aussehen?&lt;div&gt;Begründen Sie Ihre Entscheidung in &lt;b&gt;einem Satz.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br /&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Aufwandsschätzung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;Die bei der COCOMO-Methode problematische Ermittlung des Programmumfangs kann erleichtert werden, indem man diesen mit der Function-Point-Analyse schätzt.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>75</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in maximal zwei Sätzen, in wieweit sich dass COCOMO-Zwischenmodell von dem COCOMO-Basismodell unterscheidet.[Aufwandsschätzung]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in maximal zwei Sätzen, in wieweit sich dass COCOMO-Zwischenmodell von dem COCOMO-Basismodell unterscheidet.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Aufwandsschätzung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;Im Vergleich zum Basismodell beinhaltete das Zwischenmodell von COCOMO Erweiterungen in zwei Richtungen:&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Zum einen werden nun &lt;b&gt;zusätzliche Merkmale (Einflussfaktoren)&lt;/b&gt; mit Hilfe von Korrekturfaktoren in der Schätzung &lt;b&gt;berücksichtigt&lt;/b&gt;.&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;li&gt;Zum anderen kann die &lt;b&gt; Schätzung nach Komponenten unterteilt&lt;/b&gt; erfolgen, weil sowohl die Einordnung in die Kategorien &lt;i&gt;organisch, teilintegriert &lt;/i&gt;und &lt;i&gt;eingebettet&lt;/i&gt;&amp;nbsp;als auch die Einschätzung der Korrekturverfahren für verschiedene Komponenten eines größeren Projekts durchaus unterschiedlich ausfallen kann.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>76</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welche vier Fragen müssen in welcher Reihenfolge bei jeder Planung beantwortet werden?[Planung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welche vier Fragen müssen in welcher Reihenfolge bei jeder Planung beantwortet werden?&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Planung]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+Bei jeder Planung sind die Fragen "Was?", "Wie?", "Wer und womit?" und "Wann?" zu beantworten.
+
+&lt;ol&gt;
+&lt;li&gt;&lt;b&gt;&lt;u&gt;"Was?"&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;Zunächst ist die Frage nach den &lt;b&gt;Anforderungen&lt;/b&gt;, nach den &lt;b&gt;Zielen&lt;/b&gt; und nach &lt;b&gt;der erforderlichen Qualität&lt;/b&gt; zu stellen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;u&gt;"Wie?"&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;Darauf aufbauend können dann sowohl &lt;b&gt;Fragen der Organisation&lt;/b&gt; als auch der &lt;b&gt;erforderlichen Aktivitäten&lt;/b&gt; (auf einer noch recht hohen Abstraktionsebene) angegangen werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;u&gt;"Wer und womit?"&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;Auf dieser Basis wiederum sind Fragen nach den &lt;b&gt;einzusetzenden Methoden und Ressourcen&lt;/b&gt; (z.B. Werkzeugen) zu beantworten und auch Fragen nach den Mitarbeitern, die die Aktivitäten durchführen sollen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;u&gt;"Wann?"&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;Erst danach ist eine &lt;b&gt;konkrete Terminplanung&lt;/b&gt; sinnvoll.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>77</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei Hauptaufgaben der Planung.[Planung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei Hauptaufgaben der Planung.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Planung]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Ablauf- und Terminplanung&lt;/li&gt;&lt;li&gt;Ressourcenplanung&lt;/li&gt;&lt;li&gt;Kostenplanung&lt;/li&gt;&lt;li&gt;Organisationsplanung&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>78</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;In der Praxis stellt sich das Problem, für das jeweilige Projekt das richtige Maß an Planung zu finden. Geben Sie jeweils drei Symptome an, die als Indizien für zu wenig oder zu viel Planung gelten können.[Planung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;In der Praxis stellt sich das Problem, für das jeweilige Projekt das richtige Maß an Planung zu finden. Geben Sie jeweils drei Symptome an, die als Indizien für zu wenig oder zu viel Planung gelten können.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Planung]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;Folgende "Symptome" lassen auf &lt;b&gt;unzureichende Planung&lt;/b&gt; schließen:&lt;ul&gt;&lt;li&gt;Es werden immer wieder hektisch Aufträge erteilt, deren Ergebnisse später niemanden interessieren.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;In Entscheidungssituationen stellt sich immer wieder heraus, dass noch Vorarbeiten erforderlich sind.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die Arbeitsbelastung im Projektteam ist über die Mitarbeiter und über die Zeit hinweg sehr ungleichmäßig verteilt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die Mitarbeiter nehmen Vorgaben nicht mehr ernst, weil deren Erfüllung ohnehin nicht "nachgehalten" wird. Viele Aufträge, die man erhält, erledigen sich "von selbst", weil niemand später nach den Ergebnissen fragt.&lt;/li&gt;&lt;/ul&gt;
+
+Auch für einen &lt;b&gt;überzogenen Planungseifer&lt;/b&gt; lassen sich "Symptome" benennen:&lt;ul&gt;&lt;li&gt;Wenn zu bearbeitende Aufgaben mit einer Genauigkeit von Stunden geplant werden, erscheint dies übertrieben (Ausnahmen sind natürlrich Besprechungen oder Abnahmesitzungen, aber Aufwände für normale "Arbeitspakete" sollten nicht feiner als auf Tages- oder Wochenbasis geplant werden).&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Wenn der Plan allein schon wegen seines Umfangs und seines Detaillierungsgrades nicht aktuell gehalten werden kann.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Wenn ein sehr detaillierter Plan existiert, die Details aber den Mitarbeitern, die ihn umsetzen müssen, zum Teil gar nicht bekannt ist.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Wenn es nicht möglich ist, zu den einzelnen derzeit in Arbeit befindlichen Aktivitäten Fertigstellungsgrade zu ermitteln.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>79</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Charakterisieren Sie in jeweils maximal drei Sätzen die Begriffe Meilenstein und Baseline.[Planung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Charakterisieren Sie in jeweils maximal drei Sätzen die Begriffe &lt;i&gt;Meilenstein&lt;/i&gt;&amp;nbsp;und &lt;i&gt;Baseline.&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;[Planung]&lt;/i&gt;&lt;/div&gt;Zur Überwachung des Projektfortschritts werden - gewöhnlich in Abstimmung mit dem Auftraggeber - &lt;b&gt;Meilensteine&lt;/b&gt;&amp;nbsp;festgelegt. Meilensteine kennzeichnen üblicherweise den Beginn und das Ende des Projekts sowie den Abschluss eines logisch und zeitlich zusammenhängenden Pakets von Vorgängen oder eines einzelnen Vorgangs. Für jeden Meilenstein wird das aus dem zugehörigen Arbeitspaket resultierende Ergebnis präzise definiert. In der Terminplanung wird dann festgelegt, zu welchen Zeitpunkten Meilensteine erreicht sein sollen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Baselines &lt;/b&gt;werden häufig im Zusammenhang mit Meilensteinen definiert. Eine Baseline ist eine Referenzkonfiguration, die zu einem bestimmten Zeitpunkt im Entwicklungsprozess bestimmte gesicherte und freigegebene Zwischenergebnisse zusammenfasst. Wichtig ist dabei, dass die in einer Baseline zusammengefassten Ergebnisse untereinander konsistent sind.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>80</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Ordnen Sie die COCOMO-Methode, die Function-Point-Analyse und die Netzplantechnik in die Kategorien Grob- und Feinplanung ein.[Planung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Ordnen Sie die COCOMO-Methode, die Function-Point-Analyse und die Netzplantechnik in die Kategorien Grob- und Feinplanung ein.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Planung]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;Die COCOMO-Methode und die Function-Point-Analyse sind eindeutig der Grobplanung zuzuordnen. Sie werden typischerweise in einer frühen Phase des Projektes angewendet, um eine Abschätzung der Aufwände (und ggf. auch der Termine) für das gesamte Projekt zu erhalten.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Die Netzplantechnik kann sowohl für die Grob- als auch für die Feinplanung eingesetzt werden. Bei der Grobplanung werden als Vorgänge noch relativ umfangreiche Aufgaben betrachtet. In der Feinplanung wird dagegen mit Vorgängen gearbeitet, deren Dauer oft zwischen 5 und 10 Tagen liegt. Die eigentliche Domäne der Netzplantechnik ist die Feinplanung.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>81</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in höchstens drei Sätzen die Aufgabe der Netzplantechnik.[Netzplantechnik]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in höchstens drei Sätzen die Aufgabe der Netzplantechnik.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Netzplantechnik]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;Die Aufgabe der Netzplantechnik besteht darin, &lt;b&gt;die Komplexität von Projekten durch deren Zerlegung zu verringern&lt;/b&gt;, um deren Planung, Steuerung und Überwachung sinnvoll zu ermöglichen.&lt;br /&gt;
+&lt;br /&gt;
+Dabei sind
+&lt;ul&gt;
+&lt;li&gt;die Strukturierung der Aufgaben und das Aufzeigen ihrer Abhängigkeiten,&lt;/li&gt;
+&lt;li&gt;die Terminplanung sowie&lt;/li&gt;
+&lt;li&gt;die Kapazitätsauslastung für die verwendeten Ressourcen &lt;/li&gt;&lt;/ul&gt;die drei wichtigsten Aspekte der Netzplantechnik.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>82</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Bei der Planung mit Netzplänen werden drei unterschiedliche Arten des Ressourcenbedarfs berücksichtigt. Hierbei handelt es sich um die
+
+einfache Anzeige des Ressourcenbedarfs,die termintreue Bedarfsoptimierung und diekapazitätstreue Bedarfsoptimierung 
+Erläutern Sie diese Arten in jeweils maximal zwei Sätzen.[Netzplantechnik]
+&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;Bei der Planung mit Netzplänen werden drei unterschiedliche Arten des Ressourcenbedarfs berücksichtigt. Hierbei handelt es sich um die
+&lt;ul&gt;
+&lt;li&gt;&lt;i&gt;einfache Anzeige des Ressourcenbedarfs&lt;/i&gt;,&lt;/li&gt;&lt;li&gt;die &lt;i&gt;termintreue Bedarfsoptimierung &lt;/i&gt;und die&lt;/li&gt;&lt;li&gt;&lt;i&gt;kapazitätstreue Bedarfsoptimierung&lt;/i&gt;&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;Erläutern Sie diese Arten in jeweils maximal zwei Sätzen.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Netzplantechnik]&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;&lt;u&gt;Die einfache Anzeige des Ressourcenbedarfs&lt;br /&gt;&lt;/u&gt;&lt;/b&gt;&lt;ul&gt;&lt;li&gt;Zunächst werden die Vorgänge entsprechend ihrer Abhängigkeiten in eine Ablaufreihenfolge gebracht, bei der &lt;b&gt;jeder Vorgang zum frühesten Starttermin&lt;/b&gt; beginnt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt; Dann wird der zu diesem Ablauf gehörende Ressourcenbedarf bestimmt, wobei &lt;b&gt;keine Kapazitätsgrenzen&lt;/b&gt; berücksichtigt werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;u&gt;Die termintreue Bedarfsoptimierung &lt;/u&gt;&lt;br /&gt;(Bestimmung der minimalen Ressourcen zur Einhaltung eines vorgegebenen Termins)&lt;/b&gt;&lt;br /&gt;Hier wird bestimmt, wie viele Ressourcen minimal benötigt werden, um einen vorgegebenen Endtermin einzuhalten. &lt;b&gt;Dabei wird versucht, durch Ausnutzung der Pufferzeiten Überschreitungen der Ressourcenkapazität so gering wie möglich zu halten.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;u&gt;Die kapazitätstreue Bedarfsoptimierung &lt;/u&gt;&lt;br /&gt;(Bestimmung der minimalen Gesamtzeit unter Einhaltung der Ressourcenbeschränkungen)&lt;/b&gt;&lt;br /&gt;Hier wird versucht, einen möglichst kurzen Ablauf zu finden, bei dem keine Überschreitung der Ressourcenkapatität stattfindet.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>83</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in höchstens drei Sätzen den Begriff des Controllings.[Steuerung_und_Kontrolle]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in höchstens drei Sätzen den Begriff des &lt;i&gt;Controllings.&lt;/i&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;Controlling umfasst die Aufgabenbereiche Steuerung und Kontrolle.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Kontrolle&lt;/b&gt; ist die Überwachung des Projektfortschritts anhand von Meilensteinen und Metriken.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Die &lt;b&gt;Steuerung &lt;/b&gt;ist eine Maßnahme, welche die Einhaltung eines systemextern definierten Zustands durch systemexterne Eingriffe ermöglicht.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>84</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welches Ziel wird durch die Verwendung von Metriken verfolgt?[Steuerung_und_Kontrolle]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welches Ziel wird durch die Verwendung von Metriken verfolgt?&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;Man kann Metriken im Rahmen eines Vorgehensmodells insbesondere &lt;b&gt;zur Qualitätssicherung&lt;/b&gt; anwenden.&amp;nbsp;&lt;/div&gt;&lt;div align="left"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div align="left"&gt;Dazu sind für die einzelnen Aufgaben Metriken zu definieren, die auf die Ergebnisse anzuwenden sind. Für die Metriken können dabei Sollintervalle angegeben werden. Liegen die erzielten Werte für die Ergebnisse im Rahmen dieser Intervalle, so sind keine weiteren Maßnahmen erforderlich. Liegen die Werte außerhalb der Vorgaben, so können besondere Abnahmen vorgesehen werden, die überprüfen, ob die Abweichungen begründet sind.&lt;/div&gt;&lt;div align="left"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div align="left"&gt;Der Einsatz der Metriken darf dabei nicht als Ersatz für andere Maßnahmen zur Qualitätssicherung verstanden werden. Vielmehr stellt er eine Ergänzung dar.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>85</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie jeweils drei Metriken, die sich auf die Produktqualität und die Prozessqualität beziehen.[Steuerung_und_Kontrolle]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie jeweils drei Metriken, die sich auf die Produktqualität und die Prozessqualität beziehen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;&lt;br /&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;Metriken, die sich auf die Produktqualität beziehen:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Zuverlässigkeit&lt;/li&gt;&lt;li&gt;Wartungsfreundlichkeit&lt;/li&gt;&lt;li&gt;Funktionalität&lt;/li&gt;&lt;li&gt;Benutzungsfreundlichkeit&lt;/li&gt;&lt;li&gt;Wartbarkeit&lt;/li&gt;&lt;li&gt;Skalierbarkeit&lt;/li&gt;&lt;li&gt;Zeitverhalten&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Metriken, die sich auf die Prozessqualität beziehen:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Produktivität&lt;/li&gt;&lt;li&gt;Prozessfehlerrate&lt;/li&gt;&lt;li&gt;Einhaltung der Regeln und Methoden&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>86</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;
+Ordnen Sie die folgenden Metriken (hier: Maße) eindeutig den Begriffen
+
+Produktqualität,
+Prozessqualität, oder
+Größe
+
+zu. Tragen Sie dazu die Nummer der Metrik unter dem zugehörigen Begriff ein.
+
+
+BenutzbarkeitProzessfehlerratenProduktivitätAufwandZuverlässigkeitWartbarkeit
+[Steuerung_und_Kontrolle]Tabelle wird vorgegeben
+&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;
+Ordnen Sie die folgenden Metriken (hier: Maße) eindeutig den Begriffen
+&lt;ul&gt;
+&lt;li&gt;Produktqualität,&lt;/li&gt;
+&lt;li&gt;Prozessqualität, oder&lt;/li&gt;
+&lt;li&gt;Größe&lt;/li&gt;
+&lt;/ul&gt;
+zu. Tragen Sie dazu die Nummer der Metrik unter dem zugehörigen Begriff ein.
+
+&lt;ol&gt;
+&lt;li&gt;Benutzbarkeit&lt;/li&gt;&lt;li&gt;Prozessfehlerraten&lt;/li&gt;&lt;li&gt;Produktivität&lt;/li&gt;&lt;li&gt;Aufwand&lt;/li&gt;&lt;li&gt;Zuverlässigkeit&lt;/li&gt;&lt;li&gt;Wartbarkeit&lt;/li&gt;
+&lt;/ol&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Tabelle wird vorgegeben&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>87</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie kurz die von Kellner vorgeschlagenen zwei Regeln zum Informationsaustausch innerhalb eines Projektteams.[Steuerung_und_Kontrolle]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie kurz die von Kellner vorgeschlagenen zwei Regeln zum Informationsaustausch innerhalb eines Projektteams.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ol&gt;
+&lt;li&gt;Jeder ist selbst für seine Informationsbeschaffung verantwortlich und sollte ständig einen Gesamtüberblick über das Projekt haben.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Informationsverbreitung:&lt;br /&gt;Jeder, der wichtige Informationen hat, ist dafür verantwortlich, dass seine Teammitglieder diese Informationen erhalten.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>88</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Charakterisieren Sie in jeweils maximal drei Sätzen den Statusbericht, den Tätigkeitsbericht und den Abnahmebericht.[Steuerung_und_Kontrolle]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Charakterisieren Sie in jeweils maximal drei Sätzen den &lt;i&gt;Statusbericht&lt;/i&gt;, den &lt;i&gt;Tätigkeitsbericht&lt;/i&gt;&amp;nbsp;und den &lt;i&gt;Abnahmebericht&lt;/i&gt;.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Der &lt;b&gt;Statusbericht &lt;/b&gt;wird periodisch erstellt. In diesem Bericht findet eine Dokumentation über die wesentlichen Projektdaten statt, z.B. fertige bzw. noch offene Arbeitsaufträge, verbrauchte Ressourcen und bereits erreichte Termine.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Der &lt;b&gt;Tätigkeitsbericht&lt;/b&gt;&amp;nbsp;spiegelt die Verwendung der Arbeitszeit jedes Mitarbeiters wieder. Anhand dieses Berichts kann der Aufwand und seine Verteilung auf die einzelnen Phasen des Projekts ermittelt werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Mit dem &lt;b&gt;Abnahmebericht &amp;nbsp;&lt;/b&gt;wird von einem für die Qualitätssicherung zuständigen Mitarbeiter die Abnahme eines Phasenergebnisses bestätigt. Eventuell noch erforderliche Nacharbeiten sollten hier mit einem verbindlichen Abschlusstermin vermerkt werden.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>89</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Interpretieren Sie in jeweils zwei Sätzen die folgenden Trendanalysen.[Steuerung_und_Kontrolle]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Interpretieren Sie in jeweils zwei Sätzen die folgenden Trendanalysen.&lt;br /&gt;&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;div&gt;Bei einer Trendanalyse sind an der vertikalen Achse die Plantermine und an der horizontalen Achse die Berichtszeitpunkte angetragen. Ein Wert am linken Rand der Skala repräsentiert damit einen initialen Plantermin. Ein Wert weiter rechts entspricht einem im Projektverlauf aktualisierten Plantermin.&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Normaler Verlauf:&lt;br /&gt;&lt;/b&gt;&lt;br /&gt;Auch bei einem normalen Verlauf eines Projekts kann es natürlich zu leichten Terminverschiebungen kommen. Terminverschiebungen nach hinten stehen dabei aber auch Vorverlegungen von Terminen gegenüber und insgesamt sind die Verschiebungen relativ gering.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Trendwende:&lt;br /&gt;&lt;/b&gt;&lt;br /&gt;Nach einem zunächst recht normalen Verlauf ergeben sich ab einem gewissen Zeitpunkt deutliche Terminverschiebungen nach hinten. Dieser Verlauf lässt darauf schließen, dass man zu lange an eigentlich bereits überholten Terminen festgehalten hat. Eine rechtzeitige Analyse der Probleme im Projekt, die letztendlich zu den Terminverschiebungen geführt haben, wurde dadurch verhindert.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Zick-Zack-Verlauf:&lt;br /&gt;&lt;/b&gt;&lt;img src="paste-24816321036289.jpg" /&gt;&lt;br /&gt;Ein Zick-Zack-Verlauf mit sich ständig ändernden Planterminen zeugt von einer erheblichen Unsicherheit in der Gesamtplanung. Damit muss auch der geplante Endtermin des Gesamtprojekts als sehr unsicher angesehen werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;ausufernder Verlauf:&lt;br /&gt;&lt;/b&gt;&lt;img src="paste-25533580574721.jpg" /&gt;&lt;br /&gt;Bei einem derartigen Verlauf wurden durchgängig viel zu optimistische Schätzungen für die Termine gemacht. Die Schätzung sollte daher insgesamt revidiert und auf ein solideres Fundament gestellt werden.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>90</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;
+Gegeben sind die folgenden Trendanalysen A, B, C und Dund die Aussagen
+
+"Bei einem derartigen Verlauf wurden durchgängig viel zu optimistische Schätzungen für die Termine gemacht.""Dieser Verlauf lässt darauf schließen, dass man zu lange an eigentlich bereits überholten Terminen festgehalten hat.""Insgesamt sind die Terminverschiebungeen relativ gering.""Dieser Verlauf zeugt von einer erheblichen Unsicherheit in der Gesamtplanung."[Steuerung_und_Kontrolle]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;
+Gegeben sind die folgenden Trendanalysen A, B, C und D&lt;div&gt;&lt;/div&gt;&lt;div align="left"&gt;und die Aussagen
+&lt;ol&gt;
+&lt;li&gt;"Bei einem derartigen Verlauf wurden durchgängig viel zu optimistische Schätzungen für die Termine gemacht."&lt;/li&gt;&lt;li&gt;"Dieser Verlauf lässt darauf schließen, dass man zu lange an eigentlich bereits überholten Terminen festgehalten hat."&lt;/li&gt;&lt;li&gt;"Insgesamt sind die Terminverschiebungeen relativ gering."&lt;/li&gt;&lt;li&gt;"Dieser Verlauf zeugt von einer erheblichen Unsicherheit in der Gesamtplanung."&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;&lt;i&gt;[Steuerung_und_Kontrolle]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>91</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Was ist die reine Projektorganisation, welche Vor- und Nachteile hat sie?[Integration_v._Softwareprojekten; Eigen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Was ist die reine Projektorganisation, welche Vor- und Nachteile hat sie?&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Integration_v._Softwareprojekten; Eigen]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;div&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Mitarbeiter sind fachlich und disziplinarisch dem Projektleiter unterstellt&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Projektmitarbeiter werden für die Dauer des Projekts aus ihrer bisherigen Einordnung in die Organisation gelöst und dem Projekt zugeordnet&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Ob der Mitarbeiter nach Beendigung des Projekts an seine vorherige Stelle zurückkehrt oder eine neue organisatorische Zuordnung gefunden werden muss, ist zu klären.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Vorteile:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Einheit von Verantwortung und Kompetenz beim Projektleiter&lt;/li&gt;&lt;li&gt;eindeutige Unterstellung der Mitarbeiter&lt;/li&gt;&lt;li&gt;volle Konzentration der Mitarbeiter auf das Projekt durch Herauslösen aus ihrer bisherigen Stelle und Aufgabe&lt;/li&gt;&lt;li&gt;Für den Auftraggeber gibt es im Projektleiter eine klare Anlaufstelle, die auch über die erforderlichen Kompetenzen verfügt.&lt;/li&gt;&lt;li&gt;Durch klare Kompetenzen sind eine rasche Entscheidungsfindung und das flexible Reagieren in Problemsituationen möglich.&lt;/li&gt;&lt;li&gt;Durch die klare Zuordnung wird die Identifikation der Mitarbeiter mit dem Projekt gefördert.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Nachteile:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Rekrutierung der Projektmitarbeiter schwierig.&lt;br /&gt;Abzug aus normalen Linienabteilungen ggf. geblockt durch Leiter.&lt;br /&gt;Rekrutierung aus anderen Projekten bedarf glücklicher Zeitplanung.&lt;/li&gt;&lt;li&gt;kontinuierliche Auslastung der Projektmitarbeiter nicht gewährleistet&lt;/li&gt;&lt;li&gt;Durch die ungewisse Zukunft der Projektmitarbeiter stecken diese teilweise gegen Ende des Projekts ihre Energien in das Finden einer neuen Position.&lt;/li&gt;&lt;li&gt;Rivalität mit den Linienabteilungen (diese fühlen sich ggf. nicht ausreichend beteiligt). Eine Abweichende Haltung derer kann zu erheblichen Problemen führen (Informationsbeschaffung, Zuarbeiten, ...)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>92</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Was ist die Einfluss-Projektorganisation, und welche Vor- und Nachteile hat sie?[Integration_v._Softwareprojekten; Eigen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Was ist die Einfluss-Projektorganisation, und welche Vor- und Nachteile hat sie?&lt;/div&gt;&lt;div style="font-style: italic; "&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;i&gt;[Integration_v._Softwareprojekten; Eigen]&lt;/i&gt;&lt;div align="left"&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Projektleiter hat nur koordinierende Funktion&lt;/b&gt;, quasi eine reine Stabsstelle&lt;/li&gt;&lt;li&gt;&lt;b&gt;fachliche&lt;/b&gt; und &lt;b&gt;disziplinarische&lt;/b&gt; &lt;b&gt;Verantwortung&lt;/b&gt; für die Projektmitarbeiter liegt &lt;b&gt;bei den Leitern der Fachabteilungen&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Der Projektleiter übernimmt hier die Planungsaufgaben und Aufgaben der Entscheidungsvorbereitung&lt;/li&gt;&lt;li&gt;Entscheidungen werden von den Abteilungsleitern getroffen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Vorteile:&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Korrespondieren weitgehend mit den Schwächen der reinen Projektorganisation.&lt;/i&gt;&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;Für die Projektmitarbeiter gibt es &lt;b&gt;keine Unsicherheiten am Projektende&lt;/b&gt;, sie verbleiben in ihrer Position.&lt;/li&gt;&lt;li&gt;Mitarbeiter können ggf. relativ problemlos für mehrere Projekte tätig sein. Dadurch kann unter Umständen eine &lt;b&gt;bessere Auslastung&lt;/b&gt; qualifizierter Mitarbeiter erreicht werden.&lt;/li&gt;&lt;li&gt;Da die Leiter der Linienabteilungen für den Erfolg des Projekts mitverantwortlich sind, ist ihre &lt;b&gt;Identifikation mit dem Projekt recht hoch&lt;/b&gt;. Sie werden deshalb auch gewillt sein, gute Mitarbeiter im Projekt einzusetzen.&lt;/li&gt;&lt;li&gt;Der &lt;b&gt;Erfahrungsaustausch&lt;/b&gt; über mehrere Projekte hinweg innerhalb einer Fachabteilung wird gegenüber einer reinen Projektorganisation &lt;b&gt;gefördert&lt;/b&gt;.&lt;/li&gt;&lt;/ul&gt;
+&lt;b&gt;Nachteile:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;Abteilungsleiter sehen in erster Linie ihre Interessen&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;schnelle und flexible Entscheidungen erschwert, da sie unter den betroffenen Abteilungsleitern im Konsens getroffen werden müssen&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die Mitarbeiter des Projekts bleiben in erster Linie der eigenen Abteilung verantwortlich. Ihre weitere Laufbahn im Unternehmen hängt in erster Linie vom Erfolg der Abteilung und nicht vom Erfolg des Projekts ab. Sie werden daher ggf. nur eingeschränkt zur "uneigennützigen" Zusammenarbeit mit den Projektmitarbeitern aus anderen Abteilungen bereit sein.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Es gibt niemanden, der direkt für den Erfolg des Projekts einstehen muss. Der Projektleiter hat nur koordinierende Aufgaben und die einzelnen betroffenen Abteilungsleiter werden im Allgemeinen die Ursachen für das Scheitern eines Projekts in die Verantwortung einer anderen Abteilung sehen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Für den Auftraggeber gibt es bei der Einfluss-Projektorganisation keinen eindeutigen Ansprechpartner mit Entscheidungskompetenzen&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>93</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Was ist die Matrix-Projektorganisation, und welche Vor- und Nachteile hat sie?[Integration_v._Softwareprojekten; Eigen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Was ist die Matrix-Projektorganisation, und welche Vor- und Nachteile hat sie?&lt;/div&gt;&lt;div style="font-style: italic; "&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;i&gt;[Integration_v._Softwareprojekten; Eigen]&lt;/i&gt;&lt;div align="left"&gt;
+&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;Zwischenlösung einer reinen Projektorganisation und einer Einfluss-Projektorganisation&lt;/li&gt;&lt;li&gt;Einsatz nur ab gewisser Projektgröße sinnvoll, typischerweise werden mehrere Mitarbeiter über einen Zeitraum von mehreren Monaten beteiligt&lt;/li&gt;&lt;li&gt;Aufgaben werden zw. Projektleitung und den Linienabteilungen wie folgt geregelt:
+&lt;ul&gt;&lt;li&gt;&lt;b&gt;Projektleitung&lt;/b&gt;&lt;br /&gt;verantwortlich für Projektplanung, -überwachung, -steuerung&lt;br /&gt;--&amp;gt; Vorgehensverantwortung&lt;/li&gt;&lt;li&gt;&lt;b&gt;Linieninstanzen&lt;/b&gt;&lt;br /&gt;verantwortlich für die projektbezogenen fachlichen Aufgaben&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Projektmitarbeiter werden temporär in die Projektgruppe delegiert, sie unterstehen fachlich der Projektleitung, disziplinär ihrem Linienvorgesetzten&lt;/li&gt;&lt;li&gt;Alle Entscheidungen bzgl. des Projekts müssen zwischen den Verantwortlichen in den Linienabteilungen und dem Projektleiter im Konsens getroffen werden&lt;/li&gt;&lt;li&gt;Durch den Zwang des Konsens soll insgesamt eine bessere Lösung entstehen, weil projektbezogene Faktoren und fachlich-funktionale Faktoren gleichberechtigt in Entscheidungen eingehen.&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;&lt;div align="left"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;Vorteile:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;flexibler Einsatz des Personals in verschiedenen Projekten möglich&lt;/li&gt;&lt;li&gt;höhere Sicherheit der Projektmitarbeiter bzgl. deren Zukunft&lt;/li&gt;&lt;li&gt;Im Verhältnis zur reinen Projektorganisation wird sich der funktionale Vorgesetzte wesentlich stärker mit dem Projekt identifizieren, weil er jetzt selbst einen Teil der Kompetenzen und der Verantwortung trägt&lt;/li&gt;&lt;li&gt;Für den Auftraggeber gibt es im Projekt einen eindeutigen Ansprechpartner&lt;/li&gt;&lt;li&gt;Durch die Erzwingung von Konsensentscheidungen wird eine zielgerichtete und ganzheitliche Betrachtungsweise des Projekts herbeigeführt&lt;/li&gt;&lt;/ul&gt;
+&lt;b&gt;Nachteile:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;Die Matrixorganisation hat ein hohes inhärentes Potential für Kompetenzkonflikte. Sie setzt bei den beteiligten Führungskräften eine große Kompromissfähigkeit voraus. Stimmt zwischen den Führungskräften die "Chemie" nicht, sind Konflikte vorprogrammiert.&lt;/li&gt;&lt;li&gt;Durch die Zuordnung zu zwei Führungskräften kann sich schnell eine Verunsicherung der Mitarbeiter ergeben. Im Extremfall können die Mitarbeiter ihrerseits auch versuchen, die beiden Führungskräfte gegeneinander auszuspielen.&lt;/li&gt;&lt;li&gt;Durch den Zwang zum Konsens entsteht ein recht hoher Kommunikationsaufwand&lt;/li&gt;&lt;li&gt;Der Bedarf an Führungskräften und die Anforderungen an deren "soziale Kompetenzen" ist vergleichsweise hoch.&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>94</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;
+Beschreiben Sie die wichtigsten Kreativitätstechniken
+Brainstorming,Delphi-Methode undMetaplan-Technik in jeweils maximal fünf Sätzen.
+[Kreativitätstechniken]
+&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;
+Beschreiben Sie die wichtigsten Kreativitätstechniken
+&lt;ul&gt;&lt;li&gt;&lt;i&gt;Brainstorming,&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Delphi-Methode und&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Metaplan-Technik&lt;/i&gt;&lt;/li&gt; &lt;/ul&gt;&lt;div&gt;in jeweils maximal fünf Sätzen.&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;i&gt;[Kreativitätstechniken]&lt;/i&gt;
+&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Beim &lt;b&gt;Brainstorming &lt;/b&gt;wird das Prinzip der "freien Assoziation" benutzt. Dazu kommen in einer Sitzung, deren Dauer typischerweise zwischen 10 und 30 Minuten liegen sollte, 4-8 Teilnehmer zusammen, die gemäß gewisser Spielregeln ihren Gedanken freien Lauf lassen. Dabei werden keine konkreten Ideen bis zum Ende verfolgt, sondern möglichst viele verschiedene Lösungsansätze zu dem Problem generiert.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei der &lt;b&gt;Delphi-Methode &lt;/b&gt;handelt es sich um eine Expertenbefragung zu einer spezifischen Problemstellung, bei der die Experten in der Regel nicht untereinander kommunizieren dürfen. Die Experten müssen dazu ein von dem Koodinator erstelltes problemspezifisches Formular ausfüllen. Anschließend fasst der Koordinator die Ergebnisse zusammen und lässt sie den Experten zukommen. Daraufhin überarbeiten die Experten ihre Antworten. Dieser Vorgang wird solange wiederholt, bis eine hinreichende Annäherung der Ergebnisse stattgefunden hat.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei der &lt;b&gt;Metaplantechnik &lt;/b&gt;wird zunächst jede Idee auf eine Karte geschrieben und an einer Stellwand aufgehängt, strukturiert und ergänzt. Mit Hilfe eines Moderators wird dann versucht, durch eine zielgerichtete Gesprächsführung schneller zu Ergebnissen zu kommen und die Teilnehmer so in den Gruppenprozess einzubeziehen, dass alle die gleiche Chance haben, ihre Meinung einzubringen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>95</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und beschreiben Sie in jeweils einem Satz die drei Hauptaufgaben (Komponenten) des Risikomanagements.[Risikomanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und beschreiben Sie in jeweils einem Satz die drei Hauptaufgaben (Komponenten) des Risikomanagements.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Risikomanagement]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Bei der &lt;b&gt;Risikoidentifizierung &lt;/b&gt;geht es darum, potentielle Risiken für das Projekt zu ermitteln, wozu z.B. auf Kreativitätstechniken oder eine vorgegebene Systematisierung von Projektrisiken zurückgegriffen werden kann.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei der &lt;b&gt;Risikobewertung&lt;/b&gt;&amp;nbsp;geht es darum, die identifizierten Risiken hinsichtlich des möglichen Schadens und ihrer Eintrittswahrscheinlichkeit zu beurteilen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die&lt;b&gt;&amp;nbsp;Risikovermeidung / Risikoverminderung &lt;/b&gt;fasst Maßnahmen zusammen, mit denen die Eintrittswahrscheinlichkeit eines Risikos gesenkt oder der mögliche Schaden begrenzt werden soll.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>96</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Schlagen Sie drei konkrete Maßnahmen zum Risikomanagement vor.[Risikomanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Schlagen Sie drei konkrete Maßnahmen zum Risikomanagement vor.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Risikomanagement]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Risikomanagement wird als integraler Bestandteil in das Vorgehensmodell aufgenommen, indem entsprechende Aufgaben vorgesehen werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Im Projektteam wird ein Risikobeauftragter ernannt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Es wird eine Liste der zehn wichtigsten Risiken geführt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Für jedes identifizierte Risiko wird ein entsprechender Risikomanagementplan erstellt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Es wird ein Kommunikationsforum eingerichtet, in dem anonym auf mögliche Risiken hingewiesen werden kann.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>97</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Wählen Sie aus den folgenden Risikoarten die fünf für Softwareprojekte relevantesten aus und verdeutlichen Sie mit jeweils einem Satz die Bedeutung dieser fünf Risikoarten:[Risikomanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Wählen Sie aus den folgenden Risikoarten die fünf für Softwareprojekte relevantesten aus und verdeutlichen Sie mit jeweils einem Satz die Bedeutung dieser fünf Risikoarten:&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Risikomanagement]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+Eine eindeutige Auswahl der fünf relevantesten Risikoarten ist natürlich nicht möglich. Eine mögliche Auswahl wäre z.B.:
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Projektleitungsrisiko:&lt;/b&gt;&lt;br /&gt;
+Eine fundierte Projektleitung ist in Softwareprojekten insbesondere deshalb entscheidend, weil die Standardisierung des Softwareentwicklungsprozesses im Vergleich zu anderen Projektarten schwach ausgeprägt ist. &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Planungsrisiko:&lt;/b&gt;&lt;br /&gt;
+Durch die relativ hohe Planungsunsicherheit bei Softwareprojekten und die sich häufig ändernden Anforderungen ist das Planungsrisiko bei Softwareprojekten besonders hoch.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Applikationsrisiko:&lt;/b&gt;&lt;br /&gt;Aufgrund einer latenten Unsicherheit hinsichtlich der zu erfüllenden Anforderungen besteht bei Softwareprojekten vermehrt die Gefahr, dass die Applikationen die Bedürfnisse der Anwender nicht wirklich erfülllt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Informations- und Kommunikationsrisiko&lt;/b&gt;&lt;br /&gt;Durch die relativ schwach ausgeprägte Standardisierung des Softwareentwicklungsprozesses kommt der Information und der Kommunikation im Projektteam und mit Anwendern eine große Bedeutung zu.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Mitarbeiterrisiko&lt;/b&gt;&lt;br /&gt;Zum einen ist es im Bereich der Softwareentwicklung schwer, wirklich gute Mitarbeiter zu gewinnen, und zum anderen ist wegen des hohen Einarbeitungsaufwands ein Ausfall von Mitarbeitern (z.B. wegen Krankheit) schwer zu kompensieren.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;i&gt;(Detaillierter, sowie weitere in Kap. 6.2.5 "Möglichkeiten zur Risikominimierung")&lt;/i&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>98</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in maximal drei Sätzen die Rolle des Risikobeauftragten.[Risikomanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in maximal drei Sätzen die Rolle des Risikobeauftragten.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Risikomanagement]&lt;/i&gt;&lt;/div&gt;Die Rolle des Risikobeauftragten im Projektteam ist es, auf potentielle Probleme / Risiken zu achten und diese aufzuzeigen. Der Risikobeauftragte ist dabei letztlich eine Art "Berufspessimist", der bei allen Fragen des Projekts ein waches Auge auf die möglichen Risiken hat. Insbesondere ein erfahrener Projektmitarbeiter, der im Idealfall auch einige Erfahrungen in den Bereichen &lt;i&gt;Test und Qualitätssicherung&lt;/i&gt;&amp;nbsp;hat, ist ein geegineter Kandidat für die Rolle des Risikobeauftragten.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>99</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in einem Satz die Rolle des Risikobeauftragten.[Risikomanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in einem Satz die Rolle des Risikobeauftragten.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Risikomanagement]&lt;/i&gt;&lt;/div&gt;Die Rolle des Risikobeauftragten im Projektteam ist es, auf potentielle Probleme / Risiken zu achten und diese aufzuzeigen.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>100</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in einem Satz, welche Qualifikation ein geeigneter Kandidat für die Rolle des Risikobeauftragten mitbringen sollte.[Risikomanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in einem Satz, welche Qualifikation ein geeigneter Kandidat für die Rolle des Risikobeauftragten mitbringen sollte.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Risikomanagement]&lt;/i&gt;&lt;/div&gt;Insbesondere ein erfahrener Projektmitarbeiter, der im Idealfall auch einige Erfahrung in den Bereichen &lt;i&gt;Test und Qualitätssicherung &lt;/i&gt;hat, ist ein geeigneter Kandidat für die Rolle des Risikobeauftragten.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>101</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in einem Satz, welchem Zweck Besprechungen dienen.[Besprechungen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in einem Satz, welchem Zweck Besprechungen dienen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Besprechungen]&lt;/i&gt;&lt;/div&gt;Besprechungen dienen der Informationsweitergabe, der Koordination und der Ideenfindung.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>102</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal zwei Sätzen drei Aufgaben des Moderators einer Besprechung.&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal zwei Sätzen drei Aufgaben des Moderators einer Besprechung.&lt;div align="left"&gt;
+Der Moderator einer Besprechung hat folgende Hauptaufgaben:
+&lt;ol&gt;
+&lt;li&gt;Der Moderator sorgt dafür, dass alle Teilnehmer in die Besprechung einbezogen werden. Insbesondere versucht er, zurückhaltende Teilnehmer zu ermuntern und überaktive Teilnehmer zu "dämpfen".&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Der Moderator achtet darauf, dass weder wilde Wortgefechte noch ablenkende Nebendiskussionen (Getuschel zwischen einzelnen Teilnehmern) entstehen. Es gilt die Regel, dass zu jeder Zeit nur ein Teilnehmer spricht.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei lebhaften Diskussionen kann es erforderlich werden, durch eine Liste der Wortmeldungen Ordnung in die Besprechung zu bringen. Das Wort wird den Teilnehmern dabei in der Reihenfolge der Wortmeldungen erteilt. Lediglich wenn jemand direkt angesprochen wird, sollte er die Möglichkeit erhalten, direkt zu antworten.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Der Moderator strukturiert die Beiträge. Er versucht Gemeinsamkeiten herauszuarbeiten und ggf. entscheidungsfähige Vorschläge zu definieren.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Der Moderator konkretisiert vage Beiträge. So muss der Moderator bei einer Aussage wie "&lt;i&gt;Wir sollten endlich einmal eine Telefonliste für das Projekt anlegen!" &lt;/i&gt;einschreiten und hieraus eine Aufgabe definieren, für die zu klären ist, wer diese Aufgabe bis wann zu erledigen hat. &lt;br /&gt;Plakativer ausgedrückt, ist zu jeder sich herauskristallisierenden Aufgabe zu klären: &lt;b&gt;Wer &lt;/b&gt;macht &lt;b&gt;Was&lt;/b&gt;&amp;nbsp;bis &lt;b&gt;Wann&lt;/b&gt;?&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei all dem muss der Moderator darauf achten, dass das Ziel der Besprechung nicht aus den Augen verloren wird. Ergebnisse sollten nach Möglichkeit mit einem breiten Konsens herbeigeführt werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Am Ende der Besprechung und am Ende jedes wichtigen oder umfangreichen Tagesordnungspunktes fasst der Moderator die Ergebnisse kurz zusammen. Dabei ist insbesondere wieder zu klären, welche Aufgaben sich hieraus ergeben und wer diese übernimmt.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>103</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;
+Beschreiben Sie in jeweils höchsten zwei Sätzen
+
+das Ablaufprotokoll,
+das Ergebnisprotokoll und
+das Kurzprotokoll.
+[Besprechungen]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;
+Beschreiben Sie in jeweils höchsten zwei Sätzen
+&lt;ul&gt;
+&lt;li&gt;das Ablaufprotokoll,&lt;/li&gt;
+&lt;li&gt;das Ergebnisprotokoll und&lt;/li&gt;
+&lt;li&gt;das Kurzprotokoll.&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;i&gt;[Besprechungen]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Ablaufprotokolle &lt;/b&gt;enthalten neben den Besprechungsergebnissen auch wesentliche Meinungsäußerungen und Argumente. Insbesondere bei wichtigen oder strittigen Entscheidungen ist ein Festhalten der Argumente für die spätere Nachvollziehbarkeit der Entscheidungen unerlässlich.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Im Gegensatz zu Ablaufprotokollen beschränken sich &lt;b&gt;Ergebnissprotokolle&lt;/b&gt;&amp;nbsp;auf die erzielten Ergebnisse und die durchzuführenden Maßnahmen (mit Verantwortlichkeiten).&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Kurzprotokolle &lt;/b&gt;können bei weniger wichtigen Besprechunegn angewendet werden. Sie enthalten in wenigen Sätzen die wesentlichen Ergebnisse, ohne dass diese Punkte begründet oder detailliert erläutert werden.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>104</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal drei Sätzen, für welche Personengruppen Projektpräsentationen wichtig sind.[Projektpräsentation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal drei Sätzen, für welche Personengruppen Projektpräsentationen wichtig sind.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektpräsentation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;für Management und Auftraggeber:&lt;/b&gt;&lt;br /&gt;In der Projektpräsentation wird ein Überblick über den Stand des Projektes gegeben, der dem Management zeigt, ob sich das Projekt planmäßig entwickelt. Daneben bekommen Management und Auftraggeber auch subjektiv einen Eindruck vom Projekt und dem Projektteam. Schließlich haben Management und Auftraggeber in einer Projektpräsentation die Möglichkeit, frühzeitig auf Missverständnisse und Probleme hinzuweisen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;für den Projektleiter:&lt;/b&gt;&lt;br /&gt;Der Projektleiter bekommt Rückmeldungen vom Management und Auftragteber zu den bisherigen Ergebnissen. Er kann sich später darauf berufen, dass Dinge bekannt waren (auch hier ist das Protokoll wichtig) und er hat die Gelegenheit, die Leistung des Projektteams - und damit auch seine eigene Leistung - darzustellen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;für die Projektmitarbeiter:&lt;/b&gt;&lt;br /&gt;Für die Projektmitarbeiter ist zunächst schon der Eindruck wichtig, dass ihr Projekt beim Management und beim Auftraggeber Beachtung findet. Das Vorstellen von Teilaspekten durch die Mitarbeiter, die diese bearbeitet haben, kann deren Motivation und Selbstständigkeit erhöhen. Ein weiterer Gesichtspunkt ist, dass die Vorbereitung auf eine Präsentation zwar im Allgemeinen zusätzliche Arbeit für die Projektmitarbeiter darstellt, aber auch eine Kontrolle der Projektergebnisse ist.&lt;/li&gt;&lt;br /&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>105</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie jeweils zwei Gründe für häufige und seltene Projektpräsentationen.[Projektpräsentation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie jeweils zwei Gründe für häufige und seltene Projektpräsentationen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektpräsentation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;Gründe für häufige Projektpräsentationen:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;schnelleres Erkennen von Fehlentwicklungen&lt;/li&gt;
+&lt;li&gt;stärkere Einbeziehung des Managements und des Auftraggebers&lt;/li&gt;
+&lt;li&gt;"kürzere Leine" für notleidende Projekte&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Gründe für seltene Projektpräsentationen:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;hoher Aufwand für die Vorbereitung der Projektpräsentationen&lt;/li&gt;&lt;li&gt;hoher Personalaufwand für die Durchführung der Projektpräsentationen (Teilnehmeranzahl * Std. * Stundensatz)&lt;/li&gt;&lt;li&gt;das Projekt verläuft planmäßig&lt;/li&gt;&lt;li&gt;es gibt nicht viel Neues zu berichten&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>106</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welche Inhalte sollten in einer Projektpräsentation vermittelt werden? Geben Sie Stickpunkte an.[Projektpräsentation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welche Inhalte sollten in einer Projektpräsentation vermittelt werden? Geben Sie Stickpunkte an.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektpräsentation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+Inhalt einer Projektpräsentation sollte ein Bericht zum Stand und Verlauf des Projekts sein:
+&lt;ul&gt;
+&lt;li&gt;In welcher Phase befinden wir uns?&lt;/li&gt;&lt;li&gt;Wichtige aktuelle Projektergebnisse sollten angesprochen und skizziert werden.&lt;/li&gt;&lt;li&gt;Wo liegen die aktuellen Schwerpunkte der Arbeiten?&lt;/li&gt;&lt;li&gt;Welche Probleme sind aufgetreten bzw. sind zu erwarten? &lt;br /&gt;Z.B.:&lt;ul&gt;&lt;li&gt;Weicht das Projekt vom Terminplan ab?&lt;/li&gt;&lt;li&gt;Technische Probleme mit Hard- oder Software&lt;/li&gt;&lt;li&gt;Spannungen im Team oder mit dem Kunden&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Welche Problemlösungsstrategien sind geplant?&lt;/li&gt;&lt;li&gt;Ein Ausblick auf anstehende Arbeiten&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>107</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Für welche Zielgruppen sollten im Rahmen eines Softwareprojektes Dokumentationen erstellt werden? Umreißen Sie die erforderlichen Dokumentationen jeweils mit einem Satz.[Dokumentation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Für welche Zielgruppen sollten im Rahmen eines Softwareprojektes Dokumentationen erstellt werden? Umreißen Sie die erforderlichen Dokumentationen jeweils mit einem Satz.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Dokumentation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;&lt;li&gt;&lt;b&gt;Dokumentation für das Projektteam selbst&lt;/b&gt;&lt;br /&gt;Diese Dokumenation dient der Verständlichkeit der Projektergebnisse (auch Zwischenergebnisse) für alle Mitglieder des Projektteams.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Dokumentation für die Wartungsphase (Technische Dokumentation)&lt;/b&gt;&lt;br /&gt;Diese Dokumentation ermöglicht es dem Personal, in der Wartungsphase gezielt und mit einer möglichst geringen Fehlerwahrscheinlichkeit Änderungen und Ergänzungen am System und an den Dokumenten vorzunehmen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Dokumentation für die Anwender der Software&lt;/b&gt;&lt;br /&gt;Diese Dokumentation ermöglicht es den verschiedenen Anwender der Software, die Software effizient in ihrer Arbeit einzusetzen und alle verfügbaren Funktionalitäten zu beherrschen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Dokumentation für die Installation und Administration der Software&lt;/b&gt;&lt;br /&gt;Diese Dokumentation stellt alle für die Installation und Administration der Software erforderlichen Informationen bereit (Hard- und Softwarevoraussetzungen, Sicherungen, Fehlerbehandlungen, ...).&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>108</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in höchstens drei Sätzen die Rolle eines Glossars für die Dokumenation eines Softwareprojektes.[Dokumentation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in höchstens drei Sätzen die Rolle eines Glossars für die Dokumenation eines Softwareprojektes.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Dokumentation]&lt;/i&gt;&lt;/div&gt;In der Projektdokumentation sollte ein Glossar nicht fehlen, in dem das zugrundeliegende Begriffsverständnis dokumentiert wird. In diesem Projektglossar sollte die Bedeutung aller für das Projekt wichtigen Begriffe eindeutig festgehalten werden. Das Glossar dient sowohl dem einheitlichen Verständnis der Begriffe innerhalb des Projektteams als auch der Lesbarkeit der Projektdokumente für Projektexterne.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>109</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal zwei Sätzen die Begriffe Version und Konfiguration.[Dokumentation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils maximal zwei Sätzen die Begriffe &lt;i&gt;Version&lt;/i&gt; und &lt;i&gt;Konfiguration&lt;/i&gt;.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Dokumentation]&lt;/i&gt;&lt;/div&gt;Eine &lt;b&gt;Version&lt;/b&gt;&amp;nbsp;beschreibt die Ausprägung eines Dokuments zu einem bestimmten Zeitpunkt. Unter Versionen werden damit zeitlich nacheinander liegende Ausprägungen eines Dokumentes verstanden.&amp;nbsp;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;
+Während sich eine Version auf ein einzelnes Dokument bezieht, adressiert der Begriff der Konfiguration eine Menge von Dokumenten, die einen konsistenten Gesamtzustand bilden. Eine &lt;b&gt;Konfiguration &lt;/b&gt;ist die Zusammenstellung eines (Teil-)Systems aus Komponenten. Zur Konfiguration gehören der exakte Stand aller Komponenten (deren Version) und die Prozedur, um die Komponenten zu einem System zusammenzufügen.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>110</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und erläutern Sie in jeweils maximal zwei Sätzen die drei Leistungsaspekte.[Motivation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und erläutern Sie in jeweils maximal zwei Sätzen die drei Leistungsaspekte.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Motivation]&lt;/i&gt;&lt;/div&gt;Zunächst sei hier die &lt;b&gt;Leistungsfähigkeit &lt;/b&gt;zu nennen. Gemeint ist, dass der einzelne Mitarbeiter von seiner Qualifikation her in der Lage sein muss, die ihm übertragenen Aufgaben zu erledigen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Um eine Leistung auch wirklich erbringen zu können (&lt;b&gt;Leistungsmöglichkeit&lt;/b&gt;), muss zur Qualifikation auch das entsprechende Umfeld kommen. Im Hinblick auf die Softwareentwicklung ist insbesondere an die Bereitstellung einer leistungsfähigen Softwareentwicklungsumgebung zu denken.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Die &lt;b&gt;Leistungsbereitschaft&lt;/b&gt;&amp;nbsp;steht für den Willen, Leistung zu erbringen. Hier gilt es in erster Linie um die Motivation der Mitarbeiter.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>111</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie die Bedürfnishierarchie nach Maslow an und beschreiben Sie mit einem Satz das Verhältnis der Bedürfnisse zueinander.[Motivation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie die Bedürfnishierarchie nach Maslow an und beschreiben Sie mit einem Satz das Verhältnis der Bedürfnisse zueinander.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Motivation]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Die Hierarchie der Bedürfnisse bringt zum Ausdruck, dass die Bedürfnisse der jeweils höheren Ebene erst dann zum Tragen kommen, wenn die Bedürfnisse der darunter liegenden Ebenen hinreichend befriedigt sind.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>112</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie zu den unteren drei Ebenen der Bedürfnishierarchie nach Maslow jeweils ein Beispiel (Bedürfnis) aus der Projektarbeit an.[Motivation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie zu den unteren drei Ebenen der Bedürfnishierarchie nach Maslow jeweils ein Beispiel (Bedürfnis) aus der Projektarbeit an.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Motivation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Physiologisches Bedürfnis: Geld verdienen&lt;/li&gt;&lt;li&gt;Sicherheitsbedürfnis: Sicherheit des Arbeitsplatzes&lt;/li&gt;&lt;li&gt;Soziales Bedürfnis: Teamarbeit, Führungsstil&lt;/li&gt;&lt;/ol&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>113</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie mit einem Satz, in welcher Beziehung die Ebenen der Bedürfnishierarchie nach Maslow zueinander stehen.[Motivation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie mit einem Satz, in welcher Beziehung die Ebenen der Bedürfnishierarchie nach Maslow zueinander stehen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Motivation]&lt;/i&gt;&lt;/div&gt;Die Hierarchie der Bedürfnisse bringt zum Ausdruck, dass die Bedürfnisse der jeweils höheren Ebene erst dann zum Tragen kommen, wenn die Bedürfnisse der darunter liegenden Ebenen hinreichend befriedigt sind.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>114</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Erläutern Sie in maximal zwei Sätzen, welche drei Aspekte gemäß der Bedürfnishierarchie nach Maslow bei der Motivation von Mitarbeitern berücksichtigt werden müssen.[Motivation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Erläutern Sie in maximal zwei Sätzen, welche drei Aspekte gemäß der Bedürfnishierarchie nach Maslow bei der Motivation von Mitarbeitern berücksichtigt werden müssen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Motivation]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Eine Motivation durch Anreize, die die untergeordneten Bedürfnisse ansprechen, ist nur bedingt wirksam, sofern diese bereits hinreichend abgedeckt sind.&lt;/b&gt; So kann z.B. eine Motivation durch eine Sonderzahng auf der Ebene der physiologischen Bedürfnisse und der Sicherheitsbedürfnisse bei einem ohnehin ordentlich verdienenden Mitarbeiter kaum wirken. Die Wirkung wird sich hier höchstens einstellen, wenn der Mitarbeiter durch die Sonderzahlung eine Befriedigung auf der Ebene der Ich-Bedürfnisse (Wertschätzung) erfährt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Andererseits hat es aber auch &lt;b&gt;keinen Sinn, die Bedürfnisse der höheren Ebenen zu adressieren&lt;/b&gt; (z.B. das Bedürfnis nach Selbstverwirklichung), &lt;b&gt;wenn die Grundbedürfnisse nicht hinreichend abgedeckt sind&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Letztlich müssen im Hinblick auf die Motivation der Mitarbeiter alle Bedürfnisbereiche berücksichtigt werden&lt;/b&gt;. Wer glaubt, einen Mitarbeiter allein über eine herausragende Bezahlung motivieren zu können, ist ebenso im Irrtum wie jemand, der allein auf die Attraktivität der zu bearbeitenden Aufgabe setzt, ohne sich Gedanken um eine leistungsgerechte Bezahlung und eine vorteilhafte Gestaltung des sozialen Umfelds zu machen.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>115</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie jeweils drei Chancen und Risiken der Gruppenarbeit.[Motivation]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie jeweils drei Chancen und Risiken der Gruppenarbeit.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Motivation]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;Chancen der Gruppenarbeit:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;hoher Problemlösungsgrad bei schwierigen Problemen&lt;/li&gt;&lt;li&gt;unterschiedliches Know-How der Teammitglieder wird genutzt&lt;/li&gt;&lt;li&gt;die Gefahr, in eine Sackgasse zu geraten, ist geringer als bei Einzelarbeit&lt;/li&gt;&lt;li&gt;gegenseitige Anregung und Verstärkung&lt;/li&gt;&lt;li&gt;hohe Arbeitszufriedenheit&lt;/li&gt;&lt;/ul&gt;
+&lt;b&gt;Diesen Chancen stehen auch Risiken gegenüber:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;hoher Kommunikations- und Koordinationsaufwand bei großen Teams&lt;/li&gt;&lt;li&gt;lange Diskussionen und verzögerte Entscheidungsfindungen sind möglich&lt;/li&gt;&lt;li&gt;Konkurrenzdenken und individuelle Profilierung können Leistung verringern&lt;/li&gt;&lt;li&gt;es können schwer kontrollierbare gruppendynamische Prozesse ablaufen&lt;/li&gt;&lt;li&gt;Gruppendruck kann bei Teammitgliedern zu verringerter Leistungsbereitschaft führen&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>116</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;
+Erläutern Sie mit jeweils einem Satz die Begriffe
+
+Motiv,
+Motivation und 
+Volition
+[Motivation]Sehr wichtig für die Klausur!
+&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;
+Erläutern Sie mit jeweils einem Satz die Begriffe
+&lt;ul&gt;
+&lt;li&gt;&lt;i&gt;Motiv,&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Motivation&lt;/i&gt;&lt;i&gt; und &lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Volition&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;[Motivation]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Sehr wichtig für die Klausur!&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;Unter einem &lt;b&gt;Motiv&lt;/b&gt; versteht man einen Beweggrund oder Antrieb, der zeitlich und über verschiedene Situationen hinweg relativ stabil ist.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Die &lt;b&gt;Motivation&lt;/b&gt; beschreibt demgegenüber das Zusammenspiel der einzelnen Beweggründe (Motive), das in einer konkreten Situation das Handeln eines Menschen bestimmt.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Mit dem Begriff der &lt;b&gt;Volition&lt;/b&gt; werden schließlich die Schritte von der Motivation zur Handlung bezeichnet.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>117</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Phasen der Gruppenentwicklung mit jeweils einem Satz und geben Sie in jeweils einem weiteren Satz die wichtigsten Aspekte der Mitarbeiterführung für die einzelnen Phasen an.[Zusammenarbeit in der Gruppe]Muss man nicht exakt so wiedergeben können.&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Phasen der Gruppenentwicklung mit jeweils einem Satz und geben Sie in jeweils einem weiteren Satz die wichtigsten Aspekte der Mitarbeiterführung für die einzelnen Phasen an.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Zusammenarbeit in der Gruppe]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Muss man nicht exakt so wiedergeben können.&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ol&gt;&lt;li&gt;&lt;b&gt;Abtastphase (Forming)&lt;/b&gt;&lt;br /&gt;In einer neu zusammengestellten Arbeitsgruppe müssen sich die einzelnen Mitarbeiter zunächst orientieren und ihren Platz bzw. ihre Rolle in der Gruppe finden. Der Projektleiter sollte sich in dieser Phase vor allem um eine gute Kommunikation in der Gruppe bemühen und versuchen, eine zu starke Cliquenbildung zu verhindern.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Konfrontationsphase (Storming)&lt;/b&gt;&lt;br /&gt;Nach dem ersten Kennenlernen, wenn die einzelnen Gruppenmitglieder eine gewisse persönliche Sicherheit gewonnen haben und versuchen, ihre Position in der Gruppe zu festigen, treten häufig die ersten unterschwelligen oder auch offenen Konflikte auf. Der Projektleiter muss in dieser Phase seinen persönlichen Führungsstil durchsetzen und darauf hinwirken, dass Unterschiede in den Einstellungen und Meinungen konstruktiv &amp;nbsp;ausdiskutiert werden, damit Konflikte das Projektteam nicht langfristig belasten.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Organisationsphase (Norming)&lt;/b&gt;&lt;br /&gt;Die Gruppe findet nun gemeinsame Regeln für die Arbeit und für den Umgang miteinander. Die Projektleitung sollte diesen Prozess konstruktiv begleiten und auf eine Übereinstimmung mit dem Vorgehensmodell achten.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Arbeitsphase (Performing)&lt;/b&gt;&lt;br /&gt;Wenn in der Organisationsphase ein Konsens hinsichtlich des Arbeitsziels und der Vorgehensweise erreicht worden ist, tritt die Arbeitsgruppe in die eigentliche Arbeitsphase ein. Durch die von allen akzeptierten, formal festgelegten oder stillschweigend unterstellten Verhaltensregeln ist eine Basis für eine konstruktive Zusammenarbeit geschaffen.&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>118</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Skizzieren Sie jeweils mit einem Satz drei Maßnahmen zur Konfliktprophylaxe.[Zusammenarbeit in der Gruppe]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Skizzieren Sie jeweils mit einem Satz drei Maßnahmen zur Konfliktprophylaxe.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Zusammenarbeit in der Gruppe]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Ein &lt;b&gt;fachlich qualifizierter Projektleiter&lt;/b&gt; mit "Führungsqualitäten" kann durch seine Autorität wesentlich dazu beitragen, dass Konflikte vermieden oder schnell gelöst werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Es sollten &lt;b&gt;Kompetenz- und Aufgabenverteilung&lt;/b&gt; im gesamten Projektteam &lt;b&gt;klar geregelt&lt;/b&gt; sein.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Der &lt;b&gt;Informationsfluss&lt;/b&gt;&amp;nbsp;im Projekt und mit projektexternen Betroffenen sollte gewährleisten, dass jedem die für seine Arbeit erforderlichen und zum Hintergrundverständnis sinnvollen Informationen zur Verfügung stehen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Ein strukturierter und offener &lt;b&gt;Entscheidungsprozess&lt;/b&gt;&amp;nbsp; ist eine der wichtigsten Maßnahmen zur Konfliktvermeidung, weil Entscheidungen immer ein Konfliktpotential in sich bergen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Klar definierte gemeinsame Projektziele&lt;/b&gt; können in Konfliktsituationen gut zur Deeskalation des Konflikts dienen, indem man die Konfliktursache auf der Basis dieser Ziele betrachtet.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>119</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie drei Gründe an, warum Konflikte keineswegs nur negativ gesehen werden sollten.[Zusammenarbeit in der Gruppe]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie drei Gründe an, warum Konflikte keineswegs nur negativ gesehen werden sollten.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Zusammenarbeit in der Gruppe]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;&lt;li&gt;ein Konflikt weist auf Probleme hin und regt Interesse an&lt;/li&gt;&lt;li&gt;ein Konflikt führt zur Selbsterkenntnis&lt;/li&gt;&lt;li&gt;ein erfolgreich bewältigter Konflikt festigt die Gruppe&lt;/li&gt;&lt;li&gt;ein Konflikt verhindert Stagnation&lt;/li&gt;&lt;li&gt;ein Konflikt ist die Wurzel für Veränderungen&lt;/li&gt;&lt;li&gt;ein Konflikt verlangt nach einer Lösung&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>120</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils höchstens zwei Sätzen die vier Führungsaufgaben.[Führung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie in jeweils höchstens zwei Sätzen die vier Führungsaufgaben.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Führung]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Zu den &lt;b&gt;aufgabenbezogenen Führungsaufgaben&lt;/b&gt;&amp;nbsp;gehören primär die Problemdefinition, Zielentscheidungen und Zielpriorisierungen, die Lösungsbewertung sowie die Kontrolle von Ergebnissen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Bei den &lt;b&gt;koordinativen Führungsaufgaben&lt;/b&gt;&amp;nbsp;stehen die Planung, die Aufgabenverteilung, das Schnittstellenmanagement und die Kontrolle von Personen im Vordergrund.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Zu den &lt;b&gt;beziehungsorientierten Führungsaufgaben&lt;/b&gt;&amp;nbsp;zählen insbesondere das Schaffen von gemeinsamer Akzeptanz und Bindung an das vorgegebene Ziel (commitment) sowie das Konfliktmanagement.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Aufgabe der&amp;nbsp;&lt;b&gt;systemexternen Führung &lt;/b&gt;ist die Pflege der Außenbeziehungen der Gruppe bzw. des Projekts. Hier müssen fachliche Absprachen getroffen werden (z.B. die genaue Klärung von Anforderungen an die zu erstellende Software), es muss fortlaufend koordiniert und organisiert werden (z.B. Terminkoordination mit Kunden, Lieferanten, Vorgesetzten, etc.) und eine positive Beziehung zur Umwelt muss aufrechterhalten werden.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>121</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie mit jeweils einem Satz drei wesentliche Kennzeichen eines kooperativen Führungsstils.[Führung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie mit jeweils einem Satz drei wesentliche Kennzeichen eines kooperativen Führungsstils.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Führung]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Delegation:&lt;br /&gt;&lt;/b&gt;Teilaufgaben werden mit den dazugehörigen Kompetenzen von der Führungskraft an Mitarbeiter übertragen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Partizipation:&lt;/b&gt;&lt;br /&gt;Die Mitarbeiter werden an Entscheidungsprozessen und an Prozessen der Meinungsbildung umfassend und frühzeitig beteiligt.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die Mitarbeiter werden über die &lt;b&gt;Hintergründe ihrer Arbeit umfassend informiert&lt;/b&gt;, um so die Voraussetzungen für ein eigenständiges Arbeiten zu schaffen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Während bei einem autoritären Führungsstil die feinschrittige Fremdkontrolle der Arbeitsergebnisse typisch ist, liegt der &lt;b&gt;Schwerpunkt beim kooperativen Führungsstil auf der Eigenkontrolle&lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die &lt;b&gt;Vorgabe von realistischen Zielen&lt;/b&gt;, die von den Mitarbeitern in Eigenverantwortung verfolgt werden.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>122</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;
+Beschreiben Sie jeweils mit maximal zwei Sätzen, was man unter Management by Objectives,Management by Delegation undManagement by Results
+versteht.[Führung]Nicht so wichtig für die Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;
+Beschreiben Sie jeweils mit maximal zwei Sätzen, was man unter &lt;ul&gt;&lt;li&gt;Management by Objectives,&lt;/li&gt;&lt;li&gt;Management by Delegation und&lt;/li&gt;&lt;li&gt;Management by Results&lt;/li&gt;
+&lt;/ul&gt;versteht.&lt;/div&gt;&lt;div align="left"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;i&gt;[Führung]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;&lt;u&gt;Nicht so wichtig für die Klausur&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Management by Objectives&lt;/b&gt;&lt;br /&gt;Die Führung erfolgt durch die Vereinbarung von Zielen, die gemeinsam mit dem bestroffenen Mitarbeiter erarbeitet werden. Der Mitarbeiter kann im vorgegebenen Rahmen selbst entscheiden, wie die Ziele erreicht werden sollen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Management by Delegation&lt;/b&gt;&lt;br /&gt;Hier werden klar abgegrenzte Aufgabenbereiche gemeinsam mit den entsprechenden Kompetenzen an Mitarbeiter delegiert, die diese Aufgabenbereiche selbstständig bearbeiten. Damit werden die Führungskräfte von Routinearbeiten entlastet und schnelle Entscheidungen auf unterer Ebene ermöglicht.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Management by Results&lt;/b&gt;&lt;br /&gt;Bei diesem Führungsstil werden die zu erarbeitenden Ergebnisse im Detail vorgegeben. Dies erfordert im Vergleich zum Management by Objectives im Vorfeld eine wesentliche konkretere Beschäftigung mit der Aufgabe der Führungskraft, weil nur so die Ergebnisse genau beschrieben werden können.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>123</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Erörtern Sie in jeweils einem Satz drei Vorteile und drei Probleme einer Fachlaufbahn.[Personalentwicklung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Erörtern Sie in jeweils einem Satz drei Vorteile und drei Probleme einer Fachlaufbahn.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Personalentwicklung]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;Die Vorteile einer Fachlaufbahn sind:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;Fachlich hoch qualifizierte Mitarbeiter, die keine Führungslaufbahn anstreben, können durch eine auf sie zugeschnittene Karriereperspektive motiviert werden.&lt;/li&gt;&lt;li&gt;Mitarbeiter können besser nach ihrer Qualifikation eingesetzt werden.&lt;/li&gt;&lt;li&gt;Führungsaufgaben bleiben Mitarbeitern mit entsprechenden Qualifikationen vorbehalten. Dadurch sollte es weniger Manager geben, die fachlich zwar qualifiziert, aber von den Führrungsaufgaben überfordert sind. Es gibt zusätzliche Aufstiegspositionen im Unternehmen, wodurch der berufliche Aufstieg für einen größeren Personenkreis möglich wird.&lt;/li&gt;&lt;/ul&gt;
+&lt;b&gt;Ganz ohne Probleme ist aber auch eine Fachlaufbahn nicht:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;Ein späteres Wechseln von einer Fachlaufbahn in die Führungslaufbahn kann problematisch sein, weil ein Wechsel "auf gleicher Ebene" bedeutet, dass unmittelbar die Führungsverantwortung für einen recht großen Bereich übernommen wird. Das kann sich als problematisch erweisen, da die Führungserfahrung im Kleinen fehlt. Das System kann damit nur begrenzt durchlässig gehalten werden.&lt;/li&gt;&lt;li&gt;Es ist psychologisch recht schwer, die Gleichwertigkeit der Führungslaufbahn und der Fachlaufbahn in den Köpfen zu verankern. Leicht wird die Fachlauafbahn für eine Karriere zweiter Klasse gehalten.&lt;/li&gt;&lt;li&gt;Durch zusätzliche Aufstiegspositionen muss das Gehaltsgefüge im Unternehmen insgesamt anders ausgelegt werden.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>124</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie jeweils in einem Satz die Teilaufgaben der Qualitätssicherung:
+Qualitätsplanung,Qualitätslenkung undQualitätsprüfung.[Qualitätssicherung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;Beschreiben Sie jeweils in einem Satz die Teilaufgaben der Qualitätssicherung:
+&lt;ul&gt;&lt;li&gt;&lt;i&gt;Qualitätsplanung,&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Qualitätslenkung &lt;/i&gt;und&lt;/li&gt;&lt;li&gt;&lt;i&gt;Qualitätsprüfung.&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;i&gt;[Qualitätssicherung]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;In der &lt;b&gt;Qualitätsplanung &lt;/b&gt;werden die relevanten Qualitätsmerkmale und Qualitätskriterien für das Produkt bzw. System festgelegt.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Die &lt;b&gt;Qualitätslenkung &lt;/b&gt;besteht aus Vorbeugungs-, Überwachungs- und Korrekturmaßnahmen mit dem Ziel der Erfüllung der in der Qualitätsplanung festgelegten Qualitätsanforderungen.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Bei der &lt;b&gt;Qualitätsprüfung&lt;/b&gt;&amp;nbsp;wird festgestellt, inwieweit das &amp;nbsp;Produkt oder System die Qualitätsanforderungen erfüllt.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>125</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und beschreiben Sie in jeweils einem Satz die drei Teilaufgaben der Qualitätssicherung.[Qualitätssicherung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und beschreiben Sie in jeweils einem Satz die drei Teilaufgaben der Qualitätssicherung.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätssicherung]&lt;/i&gt;&lt;/div&gt;In der&amp;nbsp;&lt;b&gt;Qualitätsplanung&amp;nbsp;&lt;/b&gt;werden die relevanten Qualitätsmerkmale und Qualitätskriterien für das Produkt bzw. System festgelegt.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Die&amp;nbsp;&lt;b&gt;Qualitätslenkung&amp;nbsp;&lt;/b&gt;besteht aus Vorbeugungs-, Überwachungs- und Korrekturmaßnahmen mit dem Ziel der Erfüllung der in der Qualitätsplanung festgelegten Qualitätsanforderungen.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Bei der&amp;nbsp;&lt;b&gt;Qualitätsprüfung&lt;/b&gt;&amp;nbsp;wird festgestellt, inwieweit das &amp;nbsp;Produkt oder System die Qualitätsanforderungen erfüllt.&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>126</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und beschreiben Sie drei der sechs Qualitätsmerkmale nach DIN ISO 9126.[Qualitätsmerkmale]DIN-ISO-Nummern seien nicht so wichtig zum auswendig merken.&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und beschreiben Sie drei der sechs Qualitätsmerkmale nach DIN ISO 9126.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätsmerkmale]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;DIN-ISO-Nummern seien nicht so wichtig zum auswendig merken.&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div align="left"&gt;Eine mögliche Auswahl könnte so aussehen:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Unter dem Qualitätsmerkmal der &lt;b&gt;Funktionalität &lt;/b&gt;wird ein Satz von Funktionen und deren geforderte Eigenschaften festgelegt. Es geht insbesondere um die Übereinstimmung dieser Funktionen mit den explizit festgelegten oder implizit vorausgesetzten Anforderungen. Die unter diesem Qualitätsmerkmal angesprochenen Eigenschaften charakterisieren, was eine Funktionseinheit zur Erfüllung der Anforderungen tut, während die fünf anderen Qualitätsmerkmale hauptsächlich charakterisieren, &lt;i&gt;wie&lt;/i&gt; und &lt;i&gt;wann&lt;/i&gt; die Funktionseinheit dies leistet.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Unter dem Qualitätsmerkmal der &lt;b&gt;Zuverlässigkeit&lt;/b&gt;&amp;nbsp;wird die Fähigkeit des Systems verstanden, sein Leistungsniveau unter festgelegten Bedingungen über einen festgelegten Zeitraum zu bewahren.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Das Qualitätsmerkmal der &lt;b&gt;Effizienz&lt;/b&gt;&amp;nbsp;bezieht sich auf das Verhältnis zwischen dem Leistungsniveau des Systems und dem Umfang der eingesetzten Betriebsmittel unter festgelegten Bedingungen. Der Begriff der Betriebsmittel umfasst dabei insbesondere die Zeit, den Speicherplatz und Kommunikationskanäle.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>127</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und erläutern Sie zu jedem von Ihnen genannten Qualitätsmerkmal zwei Qualitätskriterien.[Qualitätsmerkmale]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen und erläutern Sie zu jedem von Ihnen genannten Qualitätsmerkmal zwei Qualitätskriterien.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätsmerkmale]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Zwei mögliche Qualitätskriterien zur &lt;b&gt;Funktionalität:&lt;/b&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;i&gt;Korrektheit / Richtigkeit&lt;/i&gt;&lt;br&gt;Es geht darum, dass die Funktionen des Systems die korrekten, d.h. die vereinbarten, Errgebnisse oder Wirkungen liefern. Dies schließt Aspekte wie die Rechengenauigkeit mit ein.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Angemessenheit&lt;/i&gt;&lt;br&gt;Unter dem Begriff der Angemessenheit wird die Eignung der Funktionen für die spezifizierten Aufgaben zusammengefasst.&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;Zwei mögliche Qualitätskriterien zur   &lt;b&gt;Zuverlässigkeit:&lt;/b&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;i&gt;Reife&lt;/i&gt;&lt;br&gt;Das Kriterium der Reife charakterisiert eine geringe Fehlerwahrscheinlichkeit.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Fehlertoleranz&lt;/i&gt;&lt;br&gt;Hier wird die Fähigkeit des Systems angesprochen, ein spezifiziertes Leistungsniveau auch bei Softwarefehlern und Nichteinhaltung von spezifizierten Schnittstellen (z.B. durch fehlerhafte Eingaben) zu erhalten. Die Software darf hierzu insbesondere auch bei falschen Eingabewerten nicht zu einem undefinierten Zustand geraten oder abstürzen.&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;Zwei mögliche Qualitätskriterien zur &lt;b&gt;Effizienz:&lt;/b&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;i&gt;Zeitverhalten&lt;/i&gt;&lt;br&gt;Das Zeitverhalten eines Systems kann z.B. durch die Antwortzeit des Systems bei bestimmten Benutzeranfragen oder durch die Anzahl der pro Zeiteinheit abgearbeiteten Aufträge (den sogenannten Durchsatz) beschrieben werden.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Ressourcenverbrauch&lt;/i&gt;&lt;br&gt;Der Reccourcenverbrauch bezieht sich auf die Anzahl der benötigten Betriebsmittel sowie auf den Umfang und die Dauer ihrer Nutzung. Zu denken ist dabei insbesondere an Speicherplatz und Kommunikationskanäle.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>128</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Geben Sie fünf Qualitätskriterien für den Entwicklungsprozess an, die sich relativ gut quantifizieren lassen.[Qualitätsmerkmale]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div&gt;Selbstständig:&lt;/div&gt;Geben Sie fünf Qualitätskriterien für den Entwicklungsprozess an, die sich relativ gut quantifizieren lassen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätsmerkmale]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;Einhaltung der Termin- und Kostenpläne,&lt;/li&gt;&lt;li&gt;geringe Anzahl von Planänderungen,&lt;/li&gt;&lt;li&gt;Zwischenergebnisse hoher Qualität (bei den durchgeführten Qualitätssicherungsmaßnahmen treten geringe Fehlerraten auf),&lt;/li&gt;&lt;li&gt;hohe Produktivität,&lt;/li&gt;&lt;li&gt;die Anzahl der erforderlichen Änderungen in bereits abgenommenen Vorergebnissen&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>129</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Sie sind als Projektleiter für die Entwicklung des Internet-Portals einer großen Einzelhandelskette verantwortlich. Geben Sie zu diesem Projekt die fünf wichtigsten Softwarequalitätsmerkmale an und begründen Sie Ihre Auswahl jeweils mit einem Satz.[Qualitätsmerkmale]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Sie sind als Projektleiter für die Entwicklung des Internet-Portals einer großen Einzelhandelskette verantwortlich. Geben Sie zu diesem Projekt die fünf wichtigsten Softwarequalitätsmerkmale an und begründen Sie Ihre Auswahl jeweils mit einem Satz.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätsmerkmale]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align="left"&gt;Die Auswahl ist hier natürlich nicht eindeutig. Eine denkbarer Auswahl wäre:
+&lt;ul&gt;&lt;li&gt;&lt;i&gt;Korrektheit / Richtigkeit&lt;/i&gt;&lt;br /&gt;Selbstverständlich muss auch bei einem Internet-Portal zunächst einmal die Software korrekt arbeiten.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Benutzbarkeit&lt;/i&gt;&lt;br /&gt;Alle mit der Benutzbarkeit verbundenen Aspekte - insbesondere die Verständlichkeit und die Bedienbarkeit - müssen bei einem System mit einer sehr großen Anzahl von (laienhaften) Nutzern als besonders wichtig eingestuft werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Sicherheit&lt;/i&gt;&lt;br /&gt;Durch die für alle zugängliche Schnittstelle des Systems ist dem Aspekt der Sicherheit ein hohes Gewicht beizumessen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Effizienz&lt;/i&gt;&lt;br /&gt;Gerade bei einem Internet-Portal sind hohe Antwortzeiten für die Benutzer oft ein Grund, ein Angebot nicht wahrzunehmen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;Wiederherstellbarkeit&lt;/i&gt;&lt;br /&gt;Da ein Internet-Portal einen sehr hohen Grad an Verfügbarkeit haben sollte, ist es wichtig, dass das System nach aufgetretenen Problemen schnell wieder Online ist.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>130</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in jeweils höchstens drei Sätzen die
+Ausführungsplanung,die Ausführungsüberwachung unddie Ausführungskorrektur.[Qualitätslenkung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;Beschreiben Sie in jeweils höchstens drei Sätzen die
+&lt;ul&gt;&lt;li&gt;&lt;i&gt;Ausführungsplanung,&lt;/i&gt;&lt;/li&gt;&lt;li&gt;die &lt;i&gt;Ausführungsüberwachung &lt;/i&gt;und&lt;/li&gt;&lt;li&gt;die &lt;i&gt;Ausführungskorrektur.&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;i&gt;[Qualitätslenkung]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Unter dem Begriff der &lt;b&gt;Ausführungsplanung &lt;/b&gt;versteht man vor allem Entwicklungskonventionen für verschiedene Aktivitäten im Rahmen der Projektdurchführung. Dabei ist es unbedingt sicherzustellen, dass die Konventionen allen Projektmitarbeitern bekannt sind. Regeln, die keiner kennt, sind nutzlos und sogar gefährlich, weil sie in der trügerischen Sicherheit wiegen, es gäbe ja Regeln, an die sich alle halten würden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Im Rahmen der &lt;b&gt;Ausführungsüberwachung&lt;/b&gt;&amp;nbsp;ist zu prüfen, ob die in der Ausführungsplanung vorgesehenen Konventionen eingehalten und alle Maßnahmen zur Qualitätssicherung durchgeführt werden. Neben dieser reinen Durchführungskontrolle muss dabei auch die Überwachung der sich aus diesen Maßnahmen ergebenden Konsequenzen treten. Bei diesen handelt es sich um eine Überwachung der entsprechenden "Korrekturaktivitäten".&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Die &lt;b&gt;Ausführungskorrektur&lt;/b&gt;&amp;nbsp;veranlasst Nachbesserungen als Reaktion auf entsprechende Überwachungsergebnisse. Diese Nachbesserungen können von einer konsequenteren Durchführung der Maßnahmen zur Qualitätssicherung über die Herbeiführung ausstehender Managemententscheidungen bis zur Einrichtung eines Arbeitskreises mit definierten Zielen zur Qualitätsverbesserung reichen.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>131</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in maximal zwei Sätzen die Begriffe
+Inspektionssitzung und 
+Walk Through.[Qualitätsprüfung]Sehr wichtig für die Klausur!&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;Beschreiben Sie in maximal zwei Sätzen die Begriffe
+&lt;ul&gt;&lt;li&gt;&lt;i&gt;Inspektionssitzung&lt;/i&gt; und &lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Walk Through.&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;i&gt;[Qualitätsprüfung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Sehr wichtig für die Klausur!&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;In einer &lt;b&gt;Inspektionssitzung&lt;/b&gt;&amp;nbsp;erklärt der Autor das zu prüfende Dokument "Zeile für Zeile" einem Team von Spezialisten, das auf die Erfüllung formaler Kriterien achtet (z.B. ob die Schleifenabbruchbedingungen korrekt sind, ob nicht auf leere dynamische Datenstrukturen zugegriffen wird usw.).&amp;nbsp;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Bei einem &lt;b&gt;Walk Through&lt;/b&gt;&amp;nbsp;bereitet ein Testspezialist einige Testfälle bzw. Testszenarien vor, die mit weiteren Spezialisten auf Basis des zu überprüfenden Dokuments "durchgespielt" werden.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>132</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welche Personen sollten an einer Inspektionssitzung teilnehmen?[Qualitätsprüfung]Nicht so wichtig&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Welche Personen sollten an einer Inspektionssitzung teilnehmen?&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätsprüfung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Nicht so wichtig&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;Eine Inspektionssitzung wird von einem Inspektionsteam mit vier bis acht Personen durchgeführt:
+&lt;ul&gt;&lt;li&gt;ein Moderator (plant und leitet die Inspektion),&lt;/li&gt;&lt;li&gt;ein Protokollführer,&lt;/li&gt;&lt;li&gt;der Autor des Dokumentes, das geprüft wird,&lt;/li&gt;&lt;li&gt;ggf. die Autoren von Dokumenten vorhergehender Phasen, auf denen das zu prüfende Dokument aufbaut,&lt;/li&gt;&lt;li&gt;ein Testspezialist und&lt;/li&gt;&lt;li&gt;ggf. Vertreter des Auftraggebers.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;i&gt;[Qualitätsprüfung]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>133</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie in maximal drei Sätzen an, wie bei der Bildung von Testfällen vorzugehen ist, um möglichst viele repräsentative Konstellationen abzudecken.[Qualitätsprüfung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie in maximal drei Sätzen an, wie bei der Bildung von Testfällen vorzugehen ist, um möglichst viele repräsentative Konstellationen abzudecken.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätsprüfung]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ul&gt;&lt;li&gt;Man sollte für alle Eingabeparameter Äquivalenzklassen bilden, die jeweils ein gleichartiges Verhalten des zu testenden Bausteins verursachen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Es ist darauf zu achten, dass alle Äquivalenzklassen - und bei mehreren Parametern auch alle Kombinationen von Äquivalenzklassen - in den Testfällen vertreten sind.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Zu den einzelnen Äquivalenzklassen sollten jeweils "normale" Werte und Extremwerte betrachtet werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Insbesondere bei Komponenten, die kritisch für die Effizienz des Gesamtsystems sind, sollten Testfälle betrachtet werden, die eine hohe Last erzeugen (Stresstest).&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>134</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Rolle eines Drivers und eines Stubs im Zusammenhang mit dem Testen von Software.[Qualitätsprüfung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Rolle eines &lt;i&gt;Drivers&lt;/i&gt;&amp;nbsp;und eines &lt;i&gt;Stubs &lt;/i&gt;im Zusammenhang mit dem Testen von Software.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätsprüfung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Driver und Stubs werden primär zum Modul- oder Komponententest benötigt, wenn einzelne Komponenten ohne das sie umgebende Umfeld getestet werden sollen.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Für jede Komponente ist ein &lt;b&gt;Driver &lt;/b&gt;zu erstellen, der die Funktionen / Methoden der Komponente mit den entsprechenden Testdaten aufruft. Ferner muss dieser Driver die Ergebnisse der jeweiligen Aufrufe entgegennehmen und protokollieren oder direkt mit den vorgegebenen Sollwerten vergleichen.&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Neben dem Driver werden &lt;b&gt;Stubs &lt;/b&gt;benötigt, die die Funktionen der von der zu testenden Komponente verwendeten Subkomponenten übernehmen. Ein solcher Stub kann z.B. so realisiert sein, dass er die übergebenen Parameter auf der Ausgabe anzeigt und eine manuelle Eingabe der Rückgabewerte erwartet. Ferner könnte eine Realisierung z.B. auf eine interne Tabelle mit ausgewählten Werten zurückgreifen.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>135</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Charakterisieren Sie in jeweils höchstens drei Sätzen
+konstruktive und analytischeQS-Maßnahmen.[Qualitätssicherung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;Charakterisieren Sie in jeweils höchstens drei Sätzen
+&lt;ul&gt;&lt;li&gt;&lt;i&gt;konstruktive &lt;/i&gt;und&amp;nbsp;&lt;/li&gt;&lt;li&gt;&lt;i&gt;analytische&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;QS-Maßnahmen.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätssicherung]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;Die &lt;b&gt;konstruktiven Maßnahmen &lt;/b&gt;zielen darauf ab, präventiv qualitätsrelevante Risiken zu vermeiden, Qualitätsmängeln entgegenzuwirken und die den analytischen Maßnahmen zu unterziehenden Objekte überhaupt erst prüfbar zu gestalten. Beispiele für die konstruktiven/präventiven Maßnahmen sind: Auswahl eines dem Projekt angemessenen Vorgehensmodells sowie die Unterstützung des Entwicklungsprozesses durch Methoden, Werkzeuge und Entwicklungsstandards.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Die &lt;b&gt;analytischen Maßnahmen &lt;/b&gt;der Qualitätssicherung haben die Prüfung, Bewertung und den (externen) Nachweis der Qualität der "Prüfgegenstände" zum Ziel. Analytische Maßnahmen beziehen sich vorwiegend auf Produkte, aber auch auf Prozesse.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>136</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Zählen Review zu konstruktiven oder analytischen QS-Maßnahmen?[Qualitätssicherung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Zählen Review zu konstruktiven oder analytischen QS-Maßnahmen?&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätssicherung]&lt;/i&gt;&lt;/div&gt;Reviews zählen zu den analytischen Maßnahmen.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>137</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Charakterisieren Sie in höchstens fünf Sätzen das Prüfverfahren zur Qualitätssicherung nach dem V-Modell XT.[Qualitätssicherung]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Charakterisieren Sie in höchstens fünf Sätzen das Prüfverfahren zur Qualitätssicherung nach dem V-Modell XT.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Qualitätssicherung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;Im Zuge der Qualitätssicherung wird jedes Produkt, das im Projekt erzeugt wird, nach Bearbeitung überprüft, und zwar zunächst als Eigenprüfung. 
+&lt;ul&gt;&lt;li&gt;Überprüft wird die Übereinstimmung mit den formalen und inhaltlichen Vorgaben des Produkts.&lt;/li&gt;&lt;li&gt; Zudem wird die inhaltliche Konsistenz zu anderen, bereits fertig gestellten Produkten überprüft.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;img src="paste-121457380163585.jpg" /&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>138</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:Skizzieren Sie in maximal drei Sätzen den Ansaztz des Total Quality Managements.[TQM]Sehr wichtig für die Klausur!&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&lt;div&gt;Skizzieren Sie in maximal drei Sätzen den Ansaztz des Total Quality Managements.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[TQM]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Sehr wichtig für die Klausur!&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Der Schwerpunkt des Total Quality Managements (TQM) liegt nicht auf der Erzielung von Qualität durch nachträgliche Prüfung, sondern durch vorbeugende Maßnahmen im Entwicklungs- und Produktionsprozess. Er richtet sich an Prozessen und nicht an Produkten aus. Weitere wichtige Punkte bestehen in der Kundenorientierung sowie darin, dass Qualitätssicherung als ausgesprochenene Managementaufgabe verstanden wird.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>139</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie drei Prinzipien des TQM an.[TQM]Sehr wichtig für die Klausur!&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie drei Prinzipien des TQM an.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[TQM]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Sehr wichtig für die Klausur!&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt; &lt;ul&gt;&lt;li&gt;Qualitätssicherung wird als zentrale Managementaufgabe aufgefasst&lt;/li&gt;&lt;li&gt;Vorbeugung (statt nachträgliche Prüfung und Korrektur)&lt;/li&gt;&lt;li&gt;Prozessorientierung&lt;/li&gt;&lt;li&gt;Kundenorientierung&lt;/li&gt;&lt;li&gt;ständige Verbesserung&lt;/li&gt;&lt;li&gt;Primat der Qualität (Null-Fehler-Prinzip)&lt;/li&gt;&lt;li&gt;Zuständigkeit aller Mitarbeiter (Einbeziehung und Qualifizierung der Mitarbeiter)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>140</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Aufgabenverteilung zwischen den Normen ISO 9001 und ISO 9004 innerhalb der ISO 9000:2000 Normenreihe.[ISO 9000]Nicht so wichtig für die Klausur!&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie die Aufgabenverteilung zwischen den Normen ISO 9001 und ISO 9004 innerhalb der ISO 9000:2000 Normenreihe.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[ISO 9000]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Nicht so wichtig für die Klausur!&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;Die neue Version der ISO 9000 Normenreihe, die ISO 9000:2000, versucht, die Kritikpunkte an der Vorversion auszumerzen. Hierzu erfolgt eine Reduktion auf die zwei Kernnormen ISO 9001 und ISO 9004. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Die ISO 9001 ist stark produktbezogen. Es geht darum, Vertrauen zu erwecken, dass ein Produkt (oder eine Dienstleistung) die festgelegten Anforderungen erfüllt. Dabei steht die Zusicherung der Fähigkeit, konforme Produkte zu liefern, im Vordergrund. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Die ISO 9004 beschäftigt sich damit, mittels anhaltender Kundenzufriedenheit einen Nutzen für alle Interessenspartner zu erlangen. Die ISO 9004 geht damit deutlich über die ISO 9001 hinaus. Während die ISO 9001 stark das Produkt (die Dienstleistung) aus der Sicht der Kundenzufriedenheit adressiert, spricht die ISO 9004 alle Unternehmensprozesse und alle Interessenspartner ("stakeholders") aus der Perspektive eines an Leistung interessierten Unternehmers / Managers an.&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>141</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie fünf Grundsätze des Qualitätsmanagements nach ISO 9000:2000 an und erklären Sie diese jeweils mit einem knappen Satz.[ISO 9000]Nicht so wichtig für die Klausur!&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Geben Sie fünf Grundsätze des Qualitätsmanagements nach ISO 9000:2000 an und erklären Sie diese jeweils mit einem knappen Satz.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[ISO 9000]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Nicht so wichtig für die Klausur!&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;ol&gt;&lt;li&gt;&lt;b&gt;Kundenorientierte Organisation:&lt;/b&gt;&lt;br /&gt;Organisationen brauchen ihre Kunden und sollten daher die jetzigen und künftigen Erfordernisse der Kunden erfassen, Kundenanforderungen erfüllen und danach streben, die Erwartungen ihrer Kunden zu übertreffen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Führungsstärke:&lt;/b&gt;&lt;br /&gt;Führungskräfte entscheiden über die einheitliche Zielsetzung, die Richtung und das interne Umfeld der Organisation und schaffen die Umgebung, in der Mitarbeiter sich voll und ganz für die Erreichung der Ziele der Organisation einsetzen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Einbeziehung der Mitarbeiter:&lt;/b&gt;&lt;br /&gt;Mitarbeiter machen auf allen Ebenen das Wesen einer Organisation aus und ihre vollständige Einbeziehung gestattet die Nutzung ihrer Fähigkeiten zum Nutzen der Organisation.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Prozessorientiertes Herangehen:&lt;/b&gt;&lt;br /&gt;Das gewünschte Ergebnis lässt sich auf effizientere Weise erreichen, wenn zusammengehörige Mittel und Tätigkeiten als ein Prozess geleitet werden.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Systemorientierter Managementansatz:&lt;/b&gt;&lt;br /&gt;Das Erkennen, Begreifen und Führen eines Systems miteinander in Wechselbeziehung stehender Prozesse für ein gegebenes Ziel trägt zur Wirksamkeit und Effizienz der Organisation bei.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Ständige Verbesserung:&lt;/b&gt;&lt;br /&gt;Ständige Verbesserung ist ein permanentes Ziel der Organisation.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Sachliches Herangehen an Entscheidungen:&lt;/b&gt;&lt;br /&gt;Wirksame Entscheidungen beruhen auf der logischen und intuitiven Analyse von Daten und Informationen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Lieferantenbeziehungen zum gegenseitigen Nutzen:&lt;/b&gt;&lt;br /&gt;Beziehungen zum gegenseitigen Nutzen zwischen der Organisation und ihren Lieferanten fördern die Wertschöpfungsfähigkeit beider Organisationen.&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>142</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie zu der Function-Point-Methode jeweils einen Vorteil und einen Nachteil.[Aufwandsschätzung]Wichtig für Klausur&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie zu der&amp;nbsp;&lt;i&gt;&lt;b&gt;Function-Point-Methode&lt;/b&gt;&lt;/i&gt;&amp;nbsp;jeweils einen Vorteil und einen Nachteil.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Aufwandsschätzung]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;&lt;u&gt;Wichtig für Klausur&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Vorteile der Function-Point-Analyse&lt;/b&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Die Beschaffung der Basisdaten für die Aufwandsschätzung erfordert keinen zusätzlichen Aufwand, weil die Analyseergebnisse ohnehin erarbeitet werden müssen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Wie die COCOMO-Methode ist auch die Function-Point-Analyse &lt;b&gt;gut dokumentiert&lt;/b&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;b&gt;Nachteile der Function-Point-Analyse&lt;/b&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Der Anwendungsbereich dieser Methode beschränkt sich auf kaufmännische Anwendungen.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Es sind teilweise Anpassungen an die konkret eingesetzte Analysemethode notwendig.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Der Einfluss der Systeminfrastruktur scheint bei der Function-Point-Analyse eher unterrepräsentiert.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>30</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie fünf aus Ihrer Sicht charakteristische Eigenschaften eines Projekts. (7)[Projektmanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie fünf aus Ihrer Sicht charakteristische Eigenschaften eines Projekts. (7)&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektmanagement]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;zeitliche Begrenzung:&lt;/b&gt;&lt;br /&gt;
+Ein Projekt ist ein Vorhaben, das durch einen Anfangs- und einen Endzeitpunkt charakterisiert werden kann.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;klare Aufgabendefinition:&lt;/b&gt;&lt;br /&gt;
+Das Ziel eines Projekts bzw. die zu erstellende Leistung ist klar vorgegeben.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;hohe Komplexität:&lt;/b&gt;&lt;br /&gt;
+Es handelt sich um eine Aufgabe, die sich durch eine gewisse Einzigartigkeit und einen gewissen Umfang auszeichnet.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;Konkurrenz um begrenzte Mittel:&lt;/b&gt;&lt;br /&gt;
+Es gibt eine Konkurrenzsituation mit anderen Projekten oder Daueraufgaben um die zur Durchführung des Vorhabens begrenzten Mittel.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;mehrere beteiligte Stellen:&lt;/b&gt;&lt;br /&gt;
+An der Durchführung des Vorhabens sind mehrere Stellen innerhalb und gegebenfalls auch außerhalb des Unternehmens beteiligt.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;vorgegebener Kostenrahmen:&lt;/b&gt;&lt;br /&gt;
+Das Projekt muss in einem gegebenen finanziellen Rahmen abgewickelt werden.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;Lösbarkeit der Aufgabe:&lt;/b&gt;&lt;br /&gt;
+Die Aufgabe, die mit dem Projekt verfolgt wird, muss lösbar sein.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>31</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei Faktoren, die das Management von Softwareprojekten im Verhältnis zu anderen Projekten (wie z.B. Bauvorhaben) erschweren. [8][Projektmanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei Faktoren, die das Management von Softwareprojekten im Verhältnis zu anderen Projekten (wie z.B. Bauvorhaben) erschweren. [8]&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektmanagement]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;Die erschwerenden Faktoren haben ihre Ursache zum einen in der Tatsache, dass Software ein &lt;b&gt;immaterielles Produkt&lt;/b&gt; ist, dessen Fertigstellungsgrad und dessen Qualität nur sehr schwer visuell wahrgenommen werden können.&lt;br /&gt;&lt;br /&gt;Zum anderen handelt es sich um einen Entwicklungsprozess in einem sehr &lt;b&gt;dynamischen Umfeld&lt;/b&gt; seitens der Technologie und der Anforderungen.&lt;br /&gt;&lt;br /&gt;Die folgenden Faktoren erschweren das Management von Softwareprojekten im Verhältnis zu anderen Projekten:&lt;ul&gt;&lt;li&gt;Die &lt;b&gt;Aufwands- und die Kostenschätzung&lt;/b&gt; sind &lt;b&gt;schwierig&lt;/b&gt;. Die Ursachen hierfür umfassen z.B. die Unsicherheit, mit der ambitionierte entwicklungsprojekte zu kämpfen haben, und die relativ geringe Erfahrung mit Softwareprojekten.&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Der &lt;b&gt;Entwicklungsfortschritt&lt;/b&gt; ist &lt;b&gt;schwer abzuschätzen&lt;/b&gt;.&lt;br /&gt;&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Eine &lt;b&gt;projektbegleitende Qualitätssicherung&lt;/b&gt; ist insbesondere im Hinblick auf frühe Zwischenergebnisse &lt;b&gt;schwierig&lt;/b&gt;. Die primäre Ursache liegt an der Immateriallität der Software. &lt;br /&gt;&lt;br /&gt;Bei industriellen Produkten beispielsweise kann man auf Grund des Augenscheins schon Qualitätsrückschlüsse ziehen, bei Software hingegen sind fundierte Qualitätssicherungen erforderlich.&lt;br /&gt;&lt;/li&gt;&lt;br /&gt;&lt;li&gt;&lt;b&gt;Ergebnisse&lt;/b&gt; und insbesondere &lt;b&gt;Zwischenergebnisse&lt;/b&gt; sind &lt;b&gt;für IT-Laien oft nicht nachvollziehbar&lt;/b&gt;. Dieser Punkt führt häufig zu Problemen zwischen der Unternehmensleitung bzw. dem Auftraggeber und/oder den Anwendern des zu erstellenden Systems auf der einen und dem Projektteam auf der anderen Seite.&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Der &lt;b&gt;Zusammenhang zwischen Anforderungen und Kosten ist Anwendern schwer zu vermitteln&lt;/b&gt;. Sowohl den Anwendern als auch der Unternehmensleitung bzw. dem Auftraggeber ist oft nicht klar, welche Aufwände sich hinter Zwischenergebnissen einerseits und der Berücksichtigung neuer Anforderungen andererseits verbergen.&lt;br /&gt;&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Durch den hohen erforderlichen &lt;b&gt;Einarbeitungsaufwand für neue Projektmitarbeiter&lt;/b&gt; können Verzögerungen gegenüber dem Plan nicht problemlos durch den Einsatz zusätzlicher Mitarbeiter kompensiert werden.&lt;br /&gt;&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Während bei anderen technischen Entwicklungsaufgaben - z.B. im Maschinenbau - auf eine Vielzahl &lt;b&gt;normierter Komponenten&lt;/b&gt; zurückgegriffen werden kann, sind diesbezüglich im Bereich der Softwareentwicklung allenfalls Ansätze erkennbar.&lt;br /&gt;&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Während man es bei anderen Projekten oft mit über die Projektlaufzeit konstanten Anforderungen zu tun hat, ist bei Softwareprojekten ein sich während der Projektlaufzeit &lt;b&gt;veränderndes Anforderungsprofil&lt;/b&gt; die Regel.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>32</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie vier „Aufgaben“ des Software-Projektmanagements. [10][Projektmanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie vier „Aufgaben“ des Software-Projektmanagements. [10]&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektmanagement]&lt;/i&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>33</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei grundlegende Ziele beim Management von Softwareprojekten.[Projektmanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie drei grundlegende Ziele beim Management von Softwareprojekten.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektmanagement]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Termine einhalten
+&lt;/li&gt;
+&lt;li&gt;Kostenrahmen einhalten
+&lt;/li&gt;
+&lt;li&gt;erforderliche Qualität sicherstellen&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>34</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig: Erläutern Sie kurz die unterschiedlichen Interessenslagen der an einem Softwareprojekt beteiligten Gruppen: Entwickler, Auftraggeber und Benutzer.[Projektmanagement]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Selbstständig:&amp;nbsp;&lt;div&gt;Erläutern Sie kurz die unterschiedlichen Interessenslagen der an einem Softwareprojekt beteiligten Gruppen: Entwickler, Auftraggeber und Benutzer.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Projektmanagement]&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Entwickler:&lt;/b&gt;&lt;br /&gt;
+Die Entwickler sind häufig technikverliebt und wollen gern neuste Methoden und Technologien verwenden, wobei oft wenig Rücksicht auf Kosten, Zeitbedarf, Marktsituation des Unternehmens usw. genommen wird. Dokumentation und Testen der Software sind vergleichsweise unbeliebte Tätigkeiten.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;Auftraggeber&lt;/b&gt;&lt;br /&gt;
+Die Auftraggeber möchten ein Produkt von hoher Qualität, das in kurzer Zeit zu niedrigen Kosten entwickelt werden soll. Die Produktivität des Unternehmens soll durch den Einsatz der Software gesteigert werden.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;&lt;b&gt;Benutzer&lt;/b&gt;&lt;br /&gt;
+Die Benutzer möchten eine leicht und intuitiv bedienbare Software (hohe Usability), sowie eine vollständige und gut zu verstehende Benutzungsdokumentation. Das Produkt sollte fehlerfrei und robust sein und hohe Performanz besitzen.
+&lt;/li&gt;&lt;br /&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>35</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie die typischen Nachteile des klassischen Wasserfallmodells. [4][Wasserfallmodell]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie die typischen Nachteile des klassischen Wasserfallmodells. [4]&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Wasserfallmodell]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;ul&gt;
+&lt;li&gt;Problematische Kontrolle des Projektfortschritts
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Zusammenhänge zwischen den Phasen werden unzureichend abgebildet
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Testaktivitäten werden zu sehr als Phase gedacht
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Bei großen Projekten vergeht viel Zeit, bis das erste System erstellt ist.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>36</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie den Unterschied zwischen Validierung und Verifikation.[Wasserfallmodell]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie den Unterschied zwischen Validierung und Verifikation.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Wasserfallmodell]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;Verifikation&lt;/b&gt;:&lt;br /&gt;
+Prüfung des Ergebnisses einer Aktivität gegen seine Spezifikation.&amp;nbsp;&lt;/div&gt;&lt;div align="left"&gt;&lt;i&gt;Haben wir das Produkt richtig entwickelt?&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;b&gt;&lt;br /&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;Validierung:&lt;/b&gt;&amp;nbsp;&lt;/div&gt;&lt;div align="left"&gt;Allgemeinere Prüfung des Prüfgegenstandes im Hinblick auf seinen angestrebten Zweck, z. B. Wenn keine präzise Vorgabe vorliegt.&amp;nbsp;&lt;/div&gt;&lt;div align="left"&gt;&lt;i&gt;Haben wir das richtige Produkt entwickelt?&amp;nbsp;&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;&lt;i&gt;(im Sinne der Vorstellungen des Auftraggebers) &lt;/i&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>37</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in jeweils zwei kurzen Sätzen das Rapid Prototyping, das horizontale und das vertikale Prototyping.[Prototyping]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Beschreiben Sie in jeweils zwei kurzen Sätzen das &lt;i&gt;Rapid Prototyping, &lt;/i&gt;das &lt;i&gt;horizontale&lt;/i&gt;&amp;nbsp;und das &lt;i&gt;vertikale Prototyping.&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Prototyping]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;div&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Bei dem &lt;b&gt;Rapid Prototyping&lt;/b&gt; wird ein Wegwerfprototyp erstellt und solange revidiert, bis die wichtigen oder kritischen Anforderungen für alle Beteiligten eindeutig feststehen. Oft genügt dazu ein Prototyp der Benutzungsoberfläche.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Die &lt;b&gt;horizontalen Prototypen&lt;/b&gt; realisieren nur eine bestimmte technische Facette des Systems, wie z.B. die fachliche Anwendungsfunktionalität oder die Benutzungsoberfläche.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt; Bei einem &lt;b&gt;vertikalen Prototyp&lt;/b&gt; wird für einen Teilausschnitt des geforderten Funktionsumfangs ein System entwickelt, das von der&amp;nbsp;Benutzungsschnittstelle über die fachliche Funktionalität bis zur Systemintegration alle Bereiche überdeckt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>38</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie einen Vor- und einen Nachteil von Prototyping.[Prototyping]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Nennen Sie einen Vor- und einen Nachteil von Prototyping.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Prototyping]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+&lt;b&gt;Vorteile:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;
+leichtere Abstimmung mit dem Auftraggeber und den Benutzern (bessere Validierung der Anforderungen)
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;
+frühzeitige Einschätzung technisch schwieriger Teile  &lt;/li&gt;&lt;/ul&gt;
+&lt;b&gt;Nachteile:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;haben die Auftraggeber oder Anwender beispielsweise einen Prototypen der Benutzungsoberfläche gesehen, verstehen sie oft nicht, warum zur Fertigstellung des Systems noch so viel Zeit benötigt wird&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;hoher Aufwand zur Erstellung eines Prototypen&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>39</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie evolutionäres Prototyping in maximal zwei Sätzen.[Prototyping]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie evolutionäres Prototyping in maximal zwei Sätzen.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[Prototyping]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Es wird eine Serie von aufeinander aufbauenden Prototypen entwickelt, die direkt in die Produktionsversion der Software konvergiert werden. Dabei wird für jeden einzelnen Prototypen der vollständige Entwicklungszyklus durchlaufen.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>40</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie drei Bedeutungen für das "V" im Namen V-Modell.[V-Modell]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Erläutern Sie drei Bedeutungen für das "V" im Namen V-Modell.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[V-Modell]&lt;/i&gt;&lt;/div&gt;&lt;div align="left"&gt;
+Das "V" in V-Modell steht für:
+&lt;ul&gt;
+&lt;li&gt; Vorgehen&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt; die &lt;b&gt;Gesamtstruktur des Vorgehens&lt;/b&gt;, die durch ein "V" beschrieben werden kann, wobei 
+&lt;ul&gt;&lt;li&gt;auf dem &lt;b&gt;absteigenden&lt;/b&gt; Ast des "V" die eigentlichen Erstellungsaktivitäten liegen und&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;auf dem &lt;b&gt;aufsteigenden&lt;/b&gt; Ast des "V" die Integrations- und Qualitätssicherungsaktivitäten.&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;/li&gt;&lt;li&gt;Verifikation und Validierung&lt;br /&gt;
+(&lt;b&gt;Verifikation:&lt;/b&gt; Prüfung des Ergebnisses einer Aktivität gegen seine Spezifikation. Haben wir das Produkt richtig entwickelt?&lt;br /&gt;
+&lt;b&gt;Validierung:&lt;/b&gt; allgemeinere Prüfung des Prüfgegenstandes im Hinblick auf seinen angestrebten Zweck. Haben wir das richtige Produkt entwickelt?)
+
+&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>41</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Was versteht man im V-Modell unter Tailoring?[V-Modell]&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Was versteht man im V-Modell unter Tailoring?&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;[V-Modell]&lt;/i&gt;&lt;/div&gt;Das Tailoring dient dazu, das V-Modell trotz seines Umfangs und der umfassenden Auslegung auch in kleineren Projekten anwendbar zu machen.&amp;nbsp;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Im Tailoring erfolgt ein &lt;b&gt;"Zurechtschneiden" des V-Modells für das konkrete Projekt.&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Diese Anpassung wird als &lt;i&gt;projektspezifisches&lt;/i&gt;&amp;nbsp;oder auch &lt;i&gt;ausschreibungsrelevantes Tailoring&lt;/i&gt;&amp;nbsp; bezeichnet. Dabei werden - oft als Anlage zu einem Ausschreibungstext - für das konkrete Projekt eine spezifische Teilmenge des Vorgehensmodells zusammen mit weiteren Vereinbarungen definiert und im sogenannten Projekthandbuch festgeschrieben.&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+	<flashcard>
+		<card_id>42</card_id>
+		<proj_id>3</proj_id>
+		<stack>1</stack>
+		<question>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;Rational Unified Process:Wo liegen die Schwerpunkte bezüglich der Arbeitsabläufe in der Konzeptphase und der Konstruktion?Phasen des Ration Unified Process:Konzeptphase (Inception phase)Ausarbeitung (Elaboration phase)Konstruktion (Construction phase)Übergang in den Betrieb (Transition phase)&lt;/body&gt;&lt;/html&gt;</question>
+		<answer>&lt;html&gt; &lt;head&gt;  &lt;/head&gt;  &lt;body&gt;&lt;div align="left"&gt;&lt;b&gt;Rational Unified Process&lt;/b&gt;:&lt;br /&gt;Wo liegen die Schwerpunkte bezüglich der Arbeitsabläufe in der &lt;i&gt;Konzeptphase&lt;/i&gt; und der &lt;i&gt;Konstruktion&lt;/i&gt;?&lt;br /&gt;&lt;br /&gt;Phasen des Ration Unified Process:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Konzeptphase (Inception phase)&lt;/li&gt;&lt;li&gt;Ausarbeitung (Elaboration phase)&lt;/li&gt;&lt;li&gt;Konstruktion (Construction phase)&lt;/li&gt;&lt;li&gt;Übergang in den Betrieb (Transition phase)&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;div align="left"&gt;Die Schwerpunkte der angesprochenen Phasen bzgl. der Arbeitsabläufe können der folgenden Abbildung entnommen werden. &lt;br /&gt;&lt;br /&gt;Bei der Interpretation ist zu beachten, dass der gesamte dargestellte zeitliche Ablauf von &lt;i&gt;Inception&lt;/i&gt; bis &lt;i&gt; Transition&lt;/i&gt; einem Zyklus im Sinne des evolutionären Vorgehens entspricht. Jede neue Version des Systems wird also nach diesem Modell entwickelt. Die im unteren Teil der Abbildung angegebenen Iterationen können so interpretiert werden, dass jede Iteration ein wohldefiniertes Zwischenergebnis liefert, das Gegenstand der Qualitätssicherung sein muss.&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;In der &lt;b&gt;Konzeptphase&lt;/b&gt; wird überprüft, ob die ermittelten Anforderungen die Wünsche des Auftraggebers korrekt wiedergeben und ob der Kosten- und Zeitrahmen realistisch ist. In dieser Phase liegen die Schwerpunkte in den Arbeitsabläufen &lt;i&gt;Business Modelling, Requirements, Project Management&lt;/i&gt; und &lt;i&gt;Environment&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;" Während dieser Phase werden im Wesentlichen die zentralen Anforderungen an das System ermittelt und der Umfang des Projekts definiert. Es finden aber auch schon erste Entwurfsüberlegungen und sogar kleinere Implementationen statt. Hinzu kommt eine Ermittlung der kritischen Erfolgsfaktoren für das System, eine Auflistung der möglichen Projektrisiken, eine grobe Aufwandsschätzung und ein erster Terminplan.
+&lt;br /&gt;&lt;br /&gt;Bei dem diese Phase abschließenden Meilenstein wird in erster Linie überprüft, ob die (bisher) ermittelten Anforderungen die Wünsche des Auftraggebers korrekt wiedergeben und ob Kosten- und Terminplan einigermaßen realistisch sind."&lt;/i&gt;&lt;br /&gt;Aus Software Engineering. &lt;br /&gt;&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;li&gt;In der Phase der &lt;b&gt;Konstruktion&lt;/b&gt; liegt ein Schwerpunkt in der &lt;i&gt;Implementation&lt;/i&gt; des Systems. Es werden die noch ausstehenden Komponenten und fachlichen Funktionalitäten vorzugsweise parallel kodiert. Anschließend findet in zunehmenden Maß die Integration der Komponenten zum Gesamtsystem mit sorgfältigem Testen statt (&lt;i&gt;Test&lt;/i&gt;). Der hohe Aufwand für &lt;i&gt;Analysis &amp;amp; Design&lt;/i&gt; während der Ausarbeitung nimmt in der Konstruktion schnell ab. Daher liegt nur zu Beginn der Konstruktion der Schwerpunkt auf diesem Arbeitsablauf. Darüber hinaus ist während der gesamten Phase ein deutlicher Aufwand für das &lt;i&gt;Config. &amp;amp;  Change Mgmt.&lt;/i&gt; zu erkennen.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;" In dieser Phase geht es i. W. um die Implementation des Systems. Dies beinhaltet — im Sinne einer Weiterentwicklung des in der vorherigen Phase erstellten Prototyps — die Implementation der noch ausstehenden Module und fachlichen Funktionalitäten.
+&lt;br /&gt;Diese werden dann zum vollständigen System integriert und sorgfältig getestet. Bei der Implementation wird ausdrücklich ein paralleles Arbeiten an den verschiedenen Modulen mit dem Ziel der Verkürzung der Projektlaufzeit in Betracht gezogen.
+&lt;br /&gt;&lt;br /&gt;Am Ende der Phase steht die “Beta-Version“ des Systems. Im zugehörigen Meilenstein ist zu prüfen, ob dieses System für den Übergang in die Einsatzphase geeignet ist."&lt;/i&gt;&lt;br /&gt;Aus Software Engineering. &lt;br /&gt;&lt;/li&gt;&lt;br /&gt;&lt;/ul&gt;&lt;br /&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</answer>
+		<custom_width_question>0</custom_width_question>
+		<custom_width_answer>0</custom_width_answer>
+	</flashcard>
+</flashcards>
