@@ -419,8 +419,7 @@ public class XMLExchanger {
         XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
         FileOutputStream outputStream = new FileOutputStream(outputFile);
         XMLEventWriter xmlEventWriter = xmlOutputFactory.createXMLEventWriter(outputStream, "UTF-8");
-        // for debugging print to console:
-        // XMLEventWriter xmlEventWriter =
+        // for debugging print to console: XMLEventWriter xmlEventWriter =
         // xmlOutputFactory.createXMLEventWriter(System.out);
         XMLEventFactory eventFactory = XMLEventFactory.newInstance();
         XMLEvent end = eventFactory.createDTD("\n");
