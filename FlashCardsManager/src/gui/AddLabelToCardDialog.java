@@ -22,7 +22,7 @@ public class AddLabelToCardDialog extends JDialog implements IHasOkButton {
 	private JPanel pnlControls;
 	private Box centerBox;
 	private JScrollPane scpCenter;
-	private StackBox[] boxes;
+	private PrepareSessionCheckBox[] boxes;
 	private JButton btnOk, btnDiscard;
 	private JDialog owner;
 
@@ -54,9 +54,9 @@ public class AddLabelToCardDialog extends JDialog implements IHasOkButton {
 		centerBox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		scpCenter = new JScrollPane(centerBox);
 		scpCenter.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		boxes = new StackBox[p.getLabels().size()];
+		boxes = new PrepareSessionCheckBox[p.getLabels().size()];
 		for (int i = 0; i < p.getLabels().size(); i++) {
-			boxes[i] = new StackBox(p.getLabels().get(i).getName(), AddLabelToCardDialog.this, hasLabel(p.getLabels().get(i)));
+			boxes[i] = new PrepareSessionCheckBox(p.getLabels().get(i).getName(), AddLabelToCardDialog.this, hasLabel(p.getLabels().get(i)));
 		}
 
 		btnOk = new JButton("Ok");

@@ -3,8 +3,7 @@ package gui;
 import exc.CustomErrorHandling;
 import gui.helpers.IHasOkButton;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -13,8 +12,8 @@ import java.util.Random;
 
 import javax.swing.*;
 
-import core.FlashCard;
-import core.LearningProject;
+import core.*;
+import core.Label;
 
 @SuppressWarnings("serial")
 public class PrepareLearningSessionDialog extends JDialog implements IHasOkButton {
@@ -26,7 +25,9 @@ public class PrepareLearningSessionDialog extends JDialog implements IHasOkButto
     private JPanel pnlControls;
     private Box centerBox;
     private JScrollPane scpCenter;
-    private StackBox[] boxes;
+    private PrepareSessionCheckBox[] stackBoxes, labelBoxes;
+    private JLabel lblStacks, lblLabels;
+    private Box stackTitleBox, labelTitleBox;
     private JButton btnOk, btnDiscard;
 
     PrepareLearningSessionDialog(MainWindow owner, ArrayList<FlashCard> allCards, LearningProject project) throws SQLException {
@@ -47,7 +48,8 @@ public class PrepareLearningSessionDialog extends JDialog implements IHasOkButto
         createWidgets();
         addWidgets();
         setListeners();
-        setSize(getPreferredSize().width + 10, 300);
+        setSize(getPreferredSize().width + 10,
+                Math.min(getPreferredSize().height + 50, (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() * 0.5)));
         setLocationRelativeTo(owner);
     }
 
@@ -58,13 +60,29 @@ public class PrepareLearningSessionDialog extends JDialog implements IHasOkButto
         centerBox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         scpCenter = new JScrollPane(centerBox);
         scpCenter.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        boxes = new StackBox[project.getNumberOfStacks()];
+        stackBoxes = new PrepareSessionCheckBox[project.getNumberOfStacks()];
         for (int i = 1; i <= project.getNumberOfStacks(); i++) {
-            boxes[i - 1] = new StackBox(i, project.getNumberOfCards(i), PrepareLearningSessionDialog.this);
+            String text = "Stapel " + i + ": ";
+            stackBoxes[i - 1] = new PrepareSessionCheckBox(text, project.getNumberOfCards(i), PrepareLearningSessionDialog.this);
             if (project.getNumberOfCards(i) == 0) {
-                boxes[i - 1].setEnabled(false);
+                stackBoxes[i - 1].setEnabled(false);
             }
         }
+        labelBoxes = new PrepareSessionCheckBox[project.getLabels().size()];
+        for (int i = 0; i < project.getLabels().size(); i++) {
+            String text = project.getLabels().get(i).getName() + ": ";
+            labelBoxes[i] = new PrepareSessionCheckBox(text, project.getLabels().get(i).getNumberOfCards(),
+                    PrepareLearningSessionDialog.this);
+            if (project.getLabels().get(i).getNumberOfCards() == 0) {
+                labelBoxes[i].setEnabled(false);
+            }
+        }
+        lblStacks = new JLabel("Stapel w\u00e4hlen: ");
+        lblStacks.setFont(lblStacks.getFont().deriveFont(Font.BOLD));
+        lblLabels = new JLabel("Label w\u00e4hlen: ");
+        lblLabels.setFont(lblLabels.getFont().deriveFont(Font.BOLD));
+        stackTitleBox = new Box(BoxLayout.X_AXIS);
+        labelTitleBox = new Box(BoxLayout.X_AXIS);
         btnOk = new JButton("Ok");
         btnOk.setEnabled(false);
         btnDiscard = new JButton("Abbrechen");
@@ -75,8 +93,18 @@ public class PrepareLearningSessionDialog extends JDialog implements IHasOkButto
     private void addWidgets() {
         this.add(scpCenter, BorderLayout.CENTER);
         this.add(pnlControls, BorderLayout.SOUTH);
+        if (project.getLabels().size() > 0) {
+            centerBox.add(labelTitleBox);
+            labelTitleBox.add(lblLabels);
+        }
+        for (int i = 0; i < project.getLabels().size(); i++) {
+            centerBox.add(labelBoxes[i]);
+        }
+        centerBox.add(Box.createVerticalStrut(10));
+        centerBox.add(stackTitleBox);
+        stackTitleBox.add(lblStacks);
         for (int i = 1; i <= project.getNumberOfStacks(); i++) {
-            centerBox.add(boxes[i - 1]);
+            centerBox.add(stackBoxes[i - 1]);
         }
         pnlControls.add(btnDiscard);
         pnlControls.add(btnOk);
@@ -144,17 +172,40 @@ public class PrepareLearningSessionDialog extends JDialog implements IHasOkButto
                                        // arraylist
             int stack = currentCard.getStack() - 1; // stack numbers are from 1
                                                     // upwards;
-            if (boxes[stack].isSelected()) { // get only cards from selected
-                                             // stacks
+            ArrayList<Label> cardLabels = currentCard.getLabels();
+            ArrayList<Label> selectionLabels = getSelectedLabels();
+            if (stackBoxes[stack].isSelected()) { // get only cards from
+                                                  // selected stacks
                 sessionCards.add(currentCard);
+            } else { // get cards from selected labels
+                for (int i = 0; i < selectionLabels.size(); i++) {
+                    if (cardLabels.contains(selectionLabels.get(i))) {
+                        sessionCards.add(currentCard);
+                    }
+                }
             }
         }
         return sessionCards;
     }
 
+    private ArrayList<Label> getSelectedLabels() {
+        ArrayList<Label> selectionLabels = new ArrayList<Label>();
+        for (int i = 0; i < labelBoxes.length; i++) {
+            if (labelBoxes[i].isSelected()) {
+                selectionLabels.add(project.getLabels().get(i));
+            }
+        }
+        return selectionLabels;
+    }
+
     public void controlOkButton() {
         boolean anythingSelected = false;
-        for (StackBox box : boxes) {
+        for (PrepareSessionCheckBox box : stackBoxes) {
+            if (box.isSelected()) {
+                anythingSelected = true;
+            }
+        }
+        for (PrepareSessionCheckBox box : labelBoxes) {
             if (box.isSelected()) {
                 anythingSelected = true;
             }

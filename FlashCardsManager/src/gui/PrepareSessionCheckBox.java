@@ -10,28 +10,28 @@ import java.awt.event.ItemListener;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class StackBox extends Box {
+public class PrepareSessionCheckBox extends Box {
 
     private JCheckBox chk;
     private JLabel lblStack, lblNoOfCards;
 
-    StackBox(String name, final IHasOkButton d, boolean selected) {
+    PrepareSessionCheckBox(String text, final IHasOkButton d, boolean selected) {
         super(BoxLayout.X_AXIS);
         final IHasOkButton[] dArr = { d };
         chk = new JCheckBox();
         chk.setSelected(selected);
-        lblStack = new JLabel(name);
+        lblStack = new JLabel(text);
         this.add(chk);
         this.add(lblStack);
         this.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 30));
         setListeners(dArr);
     }
 
-    StackBox(int stackNo, int noOfCards, final IHasOkButton d) {
+    PrepareSessionCheckBox(String text, int noOfCards, final IHasOkButton d) {
         super(BoxLayout.X_AXIS);
         final IHasOkButton[] dArr = { d };
         chk = new JCheckBox();
-        lblStack = new JLabel("Stapel " + stackNo + ": ");
+        lblStack = new JLabel(text);
         lblNoOfCards = new JLabel(noOfCards + " Karten");
         this.add(chk);
         this.add(lblStack);
