@@ -202,30 +202,44 @@ public class PrepareLearningSessionDialog extends JDialog implements IHasOkButto
 	}
 
 	public void addIfCriteriasAreMatching(FlashCard currentCard) {
-		int index = currentCard.getStack() - 1; // stack numbers are from 1
-												// upwards;
+		int index = currentCard.getStack() - 1; // map stack numbers to indices
 		ArrayList<Label> cardLabels = currentCard.getLabels();
 		ArrayList<Label> selectionLabels = getSelectedLabels();
-		boolean isStack = false;
-		boolean isLabel = false;
-		if (stackBoxes[index].isSelected()) // get only cards from
-			isStack = true; // selected stacks
-		// get cards from selected labels
-		if (selectionLabels.size() == 0)
-			isLabel = true;
+		// if there is no selection, initial boolean must be true for match
+		// calculation
+		boolean isStack = noSelection(stackBoxes);
+		boolean isLabel = noSelection(labelBoxes);
+		// is card in selected stack?
+		if (stackBoxes[index].isSelected())
+			isStack = true;
+		// has card one of selected labels?
 		for (int j = 0; j < selectionLabels.size(); j++) {
 			if (cardLabels.contains(selectionLabels.get(j))) {
 				isLabel = true;
 			}
 		}
-		if (matchCriteria(isStack, isLabel))
+		if (matchCriteria(isStack, isLabel)) {
 			sessionCards.add(currentCard);
+		}
 	}
 
+	// returns true if no selection or empty array
+	private boolean noSelection(PrepareSessionCheckBox[] boxes) {
+		for (int i = 0; i < boxes.length; i++) {
+			if (boxes[i].isSelected()) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	// apply the chosen match criteria, AND or OR, depending on which radio
+	// button is active
 	private boolean matchCriteria(boolean isStack, boolean isLabel) {
 		return rbAndCriteria.isSelected() ? isStack && isLabel : isStack || isLabel;
 	}
 
+	// returns a list of all labels that are selected
 	private ArrayList<Label> getSelectedLabels() {
 		ArrayList<Label> selectionLabels = new ArrayList<Label>();
 		for (int i = 0; i < labelBoxes.length; i++) {
