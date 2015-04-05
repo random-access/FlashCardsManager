@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels>
+	<label>
+		<label_id>14</label_id>
+		<proj_id>3</proj_id>
+		<label_name>KE 1</label_name>
+	</label>
+	<label>
+		<label_id>15</label_id>
+		<proj_id>3</proj_id>
+		<label_name>KE 2</label_name>
+	</label>
+	<label>
+		<label_id>18</label_id>
+		<proj_id>3</proj_id>
+		<label_name>KE 3</label_name>
+	</label>
+	<label>
+		<label_id>16</label_id>
+		<proj_id>3</proj_id>
+		<label_name>KE 4</label_name>
+	</label>
+	<label>
+		<label_id>17</label_id>
+		<proj_id>3</proj_id>
+		<label_name>KE 5</label_name>
+	</label>
+	<label>
+		<label_id>19</label_id>
+		<proj_id>3</proj_id>
+		<label_name>KE 6</label_name>
+	</label>
+	<label>
+		<label_id>20</label_id>
+		<proj_id>3</proj_id>
+		<label_name>KE 7</label_name>
+	</label>
+</labels>

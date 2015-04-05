@@ -1,177 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <medias>
 	<media>
-		<media_id>14</media_id>
-		<card_id>54</card_id>
-		<path_to_media>pic-5-54-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
 		<media_id>32</media_id>
-		<card_id>59</card_id>
-		<path_to_media>pic-5-59-a.png</path_to_media>
+		<card_id>61</card_id>
+		<path_to_media>pic-7-61-a.PNG</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>33</media_id>
-		<card_id>68</card_id>
-		<path_to_media>pic-5-68-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>34</media_id>
-		<card_id>78</card_id>
-		<path_to_media>pic-5-78-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>35</media_id>
-		<card_id>80</card_id>
-		<path_to_media>pic-5-80-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>36</media_id>
-		<card_id>85</card_id>
-		<path_to_media>pic-5-85-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>37</media_id>
-		<card_id>88</card_id>
-		<path_to_media>pic-5-88-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>38</media_id>
-		<card_id>93</card_id>
-		<path_to_media>pic-5-93-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>39</media_id>
-		<card_id>96</card_id>
-		<path_to_media>pic-5-96-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>40</media_id>
-		<card_id>98</card_id>
-		<path_to_media>pic-5-98-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>41</media_id>
-		<card_id>1</card_id>
-		<path_to_media>pic-5-1-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>47</media_id>
-		<card_id>237</card_id>
-		<path_to_media>pic-5-237-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>84</media_id>
-		<card_id>243</card_id>
-		<path_to_media>pic-5-243-a.PNG</path_to_media>
+		<card_id>62</card_id>
+		<path_to_media>pic-7-62-a.PNG</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>85</media_id>
-		<card_id>244</card_id>
-		<path_to_media>pic-5-244-a.PNG</path_to_media>
+		<card_id>351</card_id>
+		<path_to_media>pic-7-351-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>86</media_id>
-		<card_id>246</card_id>
-		<path_to_media>pic-5-246-a.PNG</path_to_media>
+		<card_id>356</card_id>
+		<path_to_media>pic-7-356-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>6</media_id>
-		<card_id>11</card_id>
-		<path_to_media>pic-5-11-a.png</path_to_media>
+		<media_id>87</media_id>
+		<card_id>365</card_id>
+		<path_to_media>pic-7-365-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>7</media_id>
-		<card_id>15</card_id>
-		<path_to_media>pic-5-15-a.png</path_to_media>
+		<media_id>88</media_id>
+		<card_id>375</card_id>
+		<path_to_media>pic-7-375-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>8</media_id>
-		<card_id>16</card_id>
-		<path_to_media>pic-5-16-a.png</path_to_media>
+		<media_id>89</media_id>
+		<card_id>377</card_id>
+		<path_to_media>pic-7-377-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
-		<media_id>9</media_id>
-		<card_id>23</card_id>
-		<path_to_media>pic-5-23-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>10</media_id>
-		<card_id>24</card_id>
-		<path_to_media>pic-5-24-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>11</media_id>
-		<card_id>247</card_id>
-		<path_to_media>pic-5-247-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>12</media_id>
-		<card_id>253</card_id>
-		<path_to_media>pic-5-253-a.png</path_to_media>
-		<pictype>a</pictype>
-	</media>
-	<media>
-		<media_id>13</media_id>
-		<card_id>265</card_id>
-		<path_to_media>pic-5-265-a.png</path_to_media>
+		<media_id>90</media_id>
+		<card_id>382</card_id>
+		<path_to_media>pic-7-382-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>91</media_id>
-		<card_id>364</card_id>
-		<path_to_media>pic-5-364-a.PNG</path_to_media>
+		<card_id>385</card_id>
+		<path_to_media>pic-7-385-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>92</media_id>
-		<card_id>370</card_id>
-		<path_to_media>pic-5-370-a.PNG</path_to_media>
+		<card_id>390</card_id>
+		<path_to_media>pic-7-390-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>93</media_id>
-		<card_id>371</card_id>
-		<path_to_media>pic-5-371-a.PNG</path_to_media>
+		<card_id>393</card_id>
+		<path_to_media>pic-7-393-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>94</media_id>
-		<card_id>374</card_id>
-		<path_to_media>pic-5-374-a.PNG</path_to_media>
+		<card_id>395</card_id>
+		<path_to_media>pic-7-395-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>95</media_id>
-		<card_id>375</card_id>
-		<path_to_media>pic-5-375-a.PNG</path_to_media>
+		<card_id>403</card_id>
+		<path_to_media>pic-7-403-a.png</path_to_media>
 		<pictype>a</pictype>
 	</media>
 	<media>
 		<media_id>96</media_id>
-		<card_id>377</card_id>
-		<path_to_media>pic-5-377-a.png</path_to_media>
+		<card_id>413</card_id>
+		<path_to_media>pic-7-413-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>97</media_id>
+		<card_id>419</card_id>
+		<path_to_media>pic-7-419-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>98</media_id>
+		<card_id>420</card_id>
+		<path_to_media>pic-7-420-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>99</media_id>
+		<card_id>422</card_id>
+		<path_to_media>pic-7-422-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>100</media_id>
+		<card_id>425</card_id>
+		<path_to_media>pic-7-425-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>101</media_id>
+		<card_id>429</card_id>
+		<path_to_media>pic-7-429-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>102</media_id>
+		<card_id>430</card_id>
+		<path_to_media>pic-7-430-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>103</media_id>
+		<card_id>437</card_id>
+		<path_to_media>pic-7-437-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>104</media_id>
+		<card_id>438</card_id>
+		<path_to_media>pic-7-438-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>105</media_id>
+		<card_id>439</card_id>
+		<path_to_media>pic-7-439-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>106</media_id>
+		<card_id>445</card_id>
+		<path_to_media>pic-7-445-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>107</media_id>
+		<card_id>457</card_id>
+		<path_to_media>pic-7-457-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>108</media_id>
+		<card_id>476</card_id>
+		<path_to_media>pic-7-476-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>109</media_id>
+		<card_id>482</card_id>
+		<path_to_media>pic-7-482-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>110</media_id>
+		<card_id>483</card_id>
+		<path_to_media>pic-7-483-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>111</media_id>
+		<card_id>486</card_id>
+		<path_to_media>pic-7-486-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>112</media_id>
+		<card_id>487</card_id>
+		<path_to_media>pic-7-487-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>113</media_id>
+		<card_id>489</card_id>
+		<path_to_media>pic-7-489-a.png</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>10</media_id>
+		<card_id>22</card_id>
+		<path_to_media>pic-7-22-a.PNG</path_to_media>
+		<pictype>a</pictype>
+	</media>
+	<media>
+		<media_id>31</media_id>
+		<card_id>57</card_id>
+		<path_to_media>pic-7-57-a.PNG</path_to_media>
 		<pictype>a</pictype>
 	</media>
 </medias>
