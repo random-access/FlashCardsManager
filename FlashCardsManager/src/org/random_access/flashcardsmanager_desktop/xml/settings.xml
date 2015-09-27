@@ -1,0 +1,11 @@
+<?org.random_access.flashcardsmanager_desktop.xml version="1.0"?> 
+	<settings>
+		<majorVersion>0</majorVersion>
+		<minorVersion>2</minorVersion>
+		<patchLevel>5</patchLevel>
+		<pathToDatabase>null</pathToDatabase>
+		<databaseVersion>2</databaseVersion>
+		<showIntro>true</showIntro>
+	</settings>
+
+
