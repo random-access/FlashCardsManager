@@ -19,19 +19,24 @@ import org.random_access.flashcardsmanager_desktop.xml.XMLSettingsExchanger;
 
 public class StartApp {
 
-    public static final boolean DEBUG = false;
-
+    public static boolean DEBUG;
+    private static final String DEBUG_COMMAND = "--debug";
+    private static final String DEBUG_COMMAND_SHORT = "-d";
+    
     private static final String APP_FOLDER = FileUtils.appDirectory("Lernkarten");
     private static final String DEFAULT_LOG_PATH = APP_FOLDER + "/logs";
     private static final String DEFAULT_SETTINGS_PATH = APP_FOLDER + "/settings.xml";
     private static final String DEFAULT_DATABASE_PATH = APP_FOLDER + "/database_2";
     private static final String PATH_TO_MEDIA = APP_FOLDER + "/media";
 
-    private static InputStream defaultSettings = StartApp.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.xml/settings.xml");
+    private static InputStream defaultSettings = StartApp.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/xml/settings.xml");
     private static Settings currentSettings;
     private static Settings newSettings;
-
+    
     public static void main(String[] args) {
+    	String cmd = (args != null && args.length > 0) ? args[0] : "";
+    	DEBUG = cmd.length() > 0 && (cmd.equals(DEBUG_COMMAND_SHORT) || cmd.equals(DEBUG_COMMAND));
+    	
         final IntroPanel intro = new IntroPanel();
 
         Properties p = System.getProperties();

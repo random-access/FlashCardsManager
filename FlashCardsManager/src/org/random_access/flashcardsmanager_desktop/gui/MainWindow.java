@@ -25,18 +25,18 @@ public class MainWindow extends JFrame {
     static {
         try {
             imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-                    "org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_36x36.png"));
+                    "org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_36x36.png"));
             imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-                    "org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_24x24.png"));
+                    "org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_24x24.png"));
             imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-                    "org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_16x16.png"));
+                    "org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_16x16.png"));
             imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-                    "org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_12x12.png"));
-            imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgSettings_28x28.png"));
+                    "org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_12x12.png"));
+            imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgSettings_28x28.png"));
 
-            imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgPlus_16x16.png"));
+            imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgPlus_16x16.png"));
             imgAddProjectInfo = ImageIO.read(MainWindow.class.getClassLoader().getResourceAsStream(
-                    "org.random_access.flashcardsmanager_desktop.img/AddProjectInfo_450x338.png"));
+                    "org/random_access/flashcardsmanager_desktop/img/AddProjectInfo_450x338.png"));
         } catch (IOException ioe) {
             CustomErrorHandling.showInternalError(null, ioe);
         }

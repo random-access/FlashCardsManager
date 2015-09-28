@@ -28,26 +28,26 @@ public class FlashcardEditorDialog extends JDialog {
 
 	static {
 		try {
-			imgBold = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgBold_28x28.png"));
-			imgItalic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgItalic_28x28.png"));
-			imgUnderlined = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgUnderlined_28x28.png"));
-			imgLeftAlign = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgLeftAlign_28x28.png"));
+			imgBold = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgBold_28x28.png"));
+			imgItalic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgItalic_28x28.png"));
+			imgUnderlined = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgUnderlined_28x28.png"));
+			imgLeftAlign = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgLeftAlign_28x28.png"));
 			imgCenterAlign = ImageIO
-					.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgCenterAlign_28x28.png"));
-			imgRightAlign = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgRightAlign_28x28.png"));
-			imgList = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgList_28x28.png"));
-			imgNum = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgNum_28x28.png"));
-			imgSwitch = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgSwitch_28x28.png"));
-			imgDiscard = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgDiscard_28x28.png"));
-			imgSave = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgSave_28x28.png"));
+					.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgCenterAlign_28x28.png"));
+			imgRightAlign = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgRightAlign_28x28.png"));
+			imgList = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgList_28x28.png"));
+			imgNum = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgNum_28x28.png"));
+			imgSwitch = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgSwitch_28x28.png"));
+			imgDiscard = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgDiscard_28x28.png"));
+			imgSave = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgSave_28x28.png"));
 			imgSaveAndNext = ImageIO
-					.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgSaveAndNext_28x28.png"));
-			imgAddPic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgAddPic_28x28.png"));
-			imgEditPic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgEditPic_28x28.png"));
-			imgRemovePic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgRemovePic_28x28.png"));
-			imgLargerCard = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgLargerCard_28x28.png"));
+					.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgSaveAndNext_28x28.png"));
+			imgAddPic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgAddPic_28x28.png"));
+			imgEditPic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgEditPic_28x28.png"));
+			imgRemovePic = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgRemovePic_28x28.png"));
+			imgLargerCard = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgLargerCard_28x28.png"));
 			imgSmallerCard = ImageIO
-					.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgSmallerCard_28x28.png"));
+					.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgSmallerCard_28x28.png"));
 		} catch (IOException e) {
 			CustomErrorHandling.showInternalError(null, e);
 		}

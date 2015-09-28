@@ -25,12 +25,12 @@ public class LearningSession extends JDialog {
 
     static {
         try {
-            imgSwitch = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgSwitch_28x28.png"));
-            imgPrev = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgPrev_28x28.png"));
-            imgNext = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgNext_28x28.png"));
-            imgRight = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgRight_28x28.png"));
-            imgWrong = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgWrong_28x28.png"));
-            imgExit = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgExit_28x28.png"));
+            imgSwitch = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgSwitch_28x28.png"));
+            imgPrev = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgPrev_28x28.png"));
+            imgNext = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgNext_28x28.png"));
+            imgRight = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgRight_28x28.png"));
+            imgWrong = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgWrong_28x28.png"));
+            imgExit = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgExit_28x28.png"));
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
             Logger.log(e);

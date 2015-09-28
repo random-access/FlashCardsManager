@@ -29,12 +29,12 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
     private static BufferedImage imgSettings, imgPlus, imgFlashcardInfo, imgEdit, imgDelete;
     {
         try {
-            imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgSettings_28x28.png"));
-            imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgPlus_16x16.png"));
-            imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgEdit_16x16.png"));
-            imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgDelete_16x16.png"));
+            imgSettings = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgSettings_28x28.png"));
+            imgPlus = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgPlus_16x16.png"));
+            imgEdit = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgEdit_16x16.png"));
+            imgDelete = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgDelete_16x16.png"));
             imgFlashcardInfo = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-                    "org.random_access.flashcardsmanager_desktop.img/AddFlashcardInfo_450x338.png"));
+                    "org/random_access/flashcardsmanager_desktop/img/AddFlashcardInfo_450x338.png"));
         } catch (IOException ioe) {
             CustomErrorHandling.showInternalError(null, ioe);
         }

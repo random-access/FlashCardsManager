@@ -22,9 +22,9 @@ public class LabelTreeCellRenderer extends DefaultTreeCellRenderer {
 
     static {
         try {
-            imgRed = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgRed_8x8.png"));
-            imgYellow = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgYellow_8x8.png"));
-            imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org.random_access.flashcardsmanager_desktop.img/ImgGreen_8x8.png"));
+            imgRed = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgRed_8x8.png"));
+            imgYellow = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgYellow_8x8.png"));
+            imgGreen = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream("org/random_access/flashcardsmanager_desktop/img/ImgGreen_8x8.png"));
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Ein interner Fehler ist aufgetreten", "Fehler", JOptionPane.ERROR_MESSAGE);
             Logger.log(e);

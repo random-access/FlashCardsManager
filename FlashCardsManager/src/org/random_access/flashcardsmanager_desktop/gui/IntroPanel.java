@@ -18,15 +18,15 @@ public class IntroPanel extends JFrame {
 	static {
 		try {
 			imgIntro = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"org.random_access.flashcardsmanager_desktop.img/Intro_LearningCards_blue_500x372.png"));
+					"org/random_access/flashcardsmanager_desktop/img/Intro_LearningCards_blue_500x372.png"));
 			imgIcon36x36 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_36x36.png"));
+					"org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_36x36.png"));
 			imgIcon24x24 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_24x24.png"));
+					"org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_24x24.png"));
 			imgIcon16x16 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_16x16.png"));
+					"org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_16x16.png"));
 			imgIcon12x12 = ImageIO.read(ProjectPanel.class.getClassLoader().getResourceAsStream(
-					"org.random_access.flashcardsmanager_desktop.img/Label_LearningCards_blue_12x12.png"));
+					"org/random_access/flashcardsmanager_desktop/img/Label_LearningCards_blue_12x12.png"));
 		} catch (IOException ioe) {
 			CustomErrorHandling.showInternalError(null, ioe);
 		}
