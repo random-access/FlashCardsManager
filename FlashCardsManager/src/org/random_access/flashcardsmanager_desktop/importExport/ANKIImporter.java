@@ -150,7 +150,6 @@ public class ANKIImporter {
 					List<String> aImages = new ArrayList<String>();
 					List<String> qImages = new ArrayList<String>();
 					for (String imgName : images.keySet()) {
-						boolean found = false;
 						if (question.contains(imgName)) {
 							qImages.add(images.get(imgName).toString());
 							int startpos = question.indexOf("<org.random_access.flashcardsmanager_desktop.img");
@@ -161,7 +160,6 @@ public class ANKIImporter {
 								endpos = question.indexOf("/>", startpos);
 							}
 							card.setQuestion(question);
-							found = true;
 						}
 						if (answer.contains(imgName)) {
 							aImages.add(images.get(imgName).toString());
@@ -173,7 +171,6 @@ public class ANKIImporter {
 								endpos = answer.indexOf("/>", startpos);
 							}
 							card.setAnswer(answer);
-							found = true;
 						}
 
 					}

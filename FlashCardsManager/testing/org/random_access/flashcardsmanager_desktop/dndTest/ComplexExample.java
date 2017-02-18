@@ -10,7 +10,9 @@ import javax.swing.*;
 
 public class ComplexExample extends JFrame implements DragGestureListener {
 
-    JPanel panel;
+	private static final long serialVersionUID = 1L;
+	
+	JPanel panel;
     JPanel left;
 
     public ComplexExample() {
@@ -68,13 +70,12 @@ public class ComplexExample extends JFrame implements DragGestureListener {
 
     class MyDropTargetListener extends DropTargetAdapter {
 
-        private DropTarget dropTarget;
         private JPanel panel;
 
         public MyDropTargetListener(JPanel panel) {
             this.panel = panel;
 
-            dropTarget = new DropTarget(panel, DnDConstants.ACTION_COPY, this, true, null);
+            new DropTarget(panel, DnDConstants.ACTION_COPY, this, true, null);
         }
 
         public void drop(DropTargetDropEvent event) {

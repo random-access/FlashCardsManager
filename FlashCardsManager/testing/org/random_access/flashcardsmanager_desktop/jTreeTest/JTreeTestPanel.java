@@ -14,6 +14,8 @@ import org.random_access.flashcardsmanager_desktop.tests.JComponentTestFrame;
 
 public class JTreeTestPanel extends JPanel {
 
+	private static final long serialVersionUID = 1L;
+	
 	private TestLearningProject proj;
 	private JTree tree;
 	private TreeModel model;

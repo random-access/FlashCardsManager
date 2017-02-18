@@ -27,7 +27,7 @@ public class JTableTestPanel extends JPanel {
 		createTestData(5);
 		constructTable();
 
-		DragSource ds = new DragSource();
+		new DragSource();
 		// ds.createDefaultDragGestureRecognizer(table,
 		// DnDConstants.ACTION_COPY, this);
 

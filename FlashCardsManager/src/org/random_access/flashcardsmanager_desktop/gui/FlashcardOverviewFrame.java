@@ -524,6 +524,7 @@ public class FlashcardOverviewFrame extends JFrame implements ProjectDataChanged
                     for (int i = model.getRowCount() - 1; i >= 0; --i) {
                         if ((boolean) model.getValueAt(i, 0)) {
                             model.removeCard(i);
+                            owner.updateProjectList();
                         }
                     }
                     CustomInfoHandling.showSuccessfullyDeletedInfo();
