@@ -14,6 +14,7 @@ import org.random_access.flashcardsmanager_desktop.core.Label;
 import org.random_access.flashcardsmanager_desktop.core.LearningProject;
 import org.random_access.flashcardsmanager_desktop.exc.*;
 import org.random_access.flashcardsmanager_desktop.gui.helpers.CustomColor;
+import org.random_access.flashcardsmanager_desktop.gui.helpers.DefaultMutableTreeNodeSorter;
 import org.random_access.flashcardsmanager_desktop.gui.helpers.TransparencyTextField;
 import org.random_access.flashcardsmanager_desktop.utils.InvalidCharsFilter;
 import org.random_access.flashcardsmanager_desktop.utils.SizeFilterExtended;
@@ -93,6 +94,8 @@ public class AddLabelDialog extends JDialog {
 						model.insertNodeInto(new DefaultMutableTreeNode(l), (MutableTreeNode) model.getRoot(),
 								model.getChildCount(model.getRoot()));
 						tree.expandPath(tree.getPathForRow(0));
+						DefaultMutableTreeNodeSorter.sortTreeNodes((MutableTreeNode) model.getRoot());
+						model.nodeStructureChanged((MutableTreeNode) model.getRoot());
 						AddLabelDialog.this.dispose();
 					}
 				} catch (SQLException sqle) {
